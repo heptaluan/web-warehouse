@@ -12,7 +12,7 @@
 
 #### 相关资料：
 
-[Vue文档](https://vuefe.cn/guide/)
+~~[Vue文档](https://vuefe.cn/guide/)~~ 40%
 
 [Vue.js 免费中文视频教程](https://github.com/helloqingfeng/Vuejs-free-learn)
 

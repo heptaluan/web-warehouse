@@ -20,16 +20,38 @@
 
 ----
 
-###阶段性的目标：
+###js：
+
+javascript面向对象编程指南
+
+《javascript函数式编程》
 
 《基于MVC的JavaScript Web富应用开发》
 
-Vue 2.X
-
-Webpack
-
-Node 
+Vue 权威指南
 
 ----
+
+###css：
+
+css权威指南
+
+css揭秘
+
+----
+
+###源码：
+
+underscore
+
+zepto
+
+backbone
+
+jquery 30%
+
+----
+
+
 
 

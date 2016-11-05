@@ -15,9 +15,7 @@
 
 继续啃文档，目前进展到 深入响应式原理，发现 Object.defineProperty 相关的知识忘的都差不多了
 
-了解 getter/setter 相关知识后在继续跟进
-
-从新温习 Object.defineProperty() 相关知识
+从新温习了解 getter/setter/Object.defineProperty() 相关知识后在继续跟进
 
 参考：
 

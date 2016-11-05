@@ -17,14 +17,15 @@
 
 从新温习了解 getter/setter/Object.defineProperty() 相关知识后在继续跟进
 
+[笔记记录](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty)
+
 参考：
 
 《You Don't Know JS》
 
 《JavaScript高级程序设计》
 
-[Object.defineProperty()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty)
-
+[Object.defineProperty()](http://hanekaoru.com/object-defineproperty/)
 
 ----
 #### 11.2

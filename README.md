@@ -17,7 +17,15 @@
 
 了解 getter/setter 相关知识后在继续跟进
 
-参考：《You Don’t Know JavaScript》（上册）
+从新温习 Object.defineProperty() 相关知识
+
+参考：
+
+《You Don't Know JS》
+
+《JavaScript高级程序设计》
+
+[Vue2.0文档](https://vuefe.cn/guide/)
 
 
 ----

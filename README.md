@@ -25,7 +25,7 @@
 
 《JavaScript高级程序设计》
 
-[Vue2.0文档](https://vuefe.cn/guide/)
+[Object.defineProperty()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty)
 
 
 ----

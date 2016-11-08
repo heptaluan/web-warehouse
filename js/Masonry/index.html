@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>瀑布流插件 Masonry</title>
+</head>
+<style>
+    *{margin: 0;padding: 0}
+    .box{
+        width: 180px;
+        margin: 10px;
+    }
+    .box img{
+        width: 180px;
+    }
+</style>
+<script src="http://www.hanekaoru.com/jquery.js"></script>
+<script src="jquery.masonry.min.js"></script>
+
+<script>
+    $(function() {
+        var $container = $('#masonry');
+        $container.imagesLoaded(function() {
+            $container.masonry({
+                itemSelector: '.box',
+                gutter: 20,
+                isAnimated: true,
+                columnWidth: 20   //每行的间距
+            });
+        });
+    });
+</script>
+<body>
+    <div id="masonry" class="container-fluid">
+
+        <div class="box"><img src="1.png"></div>
+        <div class="box"><img src="2.png"></div>
+        <div class="box"><img src="3.png"></div>
+        <div class="box"><img src="4.png"></div>
+
+        <div class="box"><img src="1.png"></div>
+        <div class="box"><img src="2.png"></div>
+        <div class="box"><img src="3.png"></div>
+        <div class="box"><img src="4.png"></div>
+
+        <div class="box"><img src="1.png"></div>
+        <div class="box"><img src="2.png"></div>
+        <div class="box"><img src="3.png"></div>
+        <div class="box"><img src="4.png"></div>
+
+        <div class="box"><img src="1.png"></div>
+        <div class="box"><img src="2.png"></div>
+        <div class="box"><img src="3.png"></div>
+        <div class="box"><img src="4.png"></div>
+
+        <div class="box"><img src="1.png"></div>
+        <div class="box"><img src="2.png"></div>
+        <div class="box"><img src="3.png"></div>
+        <div class="box"><img src="4.png"></div>
+
+        <div class="box"><img src="1.png"></div>
+        <div class="box"><img src="2.png"></div>
+        <div class="box"><img src="3.png"></div>
+        <div class="box"><img src="4.png"></div>
+
+        <div class="box"><img src="1.png"></div>
+        <div class="box"><img src="2.png"></div>
+        <div class="box"><img src="3.png"></div>
+        <div class="box"><img src="4.png"></div>
+
+        <div class="box"><img src="1.png"></div>
+        <div class="box"><img src="2.png"></div>
+        <div class="box"><img src="3.png"></div>
+        <div class="box"><img src="4.png"></div>
+
+    </div>
+</body>
+</html>

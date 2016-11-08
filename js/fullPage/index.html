@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>全屏滚动插件
+        
+    </title>
+</head>
+<link rel="stylesheet" href="fullPage.css">
+<style>
+    #fullpage div{
+        text-align: center;
+    }
+</style>
+<script src="http://hanekaoru.com/jquery.js"></script>
+<script src="fullPage.js"></script>
+<script>
+    $(function(){
+        $('#fullpage').fullpage({
+            css3: true,
+            anchors: ['page1', 'page2', 'page3', 'page4'],
+            slidesColor : ['#1bbc9b', '#4BBFC3', '#7BAABE', '#f90'],
+            navigation : true
+        })
+    })
+</script>
+<body>
+    <div id="fullpage">
+        <div class="section">第一屏</div>
+        <div class="section">第二屏</div>
+        <div class="section">
+            <div class="slide">第三屏的第一屏</div>
+            <div class="slide">第三屏的第二屏</div>
+            <div class="slide">第三屏的第三屏</div>
+            <div class="slide">第三屏的第四屏</div>
+        </div>
+        <div class="section">第四屏</div>
+    </div>
+</body>
+</html>

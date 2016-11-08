@@ -6,7 +6,7 @@
 
 平常的练习，demo一类的也会上传到这个仓库当中
 
-同时新建了一个自己的 [资源库](https://github.com/hanekaoru/WebLearningNotes/blob/master/Repository.md)
+同时新建了一个自己的 [资源库](https://github.com/hanekaoru/Repository)
 
 收集一些自己遇到过（用过）的插件，demo一类
 

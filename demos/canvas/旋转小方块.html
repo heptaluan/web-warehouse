@@ -1,0 +1,44 @@
+<!DOCTYPE html >
+<html>
+
+<head>
+    <title> 旋转小方块 </title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="#">
+    <style>
+        canvas {
+            background: #ccc;
+        }
+    </style>
+    <script>
+		window.onload=function (){
+			var canvas = document.getElementById("canvas");
+			var cobj = canvas.getContext("2d");
+			var angle=0;
+			var num=150;
+			
+			var t = setInterval(function (){
+				if(num<=0){
+					clearInterval(t);
+				}
+				cobj.clearRect(0,0,600,600);
+				angle+=2;
+				num-=0.5;
+				cobj.save();
+				cobj.translate(300,300);
+				cobj.rotate(angle*Math.PI/180);
+				cobj.fillRect(num,num,30,30);
+				cobj.restore();
+			},100);
+
+
+		}
+		</script>
+</head>
+
+<body>
+    <canvas width=600 height=600 id="canvas">
+    </canvas>
+</body>
+
+</html>

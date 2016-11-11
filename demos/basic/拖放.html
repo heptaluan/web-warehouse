@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>拖放效果</title>
+</head>
+<style>
+#box{
+    width:200px;height:200px;border:1px solid red;
+}
+#con{
+    width:200px;height:200px;border:1px solid blue;list-style:none;padding:0;margin:0;
+}
+li{
+    width:150px;height:30px;margin:5px 0;background:#ccc;line-height:30px;text-align:center;list-style:none;
+}
+</style>
+<script>
+    window.onload = function(){
+        var box=document.getElementById("box");
+        var con=document.getElementById("con");
+        var lis=document.getElementsByTagName("li");
+        
+        for(var i=0; i<lis.length; i++){
+            lis[i].draggable = true;
+            lis[i].flag = false;
+            lis[i].ondragstart = function(){
+                this.flag = true;
+            } 
+            lis[i].ondragend = function(){
+                this.flag = false;
+            }
+        }
+        
+        box.ondragenter = function(e){
+            e.preventDefault();
+        }
+        box.ondragover=function  (e) {
+            e.preventDefault();
+        }
+        box.ondragleave=function  (e) {
+            e.preventDefault();
+        }
+        box.ondrop = function(e){
+            for(var i=0; i<lis.length; i++){
+                if(lis[i].flag){
+                    box.appendChild(lis[i]);
+                }
+            }
+            e.preventDefault();
+        }
+        
+        con.ondragenter=function  (e) {
+            e.preventDefault();
+        }
+        con.ondragover=function  (e) {
+            e.preventDefault();
+        }
+        con.ondragleave=function  (e) {
+            e.preventDefault();
+        }
+        con.ondrop=function  (e) {
+            for (var i=0; i<lis.length; i++) {
+                if(lis[i].flag){
+                    con.appendChild(lis[i]);
+                }
+            }
+            e.preventDefault();
+        }
+    }
+</script>
+<body>
+    <div id="box">
+</div>
+<ul id="con">
+	<li>aaa</li>
+	<li>bbb</li>
+	<li>ccc</li>
+	<li>ddd</li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8' >
+<title>点击弹出/收起下拉框</title>
+</head>
+<style>
+body,div,ul,li,h2{margin:0;padding:0;}
+body{font:12px/1.5 Tahoma;}
+ul{list-style-type:none;}
+#outer{width:200px;border:1px solid #aaa;margin:10px auto;}
+#outer h2{cursor:pointer;color:#57646E;font-size:14px;font-weight:400;border:1px solid;height:30px;line-height:30px;padding-left:10px;background:#ced3d7 url(ico.gif) 180px 15px no-repeat;border-color:#fff #e9edf2;}
+#outer h2.open{background-position:180px -12px;}
+#outer ul{border-top:1px solid #DEE3E6;}
+#outer li{height:25px;line-height:25px;vertical-align:top;}
+#outer a{display:block;color:#6b7980;background:#e9edf2;text-decoration:none;padding:0 10px;}
+#outer a:hover{background:#fff;}
+</style>
+<script>
+window.onload = function(){
+    var oH2 = document.getElementsByTagName('h2')[0];
+    var oUl = document.getElementsByTagName('ul')[0];
+
+    oH2.onclick = function(){
+        var sty = oUl.style;
+        //判断sty.display === "none"， 若为真就让其显示，否则就隐藏
+        sty.display = sty.display === "none" ? "block" : "none";
+        oH2.className = sty.display == "none" ? "open" : "";
+    }
+}
+</script>
+<body>
+<div id="outer">
+    <h2>播放列表...</h2>
+    <ul>
+        <li><a href="javascript:;">ロミオとシンデレラ - 花たん </a></li>
+        <li><a href="javascript:;">Palette - 花たん </a></li>
+        <li><a href="javascript:;">狐ノ嫁入リ - 花たん </a></li>
+        <li><a href="javascript:;">笹舟 - 花たん </a></li>
+        <li><a href="javascript:;">WAVE - 花たん </a></li>
+        <li><a href="javascript:;">自傷無色 - 花たん </a></li>
+        <li><a href="javascript:;">心做し - 花たん </a></li>
+        <li><a href="javascript:;">花のうた - 花たん </a></li>
+    </ul>
+</div>
+</body>
+</html>

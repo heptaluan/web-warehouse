@@ -1,0 +1,71 @@
+<!DOCTYPE html >
+<html>
+<head>
+<meta charset="UTF-8">
+<title>CSS鼠标样式</title>
+<style>
+dl,dd {
+	margin:0;
+	padding:0;
+}
+dl {
+	width:300px;
+	height:300px;
+	background:url(images/menu_gray.jpg) no-repeat;
+}
+dl dd {
+	width:100px;
+	height:100px;
+	float:left;
+}
+dl dd a {
+	width:100px;
+	height:100px;
+	display:block;
+	background:url(images/menu_color.jpg) no-repeat -9999px -9999px;
+}
+dl dd a.item1:hover {
+	background-position:0 0;
+}
+dl dd a.item2:hover {
+	background-position:-100px 0;
+}
+dl dd a.item3:hover {
+	background-position:-200px 0;
+}
+dl dd a.item4:hover {
+	background-position:0 -100px;
+}
+dl dd a.item5:hover {
+	background-position:-100px -100px;
+}
+dl dd a.item6:hover {
+	background-position:-200px -100px;
+}
+dl dd a.item7:hover {
+	background-position:0 -200px;
+}
+dl dd a.item8:hover {
+	background-position:-100px -200px;
+}
+dl dd a.item9:hover {
+	background-position:-200px -200px;
+}
+</style>
+</head>
+<body>
+
+<dl>
+	<dd><a href="#" class="item1"></a></dd>
+	<dd><a href="#" class="item2"></a></dd>
+	<dd><a href="#" class="item3"></a></dd>
+	<dd><a href="#" class="item4"></a></dd>
+	<dd><a href="#" class="item5"></a></dd>
+	<dd><a href="#" class="item6"></a></dd>
+	<dd><a href="#" class="item7"></a></dd>
+	<dd><a href="#" class="item8"></a></dd>
+	<dd><a href="#" class="item9"></a></dd>
+</dl>
+
+</body>
+</html>

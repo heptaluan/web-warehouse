@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8' />
+<title>点击Div，显示其对应的innerHTML</title>
+<style>
+body{font:12px/1.5 Tahoma;}
+#outer{width:500px;margin:0 auto;}
+#outer div{border:2px solid #ccc;padding:10px;margin-bottom:10px;text-indent:2em;cursor:pointer;}
+</style>
+<script>
+window.onload = function(){
+	var oDiv = document.getElementById('outer').getElementsByTagName('div');
+	for(var i=0; i<oDiv.length; i++){
+		oDiv[i].onclick = function(){
+			alert(this.innerHTML);
+		}
+	}
+}
+
+</script>
+</head>
+<body>
+<div id="outer">
+    <div><strong>威廉·达福参演《正义联盟》</strong>根据业内消息透露，此次威廉·达福在《正义联盟》中将会扮演一个好人，但具体角色尚未公布。威廉·达福此前在山姆·雷米导演的电影《蜘蛛侠》（2002）中饰演反派绿魔。</div>
+    <div>据报道一群名为“给我们传奇”的团体在网上募集了五千美元，在卢卡斯影业的本部—旧金山租用了一块大型的广告牌，希望引起迪士尼公司的注意，要求迪士尼给卢卡斯影业更多支持，以推出更多扩展宇宙的原创故事。</div>
+    <div><strong>古龙笔下《七种武器之长生剑》读后感</strong>今天再来说一个故事，七种武器之长生剑。这个故事其实是我第一个看的故事，但直到故事最后一刻，我还是拿不定主意，这是不是真相。这也许就是古龙的魅力，你永远想不到下一刻会发生什么。</div>
+    <div>粉丝呼吁卢卡斯影业扩展星战宇宙<strong style="color:red;">近日根据《科技时代》的报道，卢卡斯影业(2012年被迪士尼公司收购)</strong>的粉丝在旧金山的一块广告牌上要求“扩展星战宇宙的更多原创故事”。</div>
+</div>
+</body>
+</html>

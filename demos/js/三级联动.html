@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>三级联动</title>
+</head>
+<body>
+    省：
+    <select style="width: 100px;" id="pre" onchange="chg(this);">
+        <option value="-1">请选择</option>
+    </select>
+    市：
+    <select style="width: 100px;" id="city" onchange="chg2(this)" ;></select>
+    区：
+    <select style="width: 100px;" id="area"></select>
+</body>
+<script>
+
+    var pres = ["北京", "上海", "山东"]; 
+
+    var cities = [
+        ["东城", "昌平", "海淀"],
+        ["浦东", "高区"],
+        ["济南", "青岛"]
+    ];
+
+    var areas = [
+            [
+                ["东城1", "东城2", "东城3"],
+                ["昌平1", "昌平2", "昌平3"],
+                ["海淀1", "海淀2", "海淀3"]
+            ],
+            [
+                ["浦东1", "浦东2", "浦东3"],
+                ["高区1", "高区2", "高区3"]
+            ],
+            [
+                ["济南1", "济南2"],
+                ["青岛1", "青岛2"]
+            ]
+        ]
+
+
+    var preEle = document.getElementById("pre");
+    var cityEle = document.getElementById("city");
+    var areaEle = document.getElementById("area");
+    var pIndex;
+
+    for (var i = 0; i < pres.length; i++) {
+        //声明option.<option value="pres[i]">Pres[i]</option>
+        var op = new Option(pres[i], i);
+        //添加
+        preEle.options.add(op);
+    }
+
+    function chg(obj) {
+        if(obj.value == -1){
+            cityEle.options.length = 0;
+            areaEle.options.length = 0;
+        }
+
+        var index = obj.value;
+        pIndex = obj.value;
+		
+        var cs = cities[index];
+        var as = areas[index][0];
+
+        cityEle.options.length = 0;
+        areaEle.options.length = 0;
+
+        for (var i = 0; i < cs.length; i++) {
+            var op = new Option(cs[i], i);
+            cityEle.options.add(op);
+        }
+
+        for (var i = 0; i < as.length; i++) {
+            var op = new Option(as[i], i);
+            areaEle.options.add(op);
+        }
+
+    }
+
+    function chg2(obj) {
+        var index = obj.selectedIndex;
+
+        var as = areas[pIndex][index];
+        
+        areaEle.options.length = 0;
+        for (var i = 0; i < as.length; i++) {
+            var op = new Option(as[i], i);
+            areaEle.options.add(op);
+        }
+    }
+
+</script>
+</html>

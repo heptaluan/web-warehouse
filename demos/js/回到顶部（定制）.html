@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>回到顶部</title>
+<style>
+.goTop {
+    border-radius: 50%;
+    bottom: 50px;
+    display: block;
+    height: 40px;
+    overflow: hidden;
+    position: fixed;
+    right: 20px;
+    width: 40px;
+    z-index: 9999;
+    background: #ccc;
+}
+.goTop i {
+    background: url("") no-repeat scroll center center;
+    display: block;
+    background-size: cover;
+    height: 40px;
+    width: 40px;
+}
+</style>
+<script src="http://libs.baidu.com/jquery/1.8.3/jquery.min.js"></script>
+<script>
+window.onload = function(){
+
+
+	goTopEx('goTop')
+
+    
+	
+
+	function goTopEx(id) {
+
+		var Sys = {};
+		var ua = navigator.userAgent.toLowerCase();
+		var s;
+		(s = ua.match(/msie ([\d.]+)/)) ? Sys.ie = s[1] :
+		(s = ua.match(/firefox\/([\d.]+)/)) ? Sys.firefox = s[1] :
+		(s = ua.match(/chrome\/([\d.]+)/)) ? Sys.chrome = s[1] :
+		(s = ua.match(/opera.([\d.]+)/)) ? Sys.opera = s[1] :
+		(s = ua.match(/version\/([\d.]+).*safari/)) ? Sys.safari = s[1] : 0;
+
+		var obj = document.getElementById(id);
+		var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0
+		function getScrollTop() {
+			var xsun = document.documentElement.scrollTop;
+			if (Sys.chrome) {
+				xsun=document.body.scrollTop;
+			}
+			return xsun;
+		}
+		function setScrollTop(value) {
+			if (Sys.chrome) {
+				document.body.scrollTop = value;
+			}
+			else {
+				document.documentElement.scrollTop = value;
+			}
+		}
+		window.onscroll = function () { getScrollTop() > 0 ? obj.style.display = "" : obj.style.display = "none"; }
+		obj.onclick = function () {
+			var goTop = setInterval(scrollMove, 10);
+			function scrollMove() {
+				setScrollTop(getScrollTop() / 1.1);
+				if (getScrollTop() < 1) clearInterval(goTop);
+			}
+		}
+	} 
+
+
+
+}
+</script>
+</head>
+<body>
+
+    <div id="goTop" style="display:none" class="goTop"><i></i></div>
+    <div style="wdth:1px;height:1222px;"></div>
+
+</body>
+</html>

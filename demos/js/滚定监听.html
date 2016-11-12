@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<title>滚定监听-对应导航变色</title>
+<style>
+* {margin: 0;padding: 0;}
+body {font-size: 12px;line-height: 1.7;}
+li {list-style: none;}
+#content { width: 1000px;margin: 0 auto;}
+#content h1 {border: 1px solid red;height: 600px;margin-bottom: 20px;}
+#content .item {padding: 20px;margin-bottom: 20px;border: 1px solid red;height: 300px;}
+#content .item li {display: inline;margin-right: 10px;}
+#content .item li a img {width: 230px;height: 230px;border: none;}
+#menu {position: fixed;left: 10%;top: 40%;background: #999;}
+#menu ul li a {display: block;margin: 5px 0;font-size: 14px;font-weight: bold;color: #fff;width: 80px;height: 50px;line-height: 50px;text-decoration: none;text-align: center;}
+#menu ul li a.current {color: #fff;background: red;}
+</style>
+<script src="http://hanekaoru.com/jquery.js"></script>
+<script>
+$(function () {
+    $(window).scroll(function () {
+
+        var scrollTop = $(document).scrollTop();    //垂直滚动的距离
+        var documentHeight = $(document).height();  //文档高度也就是页面整体高度
+        var windowHeight = $(window).height();      //窗口可视化高度
+
+        var contentItems = $("#content").find(".item");
+        var currentItem = "";
+
+        if (scrollTop+windowHeight==documentHeight) {
+            //如果滚动到最底部 获取最后一个的id保存起来
+            //需要页脚内容 不然最后一个div的底部触碰不到浏览器顶部
+            currentItem= "#" + contentItems.last().attr("id");
+        }else{
+            //如果没有到底部 
+            contentItems.each(function () {
+                var contentItem = $(this);
+                var offsetTop = contentItem.offset().top;
+                //判断当前div 出现是视窗内的距离
+                //然后取得当前的id保存起来
+                if (scrollTop + 150 > offsetTop ) {
+                    currentItem = "#" + contentItem.attr("id");
+                }
+            });
+        }
+        //判断当前是否对应
+        if (currentItem != $("#menu").find(".current").attr("href")) {
+            //先把current样式清空
+            $("#menu").find(".current").removeClass("current");
+            //找到相对应的 加上class
+            $("#menu").find("[href=" + currentItem + "]").addClass("current");
+        }
+    });
+});
+
+</script>
+
+</head>
+<body>
+
+<div id="menu">
+    <ul>
+        <li><a href="#item1">1</a></li>
+        <li><a href="#item2">2</a></li>
+        <li><a href="#item3">3</a></li>
+        <li><a href="#item4">4</a></li>
+        <li><a href="#item5">5</a></li>
+        <li><a href="#item6">6</a></li>
+        <li><a href="#item7">7</a></li>
+        <li><a href="#item8">8</a></li>
+    </ul>
+</div>
+
+<div id="content">
+
+    <h1>title</h1>
+
+    <div id="item1" class="item">
+        <h2>1</h2>
+    </div>
+
+    <div id="item2" class="item">
+        <h2>2</h2>
+    </div>
+
+    <div id="item3" class="item">
+        <h2>3</h2>
+    </div>
+
+    <div id="item4" class="item">
+        <h2>4</h2>  
+    </div>
+
+    <div id="item5" class="item">
+        <h2>5</h2>
+    </div>
+
+    <div id="item6" class="item">
+        <h2>6</h2>
+    </div>
+
+    <div id="item7" class="item">
+        <h2>7</h2>
+    </div>
+
+    <div id="item8" class="item">
+        <h2>8</h2>
+    </div>
+
+</div>
+
+
+</body>
+</html>

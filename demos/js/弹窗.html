@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>弹出框效果</title>
+<style>
+.shade_bg{
+	width: 200px;
+	height: 200px;
+	border: 1px solid red;
+}
+</style>
+<script src="http://libs.baidu.com/jquery/1.8.3/jquery.min.js"></script>
+<script>
+$(function(){
+	var getSingle = function( fn ){
+        var obj;
+        return function(){
+            return obj || ( obj = fn .apply( this, arguments ) );
+        }
+    };
+
+    var createDiv = function(){
+        var div = $("<div id='shade'><div class='shade_bg'></div></div>").css({
+                position : 'fixed',
+                top : 0,
+                left : 0,
+                backgroundColor : "rgba(0,0,0,0.6)",
+                zIndex : 99,
+                display: 'none'
+            }).height( $(document).height() ).width( $(document).width() ).hide().appendTo('body');
+        return div;
+    };
+
+    var mask = getSingle( createDiv );
+
+    $('#btn').click(function(){
+        var layer = mask(); 
+        layer.show();
+        setCssPosition($(".shade_bg"));
+        layer.click(function(){
+            $(this).hide();
+        });
+    });
+
+    $(window).resize(function(){
+        $("#shade").css({ 
+            width:$(document).width(),
+            height:$(document).height()
+        });
+        setCssPosition($(".shade_bg"));
+    });
+
+    function setCssPosition(obj){
+        obj.css({ 
+            position: "absolute", 
+            left: ($(document).width() - obj.outerWidth())/2, 
+            top: ($(document).height() - obj.outerHeight())/2 
+        });
+    }
+
+
+});
+</script>
+</head>
+<body>
+
+    <input type="button" value="点我" id="btn">
+
+</body>
+</html>

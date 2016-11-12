@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ajax动画分页效果</title>
+</head>
+<style>
+    *{margin: 0;padding: 0;}
+    #main{
+        width: 480px;
+        height: 240px;
+        padding: 10px;
+        overflow: hidden;
+        border: 1px solid #ddd;
+        margin: 30px auto;
+        box-shadow: 0px 0px 5px #ddd;
+        position: relative;
+    }
+    #main .list{
+        width: 100px;
+        height: 60px;
+        padding: 10px;
+        float: left;
+    }
+    #main .list img{
+        width: 98px;
+        height: 58px;
+        border: 1px solid #ddd;
+        border-radius: 3px;
+        box-shadow: 0px 0px 5px #ddd;
+    }
+    #page{
+        width: 480px;
+        height: 30px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    #page a{
+        padding: 3px 8px;
+        color: #333;
+        text-decoration: none;
+        margin: 3px 10px;
+        background: #fff;
+        border: 1px solid #ddd;
+        box-shadow: 0px 0px 3px #ddd;
+    }
+</style>
+<script src="http://hanekaoru.com/jquery.js"></script>
+<script>
+    $(function(){
+        var posArr = [];
+        var l,t;
+        $('#main .list').each(function(i){
+            l = $(this)[0].offsetLeft;
+            t = $(this)[0].offsetTop;
+            posArr[i] = {left:l,top:t};
+        })
+        
+        //设置list的位置
+        $('#main .list').each(function(j){
+            $(this).css({position:'absolute',left:posArr[j].left,top:posArr[j].top})
+        })
+        
+        
+        $('#page a').click(function(){
+            var url = $(this).attr('href');
+            $.ajax({
+                type: 'GET',
+                url: url,
+                data: '',
+                dataType: 'json',
+                success: function(data){
+                    hiddenList(data);
+                }
+            })
+            
+            return false;
+        })
+        
+        //点击后隐藏该页内容，利用回调函数使两个函数链接起来
+        function hiddenList(data){
+            var aList = $('#main .list');
+            var index = aList.length;
+            var iNow = index;
+            var t = setInterval(function(){
+                aList.eq(index).animate({
+                    left:200,
+                    top:280,
+                    opacity:0
+                },500,function(){
+                    iNow--;
+                    if(iNow <= 0){
+                        loadList(data);
+                    }
+                });
+                
+                if(index > 0){
+                    index--;
+                }else{
+                    clearInterval(t);
+                }
+            },60)
+        }
+        
+        //点击后加载该页内容
+        function loadList(data){
+            $('#main .list').remove();
+            for (i in data){
+                $('#main').append('<div class="list"><img src="images/'+data[i]+'"></div>');
+                
+                $('#main .list').eq(i).css({
+                    left:200,
+                    top:280,
+                    position:'absolute',
+                    opacity: 0
+                })
+            }
+            
+            var index = 0;
+            var aList = $('#main .list');
+            //利用定时器使图片加载的时候有一个前后依次动画效果，不使用的话，是全部一起加载
+            var t = setInterval(function(){
+                aList.eq(index).animate({
+                    left:posArr[index].left,
+                    top:posArr[index].top,
+                    opacity:1
+                },500);
+                
+                if(index < aList.length - 1){
+                    index++;
+                }else{
+                    clearInterval(t);
+                }
+            },60)
+        }
+    })
+</script>
+<body>
+    <div id="main">
+        <div class="list">
+            <img src="images/1.jpg">
+        </div>
+        <div class="list">
+            <img src="images/1.jpg">
+        </div>
+        <div class="list">
+            <img src="images/1.jpg">
+        </div>
+        <div class="list">
+            <img src="images/1.jpg">
+        </div>
+        <div class="list">
+            <img src="images/1.jpg">
+        </div>
+        <div class="list">
+            <img src="images/1.jpg">
+        </div>
+        <div class="list">
+            <img src="images/1.jpg">
+        </div>
+        <div class="list">
+            <img src="images/1.jpg">
+        </div>
+        <div class="list">
+            <img src="images/1.jpg">
+        </div>
+        <div class="list">
+            <img src="images/1.jpg">
+        </div>
+        <div class="list">
+            <img src="images/1.jpg">
+        </div>
+        <div class="list">
+            <img src="images/1.jpg">
+        </div>
+    </div>
+    
+    <div id="page">
+        <a href="request.php?page=1">1</a>
+        <a href="request.php?page=2">2</a>
+        <a href="request.php?page=3">3</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3动画效果</title>
+</head>
+<style>    
+    *{margin:0;padding: 0;}
+    
+    figure{
+        position: relative;
+        width: 400px;
+        overflow: hidden;
+        height: 350px;
+        float: left;
+        margin: 0 0 20px 20px;
+    }
+    figcaption{
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: #fff;
+    }
+    figure img{
+        opacity: .8;
+        transition: all .35s;
+        width: 120%;
+        height: 100%;
+    }
+    
+    figure figcaption p,h2,span,div {transition: all .35s}
+    
+    main{
+        width: 1300px;
+        margin: 0 auto;
+    }
+    
+    /*   test1 start   */
+    .test1{
+        background: #333;
+    }
+    .test1 figcaption p {
+        background: #fff;
+        color: #333;
+        margin: 5px;
+        text-align: center;
+        transform: translate(-120px,0);
+    }
+    .test1 figcaption p:nth-of-type(1){
+        transition-delay: .05s;
+    }
+    .test1 figcaption p:nth-of-type(2){
+        transition-delay: .1s;
+    }
+    .test1 figcaption p:nth-of-type(3){
+        transition-delay: .15s;
+    }
+    .test1 figcaption{
+        padding: 20px;
+    }
+    .test1:hover figcaption p{
+       transform: translate(0,0);
+    }
+    .test1:hover img{
+        transform: translate(-50px,0);
+        opacity: 0.5;
+    }
+    /*   test1 end   */
+    
+    
+    
+    /*   test2 start   */
+    .test2{
+        background: #030;
+    }
+    .test2 figcaption{
+        width: 400px;
+        height: 350px;
+        padding: 30px;
+    }
+    .test2 figcaption h2{
+        margin: 15% 0 0 15%;
+    }
+    .test2 figcaption p{
+        margin-left: 15%;
+        transform: translate(0,50px);
+        opacity: 0;
+    }
+    .test2 figcaption div{
+        border: 2px solid #fff;
+        width: 60%;
+        height: 60%;
+        position: absolute;
+        top: 15%;
+        left: 15%;
+        transform: translate(0,-450px) rotate(0);
+    }
+    .test2:hover figcaption div{
+        transform: translate(0,0) rotate(360deg);
+    }
+    .test2:hover img{
+        opacity: .5;
+    }
+    .test2:hover figcaption p{
+        transform: translate(0,0);
+        opacity: 1;
+    }
+    /*   test2 end   */
+    
+    
+    /*   test3 start   */
+    .test3{
+        background: #363636;
+    }
+    .test3 figcaption{
+        top: 25%;
+        left: 15%;
+    }
+    .test3 figcaption h2{
+        transform: skew(90deg);
+    }
+    .test3 figcaption p{
+        transform: skew(90deg);
+        transition-delay: .1s;
+    }
+    .test3:hover img{
+        opacity: .5;
+    }
+    .test3:hover figcaption h2{
+        transform: skew(0);
+    }
+    .test3:hover figcaption p{
+        transform: skew(0);
+    }
+    /*   test3 end   */
+    
+    
+    /*   test4 start   */
+    .test4{
+        background: #363636;
+    }
+    .test4 figcaption{
+        width: 400px;
+        height: 350px;
+        padding: 30px;
+    }
+    .test4 figcaption div{
+        border: 2px solid #fff;
+        width: 60%;
+        height: 60%;
+        position: absolute;
+        top: 15%;
+        left: 15%;
+        transform: scale(1.5,1.5);
+        opacity: 0;
+    }
+    .test4 figcaption h2{
+        margin: 15% 0 0 15%;
+        transform: scale(1,1);
+        opacity: 0;
+    }
+    .test4 figcaption p{
+        margin: 5px 0 0 15%;
+        transform: scale(1,1);
+        opacity: 0;
+    }
+    .test4:hover figcaption div{
+        transform: scale(1,1);
+        opacity: 1;
+    }
+    .test4:hover img{
+        opacity: .5;
+        transform: scale(1.5,1.5);
+    }
+    .test4:hover figcaption h2{
+        transform: scale(1,1);
+        opacity: 1;
+    }
+    .test4:hover figcaption p{
+        transform: scale(1,1);
+        opacity: 1;
+    }
+    /*   test4 end   */
+    
+    
+     /*   test5 start   */
+    .test5{
+        background: #363636;
+    }
+    .test5 figcaption{
+        top: 25%;
+        left: 15%;
+    }
+    .test5 figcaption div{
+        width: 426px;
+        height: 350px;
+        background: #fff;
+        opacity: .7;
+        position: relative;
+        left: -60px;
+        top: 206px;
+    }
+    .test5 figcaption div span{
+        display: block;
+        width: 100px;
+        height: 30px;
+        border: 1px solid #000;
+        color: red;
+        float: right;
+        transform: rotate(20deg);
+        margin-top:30px;
+        text-align: center;
+        line-height: 30px;
+    }
+    .test5 figcaption div span:nth-of-type(1){
+        margin-right: 30px;
+        margin-left: 20px;
+    }
+    .test5 img {
+        transform: translate(0,0);
+    }
+    .test5:hover figcaption div{
+        transform: rotate(-20deg);
+        transform-origin: 0 0;
+    }
+    .test5:hover img{
+        opacity: .5;
+        transform: translate(-50px,0);
+    }
+    /*   test5 end   */
+    
+    
+    
+    /*   test6 start   */
+    .test6{
+        background: #222;
+        position: relative;
+    }
+    .test6 figcaption div:nth-of-type(1){
+        width: 250px;
+        height: 250px;
+        border: solid #fff;
+        border-width: 0 1px ;
+        position: absolute;
+        left: 76px;
+        top: 56px;
+        transform: translate(0,-350px);
+    }
+    .test6 figcaption div:nth-of-type(2){
+        width: 295px;
+        height: 220px;
+        border: solid #fff;
+        border-width: 1px 0;
+        position: absolute;
+        left: 55px;
+        top: 67px;
+        transform: translate(-350px,0);
+    }
+    .test6 figcaption span{
+        display: block;
+        width: 200px;
+        height: 100px;
+        text-align: center;
+        line-height: 100px;
+        opacity: 0;
+        font-size: 20px;
+    }
+    .test6:hover figcaption span{
+        transform: translate(110px,140px);
+        opacity: 1;
+    }
+    .test6:hover img{
+        opacity: .5;
+        transform: scale(1.2,1.2);
+    }
+    .test6:hover div:nth-of-type(1),.test6:hover div:nth-of-type(2){
+        transform: translate(0,0);
+    }
+    
+    /*   test6 end   */
+</style>
+<body>
+    <main>
+        <!--  trst1  -->
+        <figure class="test1">
+            <img src="1.jpg">
+            
+            <figcaption>
+                <h2>图片注解</h2>
+                <p>图片注解</p>
+                <p>图片注解</p>
+                <p>图片注解</p>
+            </figcaption>
+        </figure>
+        
+        
+        <!--  trst2  -->
+        <figure class="test2">
+            <img src="1.jpg">
+            
+            <figcaption>
+                <h2>图片注解</h2>
+                <p>图片注解</p>
+                <div></div>
+            </figcaption>
+        </figure>
+        
+        
+        <!--  trst3  -->
+        <figure class="test3">
+            <img src="1.jpg">
+            
+            <figcaption>
+                <h2>图片注解</h2>
+                <p>图片注解图片注解图片注解</p>
+            </figcaption>
+        </figure>
+        
+        <!--  trst4  -->
+        <figure class="test4">
+            <img src="1.jpg">
+            
+            <figcaption>
+                <h2>图片注解</h2>
+                <p>图片注解</p>
+                <div></div>
+            </figcaption>
+        </figure>
+        
+        <!--  trst5  -->
+        <figure class="test5">
+            <img src="1.jpg">
+            
+            <figcaption>
+                <h2>图片注解</h2>
+                <p>图片注解</p>
+                
+                <div>
+                    <span>图片注解</span>
+                    <span>图片注解</span>
+                </div>
+            </figcaption>
+        </figure>
+        
+        <!--  trst6  -->
+        <figure class="test6">
+            <img src="1.jpg">
+            
+            <figcaption>
+                <span>图片注解</span>
+                <div></div>
+                <div></div>                
+            </figcaption>
+        </figure>
+    </main>
+</body>
+</html>

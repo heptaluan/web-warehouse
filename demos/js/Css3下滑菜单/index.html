@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Css3 下滑菜单</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <link rel="stylesheet" href="css/index.css" type="text/css" media="screen"/>
+    </head>
+
+    <body>
+		<div class="content">
+			<h1 class="title"></h1>
+			<ul id="sdt_menu" class="sdt_menu">
+				<li>
+					<a href="#">
+						<img src="images/2.jpg" alt=""/>
+						<span class="sdt_active"></span>
+						<span class="sdt_wrap">
+							<span class="sdt_link">新番连载</span>
+							<span class="sdt_descr">那年那兔那些事</span>
+						</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="images/2.jpg" alt=""/>
+						<span class="sdt_active"></span>
+						<span class="sdt_wrap">
+							<span class="sdt_link">流行音乐</span>
+							<span class="sdt_descr">演唱-乐器</span>
+						</span>
+					</a>
+					<div class="sdt_box">
+							<a href="#">OP/ED/OST</a>
+							<a href="#">同人音乐</a>
+							<a href="#">音乐选集</a>
+					</div>
+				</li>
+				<li>
+					<a href="#">
+						<img src="images/2.jpg" alt=""/>
+						<span class="sdt_active"></span>
+						<span class="sdt_wrap">
+							<span class="sdt_link">生活娱乐</span>
+							<span class="sdt_descr">致十年后的我</span>
+						</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="images/2.jpg" alt=""/>
+						<span class="sdt_active"></span>
+						<span class="sdt_wrap">
+							<span class="sdt_link">科技</span>
+							<span class="sdt_descr">趣味科普人生</span>
+						</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="images/2.jpg" alt=""/>
+						<span class="sdt_active"></span>
+						<span class="sdt_wrap">
+							<span class="sdt_link">电影</span>
+							<span class="sdt_descr">电影相关</span>
+						</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="images/2.jpg" alt=""/>
+						<span class="sdt_active"></span>
+						<span class="sdt_wrap">
+							<span class="sdt_link">文章区</span>
+							<span class="sdt_descr">文章综合</span>
+						</span>
+					</a>
+					<div class="sdt_box">
+						<a href="#">工作·情感</a>
+						<a href="#">动漫文化</a>
+						<a href="#">小说漫画</a>
+					</div>
+				</li>
+			</ul>
+		</div>
+        <div></div>
+
+<!-- JS -->
+        <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+		<script type="text/javascript" src="http://apps.bdimg.com/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+        <script type="text/javascript">
+            $(function() {
+
+                $('#sdt_menu > li').bind('mouseenter',function(){
+					var $elem = $(this);
+					$elem.find('img')
+						 .stop(true)
+						 .animate({
+							'width':'170px',
+							'height':'170px',
+							'left':'0px'
+						 },400,'easeOutBack')
+						 .addBack()
+						 .find('.sdt_wrap')
+					     .stop(true)
+						 .animate({'top':'140px'},500,'easeOutBack')
+						 .addBack()
+						 .find('.sdt_active')
+					     .stop(true)
+						 .animate({'height':'170px'},300,function(){
+						var $sub_menu = $elem.find('.sdt_box');
+						if($sub_menu.length){
+							var left = '170px';
+							if($elem.parent().children().length == $elem.index()+1)
+								left = '-170px';
+							$sub_menu.show().animate({'left':left},200);
+						}	
+					});
+				}).bind('mouseleave',function(){
+					var $elem = $(this);
+					var $sub_menu = $elem.find('.sdt_box');
+					if($sub_menu.length)
+						$sub_menu.hide().css('left','0px');
+					
+					$elem.find('.sdt_active')
+						 .stop(true)
+						 .animate({'height':'0px'},300)
+						 .addBack().find('img')
+						 .stop(true)
+						 .animate({
+							'width':'0px',
+							'height':'0px',
+							'left':'85px'},400)
+						 .addBack()
+						 .find('.sdt_wrap')
+						 .stop(true)
+						 .animate({'top':'25px'},500);
+				});
+            });
+        </script>
+    </body>
+</html>

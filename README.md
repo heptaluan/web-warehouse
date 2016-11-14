@@ -32,7 +32,7 @@
 
 从新温习了解 getter/setter/Object.defineProperty() 相关知识后在继续跟进
 
-[笔记记录](http://hanekaoru.com/object-defineproperty/)
+[笔记记录（Object.defineProperty()）](http://hanekaoru.com/object-defineproperty/)
 
 参考：
 

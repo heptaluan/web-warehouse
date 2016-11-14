@@ -8,7 +8,7 @@
 #div1{
     width: 200px;
     height: 200px;
-	background:black;
+    background:black;
 }
 </style>
 <script>
@@ -16,18 +16,18 @@ window.onload=function (){
 	var oDiv=document.getElementById('div1');
 
 	oDiv.onmouseover=function (){
-		move(this,'width',400);
+	    move(this,'width',400);
 	};	
 	oDiv.onmouseout=function (){
-		move(this,'width',200);
+	    move(this,'width',200);
 	};
 };
 
 function getStyle(obj,name){
 	if(obj.currentStyle){
-		return obj.currentStyle[name];
+	    return obj.currentStyle[name];
 	}else{
-		return getComputedStyle(obj,false)[name];
+	    return getComputedStyle(obj,false)[name];
 	}
 };
 

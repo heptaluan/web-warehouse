@@ -11,6 +11,21 @@
 收集一些自己遇到过（用过）的插件，demo一类
 
 ----
+#### 11.14
+
+最近再看 慕课网的 [vuejs入门基础](http://www.imooc.com/learn/694)
+
+感觉还不错，稳固了下基础知识，也疏通了一些之前看文档不太明白的地方
+
+文档进度到 Render 函数，进度不算太快，期间抽空把之前做过的一些练手项目传了上来
+
+然后重写了博客的[About](http://hanekaoru.com/about/)和[Demo](http://hanekaoru.com/about/demo.html)页面，分类规划了一下，方便后续扩展
+
+然后剩下的，还是继续啃 Vue
+
+
+
+----
 #### 11.4
 
 继续啃文档，目前进展到 深入响应式原理，发现 Object.defineProperty 相关的知识忘的都差不多了

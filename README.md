@@ -13,13 +13,13 @@
 ----
 #### 11.14
 
-最近再看重写了博客的[About](http://hanekaoru.com/about/)和[Demo](http://hanekaoru.com/about/demo.html)页面，分类规划了一下，方便后续扩展
+最近重写了博客的[About](http://hanekaoru.com/about/)和[Demo](http://hanekaoru.com/about/demo.html)页面，分类规划了一下，方便后续扩展
 
 看完了慕课网的 [vuejs入门基础](http://www.imooc.com/learn/694)
 
 感觉还不错，稳固了下基础知识，也疏通了一些之前看文档不太明白的地方
 
-课程代码跟着敲了一遍，外加找了一些小的练手案例，传送门：[VueDemo](https://github.com/hanekaoru/VueDemo)
+课程代码跟着敲了一遍，外加找了一些小的案例练练手，传送门：[VueDemo](https://github.com/hanekaoru/VueDemo)
 
 然后剩下的，还是继续啃 Vue ...
 

@@ -68,6 +68,7 @@ app.listen("3000", function () {
 
 ### lesson2
 
+使用外部模块
 
 #### $ npm init
 
@@ -110,8 +111,12 @@ app.listen("3000", function (req, res) {
 若是不传入 q 参数时，req.query.q 取到的值是 undefined，utility.md5 直接使用了这个空值，导致下层的 crypto 抛错。
 
 
+----
 
 
+### lesson3
+
+简单爬虫
 
 
 

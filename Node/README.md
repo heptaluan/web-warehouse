@@ -79,7 +79,7 @@ app.listen("3000", function () {
 
 app.js
 
-```
+```js
 // 引入依赖
 var express = require("express");
 var utility = require("utility");

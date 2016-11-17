@@ -4,7 +4,9 @@ Node.js 学习笔记记录
 
 参考 [《Node.js 包教不包会》](https://github.com/hanekaoru/node-lessons)
 
-----
+
+
+
 
 ## lesson1 
 
@@ -63,7 +65,9 @@ app.listen("3000", function () {
 
 [RFC1738](http://www.ietf.org/rfc/rfc1738.txt) 定义的url格式笼统版本<scheme>:<scheme-specific-part>， scheme有我们很熟悉的http、https、ftp，以及著名的ed2k，thunder。
 
-----
+
+
+
 
 
 ## lesson2
@@ -111,7 +115,9 @@ app.listen("3000", function (req, res) {
 若是不传入 q 参数时，req.query.q 取到的值是 undefined，utility.md5 直接使用了这个空值，导致下层的 crypto 抛错。
 
 
-----
+
+
+
 
 
 ## lesson3
@@ -129,7 +135,7 @@ Node.js 版的 jquery
 
 app.js
 
-```
+```js
 var express = require("express");
 var superagent = require("superagent");
 var cheerio = require("cheerio");
@@ -171,7 +177,11 @@ app.listen("3000", function (req, res) {
 
 
 
+## lesson4
 
+### 使用 eventproxy 控制并发
+
+待续...
 
 
 

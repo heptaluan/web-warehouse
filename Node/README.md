@@ -6,9 +6,9 @@ Node.js 学习笔记记录
 
 ----
 
-### lesson1 
+## lesson1 
 
-一个最简单的 express 应用
+### 一个简单的 express 应用
 
 #### 安装 express
 
@@ -66,9 +66,9 @@ app.listen("3000", function () {
 ----
 
 
-### lesson2
+## lesson2
 
-使用外部模块
+### 使用外部模块
 
 #### $ npm init
 
@@ -114,10 +114,59 @@ app.listen("3000", function (req, res) {
 ----
 
 
-### lesson3
+## lesson3
 
-简单爬虫
+###简单爬虫
 
+#### superagent
+
+是一个 http 方面的库，可以发起 get 或 post 请求
+
+
+#### cheerio
+
+Node.js 版的 jquery
+
+app.js
+
+```
+var express = require("express");
+var superagent = require("superagent");
+var cheerio = require("cheerio");
+
+var app = express();
+
+app.get("/", function (req, res, next) {
+    // 用 superagent 去抓取 https://cnodejs.org 的内容
+    superagent.get("https://cnodejs.org")
+    .end(function (err, sres) {
+        if (err) {
+            return next(err);
+        }
+
+        // sres.text 里面存储着网页的 html 内容，将它传给 cheerio.load 之后
+        // 就可以得到一个实现了 jquery 接口的变量，我们习惯性的将它命名为 "$"
+
+        var $ = cheerio.load(sres.text);
+        var items = [];
+        $('#topic_list .topic_title').each(function (index, element) {
+            var $element = $(element);
+            var $author = $(".user_avatar img");
+            items.push({
+                title: $element.attr("title"),
+                href: $element.attr("href"),
+                author: $author.attr("title")
+            })
+        })
+
+        res.send(items)
+    })
+})
+
+app.listen("3000", function (req, res) {
+    console.log("app is running at port 3000")
+})
+```
 
 
 

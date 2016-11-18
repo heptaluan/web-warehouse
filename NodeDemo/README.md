@@ -1,6 +1,6 @@
 Node.js 学习笔记记录
 
-各种知识点汇总
+各种知识点，Demos的集合汇总
 
 参考 [《Node.js 包教不包会》](https://github.com/hanekaoru/node-lessons)
 

@@ -2,9 +2,9 @@
 
 不定时更新，仅作学习记录
 
-也算是督促自己，希望每天进步一点点（~~而不是闲的时候刷知乎，QQ群斗图~~）
+也算是一个各类 demo 的集合地
 
-平常的练习，demo一类的也会上传到这个仓库当中
+督促自己，希望每天进步一点点（~~而不是闲的时候刷知乎，QQ群斗图~~）
 
 同时新建了一个自己的 [资源库](https://github.com/hanekaoru/Repository)
 
@@ -19,11 +19,9 @@
 
 感觉还不错，稳固了下基础知识，也疏通了一些之前看文档不太明白的地方
 
-课程代码跟着敲了一遍，外加找了一些小的案例练练手，传送门：[VueDemo](https://github.com/hanekaoru/VueDemo)
+课程代码跟着敲了一遍，外加找了一些小的案例练练手，传送门：[VueDemo集合页](https://github.com/hanekaoru/WebLearningNotes/tree/master/VueDemo)
 
 然后剩下的，还是继续啃 Vue ...
-
-
 
 ----
 #### 11.4
@@ -43,76 +41,15 @@
 [Object.defineProperty()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty)
 
 ----
-#### 11.2
-
-出差了一段时间，期间断断续续的刷了一点文档，网上找了一些Vue实例练了练手
-
-但是学习效果很差，有些东西第二天起来也就记不起来多少了，或许跟出差在外心静不来下有多少关系吧，（~~就是懒~~）待出差完毕静下心来在过一遍...
-
-~~[Vue2.0文档](https://vuefe.cn/guide/)~~
-
-进度 40%
-
----
 
 #### 10.26
 
-今日新开，公司项目已经完结，最近手头上的事情也不是很多，距离下一个新项目开始还有一段时间，打算在此期间学习一些 Vue 相关知识，记录之~
+新开一个记录贴，也算是督促自己常常能来更新，不至于太过懒散，公司项目已经完结，最近手头上的事情也不是很多，距离下一个新项目开始还有一段时间，打算在此期间学习一些 Vue 相关知识，记录之~
 
-~~[Vue2.0文档](https://vuefe.cn/guide/)~~
+~~[Vue2.0文档](https://vuefe.cn/guide/)~~ 进度 20%
 
-从新开始看2.0的文档，进度 20% 
+感觉2.0文档很多地方都不一样了，所以就从头开始，从新撸一遍2.0的文档 
 
 ~~（发现好多1.X的东西在2.0都被废弃了，坑）~~
-
-## 阶段目标
-
-暂定的一些目前想看 or 想学的一些东西，以后会慢慢添加
-
-前端之路漫漫长，多看，多敲，多总结
-
-#### Vue：
-
-[Vue文档](https://vuefe.cn/guide/)
-
-[Vue.js 免费中文视频教程](https://github.com/helloqingfeng/Vuejs-free-learn)
-
-[Awesome Vue.js](https://github.com/vuejs/awesome-vue)
-
-----
-
-#### js：
-
-javascript面向对象编程指南  20%
-
-《javascript函数式编程》
-
-《基于MVC的JavaScript Web富应用开发》
-
-Vue 权威指南
-
-----
-
-#### css：
-
-css权威指南
-
-css揭秘
-
-----
-
-#### 源码：
-
-underscore
-
-zepto
-
-backbone
-
-jquery 30%
-
-----
-
-
 
 

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数据绑定</title>
+</head>
+<body>
+
+
+<div id="app">
+    
+    <span> {{ message | capitalize }}</span>
+
+</div>    
+
+<script src="../vue.js"></script>
+<script>
+
+
+    var vm = new Vue({
+        el: "#app",
+        data: {
+            message: "hello world"
+        },
+        filters: {
+            capitalize: function (value) {
+                if (!value) return ''
+                value = value.toString()
+                return value.charAt(0).toUpperCase() + value.slice(1)
+            }
+        }
+    })
+
+
+
+
+</script>
+</body>
+</html>

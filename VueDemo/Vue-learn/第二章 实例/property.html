@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<script>
+
+    function Person (gender) {
+        this.gender = gender;
+    }
+
+    Person.prototype.sayHello = function () {
+        console.log("this.gender:" + this.gender );
+    }
+
+    var person1 = new Person("hello world!");
+
+    person1.sayHello();
+
+
+</script>
+</body>
+</html>

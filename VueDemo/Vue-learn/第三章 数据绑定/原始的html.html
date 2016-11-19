@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数据绑定</title>
+</head>
+<body>
+
+
+<div id="app">
+    
+    <div v-text="raw_html"></div>
+
+    <div v-html="raw_html"></div>
+
+</div>    
+
+<script src="../vue.js"></script>
+<script>
+
+    var vm = new Vue({
+        el: "#app",
+        data: {
+            raw_html: "<img src='https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo/bd_logo1_31bdc765.png' width='270' height='129'>"
+        }
+    })
+
+
+
+
+</script>
+</body>
+</html>

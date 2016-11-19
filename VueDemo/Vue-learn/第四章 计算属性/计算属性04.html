@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>计算属性</title>
+</head>
+<body>
+
+
+<div id="app">
+    
+    {{ fullName }}
+
+</div>    
+
+<script src="../vue.js"></script>
+<script>
+
+
+    var vm = new Vue({
+        el: "#app",
+        data: {
+            firstName: "Foo",
+            lastName: "Bar"
+        },
+        computed: {
+            fullName: {
+                // getter Vue 取出 model 资料
+                get: function () {
+                    return this.firstName + " " + this.lastName
+                },
+
+                // setter Vue 设定 model 资料
+                set: function (newValue) {
+                    console.log("执行 setter")
+                    console.log("传入的字符串：" + newValue)
+                    var names = newValue.split("");
+                    this.firstName = names[0];
+                    this.lastName = names[names.length - 1]
+                }
+            }
+        }
+    })
+
+    
+
+
+
+</script>
+</body>
+</html>

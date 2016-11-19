@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数据绑定</title>
+</head>
+<body>
+
+
+<div id="app">
+    
+    <span>Message is: {{ msg }}</span>
+    <br>
+    <input type="text" v-model="msg">
+    <br>
+    <br>
+    <span>Message is: {{msg2}}</span>
+    <br>
+    <input type="text" v-once="msg2">
+
+</div>    
+
+<script src="../vue.js"></script>
+<script>
+
+    var vm = new Vue({
+        el: "#app",
+        data: {
+            msg: "msg",
+            msg2: "msg2"
+        }
+    })
+
+
+
+
+</script>
+</body>
+</html>

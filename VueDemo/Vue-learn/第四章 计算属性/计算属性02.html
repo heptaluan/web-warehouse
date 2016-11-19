@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>计算属性</title>
+</head>
+<body>
+
+
+<div id="app">
+    
+    {{ fullName }}
+
+</div>    
+
+<script src="../vue.js"></script>
+<script>
+
+
+    var vm = new Vue({
+        el: "#app",
+        data: {
+            firstName: "Foo",
+            lastName: "Bar",
+            fullName: "Foo Bar"
+        }
+    })
+
+    vm.$watch("firstName", function (val) {
+        this.fullName = val + " " + this.lastName
+    })
+
+    vm.$watch("lastName", function (val) {
+        this.fullName = this.firstName + " " + val
+    })
+
+
+
+
+</script>
+</body>
+</html>

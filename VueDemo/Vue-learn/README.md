@@ -308,3 +308,12 @@ data: {
 ```
 
 上面这个例子将会始终添加 classA，但是只有在 isB 是 true 的时候添加 calssB
+
+
+也可以在数组语法中使用对象语法：
+
+```html
+
+<div v-bind:class="[classA, {classB: isB, classC: isC}]">hello world</div>
+
+```

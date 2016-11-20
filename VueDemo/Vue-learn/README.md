@@ -383,3 +383,42 @@ v-if 也是**惰性**的：如果在初始渲染时条件为假，则什么也�
 
 
 ## 列表渲染
+
+可以使用 v-for 指令基于一个数组来渲染一个列表，这个指令使用特殊的语法形式，形式为：item in items。items 是数据数组，item是当前数组元素的别名
+
+另外，你可以为索引指定一个别名（如果 v-for 用于一个对象，则可以为对象的键指定一个别名）：
+
+```html
+
+<div v-for="(item, index) in items">
+    {{index}} {{ item.message }}
+</div>
+
+```
+
+也可以使用 of 分隔符，更为接近 JavaScript 遍历器语法
+
+```html
+
+<div v-for="item of items">
+    {{index}} {{ item.message }}
+</div>
+
+```
+
+需要注意的是，在 2.0 版本中， item 与 index 位置做了调整 
+
+### template 中的 v-for
+
+类似 template 中的 v-if，也可以将 v-for 用在 template 标签上，以渲染一个包含多个元素的块
+
+```html
+
+<ul>
+    <template v-for="item in items">
+        <li>{{ item msg ]}</li>
+        <li class=""static></li>
+    </template>
+</ul>
+
+```

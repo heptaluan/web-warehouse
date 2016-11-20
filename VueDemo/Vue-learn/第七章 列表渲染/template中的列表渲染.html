@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>列表渲染</title>
+</head>
+<body>
+
+
+<div id="app">
+    
+    <ul>
+        <template v-for="(item, index) in items">
+            <li>{{ item.msg }}</li>
+            <li class=""static>{{index}}</li>
+        </template>
+    </ul>
+
+</div>    
+
+<script src="../vue.js"></script>
+<script>
+
+    var vm = new Vue({
+        el: "#app",
+        data: {
+            items: [
+                { msg: "A" },
+                { msg: "B" },
+                { msg: "C" }
+            ]
+        }
+    })
+
+
+
+
+</script>
+</body>
+</html>

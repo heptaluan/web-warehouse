@@ -317,3 +317,69 @@ data: {
 <div v-bind:class="[classA, {classB: isB, classC: isC}]">hello world</div>
 
 ```
+
+
+## 条件渲染
+
+### v-if
+
+在 Vue.js 中，我们可以使用 v-if 指令实现渲染模板的功能：
+
+```html
+
+<h1 v-if="ok">YES</h1>
+
+```
+
+也可以使用 v-else 添加一个 "else" 块
+
+```html
+
+<h1 v-if="ok">YES</h1>
+<h1 v-else>NO</h1>
+
+```
+
+Vue.js 的模板，可以当作是一个暂存区，当条件为 true 的时候，才会被渲染出来，平时可以先隐藏起来，不会渲染到网页上
+
+需要注意的是：Vue 中不支持 v-if 的嵌套使用
+
+
+### v-show
+
+在 Vue 中的 tamplate 里面是不能使用 v-show 的
+
+```html
+
+<h1 v-show="ok">hello world</h1>
+
+```
+
+
+### v-if 和 v-show
+
+v-if 是真实的条件渲染，因为它会确保条件块在切换当中适当地销毁与重建条件块内的事件监听器和子组件。
+
+v-if 也是**惰性**的：如果在初始渲染时条件为假，则什么也不做——在条件第一次变为真时才开始局部编译（编译会被缓存起来）。
+
+相比之下， v-show 简单得多——元素始终被编译并保留，只是简单地基于 CSS 切换。
+
+一般来说， v-if 有更高的切换消耗而 v-show 有更高的初始渲染消耗。因此，如果需要频繁切换使用 v-show 较好，如果在运行时条件不大可能改变则使用 v-if 较好。
+
+
+### v-else
+
+可以使用 v-else 指令给 v-if 添加一个 "else" 块
+
+在 2.0 版本之后，v-else 不能再跟在 v-show后面使用。
+
+```html
+
+<p v-if="foo">Foo</p>
+<p v-if="!foo && bar">Not foo, but bar</p>
+
+```
+
+
+
+## 列表渲染

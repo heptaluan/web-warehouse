@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>条件渲染</title>
+</head>
+<body>
+
+
+<div id="app">
+    
+    <h1 v-if="ok">hello</h1>
+    <h1 v-else>world</h1>
+
+</div>    
+
+<script src="../vue.js"></script>
+<script>
+
+
+    var vm = new Vue({
+        el: "#app",
+        data: {
+            ok: false
+        }
+    })
+
+
+
+
+</script>
+</body>
+</html>

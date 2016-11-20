@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>条件渲染</title>
+</head>
+<body>
+
+
+<div id="app">
+    
+    <template v-if="ok">
+        <h1>Title</h1>
+        <div>body</div>
+        <div>foot</div>
+    </template>
+
+</div>    
+
+<script src="../vue.js"></script>
+<script>
+
+
+    var vm = new Vue({
+        el: "#app",
+        data: {
+            ok: true
+        }
+    })
+
+
+
+
+</script>
+</body>
+</html>

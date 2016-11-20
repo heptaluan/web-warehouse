@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>class 绑定</title>
+</head>
+<body>
+<style>
+.classA {
+    color: pink;
+    font-size: 30px;
+}
+
+.classB {
+    text-decoration: underline;
+}
+
+</style>
+
+
+<div id="app">
+
+
+    <div v-bind:class="[classA, isB ? classB : '']">hello world</div>
+
+
+
+
+</div>    
+
+<script src="../vue.js"></script>
+<script>
+
+    var vm = new Vue({
+        el: "#app",
+        data: {
+            classA: 'classA',
+            classB: 'classB',
+            isB: false
+        }
+    })
+
+
+
+
+</script>
+</body>
+</html>

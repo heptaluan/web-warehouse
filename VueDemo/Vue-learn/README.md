@@ -254,3 +254,57 @@ Vue.js 提供了一个方法 $watch，它用于观察 Vue 实例上的数据变�
 ```
 
 这通常很有用，因为在 type="number" 时 HTML 中输入的值也总是会返回字符串类型。
+
+
+## class 与 style 绑定
+
+数据绑定是一个常见需求操作元素 class 列表和它的内联样式，因为它们都是属性，所以我们可以使用 v-bind 来处理它们：我们只需要计算表达式最终的字符串。
+
+表达式的结果除了字符串之外，还可以是对象或数组
+
+尽管可以使用 Mustache 标签绑定 class，比如 class = "{{ className }}"，但是我们不推荐这种写法和 v-bind:class 混用，只能选其一
+
+我们可以传给 v-bind:class 一个对象，以动态的切换 class 
+
+注意：v-bind:class 指令可以和普通的 class 特性共存：
+
+```html
+
+<div class="static" v-bind:class="{'class-a': isA, 'class-b': isB}">hello world</div>
+
+data: {
+    isA: true,
+    isB: false
+}
+
+```
+
+也可以直接绑定数据里的一个对象：
+
+```html
+
+<div v-bind:class="classObj">hello world</div>
+
+data: {
+    classObj: {
+        'class-a': true,
+        'class-b': false
+    }
+}
+
+```
+
+
+### 数组语法
+
+我们可以把一个数组传给 v-bind:class，以应用一个 class 列表
+
+如果你也想根据条件切换列表中的 class，可以使用三元表达式：
+
+```html
+
+<div v-bind:class="[classA, isB ? : classB : '']">hello world</div>
+
+```
+
+上面这个例子将会始终添加 classA，但是只有在 isB 是 true 的时候添加 calssB

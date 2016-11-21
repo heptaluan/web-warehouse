@@ -418,3 +418,301 @@ async.mapLimit(urls, 5, function (url, callback) {
 测试率覆盖工具 istanbul : https://github.com/gotwarlost/istanbul
 
 简单 Makefile 的编写 : http://blog.csdn.net/haoel/article/details/2886
+
+遇到坑回来再填
+
+相关知识点：
+
+-g 与 非-g 的区别
+
+就是安装位置的区别，g 是 global 的意思。如果不加的话，则安装 mocha 在你的项目目录下面；如果加了，则这个 mocha 是安装在全局的，如果 mocha 有可执行命令的话，那么这个命令也会自动加入到你系统 $PATH 中的某个地方
+
+
+
+## lesson7
+
+### 浏览器端测试：mocha，chai，phantomjs
+
+学习使用测试框架 mocha 进行前端测试 : http://mochajs.org/
+
+了解全栈的断言库 chai: http://chaijs.com/
+
+了解 headless 浏览器 phantomjs: http://phantomjs.org/
+
+同上，遇到坑回来再填
+
+相关知识点：
+
+### 前端脚本的单元测试
+
+上一篇的内容都是针对后端环境中 node 的一些单元测试方案，出于应用健壮性的考量，针对前端 js 脚本的单元测试也非常重要。而前后端通吃，也是 mocha 的一大特点。
+
+首先，前端脚本的单元测试主要有两个困难需要解决。
+
+1. 运行环境应当在浏览器中，可以操纵浏览器的DOM对象，且可以随意定义执行时的 html 上下文。
+
+2. 测试结果应当可以直接反馈给 mocha，判断测试是否通过。
+
+
+### npm i --save 与 npm i --save-dev 的区别
+
+**--save-dev** 是你开发时候依赖的东西，是对开发环境所需依赖的声明(构建工具，测试工具)
+
+**--save** 是你发布之后还依赖的东西，是对生产环境所需依赖的声明(开发应用中使用的框架，库)
+
+比如，你写 ES6 代码，如果你想编译成 ES5 发布那么 babel 就是 devDependencies。
+如果你用了 jQuery，由于发布之后还是依赖 jQuery，所以是 dependencies。
+
+正常使用 npm install 时，会下载 dependencies 和 devDependencies 中的模块，当使用 npm install --production 或者注明 NODE_ENV 变量值为 production 时，只会下载 dependencies中的 模块。
+
+
+
+
+
+
+## lesson8
+
+### 测试用例：supertest
+
+同上，6、7、8说的都是测试相关的知识，遇到坑回来再填
+
+相关知识点： 
+
+### supertest
+
+supertest 是 superagent 的孪生库。作者是 tj
+
+为什么说 supertest 是 superagent 的孪生库呢，因为他们的 API 是一模一样的。superagent 是用来抓取页面用的，而 supertest，是专门用来配合 express （准确来说是所有兼容 connect 的 web 框架）进行集成测试的。
+
+将使你有一个 app: var app = express();，想对它的 get 啊，post 接口啊之类的进行测试，那么只要把它传给 supertest：var request = require('supertest')(app)。之后调用 requset.get('/path') 时，就可以对 app 的 path 路径进行访问了。它的 API 参照 superagent 的来就好了：http://visionmedia.github.io/superagent/ 。
+
+
+### 关于 cookie 持久化
+
+有两种思路
+
+1. 在 supertest 中，可以通过 var agent = supertest.agent(app) 获取一个 agent 对象，这个对象的 API 跟直接在 superagent 上调用各种方法是一样的。agent 对象在被多次调用 get 和 post 之后，可以一路把 cookie 都保存下来。
+
+```js
+
+var supertest = require('supertest');
+var app = express();
+var agent = supertest.agent(app);
+
+agent.post('login').end(...);
+// then ..
+agent.post('create_topic').end(...); // 此时的 agent 中有用户登陆后的 cookie
+
+```
+
+2. 在发起请求时，调用 .set('Cookie', 'a cookie string') 这样的方式。
+
+```js
+
+var supertest = require('supertest');
+var userCookie;
+
+supertest.post('login').end(function (err, res) {
+        userCookie = res.headers['set-cookie']
+    });
+// then ..
+
+supertest.post('create_topic').set('cookie', userCookie).end(...)
+
+
+```
+
+
+## lesson9
+
+### 正则表达式 
+
+《正则表达式30分钟入门教程》：http://deerchao.net/tutorials/regex/regex.htm
+
+《正则表达式之：零宽断言不『消费』》：http://fxck.it/post/50558232873
+
+测试你自己写的正则表达式：http://refiddle.com/ 
+
+同上，挖坑，遇到再来填
+
+需要注意的地方:
+
+1. js 中，对于四种零宽断言，只支持 零宽度正预测先行断言 和 零宽度负预测先行断言 这两种。
+
+2. js 中，正则表达式后面可以跟三个 flag，比如 /something/igm。
+
+他们的意义分别是，
+
+* i 的意义是不区分大小写
+
+* g 的意义是，匹配多个
+
+* m 的意义是，是 ^ 和 $ 可以匹配每一行的开头。
+
+```js
+/a/.test('A') // => false
+/a/i.test('A') // => true
+
+'hello hell hoo'.match(/h.*?\b/) // => [ 'hello', index: 0, input: 'hello hell hoo' ]
+'hello hell hoo'.match(/h.*?\b/g) // => [ 'hello', 'hell', 'hoo' ]
+
+'aaa\nbbb\nccc'.match(/^[\s\S]*?$/g) // => [ 'aaa\nbbb\nccc' ]
+'aaa\nbbb\nccc'.match(/^[\s\S]*?$/gm) // => [ 'aaa', 'bbb', 'ccc' ]
+
+```
+
+与 m 意义相关的，还有 \A, \Z 和 \z
+
+他们的意义分别是：
+
+* \A  字符串开头(类似^，但不受处理多行选项的影响)
+* \Z  字符串结尾或行尾(不受处理多行选项的影响)
+* \z  字符串结尾(类似$，但不受处理多行选项的影响)
+
+在 js 中，g flag 会影响 String.prototype.match() 和 RegExp.prototype.exec() 的行为
+
+String.prototype.match() 中，返回数据的格式会不一样，加 g 会返回数组，不加 g 则返回比较详细的信息
+
+```js
+
+> 'hello hell'.match(/h(.*?)\b/g)
+[ 'hello', 'hell' ]
+
+> 'hello hell'.match(/h(.*?)\b/)
+[ 'hello',
+  'ello',
+  index: 0,
+  input: 'hello hell' ]
+
+```
+
+RegExp.prototype.exec() 中，加 g 之后，如果你的正则不是字面量的正则，而是存储在变量中的话，特么的这个变量就会变得有记忆！！
+
+```js
+
+> /h(.*?)\b/g.exec('hello hell')
+[ 'hello',
+  'ello',
+  index: 0,
+  input: 'hello hell' ]
+> /h(.*?)\b/g.exec('hello hell')
+[ 'hello',
+  'ello',
+  index: 0,
+  input: 'hello hell' ]
+
+
+> var re = /h(.*?)\b/g;
+undefined
+> re.exec('hello hell')
+[ 'hello',
+  'ello',
+  index: 0,
+  input: 'hello hell' ]
+> re.exec('hello hell')
+[ 'hell',
+  'ell',
+  index: 6,
+  input: 'hello hell' ]
+>
+
+```
+
+3. **.** 是不可以匹配 \n 的。如果我们想匹配的数据涉及到了跨行，比如下面这样的。
+
+```js
+var multiline = require('multiline');
+
+var text = multiline.stripIndent(function () {
+
+/*
+    head
+    ```
+    code code2 .code3```
+    ```
+    foot
+*/
+
+});
+
+```
+
+如果我们想把两个 ``` 中包含的内容取出来，应该怎么办？
+
+直接用 . 匹配不到 \n，所以我们需要找到一个原子，能匹配包括 \n 在内的所有字符。
+
+这个原子的惯用写法就是 [\s\S]
+
+```js
+
+var match1 = text.match(/^```[\s\S]+?^```/gm);
+console.log(match1) // => [ '```\ncode code2 code3```\n```' ]
+
+// 这里有一种很骚的写法，[^] 与 [\s\S] 等价
+var match2 = text.match(/^```[^]+?^```/gm)
+console.log(match2) // => [ '```\ncode code2 .code3```\n```' ]
+
+```
+
+
+## lesson10
+
+### benchmark 测试哪个方法更快
+
+benchmark 库：https://github.com/bestiejs/benchmark.js 
+
+简单测试：
+
+有一个字符串 var number = '100'，我们要将它转换成 Number 类型的 100。
+
++, parseInt, Number，哪个方法更快
+
+```js
+
+var int1 = function (str) {
+  return +str;
+};
+
+var int2 = function (str) {
+  return parseInt(str, 10);
+};
+
+var int3 = function (str) {
+  return Number(str);
+};
+
+```
+
+然后照着官方的模板写 benchmark suite：
+
+```js
+var number = '100';
+
+// 添加测试
+suite
+.add('+', function() {
+  int1(number);
+})
+.add('parseInt', function() {
+  int2(number);
+})
+.add('Number', function () {
+  int3(number);
+})
+// 每个测试跑完后，输出信息
+.on('cycle', function(event) {
+  console.log(String(event.target));
+})
+.on('complete', function() {
+  console.log('Fastest is ' + this.filter('fastest').map('name'));
+})
+// 这里的 async 不是 mocha 测试那个 async 的意思，这个选项与它的时间计算有关，默认勾上就好了。
+.run({ 'async': true });
+
+```
+
+直接运行： $ node main.js
+
+可以看到，parseInt 是最快的。
+
+

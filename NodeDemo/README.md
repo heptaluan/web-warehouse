@@ -336,6 +336,85 @@ topicUrls.forEach(function (topicUrl) {
 
 
 
+## lesson5
+
+### 使用 async 控制并发
+
+在之前的代码中，我们一次性发出了 40 个 并发请求出去，某些网站可能会因为你发的并发连接数太多而当你是在恶意请求，会把你的 IP 封掉，所以我们需要控制一定的数量，比如并发10个，然后慢慢抓完这 40 条数据
+
+这次使用的是  async 的 mapLimit(arr, limit, iterator, callback) 接口
+
+### 并发连接数控制
+
+额外提一点：关于 eventproxy 和 async
+
+当你需要去多个源(一般是小于 10 个)汇总数据的时候，用 eventproxy 方便；当你需要用到队列，需要控制并发数，或者你喜欢函数式编程思维时，使用 async。大部分场景是前者，所以我个人大部分时间是用 eventproxy 的。
+
+首先伪造一个 fetchUrl(url, callback) 函数
+
+```js
+
+fetchUrl('http://www.baidu.com', function (err, content) {
+    // do something with `content`
+});
+
+```
+
+作用是调用它的时候，它会返回 http://www.baidu.com 的页面内容回来。
+
+当然，我们这里只是测试
+
+```js
+
+// 并发连接数的计数器
+var concurrencyCount = 0;
+
+var fetchUrl = function (url, callback) {
+
+    // delay 的值在 2000 以内，是个随机的整数
+    var delay = parseInt((Math.random() * 10000000) % 2000, 10);
+
+    concurrencyCount++;
+
+    console.log('现在的并发数是', concurrencyCount, '，正在抓取的是', url, '，耗时' + delay + '毫秒');
+
+    setTimeout(function () {
+        concurrencyCount--;
+        callback(null, url + ' html content');
+    }, delay);
+
+};
+
+// 伪造一组链接
+
+var urls = [];
+
+for (var i = 0; i < 40; i++) {
+    urls.push("www.baodu.com_" + i)
+}
+
+// 然后我们使用 async.mapLimit 来并发抓取，并获取结果。
+async.mapLimit(urls, 5, function (url, callback) {
+    fetchUrl(url, callback);
+}, function (err, result) {
+    console.log("final: ");
+    console.log(result);
+} )
+
+```
+
+运行以后可以发现，并发链接数是从 1 开始增长的，增长到 5 时，就不再增加。当其中有任务完成时，再继续抓取。并发连接数始终控制在 5 个。
 
 
 
+## lesson6
+
+### 学习使用 mocha，should，istanbul
+
+测试框架 mocha : http://mochajs.org/
+
+断言库 should : https://github.com/tj/should.js
+
+测试率覆盖工具 istanbul : https://github.com/gotwarlost/istanbul
+
+简单 Makefile 的编写 : http://blog.csdn.net/haoel/article/details/2886

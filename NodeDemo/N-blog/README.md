@@ -206,6 +206,8 @@ package.json，它存储了该 Node.js 应用的名字、版本、描述、作�
 
 在控制台输入 npm install -h 查看使用方式:
 
+![image](https://github.com/nswbmw/N-blog/blob/master/book/img/2.6.1.png)   
+
 
 
 我们通过 npm install 可以安装 npm 上发布的某个版本、某个tag、某个版本区间的模块，甚至可以安装本地目录、压缩包和 git/github 的库作为依赖。
@@ -256,6 +258,7 @@ $ npm config set save-exact true
 2. http://tech.meituan.com/npm-shrinkwrap.html
 
 > 需要注意的是，如果 node_modules 下存在某个模块（如直接通过 ```npm install xxx``` 安装的）而 ```package.json``` 中没有，运行 ```npm shrinkwrap``` 则会报错。另外，```npm shrinkwrap``` 只会生成 ```dependencies``` 的依赖，不会生成 ```devDependencies``` 的。
+<<<<<<< HEAD
 
 
 
@@ -411,3 +414,5 @@ Result
 2. 主模板结构清晰
 
 ### 注意：要用 ```<%- include('header') %>``` 而不是 ```<%= include('header') %>```
+=======
+>>>>>>> origin/master

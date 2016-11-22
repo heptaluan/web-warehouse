@@ -13,11 +13,11 @@
 ----
 #### 11.22
 
-重新温习了一下js相关知识，梳理了一下[constructor、__proto__和prototype之间的关系](http://hanekaoru.com/?p=1880)
+重新温习了一下js相关知识，梳理了一下 [constructor、__proto__和prototype之间的关系](http://hanekaoru.com/?p=1880)
 
-找了个 Vue 中文视频教程[vuejs-learn](https://github.com/bhnddowinf/vuejs-learn)，继续跟着学习 
+找了个 Vue 中文视频教程 [vuejs-learn](https://github.com/bhnddowinf/vuejs-learn)，继续跟着学习 
 
-学习笔记，demo一类的也都持续更新在[VueDemo集合页](https://github.com/hanekaoru/WebLearningNotes/tree/master/VueDemo)
+学习笔记，demo一类的也都持续更新在 [VueDemo集合页](https://github.com/hanekaoru/WebLearningNotes/tree/master/VueDemo)
 
 也抽着空闲时间，把 Node.js 的相关知识慢慢捡起来 [Node.js-learn](https://github.com/hanekaoru/WebLearningNotes/tree/master/NodeDemo)
 

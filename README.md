@@ -11,11 +11,23 @@
 收集一些自己遇到过（用过）的插件，demo一类
 
 ----
+#### 11.22
+
+重新温习了一下js相关知识，梳理了一下[constructor、__proto__和prototype之间的关系](http://hanekaoru.com/?p=1880)
+
+找了个 Vue 中文视频教程[vuejs-learn](https://github.com/bhnddowinf/vuejs-learn)，继续跟着学习 
+
+学习笔记，demo一类的也都持续更新在[VueDemo集合页](https://github.com/hanekaoru/WebLearningNotes/tree/master/VueDemo)
+
+也抽着空闲时间，把 Node.js 的相关知识慢慢捡起来 [Node.js-learn](https://github.com/hanekaoru/WebLearningNotes/tree/master/NodeDemo)
+
+
+----
 #### 11.14
 
 最近重写了博客的[About](http://hanekaoru.com/about/)和[Demo](http://hanekaoru.com/about/demo.html)页面，分类规划了一下，方便后续扩展
 
-看完了慕课网的 [vuejs入门基础](http://www.imooc.com/learn/694)
+看完了~~慕课网的 [vuejs入门基础](http://www.imooc.com/learn/694)~~
 
 感觉还不错，稳固了下基础知识，也疏通了一些之前看文档不太明白的地方
 

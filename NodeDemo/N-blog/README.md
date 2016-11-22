@@ -413,5 +413,5 @@ Result
 
 2. 主模板结构清晰
 
-> ### 注意：要用 ```<%- include('header') %>``` 而不是 ```<%= include('header') %>```
+> 注意：要用 ```<%- include('header') %>``` 而不是 ```<%= include('header') %>```
 

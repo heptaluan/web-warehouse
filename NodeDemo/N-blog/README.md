@@ -256,3 +256,158 @@ $ npm config set save-exact true
 2. http://tech.meituan.com/npm-shrinkwrap.html
 
 > 需要注意的是，如果 node_modules 下存在某个模块（如直接通过 ```npm install xxx``` 安装的）而 ```package.json``` 中没有，运行 ```npm shrinkwrap``` 则会报错。另外，```npm shrinkwrap``` 只会生成 ```dependencies``` 的依赖，不会生成 ```devDependencies``` 的。
+
+
+
+## 3 初始化一个 Express 
+
+### supervisor
+
+使用 supervisor 来解决修改代码需要 结束/启动 服务，全局安装 supervisor：
+
+```js
+npm install -g supervisor
+```
+
+运行 supervisor --harmony index 启动程序，如下所示：
+
+![image](https://github.com/nswbmw/N-blog/blob/master/book/img/3.1.2.png)
+
+supervisor 会监听当前目录下 node 和 js 后缀的文件，当这些文件发生改动时，supervisor 会自动重启程序。
+
+
+## 3.2 路由
+
+默认的例子我们只是挂载了根路径的路由控制器，然后我们现在新增一个路径：
+
+```js
+
+app.get("/users/:name", function (req, res) {
+    res.send("hello " + req.params.name)
+})
+
+```
+
+当访问根路径时，依然返回之前设定好的 hello world，但是当访问如 localhost:3000/users/abc 路径时，返回 hello abc。
+
+路径中 :name 起了占位符的作用，这个占位符的名字是 name，可以通过 req.params.name 取到实际的值。
+
+> express 使用了 [path-to-regexp](https://www.npmjs.com/package/path-to-regexp) 模块实现的路由匹配。
+
+req 中包含了请求来的相关信息，res 则是用来返回该请求的响应，更多见 [express](http://expressjs.com/en/4x/api.html) 官方文档。
+
+几个常用的 req 的属性：
+
+* ```req.query```: 解析后的 url 中的 ```querystring```，如 ```?name=haha```，```req.query``` 的值为 ```{name: 'haha'}```
+
+* ```req.params```: 解析 url 中的占位符，如 ```/:name```，访问 ```/haha```，```req.params``` 的值为 ```{name: 'haha'}```
+
+* ```req.body```: 解析后请求体，需使用相关的模块，如 [body-parser](https://www.npmjs.com/package/body-parser)，请求体为 ```{"name": "haha"}```，则 ```req.body``` 为 ```{name: 'haha'}```
+
+
+### express.Router
+
+上面只是很简单的路由使用的例子（将所有路由控制函数都放到了 index.js），但在实际开发中通常有几十甚至上百的路由，都写在 index.js 既臃肿又不好维护，这时可以使用 express.Router 实现更优雅的路由解决方案。
+
+创建空文件夹 routes，在 routes 目录下创建 index.js 和 users.js。最后代码如下：
+
+```js
+
+// index.js
+var express = require('express');
+var app = express();
+var indexRouter = require('./routes/index');
+var userRouter = require('./routes/users');
+
+app.use('/', indexRouter);
+app.use('/users', userRouter);
+
+app.listen(3000);
+
+
+
+// routes/index.js
+var express = require('express');
+var router = express.Router();
+
+router.get('/', function(req, res) {
+  res.send('hello, express');
+});
+
+module.exports = router;
+
+
+
+// routes/users.js
+var express = require('express');
+var router = express.Router();
+
+router.get('/:name', function(req, res) {
+  res.send('hello, ' + req.params.name);
+});
+
+module.exports = router;
+
+
+```
+
+我们将 ```/``` 和 ```/users/:name``` 的路由分别放到了 ```routes/index.js``` 和 ```routes/users.js``` 中，每个路由文件通过生成一个 ```express.Router``` 实例 ```router``` 并导出，通过 ```app.use``` 挂载到不同的路径。
+
+更多 express.Router 的用法见 [express 官方文档](http://expressjs.com/en/4x/api.html#router)
+
+
+
+## 3.3 模板引擎
+
+### ejs
+
+ejs 有 3 种常用标签：
+
+1. ```<% code %>```：运行 JavaScript 代码，不输出
+
+2. ```<%= code %>```：显示转义后的 HTML内容
+
+3. ```<%- code %>```：显示原始 HTML 内容
+
+> 注意：<%= code %> 和 <%- code %> 都可以是 JavaScript 表达式生成的字符串，当变量 code 为普通字符串时，两者没有区别。当 code 比如为 <h1>hello</h1> 这种字符串时，<%= code %> 会原样输出 <h1>hello</h1>，而 <%- code %> 则会显示 H1 大的 hello 字符串。
+
+下面的例子解释了 <% code %> 的用法：
+
+Data
+
+```
+supplies: ['mop', 'broom', 'duster']
+```
+
+Template
+```
+<ul>
+<% for(var i=0; i<supplies.length; i++) {%>
+   <li><%= supplies[i] %></li>
+<% } %>
+</ul>
+```
+
+Result
+```
+<ul>
+  <li>mop</li>
+  <li>broom</li>
+  <li>duster</li>
+</ul>
+```
+
+更多 ejs 的标签请看 [官方文档](https://www.npmjs.com/package/ejs#tags)
+
+
+### includes
+
+我们将原来的 ```users.ejs``` 拆成出了 ```header.ejs``` 和 ```footer.ejs```，并在 users.ejs 通过 ejs 内置的 include 方法引入，从而实现了跟以前一个模板文件相同的功能。
+
+拆分模板组件通常有两个好处：
+
+1. 模板可复用，减少重复代码
+
+2. 主模板结构清晰
+
+### 注意：要用 ```<%- include('header') %>``` 而不是 ```<%= include('header') %>```

@@ -258,7 +258,7 @@ $ npm config set save-exact true
 2. http://tech.meituan.com/npm-shrinkwrap.html
 
 > 需要注意的是，如果 node_modules 下存在某个模块（如直接通过 ```npm install xxx``` 安装的）而 ```package.json``` 中没有，运行 ```npm shrinkwrap``` 则会报错。另外，```npm shrinkwrap``` 只会生成 ```dependencies``` 的依赖，不会生成 ```devDependencies``` 的。
-<<<<<<< HEAD
+
 
 
 
@@ -413,5 +413,5 @@ Result
 
 2. 主模板结构清晰
 
-### 注意：要用 ```<%- include('header') %>``` 而不是 ```<%= include('header') %>```
+> ### 注意：要用 ```<%- include('header') %>``` 而不是 ```<%= include('header') %>```
 

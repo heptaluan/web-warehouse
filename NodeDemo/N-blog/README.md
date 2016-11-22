@@ -372,9 +372,9 @@ ejs 有 3 种常用标签：
 
 3. ```<%- code %>```：显示原始 HTML 内容
 
-> 注意：<%= code %> 和 <%- code %> 都可以是 JavaScript 表达式生成的字符串，当变量 code 为普通字符串时，两者没有区别。当 code 比如为 <h1>hello</h1> 这种字符串时，<%= code %> 会原样输出 <h1>hello</h1>，而 <%- code %> 则会显示 H1 大的 hello 字符串。
+> 注意：<%= code %> 和 <%- code %> 都可以是 JavaScript 表达式生成的字符串，当变量 code 为普通字符串时，两者没有区别。当 code 比如为 ```<h1>hello</h1>``` 这种字符串时，```<%= code %>``` 会原样输出 ```<h1>hello</h1>```，而 ```<%- code %>``` 则会显示 H1 大的 hello 字符串。
 
-下面的例子解释了 <% code %> 的用法：
+下面的例子解释了 ```<% code %>``` 的用法：
 
 Data
 
@@ -414,5 +414,4 @@ Result
 2. 主模板结构清晰
 
 ### 注意：要用 ```<%- include('header') %>``` 而不是 ```<%= include('header') %>```
-=======
->>>>>>> origin/master
+

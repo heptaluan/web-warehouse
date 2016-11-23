@@ -155,7 +155,7 @@ doSomething(function onEnd() {
 
 改写后的程序会把上面耗时的操作拆分为两个事件，减少每个事件的执行时间，提高事件响应速度
 
-> 不要使用 setTimeout(fn,0)代替 process.nextTick(callback)，前者比后者效率要低得多。 
+> 不要使用 setTimeout(fn, 0) 代替 process.nextTick(callback)，前者比后者效率要低得多。 
 
 
 

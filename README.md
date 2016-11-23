@@ -10,16 +10,34 @@
 
 收集一些自己遇到过（用过）的插件，demo一类
 
+[Vue.js Demo集合页](https://github.com/hanekaoru/WebLearningNotes/tree/master/VueDemo)
+
+[Node.js Demo集合页](https://github.com/hanekaoru/WebLearningNotes/tree/master/NodeDemo)
+
 ----
 #### 11.22
 
 重新温习了一下js相关知识，梳理了一下 [constructor、__proto__和prototype之间的关系](http://hanekaoru.com/?p=1880)
 
-找了个 Vue 中文视频教程 [vuejs-learn](https://github.com/bhnddowinf/vuejs-learn)，继续跟着学习 
+目标很坚定，Vue + Node，文档啃的有些吃力了，找了些视频来巩固基础
 
-学习笔记，demo一类的也都持续更新在 [VueDemo集合页](https://github.com/hanekaoru/WebLearningNotes/tree/master/VueDemo)
+##### Vue 
 
-也抽着空闲时间，把 Node.js 的相关知识慢慢捡起来 [Node.js-learn](https://github.com/hanekaoru/WebLearningNotes/tree/master/NodeDemo)
+中文视频教程 [vuejs-learn](https://github.com/bhnddowinf/vuejs-learn) 以视频搭配代码，实际演示
+
+继续跟着学习，增加/记录了一些[Vue.js 学习笔记记录](https://github.com/hanekaoru/WebLearningNotes/tree/master/VueDemo/Vue-learn)
+
+目前进展：列表渲染
+
+##### Node
+
+[一起学 Node.js](https://github.com/nswbmw/N-blog) 学习从头到尾搭建一个简单完整的博客
+
+Node.js 的知识也需要慢慢捡起来 [Node.js 学习笔记记录](https://github.com/hanekaoru/WebLearningNotes/tree/master/NodeDemo)
+
+目前进展：ejs 模板
+
+附带找了本基础书《node.js 开发指南》，没事翻一翻 
 
 
 ----

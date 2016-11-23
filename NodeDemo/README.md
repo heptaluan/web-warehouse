@@ -6,5 +6,5 @@ lesson 目录，跟着视频学习记录的笔记，参考 [《Node.js 包教不
 
 N-blog 目录，同上，参考 [N-blog](https://github.com/nswbmw/N-blog)
 
-node.js 开发指南 笔记.MD 配合视频翻着看《node.js 开发指南》，补充基本知识，一些笔记记录  
+node.js开发指南 笔记 目录 是配合视频翻着看《node.js 开发指南》的一些笔记，记录一些自己比较薄弱不太熟悉的知识点  
 

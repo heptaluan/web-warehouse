@@ -331,8 +331,7 @@ fs.open(path, flags, [mode], [callback(err, fd)])
 ### fs.read
 
 ```
-fs.read(fd, buffer, offset, length, position, [callback(err, bytesRead, 
-buffer)])
+fs.read(fd, buffer, offset, length, position, [callback(err, bytesRead, buffer)])
 ```
 
 ```fs.read``` 的功能是从指定的文件描述符 fd 中读取数据并写入 buffer 指向的缓冲区对象。

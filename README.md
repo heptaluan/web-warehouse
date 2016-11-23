@@ -10,9 +10,19 @@
 
 收集一些自己遇到过（用过）的插件，demo一类
 
-[Vue.js Demo集合页](https://github.com/hanekaoru/WebLearningNotes/tree/master/VueDemo)
+----
 
-[Node.js Demo集合页](https://github.com/hanekaoru/WebLearningNotes/tree/master/NodeDemo)
+[VueDemo](https://github.com/hanekaoru/WebLearningNotes/tree/master/VueDemo)
+
+##### Vue.js Demo集合页，以及一些视频学习笔记，读书笔记，知识点记录等
+
+[NodeDemo](https://github.com/hanekaoru/WebLearningNotes/tree/master/NodeDemo)
+
+##### Node.js Demo集合页，以及一些视频学习笔记，读书笔记，知识点记录等
+
+[demos](https://github.com/hanekaoru/WebLearningNotes/tree/master/NodeDemo)
+
+##### 一些js相关的小练习，demo，实例等
 
 ----
 #### 11.22

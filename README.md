@@ -19,7 +19,7 @@
 
 重新温习了一下js相关知识，梳理了一下 [constructor、__proto__和prototype之间的关系](http://hanekaoru.com/?p=1880)
 
-目标很坚定，Vue + Node，文档啃的有些吃力了，找了些视频来巩固基础
+目标，Vue + Node，文档啃的有些吃力了，找了些视频来巩固基础
 
 ##### Vue 
 

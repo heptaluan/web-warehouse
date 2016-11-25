@@ -509,3 +509,61 @@ http.get({ host: 'www.abcabc.com' }, function (res) {
 
 ```
 
+
+
+
+## Express 
+
+本章开始，该书中的案例大部分在现在已经不适合了，所以打算随便翻一翻，了解一些，然后换一本书籍
+
+### 安装
+
+```js
+
+$ npm install -g express
+
+// 4.X 以后，需要安装这个，不然会提示“express命令找不到的”
+$ npm install -g express-generator
+
+
+```
+
+### 建立工程
+
+```js
+// 书中是 express -t ejs microblog 但是这样安装出来的是 jade 模板
+express -e ejs app
+
+```
+
+```js
+
+$ cd app && npm install
+
+```
+
+### 启动服务器
+
+```express 4.x```以上都是用 ```npm start``` 来启动项目，不再是使用 ```node app.js```，或者使用 supervisor
+
+```js
+
+$ supervisor bin/www
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

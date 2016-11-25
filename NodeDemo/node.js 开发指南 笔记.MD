@@ -1,4 +1,4 @@
-## 3.2.2 回调函数         
+## 3.2.2 回调函数
 
 ### 异步的方式读取一个文件
 
@@ -19,9 +19,12 @@ console.log("end.");
 ```
 
 运行的结果如下： 
+
 ```js
+
 end. 
 hello world.
+
 ```
 
 ### 同步的方式读取一个文件
@@ -36,9 +39,12 @@ console.log("end.");
 
 ```
 运行的结果如下： 
+
 ```js
+
 end. 
 hello world.
+
 ```
 
 同步式读取文件的方式比较容易理解，将文件名作为参数传入 fs.readFileSync 函数，阻塞等待读取完成后，将文件的内容作为函数的返回值赋给 data 变量，接下来控制台输出 data 的值，最后输出 end.。 
@@ -98,6 +104,7 @@ exports 本身仅仅是一个普通的空对象，即 {}，它专门用来声明
 npm 还有另一种不同的安装模式被成为全局模式，使用方法为：
 
 ```js
+
 $ npm install -g [package_name]
 
 ```
@@ -223,11 +230,14 @@ console.log(objSub);
 
 ### util.inspect
 
-```
+```js
+
 util.inspect(object,[showHidden],[depth],[colors])
+
 ```
 
 是一个将任意对象转换为字符串的方法， 通常用于调试和错误输出。 它至少接受一个参数 object， 即要转换的对象。
+
 
 
 ## 事件驱动 events 
@@ -296,8 +306,10 @@ fs 模块是文件操作的封装，它提供了文件的读取、写入、更�
 
 ### fs.readFile 
 
-```
+```js
+
 fs.readFile(filename,[encoding],[callback(err,data)])
+
 ```
 
 如果指定了 ```encoding```，data 是一个解析后的字符串，否则 data 将会是以 ```Buffer``` 形式表示的二进制数据。 
@@ -308,8 +320,10 @@ fs.readFile(filename,[encoding],[callback(err,data)])
 
 ### fs.open 
 
-```
+```js
+
 fs.open(path, flags, [mode], [callback(err, fd)])
+
 ```
 
 接受两个必选参数，path 为文件的路径，flags 可以是以下值。
@@ -329,8 +343,10 @@ fs.open(path, flags, [mode], [callback(err, fd)])
 
 ### fs.read
 
-```
+```js
+
 fs.read(fd, buffer, offset, length, position, [callback(err, bytesRead, buffer)])
+
 ```
 
 ```fs.read``` 的功能是从指定的文件描述符 fd 中读取数据并写入 buffer 指向的缓冲区对象。
@@ -573,9 +589,9 @@ $ supervisor bin/www
 
 文件模块的加载有两种方式，一种是按路径加载，一种是查找 node_modules 文件夹。
 
-如果 require 参数以 “ / ” 开头， 那么就以绝对路径的方式查找模块名称
+如果 require 参数以  " / " 开头， 那么就以绝对路径的方式查找模块名称
 
-如果 require 参数以“ ./ ”或“ ../ ”开头，那么则以相对路径的方式来查找模块
+如果 require 参数以  " ./" 或 " ../ "开头，那么则以相对路径的方式来查找模块
 
 
 
@@ -584,7 +600,9 @@ $ supervisor bin/www
 
 在前面提到过，Node.js 模块不会被重复加载，这是因为 Node.js 通过文件名缓存所有加载过的文件模块，所以以后再访问到时就不会重新加载了。
 
-注意，Node.js 是根据实际**文件名**缓存的，而不是 require() 提供的参数缓存的，也就是说即使你分别通过 require('express') 和 require('./node_modules/express') 加载两次，也不会重复加载，因为尽管两次参数不同，解析到的文件却是同一个。
+注意，Node.js 是根据实际**文件名**缓存的，而不是 require() 提供的参数缓存的
+
+也就是说即使你分别通过 require('express') 和 require('./node_modules/express') 加载两次，也不会重复加载，因为尽管两次参数不同，解析到的文件却是同一个。
 
 
 

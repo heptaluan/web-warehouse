@@ -37,7 +37,7 @@
 
 两篇不错的资料：
 
-[@nswbmw的[一个简单的博客](https://github.com/nswbmw/N-blog)](http://cnodejs.org/topic/540833010256839f71e05fdc)
+[N-Blog 问题集锦](http://cnodejs.org/topic/540833010256839f71e05fdc)
 
 [Node.js 开发框架 Express 4.x](http://blog.fens.me/nodejs-express4/)
 

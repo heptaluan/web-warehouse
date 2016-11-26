@@ -30,7 +30,7 @@
 #### 11.26
 
 
-~~学习过程中，找了本书，《node.js 开发指南》，补充一下一些基本知识，
+~~学习过程中，找了本书，《node.js 开发指南》，补充一些 Node.js 的基本知识，
 [node.js 开发指南 笔记](https://github.com/hanekaoru/WebLearningNotes/blob/master/NodeDemo/node.js 开发指南 笔记.MD)~~
 
 但是发现上面那本书中的东西有点老，很多代码现在已经跑不动了，换了一本《了不起的Node.js》，笔记见：[了不起的Node.js 笔记](https://github.com/hanekaoru/WebLearningNotes/blob/master/NodeDemo/了不起的Node.js 笔记.MD)

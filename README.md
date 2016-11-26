@@ -25,6 +25,14 @@
 ##### 一些js相关的小练习，demo，实例等
 
 ----
+#### 11.26
+
+~~学习过程中，找了本书一起跟着学习，《node.js 开发指南》，
+[node.js 开发指南 笔记](https://github.com/hanekaoru/WebLearningNotes/blob/master/NodeDemo/node.js 开发指南 笔记.MD)~~
+
+但是发现上面那本书中的东西有点老，很多代码现在已经跑不动了，换了一本《了不起的Node.js》，笔记见：[了不起的Node.js 笔记](https://github.com/hanekaoru/WebLearningNotes/blob/master/NodeDemo/了不起的Node.js 笔记.MD)
+
+----
 #### 11.22
 
 重新温习了一下js相关知识，梳理了一下 [constructor、__proto__和prototype之间的关系](http://hanekaoru.com/?p=1880)
@@ -46,11 +54,6 @@
 Node.js 的知识也需要慢慢捡起来 [Node.js 学习笔记记录](https://github.com/hanekaoru/WebLearningNotes/tree/master/NodeDemo)
 
 目前进展：ejs 模板
-
-~~附带找了本基础书《node.js 开发指南》，没事翻一翻~~笔记见：[node.js 开发指南 笔记](https://github.com/hanekaoru/WebLearningNotes/blob/master/NodeDemo/node.js 开发指南 笔记.MD)
-
-上面那本书中的东西有点老，很多代码现在已经跑不动了，换了一本《了不起的Node.js》，笔记见：[了不起的Node.js 笔记](https://github.com/hanekaoru/WebLearningNotes/blob/master/NodeDemo/了不起的Node.js 笔记.MD)
-
 
 ----
 #### 11.14

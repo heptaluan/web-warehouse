@@ -49,7 +49,7 @@ Node.js 的知识也需要慢慢捡起来 [Node.js 学习笔记记录](https://g
 
 ~~附带找了本基础书《node.js 开发指南》，没事翻一翻~~笔记见：[node.js 开发指南 笔记](https://github.com/hanekaoru/WebLearningNotes/blob/master/NodeDemo/node.js 开发指南 笔记.MD)
 
-上面那本书中的东西有点老，很多代码现在已经跑不动了，换了一本《了不起的Node.js》
+上面那本书中的东西有点老，很多代码现在已经跑不动了，换了一本《了不起的Node.js》，笔记见：[了不起的Node.js 笔记](https://github.com/hanekaoru/WebLearningNotes/blob/master/NodeDemo/了不起的Node.js 笔记.MD)
 
 
 ----

@@ -35,6 +35,13 @@
 
 但是发现上面那本书中的东西有点老，很多代码现在已经跑不动了，换了一本《了不起的Node.js》，笔记见：[了不起的Node.js 笔记](https://github.com/hanekaoru/WebLearningNotes/blob/master/NodeDemo/了不起的Node.js 笔记.MD)
 
+两篇不错的资料：
+
+@nswbmw的[一个简单的博客](https://github.com/nswbmw/N-blog)
+
+[Node.js 开发框架 Express 4.x](http://blog.fens.me/nodejs-express4/)
+
+
 ----
 #### 11.22
 

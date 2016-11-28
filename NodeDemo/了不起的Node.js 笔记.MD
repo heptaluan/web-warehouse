@@ -374,5 +374,65 @@ console.log(process.argv);
 ##### process.exit 当发生错误的时候，需要退出程序，这个时候最好使用错误代码 1，```process.exit(1)```
 
 
+
+
+
 ### Stream
 
+**fs.createReadStream** 方法允许为一个文件创建一个**可读**的 Stream 对象
+
+为了更好的理解，看下面两个示例：
+
+```js
+
+fs.readFile("my-file.txt", function (err, data) {
+    // 对文件进行处理
+})
+
+```
+
+这样一来，回调函数必要要等到整个文件读取完毕，载入到 RAM ，可用的情况下才会触发，然而，使用 Stream 可以让每次都会读取大小可变的内容块，并且每次读取后会触发回调函数
+
+```js
+
+var stream = fs.createReadStream("my-file.txt");
+
+stream.on("data", function (chunk) {
+    // 处理文件部分内容
+})
+
+stream.on("end", function (chunk) {
+    // 文件读取完毕
+})
+
+```
+
+用这种方式来上传大型文件，使用 Stream 可以大大提速上传过程
+
+
+### 监视（Watch）
+
+node 允许监视文件或目录是否发生变化，监视意味着当文件系统中的文件（或者目录）发生变化的时候，会分发一个事件，然后触发指定的回调函数
+
+来看一个示例，首先，查找工作目录下所有的 CSS 文件，然后监视其是否发生改变，一旦文件发生更改，就将该文件名输出到控制台：
+
+```js
+
+var stream = fs.createReadStream("my-file.txt");
+
+var fs = require("fs");
+
+// 获取目录下所有的文件
+var files = fs.readdirSync(process.cwd());
+files.forEach(function (file) {
+    // 监听 ".css" 文件
+    if (/\.css/.test(file)) {
+        fs.watchFile(process.cwd() + "/" + file, function () {
+            console.log(" - " + file + " changed!");
+        })
+    }
+})
+
+```
+
+除了 **fs.watchFile** 之外，也可以使用 **fs.watch** 来监视整个目录

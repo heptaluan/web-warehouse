@@ -20,7 +20,6 @@ function servesBooks () {
 }
 
 
-
 // 等价的 PHP 代码
 
 $book = array(
@@ -33,7 +32,6 @@ function serverBooks () {
     $books = array();
     return $html;
 }
-
 
 ```
 
@@ -58,14 +56,12 @@ sleep(5);
 print("World");
 
 
-
 // node
 console.log("hello");
 
 setTimeout(function () {
     console.log("world");
 }, 5000);
-
 
 ```
 
@@ -166,7 +162,6 @@ console.log(2);
 require("a")
 
 
-
 // a.js
 console.log("hello world")
 
@@ -198,8 +193,6 @@ var privateVariable = 5;
 exports.getPrivate = function () {
     return privateVariable;
 }
-
-
 
 
 // index.js
@@ -380,8 +373,8 @@ console.log(process.argv);
 
 ##### process.chdir 允许灵活地更改工作目录
 
-
-### 退出
-
 ##### process.exit 当发生错误的时候，需要退出程序，这个时候最好使用错误代码 1，```process.exit(1)```
+
+
+### Stream
 

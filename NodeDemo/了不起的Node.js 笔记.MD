@@ -489,3 +489,89 @@ client.on("connect", function () {...})
 ```net.connect(300, "localhost", function () {})```
 
 此外，我们还可以监听 data 和 close 事件
+
+
+
+
+### HTTP
+
+超文本传输协议，又被称为 HTTP，是一种 Web 协议，它为 Web 注入了很多强大的功能，它是属于 TCP 上层的协议
+
+
+### HTTP 结构
+
+HTTP 协议构建在请求和响应的概念上，对应在 Node.js 中就是由 http.ServerRequest 和 http.ServerResponse 这两个构造器构造出来的对象
+
+当用户浏览一个网站的时候，用户代理（浏览器）会创建一个请求，该请求通过 TCP 发送给 Web 服务器，随后服务器会给出响应
+
+
+### 头信息
+
+HTTP 协议和 IRC 一样流行，其目的是进行文档交换，它在请求和响应消息前使用头信息（header）来描述不同的消息内容
+
+发送内容的类型（type）就是在著名的 Content-Type 头信息中标注的
+
+发送数据的方式在涉及文件系统的情况下会非常高效，因为 node 允许以数据块的形式往响应中写数据，同时它又允许以数据块的形式读取文件，所以我们就可以使用 ReadStream 文件系统 API 来实现，下面这个例子用于读取 image.png 文件，并以正确的 ConTent-Type 头信息做出响应：
+
+```js
+
+require("http").cerateServer(function (req, res) {
+    res.writeHead(200, {"Content-Type": "image/png"})
+    var stream = require("fs").createReadStream("image.png")
+
+    stream.on("data", function (data) {
+        res.write(data);
+    })
+
+    stream.on("end", function () {
+        res.end()
+    })
+}).listen(3000)
+
+
+```
+
+以一系列数据块的形式来将图片写入到响应中，有如下好处：
+
+* 高效的内存分配，要是对每个请求在写入前都完全把图片信息取完（通过 fs.readFile），在处理的时候会消耗大量内存
+
+* 数据一旦结束就可以立即写入
+
+实际上我们做的是把一个流（Stream）（文件系统）接（piping）到了另外一个流上（一个 http.ServerResponse对象）。流 是 node 中非常重要的一种抽象，因此，有一种简洁的方式：
+
+```js
+
+require("http").cerateServer(function (req, res) {
+    res.writeHead(200, {"Content-Type": "image/png"})
+    require("fs").createReadStream("image.png").pipe(res);
+}).listen(3000)
+
+
+```
+
+
+### 连接
+
+TCP服务器 和 HTTP服务器 很相似：都调用了 createServer 方法，并且当客户端连入的时候都会执行一个回调函数
+
+区别在于：在 net 服务器中，是个连接（connection）对象，而在 HTTP 服务器中，则是请求和响应对象
+
+之所以这样，原因有两个
+
+* 其一，HTTP 服务器是更高层的 API，提供了控制和 HTTP 协议相关的一些功能
+
+* 其二，浏览器在访问站点的时候不会就只用一个连接，很多主流的浏览器为了更快地加载网站内容，能向同一个主机打开八个不同的连接，并发送请求。
+
+
+
+### method 和 URL
+
+node 会将主机名后所有的内容都放在 URL 属性中，假设访问的是 http://myhost.com/url?this+is+a+long+url
+
+那么 url 的值就会是 /url?this+is+a+long+url
+
+
+
+
+
+

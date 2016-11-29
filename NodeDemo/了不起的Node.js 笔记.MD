@@ -480,7 +480,7 @@ TCP 有一种内置的机制能够控制数据包的延迟率及丢包率不会�
 
 var client = net.connect(3000, "localhost");
 
-client.on("connect", function () {})
+client.on("connect", function () {...})
 
 ```
 

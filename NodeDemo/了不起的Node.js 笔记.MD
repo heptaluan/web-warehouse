@@ -625,5 +625,14 @@ request.get("http://twitter.com/search.json")
 
 运行后可以发现从响应的 JSON 数据解码成的对象形式的数据，通过 res.text 还是可以获取到原始的响应文本
 
+### Connect
+
+**Connect** 是一个基于 HTTP 服务器的工具集，它提供了一种新的组织代码的方式来与请求、响应对象进行交互，称之为 **中间件（middleware）**
+
+待续...
+
+
+
+
 
 

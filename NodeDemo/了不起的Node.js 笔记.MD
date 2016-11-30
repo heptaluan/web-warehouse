@@ -8,7 +8,7 @@ var books = [
     "ab",
     "cd"
 ]
-
+ 
 function servesBooks () {
     // 给客户端返回 HTML 代码
     var html = "<b>" + books.join("</b><br><b>") + "</b>"

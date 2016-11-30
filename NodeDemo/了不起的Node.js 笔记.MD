@@ -3,12 +3,12 @@
 在 Node 中，需要对回调函数如何修改当前内存中的变量（状态）特别小心，除此之外，还要特别注意对错误的处理是否会潜在地修改这些状态  
 
 ```js
-    
+
 var books = [
     "ab",
     "cd"
 ]
- 
+
 function servesBooks () {
     // 给客户端返回 HTML 代码
     var html = "<b>" + books.join("</b><br><b>") + "</b>"

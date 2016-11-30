@@ -572,6 +572,46 @@ node 会将主机名后所有的内容都放在 URL 属性中，假设访问的�
 
 
 
+### 一个简单的 HTTP 请求
+
+我们通过 http 模块中的 request 静态方法创建一个 client 对象
+
+```js
+
+// 创建服务器
+require("http").createServer(function (req, res) {
+    res.writeHead(200);
+    res.end("<h1>hello world</h1>")
+}).listen(3000)
+
+// 创建客户端来响应请求
+// 调用 request 方法，用于初始化一个新的 http.client Request 对象
+require("http").request({
+    host: "127.0.0.1",
+    port: 3000,
+    url: "/",
+    method: "GET"
+}, function (res) {
+    var body = "";
+    res.setEncoding("utf-8");
+    res.on("data", function (chunk) {
+        body += chunk;
+    });
+    // 监听 end 事件，将 body 打印到控制台
+    res.on("end", function () {
+        console.log("We got " + body)
+    })
+}).end()
+
+```
+
+
+### supergent
+
+HTTP 客户端往往都会有一些共性：获取所有响应数据，根据响应消息的 Content-Type 值进行数据解析，处理消息数据
+
+我们可以通过 request 获取数据，如服务器响应了正确的 Content-Type 并且表面响应数据是 JSON 格式，那么 supergent 就会自动将其进行缓存并解析，然后将数据放在 res.body 中
+
 
 
 

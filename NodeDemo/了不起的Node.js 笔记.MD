@@ -612,6 +612,18 @@ HTTP 客户端往往都会有一些共性：获取所有响应数据，根据响
 
 我们可以通过 request 获取数据，如服务器响应了正确的 Content-Type 并且表面响应数据是 JSON 格式，那么 supergent 就会自动将其进行缓存并解析，然后将数据放在 res.body 中
 
+```js
+
+var request = require("supergent");
+request.get("http://twitter.com/search.json")
+.send({q: "abc def"})
+.end(function (res) {
+    console.log(res.body)
+})
+
+```
+
+运行后可以发现从响应的 JSON 数据解码成的对象形式的数据，通过 res.text 还是可以获取到原始的响应文本
 
 
 

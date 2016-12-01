@@ -27,10 +27,9 @@
 
 
 ----
-#### 11.26
+#### 12.01
 
-
-从新温习了 http和 tcp 相关知识
+发现《了不起的Node.js》这本书涉及到很多 http tcp 相关知识，故又跑去从新温习了一遍相关知识
 
 更新了以前写的博客，见[HTTP 与 TCP](http://hanekaoru.com/http-与-tcp/)
 

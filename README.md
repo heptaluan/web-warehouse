@@ -25,16 +25,27 @@
 ##### 一些js相关的小练习，demo，实例等
 
 
+
 ----
 #### 11.26
+
 
 从新温习了 http和 tcp 相关知识
 
 更新了以前写的博客，见[HTTP 与 TCP](http://hanekaoru.com/http-与-tcp/)
 
 又找了一本 node 相关书籍学习：[了不起的Node.js笔记](https://github.com/hanekaoru/WebLearningNotes/blob/master/NodeDemo/了不起的Node.js 笔记.MD)
+
 参考：
+
 [TCP和Http的区别!我都搞懂了,你就别迷糊了!](http://www.cnblogs.com/welcomer/p/3776525.html)
+
+[写给那些让我糊里糊涂的HTTP、TCP、UDP、Socket](http://blog.csdn.net/xijiaohuangcao/article/details/6105623)
+
+[http](http://baike.baidu.com/link?url=Zx7BAyIqUmzRmH6E8Ig64izdjORMNIJMGT38Bhp56-3aYuGAjivOrszXOe6dAh3TuGFiRl_3jFq5Xhc8a9WXna)
+
+[socket](http://baike.baidu.com/link?url=r4R68qKIrY7fMn29gfesmACqKooUCWnChPiEWbLLbSeIuR9m-_cs_ID26cSBkFiHrbB8WusGRRqusI_4uCBQUK)
+
 
 
 ----

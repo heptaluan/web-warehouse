@@ -34,7 +34,7 @@
 
 更新了以前写的博客，见[HTTP 与 TCP](http://hanekaoru.com/http-与-tcp/)
 
-又找了一本 node 相关书籍学习：[了不起的Node.js笔记](https://github.com/hanekaoru/WebLearningNotes/blob/master/NodeDemo/了不起的Node.js 笔记.MD)
+继续啃 node 相关知识，目前进展 第八章，更新了笔记 [了不起的Node.js笔记](https://github.com/hanekaoru/WebLearningNotes/blob/master/NodeDemo/了不起的Node.js 笔记.MD)
 
 参考：
 

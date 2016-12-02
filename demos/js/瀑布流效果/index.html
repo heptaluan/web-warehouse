@@ -1,0 +1,310 @@
+<!DOCTYPE html >
+<html>
+<head lang="en">
+    <title>瀑布流效果</title>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="#">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #container {
+            position: relative;
+            /*width: 900px;*/
+            /*margin: 0 auto;*/
+        }
+
+        .box {
+            padding: 5px;
+            float: left;
+        }
+
+        .box_img {
+            padding: 5px;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 5px #ccc;
+            border-radius: 5px;
+        }
+        .box_img img{
+            width: 150px;
+            height: auto;
+        }
+
+    </style>
+
+    <script>
+window.onload = function () {
+    imgLocation("container","box");
+
+    var imgData={"data":[{"src":"2.jpg"},{"src":"3.jpg"},{"src":"4.jpg"},{"src":"5.jpg"},{"src":"6.jpg"}]};
+    window.onscroll = function () {
+        if(checkFlag()){
+            var cparent = document.getElementById("container");
+            for (var i=0; i<imgData.data.length; i++){
+                var ccontent = document.createElement("div");
+                ccontent.className = "box";
+                cparent.appendChild(ccontent);
+                var boximg = document.createElement("div");
+                boximg.className = "box_img";
+                ccontent.appendChild(boximg);
+                var img = document.createElement("img");
+                img.src = "img/" +imgData.data[i].src;
+                boximg.appendChild(img);
+            }
+            imgLocation("container","box");
+        }
+    }
+};
+
+function checkFlag() {
+    var cparent = document.getElementById('container');
+    var ccontent = getChildElement(cparent,"box");
+    var lastContentHeight = ccontent[ccontent.length-1].offsetTop;
+    var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+    var pageHeight = document.documentElement.clientHeight || document.body.clientHeight;
+
+    if(lastContentHeight < scrollTop + pageHeight){
+        return true;
+    }
+}
+
+function imgLocation(parent,content) {
+    //将parent下多有的content全部取出
+    var cparent = document.getElementById(parent);
+    var ccontent = getChildElement(cparent,content);
+    var imgWidth = ccontent[0].offsetWidth;
+    var num = Math.floor(document.documentElement.clientWidth / imgWidth);
+    cparent.style.cssText ="width:"+imgWidth*num+"px;margin:0 auto";
+
+    var BoxHeightArr = [];
+    for (var i=0; i<ccontent.length; i++){
+        if(i < num){
+            BoxHeightArr[i] = ccontent[i].offsetHeight;
+        }else{
+            var minheight = Math.min.apply(null,BoxHeightArr);
+            var minIndex = getminheightLocation(BoxHeightArr,minheight);
+            ccontent[i].style.position = "absolute";
+            ccontent[i].style.top = minheight + 'px';
+            ccontent[i].style.left = ccontent[minIndex].offsetLeft+"px";
+            BoxHeightArr[minIndex] = BoxHeightArr[minIndex]+ccontent[i].offsetHeight;
+        }
+    }
+
+}
+
+function getminheightLocation(BoxHeightArr,minHeight) {
+    for(var i in BoxHeightArr){
+        if(BoxHeightArr[i] == minHeight){
+            return i;
+        }
+    }
+}
+
+function getChildElement(parent,content) {
+    var contentArr = [];
+    var allContent = parent.getElementsByTagName('*');
+
+    for (var i=0; i<allContent.length; i++){
+        if(allContent[i].className == content){
+            contentArr.push(allContent[i]);
+        }
+    }
+    return contentArr;
+}
+
+    </script>
+</head>
+<body>
+    <div id="container">
+        <div class="box">
+            <div class="box_img">
+                <img src="img/1.jpg">
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="box_img">
+                <img src="img/2.jpg">
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="box_img">
+                <img src="img/3.jpg">
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="box_img">
+                <img src="img/4.jpg">
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="box_img">
+                <img src="img/5.jpg">
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="box_img">
+                <img src="img/6.jpg">
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="box_img">
+                <img src="img/7.jpg">
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="box_img">
+                <img src="img/8.jpg">
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="box_img">
+                <img src="img/9.jpg">
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="box_img">
+                <img src="img/10.jpg">
+            </div>
+        </div>
+
+
+        <div class="box">
+            <div class="box_img">
+                <img src="img/7.jpg">
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="box_img">
+                <img src="img/8.jpg">
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="box_img">
+                <img src="img/9.jpg">
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="box_img">
+                <img src="img/7.jpg">
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="box_img">
+                <img src="img/8.jpg">
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="box_img">
+                <img src="img/9.jpg">
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="box_img">
+                <img src="img/7.jpg">
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="box_img">
+                <img src="img/8.jpg">
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="box_img">
+                <img src="img/9.jpg">
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="box_img">
+                <img src="img/7.jpg">
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="box_img">
+                <img src="img/8.jpg">
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="box_img">
+                <img src="img/9.jpg">
+            </div>
+        </div>
+        
+        <div class="box">
+            <div class="box_img">
+                <img src="img/8.jpg">
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="box_img">
+                <img src="img/9.jpg">
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="box_img">
+                <img src="img/7.jpg">
+            </div>
+        </div>
+        
+        <div class="box">
+            <div class="box_img">
+                <img src="img/8.jpg">
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="box_img">
+                <img src="img/9.jpg">
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="box_img">
+                <img src="img/7.jpg">
+            </div>
+        </div>
+        
+        <div class="box">
+            <div class="box_img">
+                <img src="img/8.jpg">
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="box_img">
+                <img src="img/9.jpg">
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="box_img">
+                <img src="img/7.jpg">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

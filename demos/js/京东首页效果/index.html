@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>京东首页效果</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <script src="js/jquery-1.7.2.min.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+    $(function(){
+        $('.navRight li').mouseenter(function(){
+            $(this).children('span').css('transform','rotate(135deg)');
+        }).mouseleave(function(){
+            $(this).children('span').css('transform','rotate(-45deg)');
+        })
+        $('.fenlei ul li').mouseenter(function(){
+            $(this).stop().animate({'height':'289px'},300).siblings().stop().animate({'height':'44px'},300);
+            $(this).siblings().css('background','#F5F5F5');
+            $('.fenleiright').fadeTo(0,0.8).stop().animate({'width':'289px'},300);
+        }).mouseleave(function(){
+            $('.fenlei ul li').stop().animate({'height':'79px'},300)
+            $(this).siblings().css('background','#ffffff');
+        });
+        $('.navLeft').mouseleave(function(){
+            $('.fenleiright').stop().animate({'width':'0px'},300);
+        })
+    })
+</script>
+</head>
+
+<body>
+    <div id="navOut">
+        <div class="nav">
+            <div class="navLeft">
+                <p>商品类目</p>
+                <div class="fenlei">
+                    <ul>
+                        <li>
+                            <dl class="fenleiLeft">
+                                <dt>美食</dt>
+                                <dd>
+                                    <a href="http://sc.chinaz.com">男鞋</a><a href="http://sc.chinaz.com">男裤</a>
+                                    <a href="http://sc.chinaz.com">手表</a><a href="http://sc.chinaz.com">男卫衣</a>
+                                    <a href="http://sc.chinaz.com">nb男鞋</a><a href="http://sc.chinaz.com">打底衫</a>
+                                    <a href="http://sc.chinaz.com">拖鞋</a><a href="http://sc.chinaz.com">睡衣</a>
+                                    <a href="http://sc.chinaz.com">男运动鞋</a><a href="http://sc.chinaz.com">山地车</a>
+                                    <a href="http://sc.chinaz.com">男皮带</a>
+                                    <a href="http://sc.chinaz.com">运动裤</a><a href="http://sc.chinaz.com">男棉裤</a>
+                                    <a href="http://sc.chinaz.com">以纯男T恤包</a><a href="http://sc.chinaz.com">情侣装</a>
+                                    <a href="http://sc.chinaz.com">男保暖裤</a><a href="http://sc.chinaz.com">运动鞋</a>
+                                    <a href="http://sc.chinaz.com">男乔丹4代跑鞋</a>
+                                    <a href="http://sc.chinaz.com">腰带</a><a href="http://sc.chinaz.com">男旅行箱</a>
+                                    <a href="http://sc.chinaz.com">气垫鞋</a><a href="http://sc.chinaz.com">板鞋</a>
+                                    <a href="http://sc.chinaz.com">温暖一家之主De冬日风采</a><a href="http://sc.chinaz.com">羽绒服羽绒服中的小立领</a>
+                                    <a href="http://sc.chinaz.com">皮衣潮男装</a>
+                                </dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl class="fenleiLeft">
+                                <dt>美食</dt>
+                                <dd>
+                                    <a href="http://sc.chinaz.com">男鞋</a><a href="http://sc.chinaz.com">男裤</a>
+                                    <a href="http://sc.chinaz.com">手表</a><a href="http://sc.chinaz.com">男卫衣</a>
+                                    <a href="http://sc.chinaz.com">nb男鞋</a><a href="http://sc.chinaz.com">打底衫</a>
+                                    <a href="http://sc.chinaz.com">拖鞋</a><a href="http://sc.chinaz.com">睡衣</a>
+                                    <a href="http://sc.chinaz.com">男运动鞋</a><a href="http://sc.chinaz.com">山地车</a>
+                                    <a href="http://sc.chinaz.com">男皮带</a>
+                                    <a href="http://sc.chinaz.com">运动裤</a><a href="http://sc.chinaz.com">男棉裤</a>
+                                    <a href="http://sc.chinaz.com">以纯男T恤包</a><a href="http://sc.chinaz.com">情侣装</a>
+                                    <a href="http://sc.chinaz.com">男保暖裤</a><a href="http://sc.chinaz.com">运动鞋</a>
+                                    <a href="http://sc.chinaz.com">男乔丹4代跑鞋</a>
+                                    <a href="http://sc.chinaz.com">腰带</a><a href="http://sc.chinaz.com">男旅行箱</a>
+                                    <a href="http://sc.chinaz.com">气垫鞋</a><a href="http://sc.chinaz.com">板鞋</a>
+                                    <a href="http://sc.chinaz.com">温暖一家之主De冬日风采</a><a href="http://sc.chinaz.com">羽绒服羽绒服中的小立领</a>
+                                    <a href="http://sc.chinaz.com">皮衣潮男装</a>
+                                </dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl class="fenleiLeft">
+                                <dt>女人</dt>
+                                <dd>
+                                    <a href="http://sc.chinaz.com">男鞋</a><a href="http://sc.chinaz.com">男裤</a>
+                                    <a href="http://sc.chinaz.com">手表</a><a href="http://sc.chinaz.com">男卫衣</a>
+                                    <a href="http://sc.chinaz.com">nb男鞋</a><a href="http://sc.chinaz.com">打底衫</a>
+                                    <a href="http://sc.chinaz.com">拖鞋</a><a href="http://sc.chinaz.com">睡衣</a>
+                                    <a href="http://sc.chinaz.com">男运动鞋</a><a href="http://sc.chinaz.com">山地车</a>
+                                    <a href="http://sc.chinaz.com">男皮带</a>
+                                    <a href="http://sc.chinaz.com">运动裤</a><a href="http://sc.chinaz.com">男棉裤</a>
+                                    <a href="http://sc.chinaz.com">以纯男T恤包</a><a href="http://sc.chinaz.com">情侣装</a>
+                                    <a href="http://sc.chinaz.com">男保暖裤</a><a href="http://sc.chinaz.com">运动鞋</a>
+                                    <a href="http://sc.chinaz.com">男乔丹4代跑鞋</a>
+                                    <a href="http://sc.chinaz.com">腰带</a><a href="http://sc.chinaz.com">男旅行箱</a>
+                                    <a href="http://sc.chinaz.com">气垫鞋</a><a href="http://sc.chinaz.com">板鞋</a>
+                                    <a href="http://sc.chinaz.com">温暖一家之主De冬日风采</a><a href="http://sc.chinaz.com">羽绒服羽绒服中的小立领</a>
+                                    <a href="http://sc.chinaz.com">皮衣潮男装</a>
+                                </dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl class="fenleiLeft">
+                                <dt>数码</dt>
+                                <dd>
+                                    <a href="http://sc.chinaz.com">男鞋</a><a href="http://sc.chinaz.com">男裤</a>
+                                    <a href="http://sc.chinaz.com">手表</a><a href="http://sc.chinaz.com">男卫衣</a>
+                                    <a href="http://sc.chinaz.com">nb男鞋</a><a href="http://sc.chinaz.com">打底衫</a>
+                                    <a href="http://sc.chinaz.com">拖鞋</a><a href="http://sc.chinaz.com">睡衣</a>
+                                    <a href="http://sc.chinaz.com">男运动鞋</a><a href="http://sc.chinaz.com">山地车</a>
+                                    <a href="http://sc.chinaz.com">男皮带</a>
+                                    <a href="http://sc.chinaz.com">运动裤</a><a href="http://sc.chinaz.com">男棉裤</a>
+                                    <a href="http://sc.chinaz.com">以纯男T恤包</a><a href="http://sc.chinaz.com">情侣装</a>
+                                    <a href="http://sc.chinaz.com">男保暖裤</a><a href="http://sc.chinaz.com">运动鞋</a>
+                                    <a href="http://sc.chinaz.com">男乔丹4代跑鞋</a>
+                                    <a href="http://sc.chinaz.com">腰带</a><a href="http://sc.chinaz.com">男旅行箱</a>
+                                    <a href="http://sc.chinaz.com">气垫鞋</a><a href="http://sc.chinaz.com">板鞋</a>
+                                    <a href="http://sc.chinaz.com">温暖一家之主De冬日风采</a><a href="http://sc.chinaz.com">羽绒服羽绒服中的小立领</a>
+                                    <a href="http://sc.chinaz.com">皮衣潮男装</a>
+                                </dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl class="fenleiLeft">
+                                <dt>家具</dt>
+                                <dd>
+                                    <a href="http://sc.chinaz.com">男鞋</a><a href="http://sc.chinaz.com">男裤</a>
+                                    <a href="http://sc.chinaz.com">手表</a><a href="http://sc.chinaz.com">男卫衣</a>
+                                    <a href="http://sc.chinaz.com">nb男鞋</a><a href="http://sc.chinaz.com">打底衫</a>
+                                    <a href="http://sc.chinaz.com">拖鞋</a><a href="http://sc.chinaz.com">睡衣</a>
+                                    <a href="http://sc.chinaz.com">男运动鞋</a><a href="http://sc.chinaz.com">山地车</a>
+                                    <a href="http://sc.chinaz.com">男皮带</a>
+                                    <a href="http://sc.chinaz.com">运动裤</a><a href="http://sc.chinaz.com">男棉裤</a>
+                                    <a href="http://sc.chinaz.com">以纯男T恤包</a><a href="http://sc.chinaz.com">情侣装</a>
+                                    <a href="http://sc.chinaz.com">男保暖裤</a><a href="http://sc.chinaz.com">运动鞋</a>
+                                    <a href="http://sc.chinaz.com">男乔丹4代跑鞋</a>
+                                    <a href="http://sc.chinaz.com">腰带</a><a href="http://sc.chinaz.com">男旅行箱</a>
+                                    <a href="http://sc.chinaz.com">气垫鞋</a><a href="http://sc.chinaz.com">板鞋</a>
+                                    <a href="http://sc.chinaz.com">温暖一家之主De冬日风采</a><a href="http://sc.chinaz.com">羽绒服羽绒服中的小立领</a>
+                                    <a href="http://sc.chinaz.com">皮衣潮男装</a>
+                                </dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl class="fenleiLeft">
+                                <dt>母婴</dt>
+                                <dd>
+                                    <a href="http://sc.chinaz.com">男鞋</a><a href="http://sc.chinaz.com">男裤</a>
+                                    <a href="http://sc.chinaz.com">手表</a><a href="http://sc.chinaz.com">男卫衣</a>
+                                    <a href="http://sc.chinaz.com">nb男鞋</a><a href="http://sc.chinaz.com">打底衫</a>
+                                    <a href="http://sc.chinaz.com">拖鞋</a><a href="http://sc.chinaz.com">睡衣</a>
+                                    <a href="http://sc.chinaz.com">男运动鞋</a><a href="http://sc.chinaz.com">山地车</a>
+                                    <a href="http://sc.chinaz.com">男皮带</a>
+                                    <a href="http://sc.chinaz.com">运动裤</a><a href="http://sc.chinaz.com">男棉裤</a>
+                                    <a href="http://sc.chinaz.com">以纯男T恤包</a><a href="http://sc.chinaz.com">情侣装</a>
+                                    <a href="http://sc.chinaz.com">男保暖裤</a><a href="http://sc.chinaz.com">运动鞋</a>
+                                    <a href="http://sc.chinaz.com">男乔丹4代跑鞋</a>
+                                    <a href="http://sc.chinaz.com">腰带</a><a href="http://sc.chinaz.com">男旅行箱</a>
+                                    <a href="http://sc.chinaz.com">气垫鞋</a><a href="http://sc.chinaz.com">板鞋</a>
+                                    <a href="http://sc.chinaz.com">温暖一家之主De冬日风采</a><a href="http://sc.chinaz.com">羽绒服羽绒服中的小立领</a>
+                                    <a href="http://sc.chinaz.com">皮衣潮男装</a>
+                                </dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl class="fenleiLeft">
+                                <dt>美妆</dt>
+                                <dd>
+                                    <a href="http://sc.chinaz.com">男鞋</a><a href="http://sc.chinaz.com">男裤</a>
+                                    <a href="http://sc.chinaz.com">手表</a><a href="http://sc.chinaz.com">男卫衣</a>
+                                    <a href="http://sc.chinaz.com">nb男鞋</a><a href="http://sc.chinaz.com">打底衫</a>
+                                    <a href="http://sc.chinaz.com">拖鞋</a><a href="http://sc.chinaz.com">睡衣</a>
+                                    <a href="http://sc.chinaz.com">男运动鞋</a><a href="http://sc.chinaz.com">山地车</a>
+                                    <a href="http://sc.chinaz.com">男皮带</a>
+                                    <a href="http://sc.chinaz.com">运动裤</a><a href="http://sc.chinaz.com">男棉裤</a>
+                                    <a href="http://sc.chinaz.com">以纯男T恤包</a><a href="http://sc.chinaz.com">情侣装</a>
+                                    <a href="http://sc.chinaz.com">男保暖裤</a><a href="http://sc.chinaz.com">运动鞋</a>
+                                    <a href="http://sc.chinaz.com">男乔丹4代跑鞋</a>
+                                    <a href="http://sc.chinaz.com">腰带</a><a href="http://sc.chinaz.com">男旅行箱</a>
+                                    <a href="http://sc.chinaz.com">气垫鞋</a><a href="http://sc.chinaz.com">板鞋</a>
+                                    <a href="http://sc.chinaz.com">温暖一家之主De冬日风采</a><a href="http://sc.chinaz.com">羽绒服羽绒服中的小立领</a>
+                                    <a href="http://sc.chinaz.com">皮衣潮男装</a>
+                                </dd>
+                            </dl>
+                        </li>
+                    </ul>
+                </div>
+                <div class="fenleiright">
+                    <dl class="flright">
+                        <dt>上衣</dt>
+                        <dd>
+                            <a href="http://sc.chinaz.com">白衬衫 </a>
+                            <a href="http://sc.chinaz.com">潮牌</a>
+                            <a href="http://sc.chinaz.com">雪纺衫</a>
+                            <a href="http://sc.chinaz.com">班服</a>
+                            <a href="http://sc.chinaz.com">宽松上衣</a>
+                            <a href="http://sc.chinaz.com">胖人装</a>
+                            <a href="http://sc.chinaz.com">棉衬衫</a>
+                            <a href="http://sc.chinaz.com">学院风</a>
+                            <a href="http://sc.chinaz.com"> 中长款装</a>
+                        </dd>
+                    </dl>
+                    <dl class="flright">
+                        <dt>下装</dt>
+                        <dd>
+                            <a href="http://sc.chinaz.com">白衬衫 </a>
+                            <a href="http://sc.chinaz.com">潮牌</a>
+                            <a href="http://sc.chinaz.com">雪纺衫</a>
+                            <a href="http://sc.chinaz.com">班服</a>
+                            <a href="http://sc.chinaz.com">宽松上衣</a>
+                            <a href="http://sc.chinaz.com">胖人装</a>
+                            <a href="http://sc.chinaz.com">棉衬衫</a>
+                            <a href="http://sc.chinaz.com">学院风</a>
+                            <a href="http://sc.chinaz.com"> 中长款装</a>
+                        </dd>
+                    </dl>
+                    <dl class="flright">
+                        <dt>鞋子</dt>
+                        <dd>
+                            <a href="http://sc.chinaz.com">白衬衫 </a>
+                            <a href="http://sc.chinaz.com">潮牌</a>
+                            <a href="http://sc.chinaz.com">雪纺衫</a>
+                            <a href="http://sc.chinaz.com">班服</a>
+                            <a href="http://sc.chinaz.com">宽松上衣</a>
+                            <a href="http://sc.chinaz.com">胖人装</a>
+                            <a href="http://sc.chinaz.com">棉衬衫</a>
+                            <a href="http://sc.chinaz.com">学院风</a>
+                            <a href="http://sc.chinaz.com"> 中长款装</a>
+                        </dd>
+                    </dl>
+                    <dl class="flright">
+                        <dt>内衣</dt>
+                        <dd>
+                            <a href="http://sc.chinaz.com">白衬衫 </a>
+                            <a href="http://sc.chinaz.com">潮牌</a>
+                            <a href="http://sc.chinaz.com">雪纺衫</a>
+                            <a href="http://sc.chinaz.com">班服</a>
+                            <a href="http://sc.chinaz.com">宽松上衣</a>
+                            <a href="http://sc.chinaz.com">胖人装</a>
+                            <a href="http://sc.chinaz.com">棉衬衫</a>
+                            <a href="http://sc.chinaz.com">学院风</a>
+                            <a href="http://sc.chinaz.com"> 中长款装</a>
+                        </dd>
+                    </dl>
+                    <dl class="flright">
+                        <dt>帽子</dt>
+                        <dd>
+                            <a href="http://sc.chinaz.com">白衬衫 </a>
+                            <a href="http://sc.chinaz.com">潮牌</a>
+                            <a href="http://sc.chinaz.com">雪纺衫</a>
+                            <a href="http://sc.chinaz.com">班服</a>
+                            <a href="http://sc.chinaz.com">宽松上衣</a>
+                            <a href="http://sc.chinaz.com">胖人装</a>
+                            <a href="http://sc.chinaz.com">棉衬衫</a>
+                            <a href="http://sc.chinaz.com">学院风</a>
+                            <a href="http://sc.chinaz.com"> 中长款装</a>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+            <ul class="navRight">
+                <li><a href="http://sc.chinaz.com">单品</a><span></span></li>
+                <li><a href="http://sc.chinaz.com">特惠</a></li>
+                <li><a href="http://sc.chinaz.com">搭配</a></li>
+                <li><a href="http://sc.chinaz.com">专辑</a><span></span></li>
+                <li><a href="http://sc.chinaz.com">主题</a><span></span></li>
+                <li><a href="http://sc.chinaz.com">店铺</a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="banner">
+        <div class="pic">
+            <img src="img/banner.jpg" />
+        </div>
+    </div>
+</body>
+
+</html>

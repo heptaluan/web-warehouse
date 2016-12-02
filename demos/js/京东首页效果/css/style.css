@@ -1,0 +1,150 @@
+* {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	border: 0;
+}
+body {
+	font-family: "微软雅黑";
+	font-size: 12px;
+	background: #FAFAFA;
+	height:1000px;
+}
+a, a:hover {
+	color: #3E3E3E;
+	text-decoration: none;
+}
+#navOut {
+	width: 100%;
+	height: 40px;
+	border-bottom: 1px solid #FA4332;
+	background: #FFFFFF;
+}
+.nav {
+	width: 1190px;
+	height: 40px;
+	margin: 20px auto 0;
+}
+.navLeft {
+	width: 290px;
+	height: 40px;
+	background: #FA4332;
+	float: left;
+	position: relative;
+}
+.navLeft p {
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	color: #FFFFFF;
+	font-size: 14px;
+}
+.nav .navRight {
+	float: left;
+	overflow: hidden;
+}
+.nav .navRight li {
+	float: left;
+	width: 90px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	font-weight: bold;
+	position: relative;
+}
+.nav .navRight li span {
+	width: 5px;
+	height: 5px;
+	border-bottom: 1px solid #000000;
+	border-left: 1px solid #000000;
+	position: absolute;
+	top: 15px;
+	left: 63px;
+	transform: rotate(-45deg);
+	transition: all 1s;
+}
+.fenlei {
+	width: 288px;
+	height: 558px;
+	position: absolute;
+	background: #FFFFFF;
+	top: 40;
+	left: 0;
+	border: 1PX solid #EEEEEE;
+}
+.fenlei ul {
+	overflow: hidden;
+}
+.fenlei ul li {
+	overflow: hidden;
+	height: 79px;
+	border-bottom: 1px solid #EEEEEE;
+}
+.fenleiLeft {
+	overflow: hidden;
+}
+.fenleiLeft dt {
+	width: 40px;
+	height: 64px;
+	float: left;
+	padding: 15px 0 0 15px;
+	font-size: 14px;
+	font-weight: bold;
+}
+.fenleiLeft dd {
+	float: left;
+	width: 220px;
+	overflow: hidden;
+}
+.fenleiLeft dd a {
+	margin: 15px 0 0 12px;
+	float: left;
+}
+.fenleiLeft dd a:hover{color: #f60;}
+.fenleiright {
+	width: 0px;
+	height: 558px;
+	border: 1px solid #EEEEEE;
+	border-left: 0;
+	background: #FFFFFF;
+	position: absolute;
+	top: 40px;
+	left: 290px;
+	overflow: hidden;
+}
+#banner {
+	width: 100%;
+	height: 380px;
+	background: #e50150;
+}
+#banner .pic {
+	width: 900px;
+	height: 380px;
+	margin: 0 auto;
+	padding-left: 290px;
+}
+.pic img {
+	display: block;
+}
+.flright {
+	height: 90px;
+	padding: 20px 0 0 20px;
+	overflow: hidden;
+}
+.flright dt {
+	height: 24px;
+	line-height: 24px;
+	font-size: 14px;
+	font-weight: bold;
+}
+.flright dd {
+	height: 66px;
+	overflow: hidden;
+}
+.flright dd a {
+	float: left;
+	padding-right: 10px;
+	height: 33px;
+	line-height: 33px;
+}
+.flright dd a:hover{color: #f60;}

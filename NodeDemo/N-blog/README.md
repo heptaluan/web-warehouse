@@ -1,6 +1,6 @@
-Node.js 笔记 
+Node.js 笔记，参考 [N-blog](https://github.com/nswbmw/N-blog)
 
-参考 [N-blog](https://github.com/nswbmw/N-blog)
+记录一些自己不太熟悉的知识点
 
 ## 2.1 require
 
@@ -51,9 +51,9 @@ c->a
 
 ```
 
-循环引用并不会报错，导致的结果是 require 的结果是空对象 {}，原因是 b require 了 a，a 又去 require 了 b，此时 b 还没初始化好，所以只能拿到初始值 {}。当产生循环引用时一般有两种方法解决：
+循环引用并不会报错，导致的结果是 require 的结果是空对象 {}，原因是 b require 了 a，a 又去 require 了 b，此时 b 还没初始化好，所以只能拿到初始值 {}。当产生循环引用时一般有**两种**方法解决：
 
-1. 通过分离共用的代码到另一个文件解决，如上面简单的情况，可拆出共用的代码到 c 中，如下:
+* 通过分离共用的代码到另一个文件解决，如上面简单的情况，可拆出共用的代码到 c 中，如下:
 
 ```js
 
@@ -62,9 +62,9 @@ c->b
 
 ```
 
-2. 不在最外层 require，在用到的地方 require，通常在函数的内部
+* 不在最外层 require，在用到的地方 require，通常在函数的内部
 
-总的来说，循环依赖的陷阱并不大容易出现，但一旦出现了，对于新手来说还真不好定位。它的存在给我们提了个醒，要时刻注意你项目的依赖关系不要过于复杂，哪天你发现一个你明明已经 exports 了的方法报 undefined is not a function，我们就该提醒一下自己：哦，也许是它来了。
+总的来说，循环依赖的陷阱并不大容易出现，但是它的存在给我们提了个醒，要时刻注意你项目的依赖关系不要过于复杂，哪天你发现一个你明明已经 exports 了的方法报 undefined is not a function，我们就该提醒一下自己：哦，也许是它来了。
 
 
 
@@ -75,9 +75,11 @@ c->b
 
 require 用来加载代码，而 exports 和 module.exports 则用来导出代码。
 
-先来看一个示例，test.js
+先来看一个示例：
 
 ```js
+
+// test.js
 
 var a = {name: 1};
 var b = a;
@@ -224,9 +226,9 @@ package.json，它存储了该 Node.js 应用的名字、版本、描述、作�
 
 简单的来说就是：
 
-1. --save-dev 安装的 插件，被写入到 devDependencies（devDependencies  里面的插件只用于开发环境）对象里面去
+1. --save-dev 安装的 插件，被写入到 devDependencies（开发环境）对象里面去
 
-2. --save 安装的 插件，则被写入到 dependencies（dependencies  是需要发布到生产环境的） 对象里面去
+2. --save 安装的 插件，则被写入到 dependencies（生产环境）对象里面去
 
 3. 加了 -dev 就是开发环境，不加则是生产环境
 
@@ -249,7 +251,11 @@ $ npm config set save-exact true
 
 ### npm shrinkwrap
 
-之前说过要锁定依赖的版本，但这并不能完全防止意外情况的发生，因为锁定的只是最外一层的依赖，而里层依赖的模块的 package.json 有可能写的是 ```"mongoose": "*"```。为了彻底锁定依赖的版本，让你的应用在任何机器上安装的都是同样版本的模块（不管嵌套多少层），通过运行 ```npm shrinkwrap```，会在当前目录下产生一个 ```npm-shrinkwrap.json```，里面包含了通过 node_modules 计算出的模块的依赖树及版本。上面的截图也显示：只要目录下有 npm-shrinkwrap.json 则运行 npm install 的时候会优先使用 npm-shrinkwrap.json 进行安装，没有则使用 package.json 进行安装。
+之前说过要锁定依赖的版本，但这并不能完全防止意外情况的发生，因为锁定的只是最外一层的依赖，而里层依赖的模块的 package.json 有可能写的是 ```"mongoose": "*"```。
+
+为了彻底锁定依赖的版本，让你的应用在任何机器上安装的都是同样版本的模块（不管嵌套多少层），通过运行 ```npm shrinkwrap```，会在当前目录下产生一个 ```npm-shrinkwrap.json```，里面包含了通过 node_modules 计算出的模块的依赖树及版本。
+
+上面的截图也显示：只要目录下有 npm-shrinkwrap.json 则运行 npm install 的时候会优先使用 npm-shrinkwrap.json 进行安装，没有则使用 package.json 进行安装。
 
 更多阅读：
 

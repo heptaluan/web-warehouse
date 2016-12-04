@@ -1,6 +1,6 @@
 Vue.js 
 
-所有例子都基于 2.0 版本实现
+所有例子都基于 2.0 版本实现（因为 Vue.js 从 1.X 版本升级到 2.0 版本以后，很多 API 都被废除掉了，之前有些写法现在行不通了）
 
 ## 概述
 
@@ -40,7 +40,7 @@ var myComponentInstance = new myComponent()
 
 ### vm.$mount( [elementOrSelector] )
 
-如果 Vue 实例在实例化时没有收到 el 选项，则它处于“未挂载”状态，没有关联的 DOM 元素。可以使用vm.$mount() 手动地挂载一个未挂载的实例。
+如果 Vue 实例在实例化时没有收到 el 选项，则它处于“未挂载”状态，没有关联的 DOM 元素。可以使用 vm.$mount() 手动地挂载一个未挂载的实例。
 
 ### vm.$destroy()
 
@@ -270,7 +270,7 @@ Vue.js 提供了一个方法 $watch，它用于观察 Vue 实例上的数据变�
 
 ```html
 
-<div class="static" v-bind:class="{'class-a': isA, 'class-b': isB}">hello world</div>
+<div class="static" v-bind:class="{'class-a': isA, 'class-b': isB}"> hello world </div>
 
 data: {
     isA: true,
@@ -283,7 +283,7 @@ data: {
 
 ```html
 
-<div v-bind:class="classObj">hello world</div>
+<div v-bind:class="classObj"> hello world </div>
 
 data: {
     classObj: {
@@ -314,7 +314,7 @@ data: {
 
 ```html
 
-<div v-bind:class="[classA, {classB: isB, classC: isC}]">hello world</div>
+<div v-bind:class="[classA, {classB: isB, classC: isC}]"> hello world </div>
 
 ```
 
@@ -373,7 +373,7 @@ v-if 也是**惰性**的：如果在初始渲染时条件为假，则什么也�
 
 可以使用 v-else 指令给 v-if 添加一个 "else" 块
 
-在 2.0 版本之后，v-else 不能再跟在 v-show后面使用。
+需要注意的是：在 2.0 版本之后，v-else 不能再跟在 v-show后面使用。
 
 ```html
 
@@ -386,7 +386,9 @@ v-if 也是**惰性**的：如果在初始渲染时条件为假，则什么也�
 
 ## 列表渲染
 
-可以使用 v-for 指令基于一个数组来渲染一个列表，这个指令使用特殊的语法形式，形式为：item in items。items 是数据数组，item是当前数组元素的别名
+可以使用 v-for 指令基于一个数组来渲染一个列表，这个指令使用特殊的语法形式，形式为：item in items。
+
+items 是数据数组，item是当前数组元素的别名
 
 另外，你可以为索引指定一个别名（如果 v-for 用于一个对象，则可以为对象的键指定一个别名）：
 
@@ -408,7 +410,7 @@ v-if 也是**惰性**的：如果在初始渲染时条件为假，则什么也�
 
 ```
 
-需要注意的是，在 2.0 版本中， item 与 index 位置做了调整 
+需要注意的是：在 2.0 版本中， item 与 index 位置做了调整 
 
 ### template 中的 v-for
 

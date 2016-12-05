@@ -156,6 +156,24 @@ var app = connect().use(logger()).// ...
 
 ```
 
+### static 中间件
+
+**挂载**
+
+Connect 允许中间件挂载到 URL 上，比如，static 允许将任意一个 URL 匹配到文件系统中任意一个目录
+
+比如说，要将/my-images URL 和 名为 /images 的目录对应起来：
+
+```js
+server.use("./my-images", connect.static("./path/to/images"))
+```
+
+需要注意的是，connect 模块现在已不支持 static，请使用 serve-static
+
+[https://github.com/expressjs/serve-static](https://github.com/expressjs/serve-static)
+
+或者载入指定的版本 ```npm install connect@2.X.X```
+
 
 
 

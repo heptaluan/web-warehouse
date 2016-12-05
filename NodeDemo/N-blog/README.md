@@ -244,7 +244,7 @@ $ npm i cross-env -g
 
 ```js
 
-cross-env NODE_ENV=test node app
+cross-env NODE_ENV = test node app
 
 ```
 
@@ -322,3 +322,127 @@ npm test 等价于 npm run test
 不要因为 npm scripts 越来越流行就盲目的使用它，应该把精力集中在写代码而不是学习更多的工具。如果你开始觉得自己正在和使用的工具战斗，那么这个时候我建议你考虑使用一下 npm scripts。
 
 [npm Scripts使用教程](http://www.cnblogs.com/zldream1106/p/5204599.html)
+
+
+
+
+### npm shrinkwrap
+
+之前说过要锁定依赖的版本，但这并不能完全防止意外情况的发生，因为锁定的只是最外一层的依赖，而里层依赖的模块的 package.json 有可能写的是 ```"mongoose": "*"```。
+
+为了彻底锁定依赖的版本，让你的应用在任何机器上安装的都是同样版本的模块（不管嵌套多少层）
+
+通过运行 ```npm shrinkwrap```，会在当前目录下产生一个 ```npm-shrinkwrap.json```，里面包含了通过 node_modules 计算出的模块的依赖树及版本。
+
+上面的截图也显示：只要目录下有 npm-shrinkwrap.json 则运行 npm install 的时候会优先使用 npm-shrinkwrap.json 进行安装，没有则使用 package.json 进行安装。
+
+更多阅读：
+
+1. https://docs.npmjs.com/cli/shrinkwrap
+
+2. http://tech.meituan.com/npm-shrinkwrap.html
+
+> 需要注意的是，如果 node_modules 下存在某个模块（如直接通过 ```npm install xxx``` 安装的）而 ```package.json``` 中没有，运行 ```npm shrinkwrap``` 则会报错。另外，```npm shrinkwrap``` 只会生成 ```dependencies``` 的依赖，不会生成 ```devDependencies``` 的。
+
+
+
+
+
+## 3 初始化一个 Express 
+
+### supervisor
+
+使用 supervisor 来解决修改代码需要 结束/启动 服务，全局安装 supervisor：
+
+```js
+npm install -g supervisor
+```
+
+运行 supervisor --harmony index 启动程序，如下所示：
+
+![image](https://github.com/nswbmw/N-blog/blob/master/book/img/3.1.2.png)
+
+supervisor 会监听当前目录下 node 和 js 后缀的文件，当这些文件发生改动时，supervisor 会自动重启程序。
+
+
+
+
+## 3.2 路由
+
+默认的例子我们只是挂载了根路径的路由控制器，然后我们现在新增一个路径：
+
+```js
+
+app.get("/users/:name", function (req, res) {
+    res.send("hello " + req.params.name)
+})
+
+```
+
+路径中 :name 起了占位符的作用，这个占位符的名字是 name，可以通过 req.params.name 取到实际的值。
+
+> express 使用了 [path-to-regexp](https://www.npmjs.com/package/path-to-regexp) 模块实现的路由匹配。
+
+req 中包含了**请求来的相关信息**，res 则是用来**返回该请求的响应**，更多见 [express](http://expressjs.com/en/4x/api.html) 官方文档。
+
+几个常用的 req 的属性：
+
+* ```req.query```: 解析后的 url 中的 ```querystring```，如 ```?name=haha```，```req.query``` 的值为 ```{name: 'haha'}```
+
+* ```req.params```: 解析 url 中的占位符，如 ```/:name```，访问 ```/haha```，```req.params``` 的值为 ```{name: 'haha'}```
+
+* ```req.body```: 解析后请求体，需使用相关的模块，如 [body-parser](https://www.npmjs.com/package/body-parser)，请求体为 ```{"name": "haha"}```，则 ```req.body``` 为 ```{name: 'haha'}```
+
+
+
+
+### express.Router
+
+利用 路由 来改造之前的例子
+
+创建 routes 文件夹，在 routes 目录下创建 index.js 和 users.js。最后代码如下：
+
+```js
+
+// index.js
+var express = require('express');
+var app = express();
+var indexRouter = require('./routes/index');
+var userRouter = require('./routes/users');
+
+app.use('/', indexRouter);
+app.use('/users', userRouter);
+
+app.listen(3000);
+
+
+
+// routes/index.js
+var express = require('express');
+var router = express.Router();
+
+router.get('/', function(req, res) {
+  res.send('hello, express');
+});
+
+module.exports = router;
+
+
+
+// routes/users.js
+var express = require('express');
+var router = express.Router();
+
+router.get('/:name', function(req, res) {
+  res.send('hello, ' + req.params.name);
+});
+
+module.exports = router;
+
+
+```
+
+每个路由文件通过生成一个 ```express.Router``` 实例 ```router``` 并导出，通过 ```app.use``` 挂载到不同的路径。
+
+更多 express.Router 的用法见 [express 官方文档](http://expressjs.com/en/4x/api.html#router)
+

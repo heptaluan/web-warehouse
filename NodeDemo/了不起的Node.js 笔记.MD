@@ -625,53 +625,6 @@ request.get("http://twitter.com/search.json")
 
 运行后可以发现从响应的 JSON 数据解码成的对象形式的数据，通过 res.text 还是可以获取到原始的响应文本
 
-### Connect
-
-**Connect** 是一个基于 HTTP 服务器的工具集，它提供了一种新的组织代码的方式来与请求、响应对象进行交互，称之为 **中间件（middleware）**
-
-#### 先通过原生的 http 构建的简易网站
-
-```js
-
-// 加载依赖
-var http = require("http");
-var fs = require("fs");
-
-var server = http.createServer(function (req, res) {
-    // 检查 URL 是否和服务器目录下的文件匹配，如果匹配则读取文件并且显示出来
-    // 检查请求方式为 GET 并且以 /images开始， .jpg 结束
-    // 如果 URL 为 "/" 的话，则响应 index.html，否则 404
-    if ("GET" == req.method && "/images" == req.url.substr(0, 7) && ".jpg" == req.url.substr(-4)) {
-        // fs.stat 检查文件是否存在，__dirname 来获取当前服务器所在的路径
-        // 注意：这里不使用同步版本，否则当处理磁盘文件的时候，会阻塞其他请求的处理
-        fs.stat(__dirname + req.url, function (err, stat) {
-            if (err || !stat.isFile()) {
-                res.writeHead(404);
-                res.end("not found")
-                return;
-            }
-            serve(__dirname + req.url, "application/jpg")
-        })
-    } else if ("GET" == req.method && "/" == req.url) {
-        serve(__dirname + "/index.html", "text/html")
-    } else {
-        res.writeHead(404);
-        res.end("not found")
-    }
-
-    function serve (path, type) {
-        res.writeHead(200, { "Content-Type": type });
-        fs.createReadStream(path).pipe(res);
-    }
-}) 
-
-server.listen(3000, function (req, res) {
-    console.log("app is running at port 3000");
-})
-
-
-```
-
 
 
 

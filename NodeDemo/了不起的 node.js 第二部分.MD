@@ -139,6 +139,23 @@ module.exports = function (opts) {
 
 ```
 
+测试的时候发现几点需要注意的：
+
+1. **connect.createServer() not function**
+因为最新的创建server的方式变了 见[https://github.com/senchalabs/connect](https://github.com/senchalabs/connect)
+
+2. **Connect error - has no method 'logger'**
+
+现在需要使用 morgan
+
+```js
+
+var logger = require('morgan');
+
+var app = connect().use(logger()).// ...
+
+```
+
 
 
 

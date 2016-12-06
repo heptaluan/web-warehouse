@@ -1,0 +1,15 @@
+<script type="text/javascript">
+    // 点击按钮弹出下拉框
+    $('.ui.dropdown').dropdown();
+    // 鼠标悬浮在头像上，弹出气泡提示框
+    $('.post-content .avatar').popup({
+      inline: true,
+      position: 'bottom right',
+      lastResort: 'bottom right',
+    });
+
+    // semantic-ui 操控页面控件的代码，一定要放到 footer.ejs 的 </body> 的前面
+    // 因为只有页面加载完后才能通过 JQuery 获取 DOM 元素。
+  </script>
+  </body>
+</html>

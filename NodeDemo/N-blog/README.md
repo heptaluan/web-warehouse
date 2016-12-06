@@ -1,6 +1,6 @@
 Node.js 笔记，参考 [N-blog](https://github.com/nswbmw/N-blog)
 
-一些零散的笔记之类
+一些零散的笔记
 
 
 ### nrm
@@ -365,6 +365,19 @@ npm install -g supervisor
 supervisor 会监听当前目录下 node 和 js 后缀的文件，当这些文件发生改动时，supervisor 会自动重启程序。
 
 
+### --harmony
+
+ES6，也就是被大众称为 JavaScript 的 ECMAScript 语言规范的下一版，其工作名称为 ```Harmony```。 Harmony给 JavaScript 带来了很多振奋人心的新特性，其中很多已经出现在较新版本的 node 中了。
+
+Harmony 实现了很多新特性，比如``块作用域```、```生成器```、```代理```、```弱映射```等等。
+
+要在你的 node 程序中启用 harmony 的特性，需要在启动脚本中设置 --harmony 选项，例如：
+
+```js
+
+supervisor --harmony index
+
+```
 
 
 ## 3.2 路由

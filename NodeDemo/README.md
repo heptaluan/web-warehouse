@@ -28,3 +28,18 @@ Node.js 学习笔记记录
 
 记录一些看过的 node 相关书籍，外加一些学习笔记
 
+
+----
+
+----
+
+一些平时学习 node 过程中遇到的相关问题汇总，不定时更新
+
+[Node.js 相关问题汇总](http://hanekaoru.com/?p=1943)
+
+[mongodb 问题汇总](http://hanekaoru.com/?p=1935)
+
+
+
+
+

@@ -28,18 +28,18 @@ $(function () {
         var contentItems = $("#content").find(".item");
         var currentItem = "";
 
-        if (scrollTop+windowHeight==documentHeight) {
+        if (scrollTop + windowHeight == documentHeight) {
             //如果滚动到最底部 获取最后一个的id保存起来
             //需要页脚内容 不然最后一个div的底部触碰不到浏览器顶部
-            currentItem= "#" + contentItems.last().attr("id");
-        }else{
+            currentItem = "#" + contentItems.last().attr("id");
+        } else {
             //如果没有到底部 
             contentItems.each(function () {
                 var contentItem = $(this);
                 var offsetTop = contentItem.offset().top;
                 //判断当前div 出现是视窗内的距离
                 //然后取得当前的id保存起来
-                if (scrollTop + 150 > offsetTop ) {
+                if (scrollTop + 150 > offsetTop) {
                     currentItem = "#" + contentItem.attr("id");
                 }
             });
@@ -53,7 +53,6 @@ $(function () {
         }
     });
 });
-
 </script>
 
 </head>

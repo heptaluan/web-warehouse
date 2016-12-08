@@ -22,11 +22,12 @@
 	position: absolute;
 }
 </style>
-<script text="type/javascript">
+<script>
 window.onload = function () {
     new Drag('div1');
     new LimDrag('div2');
 };
+
 function Drag(id) {
     var disX = 0;
     var disY = 0;
@@ -54,6 +55,7 @@ Drag.prototype.fnDown = function (ev) {
         _this.fnUp();
     };
 }
+
 Drag.prototype.fnMove = function (ev) {
     var oEvent = ev || event;
     this.oDiv.style.left = oEvent.clientX - this.disX + 'px';
@@ -98,8 +100,6 @@ LimDrag.prototype.fnMove = function (ev) {
     this.oDiv.style.left = l + 'px';
     this.oDiv.style.top = t + 'px';
 };
-
-
 </script>
 </head>
 

@@ -1,74 +1,70 @@
 <!DOCTYPE html >
 <html>
-	<head>
-		<title> 转盘效果 </title>
-		<meta charset="utf-8" />
-		<link rel="stylesheet" href="#">
-		<style>
-		canvas{background:#ccc;}
-		</style>
-		<script>
-		window.onload=function (){
-			var canvas = document.getElementById("canvas");
-			var cobj = canvas.getContext("2d");
-			cobj.translate(250,250);
-			var num = Math.PI/180;
-			var colorArr = ["red","blue","orange","pink","green","purple","yellow","gray"];
-			var textArr=["aa","bb","cc","dd","ee","ff","gg","hh"];
-			var angle=0;
-			
-			//
-			//绘制扇形
+<head>
+<title> 转盘效果 </title>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="#">
+<style>
+canvas{background:#ccc;}
+</style>
+<script>
+window.onload = function () {
+    var canvas = document.getElementById("canvas");
+    var cobj = canvas.getContext("2d");
+    cobj.translate(250, 250);
+    var num = Math.PI / 180;
+    var colorArr = ["red", "blue", "orange", "pink", "green", "purple", "yellow", "gray"];
+    var textArr = ["aa", "bb", "cc", "dd", "ee", "ff", "gg", "hh"];
+    var angle = 0;
 
-			setInterval(function(){
-				angle++;
-				cobj.clearRect(-200,-200,500,500);
-				cobj.beginPath();
-				cobj.lineWidth=5;
-				cobj.moveTo(135,0);
-				cobj.lineTo(150,0);
-				cobj.stroke();
-				cobj.lineWidth=2;
-				cobj.save();
-				cobj.rotate(angle*num);
+    //绘制扇形
 
-			for (var i=1 ; i<=8 ; i++){
-				
-				cobj.beginPath();
-				cobj.moveTo(0,0);
-				cobj.fillStyle = colorArr[i-1];
-				cobj.arc(0,0,130,(i-1)*45*num,i*45*num);
-				cobj.closePath();
-				cobj.stroke();
-				cobj.fill();
-			}
-			
-			//白色圆盘
-				cobj.beginPath();
-				cobj.fillStyle="#fff";
-				cobj.arc(0,0,60,0,2*Math.PI);
-				cobj.fill();
+    setInterval(function () {
+        angle++;
+        cobj.clearRect(-200, -200, 500, 500);
+        cobj.beginPath();
+        cobj.lineWidth = 5;
+        cobj.moveTo(135, 0);
+        cobj.lineTo(150, 0);
+        cobj.stroke();
+        cobj.lineWidth = 2;
+        cobj.save();
+        cobj.rotate(angle * num);
 
-			//添加文字
-			for(var i=0 ; i<8 ; i++){
-				cobj.save();
-				cobj.beginPath();
-				cobj.rotate((i*45+25)*num);
-				cobj.fillStyle="#000";
-				cobj.font="15px 微软雅黑"
-				cobj.fillText(textArr[i],75,0);			
-				cobj.restore();
-			}
-				cobj.restore();
-			},100);
+        for (var i = 1; i <= 8; i++) {
 
+            cobj.beginPath();
+            cobj.moveTo(0, 0);
+            cobj.fillStyle = colorArr[i - 1];
+            cobj.arc(0, 0, 130, (i - 1) * 45 * num, i * 45 * num);
+            cobj.closePath();
+            cobj.stroke();
+            cobj.fill();
+        }
 
-		}
-		</script>
-	</head>
-	<body>
-		<canvas width=600 height=600 id="canvas">
-		</canvas>
-	</body>
+        //白色圆盘
+        cobj.beginPath();
+        cobj.fillStyle = "#fff";
+        cobj.arc(0, 0, 60, 0, 2 * Math.PI);
+        cobj.fill();
+
+        //添加文字
+        for (var i = 0; i < 8; i++) {
+            cobj.save();
+            cobj.beginPath();
+            cobj.rotate((i * 45 + 25) * num);
+            cobj.fillStyle = "#000";
+            cobj.font = "15px 微软雅黑"
+            cobj.fillText(textArr[i], 75, 0);
+            cobj.restore();
+        }
+        cobj.restore();
+    }, 100);
+}
+</script>
+</head>
+<body>
+	<canvas width=600 height=600 id="canvas"></canvas>
+</body>
 
 </html>

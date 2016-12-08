@@ -1,95 +1,91 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-	<title> 时钟效果 </title>
-	<meta charset="utf-8">
-	<link rel="stylesheet" href="">
+<title> 时钟效果 </title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="">
+<style>
+.one {
+	width: 240px;
+	height: 240px;
+	border: 1px solid #888;
+	border-radius: 50%;
+	box-shadow: 2px 2px 4px #111;
+	background: -webkit-gradient(radial, 120 120, 0, 120 120, 120, from(#ccc), to(#ccc));
+	background: -moz-radial-gradient(circle closest-side, #ffe 0%, #eee 100%);
+	position: relative;
+}
+</style>
+<script>
+window.onload = function () {
+    var div = document.getElementsByTagName("div")[0];
+    drawMark(div);
+    var time = new Date();
+    var ha = time.getHours();
+    var ma = time.getMinutes();
+    var sa = time.getSeconds();
+    var hours = drawPoint(div, 120, 120, 60, 5, "#111", ha * 30 + ma * 6 / 12 - 90);
+    var mins = drawPoint(div, 120, 120, 80, 4, "#555", ma * 6 - 90);
+    var seds = drawPoint(div, 120, 120, 100, 3, "#999", sa * 6 - 90);
 
-	<style>
-		.one {
-			width: 240px;
-			height: 240px;
-			border: 1px solid #888;
-			border-radius: 50%;
-			box-shadow: 2px 2px 4px #111;
-			background: -webkit-gradient(radial, 120 120, 0, 120 120, 120, from(#ccc), to(#ccc));
-			background: -moz-radial-gradient(circle closest-side, #ffe 0%, #eee 100%);
-			position: relative;
-		}
-	</style>
-	<script>
-		window.onload=function  () {
-				var div=document.getElementsByTagName("div")[0];
-				drawMark (div);
-				var time=new Date();
-				var ha=time.getHours();
-				var ma=time.getMinutes();
-				var sa=time.getSeconds();
-				var hours=drawPoint (div,120,120,60,5,"#111",ha*30+ma*6/12-90);
-				var mins=drawPoint (div,120,120,80,4,"#555",ma*6-90);
-				var seds=drawPoint (div,120,120,100,3,"#999",sa*6-90);
-
-				setInterval(function  () {
-						var time=new Date();
-						var ha=time.getHours();
-						var ma=time.getMinutes();
-						var sa=time.getSeconds();
-						setCss3(hours,{transform:"rotate("+(ha*30+ma*6/12-90)+"deg)"})
-						setCss3(mins,{transform:"rotate("+(ma*6-90)+"deg)"})
-						setCss3(seds,{transform:"rotate("+(sa*6-90)+"deg)"})
-				},1000)
-		}
-
-
-		function drawMark(obj) {
-			for (var i = 0; i < 60; i++) {
-						var widths = 1;
-						var heights = 5;
-						if (i % 5 == 0) {
-								widths = 5
-								heights = 10;
-						}
-						var div = document.createElement("div");
-						div.style.cssText = "width:" + widths + "px;height:" + heights + "px;background:#111;position:absolute;top:0;left:120px;"
-						setCss3(div, { transform: "rotate(" + i * 6 + "deg)", "transform-origin": "0px 120px" })
-						obj.appendChild(div);
-			}
-		}
+    setInterval(function () {
+        var time = new Date();
+        var ha = time.getHours();
+        var ma = time.getMinutes();
+        var sa = time.getSeconds();
+        setCss3(hours, { transform: "rotate(" + (ha * 30 + ma * 6 / 12 - 90) + "deg)" })
+        setCss3(mins, { transform: "rotate(" + (ma * 6 - 90) + "deg)" })
+        setCss3(seds, { transform: "rotate(" + (sa * 6 - 90) + "deg)" })
+    }, 1000)
+}
 
 
-		function drawPoint(obj, startx, starty, width, height, color, angle) {
-			var div = document.createElement("div");
+function drawMark(obj) {
+    for (var i = 0; i < 60; i++) {
+        var widths = 1;
+        var heights = 5;
+        if (i % 5 == 0) {
+            widths = 5
+            heights = 10;
+        }
+        var div = document.createElement("div");
+        div.style.cssText = "width:" + widths + "px;height:" + heights + "px;background:#111;position:absolute;top:0;left:120px;"
+        setCss3(div, { transform: "rotate(" + i * 6 + "deg)", "transform-origin": "0px 120px" })
+        obj.appendChild(div);
+    }
+}
 
-			div.style.cssText = "width:" + width + "px;height:" + height + "px;position:absolute;top:" + starty + "px;left:" + startx + "px;background:" + color + ";";
-			setCss3(div, { transform: "rotate(" + angle + "deg)", "transform-origin": "0px 0px" })
-				obj.appendChild(div);
 
-			return div;
-		}
+function drawPoint(obj, startx, starty, width, height, color, angle) {
+    var div = document.createElement("div");
+
+    div.style.cssText = "width:" + width + "px;height:" + height + "px;position:absolute;top:" + starty + "px;left:" + startx + "px;background:" + color + ";";
+    setCss3(div, { transform: "rotate(" + angle + "deg)", "transform-origin": "0px 0px" })
+    obj.appendChild(div);
+
+    return div;
+}
 
 
-		function setCss3(obj, attrObj) {
-				for (var i in attrObj) {
-						var newi = i;
-						if (newi.indexOf("-") > 0) {
-								var num = newi.indexOf("-");
-								newi = newi.replace(newi.substr(num, 2), newi.substr(num + 1, 1).toUpperCase());
-						}
-						obj.style[newi] = attrObj[i];
-						newi = newi.replace(newi.charAt(0), newi.charAt(0).toUpperCase());
-						obj.style["webkit" + newi] = attrObj[i];
-						obj.style["moz" + newi] = attrObj[i];
-						obj.style["o" + newi] = attrObj[i];
-						obj.style["ms" + newi] = attrObj[i];
-				}
-		}
-	</script>
+function setCss3(obj, attrObj) {
+    for (var i in attrObj) {
+        var newi = i;
+        if (newi.indexOf("-") > 0) {
+            var num = newi.indexOf("-");
+            newi = newi.replace(newi.substr(num, 2), newi.substr(num + 1, 1).toUpperCase());
+        }
+        obj.style[newi] = attrObj[i];
+        newi = newi.replace(newi.charAt(0), newi.charAt(0).toUpperCase());
+        obj.style["webkit" + newi] = attrObj[i];
+        obj.style["moz" + newi] = attrObj[i];
+        obj.style["o" + newi] = attrObj[i];
+        obj.style["ms" + newi] = attrObj[i];
+    }
+}
+</script>
 </head>
-
 <body>
-	<div class="one">
-	</div>
+	<div class="one"></div>
 </body>
 
 </html>

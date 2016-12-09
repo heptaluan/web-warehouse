@@ -150,31 +150,6 @@ console.log(2);
 你可以把他想象扯个 setTimeout(fn, 1) 或者 "通过异步的方法在最近的将来调用该函数"，那么就可以很容易理解为什么上述例子输出的结果为 1， 2， 3
 
 
-### 绝对和相对模块
-
-绝对模块是指 node 通过在其内部 node_modules 查找到的模块，或者 node 内置的如果 fs，http 这样的模块
-
-相对模块是将 require 指向一个相对工作目录中的 js 文件，比如下面这个例子：
-
-```js
-
-// main.js
-require("a")
-
-// a.js
-console.log("hello world")
-
-```
-
-运行后会发现，node 未能找到，原因就在于它们并没有铜鼓 NPM 来安装，也不在 node_modules 目录张，而且 node 自带模块中也没有以此为名的模块，要修复这个问题，只需要在 require 的参数前面加上 ./
-
-```js
-
-require("./a")
-
-```
-
-
 ### 暴露API
 
 要让模块暴露一个 API 成为 require 调用的返回值，就要依靠 module 和 exports 这两个全局变量

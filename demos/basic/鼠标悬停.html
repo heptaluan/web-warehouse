@@ -11,6 +11,7 @@ input{margin-right:5px;vertical-align:middle;}
 #tips{padding:5px;margin-top:5px;background:#ffefa4;border:1px solid #f90;display:none;}
 </style>
 <script>
+
 window.onload = function(){
 	var oTips = document.getElementById('tips');
 	var oLabel = document.getElementsByTagName('label')[0];
@@ -22,12 +23,15 @@ window.onload = function(){
 		oTips.style.display = 'none';
 	}
 }
+
 </script>
 </head>
 <body>
+
 <div id="outer">
 	<label><input type="checkbox" />两周内自动登陆</label>
     <div id="tips">为了您的信息安全，请不要在网吧或公用电脑上使用此功能！</div>
 </div>
+
 </body>
 </html>

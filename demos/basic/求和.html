@@ -10,6 +10,7 @@ body{color:#999;font:12px/1.5 Tahoma;}
 .sum{font-size:30px;color:red;}
 </style>
 <script>
+
 window.onload = function(){
 	var oBtn = document.getElementsByTagName('button')[0];
 	var oInput = document.getElementsByTagName("input")[0]
@@ -29,13 +30,16 @@ window.onload = function(){
 		oStrong.innerHTML += sum;
 	}
 }
+
 </script>
 </head>
 <body>
+
 <div id="outer">
     <label><input type="text" value="1,2,3,4,5,6,7" /><span>输入数字求和，数字之间用半角","号分隔 结尾不需要","</span></label>
     <p><button>求和</button></p>
     <strong class="sum"></strong>
 </div>
+
 </body>
 </html>

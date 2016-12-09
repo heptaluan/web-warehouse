@@ -15,6 +15,7 @@ h2{font-size:12px;text-align:right;background:#666;border-bottom:3px solid #ccc;
 h2 span{color:#ccc;cursor:pointer;background:#fff;border:1px solid #ccc;padding:0 2px;}
 </style>
 <script>
+
 window.onload = function(){
 	var oWin = document.getElementById("win");
 	var oLay = document.getElementById("overlay");	
@@ -30,11 +31,14 @@ window.onload = function(){
 		oWin.style.display = "none"	
 	}
 }
+
 </script>
 </head>
 <body>
+
 <div id="overlay"></div>
 <div id="win"><h2><span id="close">×</span></h2></div>
 <center><button>弹出层</button></center>
+
 </body>
 </html>

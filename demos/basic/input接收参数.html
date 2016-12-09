@@ -10,9 +10,11 @@ input{border:1px solid #ccc;padding:3px;}
 button{cursor:pointer;}
 </style>
 <script>
+
 var myFn = function(a, b){
 	alert(a.value + b.value);
 };
+
 window.onload = function (){
 	var oInput = document.getElementsByTagName("input");
 	var oBtn = document.getElementsByTagName("button")[0];
@@ -20,11 +22,14 @@ window.onload = function (){
 		myFn(oInput[0],oInput[1])
 	}
 };
+
 </script>
 </head>
 <body>
+
 <p><input type="text" value="aaa" /></p>
 <p><input type="text" value="bbb" /></p>
 <p><button>点我</button></p>
+
 </body>
 </html>

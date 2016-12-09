@@ -10,7 +10,8 @@ body{font:12px/1.5 arial;text-align:center;}
 strong{padding:0 10px;}
 span{font-weight:700;color:red;}
 </style>
-<script type="text/javascript">
+<script>
+
 window.onload = function(){
     var oInput = document.getElementsByTagName("input");
     var oSpan = document.getElementsByTagName("span")[0];
@@ -26,9 +27,12 @@ window.onload = function(){
         (oInput[0].value == "" || oInput[1].value == "") ? alert('请输入数字！') : (oSpan.innerHTML = Math.max(oInput[0].value,oInput[1].value));
     }
 }
+
 </script>
 </head>
 <body>
+
 <input type="text" class="f-text" /><strong>vs</strong><input type="text" class="f-text" /><input type="button" value="最大的数是 &raquo;" class="f-btn" /><span>？</span>
+
 </body>
 </html>

@@ -8,6 +8,7 @@ pre{color:green;padding:10px 15px;background:#f0f0f0;border:1px dotted #333;font
 span{color:#999;}
 </style>
 <script type="text/javascript">
+
 var EventUtil = {
 	addHandler: function (oElement, sEvent, fnHandler) {
 		oElement.addEventListener ? oElement.addEventListener(sEvent, fnHandler, false) : oElement.attachEvent("on" + sEvent, fnHandler)	
@@ -45,6 +46,8 @@ EventUtil.addLoadHandler(function () {
 </script>
 </head>
 <body>
+	
 <center><input type="button" value="毫无用处的按钮"> <input type="button" value="绑定click"> <input type="button" value="解除绑定"></center>
+
 </body>
 </html>

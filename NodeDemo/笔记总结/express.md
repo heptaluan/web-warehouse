@@ -234,7 +234,8 @@ Express 中，错误处理通过特殊的中间件来完成。一般中间件的
 if (app.get('env') === 'development') {
     app.use(function(err, req, res, next) {
         res.status(err.status || 500); // 状态码默认为500（服务器内部错误）
-        // 这里的 res.render 将第二个参数指定的数据传递给第一个参数指定的模板 error.hbs 得到 HTML 并返回给浏览器。这个过程成为 渲染 
+        // 这里的 res.render 将第二个参数指定的数据传递给第一个参数指定的模板 error.hbs 得到 HTML 并返回给浏览器。
+        // 这个过程称为 渲染 
         res.render('error', {
             message: err.message,
             error: err    // 生产环境中应设为 error: {}，禁止输出错误

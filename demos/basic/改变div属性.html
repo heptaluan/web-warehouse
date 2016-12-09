@@ -14,6 +14,7 @@ input{padding:3px;font-family:inherit;border:1px solid #ccc;}
 #div1{color:#fff;width:180px;height:180px;background:#000;margin:0 auto;padding:10px;}
 </style>
 <script>
+
 //创建一个设置CSS方法函数
 function changeStyle(elem,name,value){
 	elem.style[name] = value;
@@ -32,15 +33,18 @@ window.onload = function(){
 		oDiv.removeAttribute('style');
 	}
 }
+
 </script>
 </head>
 <body>
+
 <div id="outer">
     <p><label>属性名：</label><input type="text" value="background" /></p>
     <p><label>属性值：</label><input type="text" value="blue" /></p>
     <p><label></label><button>确定</button><button>重置</button></p>
 </div>
 <div id="div1">在上方输入框输入"属性名"及"属性值"，点击确定按钮查看效果。</div>
+
 </body>
 </html>
 

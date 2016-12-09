@@ -10,7 +10,8 @@ pre{color:green;padding:10px 15px;background:#f0f0f0;border:1px dotted #333;font
 span{color:#999;}
 #box{position:absolute;top:50px;left:300px;width:100px;height:100px;background:black;}
 </style>
-<script type="text/javascript">
+<script>
+
 window.onload = function (){
 	var oBox = document.getElementById("box");
 	var bLeft = bTop = bRight = bBottom = bCtrlKey = false;
@@ -118,6 +119,7 @@ window.onload = function (){
 		doc[1] - oBox.offsetTop - oBox.offsetHeight <= 0 && (oBox.style.top = doc[1] - oBox.offsetHeight + "px")
 	}
 };
+
 </script>
 </head>
 <body>

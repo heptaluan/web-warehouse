@@ -16,7 +16,8 @@ body{font:12px/24px arial;}
 #menu li em.copy{background-position:0 -24px;}
 #menu li em.paste{background-position:0 -48px;}
 </style>
-<script type="text/javascript">
+<script>
+
 window.onload = function (){
 
 	var oMenu = document.getElementById("menu");
@@ -51,15 +52,16 @@ window.onload = function (){
 		oMenu.style.display = "none"	
 	}
 };
+
 </script>
 </head>
 <body>
+
 <center>自定义右键菜单，请在页面点击右键查看效果。</center>
 <ul style="display: none; top: 56px; left: 476px;" id="menu">
     <li class=""><em class="cut"></em><a href="javascript:;">剪切</a></li>
     <li class=""><em class="copy"></em><a href="javascript:;">复制</a></li>
     <li class=""><em class="paste"></em><a href="javascript:;">粘贴</a></li>
 </ul>
-
 
 </body></html>

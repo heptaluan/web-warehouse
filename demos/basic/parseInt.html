@@ -10,6 +10,7 @@ span{color:green;padding-right:10px;font-weight:700;}
 strong{padding:0 10px;}
 </style>
 <script type="text/javascript">
+
 window.onload = function(){
     var oInput = document.getElementsByTagName("input");
     var oSpan = document.getElementsByTagName("span")[0];
@@ -28,9 +29,12 @@ window.onload = function(){
         oSpan.innerHTML = parseInt(oInput[0].value) + parseInt(oInput[1].value);
     }
 }
+
 </script>
 </head>
 <body>
+
 <input type="text" class="f-text" /><strong>+</strong><input type="text" class="f-text" /><strong>=</strong><span>?</span><input type="button" value="求和" />
+
 </body>
 </html>

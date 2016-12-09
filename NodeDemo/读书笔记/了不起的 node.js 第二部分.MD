@@ -6,7 +6,7 @@ Connect 是一个基于 HTTP 服务器的工具集，它提供了一种新的组
 
 ```js
 
-// 加载依赖
+// 加载依赖 
 var http = require("http");
 var fs = require("fs");
 

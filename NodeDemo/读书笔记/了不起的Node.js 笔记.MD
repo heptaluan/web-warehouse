@@ -87,42 +87,6 @@ console.log("and");
 从本质上来说，node 会先注册事件，然后不停的询问内核这些事情是否已经分发，当事件分发的时候，对应的回调函数就会被触发，然后继续执行下去，如果没有事件触发，则继续执行其他代码，知道有新的事件的时候，再去执行对应的回调函数，setTimeout 仅仅知识注册了一个事件，而程序继续执行，所有，这是异步的
 
 
-### 错误处理
-
-Node 的应用依托在一个拥有大量共享状态的大进程中，如果某个回调函数发生了错误，整个进程都会遭殃，但是如果添加了 **uncatchException** 处理器，就不一样了，进程不会退出，并且之后的事情都在你的掌控中：
-
-```js
-
-process.on("uncatchException", function (err) {
-    console.log(err);
-    process.exit(1); // 手动退出
-})
-
-```
-
-除了 uncatchException 和 error 事件外，绝大部分 node 异步 api 接收的回调函数，**第一个参数**都是**错误处理对象或者是 null**
-
-```js
-
-var fs = require("fs");
-
-fs.readerFile("1.txt", function (err, data) {
-    if (err) {
-        return console.error(err)
-    }
-    console.log(data)
-})
-
-```
-
-
-### 堆栈追踪
-
-如果引入事件轮询，那么如果程序出错，堆栈信息中有价值的信息就会丢失，同理，要捕获一个未来才会执行到的函数所抛出的错误是不可能的，这也就是为什么在 node.js 中，每步都要正确的进行错误处理的原因了，一旦遗漏，你就会发现，发生了错误以后很难追踪，因为上下文的信息都丢失了
-
-> 有一点很重要，将来 node 会让异步处理器抛出的异常更容易被追踪到
-
-
 
 ## Node.js 中的 JavaScript
 
@@ -139,7 +103,7 @@ fs.readerFile("1.txt", function (err, data) {
 
 console.log(1);
 
-process.nextTick(function () {
+process.nextTick(function () { 
     console.log(3)
 });
 

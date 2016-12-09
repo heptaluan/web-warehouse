@@ -17,7 +17,7 @@ $ nrm ls
 // 切换
 $ nrm usr cnpm 
 
-
+ 
 ```
 
 ### mongodb 安装及相关问题
@@ -288,7 +288,7 @@ package.json，它存储了该 Node.js 应用的名字、版本、描述、作�
 2. --save 安装的 插件，则被写入到 dependencies（生产环境）对象里面去
 
 3. 加了 -dev 就是开发环境，不加则是生产环境
-
+ 
 4. --save-exact 是将固定版本号写入 dependencies
 
 建议线上的 Node.js 应用都采取这种锁定版本号的方式，因为你不可能保证第三方模块下个小版本是没有验证 bug 的，即使是很流行的模块。

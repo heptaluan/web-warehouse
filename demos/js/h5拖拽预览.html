@@ -56,22 +56,51 @@ function init() {
     }, false);
 
     dest.addEventListener("drop", function (ev) {
+
         ev.stopPropagation();
         ev.preventDefault();
+
+        //返回拖拽的文件列表对象
         var file = ev.dataTransfer.files[0];
+
+        //创建FileReader对象并调用其方法
         var reader = new FileReader();
 
         if (file.type.substr(0, 5) == "image") {
-
+            //FileReader 包含了一套完整的事件模型，用于捕获读取文件时的状态，下面归纳了这些事件。
+            // 事件	          描述
+            // onabort	     中断时触发
+            // onerror	     出错时触发
+            // onload	     文件读取成功完成时触发
+            // onloadend	 读取完成触发，无论成功或失败
+            // onloadstart	 读取开始时触发
+            // onprogress	 读取中
+            //文件一旦开始读取，无论成功或失败，实例的 result 属性都会被填充。如果读取失败，则 result 的值为 null ，
+            //否则即是读取的结果，绝大多数的程序都会在成功读取文件的时候，抓取这个值。
             reader.onload = function (event) {
                 dest.style.background = 'url(' + event.target.result + ') no-repeat center';
                 dest.innerHTML = "";
             };
+            //FileReader 的实例拥有 4 个方法，其中 3 个用以读取文件，另一个用来中断读取。下面的表格列出了这些方法以及他们的参数和功能，
+            //需要注意的是 ，无论读取成功或失败，方法并不会返回读取结果，这一结果存储在 result属性中。
 
+            //方法名	            参数	                 描述
+            // abort	            none	            中断读取
+            // readAsBinaryString	 file	             将文件读取为二进制码
+            // readAsDataURL	     file	                将文件读取为 DataURL
+            // readAsText	        file, [encoding]	 将文件读取为文本
+
+            // readAsText：该方法有两个参数，其中第二个参数是文本的编码方式，默认值为 UTF-8。这个方法非常容易理解，将文件以文本方式读取，读取的结果即是这个文本文件中的内容。
+            // readAsBinaryString：该方法将文件读取为二进制字符串，通常我们将它传送到后端，后端可以通过这段字符串存储文件。
+            // readAsDataURL：这是例子程序中用到的方法，该方法将文件读取为一段以 data: 开头的字符串，这段字符串的实质就是 Data URL，Data URL是一种将小文件直接嵌入文档的方案。
+            //这里的小文件通常是指图像与 html 等格式的文件。
+
+            //将文件读取为 DataURL    
             reader.readAsDataURL(file);
 
         } else if (file.type.substr(0, 4) == "text") {
 
+            //将文件读取为文本
             reader.readAsText(file);
             reader.onload = function (f) {
                 dest.innerHTML = "<pre>" + this.result + "</pre>";
@@ -79,8 +108,10 @@ function init() {
             }
 
         } else {
+
             dest.innerHTML = "暂不支持此类文件的预览";
             dest.style.background = "white";
+
         }
         
     }, false);
@@ -91,7 +122,7 @@ function init() {
 //设置页面属性，不执行默认处理（拒绝被拖放）        
 document.ondragover = function (e) { e.preventDefault(); };
 document.ondrop = function (e) { e.preventDefault(); }
-window.onload = init;  
+window.onload = init;    
 
 </script>
 

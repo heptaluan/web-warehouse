@@ -40,6 +40,7 @@ div#content {
 }    
 </style>
 <script>        
+
 function init() {
 
     var dest = document.getElementById("show");
@@ -54,7 +55,35 @@ function init() {
         ev.preventDefault();
     }, false);
 
+    dest.addEventListener("drop", function (ev) {
+        ev.stopPropagation();
+        ev.preventDefault();
+        var file = ev.dataTransfer.files[0];
+        var reader = new FileReader();
 
+        if (file.type.substr(0, 5) == "image") {
+
+            reader.onload = function (event) {
+                dest.style.background = 'url(' + event.target.result + ') no-repeat center';
+                dest.innerHTML = "";
+            };
+
+            reader.readAsDataURL(file);
+
+        } else if (file.type.substr(0, 4) == "text") {
+
+            reader.readAsText(file);
+            reader.onload = function (f) {
+                dest.innerHTML = "<pre>" + this.result + "</pre>";
+                dest.style.background = "white";
+            }
+
+        } else {
+            dest.innerHTML = "暂不支持此类文件的预览";
+            dest.style.background = "white";
+        }
+        
+    }, false);
 
 }
 
@@ -63,6 +92,7 @@ function init() {
 document.ondragover = function (e) { e.preventDefault(); };
 document.ondrop = function (e) { e.preventDefault(); }
 window.onload = init;  
+
 </script>
 
 </head>

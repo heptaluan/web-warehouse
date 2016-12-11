@@ -40,7 +40,29 @@ div#content {
 }    
 </style>
 <script>        
-  
+function init() {
+
+    var dest = document.getElementById("show");
+
+    dest.addEventListener("dragover", function (ev) {
+        ev.stopPropagation();
+        ev.preventDefault();
+    }, false);
+
+    dest.addEventListener("dragend", function (ev) {
+        ev.stopPropagation();
+        ev.preventDefault();
+    }, false);
+
+
+
+}
+
+
+//设置页面属性，不执行默认处理（拒绝被拖放）        
+document.ondragover = function (e) { e.preventDefault(); };
+document.ondrop = function (e) { e.preventDefault(); }
+window.onload = init;  
 </script>
 
 </head>

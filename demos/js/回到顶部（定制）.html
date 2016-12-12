@@ -2,38 +2,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>回到顶部</title>
+<meta charset="UTF-8">
+<title>回到顶部</title>
 <style>
-.goTop {
-    border-radius: 50%;
-    bottom: 50px;
-    display: block;
-    height: 40px;
-    overflow: hidden;
-    position: fixed;
-    right: 20px;
-    width: 40px;
-    z-index: 9999;
-    background: #ccc;
-}
-.goTop i {
-    background: url("") no-repeat scroll center center;
-    display: block;
-    background-size: cover;
-    height: 40px;
-    width: 40px;
-}
+.goTop {border-radius: 50%;bottom: 50px;display: block;height: 40px;overflow: hidden;position: fixed;right: 20px;width: 40px;z-index: 9999;background: #ccc;}
+.goTop i {background: url("") no-repeat scroll center center;display: block;background-size: cover;height: 40px;width: 40px;}
 </style>
+
 <script src="http://libs.baidu.com/jquery/1.8.3/jquery.min.js"></script>
 <script>
+
 window.onload = function () {
 
-
     goTopEx('goTop')
-
-
-
 
     function goTopEx(id) {
 
@@ -63,8 +44,8 @@ window.onload = function () {
                 document.documentElement.scrollTop = value;
             }
         }
-        window.onscroll = function () { getScrollTop() > 0 ? obj.style.display = "" : obj.style.display = "none"; }
-        obj.onclick = function () {
+        window.onscroll = function() { getScrollTop() > 0 ? obj.style.display = "" : obj.style.display = "none"; }
+        obj.onclick = function() {
             var goTop = setInterval(scrollMove, 10);
             function scrollMove() {
                 setScrollTop(getScrollTop() / 1.1);

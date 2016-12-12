@@ -18,8 +18,9 @@ li {list-style: none;}
 </style>
 <script src="http://hanekaoru.com/jquery.js"></script>
 <script>
-$(function () {
-    $(window).scroll(function () {
+
+$(function() {
+    $(window).scroll(function() {
 
         var scrollTop = $(document).scrollTop();    //垂直滚动的距离
         var documentHeight = $(document).height();  //文档高度也就是页面整体高度
@@ -34,7 +35,7 @@ $(function () {
             currentItem = "#" + contentItems.last().attr("id");
         } else {
             //如果没有到底部 
-            contentItems.each(function () {
+            contentItems.each(function() {
                 var contentItem = $(this);
                 var offsetTop = contentItem.offset().top;
                 //判断当前div 出现是视窗内的距离
@@ -53,6 +54,7 @@ $(function () {
         }
     });
 });
+
 </script>
 
 </head>

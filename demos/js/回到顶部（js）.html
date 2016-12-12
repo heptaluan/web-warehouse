@@ -6,7 +6,8 @@
     <title>回到顶部</title>
 
 <script>
-(function () {
+
+(function() {
     var btnId = '__gotop';
     var isIE = !!window.ActiveXObject && /msie (\d)/i.test(navigator.userAgent) ? RegExp['$1'] : false;
 
@@ -30,7 +31,7 @@
     }
 
     bindEvent('load',
-        function () {
+        function() {
             var css = 'background-color:#999;width:50px;height:50px;position:fixed;right:100px;bottom:30px;border-radius:10px;cursor:pointer;display:none;';
 
             if (isIE && isIE < 7) {
@@ -46,8 +47,8 @@
             el.innerHTML = html;
             document.body.appendChild(el);
 
-            el.onclick = function () {
-                (function () {
+            el.onclick = function() {
+                (function() {
                     var top = getScrollTop();
                     if (top > 0) {
                         window.scrollTo(0, top / 1.2)
@@ -56,12 +57,12 @@
                 })();
             };
 
-            el.onmouseover = function () {
+            el.onmouseover = function() {
                 $(btnId).firstChild.style.borderBottom = '14px solid #ddd';
                 $(btnId).firstChild.firstChild.style.backgroundColor = '#ddd';
             };
 
-            el.onmouseout = function () {
+            el.onmouseout = function() {
                 $(btnId).firstChild.style.borderBottom = '14px solid #fff';
                 $(btnId).firstChild.firstChild.style.backgroundColor = '#fff';
             };
@@ -69,7 +70,7 @@
     );
 
     bindEvent('scroll',
-        function () {
+        function() {
             var top = getScrollTop(), display = 'none';
 
             if (top > 0) {
@@ -79,9 +80,12 @@
             $(btnId).style.display = display;
         });
 })();
+
 </script>
 </head>
 <body>
+
     <div style="height:2222px;"></div>
+
 </body>
 </html>

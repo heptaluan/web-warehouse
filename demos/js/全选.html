@@ -15,7 +15,8 @@ dt{padding-bottom:10px;border-bottom:1px solid #666;}
 dt label{font-weight:700;}
 p{margin-top:10px;}
 </style>
-<script type="text/javascript">
+<script>
+
 window.onload = function(){
     var oA = document.getElementsByTagName("a")[0]; 
     var oInput = document.getElementsByTagName("input");
@@ -54,9 +55,11 @@ window.onload = function(){
         }
     }
 }
+
 </script>
 </head>
 <body>
+
 <dl>
     <dt><input type="checkbox" id="checkAll" /><label>全选</label><a href="javascript:;">反选</a></dt>
     <dd>
@@ -72,6 +75,7 @@ window.onload = function(){
         <p><input type="checkbox" name="item" /><label>选项（十）</label></p>
     </dd>    
 </dl>
+
 <center>1、切换全选/全不选文字；2、根据选中个数更新全选框状态；</center>
 
 </body>

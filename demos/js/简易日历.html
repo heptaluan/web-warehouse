@@ -15,7 +15,8 @@ body{font:12px/1.5 Tahoma;}
 #msg h2{font-size:14px;}
 </style>
 <script>
-window.onload = function(){
+
+window.onload = function() {
     var oLi = document.getElementById("calendar").getElementsByTagName("li");
     var oMsg = document.getElementById("msg");
     var oP = oMsg.getElementsByTagName("p")[0];
@@ -35,10 +36,10 @@ window.onload = function(){
         "艾滋病日:12月1日<br />废除奴隶制国际日:12月2日。"
     ];
 
-    for(var i=0; i<oLi.length; i++){
+    for (var i = 0; i < oLi.length; i++) {
         oLi[i].index = i;
-        oLi[i].onmouseover = function(){
-            for(var j=0; j<oLi.length; j++){
+        oLi[i].onmouseover = function() {
+            for (var j = 0; j < oLi.length; j++) {
                 oLi[j].className = "";
                 this.className = "current";
                 oP.innerHTML = oArray[this.index];
@@ -48,9 +49,11 @@ window.onload = function(){
         }
     }
 }
+
 </script>
 </head>
 <body>
+
 <div id="calendar">
     <ul>
         <li><strong>1</strong>JAN</li>
@@ -74,5 +77,6 @@ window.onload = function(){
         <p>端午节：6月4日至6日放假3天。</p>
     </div>
 </div>
+
 </body>
 </html>

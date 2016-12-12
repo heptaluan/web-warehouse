@@ -1,28 +1,16 @@
 <!DOCTYPE html>
 <html>
-
 <head>
 <meta name="keywords" content="设置关键字">
 <meta name="descriiption" content="设置描述">
 <meta http-equiv="content-type" content="text/html;charset=utf-8">
 <title>简易拖拽（面向对象）</title>
-
 <style>
-#div1 {
-	width: 200px;
-	height: 200px;
-	background: pink;
-	position: absolute;
-}
-
-#div2 {
-	width: 200px;
-	height: 200px;
-	background: green;
-	position: absolute;
-}
+#div1 {width: 200px;height: 200px;background: pink;position: absolute;}
+#div2 {width: 200px;height: 200px;background: green;position: absolute;}
 </style>
 <script>
+
 window.onload = function () {
     new Drag('div1');
     new LimDrag('div2');
@@ -67,8 +55,6 @@ Drag.prototype.fnUp = function () {
     document.onmouseup = null;
 }
 
-
-
 function LimDrag(id) {
     Drag.call(this, id);
 }
@@ -76,7 +62,6 @@ function LimDrag(id) {
 for (var i in Drag.prototype) {
     LimDrag.prototype[i] = Drag.prototype[i];
 }
-
 
 LimDrag.prototype.fnMove = function (ev) {
     var oEvent = ev || event;
@@ -100,6 +85,7 @@ LimDrag.prototype.fnMove = function (ev) {
     this.oDiv.style.left = l + 'px';
     this.oDiv.style.top = t + 'px';
 };
+
 </script>
 </head>
 

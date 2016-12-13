@@ -11,6 +11,7 @@ input.cancel{background-position:0 -50px;}
 span{color:#000;width:80px;line-height:2;background:#fbfbfb;border:2px solid #b4b4b4;margin:0 10px;padding:0 10px;}
 </style>
 <script>
+
 window.onload = function(){
 	var oCountDown = document.getElementById("countdown");	
 	var aInput = oCountDown.getElementsByTagName("input")[0];
@@ -44,12 +45,15 @@ window.onload = function(){
 		aSpan[1].innerHTML = format(parseInt(oRemain));
 	}
 }
+
 </script>
 </head>
 <body>
+
 <div id="countdown">
 	<span>01</span>分钟<span>40</span>秒
 	<input type="button" value="" />
 </div>
+
 </body>
 </html>

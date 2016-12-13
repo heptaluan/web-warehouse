@@ -15,66 +15,68 @@ border-radius: 17px; overflow: hidden; position: absolute; left: 0px; margin-lef
 </head> 
 <body> 
 
-  <div id="box">
+<div id="box">
 
     <div id="bg">
-      <div id="bgcolor"></div>
+        <div id="bgcolor"></div>
     </div>
 
     <div id="bt"></div>
-    
-  </div>
 
-  <div id="text"></div>
+</div>
 
-<script type="text/javascript" src="http://hanekaoru.com/jquery.js"></script>
+<div id="text"></div>
+
+<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
 <script type="text/javascript">
-(function($){
-  var $box = $('#box');
-  var $bg = $('#bg');
-  var $bgcolor = $('#bgcolor');
-  var $btn = $('#bt');
-  var $text = $('#text');
 
-  var statu = false;
+(function ($) {
+    var $box = $('#box');
+    var $bg = $('#bg');
+    var $bgcolor = $('#bgcolor');
+    var $btn = $('#bt');
+    var $text = $('#text');
 
-  $(document).mouseup(function(){
-    statu = false;
-  });
-  
-  $btn.mousedown(function(){
-    statu = true;
-  });
+    var statu = false;
 
-  $btn.mousemove(function(e){
-    if(statu){
-      //left值 为鼠标当前位置 减去 bg的offset().left
-      var left = e.pageX -$bg.offset().left;
+    $(document).mouseup(function () {
+        statu = false;
+    });
 
-      if(left < 0){ left = 0; }
-      if(left > 200){ left = 200; }
+    $btn.mousedown(function () {
+        statu = true;
+    });
 
-      $btn.css('left',left);
-      $bgcolor.width(left);
-      $text.html('位置:' + parseInt(left/2) + '%');
-    }
-  });
+    $btn.mousemove(function (e) {
+        if (statu) {
+            //left值 为鼠标当前位置 减去 bg的offset().left
+            var left = e.pageX - $bg.offset().left;
 
-  $bg.click(function(e){
-    if(!statu){
-      var left = e.pageX - $bg.offset().left;
-      
-      if(left < 0){ left = 0; }
-      if(left > 200){ left = 200; }
+            if (left < 0) { left = 0; }
+            if (left > 200) { left = 200; }
 
-      $btn.css('left',left);
-      $bgcolor.stop().animate({width:left},200);
-      $text.html('位置:' + parseInt(left/2) + '%');
-    }
-  });
-  
+            $btn.css('left', left);
+            $bgcolor.width(left);
+            $text.html('位置:' + parseInt(left / 2) + '%');
+        }
+    });
+
+    $bg.click(function (e) {
+        if (!statu) {
+            var left = e.pageX - $bg.offset().left;
+
+            if (left < 0) { left = 0; }
+            if (left > 200) { left = 200; }
+
+            $btn.css('left', left);
+            $bgcolor.stop().animate({ width: left }, 200);
+            $text.html('位置:' + parseInt(left / 2) + '%');
+        }
+    });
+
 })(jQuery);
+
 </script>
-</div> 
+
 </body> 
 </html> 

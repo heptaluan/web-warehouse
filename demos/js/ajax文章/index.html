@@ -1,41 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>ajax请求分页效果</title>
+<meta charset="UTF-8">
+<title>ajax请求分页效果</title>
 </head>
 <script src="ajax.js"></script>
 <script>
-    window.onload = function(){
-        var oPage = document.getElementById('page');
-        var aA = oPage.getElementsByTagName('a');
-        var aLi = document.getElementById('main').getElementsByTagName('li');
-        for (var i=0; i<aA.length; i++){
-            aA[i].onclick = function(){
-                var url = this.href;
-                ajax({
-                   url:url,
-                   success:function(data){
-                       var data = eval('('+data+')');
-                       for(var j=0; j<aLi.length; j++){
-                           aLi[j].innerHTML = (j+1) + '、' + data[j];
-                       }
-                   } 
-                })
-                
-                return false;
+    
+window.onload = function () {
+    var oPage = document.getElementById('page');
+    var aA = oPage.getElementsByTagName('a');
+    var aLi = document.getElementById('main').getElementsByTagName('li');
+    for (var i = 0; i < aA.length; i++) {
+        aA[i].onclick = function () {
+            var url = this.href;
+            ajax({
+                url: url,
+                success: function (data) {
+                    var data = eval('(' + data + ')');
+                    for (var j = 0; j < aLi.length; j++) {
+                        aLi[j].innerHTML = (j + 1) + '、' + data[j];
+                    }
+                }
+            })
+
+            return false;
+        }
+    }
+    ajax({
+        url: aA[0].href,
+        success: function (data) {
+            var data = eval('(' + data + ')');
+            for (var j = 0; j < aLi.length; j++) {
+                aLi[j].innerHTML = (j + 1) + '、' + data[j];
             }
         }
-        ajax({
-            url:aA[0].href,
-            success:function(data){
-                var data = eval('('+data+')');
-                for(var j=0; j<aLi.length; j++){
-                    aLi[j].innerHTML = (j+1) + '、' + data[j];
-                }
-            } 
-        })
-    }
+    })
+}
+
 </script>
 <style>
     *{margin: 0;padding: 0;}

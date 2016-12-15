@@ -1,49 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-	<meta charset="UTF-8">
-	<title>Document</title>
+<meta charset="UTF-8">
+<title>filter（自动补全）</title>
 </head>
 <style>
-	* {
-		margin: 0;
-		padding: 0;
-		list-style: none;
-	}
-	
-	#app {
-		width: 600px;
-		height: 40px;
-		line-height: 40px;
-		margin: 20px auto 0;
-	}
-	
-	input {
-		width: 90%;
-		height: 40px;
-		line-height: 40px;
-		border-radius: 5px;
-		border: 1px solid #ccc;
-		box-sizing: border-box;
-		vertical-align: top;
-        padding: 0 2%;
-	}
-	
-	li {
-		border: 1px solid #ddd;
-		border-radius: 5px;
-	}
-	
-	i {
-		float: right;
-		width: 10%;
-		box-sizing: border-box;
-		text-align: center;
-		font-style: normal;
-		background: #ddd;
-		border-radius: 5px;
-	}
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#app {
+    width: 600px;
+    height: 40px;
+    line-height: 40px;
+    margin: 20px auto 0;
+}
+
+input {
+    width: 90%;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    vertical-align: top;
+    padding: 0 2%;
+}
+
+li {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+i {
+    float: right;
+    width: 10%;
+    box-sizing: border-box;
+    text-align: center;
+    font-style: normal;
+    background: #ddd;
+    border-radius: 5px;
+}
 </style>
 
 <body>
@@ -63,10 +62,8 @@
 
 	</div>
 
-
-
-	<script src="vue.js"></script>
-	<script>
+<script src="vue.js"></script>
+<script>
 
 var data = {
     ok: 0,
@@ -74,32 +71,33 @@ var data = {
     msgs: [{
         title: "火车票订购网站12306",
         author: "票订购网站12306"
-    },{
+    }, {
         title: "火车票222",
         author: "火车"
-    },{
+    }, {
         title: "火车票查询333",
         author: "票查询"
-    },{
+    }, {
         title: "火车票查询与预订444",
         author: "票查询与预订"
-    },{
+    }, {
         title: "火车时刻表555",
         author: "时刻表"
-    },{
+    }, {
         title: "火车票退票手续费新规定2016",
         author: "票退票手续费新规定2016"
-    },{
+    }, {
         title: "火车座位分布图777",
         author: "座位分布图"
-    },{
+    }, {
         title: "火车时刻表查询888",
         author: "时刻表查询"
-    },{
+    }, {
         title: "赤壁到武昌火车999",
         author: "武昌火车"
     }
-]}
+    ]
+}
 
 
 Vue.filter("searchFor", function (value, searchString) {
@@ -133,8 +131,6 @@ var vm = new Vue({
     }
 })
 
-
 </script>
 </body>
-
 </html>

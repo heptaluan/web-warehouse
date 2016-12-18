@@ -33,6 +33,7 @@
 
 
 ----
+
 #### 12.18
 
 ##### node
@@ -41,8 +42,24 @@
 
 了解了下 cookie ,session 和 localStorage 间的区别
 
+##### vue
+
+找了几个实战视频学习，做了几个练手项目
+
+[VueDemo](https://github.com/hanekaoru/WebLearningNotes/tree/master/VueDemo/other)
+
+[简易的ToDoList（基于 bootstrap + vue）](https://github.com/hanekaoru/WebLearningNotes/tree/master/VueDemo/ToDoList)
+
+##### js
+
+搭建了几个接下来项目会用到的相关 demo
+
+[图片预览裁剪上传](https://github.com/hanekaoru/imgCrop-and-upload)
+
+[简单的文本编辑框（插入图片）](https://github.com/hanekaoru/textualEdit)
 
 ----
+
 #### 12.01
 
 发现《了不起的Node.js》这本书涉及到很多 http tcp 相关知识，故又跑去从新温习了一遍相关知识
@@ -102,7 +119,9 @@ Node.js 的知识也需要慢慢捡起来 [Node.js 学习笔记记录](https://g
 
 目前进展：ejs 模板
 
+
 ----
+
 #### 11.14
 
 最近重写了博客的[About](http://hanekaoru.com/about/)和[Demo](http://hanekaoru.com/about/demo.html)页面，分类规划了一下，方便后续扩展
@@ -115,7 +134,9 @@ Node.js 的知识也需要慢慢捡起来 [Node.js 学习笔记记录](https://g
 
 然后剩下的，还是继续啃 Vue ...
 
+
 ----
+
 #### 11.4
 
 继续啃文档，目前进展到 深入响应式原理，发现 Object.defineProperty 相关的知识忘的都差不多了

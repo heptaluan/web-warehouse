@@ -33,6 +33,16 @@
 
 
 ----
+#### 12.18
+
+##### node
+
+学习了 [《Node.js全栈开发》](https://course.tianmaying.com/node)，目前进展 Session 相关的部分
+
+了解了下 cookie ,session 和 localStorage 间的区别
+
+
+----
 #### 12.01
 
 发现《了不起的Node.js》这本书涉及到很多 http tcp 相关知识，故又跑去从新温习了一遍相关知识

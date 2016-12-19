@@ -19,6 +19,26 @@
 
 ----
 
+
+#### 接下来目标:
+
+[A Simple Vue Guide](http://cody1991.github.io/vue/2016/08/30/a-simple-vue-guide.html)
+
+[vue-tutorial](https://github.com/MeCKodo/vue-tutorial)
+
+[ES6 手册](https://qiutc.me/post/es6-cheatsheet.html)
+
+[《Node.js 包教不包会》](https://github.com/alsotang/node-lessons)
+
+[NODESCHOOL](https://nodeschool.io/zh-cn/#workshopper-list)
+
+[《vue》 - 推刊](http://www.tuicool.com/kans/2799975423)
+
+[vuejs-learn（余下部分）](https://github.com/bhnddowinf/vuejs-learn)
+
+----
+
+
 ### 2016.12
 
 #### vue
@@ -37,35 +57,19 @@
 
 #### js
 
-搭建了几个接下来项目会用到的相关 demo
+搭建了几个接下来项目会用到的 demo
 
 [图片预览裁剪上传](https://github.com/hanekaoru/imgCrop-and-upload)
 
 [简单的文本编辑框（插入图片）](https://github.com/hanekaoru/textualEdit)
 
-学习了慕课网的：
+学习完慕课网的：
 
 ~~[人人网评论功能](http://www.imooc.com/learn/81)~~
 
 ~~[焦点图轮播特效](http://www.imooc.com/learn/18)~~
 
 ~~[用JS实现购物车特效](http://www.imooc.com/learn/34)~~
-
-----
-
-#### 接下来目标:
-
-[A Simple Vue Guide](http://cody1991.github.io/vue/2016/08/30/a-simple-vue-guide.html)
-
-[vue-tutorial](https://github.com/MeCKodo/vue-tutorial)
-
-[ES6 手册](https://qiutc.me/post/es6-cheatsheet.html)
-
-[《Node.js 包教不包会》](https://github.com/alsotang/node-lessons)
-
-[NODESCHOOL](https://nodeschool.io/zh-cn/#workshopper-list)
-
-[《vue》 - 推刊](http://www.tuicool.com/kans/2799975423)
 
 
 
@@ -107,7 +111,7 @@
 
 重写了个人博客的[About](http://hanekaoru.com/about/)和[Demo](http://hanekaoru.com/about/demo.html)页面，分类规划了一下，方便后续扩展
 
-温习一些 js 相关知识，博客同步更新
+温习一些 js 相关知识，更新博客如下：
 
 [HTTP 与 TCP](http://hanekaoru.com/http-与-tcp/)
 

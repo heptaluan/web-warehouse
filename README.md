@@ -65,6 +65,8 @@
 
 [NODESCHOOL](https://nodeschool.io/zh-cn/#workshopper-list)
 
+[《vue》 - 推刊](http://www.tuicool.com/kans/2799975423)
+
 
 
 ### 2016.11

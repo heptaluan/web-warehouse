@@ -19,14 +19,14 @@
 
 ----
 
-#### 2016.12
+### 2016.12
 
-##### vue
+#### vue
 
 学习网易云课堂的：[《Javascript之Vue.JS》](http://study.163.com/course/introduction.htm?courseId=1003291032#/courseDetail)
 
 
-##### node
+#### node
 
 学习 [《Node.js全栈开发》](https://course.tianmaying.com/node)
 
@@ -35,7 +35,7 @@
 刷完 ~~《node.js 开发指南》 和 《了不起的Node.js》（书中知识有些老了，有的跳着看的）~~
 
 
-##### js
+#### js
 
 搭建了几个接下来项目会用到的相关 demo
 
@@ -53,7 +53,7 @@
 
 ----
 
-### 接下来目标:
+#### 接下来目标:
 
 [A Simple Vue Guide](http://cody1991.github.io/vue/2016/08/30/a-simple-vue-guide.html)
 
@@ -67,10 +67,10 @@
 
 
 
-#### 2016.11
+### 2016.11
 
 
-##### vue
+#### vue
 
 目前再看：[vuejs-learn](https://github.com/bhnddowinf/vuejs-learn)
 
@@ -78,7 +78,7 @@
 
 ~~学完慕课网的 [vuejs入门基础](http://www.imooc.com/learn/694)~~
 
-##### node
+#### node
 
 学习：[一起学 Node.js（N-blog）](https://github.com/nswbmw/N-blog)
 
@@ -100,7 +100,7 @@
 [Node.js 开发框架 Express 4.x](http://blog.fens.me/nodejs-express4/)
 
 
-##### js
+#### js
 
 重写了个人博客的[About](http://hanekaoru.com/about/)和[Demo](http://hanekaoru.com/about/demo.html)页面，分类规划了一下，方便后续扩展
 
@@ -131,7 +131,7 @@
 
 ----
 
-#### 2016.10
+### 2016.10
 
 新开一个记录贴，也算是督促自己常常能来更新，不至于太过懒散，开始学习 Vue 相关知识，记录之~
 

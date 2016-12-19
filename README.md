@@ -4,7 +4,7 @@
 
 也算是一个各类 demo 的集合地
 
-督促自己，希望每天进步一点点（~~而不是闲的时候刷知乎，QQ群斗图~~）
+督促自己，每天进步一点点（~~而不是闲的时候刷知乎，QQ群斗图~~）
 
 ----
 
@@ -23,16 +23,16 @@
 
 #### vue
 
-学习网易云课堂的：[《Javascript之Vue.JS》](http://study.163.com/course/introduction.htm?courseId=1003291032#/courseDetail)
+学习 网易云课堂 的：[《Javascript 之 Vue.JS》](http://study.163.com/course/introduction.htm?courseId=1003291032#/courseDetail)
 
 
 #### node
 
 学习 [《Node.js全栈开发》](https://course.tianmaying.com/node)
 
-刷完~~[一起学 Node.js（N-blog）](https://github.com/nswbmw/N-blog)~~
+~~刷完 [一起学 Node.js（N-blog）](https://github.com/nswbmw/N-blog)~~
 
-刷完 ~~《node.js 开发指南》 和 《了不起的Node.js》（书中知识有些老了，有的跳着看的）~~
+~~刷完 《node.js 开发指南》 和 《了不起的Node.js》（书中知识有些老了，有的跳着看的）~~
 
 
 #### js
@@ -86,7 +86,8 @@
 
 《node.js 开发指南》
 
-笔记见：[node.js 开发指南 笔记](https://github.com/hanekaoru/WebLearningNotes/blob/master/NodeDemo/node.js 开发指南 笔记.MD)~~
+笔记见：[node.js 开发指南 笔记](https://github.com/hanekaoru/WebLearningNotes/blob/master/NodeDemo/node.js 开发指南 笔记.MD)
+
 
 《了不起的Node.js》
 
@@ -135,5 +136,5 @@
 
 新开一个记录贴，也算是督促自己常常能来更新，不至于太过懒散，开始学习 Vue 相关知识，记录之~
 
-~~[Vue1.0文档](http://vuejs.org.cn/guide/)~~
+~~[Vue1.0文档](http://vuejs.org.cn/guide/) 2.0 都出来了，这个直接弃了~~
 

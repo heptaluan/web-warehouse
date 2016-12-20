@@ -1,0 +1,21 @@
+{
+  "name": "vue-demo",
+  "authors": [
+    "hanekaoru <vd2o@foxmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "animate.css": "^3.5.2",
+    "vue": "1.0.28"
+  }
+}

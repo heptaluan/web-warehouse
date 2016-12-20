@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>拖拽</title>
+</head>
+<style>
+.drag {
+    width: 100px;
+    height: 100px;
+    border: 1px solid red;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+</style>
+<body>
+
+<script src="https://cdn.staticfile.org/vue/2.1.4/vue.js"></script>
+<script>
+
+    Vue.directive("drag", function (el) {
+        var oDiv = el;
+        oDiv.onmousedown = function (ev) {
+            var disX = ev.clientX - oDiv.offsetLeft;
+            var disY = ev.clientY - oDiv.offsetTop;
+
+            document.onmousemove = function (ev) {
+                var l = ev.clientX - disX;
+                var t = ev.clientY - disY;
+                oDiv.style.left = l + "px";
+                oDiv.style.top = t + "px"
+            }
+
+            document.onmouseup = function () {
+                document.onmousemove = null;
+                document.onmousedown = null;
+            }
+        }
+    })
+
+window.onload = function () {
+
+    var vm = new Vue({
+        el: "#app",
+        data: {}
+    })
+     
+}
+
+
+
+
+
+</script>
+
+    
+    <div id="app">
+        <div v-drag class="drag"></div>
+    </div>
+
+
+
+</body>
+</html>

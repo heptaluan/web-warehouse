@@ -45,7 +45,7 @@
 
 ~~学习 网易云课堂 的：[《Javascript 之 Vue.JS》（第一部分）](http://study.163.com/course/introduction.htm?courseId=1003291032#/courseDetail)~~）
 
-
+继续刷 [《Javascript 之 Vue.JS》（第二部分）](http://study.163.com/course/introduction/1003380002.htm#/courseDetail)
 
 #### node
 

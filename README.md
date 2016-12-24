@@ -43,7 +43,8 @@
 
 #### vue
 
-学习 网易云课堂 的：[《Javascript 之 Vue.JS》](http://study.163.com/course/introduction.htm?courseId=1003291032#/courseDetail)
+~~学习 网易云课堂 的：[《Javascript 之 Vue.JS》（第一部分）](http://study.163.com/course/introduction.htm?courseId=1003291032#/courseDetail)~~）
+
 
 
 #### node

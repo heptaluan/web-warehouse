@@ -1,8 +1,4 @@
-笔记
-
 参考 [《Node.js 包教不包会》](https://github.com/hanekaoru/node-lessons)
-
-
 
 
 ## lesson1 

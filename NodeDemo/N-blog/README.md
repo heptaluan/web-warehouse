@@ -1,8 +1,5 @@
 Node.js 笔记，参考 [N-blog](https://github.com/nswbmw/N-blog)
 
-一些零散的笔记
-
-
 ### nrm
 
 一款管理 npm 源的工具

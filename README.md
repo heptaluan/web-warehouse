@@ -39,7 +39,7 @@
 ----
 
 
-### 2016.12
+### 2016.12.22
 
 #### vue
 
@@ -74,14 +74,14 @@
 
 
 
-### 2016.11
+### 2016.11.16
 
 
 #### vue
 
 目前再看：[vuejs-learn](https://github.com/bhnddowinf/vuejs-learn)
 
-刷 2.0 文档 [Vue2.0文档](https://vuefe.cn/guide/) 
+后续刷 2.0 文档 [Vue2.0文档](https://vuefe.cn/guide/) 
 
 ~~学完慕课网的 [vuejs入门基础](http://www.imooc.com/learn/694)~~
 
@@ -93,13 +93,7 @@
 
 《node.js 开发指南》
 
-笔记见：[node.js 开发指南 笔记](https://github.com/hanekaoru/WebLearningNotes/blob/master/NodeDemo/node.js 开发指南 笔记.MD)
-
-
 《了不起的Node.js》
-
-笔记见：[了不起的Node.js 笔记](https://github.com/hanekaoru/WebLearningNotes/blob/master/NodeDemo/了不起的Node.js 笔记.MD)
-
 
 参考：
 
@@ -110,7 +104,7 @@
 
 #### js
 
-重写了个人博客的[About](http://hanekaoru.com/about/)和[Demo](http://hanekaoru.com/about/demo.html)页面，分类规划了一下，方便后续扩展
+重写了个人博客的 [About](http://hanekaoru.com/about/) 和 [Demo](http://hanekaoru.com/about/demo.html) 页面，分类规划了一下，方便后续扩展
 
 温习一些 js 相关知识，更新博客如下：
 
@@ -139,9 +133,9 @@
 
 ----
 
-### 2016.10
+### 2016.10.26
 
 新开一个记录贴，也算是督促自己常常能来更新，不至于太过懒散，开始学习 Vue 相关知识，记录之~
 
-~~[Vue1.0文档](http://vuejs.org.cn/guide/) 2.0 都出来了，这个直接弃了~~
+~~[Vue 1.0文档](http://vuejs.org.cn/guide/) 2.0 都出来了，这个直接弃了~~
 

@@ -31,3 +31,70 @@ function getStyle (elem, name) {
     }
 }
 ```
+
+
+## 元素的位置
+
+* offsetParent 这是元素的 parent，元素相对于它定位
+
+* offsetLeft 和 offsetTop 分别是元素在 offsetParent 上下文中的水平和垂直偏移量
+
+两个确定元素相对于整个文档的 x 和 y 位置的辅助函数
+
+```js
+function pageX (elem) {
+
+    // 查看是否位于根元素
+    return elem.offsetParent ?
+
+        // 如果能够继续得到上一个元素，增加当前的偏移量并继续向上递归
+        elem.offsetLeft + pageX(elem.offsetParent) :
+
+        // 否则，当前的偏移量
+        elem.offsetLeft
+}
+
+
+function pageY (elem) {
+
+    // 查看是否位于根元素
+    return elem.offsetParent ?
+
+        // 如果能够继续得到上一个元素，增加当前的偏移量并继续向上递归
+        elem.offsetTop + pageY(elem.offsetParent) :
+
+        // 否则，当前的偏移量
+        elem.offsetTop
+}
+```
+
+确定元素相对于父元素的位置的两个函数
+
+```js
+// 相对于父元素的水平位置
+function parentX (elem) {
+
+    // 如果 offsetParnet 是父元素，提前退出
+    return elem.parentNode == elem.offsetParent ?
+
+        elem.offsetLeft :
+
+        // 否则，找到元素和元素的父元素相对于整个页面的位置，并计算他们的差值
+        pageX(elem) - pageX(elem.parentNode);
+}
+
+
+// 相对于父元素的垂直位置
+function parentY (elem) {
+
+    // 如果 offsetParnet 是父元素，提前退出
+    return elem.parentNode == elem.offsetParent ?
+
+        elem.offsetTop :
+
+        // 否则，找到元素和元素的父元素相对于整个页面的位置，并计算他们的差值
+        pageY(elem) - pageY(elem.parentNode);
+}
+```
+
+

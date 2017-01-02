@@ -12,6 +12,6 @@
 
 一本Node入门书籍，入门看看不错
 
-##### 《精通JavaScript》
+##### 《精通JavaScript》 和 《JavaScrip 忍者禁术》
 
 最近正在重读，记录一下

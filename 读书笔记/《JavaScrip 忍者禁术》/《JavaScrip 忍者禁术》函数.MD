@@ -1,0 +1,398 @@
+## 前言 assert() 函数
+
+```assert()``` 函数，即：断言函数，这是一个用于测试的功能函数，他的目的是判断传入次函数的第一个参数是 true 还是 false。
+
+```js
+// assert.js
+
+(function () {
+    document.write("<style>#results li.pass { color: green;}#results li.fail { color: red;}</style > ");
+    document.write("<ul id='results'></ul>");
+    var results;
+    this.assert = function assert(value, desc) {
+        results = results || document.getElementById("results");
+        var li = document.createElement('li');
+        li.className = value ? "pass" : "fail";
+        li.appendChild(document.createTextNode(desc));
+        results.appendChild(li);
+        if (!value) {
+            li.parentNode.parentNode.className = "fail";
+        }
+        return li;
+    };
+    this.test = function test(name, fn) {
+        results = document.getElementById("results");
+        results = assert(true,
+            name).appendChild(document.createElement("ul"));
+        fn();
+    }
+})()
+
+```
+
+## 函数是根基
+
+在 JavaScript 中，函数是自然类型的对象(first-class objects)
+
+这就意味着： 
+
+1. 函数可以被视为普通对象，就像其他数据的类型一样。 
+
+2. 函数可以被赋值给任何变量，也可以被声明，还有可以被视为另一个函数的参数。
+
+
+#### 函数的独特之处
+
+```this``` 四种函数调用方式
+
+1. 最普通的函数调用模式：函数上下文是 window   
+
+2. 方法调用模式：函数上下文是拥有这个方法的对象 
+
+3. 构造器调用模式：函数上下文是新生成的对象 
+
+4. ```apply()``` or ```call()``` / 函数上下文可以是我们指定的任何对象 
+
+
+#### 变量称为参数
+
+每个函数在被调用的时候， 隐性的传入两个参数：```arguments``` 和 ```this``` 
+
+隐性的意思是，这两个参数不会在函数定义的时候出现，但是他们会在函数被调用的时候悄悄的传入函数，并且作用域函数的作用域中。不过他们可以被直接引用，就像其他显性定义的函数参数一样。 
+
+#### 函数调用模式
+
+三种调用模式为：方法调用模式，构造器调用模式，```apply/call```调用模式。
+
+当一个函数的调用方式不是这三种之一的时候， 我们就将这个调用模式叫做**函数调用模式**。 
+
+这种调用模式的触发是由于函数后面加上()操作符，并且这个函数并不属于任何一个对象的一个属性(如果是属于对象的一个属性，那么这个模式就成为了方法调用模式)。 
+
+```js
+function ninja() { };
+ninja();
+
+var samurai = function () { };
+samurai(); 
+```
+
+当我们用这种模式来调用函数的时候，函数的上下文(function context)是全局的上下文(global context)， 即 ```window``` 对象。 
+
+#### 方法调用模式
+
+一个函数是一个对象的属性，当这个函数被调用时候，这个函数就视为这个对象的一个方法，例如：
+
+```js
+var o = {};
+o.whatever = function () { };
+o.whatever(); 
+```
+
+函数的上下文的产生，并不由函数的定义（创建的地方）来决定，而是由**函数的调用来决定**。 
+
+#### 构造器调用模式
+
+如果想让一个函数作为构造器被调用，需要用到 ```new``` 关键字。 
+
+1. 一个新的空对象被创造出来 
+
+2. 这个对象被传递给这个构造器作为 ```this``` 参数，也就是说这个对象是这个构造器函数的上下文 
+
+3. 如果没有显性的 ```return``` 语句， 这个新的对象则会被隐式的 ```return```，并成为这个构造器的值。 
+
+#### apply/call
+
+不同的函数调用模式之间最大的差异之处在于，函数上下文的不同，即隐性的 this 参数。
+
+* 函数调用模式中，this 为 window 
+
+* 方法调用模式中，this 为方法所属的对象 
+
+* 构造器调用模式中，this 为创建的新对象 
+
+JavaScript 提供给我一种途径，我们可以用任何对象作为函数上下文，并将它显性的操作。 这个途径就是通过每个函数都具备的方法：```apply()``` 和 ```call()```
+
+```js
+function juggle() {
+    var result = 0;
+    for (var n = 0; n < arguments.length; n++) {
+        result += arguments[n];
+    }
+    this.result = result;
+}
+
+var ninja1 = {};
+var ninja2 = {};
+juggle.apply(ninja1, [1, 2, 3, 4]);
+juggle.call(ninja2, 5, 6, 7, 8);
+
+console.log(ninja1.result === 10)
+console.log(ninja2.result === 26)
+```
+
+
+上下文在回调函数中的应用
+
+```js
+function forEach(list, callback) {
+    for (var n = 0; n < list.length; n++) {
+        callback.call(list[n], n);
+    }
+}
+
+var list = ['shuriken', 'katana', 'nunchucks'];
+
+forEach(list, function (index) {
+    console.log(index);
+    console.log(this);
+    assert(this == list[index], "Got the expected value of " +
+        list[index]);
+})
+```
+
+
+
+
+## Wielding functions
+
+
+#### 匿名函数
+
+匿名函数通常会被用于后续使用，例如存储一个变量，作为一个对象的方法，用于回调函数(例如 timeout 或者事件处理) 
+
+```js
+window.onload = function () { assert(true, 'power!'); };
+
+var ninja = {
+    shout: function () {
+        assert(true, "Ninja");
+    }
+}
+
+ninja.shout();
+
+setTimeout(function () { assert(true, 'Forever!') }, 500) 
+```
+
+#### 递归
+
+```js
+// 判断一个字符串是否为对称
+
+function isPalindrome (text) {
+    if (text.length <= 1) return true;
+    if (text.charAt(0) != text.charAt(text.length - 1)) return false;
+    return isPalindrome(text.substr(1, text.length - 2));
+}
+
+funcction chirp (n) {   
+    return n > 1 ? chirp(n - 1) + "-chirp" : "chirp";
+}
+
+assert(chirp(3) == "chirp-chirp-chirp", "Calling the named function comes naturally.")
+```
+
+##### 利用匿名函数实现递归
+
+```js
+var ninja = {
+    chirp: function (n) {
+        return n > 1 ? ninja.chirp(n - 1) + "-chirp" : "chirp";
+    }
+}
+
+assert(ninja.chirp(3) == "chirp - chirp - chirp", "An object property isn‟t too confusing, either.") 
+```
+
+##### 引用的丢失问题
+
+可以通过函数上下文(this)来搞定这个问题
+
+```js
+var ninja = {
+    chirp: function (n){   
+        return n > 1 ? this.chirp(n - 1) + "-chirp" : "chirp" 
+    }   
+}
+```
+
+
+#### 存储函数
+
+很多时候，我们会想要存储一些具有唯一标识的函数。 
+
+当我们想添加一个函数到一个集合中的时候， 我们需要判断这个函数之前是否已经被添加到这个集合中了。
+
+```js
+var store = {
+    nextId: 1,
+    cache: {},
+    add: function (fn) {
+        if (!fn.id) {
+            fn.id = store.nextId++;
+            // !! 可以让任意 JavaScript 表达式变成Boolean 的方式
+            return !!(store.cache[fn.id] = fn);
+        }
+    }
+}
+
+function ninja() { };
+
+assert(store.add(ninja), "Function was safely added.");
+assert(!store.add(ninja), "But it was only added once.");   
+```
+
+#### 自身缓存函数
+
+```js
+function isPrime(value) {
+    if (!isPrime.anwers) isPrime.answers = {};
+    if (isPrime.answers[value] != null) {
+        return isPrime.answers[value];
+    }
+    var prime = value != 1; // 1 can never be prime   
+    for (var i = 2; i < value; i++) {
+        if (value % i == 0) {
+            prime = false;
+            break;
+        }
+    }
+    return isPrime.answers[value] = prime;
+}
+
+assert(isPrime(5), "5 is prime!");
+assert(isPrime.answers[5], "The answer was cached!"); 
+```
+
+#### 利用 ```arrays``` 的 ```slice()``` 方法来忽略 ```arguments``` 的第一个参数 
+
+```js
+function multiMax(multi) {
+    return multi * Math.max.apply(Math, arguments.slice(1));
+}
+
+assert(multiMax(3, 1, 2, 3) == 9, "3*3 =9(First arg, by largest."); 
+```  
+
+#### 函数的长度
+
+```js
+function makeNinja(name) { }
+function makeSamurai(name, rank) { }
+
+assert(makeNinja.length == 1, "Only expecting a single argument");
+assert(makeSamurai.length == 2, "Two arguments expected");
+```
+
+针对一个函数，我们可以断定 2 个事情：
+
+1. 通过函数 ```length``` 属性，我们可以知道他的显性参数的数目 
+
+2. 通过 ```arguments``` 的 ```length``` 属性，我们可以知道调用的时候真正传递进去的参数个数。 
+
+
+#### 重载函数的参数计算
+
+```js
+function addMethod(object, name, fn) {
+
+    var old = object[name];
+
+    object[name] = function () {
+        if (fn.length == arguments.length)
+            return fn.apply(this, arguments)
+        else if (typeof old == 'function')
+            return old.apply(this, arguments);
+    }
+
+}  
+```
+
+```addMethod()``` 函数接受了三个参数： 
+
+1. 一个对象，作为载体 
+
+2. 一个要被绑定的方法名字 
+
+3. 要被绑定的方法的声明 
+
+**测试**
+
+```js
+var ninjas = {
+    values: ["Dean Edwards", "Sam Stephenson", "Alex Russell"]
+}
+
+addMethod(ninjas, "find", function () {
+    return this.values;
+})
+
+addMethod(ninjas, "find", function (name) {
+    var ret = [];
+    for (var i = 0; i < this.values.length; i++)
+        if (this.valuespi.indexOf(name) == 0)
+            ret.push(this.values[i]);
+    return ret;
+})
+
+addMethod(ninjas, "find", function (first, last) {
+    var ret = [];
+    for (var i = 0; i < this.values.length; i++)
+        if (this.values[i] == (first + " " + last))
+            ret.push(this.values[i]);
+    return ret;
+})
+
+assert(ninjas.find().length == 3, "Found all ninjas");
+assert(ninjas.find("Sam").length == 1, "Found ninja by first name");
+assert(ninjas.find("Dean", "Edwards").length == 1, "Found ninja by first and last name");
+assert(ninjas.find("Alex", "X", "Russell") == null, "Found nothing");  
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

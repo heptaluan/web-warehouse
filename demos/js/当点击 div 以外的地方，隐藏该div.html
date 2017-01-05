@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>当点击 div 以外的地方，隐藏该div</title>
+
+<style type="text/css">
+#pop{border:#000; background-color:#CCC; position:absolute; left:50px; top:50px;width:300px;height:200px; display:none}
+#btn{color:#f00}
+</style>
+
+<script type="text/javascript">
+
+window.onload = function () {
+    document.onclick = function (e) {
+        $("pop").style.display = "none";
+    }
+    $("btn").onclick = function (e) {
+        $("pop").style.display = "block";
+        e = e || event; stopFunc(e);
+    }
+    $("pop").onclick = function (e) {
+        e = e || event; stopFunc(e);
+    }
+}
+
+function $(id) {
+    return document.getElementById(id);
+}
+
+function stopFunc(e) {
+    e.stopPropagation ? e.stopPropagation() : e.cancelBubble = true;
+}
+
+</script>
+
+</head>
+
+<body>
+
+    <span id="btn">打开层</span>
+
+    <div id="pop">
+        浮层，点击这个浮层以外的区域，都可以隐藏这个浮层
+        <p><a href="http://www.baidu.com" target="_blank">最主要的是点这个div里面的链接，div照样不隐藏</a></p>
+    </div>
+
+</body>
+
+</html>

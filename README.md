@@ -1,21 +1,6 @@
 ## 笔记记录
 
-不定时更新，仅作学习记录
-
-也算是一个各类 demo 的集合地
-
-督促自己，每天进步一点点（~~而不是闲的时候刷知乎，QQ群斗图~~）
-
-----
-
-三个用作记录的仓库：
-
-学习笔记，笔记之类， 一些 Demo 汇总 [笔记记录 + Demo汇总](https://github.com/hanekaoru/WebLearningNotes)
-
-一个资源库，收集一些自己遇到过（用过）的插件，组件一类的 [资源库](https://github.com/hanekaoru/Repository)
-
-一些不错的帖子汇总 [一些不错的帖子汇总](https://github.com/hanekaoru/BlogWall)
-
+不定时更新，仅作学习记录（~~而不是闲的时候刷知乎，QQ群斗图~~）
 
 ----
 
@@ -34,9 +19,11 @@
 
 [vuejs-learn（余下部分）](https://github.com/bhnddowinf/vuejs-learn)
 
+[ECMAScript 6 入门](http://es6.ruanyifeng.com/)
+
 ----
 
-剩余：
+#### 之前剩余部分：
 
 [《Javascript 之 Vue.JS》（第二部分）](http://study.163.com/course/introduction/1003380002.htm#/courseDetail)
 
@@ -116,41 +103,19 @@
 
 ~~《了不起的Node.js》~~
 
-参考：
-
-[N-Blog 问题集锦](http://cnodejs.org/topic/540833010256839f71e05fdc)
-
-[Node.js 开发框架 Express 4.x](http://blog.fens.me/nodejs-express4/)
-
 
 #### js
+
 
 重写了个人博客的 [About](http://hanekaoru.com/about/) 和 [Demo](http://hanekaoru.com/about/demo.html) 页面，分类规划了一下，方便后续扩展
 
 温习一些 js 相关知识，更新博客如下：
 
-[HTTP 与 TCP](http://hanekaoru.com/http-与-tcp/)
+~~[HTTP 与 TCP](http://hanekaoru.com/http-与-tcp/)~~
 
-[constructor、__proto__和prototype之间的关系](http://hanekaoru.com/?p=1880)
+~~[constructor、__proto__和prototype之间的关系](http://hanekaoru.com/?p=1880)~~
 
-[Object.defineProperty()](http://hanekaoru.com/object-defineproperty/)
-
-参考：
-
-《You Don't Know JS》
-
-《JavaScript高级程序设计》
-
-[Object.defineProperty()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty)
-
-[TCP和Http的区别!我都搞懂了,你就别迷糊了!](http://www.cnblogs.com/welcomer/p/3776525.html)
-
-[写给那些让我糊里糊涂的HTTP、TCP、UDP、Socket](http://blog.csdn.net/xijiaohuangcao/article/details/6105623)
-
-[http](http://baike.baidu.com/link?url=Zx7BAyIqUmzRmH6E8Ig64izdjORMNIJMGT38Bhp56-3aYuGAjivOrszXOe6dAh3TuGFiRl_3jFq5Xhc8a9WXna)
-
-[socket](http://baike.baidu.com/link?url=r4R68qKIrY7fMn29gfesmACqKooUCWnChPiEWbLLbSeIuR9m-_cs_ID26cSBkFiHrbB8WusGRRqusI_4uCBQUK)
-
+~~[Object.defineProperty()](http://hanekaoru.com/object-defineproperty/)~~
 
 ----
 

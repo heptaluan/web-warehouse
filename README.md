@@ -26,8 +26,6 @@
 
 [vue-tutorial](https://github.com/MeCKodo/vue-tutorial)
 
-[ES6 手册](https://qiutc.me/post/es6-cheatsheet.html)
-
 [《Node.js 包教不包会》](https://github.com/alsotang/node-lessons)
 
 [NODESCHOOL](https://nodeschool.io/zh-cn/#workshopper-list)
@@ -38,8 +36,31 @@
 
 ----
 
+剩余：
 
-### 2016.12.22
+[《Javascript 之 Vue.JS》（第二部分）](http://study.163.com/course/introduction/1003380002.htm#/courseDetail)
+
+[《Node.js全栈开发》](https://course.tianmaying.com/node)
+
+[vuejs-learn](https://github.com/bhnddowinf/vuejs-learn)
+
+[Vue2.0文档](https://vuefe.cn/guide/) 
+
+----
+
+### 2017.01
+
+#### js
+
+~~刷完 [es6-cheatsheet](https://github.com/DrkSephy/es6-cheatsheet)~~
+
+~~中文地址：[ES6 手册](https://qiutc.me/post/es6-cheatsheet.html)~~
+
+重新过了一遍 ~~《精通JavaScript》~~ 和 《JavaScrip 忍者禁术》
+
+
+
+### 2016.12
 
 #### vue
 
@@ -60,9 +81,9 @@
 
 搭建了几个接下来项目会用到的 demo
 
-[图片预览裁剪上传](https://github.com/hanekaoru/imgCrop-and-upload)
+~~[图片预览裁剪上传](https://github.com/hanekaoru/imgCrop-and-upload)~~
 
-[简单的文本编辑框（插入图片）](https://github.com/hanekaoru/textualEdit)
+~~[简单的文本编辑框（插入图片）](https://github.com/hanekaoru/textualEdit)~~
 
 学习完慕课网的：
 
@@ -74,7 +95,7 @@
 
 
 
-### 2016.11.16
+### 2016.11
 
 
 #### vue
@@ -87,13 +108,13 @@
 
 #### node
 
-学习：[一起学 Node.js（N-blog）](https://github.com/nswbmw/N-blog)
+~~学习：[一起学 Node.js（N-blog）](https://github.com/nswbmw/N-blog)~~
 
 找了两本书同步学习
 
-《node.js 开发指南》
+~~《node.js 开发指南》~~
 
-《了不起的Node.js》
+~~《了不起的Node.js》~~
 
 参考：
 

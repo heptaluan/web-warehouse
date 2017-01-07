@@ -1,6 +1,6 @@
 ## 笔记记录
 
-不定时更新，仅作学习记录（~~而不是闲的时候刷知乎，QQ群斗图~~）
+不定时更新，仅作学习记录，没事刷一刷（~~而不是闲的时候刷知乎，QQ群斗图~~）
 
 ----
 
@@ -16,8 +16,6 @@
 [NODESCHOOL](https://nodeschool.io/zh-cn/#workshopper-list)
 
 [《vue》 - 推刊](http://www.tuicool.com/kans/2799975423)
-
-[vuejs-learn（余下部分）](https://github.com/bhnddowinf/vuejs-learn)
 
 [ECMAScript 6 入门](http://es6.ruanyifeng.com/)
 

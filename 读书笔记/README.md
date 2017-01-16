@@ -1,21 +1,11 @@
-##### 《node.js开发指南》
+[《ECMAScript 6 入门》](https://github.com/hanekaoru/WebLearningNotes/tree/master/读书笔记/《ECMAScript 6 入门》)
 
-书是几年前的了，书中的示例也比较老了，有些在现在的环境下已经跑不动了
+[《ES6 CheatSheet》](https://github.com/hanekaoru/WebLearningNotes/tree/master/读书笔记/《ES6 CheatSheet》)
 
-书中的一些老的案例，在笔记里都换成了现在的使用方法，书的后半部分讲解的是学会搭建一个简易的 blog，就跳过了，找了前面的 N-blog 来作为实战练手项目
+[《node.js开发指南》](https://github.com/hanekaoru/WebLearningNotes/blob/master/读书笔记/《node.js开发指南》.MD)
 
-##### 《了不起的Node.js》
+[《了不起的Node.js》](https://github.com/hanekaoru/WebLearningNotes/tree/master/读书笔记/《了不起的Node.js》)
 
-这本书籍较新一些，慢慢摸索学习中...
+[《精通JavaScript》](https://github.com/hanekaoru/WebLearningNotes/tree/master/读书笔记/《精通JavaScript》)
 
-##### 《es6-cheatsheet》
-
-算是一个 ES6 的手册版，先温习温习，然后在看书深入系统学习
-
-##### 《Node入门》
-
-一本Node入门书籍，入门看看不错
-
-##### 《精通JavaScript》 和 《JavaScrip 忍者禁术》
-
-最近正在重读，记录一下
+[《JavaScrip 忍者禁术》](https://github.com/hanekaoru/WebLearningNotes/tree/master/读书笔记/《JavaScrip 忍者禁术》)

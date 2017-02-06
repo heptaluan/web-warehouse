@@ -35,3 +35,33 @@ s2.toString() // "Symbol(bar)"
 ```
 
 上面代码中，```s1``` 和 ```s2``` 是两个 ```Symbol``` 值，如果不加参数，它们在控制台都输出 ```symbol()```，而加上参数之后，就可以分别开来
+
+如果 ```Symbol``` 的参数是一个对象，就会调用该对象的 ```toString``` 方法，将其转为字符串，然后才生成一个 ```Symbol``` 值
+
+```js
+const obj = {
+    toString() {
+        return "abc";
+    }
+};
+const sym = Symbol(obj);
+sym // Symbol(abc)
+```
+
+注意，```Symbol``` 函数的参数只是表示对当前 ```Symbol``` 值的描述，因此相同参数的 ```Symbol``` 函数的返回值是不相等的。
+
+```js
+// 没有参数的情况
+var s1 = Symbol();
+var s2 = Symbol();
+
+s1 === s2 // false
+
+// 有参数的情况
+var s1 = Symbol("foo");
+var s2 = Symbol("foo");
+
+s1 === s2 // false
+```
+
+上面代码中，```s1``` 和 ```s2``` 都是 ```Symbol``` 函数的返回值，而且参数相同，但是它们是不相等的。

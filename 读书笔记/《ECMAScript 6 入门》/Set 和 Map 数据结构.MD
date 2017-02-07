@@ -41,9 +41,6 @@ set.size;
 divs().forEach(div => set.add(div));
 
 set.size; 
-
-// 这也是一种新的数组去重的方式
-[...new Set(array)]
 ```
 
 需要注意的几点：
@@ -53,7 +50,6 @@ set.size;
 * Set 内部判断两个值是否不同，类似于精确相等运算符（===），主要的区别是 NaN 等于自身
 
 * 两个对象总是不相等的
-
 
 
 #### Set 实例的属性和方法
@@ -73,3 +69,45 @@ Set 结构的方法有两大类，操作方法（用于操作数据）和遍历�
 * **has(value)**：返回一个布尔值，表示该值是否为 Set 的成员
 
 * **clear()**：清除所有成员，没有返回值
+
+```js
+// 注意2被加入了两次
+s.add(1).add(2).add(2);
+
+s.size // 2
+
+s.has(1) // true
+s.has(2) // true
+s.has(3) // false
+
+s.delete(2);
+s.has(2) // false
+```
+
+与 ```Object``` 结构对比：
+
+```js
+// 对象的写法
+var properties = {
+    "width": 1,
+    "height": 1
+};
+
+if (properties[someName]) {
+    // do something
+}
+
+// Set的写法
+var properties = new Set();
+
+properties.add("width");
+properties.add("height");
+
+if (properties.has(someName)) {
+    // do something
+}
+```
+
+* Array.from 方法可以将 Set 结构转为数组（```var array = Array.from(new Set([1, 2, 3, 4, 5]));```）
+
+* 提供了另外一种数组去重的方法（```Array.from(new Set(array));```）

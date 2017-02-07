@@ -179,3 +179,68 @@ new Set([1, 2, 3]).forEach( (value, key) => console.log(value * 2) )  // 2 4 6
 ```
 
 ```forEach``` 方法还可以有第二个参数，表示绑定的 ```this``` 对象
+
+
+
+
+## Map
+
+ES6 提供了 Map 数据结构。它类似于对象，也是键值对的集合，但是 "键" 的范围不限于字符串，各种类型的值（包括对象）都可以当作键
+
+```js
+var m = new Map();
+var o = { p: "Hello World" };
+
+m.set(o, "content");
+m.get(o);  // "content"
+
+m.has(o);  // true
+m.delete(o);  // true
+m.has(o);  // false
+```
+
+* 作为构造函数，Map 也可以接受一个数组作为参数。该数组的成员是一个个表示键值对的数组
+
+* 如果对同一个键多次赋值，后面的值将覆盖前面的值
+
+* 如果读取一个未知的键，则返回 ```undefined```
+
+**特别需要注意的是**：只有对同一个对象的引用，Map 结构才将其视为同一个键
+
+```js
+var map = new Map();
+
+map.set(["a"], 555);
+
+// 面是针对同一个键，但实际上这是两个值，内存地址是不一样的，因此 get 方法无法读取该键，返回 undefined
+map.get(["a"])  // undefined
+
+// 调整为  ----------
+
+var map = new Map();
+var a1 = ["a"];
+
+map.set(a1, 555);
+map.get(a1);  // 555
+```
+
+同理，同样的值的两个实例，在 Map 结构中被视为两个键
+
+```js
+var map = new Map();
+
+// 变量 k1 和 k2 的值是一样的，但是它们在 Map 结构中被视为两个键
+var k1 = ["a"];
+var k2 = ["a"];
+
+map
+.set(k1, 111)
+.set(k2, 222);
+
+map.get(k1)  // 111
+map.get(k2)  // 222
+```
+
+由上可知，Map 的键实际上是跟内存地址绑定的，只要内存地址不一样，就视为两个键
+
+如果 Map 的键是一个简单类型的值（数字、字符串、布尔值），则只要两个值严格相等，Map 将其视为一个键，包括 0 和 -0，以及 NaN

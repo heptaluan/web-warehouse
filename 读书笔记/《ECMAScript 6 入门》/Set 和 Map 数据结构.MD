@@ -118,13 +118,13 @@ if (properties.has(someName)) {
 
 Set 结构的实例有四个遍历方法：
 
-* ```keys()```：返回键名的遍历器
+* **keys()**：返回键名的遍历器
 
-* ```values()```：返回键值的遍历器
+* **values()**：返回键值的遍历器
 
-* ```entries()```：返回键值对的遍历器（键名和键值）
+* **entries()**：返回键值对的遍历器（键名和键值）
 
-* ```forEach()```：使用回调函数遍历每个成员
+* **forEach()**：使用回调函数遍历每个成员
 
 Set 的遍历顺序就是插入顺序（比如保存一个回调函数列表，调用时就能保证按照添加顺序调用）
 
@@ -158,9 +158,17 @@ for (let item of set.entries()) {
 // ["blue", "blue"]
 ```
 
-* ```Set``` 结构的实例默认可遍历，它的默认遍历器生成函数就是它的 ```values``` 方法（```Set.prototype[Symbol.iterator] === Set.prototype.values```）
+* ```Set``` 结构的实例默认可遍历，它的默认遍历器生成函数就是它的 ```values``` 方法
 
-* 这样一来可以省略 ```values``` 方法，直接使用 ```for...of``` 循环遍历 ```Set```（```for (let x of new Set(["red", "green", "blue"])) { console.log(x); }```）```
+```js
+Set.prototype[Symbol.iterator] === Set.prototype.values
+```
+
+* 这样一来可以省略 ```values``` 方法，直接使用 ```for...of``` 循环遍历 ```Set```
+
+```js
+for (let x of new Set(["red", "green", "blue"])) { console.log(x); }
+```
 
 （2）```forEach()```
 

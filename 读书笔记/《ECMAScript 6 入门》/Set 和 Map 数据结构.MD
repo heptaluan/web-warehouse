@@ -111,3 +111,63 @@ if (properties.has(someName)) {
 * Array.from 方法可以将 Set 结构转为数组（```var array = Array.from(new Set([1, 2, 3, 4, 5]));```）
 
 * 提供了另外一种数组去重的方法（```Array.from(new Set(array));```）
+
+
+
+#### 遍历操作
+
+Set 结构的实例有四个遍历方法：
+
+* ```keys()```：返回键名的遍历器
+
+* ```values()```：返回键值的遍历器
+
+* ```entries()```：返回键值对的遍历器（键名和键值）
+
+* ```forEach()```：使用回调函数遍历每个成员
+
+Set 的遍历顺序就是插入顺序（比如保存一个回调函数列表，调用时就能保证按照添加顺序调用）
+
+（1）```keys()```，```values()```，```entries()```
+
+上面三个方法都是遍历器对象，由于 Set 结构没有键名，只有键值（或者说键名和键值是同一个值），所以 keys 方法和 values 方法的行为完全一致
+
+```js
+let set = new Set(["red", "green", "blue"]);
+
+for (let item of set.keys()) {
+    console.log(item);
+}
+
+// red
+// green
+// blue
+
+for (let item of set.values()) {
+    console.log(item);
+}
+// red
+// green
+// blue
+
+for (let item of set.entries()) {
+    console.log(item);
+}
+// ["red", "red"]
+// ["green", "green"]
+// ["blue", "blue"]
+```
+
+* ```Set``` 结构的实例默认可遍历，它的默认遍历器生成函数就是它的 ```values``` 方法（```Set.prototype[Symbol.iterator] === Set.prototype.values```）
+
+* 这样一来可以省略 ```values``` 方法，直接使用 ```for...of``` 循环遍历 ```Set```（```for (let x of new Set(["red", "green", "blue"])) { console.log(x); }```）```
+
+（2）```forEach()```
+
+用于对每个成员执行某种操作，没有返回值（参数依次为键值、键名、集合本身）
+
+```js
+new Set([1, 2, 3]).forEach( (value, key) => console.log(value * 2) )  // 2 4 6
+```
+
+```forEach``` 方法还可以有第二个参数，表示绑定的 ```this``` 对象

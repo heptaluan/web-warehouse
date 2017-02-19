@@ -23,6 +23,9 @@
 
 [全栈](https://github.com/ruanyf/jstraining)
 
+[JavaScript全栈教程](http://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000)
+
+
 ----
 
 #### 之前剩余部分：

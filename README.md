@@ -17,7 +17,14 @@
 
 [《vue》 - 推刊](http://www.tuicool.com/kans/2799975423)
 
+[vue2.0](http://study.163.com/course/introduction/1003606075.htm#/courseDetail)
+
 [ECMAScript 6 入门](http://es6.ruanyifeng.com/)
+
+[用原生JS替代jQuery](https://github.com/fa-ge/jQuery-is-out-of-date)
+
+
+
 
 ----
 

@@ -13,8 +13,6 @@
 
 [《Node.js 包教不包会》](https://github.com/alsotang/node-lessons)
 
-[NODESCHOOL](https://nodeschool.io/zh-cn/#workshopper-list)
-
 [《vue》 - 推刊](http://www.tuicool.com/kans/2799975423)
 
 [vue2.0](http://study.163.com/course/introduction/1003606075.htm#/courseDetail)

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>双向数据绑定</title>
+</head>
+<style>
+	input {
+		width: 200px;
+		height: 20px;
+		border: 1px solid #ddd;
+		padding: 5px 10px;
+		border-radius: 5px;
+	}
+</style>
+
+<body>
+
+	<div id="app">
+		<div v-if="status">
+			<input type="text" v-model="inp">
+		</div>
+
+		<div v-bind:style="btn">
+			<div v-on:click="toggle()"> {{ inp }}</div>
+		</div>
+	</div>
+
+
+
+<script src="http://apps.bdimg.com/libs/vue/1.0.14/vue.js"></script>
+<script>
+
+var vm = new Vue({
+    el: "#app",
+    data: {
+        inp: "请输入",
+        status: false,
+        btn: {
+            display: "inline-block",
+            border: "1px solid #ddd",
+            borderRadius: "5px",
+            margin: "20px 0 0 0",
+            padding: "5px 10px"
+        }
+    },
+    methods: {
+        hide: function () {
+            this.status = false;
+        },
+        toggle: function () {
+            this.status = !this.status;
+        }
+    }
+})
+
+</script>
+</body>
+</html>

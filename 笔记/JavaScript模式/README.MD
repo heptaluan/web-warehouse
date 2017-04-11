@@ -56,5 +56,62 @@ function Person (name) {
 
 
 
+```js
+function foo (param) {
+    if (!foo.cache[param]) {
+        var result = {};
+        // do something..
+        foo.cache[param] = result;
+    }
+    return foo.cache[param];
+}
+
+// 缓存存储
+foo.cache = {}
+```
+
+上面代码假定该函数只需要一个参数 ```param```，并且它是一个基本数据类型，如果有更多以及更复杂的参数，对此的通用的解决方案是将它们序列话：
+
+```js
+function foo () {
+    var cacheKey = JSON.stringify(Array.prototype.slice.call(arguments)),
+        result;
+
+    if (!foo.cache[cacheKey]) {
+        result = {};
+        // do something..
+        foo.cache[cacheKey] = result;
+    }
+    return foo.cache[cacheKey];
+}
+
+// 缓存存储
+foo.cache = {}
+```
+
+请注意这个序列化过程，对象的"标识"将会丢失，如果有两个不同的对象并且恰好都具有相同的属性，这两个对象将会共享同一个缓存条目
+
+另外一种方法就是使用 ```arguments.callee``` 来引用该函数（ES5 不推荐这么做，虽然目前可行）
+
+```js
+function foo (param) {
+    var f = arguments.callee,
+        result;
+
+    if (!f.cache[param]) {
+        result = {};
+        // do something..
+        f.cache[param] = result;
+    }
+    return f.cache[param];
+}
+
+// 缓存存储
+foo.cache = {}
+```
+
+
+
+
 
 

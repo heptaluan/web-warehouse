@@ -1,4 +1,4 @@
-## 第三章 字面量和构造函数
+## 第3章 字面量和构造函数
 
 ####  自定义构造函数
 
@@ -244,8 +244,33 @@ addSix(5, 5);  // 16
 
 
 
+## 第5章 对象创建模式
 
+####  私有成员
 
+构造函数创建一个闭包，而在闭包范围内部的任意变量都不会暴露给构造函数以外的代码
 
+```js
+function Gadget () {
+    
+    // 私有成员
+    var name = "iPod";
+
+    // 共有函数
+    this.getName = function () {
+        return name;
+    }
+}
+
+var toy = new Gadget();
+
+// name 是 undefined，它是私有的
+console.log(toy.name);  // undefined
+
+// 共有方法访问 name
+console.log(toy.getName());  // iPod
+```
+
+需要做的只是在函数中将需要保持为私有属性的属性包装起来，并确保它对函数来说是局部变量，这意味外部函数不能访问它
 
 

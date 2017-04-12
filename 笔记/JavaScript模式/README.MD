@@ -111,6 +111,36 @@ foo.cache = {}
 ```
 
 
+## Curry
+
+#### 函数应用
+
+先看一个实例：
+
+```js
+// 定义函数
+var sayHi = function (who) {
+    return "Hello" + (who ? ", " + who : "") + "!";
+}
+
+// 调用函数
+sayHi();  // "Hello!"
+sayHi("world");  // "Hello, world!"
+
+// 应用函数
+sayHi.apply(null, ["hello"]) // "Hello, hello!"
+```
+
+上面例子可以看出，调用和应用函数都可以得到相同的结果，```apply()``` 带有两个参数
+
+* 第一个参数为将要绑定到该函数内部 ```this``` 的一个对象
+
+* 第二个参数是一个数组或多个参数变量，这些参数将变成可用于该函数内部的类似数组的 ```arguments``` 对象
+
+* 如果第一个参数为 ```null```，那么 ```this``` 将指向全局对象
+
+
+
 
 
 

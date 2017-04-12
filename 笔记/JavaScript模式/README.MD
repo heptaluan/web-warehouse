@@ -139,7 +139,18 @@ sayHi.apply(null, ["hello"]) // "Hello, hello!"
 
 * 如果第一个参数为 ```null```，那么 ```this``` 将指向全局对象
 
+在使用 ```apply()``` 方法的时候（```call``` 类似），如果函数是一个对象的方法的时候，此时不能传递 ```null``` 引用，在这种情况下，这里的对象将成为 ```apply()``` 的第一个参数
 
+```js
+var alien = {
+    sayHi: function (who) {
+        return "Hello" + (who ? ", " + who : "") + "!";
+    }
+}
+
+alien.sayHi("world");  // "Hello, world!"
+alien.sayHi.apply(alien, ["hello"])  // "Hello, hello!"
+```
 
 
 

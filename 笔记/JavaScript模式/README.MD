@@ -152,6 +152,99 @@ alien.sayHi("world");  // "Hello, world!"
 alien.sayHi.apply(alien, ["hello"])  // "Hello, hello!"
 ```
 
+#### 部分应用
+
+假定有一个函数 add()：
+
+```js
+// 仅用于演示，并不是合法的 js
+function add (x, y) {
+    return x + y;
+}
+
+// 有以下函数
+add(5, 4);
+
+// 类似步骤一
+function add (5, y) {
+    return 5 + y;
+}
+
+// 类似步骤二
+function add (5, 4) {
+    return 5 + 4;
+}
+```
+
+使函数理解并处理部分应用的过程就称为 ```Curry``` 过程（Currying）
+
+#### Curry化
+
+我们可以将之前的 ```add()``` 函数修改成为一个用于处理部分应用的 ```Curry``` 化函数
+
+```js
+// curry 化的 add() 函数
+// 接受部分参数列表
+function add (x, y) {
+    if (typeof y === "undefined") {
+        return function (y) {
+            return x + y;
+        }
+    }
+    // 完全应用：
+    return x + y;
+}
+```
+
+下面是一个通用的 ```curry``` 化函数：
+
+```js
+function schonfinkelize (fn) {
+    var slice = Array.prototype.slice,
+        stored_args = slice.call(arguments, 1);
+    return function () {
+        var new_args = slice.call(arguments),
+            args = stored_args.concat(new_args);
+        return fn.apply(null, args);
+    }
+}
+```
+
+使用：
+
+```js
+// 普通函数
+function add (x, y) {
+    return x + y;
+}
+
+// 将一个函数 curry 化以获得一个新的函数
+var newAdd = schonfinkelize(add, 5);
+newAdd(4);  // 9
+
+// 另一种选择 - 直接调用新函数
+schonfinkelize(add, 6)(7);  // 13
+
+// ---- 并不局限于单个参数或者单步 Curry 化
+// 普通函数
+function add (a, b, c, d, e) {
+    return a + b + c + d + e;
+}
+
+// 可运行于任意数量的参数
+schonfinkelize(add, 1, 2, 3)(5, 5);  // 16
+
+// 两步 Curry 化
+var addOne = schonfinkelize(add, 1);
+addOne(10, 10, 10, 10);  // 41
+
+var addSix = schonfinkelize(addOne, 2, 3);
+addSix(5, 5);  // 16
+```
+
+
+
+
 
 
 

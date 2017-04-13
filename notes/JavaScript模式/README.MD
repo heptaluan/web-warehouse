@@ -274,3 +274,82 @@ console.log(toy.getName());  // iPod
 需要做的只是在函数中将需要保持为私有属性的属性包装起来，并确保它对函数来说是局部变量，这意味外部函数不能访问它
 
 
+#### 对象字面量及私有性
+
+在使用对象字面量的情况下，可以使用一个额外的匿名函数创建闭包来实现私有性
+
+```js
+var myobj;
+
+(function () {
+    // 私有成员
+    var name = "abc";
+
+    // 实现公有部分 注意，没有 var 修饰符
+    myobj = {
+        // 特权方法
+        getName: function () {
+            return name;
+        }
+    }
+}());
+
+myobj.getName();  // "abc"
+```
+
+修改一下：
+
+```js
+var myobj = (function(){
+    // 私有成员
+    var name = "abc";
+
+    // 实现共有部分
+    return {
+        getName: function () {
+            return name;
+        }
+    }
+}())
+
+myobj.getName();  // "abc"
+```
+
+这个例子也被称为 "模块模式" 的基础框架
+
+
+#### 原型和私有性
+
+当将私有成员与构造函数一起使用的时候，其中的一个缺点在于每次调用构造函数以创建对象的时候，这些私有成员都会被重新创建
+
+为了避免复制工作以及节省内存，可以将常用属性和方法添加到构造函数的 ```prototype``` 属性中，这样通过同一个构造函数创建的多个实例便可以共享常见的部分数据
+
+```js
+function Gadget () {
+    // 私有成员
+    var name = "iPod";
+
+    // 共有函数
+    this.getName = function () {
+        return name;
+    }
+}
+
+Gadget.prototype = (function () {
+    // 私有成员
+    var browser = "Mobile Webkit";
+
+    // 共有原型成员
+    return {
+        getBrowser: function () {
+            return browser;
+        }
+    }
+}())
+
+var toy = new Gadget();
+
+console.log(toy.getName());  // iPod
+console.log(toy.getBrowser());  // Mobile Webkit
+
+```

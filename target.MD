@@ -1,4 +1,4 @@
-#### 接下来目标:
+#### 总览
 
 [A Simple Vue Guide](http://cody1991.github.io/vue/2016/08/30/a-simple-vue-guide.html)
 
@@ -10,10 +10,6 @@
 
 [vue2.0](http://study.163.com/course/introduction/1003606075.htm#/courseDetail)
 
-[ECMAScript 6 入门](http://es6.ruanyifeng.com/)
-
-[用原生JS替代jQuery](https://github.com/fa-ge/jQuery-is-out-of-date)
-
 [http协议 / 编译架构 / 数据结构 / 算法](https://hit-alibaba.github.io/interview/)
 
 
@@ -23,10 +19,7 @@
 
 [JavaScript全栈教程（node部分）](http://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000)
 
-
 ----
-
-#### 之前剩余部分：
 
 [《Javascript 之 Vue.JS》（第二部分）](http://study.163.com/course/introduction/1003380002.htm#/courseDetail)
 
@@ -36,100 +29,64 @@
 
 [Vue2.0文档](https://vuefe.cn/guide/) 
 
+[你不知道的JavaScript（中卷）](https://book.douban.com/subject/26854244/)
+
+
+#### next：
+
+总体路线大致就是 es6 + vue + koa + co + nunjucks + sequelize + mysql 
+
+路还很遥远，一步一步来
+
 ----
 
-### 2017.02
+### 2017
 
-封装了一个自己的日历插件 [myCalendar](https://github.com/hanekaoru/myCalendar)
+[JavaScript全栈](http://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000) 进度：koa - mysql
 
-正在刷 [JavaScript全栈](http://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000)
+[ECMAScript 6 入门](http://es6.ruanyifeng.com/) 进度：promise
 
-### 2017.01
+[用原生JS替代jQuery](https://github.com/fa-ge/jQuery-is-out-of-date) 进度：大体刷完，部分需要在深入研究研究
 
-#### js
+[JavaScript模式](https://book.douban.com/subject/11506062/) 进度：对象创建模式
+
+
+### 2016
+
+##### JS
 
 ~~刷完 [es6-cheatsheet](https://github.com/DrkSephy/es6-cheatsheet)~~
 
 ~~中文地址：[ES6 手册](https://qiutc.me/post/es6-cheatsheet.html)~~
 
-重新过了一遍 ~~《精通JavaScript》~~ 和 《JavaScrip 忍者禁术》
+~~[精通JavaScript](https://book.douban.com/subject/3007076/)~~
+ 
+~~《JavaScrip 忍者禁术》~~
+
+~~[你不知道的JavaScript（上卷）](https://book.douban.com/subject/26351021/)~~
 
 
+##### Node
 
-### 2016.12
+~~[《Node.js全栈开发》](https://course.tianmaying.com/node)~~
 
-#### vue
+~~[一起学 Node.js（N-blog）](https://github.com/nswbmw/N-blog)~~
 
-~~学习 网易云课堂 的：[《Javascript 之 Vue.JS》（第一部分）](http://study.163.com/course/introduction.htm?courseId=1003291032#/courseDetail)~~）
-
-继续刷 [《Javascript 之 Vue.JS》（第二部分）](http://study.163.com/course/introduction/1003380002.htm#/courseDetail)
-
-#### node
-
-学习 [《Node.js全栈开发》](https://course.tianmaying.com/node)
-
-~~刷完 [一起学 Node.js（N-blog）](https://github.com/nswbmw/N-blog)~~
-
-~~刷完 《node.js 开发指南》 和 《了不起的Node.js》（书中知识有些老了，有的跳着看的）~~
-
-
-#### js
-
-搭建了几个接下来项目会用到的 demo
-
-~~[图片预览裁剪上传](https://github.com/hanekaoru/imgCrop-and-upload)~~
-
-~~[简单的文本编辑框（插入图片）](https://github.com/hanekaoru/textualEdit)~~
-
-学习完慕课网的：
-
-~~[人人网评论功能](http://www.imooc.com/learn/81)~~
-
-~~[焦点图轮播特效](http://www.imooc.com/learn/18)~~
-
-~~[用JS实现购物车特效](http://www.imooc.com/learn/34)~~
-
-
-
-### 2016.11
-
-
-#### vue
-
-目前再看：[vuejs-learn](https://github.com/bhnddowinf/vuejs-learn)
-
-后续刷 2.0 文档 [Vue2.0文档](https://vuefe.cn/guide/) 
-
-~~学完慕课网的 [vuejs入门基础](http://www.imooc.com/learn/694)~~
-
-#### node
-
-~~学习：[一起学 Node.js（N-blog）](https://github.com/nswbmw/N-blog)~~
-
-找了两本书同步学习
-
-~~《node.js 开发指南》~~
+~~《node.js 开发指南》 有些案例比较老了，跳着刷完~~
 
 ~~《了不起的Node.js》~~
 
 
-#### js
+##### Vue
 
+~~[《Javascript 之 Vue.JS》（第一部分）](http://study.163.com/course/introduction.htm?courseId=1003291032#/courseDetail)~~）
 
-重写了个人博客的 [About](http://hanekaoru.com/about/) 和 [Demo](http://hanekaoru.com/about/demo.html) 页面，分类规划了一下，方便后续扩展
+~~[《Javascript 之 Vue.JS》（第二部分）](http://study.163.com/course/introduction/1003380002.htm#/courseDetail)~~
 
-温习一些 js 相关知识，更新博客如下：
+~~[vuejs-learn](https://github.com/bhnddowinf/vuejs-learn)~~
 
-~~[HTTP 与 TCP](http://hanekaoru.com/http-与-tcp/)~~
+~~[Vue2.0文档](https://vuefe.cn/guide/) 刷完基础部分，进阶部分以后再来填坑~~
 
-~~[constructor、__proto__和prototype之间的关系](http://hanekaoru.com/?p=1880)~~
-
-~~[Object.defineProperty()](http://hanekaoru.com/object-defineproperty/)~~
-
-----
-
-### 2016.10.26
-
-新开一个记录贴，也算是督促自己常常能来更新，不至于太过懒散，开始学习 Vue 相关知识，记录之~
+~~[vuejs入门基础](http://www.imooc.com/learn/694)~~
 
 ~~[Vue 1.0文档](http://vuejs.org.cn/guide/) 2.0 都出来了，这个直接弃了~~

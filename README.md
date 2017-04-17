@@ -1,4 +1,4 @@
-笔记记录
+## 笔记记录
 
 不定时更新，仅作学习记录，提醒自己没事刷一刷（~~而不是闲的时候刷知乎，QQ群斗图~~）
 
@@ -17,6 +17,8 @@
 [vue2.0](http://study.163.com/course/introduction/1003606075.htm#/courseDetail)
 
 [http协议 / 编译架构 / 数据结构 / 算法](https://hit-alibaba.github.io/interview/)
+
+[MySQL](http://www.w3cschool.cn/mysql/)
 
 
 ----

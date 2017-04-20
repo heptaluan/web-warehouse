@@ -1,8 +1,3 @@
-第7章往后内容，新开一个分页，见：[设计模式](https://github.com/hanekaoru/WebLearningNotes/blob/master/notes/JavaScript模式/设计模式.MD)
-
-----
-
-
 ## 第3章 字面量和构造函数
 
 ####  自定义构造函数

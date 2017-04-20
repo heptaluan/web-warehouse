@@ -353,3 +353,25 @@ console.log(toy.getName());  // iPod
 console.log(toy.getBrowser());  // Mobile Webkit
 
 ```
+
+
+#### Function.prototype.bind
+
+```js
+if (typeof Function.prototype.bind === "undefined") {
+    Function.prototype.bind = function (thisArg) {
+        var fn = this,
+            slice = Array.prototype.slice,
+            args = slice.call(arguments, 1);
+        
+        return function () {
+            return fn.apply(thisArg, args.content(slice.call(arguments)));
+        }
+    }
+}
+```
+
+使用了部分应用并拼接了参数列表，即那些传递给 ```bind()``` 的参数（除了第一个以外），以及那些传递给由 ```bind()``` 所返回的新函数的参数，其中该新函数将在以后被调用
+
+
+

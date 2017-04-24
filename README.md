@@ -4,61 +4,131 @@
 
 ----
 
+#### 目标：
+
+大体方向就是 es6（vue）+ node（koa）
+
+下面的目录是平时接触到的，也是自己准备奋斗的方向，其中一些目前正在学，其余也是接下来准备学习的
+
+总之，路还很遥远，一步一步来，每天进步一点点
+
+时间花在哪里，最终都是看得见的，与君共勉
+
+
 #### 总览
+
 
 [A Simple Vue Guide](http://cody1991.github.io/vue/2016/08/30/a-simple-vue-guide.html)
 
 [vue-tutorial](https://github.com/MeCKodo/vue-tutorial)
 
-[《Node.js 包教不包会》](https://github.com/alsotang/node-lessons)
-
 [《vue》 - 推刊](http://www.tuicool.com/kans/2799975423)
 
 [vue2.0](http://study.163.com/course/introduction/1003606075.htm#/courseDetail)
-
-[http协议 / 编译架构 / 数据结构 / 算法](https://hit-alibaba.github.io/interview/)
-
-[MySQL](http://www.w3cschool.cn/mysql/)
-
-
-----
-
-[全栈](https://github.com/ruanyf/jstraining)
-
-[JavaScript全栈教程（node部分）](http://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000)
-
-----
-
-[《Javascript 之 Vue.JS》（第二部分）](http://study.163.com/course/introduction/1003380002.htm#/courseDetail)
-
-[《Node.js全栈开发》](https://course.tianmaying.com/node)
 
 [vuejs-learn](https://github.com/bhnddowinf/vuejs-learn)
 
 [Vue2.0文档](https://vuefe.cn/guide/) 
 
+[《Javascript 之 Vue.JS》（第二部分）](http://study.163.com/course/introduction/1003380002.htm#/courseDetail)
+
+[vue2.0-tutorial](https://github.com/hanekaoru/vue-tutorial)
+
+[vue2.0之50分钟入门](http://study.163.com/course/introduction/1003606075.htm#/courseDetail)
+
+
+----
+
+
+[《Node.js 包教不包会》](https://github.com/alsotang/node-lessons)
+
+[《Node.js全栈开发》](https://course.tianmaying.com/node)
+
+[编写 Node.js Rest API 的 10 个最佳实践](https://zhuanlan.zhihu.com/p/25506654?group_id=837797386322604033)
+
+[一起学 Node.js](https://github.com/nswbmw/N-blog)
+
+[co & koa](https://nswbmw.github.io/N-club/1/1.3.html)
+
+[Nodejs之MEAN栈开发](http://www.cnblogs.com/stoneniqiu/category/830963.html)
+
+[Node-MySQL 官方文档](http://www.oschina.net/translate/node-mysql-tutorial?utm_source=tuicool&utm_medium=referral)
+
+[Sequelize 和 MySQL 对照](https://segmentfault.com/a/1190000003987871)
+
+[七天学会NodeJS](http://nqdeng.github.io/7-days-nodejs/)
+
+[Nunjucks](http://mozilla.github.io/nunjucks/cn/api.html)
+
+[Node.js 中文网](http://nodejs.cn/api/)
+
+----
+
+
+[全栈](https://github.com/ruanyf/jstraining)
+
+[JavaScript全栈教程](http://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000)
+
+[大前端修炼之道](https://github.com/phodal/fe)
+
+* [我的职业是前端工程师](http://ued.party/)
+
+* [全栈增长工程师指南](https://github.com/phodal/growth-ebook)
+
+* [全栈增长工程师实战](https://github.com/phodal/growth-in-action)
+
+
+----
+
+
 [你不知道的JavaScript（中卷）](https://book.douban.com/subject/26854244/)
 
+[ECMAScript 6 入门](http://es6.ruanyifeng.com/)
 
-#### next：
+[MySQL 书籍](http://mingxinglai.com/cn/2015/12/material-of-mysql/)
 
-大体方向就是 es6（7） + vue + node（koa + mysql）
 
-当然细分下来东西还是很多的，包括各种第三方库，模版引擎，预处理，自动化，单元测试等等等等
+----
 
-路还很遥远，一步一步来
+[ES2015系列(1 ~ 7)](https://cnodejs.org/user/zhangmingkai4315/topics)
+
+[面试 / http协议 / 编译架构 / 数据结构 / 算法](https://hit-alibaba.github.io/interview/)
+
+[MySQL](http://www.w3cschool.cn/mysql/)
+
+[webpack](http://www.cnblogs.com/stoneniqiu/category/951469.html)
+
+[Pointfree 编程风格](http://www.ruanyifeng.com/blog/2017/03/pointfree.html)
+
+[Mocha](http://www.ruanyifeng.com/blog/2015/12/a-mocha-tutorial-of-examples.html)
+
+[Promise](http://www.cnblogs.com/stoneniqiu/p/5798661.html)
+
+[backbone.js源码解析](https://zhuanlan.zhihu.com/p/25123651)
+
+[ExtJS 源码解读](http://snandy.iteye.com/category/124734)
+
+[React前端构建的一般过程](http://www.cnblogs.com/ruanyifeng/p/5891780.html)
+
+[前端技能图谱](https://github.com/phodal/awesome-growth)
+
+[SegmentFault 技术周刊 Vol.17 - 听说你还没用上 AngularJS](https://segmentfault.com/a/1190000007866757)
+
+
 
 ----
 
 ### 2017
 
-[JavaScript全栈](http://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000) 
+
 
 [ECMAScript 6 入门](http://es6.ruanyifeng.com/) 
 
 [用原生JS替代jQuery](https://github.com/fa-ge/jQuery-is-out-of-date) 
 
-[JavaScript模式](https://book.douban.com/subject/11506062/)
+~~[JavaScript模式](https://book.douban.com/subject/11506062/)~~
+
+~~[JavaScript全栈](http://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000) ~~
 
 
 ### 2016

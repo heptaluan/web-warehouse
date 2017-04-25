@@ -1,4 +1,4 @@
-## lesson 目录
+#### lesson 目录
 
 跟着视频学习过程中的一些笔记记录，参考 [《Node.js 包教不包会》](https://github.com/hanekaoru/node-lessons)
 
@@ -7,21 +7,21 @@
 后面一些的 Mongodb，promise，connect 等也都是介绍，实战较少，故又找了下面这个视频继续学习
 
 
-## N-blog 目录
+#### N-blog 目录
 
 跟上面一样，也是笔记记录，参考 [N-blog](https://github.com/nswbmw/N-blog)
 
 一个使用 Express + MongoDB 搭建多人博客的实战，整体比较详细完整，工作之余慢慢跟着做
 
 
-## 七天学会NodeJS
+#### 七天学会NodeJS
 
 参考 [七天学会NodeJS](http://nqdeng.github.io/7-days-nodejs/)
 
 记录一些不太熟悉的知识点
 
 
-### 其他
+#### 其他
 
 一些 node 相关的小实例，demo 一类的
 

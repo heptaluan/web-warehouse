@@ -77,3 +77,55 @@ NODE_PATH=/home/user/lib:/home/lib
 * 使用 ```npm cache clear``` 可以清空 ```NPM``` 本地缓存，用于对付使用相同版本号发布新版本代码的人
 
 * 使用 ```npm unpublish <package>@<version>``` 可以撤销发布自己发布过的某个版本代码
+
+
+
+
+## 小文件拷贝
+
+NodeJS 提供了基本的文件操作 API，但是像文件拷贝这种高级功能就没有提供，我们来手动实现一个
+
+与 Copy 命令类型，我们的程序需要能接受源文件路径与目标文件路径两个参数
+
+```js
+var fs = require("fs");
+
+function copy (src, dst) {
+    fs.writeFileSync(dst, fs.readFileSync(src));
+}
+
+function main (argv) {
+    copy(argv[0], argv[1]);
+}
+
+main(process.argv.slice(2));
+```
+
+关于 process：
+
+process 是一个全局变量，可通过 process.argv 获得命令行参数，由于 argv[0] 固定等于 NodeJS 执行程序的绝对路径，argv[1] 固定等于主模块的绝对路径，因此，第一个命令行参数是从 argv[2] 这个位置开始
+
+
+## 大文件拷贝
+
+上面的程序拷贝一些小文件没什么问题，但是这种一次性把所有文件内容都读取到内存中然后在一次性的写入磁盘的方式不适合拷贝大文件，对于大文件，只能读一点写一点，直到完成拷贝
+
+```js
+var fs = require("fs");
+
+function copy (src, dst) {
+    fs.createReadStream(src).pipe(fs.createWriteStream(dst));
+}
+
+function main (argv) {
+    copy(argv[0], argv[1]);
+}
+
+main(process.argv.slice(2));
+```
+
+
+
+
+
+

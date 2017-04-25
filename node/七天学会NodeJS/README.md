@@ -212,6 +212,93 @@ console.log(dup);  // <Buffer 48 65 6c 6c 6f>
 
 
 
+#### Stream(数据流)
+
+当内存中无法一次装下需要处理的数据时，我们就需要用到 ```Stream```
+
+以上边的大文件拷贝程序为例，我们可以为数据来源创建一个只读数据流，示例如下：
+
+```js
+var rs = fs.createReadStream(pathname);
+
+rs.on("data", function (chunk) {
+    doSomething(chunk);
+})
+
+rs.on("end", function () {
+    cleanUp();
+})
+```
+
+需要注意的是，```Stream``` 基于事件机制工作，所有 ```Stream``` 的实例都继承于 ```NodeJS``` 提供的 [EventEmitter](https://nodejs.org/api/events.html)
+
+上面代码中 ```data``` 事件会源源不断的被触发，不管 ```doSomething()``` 函数是否处理的过来，调整如下：
+
+```js
+var rs = fs.createReadStream(src);
+
+rs.on("data", function (chunk) {
+    rs.pause();
+    doSomething(chunk, function () {
+        rs.resume();
+    });
+});
+
+rs.on("end", function () {
+    cleanUp();
+});
+```
+
+我们给 ```doSomething()``` 函数加上了回调，因此我们可以在处理数据之前暂停读取，并在处理数据后继续读取数据
+
+此外，我们也可以为数据目标创建一个只写数据流：
+
+```js
+var rs = fs.createReadStream(src);
+var ws = fs.createWriteStream(dst);
+
+rs.on("data", function (chunk) {
+    ws.write(chunk);
+});
+
+rs.on("end", function () {
+    ws.end();
+});
+```
+
+我们把 ```doSomething``` 换成了往只写数据流里写入数据后，以上代码看起来就像是一个文件拷贝程序了
+
+但是以上代码存在上边提到的问题，如果写入速度跟不上读取速度的话，只写数据流内部的缓存会爆仓
+
+我们可以根据 ```.write``` 方法的返回值来判断传入的数据是写入目标了，还是临时放在了缓存了，并根据 ```drain``` 事件来判断什么时候只写数据流已经将缓存中的数据写入目标，可以传入下一个待写数据了
+
+```js
+var rs = fs.createReadStream(src);
+var ws = fs.createWriteStream(dst);
+
+rs.on("data", function (chunk) {
+    if (ws.write(chunk) === false) {
+        rs.pause();
+    }
+});
+
+rs.on("end", function () {
+    ws.end();
+});
+
+ws.on("drain", function () {
+    rs.resume();
+});
+```
+
+以上代码实现了数据从只读数据流到只写数据流的搬运，并包括了防爆仓控制
+
+这种使用场景很多，所以 ```NodeJS``` 直接提供了 ```.pipe``` 方法来做这件事情
+
+
+
+
+
 
 
 

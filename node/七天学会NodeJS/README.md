@@ -1,4 +1,6 @@
-## 模块路径解析规则
+## 基础部分
+
+#### 模块路径解析规则
 
 ```require``` 函数支持斜杠```（/）```或盘符```（C:）```开头的绝对路径，也支持 ```./``` 开头的相对路径
 
@@ -22,7 +24,7 @@
 /node_modules/foo/bar
 ```
 
-### 3. NODE_PATH 环境变量
+#### 3. NODE_PATH 环境变量
 
 与 ```PATH``` 环境变量类似，```NodeJS``` 允许通过 ```NODE_PATH``` 环境变量来指定额外的模块搜索路径
 
@@ -44,7 +46,7 @@ NODE_PATH=/home/user/lib:/home/lib
 
 
 
-## NPM 版本号
+#### NPM 版本号
 
 使用 ```NPM``` 下载和发布代码时都会接触到版本号，```NPM``` 使用语义版本号来管理代码
 
@@ -81,7 +83,13 @@ NODE_PATH=/home/user/lib:/home/lib
 
 
 
-## 小文件拷贝
+
+
+
+## 文件操作
+
+
+#### 小文件拷贝
 
 ```NodeJS``` 提供了基本的文件操作 ```API```，但是像文件拷贝这种高级功能就没有提供，我们来手动实现一个
 
@@ -106,7 +114,7 @@ main(process.argv.slice(2));
 ```process``` 是一个全局变量，可通过 ```process.argv``` 获得命令行参数，由于 ```argv[0]``` 固定等于 ```NodeJS``` 执行程序的绝对路径，```argv[1]``` 固定等于主模块的绝对路径，因此，第一个命令行参数是从 ```argv[2]``` 这个位置开始
 
 
-## 大文件拷贝
+#### 大文件拷贝
 
 上面的程序拷贝一些小文件没什么问题，但是这种一次性把所有文件内容都读取到内存中然后在一次性的写入磁盘的方式不适合拷贝大文件，对于大文件，只能读一点写一点，直到完成拷贝
 
@@ -129,7 +137,7 @@ main(process.argv.slice(2));
 
 
 
-## 相关 API
+#### 文件操作相关 API
 
 node < v6.0.0
 
@@ -297,7 +305,7 @@ ws.on("drain", function () {
 
 
 
-## fs（文件系统）
+#### fs（文件系统）
 
 ```NodeJS``` 通过内置模块 ```fs``` 提供对文件的操作，基本分为以下三类：
 
@@ -338,7 +346,7 @@ fs.readFileSync(pathname, (err, data) => {
 
 
 
-## Path（路径）
+#### Path（路径）
 
 #### path.normalize
 
@@ -386,7 +394,7 @@ path.extname("foo/var.js");  // => ".js"
 
 
 
-## 遍历目录
+#### 遍历目录
 
 遍历目录是操作文件时一个常见的需求
 
@@ -473,7 +481,7 @@ travel("/home/user", function (pathname) {
 
 
 
-## 异步遍历
+#### 异步遍历
 
 如果使用的是异步 ```API```，原理是一样的，实现起来稍微复杂一些：
 
@@ -510,4 +518,146 @@ function travel(dir, callback, finish) {
 
 
 
+## 网络操作
+
+使用 ```NodeJS``` 内置的 ```http``` 模块可以很方便的实现一个 ```HTTP``` 服务器:
+
+```js
+var http = require("http");
+
+http.createServer(function (req, res) {
+    res.writeHead(200, {"Content-Type": "text-plain"})
+    res.end("<h1>hello world</h1>")
+}).listen(8000)
+```
+
+需要注意一点
+
+* 在 ```Linux``` 系统下，监听 ```1024``` 以下端口需要 ```root``` 权限，因此，如果需要监听 ```80``` 或 ```433``` 端口的化，需要使用 ```sudo``` 命令启动程序
+
+
+#### 网络操作相关 API
+
+```http``` 模块提供两种使用方式：
+
+* 作为服务端使用，创建一个 ```HTTP``` 服务器，监听 ```HTTP``` 客户端请求并返回响应
+
+* 作为客户端使用，发起一个 ```HTTP``` 客户端请求，获取服务端响应
+
+```HTTP``` 请求（响应也是类似的）本质上是一个数据流，由请求头（```headers```）和请求体（```body```）组成，空行之上是请求头，之下是请求体：
+
+```js
+POST / HTTP/1.1
+User-Agent: curl/7.26.0
+Host: localhost
+Accept: */*
+Content-Length: 11
+Content-Type: application/x-www-form-urlencoded
+
+Hello World
+```
+
+#### 服务端模式
+
+```HTTP``` 请求在发送给服务器的时候，可以认为是按照从头到尾的顺序一个字节一个字节的以数据流方式发送的
+
+而 ```HTTP``` 模块创建的 ```HTTP``` 服务器在接收到完整的请求头后，就会调用回调函数
+
+在回调函数中，除了可以使用 ```request``` 对象访问请求头数据外，还能把 ```request``` 对象当作一个只读数据流来访问请求体数据
+
+```js
+var http = require("http");
+
+http.createServer(function (request, response) {
+    var body = [];
+
+    console.log(request.method);
+    console.log(request.headers);
+
+    request.on("data", function (chunk) {
+        body.push(chunk);
+    })
+
+    request.on("end", function () {
+        body = Buffer.concat(body);
+        console.log(bodt.toString());
+    })
+}).listen(8000)
+```
+
+在回调函数中，除了可以使用 ```response``` 对象来写入 响应头 数据外，还能把 ```response``` 对象当作一个 只写数据流 来写入 响应体 数据
+
+```js
+// 服务端原样将客户端请求的请求体数据返回给客户端
+var http = require("http");
+
+http.createServer(function (request, response) {
+    response.writeHead(200, {"Contetn-Type": "text-plain"})
+
+    request.on("data", function (chunk) {
+        response.write(chunk)
+    })
+
+    request.on("end", function () {
+        response.end()
+    })
+}).listen(8000)
+```
+
+#### 客户端模式
+
+为了发起一个 客户端 ```HTTP``` 请求，我们需要指定目标服务器的位置并发送请求头和请求体
+
+```js
+var options = {
+    hostname: "www.example.com",
+    port: 8000,
+    path: "/upload",
+    method: "POST",
+    headers: {
+        "Content-Type": "application/x-www-form-urlencoded"
+    }
+};
+
+var request = http.request(options, function (response) {})
+
+request.write("hello wolrd")
+request.end();
+```
+
+```.request``` 方法创建了一个客户端，并指定请求目标和请求头数据。之后就可以把 ```request``` 对象当作一个 只写数据流 来写入请求体数据和结束请求
+
+由于 ```GET``` 请求是最常见的一种，并且不需要请求体，故可以简写为：
+
+```js
+http.get("http://www.example.com/", function (response) {});
+```
+
+当客户端发送请求并接收到完整的服务端响应头时，就会调用回调函数
+
+在回调函数中，除了可以使用 ```response``` 对象访问响应头数据外，还能把 ```response``` 对象当作一个只读数据流来访问响应体数据
+
+
+```js
+http.get("http://www.example.com/", function (response) {
+    var body = [];
+
+    console.log(response.statusCode);
+    console.log(response.headers);
+
+    response.on("data", function (chunk) {
+        body.push(chunk);
+    });
+
+    response.on("end", function () {
+        body = Buffer.concat(body);
+        console.log(body.toString());
+    });
+});
+```
+
+
+#### HTTPS
+
+待续
 

@@ -6,7 +6,7 @@
 
 #### 目标：
 
-大体方向就是 es6（vue）+ node（koa）
+大体方向就是 es6（7）+ node
 
 下面的目录是平时接触到的，也是自己准备奋斗的方向，其中一些目前正在学，其余也是接下来准备学习的
 
@@ -136,7 +136,7 @@
 
 [ECMAScript 6 入门](http://es6.ruanyifeng.com/) 
 
-[用原生JS替代jQuery](https://github.com/fa-ge/jQuery-is-out-of-date) 
+~~[用原生JS替代jQuery](https://github.com/fa-ge/jQuery-is-out-of-date)~~
 
 ~~[JavaScript模式](https://book.douban.com/subject/11506062/)~~
 

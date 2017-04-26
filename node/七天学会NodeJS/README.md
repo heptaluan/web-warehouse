@@ -659,5 +659,42 @@ http.get("http://www.example.com/", function (response) {
 
 #### HTTPS
 
-待续
+```https``` 模块与 ```http``` 模块类似，区别在于 ```https``` 模块需要额外处理 ```SSL``` 证书
+
+#### 服务端模式
+
+```js
+var options = {
+    key: fs.readFileSync("./ssl/default.key"),
+    cert: fs.readFileSync("./ssl/default.cer")
+}
+
+var server = https.createServer(options, function (request, response) {
+    // ...
+})
+```
+
+与创建 ```HTTP``` 服务器相比，多了一个 ```options``` 对象，通过 ```key``` 和 ```cert``` 字段指定 ```HTTPS``` 服务器使用的私钥和公钥
+
+```NodeJS``` 支持 ```SNI``` 技术，可以根据 ```HTTPS``` 客户端请求使用的域名动态使用不同的证书，也因此同一个 ```HTTPS``` 服务器可以使用多个域名提供服务
+
+```js
+Server.addContent("foo.com", {
+    key: fs.readFileSync("./ssl/foo.key"),
+    cert: fs.readFileSync("./ssl/foo.cer")
+})
+
+Server.addContent("bar.com", {
+    key: fs.readFileSync("./ssl/bar.key"),
+    cert: fs.readFileSync("./ssl/bar.cer")
+})
+```
+
+#### 客户端模式
+
+与 ```http``` 模块类似
+
+但是需要注意的是：如果目标服务器的 ```SSL``` 证书是自制的，不是从颁发机构购买的，默认情况下 ```https``` 模块会拒绝连接，提示说证书安全问题
+
+在 ```options``` 里加入 ```rejectUnauthorized: false``` 字段可以禁用对证书有效性的检查，从而允许 ```https``` 模块请求开发环境下使用自制证书的 ```HTTPS``` 服务器
 

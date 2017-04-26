@@ -297,6 +297,46 @@ ws.on("drain", function () {
 
 
 
+## fs（文件系统）
+
+```NodeJS``` 通过内置模块 ```fs``` 提供对文件的操作，基本分为以下三类：
+
+* 文件属性读写，常用的有 ```fs.stat```，```fs.chmod```，```fs.chown```
+
+* 文件内容读写，常用的有 ```fs.readFile```，```fs.readdir```，```fs.writeFile```，```fs.mkdir```
+
+* 底层文件操作，常用的有 ```fs.open```，```fs.read```，```fs.write```，```fs.close```
+
+上面这些 ```API``` 都是通过回调函数传递结果，以 ```fs.readFile``` 为例
+
+```js
+var fs = require("fs");
+
+fs.readFile(pathname, (err, data) => {
+    if (err) {
+        throw err;
+    } else {
+        consol.elog(data)
+    }
+})
+```
+
+```fs``` 模块的所有异步 ```API``` 都有对应的同步版本，用于无法使用异步操作时，或者同步操作更为方便的情况
+
+```js
+var fs = require("fs");
+
+fs.readFileSync(pathname, (err, data) => {
+    if (err) {
+        throw err;
+    } else {
+        consol.elog(data)
+    }
+})
+```
+
+
+
 
 
 

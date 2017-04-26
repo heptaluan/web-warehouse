@@ -14,7 +14,7 @@
 一个使用 Express + MongoDB 搭建多人博客的实战，整体比较详细完整，工作之余慢慢跟着做
 
 
-#### 七天学会NodeJS
+#### 七天
 
 参考 [七天学会NodeJS](http://nqdeng.github.io/7-days-nodejs/)
 

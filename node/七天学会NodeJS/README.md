@@ -386,6 +386,92 @@ path.extname("foo/var.js");  // => ".js"
 
 
 
+## 遍历目录
+
+遍历目录是操作文件时一个常见的需求
+
+#### 递归算法
+
+遍历目录时一般使用递归算法，递归算法与数学归纳法类似，通过不断缩小问题的规模来解决问题，类似：
+
+```js
+function factorial (n) {
+    if (n === 1) {
+        return 1;
+    } else {
+        return n * factorial(n - 1);
+    }
+}
+```
+
+但是由于每递归一次就产生一次函数调用，在需要优先考虑性能的时候，需要把递归算法转换为循环算法，以减少函数调用方式
+
+#### 遍历算法
+
+目录是一个树状结构，在遍历时一般使用 深度优先 + 先序遍历 算法
+
+* 深度优先 意味着只到达一个节点后，首先接着遍历子节点而不是邻居节点
+
+* 先序遍历 意味着首次到达了某节点就算遍历完成，而不是最后一次返回某节点才算数
+
+```js
+           A
+          / \
+         B   C
+        / \   \
+       D   E   F
+
+A => B => D => E => C => F
+```
+
+#### 同步遍历
+
+```js
+var path = require("path")
+var fs = require("fs");
+
+function travel (dir, callback) {
+    fs.readdirSync(dir).forEach(function (file) {
+        var pathname = path.join(dir, file);
+
+        if (fs.statSync(pathname).isDirectory()) {
+            travel(pathname, callback)
+        } else {
+            callback(pathname);
+        }
+    })
+}
+```
+
+上面函数以某个目录作为遍历起点，遇到一个子目录时，就先接着遍历子目录
+
+遇到一个文件的时候，就把文件的绝对路径传递给回调函数，回调函数拿到文件路径后，就可以做各种判断和处理，假设目录为：
+
+```js
+- /home/user/
+    - foo/
+        x.js
+    - bar/
+        y.js
+    z.css
+```
+
+则生成的目录为：
+
+```js
+travel("/home/user", function (pathname) {
+    console.log(pathname)
+});
+
+------------------------------------------
+
+/home/user/foo/x.js
+/home/user/bar/y.js
+/home/user/z.css
+```
+
+
+
 
 
 

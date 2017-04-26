@@ -473,5 +473,41 @@ travel("/home/user", function (pathname) {
 
 
 
+## 异步遍历
+
+如果使用的是异步 ```API```，原理是一样的，实现起来稍微复杂一些：
+
+```js
+var path = require("path");
+var fs = require("fs");
+
+function travel(dir, callback, finish) {
+    fs.readdir(dir, function (err, files) {
+        (function next(i) {
+            if (i < files.length) {
+                var pathname = path.join(dir, files[i]);
+
+                fs.stat(pathname, function (err, stats) {
+                    if (stats.isDirectory()) {
+                        travel(pathname, callback, function () {
+                            next(i + 1);
+                        });
+                    } else {
+                        callback(pathname, function () {
+                            next(i + 1);
+                        });
+                    }
+                });
+            } else {
+                finish && finish();
+            }
+        }(0));
+    });
+}
+```
+
+
+
+
 
 

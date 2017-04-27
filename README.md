@@ -12,8 +12,6 @@
 
 总之，路还很遥远，一步一步来，每天进步一点点
 
-时间花在哪里，最终都是看得见的，与君共勉
-
 ----
 
 
@@ -60,7 +58,7 @@
 
 [Sequelize 和 MySQL 对照](https://segmentfault.com/a/1190000003987871)
 
-[七天学会NodeJS](http://nqdeng.github.io/7-days-nodejs/)
+
 
 [Nunjucks](http://mozilla.github.io/nunjucks/cn/api.html)
 
@@ -73,7 +71,7 @@
 
 [全栈](https://github.com/ruanyf/jstraining)
 
-[JavaScript全栈教程](http://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000)
+
 
 [大前端修炼之道](https://github.com/phodal/fe)
 
@@ -132,9 +130,11 @@
 
 ### 2017
 
-
+~~[JavaScript全栈教程](http://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000)~~
 
 [ECMAScript 6 入门](http://es6.ruanyifeng.com/) 
+
+~~[七天学会NodeJS](http://nqdeng.github.io/7-days-nodejs/)~~
 
 ~~[用原生JS替代jQuery](https://github.com/fa-ge/jQuery-is-out-of-date)~~
 
@@ -147,7 +147,7 @@
 
 ##### JS
 
-~~刷完 [es6-cheatsheet](https://github.com/DrkSephy/es6-cheatsheet)~~
+~~[es6-cheatsheet](https://github.com/DrkSephy/es6-cheatsheet)~~
 
 ~~中文地址：[ES6 手册](https://qiutc.me/post/es6-cheatsheet.html)~~
 
@@ -164,7 +164,7 @@
 
 ~~[一起学 Node.js（N-blog）](https://github.com/nswbmw/N-blog)~~
 
-~~《node.js 开发指南》 有些案例比较老了，跳着刷完~~
+~~《node.js 开发指南》~~
 
 ~~《了不起的Node.js》~~
 

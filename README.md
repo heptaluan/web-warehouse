@@ -135,6 +135,8 @@
 
 [ECMAScript 6 入门](http://es6.ruanyifeng.com/) 
 
+~~[nodejs小工具](http://study.163.com/course/courseMain.htm?courseId=1003588036)~~
+
 ~~[七天学会NodeJS](http://nqdeng.github.io/7-days-nodejs/)~~
 
 ~~[用原生JS替代jQuery](https://github.com/fa-ge/jQuery-is-out-of-date)~~

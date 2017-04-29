@@ -1,9 +1,4 @@
-VueDemo 集合页
-
-#### app 目录
-
-一个较完整项目 基于 vue-cli + webpack
-
+记录学习 vue 相关的一些知识
 
 #### vue-learn 目录 
 
@@ -12,13 +7,9 @@ VueDemo 集合页
 Vue 学习笔记（各个章节） + demo（学习中涉及到的案例） 记录
 
 
-#### ToDoList
+#### demos 目录
 
-一个简易的 ToDoList 基于 bootstrap + vue 实现
+各种 vue 相关 demo 的汇总
 
-
-#### other
-
-是一些平时小的练手项目，demo一类的
 
 

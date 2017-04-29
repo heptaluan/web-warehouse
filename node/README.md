@@ -1,3 +1,5 @@
+记录学习 node 相关的一些知识
+
 #### lesson 目录
 
 跟着视频学习过程中的一些笔记记录，参考 [《Node.js 包教不包会》](https://github.com/hanekaoru/node-lessons)
@@ -21,9 +23,9 @@
 记录一些不太熟悉的知识点
 
 
-#### 其他
+#### demos 目录
 
-一些 node 相关的小实例，demo 一类的
+各种 node 相关 demo 的汇总
 
 
 ----

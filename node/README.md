@@ -16,7 +16,7 @@
 一个使用 Express + MongoDB 搭建多人博客的实战，整体比较详细完整，工作之余慢慢跟着做
 
 
-#### 七天
+#### 七天 目录
 
 参考 [七天学会NodeJS](http://nqdeng.github.io/7-days-nodejs/)
 
@@ -26,6 +26,22 @@
 #### demos 目录
 
 各种 node 相关 demo 的汇总
+
+
+----
+
+下面的是 github 仓库里面一些 node 相关的项目
+
+----
+
+
+#### movie-demo
+
+一个简易电影网站
+
+地址见：[movie-demo](https://github.com/hanekaoru/movie-demo)
+
+
 
 
 ----

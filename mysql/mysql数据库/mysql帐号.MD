@@ -1,0 +1,116 @@
+## 创建数据库（表）
+
+默认的 ```root``` 帐号可以管理所有的数据库
+
+但是我们可以新建一个账户来管理特定的数据库，其他的库则不允许其来操作，以 ```ttt``` 数据库为例，
+
+可以选创建一个 ```ttt``` 数据库然后在给予其权限
+
+```js
+create database ttt;
+
+grant all on ttt.* to "test"@"localhost" identified by "test";
+```
+
+需要注意注意是，如果之前 ```test``` 帐号已经存在了（比如通过一些 ```web``` 操作 ```mysql``` 管理工具），那最好就不要输入 ```identified by "test"``` 这一句，否则会把原有的密码更改掉
+
+然后使用 ```test``` 帐号进行登录，可以看到，除了系统提供的公用数据库以外，只能看到 ```ttt``` 数据库
+
+```js
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| ttt               |
+| test               |
++--------------------+
+```
+
+然后我们就可以使用 ```ttt``` 数据库来进行操作了，首先使用该数据库：
+
+```js
+use ttt;
+```
+
+然后可以查看里面的表
+
+```js
+show tables;
+
+// 如下显示
+// Empty set (0.00 sec)
+```
+
+然后来新建表：
+
+```js
+create table student(id int(10) primary key auto_increment, name varchar(30), age tinyint(2));
+
+// 显示如下
++---------------+
+| Tables_in_ttt |
++---------------+
+| student       |
++---------------+
+```
+
+可以使用 ```desc``` 命令来查看表的结构：
+
+```js
+desc student;
+
+// 显示
++-------+-------------+------+-----+---------+----------------+
+| Field | Type        | Null | Key | Default | Extra          |
++-------+-------------+------+-----+---------+----------------+
+| id    | int(10)     | NO   | PRI | NULL    | auto_increment |
+| name  | varchar(30) | YES  |     | NULL    |                |
+| age   | tinyint(2)  | YES  |     | NULL    |                |
++-------+-------------+------+-----+---------+----------------+
+```
+
+使用
+
+```js
+select * from student;
+```
+
+可以发现，是没有内容的，我们可以插入内容（可以插入多条）
+
+```js
+insert into student (name, age) values("zhangsan", 22);
+
+// 使用 select * from student; 显示如下
++----+----------+------+
+| id | name     | age  |
++----+----------+------+
+|  1 | zhangsan |   22 |
+|  2 | zhangsan |   22 |
+|  3 | zhangsan |   22 |
+|  4 | zhangsan |   22 |
+|  5 | zhangsan |   22 |
++----+----------+------+
+```
+
+
+## 备份与还原
+
+我们可以使用如下命令来导出我们需要备份的数据库（前提是该帐号有权限操作这个数据库（这里是 ```root``` 帐号））
+
+```js
+mysqldump -uroot -p ttt>d:/ttt.sql
+```
+
+然后来删除它，在试着还原，使用下面命令来删除表
+
+```js
+drop table ttt;
+```
+
+退出以后在使用下面命令来还原
+
+```js
+mysql -uroot -p ttt < d:/ttt.sql
+```
+
+这样就实现了备份与还原

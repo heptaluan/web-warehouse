@@ -143,9 +143,11 @@
 
 ### 2017
 
-~~[JavaScript全栈教程](http://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000)~~
-
 [ECMAScript 6 入门](http://es6.ruanyifeng.com/) 
+
+~~[MYSQL 数据库（前五课）](http://study.163.com/course/courseMain.htm?courseId=1352006)~~
+
+~~[JavaScript全栈教程](http://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000)~~
 
 ~~[nodejs小工具](http://study.163.com/course/courseMain.htm?courseId=1003588036)~~
 

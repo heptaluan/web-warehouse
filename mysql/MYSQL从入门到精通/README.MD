@@ -60,7 +60,7 @@ show create database yy;
 
 create database `yy` /*!40100 default character set utf8 */
 
-// <=== 实际上等价于 ===> (在 mysql 4.01 以下不支持多国语言)
+// <=== 实际上等价于 ===> (/**/ 的意思为在 mysql 4.01 以下不支持多国语言)
 
 create database `yy` default character set utf8;
 ```
@@ -107,3 +107,131 @@ drop database if exists `yy`;
 alter database yy default character set utf8;
 ```
 
+
+## 表的操作
+
+#### 建立表
+
+```js
+//  表示无符号
+create table if not exists y1(
+    yid int unsigned not null auto_increment,
+    yname varchar(30) not null,
+    primary key(yid)
+)engine = myisam auto_increment = 100 default charset utf8;
+
+```
+
+* ```if not exists```
+
+如果不存在再去创建
+
+* ```unsigned```
+
+```int``` 分为无符号 ```unsigned``` 和有符号 ```signed``` 两种类型，默认为 ```signed```
+
+二者的区别就是无符号类型能保存 ```2``` 倍于有符号类型的数据
+
+* ```not null```
+
+不为空
+
+* ```auto_increment```
+
+自增加，比如 ```id``` 添加数据后自动变为 ```1234..```
+
+
+* ```engine```
+
+```engine``` 表示存储引擎，一般分为 ```myisam```，```innodb``` 等，新型数据库一般默认为 ```innodb```，但是我们大部分时候都采用 ```myisam```（若是不涉及事务的话，选用这个速度较快），```innodb``` 一般用于事务（比如票务查询，银行业务转账）
+
+#### 删除表
+
+同库的操作类似
+
+```js
+drop table y1;
+
+drop table if exists y1;
+
+// 删除多个表
+drop table y1, y2, y3;
+```
+
+#### 修改表相关内容
+
+**修改表名（一般用的较少）**
+
+```js
+rename table y1 to y2;
+
+// <===等价于===>
+
+alter table y2 rename y1;
+```
+
+**修改表的类型及字段名**
+
+```js
+// 先查看一下表结构
+desc y1;
+
+// ===>
+
++-------+------------------+------+-----+---------+----------------+
+| Field | Type             | Null | Key | Default | Extra          |
++-------+------------------+------+-----+---------+----------------+
+| yid   | int(10) unsigned | NO   | PRI | NULL    | auto_increment |
+| yname | varchar(30)      | NO   |     | NULL    |                |
++-------+------------------+------+-----+---------+----------------+
+
+// 然后来做修改
+alter table y1 change yid userid int;
+
+alter table y1 change yname username varchar(30) not null;
+
+// ===>
+
++----------+-------------+------+-----+---------+-------+
+| Field    | Type        | Null | Key | Default | Extra |
++----------+-------------+------+-----+---------+-------+
+| userid   | int(11)     | NO   | PRI | 0       |       |
+| username | varchar(30) | NO   |     | NULL    |       |
++----------+-------------+------+-----+---------+-------+
+```
+
+**新增一个字段**
+
+```js
+// 新增的时候可以指定插入的位置，只需要使用 after 关键字
+alter table y1 add usertel tinyint;
+
+alter table y1 add useraddress varchar(50) after username;
+
+// ===>
+
++-------------+-------------+------+-----+---------+-------+
+| Field       | Type        | Null | Key | Default | Extra |
++-------------+-------------+------+-----+---------+-------+
+| userid      | int(11)     | NO   | PRI | 0       |       |
+| username    | varchar(30) | NO   |     | NULL    |       |
+| useraddress | varchar(50) | YES  |     | NULL    |       |
+| usertel     | tinyint(4)  | YES  |     | NULL    |       |
++-------------+-------------+------+-----+---------+-------+
+```
+
+**删除一个字段**
+
+```js
+alter table y1 drop column usertel;
+
+// ===>
+
++-------------+-------------+------+-----+---------+-------+
+| Field       | Type        | Null | Key | Default | Extra |
++-------------+-------------+------+-----+---------+-------+
+| userid      | int(11)     | NO   | PRI | 0       |       |
+| username    | varchar(30) | NO   |     | NULL    |       |
+| useraddress | varchar(50) | YES  |     | NULL    |       |
++-------------+-------------+------+-----+---------+-------+
+```

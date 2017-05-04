@@ -34,7 +34,7 @@
 
 #### 变长字符串
 
-* ```text```
+* ```varchar```
 
 #### 变长的文本类型
 
@@ -44,9 +44,27 @@
 
 * ```longtext```
 
-#### 枚举类型（enum("男", "女", "保密")）
+#### 枚举类型（enum("男", "女", "保密")）（用的较少）
 
 * ```enum```
+
+## 数据类型整理如下
+
+* ```id``` 类型一般使用 ```int```，如果知道以后 ```id``` 会特别大，就用 ```bigint```（可以使用 ```auto_increment``` 来实现自增加）
+
+* 用户姓名，用户的 ```id``` 一类（例如 ```userId```），用户地址等一类用 ```varchar```（```varchar(64)```）或者 ```char```，```text``` 字段一般不建议使用，使用时建议一张表单独用来存这个字段 
+
+* 是 和 否 可以用 ```tinyint```，```smallint``` 也可以，类似存储性别（男，女）一类的，也可以使用这个
+
+* 日期类型就 ```date``` 或者 ```datetime```，也可以存储时间的 ```unix``` 时间戳格式（时间戳只有 ```10``` 位用 ```int``` 就可以了）
+
+有一个问题，关于表类型，因为可以随时修改，为什么不在需要相应类型的时候直接调整
+
+这是因为字段类型是可以修改，在表数据量小的情况下，改数据类型很方便，但是如果数据量大了，就涉及到锁表了，这就是 ```dba``` 对数据库维护的问题了
+
+说白了，改一个字段的字段类型，有可能是先复制一张这个表作为临时表，然后把临时表里这个字段的字段类型改掉，还要先检查这个字段对应的值能不能被修改成目标类型，比如原先这个字段是 ```varchar``` 表里数据都存的 ```abc```，你要改成 ```int``` 就改不了
+
+数据量越大 索引越多的表 改字段就要考虑性能了
 
 
 ----
@@ -82,7 +100,7 @@ show databases;
 // 常规方式
 create databse yy;
 
-// 使用 `` 避免库名
+// 使用 `` 避免库名（兼容性）
 create database `database`;
 
 // 判断数据库 yy 是否存在，如果不存在才创建此数据库，并且设定新数据库的字符集编码为 utf8 格式
@@ -142,7 +160,7 @@ create table if not exists y1(
 
 ```engine```
 
-* ```engine``` 表示存储引擎，一般分为 ```myisam```，```innodb``` 等，新型数据库一般默认为 ```innodb```，但是我们大部分时候都采用 ```myisam```（若是不涉及事务的话，选用这个速度较快），```innodb``` 一般用于事务（比如票务查询，银行业务转账）
+* ```engine``` 表示存储引擎，一般分为 ```myisam```，```innodb``` 等，```MySQL 5.5``` 起，默认为 ```innodb```，但是我们大部分时候都采用 ```myisam```（若是不涉及事务的话，选用这个速度较快），```innodb``` 一般用于事务（比如票务查询，银行业务转账）
 
 #### 删除表
 
@@ -201,7 +219,7 @@ alter table y1 change yname username varchar(30) not null;
 
 ```js
 // 新增的时候可以指定插入的位置，只需要使用 after 关键字
-alter table y1 add usertel tinyint;
+alter table y1 add usertel varchar(20);
 
 alter table y1 add useraddress varchar(50) after username;
 
@@ -213,7 +231,7 @@ alter table y1 add useraddress varchar(50) after username;
 | userid      | int(11)     | NO   | PRI | 0       |       |
 | username    | varchar(30) | NO   |     | NULL    |       |
 | useraddress | varchar(50) | YES  |     | NULL    |       |
-| usertel     | tinyint(4)  | YES  |     | NULL    |       |
+| usertel     | varchar(20) | YES  |     | NULL    |       |
 +-------------+-------------+------+-----+---------+-------+
 ```
 

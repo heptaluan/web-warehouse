@@ -48,6 +48,11 @@
 
 * ```enum```
 
+----
+
+----
+
+
 ## 数据类型整理如下
 
 * ```id``` 类型一般使用 ```int```，如果知道以后 ```id``` 会特别大，就用 ```bigint```（可以使用 ```auto_increment``` 来实现自增加）
@@ -69,6 +74,9 @@
 
 ----
 
+----
+
+
 #### 查看建立数据库命令的代码
 
 ```js
@@ -84,6 +92,9 @@ create database `yy` default character set utf8;
 ```
 
 ----
+
+----
+
 
 ## 数据库的增删改查
 
@@ -141,6 +152,8 @@ rename olddb.tables to newdb.tables
 show databases;
 ```
 
+
+----
 
 ----
 
@@ -320,7 +333,9 @@ desc stu;
 
 
 
+----
 
+----
 
 
 
@@ -329,7 +344,7 @@ desc stu;
 
 ## 表结构的增删改查
 
-## 数据的插入（增）
+#### 数据的插入（增）
 
 ```js
 // 新建立一个学生表
@@ -362,7 +377,7 @@ create table stu(
 一般不直接存储年龄，而是存储出生日期
 
 
-insert （插入数据）
+```insert``` （插入数据）
 
 ```js
 insert into stu values(null, "张三", "18", "2005-2-4", "bj", "65");
@@ -476,7 +491,6 @@ update stu set score = 80, address = "wh", birthday = "2008-08-08" where id = 20
 | 201203 | 王五 |  20 | 2008-08-08 00:00:00 | wh      |  80.0 |
 +--------+------+-----+---------------------+---------+-------+
 ```
-update stu set birthday = "1989-11-22" where id = "201218";
 
 
 #### 查询数据（查）
@@ -487,7 +501,7 @@ select * from stu;
 
 // ===>
 
-// 整理和去掉了部分数据，用来查询
+// 去掉了重复的数据，然后整理更新了一下，用来查询
 +--------+------+-----+------------+-------+
 | id     | name | age | birthday   | score |
 +--------+------+-----+------------+-------+
@@ -568,7 +582,7 @@ select name, score from stu where score not between 80 and 90;
 
 需要注意的是：如果查询语句中没有 ```like```，比如 ```select * from stu where name = "张%";```
 
-查询语句不会报错，但是 % 不再是任意符号，因为判断的是等号，不支持通配符
+查询语句不会报错，但是 ```%``` 不再是任意符号，因为判断的是等号，不再支持通配符
 
 ```js
 // _ 表示一个任意字符，比如查询名字为两个字的用户
@@ -581,7 +595,7 @@ select name from stu where name like "张_"
 select name from stu where name like "%三%"
 ```
 
-基本条件 ```in```，后面接一个范围
+基本条件 ```in```，后面接一个限定范围
 
 ```js
 // 查询 id 为 201209, 201210, 201208 的三条数据
@@ -607,6 +621,7 @@ update stu set score = 0 where score is null;
 
 
 //---- 注意区分 "" 和 null
+
 
 // 这个表示查询名字为空字符串的
 select * from stu where name = "";

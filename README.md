@@ -153,6 +153,8 @@
 
 ~~[nodejs小工具](http://study.163.com/course/courseMain.htm?courseId=1003588036)~~
 
+~~[Node.js进阶教程第一步(基础篇)](http://study.163.com/course/courseMain.htm?courseId=1003228034)~~
+
 ~~[七天学会NodeJS](http://nqdeng.github.io/7-days-nodejs/)~~
 
 ~~[用原生JS替代jQuery](https://github.com/fa-ge/jQuery-is-out-of-date)~~

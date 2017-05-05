@@ -1,0 +1,15 @@
+{
+  "name": "node-mysql",
+  "version": "1.0.0",
+  "description": "记录一些 node 操作 mysql 的相关知识",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mysql": "^2.13.0"
+  }
+}

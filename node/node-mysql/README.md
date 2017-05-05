@@ -138,6 +138,11 @@ $ npm install node-mysql --save
 连接后执行插入，查询等操作
 
 ```js
+var OptPool = require("./pool");
+
+var optPool = new OptPool();
+var pool = optPool.getPool();
+
 // 从连接池中获取一个连接
 pool.getConnection(function (err, conn) {
 

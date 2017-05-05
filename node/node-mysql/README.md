@@ -135,7 +135,41 @@ $ npm install mysql --save
 $ npm install node-mysql --save
 ```
 
-连接后执行插入，查询等操作
+我们可以新建一个 ```pool.js``` 把我们连接数据库的操作独立出去：
+
+```js
+// 调用 mysql 模块
+var mysql = require("mysql");
+
+function OptPoll () {
+
+    // 建立一个变量，用于检测是否连接过
+    this.flag = true;
+
+    this.pool = mysql.createPool({
+        host: "localhost",      // 主机
+        user: "root",           // mysql 用户名
+        password: "root",       // mysql 密码
+        database: "nodemysql",  // 使用哪个数据库
+        port: "3306"            // 端口号，mysql 默认为 3306
+    })
+
+    this.getPool = function () {
+        if (this.flag) {
+            // 监听 connection 事件
+            this.pool.on("connention", function (connection) {
+                connection.query("set session auto_increment_increment = 1");
+                this.flag = false;
+            })
+        }
+        return this.pool;
+    }
+}
+
+module.exports = OptPoll;
+```
+
+然后新建一个 ```app.js``` 导入之前的 ```pool```，然后来执行插入，查询等操作
 
 ```js
 var OptPool = require("./pool");

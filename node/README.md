@@ -28,6 +28,12 @@
 各种 node 相关 demo 的汇总
 
 
+
+#### node-mysql
+
+记录一些 node 操作 mysql 相关知识
+
+
 ----
 
 下面的是 github 仓库里面一些 node 相关的项目

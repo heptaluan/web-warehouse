@@ -145,6 +145,8 @@
 
 [ECMAScript 6 入门](http://es6.ruanyifeng.com/) 
 
+~~[Node.js教程第五步：用VUE.JS学ES6](http://study.163.com/course/introduction/1003506010.htm)~~ 大体过了一遍，感觉还是去看《ECMAScript 6 入门》比较靠谱
+
 ~~[MYSQL 数据库](https://github.com/hanekaoru/WebLearningNotes/blob/master/mysql/README.md)~~
 
 ~~[MYSQL从入门到精通](https://github.com/hanekaoru/WebLearningNotes/blob/master/mysql/README.md)~~

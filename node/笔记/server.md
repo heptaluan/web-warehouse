@@ -1,0 +1,78 @@
+对于服务器来说，无非就是做三件事情：
+
+* 接收请求
+
+* 处理请求
+
+* 发送响应
+
+在 node 中，可以通过 http 模块中的 cerateServer 方法创建一个服务，从而来得到一个 Server 对象
+
+```js
+var server = http.createServer();
+```
+
+然后可以通过给 server 实例对象添加 request 请求事件
+
+* 这个请求事件是所有请求的入口
+
+* 任何请求都会触发该事件，然后执行事件对应的处理函数
+
+```js
+server.on("request", function (req, res) {
+    console.log("接收到客户端请求")
+})
+```
+
+最后绑定端口号，开启服务器
+
+```js
+server.listen(8080, function () {
+    console.log(`app is running at poet 3000`);
+})
+```
+
+这样一来，一个简单的服务就启动成功了，然后我们可以设置请求处理函数
+
+请求回调处理函数需要接收两个参数，request 和 response
+
+* request 是一个请求对象，可以拿到当前请求的一些信息，例如请求路径，请求方法，请求报文等
+
+* response 是一个响应对象，可以用来给请求发送响应
+
+```js
+var handleRequest = function (req, res) {
+    
+    console.log(`当前请求路径为：${req.url}`);
+    
+    res.write(`hello`)
+    res.write(` word`)
+
+    // 在发送数据完毕之后，需要主动结束响应，不然浏览器会一直处于等待状态
+    res.end()
+}
+```
+
+完整代码如下：
+
+```js
+var http  = require("http");
+var server = http.createServer();
+
+var handleRequest = function (req, res) {
+    
+    console.log(`当前请求路径为：${req.url}`);
+    
+    res.write(`hello`)
+    res.write(` word`)
+
+    // 在发送数据完毕之后，需要主动结束响应，不然浏览器会一直处于等待状态
+    res.end()
+}
+
+server.on("request", handleRequest)
+
+server.listen(8080, function () {
+    console.log(`app is running at poet 3000`);
+})
+```

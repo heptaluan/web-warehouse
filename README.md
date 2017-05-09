@@ -2,7 +2,7 @@
 
 算是一个大的汇总仓库吧，囊括了平时瞎捣鼓所涉及过的，了解过的，接触到的绝大部分东西
 
-包括一些平时的读书笔记，看过的一些教程视频的总结，捣鼓的各种练手 ```demo``` 等等等等
+包括一些平时的读书笔记，看过的一些教程视频的总结，捣鼓的各种练手 ```demo```， 造的一些小轮子，等等等等
 
 平时的业余时间大部分都花在了这个仓库和个人博客（[hanekaoru's Blog](http://hanekaoru.com/)）上面
 
@@ -12,11 +12,11 @@
 
 ----
 
-#### 目标：
+#### 目录
 
-大体方向就是 es6（7）+ node
+2016.10 开始记录
 
-下面的目录是平时接触到的，一些目前正在学，其余也是接下来准备了解学习的
+总的方面：react + node
 
 ----
 
@@ -145,6 +145,8 @@
 
 ~~[MYSQL 数据库](https://github.com/hanekaoru/WebLearningNotes/blob/master/mysql/README.md)~~
 
+~~[Node.js入门和实战](http://study.163.com/forum/detail/1003154433.htm)~~ 补充下基础知识
+
 ~~[MYSQL从入门到精通](https://github.com/hanekaoru/WebLearningNotes/blob/master/mysql/README.md)~~
 
 ~~[JavaScript全栈教程](http://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000)~~
@@ -190,14 +192,14 @@
 
 ##### Vue
 
-~~[《Javascript 之 Vue.JS》（第一部分）](http://study.163.com/course/introduction.htm?courseId=1003291032#/courseDetail)~~）
+~~[《Javascript 之 Vue.JS》（第一部分）](http://study.163.com/course/introduction.htm?courseId=1003291032#/courseDetail)~~
 
 ~~[《Javascript 之 Vue.JS》（第二部分）](http://study.163.com/course/introduction/1003380002.htm#/courseDetail)~~
 
 ~~[vuejs-learn](https://github.com/bhnddowinf/vuejs-learn)~~
 
-~~[Vue2.0文档](https://vuefe.cn/guide/) 刷完基础部分，进阶部分以后再来填坑~~
+~~[Vue2.0文档](https://vuefe.cn/guide/)~~ 刷完基础部分，进阶部分以后再来填坑
 
 ~~[vuejs入门基础](http://www.imooc.com/learn/694)~~
 
-~~[Vue 1.0文档](http://vuejs.org.cn/guide/) 2.0 都出来了，这个直接弃了~~
+~~[Vue 1.0文档](http://vuejs.org.cn/guide/)~~ 2.0 都出来了，这个直接弃了

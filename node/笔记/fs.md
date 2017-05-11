@@ -83,3 +83,65 @@ fs.exists(filename, function (isExists) {
 fs.unlink(path, callback)
 ```
 
+#### 监视文件变化
+
+```js
+fs.watch(filename, [options], [callback])
+```
+
+监视 filename 的变化，filename 可以是一个文件或一个目录
+
+第二个参数是可选的，如果提供的 options 是一个字符串，则它指定了 encoding，否则 options 应该以一个对象传入
+
+回调函数有两个参数（eventType，filename），eventType 可以是 change 或 rename，filename 是触发事件的文件名称
+
+需要注意的是：在大多数平台，当一个文件出现（比如新创建）或者消失在一个目录里的时候，rename 会被触发
+
+在回调函数中提供的 filename 参数不是在每一个操作系统中都被支持，即便在支持的系统中，filename也不能保证在每一次回调都被提供，因此，不要假设 filename 参数总会会在回调函数中提供，最好加上 if 判断
+
+```js
+fs.watch(filename, function (event, filename) {
+    console.log(`event is ${event}`);
+    if (filename) {
+        console.log(`filename provided ${filename}`)
+    } else {
+        console.log(`filename not provided`)
+    }
+})
+```
+
+注意：fs.watch() 比 fs.watchFile() 和 fs.unwatchFile() 更高效
+
+可以的话，应该使用 fs.watch() 而不是 fs.watchFile() 和 fs.unwatchFile()
+
+----
+
+----
+
+----
+
+fs 不仅可以操作文件，还可以操作文件夹，比如
+
+* fs.mkdir(path, [mode], callback)  创建文件夹
+
+* fs.readdir(path, callback)  读取文件夹
+
+* fs.rmdir(path, callback)  删除文件夹
+
+创建一个文件夹
+
+```js
+fs.mkdir("./1", function () {
+    console.log(arguments);
+})
+```
+
+还可以获取文件列表：
+
+```js
+fs.readdir("../1", function (err, fileList) {
+    fileList.forEach(function (f) {
+        console.log(f);
+    })
+})
+```

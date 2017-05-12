@@ -112,3 +112,66 @@ function sendData (file, req, res) {
 
 // ...
 ```
+
+----
+
+----
+
+同样的，也可以利用上面的方式来处理 get 和 post 请求
+
+这其中会用到 queryString.parse() 方法
+
+```js
+queryString.parse(str, [sep], [eq], [options])
+```
+
+用来将一个 query string 反序列化为一个对象，可以选择是否覆盖默认的分隔符（&）和分配符（=）
+
+```js
+username=123&password=123  ===>  { username: 123, password: 123 }
+```
+
+get 请求的处理方法与之前的类似
+
+```js
+// ...
+
+swich (urlStr.pathname) {
+    case "/login":
+        // 登录
+        sendData(htmlDir + "index.html", req, res)
+        break;
+    
+    // ...
+}
+
+// ...
+```
+
+post 请求需要特别说明一下
+
+post 发送的数据会被写入缓冲区中，需要通过 request 的 data 事件和 end 事件来进行数据的处理
+
+```js
+// ...
+
+swich (urlStr.pathname) {
+    case "/login":
+        if (req.method.toUpperCase() == "POST") {
+            
+            var str = "";
+            
+            req.on("data", function (chunk) {
+                str += chunk;
+            })
+
+            req.on("end", function () {
+                console.log(queryString(str))
+            })
+        }
+    
+    // ...
+}
+
+// ...
+```

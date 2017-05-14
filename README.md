@@ -15,7 +15,7 @@
 ----
 
 
-下面是平时接触过的一些前端资源，记录一下（亦是用作复习，因为经常遇到比如这个好像在哪看到过而找不到出处了）
+下面是平时接触过的一些觉得还不错的前端资源，记录一下（亦是用作复习，比如这个坑好像在哪见有人提过而忘记出处了）
 
 
 ----
@@ -78,6 +78,14 @@
 
 ----
 
+#### react
+
+[React实战入门](http://study.163.com/course/introduction.htm?courseId=1565012#/courseDetail?tab=1)
+
+----
+
+----
+
 
 #### node
 
@@ -103,6 +111,14 @@
 [Nunjucks](http://mozilla.github.io/nunjucks/cn/api.html)
 
 [Node.js 中文网](http://nodejs.cn/api/)
+
+[node源码解析 -- Stream探究](https://segmentfault.com/a/1190000003479884)
+
+[异步流程控制：co 模块](https://segmentfault.com/a/1190000002732081)
+
+[koa2从起步到填坑](http://www.jianshu.com/p/6b816c609669)
+
+[Koa 2入门](https://cnodejs.org/topic/5709959abc564eaf3c6a48c8)
 
 ~~[《Node.js全栈开发》](https://course.tianmaying.com/node)~~
 
@@ -136,6 +152,8 @@
 * [全栈增长工程师实战](https://github.com/phodal/growth-in-action)
 
 ~~[JavaScript全栈教程](http://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000)~~
+
+[全栈工程师之路-Node.js](https://github.com/i5ting/nodejs-fullstack#2%E4%BB%8E%E5%89%8D%E7%AB%AF%E8%BD%AC)
 
 
 ----
@@ -187,7 +205,7 @@
 ----
 
 
-#### 其他
+#### 其他（也包括一些未分类的）
 
 
 [git](http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000)
@@ -216,7 +234,7 @@
 
 [SegmentFault 技术周刊 Vol.17 - 听说你还没用上 AngularJS](https://segmentfault.com/a/1190000007866757)
 
-
+[ECMAScript5.1中文版](http://lzw.me/pages/ecmascript/#0)
 
 
 

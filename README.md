@@ -187,7 +187,7 @@
 
 ~~[你不知道的JavaScript（上卷）](http://www.ituring.com.cn/book/1488)~~ 看了两遍，收货良多，特别是关于 this 和闭包的地方
 
-~~《JavaScrip 忍者禁术》(https://book.douban.com/subject/3176860/)~~ 函数、闭包方面很赞
+~~[《JavaScrip 忍者禁术》](https://book.douban.com/subject/3176860/)~~ 函数、闭包方面很赞
 
 ~~[JavaScript模式](https://book.douban.com/subject/25767596/)~~ 各种设计模式，以后再来重读
 

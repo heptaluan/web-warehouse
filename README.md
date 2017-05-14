@@ -2,11 +2,11 @@
 
 算是一个大的汇总仓库吧，囊括了平时瞎捣鼓所涉及过的，了解过的，接触到的绝大部分东西
 
-包括一些平时的读书笔记，看过的一些教程视频的总结，捣鼓的各种练手 ```demo```， 造的一些小轮子，等等等等
-
 平时的业余时间大部分都花在了这个仓库和个人博客（[hanekaoru's Blog](http://hanekaoru.com/)）上面
 
-总之，就算是记录自己的一个学习历程吧，不定时更新，仅作学习记录，提醒自己没事刷一刷（~~而不是闲的时候刷知乎，QQ群斗图~~）
+总之，就算是记录自己的一个学习历程吧，不定时更新，仅作学习记录
+
+提醒自己没事刷一刷（~~而不是闲的时候刷知乎，QQ群斗图~~）
 
 路还很遥远，一步一步来，每天进步一点点
 
@@ -14,11 +14,9 @@
 
 ----
 
-----
 
-下面是平时接触过的一些前端资源，不定时更新，没事刷一刷
+下面是平时接触过的一些前端资源，记录一下（亦是用作复习，因为经常遇到比如这个好像在哪看到过而找不到出处了）
 
-----
 
 ----
 
@@ -35,7 +33,6 @@
 ~~[精通JavaScript](https://book.douban.com/subject/3007076/)~~
  
 ~~[用原生JS替代jQuery](https://github.com/fa-ge/jQuery-is-out-of-date)~~
-
 
 ~~[你不知道的JavaScript（上卷）](https://book.douban.com/subject/26351021/)~~
 
@@ -111,10 +108,6 @@
 
 ~~[一起学 Node.js（N-blog）](https://github.com/nswbmw/N-blog)~~
 
-~~《node.js 开发指南》~~
-
-~~《了不起的Node.js》~~
-
 ~~[Node.js入门和实战](http://study.163.com/forum/detail/1003154433.htm)~~ 补充下基础知识
 
 ~~[nodejs小工具](http://study.163.com/course/courseMain.htm?courseId=1003588036)~~
@@ -153,9 +146,9 @@
 #### 数据库
 
 
-~~[MYSQL从入门到精通](https://github.com/hanekaoru/WebLearningNotes/blob/master/mysql/README.md)~~
+~~[MYSQL 数据库](https://github.com/hanekaoru/WebLearningNotes/blob/master/mysql/README.md)~~ 看了前五章，关于数据类型部分参考了下面这个
 
-~~[MYSQL 数据库](https://github.com/hanekaoru/WebLearningNotes/blob/master/mysql/README.md)~~
+~~[MYSQL从入门到精通](https://github.com/hanekaoru/WebLearningNotes/blob/master/mysql/README.md)~~ 看了前七节，后续内容比如表约束，高级查询，函数，触发器，权限管理等，等以后需要的时候在来继续深入学习
 
 
 ----
@@ -174,7 +167,19 @@
 
 ~~[JavaScript模式](https://book.douban.com/subject/11506062/)~~
 
-~~《JavaScrip 忍者禁术》~~
+~~[你不知道的JavaScript（上卷）](http://www.ituring.com.cn/book/1488)~~ 看了两遍，收货良多，特别是关于 this 和闭包的地方
+
+~~《JavaScrip 忍者禁术》(https://book.douban.com/subject/3176860/)~~ 函数、闭包方面很赞
+
+~~[JavaScript模式](https://book.douban.com/subject/25767596/)~~ 各种设计模式，以后再来重读
+
+~~[精通JavaScript](https://book.douban.com/subject/25767596/)~~ 前半部分还行
+
+~~[了不起的Node.js](https://book.douban.com/subject/25767596/)~~ 感觉还不如去看文档
+
+~~[Node.js开发指南](https://book.douban.com/subject/25767596/)~~ 入门作，可惜里面的案例实在太老了
+
+
 
 
 ----
@@ -210,6 +215,11 @@
 [前端技能图谱](https://github.com/phodal/awesome-growth)
 
 [SegmentFault 技术周刊 Vol.17 - 听说你还没用上 AngularJS](https://segmentfault.com/a/1190000007866757)
+
+
+
+
+
 
 
 

@@ -10,13 +10,39 @@
 
 路还很遥远，一步一步来，每天进步一点点
 
+总的方向：react（vue） + node
+
 ----
 
-#### 目录
+----
 
-2016.10 开始记录
+下面是平时接触过的一些前端资源，不定时更新，没事刷一刷
 
-总的方面：react + node
+----
+
+----
+
+#### js
+
+[ECMAScript 6 入门](http://es6.ruanyifeng.com/) 
+
+[ES6精讲](http://study.163.com/course/introduction.htm?courseId=1003632012#/courseDetail?tab=1)  这个先丢在这，更新挺慢的，讲的还可以，更新了再来继续
+
+~~[es6-cheatsheet](https://github.com/DrkSephy/es6-cheatsheet)~~
+
+~~中文地址：[ES6 手册](https://qiutc.me/post/es6-cheatsheet.html)~~
+
+~~[精通JavaScript](https://book.douban.com/subject/3007076/)~~
+ 
+~~[用原生JS替代jQuery](https://github.com/fa-ge/jQuery-is-out-of-date)~~
+
+
+~~[你不知道的JavaScript（上卷）](https://book.douban.com/subject/26351021/)~~
+
+~~[Node.js教程第五步：用VUE.JS学ES6](http://study.163.com/course/introduction/1003506010.htm)~~ 标题党，大体过了一遍，感觉还是去看《ECMAScript 6 入门》比较靠谱
+
+
+----
 
 ----
 
@@ -36,14 +62,25 @@
 
 [Vue2.0文档](https://vuefe.cn/guide/) 
 
-[《Javascript 之 Vue.JS》（第二部分）](http://study.163.com/course/introduction/1003380002.htm#/courseDetail)
+[《Javascript 之 Vue.JS》（第一，二部分）](http://study.163.com/course/introduction/1003380002.htm#/courseDetail)
 
 [vue2.0-tutorial](https://github.com/hanekaoru/vue-tutorial)
 
 [vue2.0之50分钟入门](http://study.163.com/course/introduction/1003606075.htm#/courseDetail)
 
+~~[vuejs-learn](https://github.com/bhnddowinf/vuejs-learn)~~
+
+~~[Vue2.0文档](https://vuefe.cn/guide/)~~ 刷完基础部分，进阶部分以后再来填坑
+
+~~[vuejs入门基础](http://www.imooc.com/learn/694)~~
+
+~~[Vue 1.0文档](http://vuejs.org.cn/guide/)~~ 2.0 都出来了，这个直接弃了
+
 
 ----
+
+----
+
 
 #### node
 
@@ -70,14 +107,32 @@
 
 [Node.js 中文网](http://nodejs.cn/api/)
 
+~~[《Node.js全栈开发》](https://course.tianmaying.com/node)~~
+
+~~[一起学 Node.js（N-blog）](https://github.com/nswbmw/N-blog)~~
+
+~~《node.js 开发指南》~~
+
+~~《了不起的Node.js》~~
+
+~~[Node.js入门和实战](http://study.163.com/forum/detail/1003154433.htm)~~ 补充下基础知识
+
+~~[nodejs小工具](http://study.163.com/course/courseMain.htm?courseId=1003588036)~~
+
+~~[Node.js进阶教程第一步(基础篇)](http://study.163.com/course/courseMain.htm?courseId=1003228034)~~
+
+~~[七天学会NodeJS](http://nqdeng.github.io/7-days-nodejs/)~~
+
+
 ----
+
+----
+
 
 #### 全栈
 
 
 [全栈](https://github.com/ruanyf/jstraining)
-
-
 
 [大前端修炼之道](https://github.com/phodal/fe)
 
@@ -87,8 +142,26 @@
 
 * [全栈增长工程师实战](https://github.com/phodal/growth-in-action)
 
+~~[JavaScript全栈教程](http://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000)~~
+
 
 ----
+
+----
+
+
+#### 数据库
+
+
+~~[MYSQL从入门到精通](https://github.com/hanekaoru/WebLearningNotes/blob/master/mysql/README.md)~~
+
+~~[MYSQL 数据库](https://github.com/hanekaoru/WebLearningNotes/blob/master/mysql/README.md)~~
+
+
+----
+
+----
+
 
 #### 书籍
 
@@ -99,11 +172,18 @@
 
 [MySQL 书籍](http://mingxinglai.com/cn/2015/12/material-of-mysql/)
 
+~~[JavaScript模式](https://book.douban.com/subject/11506062/)~~
+
+~~《JavaScrip 忍者禁术》~~
+
+
+----
 
 ----
 
 
 #### 其他
+
 
 [git](http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000)
 
@@ -133,73 +213,7 @@
 
 
 
-----
-
-### 2017
-
-[ECMAScript 6 入门](http://es6.ruanyifeng.com/) 
-
-[ES6精讲](http://study.163.com/course/introduction.htm?courseId=1003632012#/courseDetail?tab=1)  这个先丢在这，更新挺慢的，讲的还可以，更新了再来继续
-
-~~[Node.js教程第五步：用VUE.JS学ES6](http://study.163.com/course/introduction/1003506010.htm)~~ 大体过了一遍，感觉还是去看《ECMAScript 6 入门》比较靠谱
-
-~~[MYSQL 数据库](https://github.com/hanekaoru/WebLearningNotes/blob/master/mysql/README.md)~~
-
-~~[Node.js入门和实战](http://study.163.com/forum/detail/1003154433.htm)~~ 补充下基础知识
-
-~~[MYSQL从入门到精通](https://github.com/hanekaoru/WebLearningNotes/blob/master/mysql/README.md)~~
-
-~~[JavaScript全栈教程](http://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000)~~
-
-~~[nodejs小工具](http://study.163.com/course/courseMain.htm?courseId=1003588036)~~
-
-~~[Node.js进阶教程第一步(基础篇)](http://study.163.com/course/courseMain.htm?courseId=1003228034)~~
-
-~~[七天学会NodeJS](http://nqdeng.github.io/7-days-nodejs/)~~
-
-~~[用原生JS替代jQuery](https://github.com/fa-ge/jQuery-is-out-of-date)~~
-
-~~[JavaScript模式](https://book.douban.com/subject/11506062/)~~
-
-~~[JavaScript全栈](http://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000)~~
 
 
-### 2016
-
-##### JS
-
-~~[es6-cheatsheet](https://github.com/DrkSephy/es6-cheatsheet)~~
-
-~~中文地址：[ES6 手册](https://qiutc.me/post/es6-cheatsheet.html)~~
-
-~~[精通JavaScript](https://book.douban.com/subject/3007076/)~~
- 
-~~《JavaScrip 忍者禁术》~~
-
-~~[你不知道的JavaScript（上卷）](https://book.douban.com/subject/26351021/)~~
 
 
-##### Node
-
-~~[《Node.js全栈开发》](https://course.tianmaying.com/node)~~
-
-~~[一起学 Node.js（N-blog）](https://github.com/nswbmw/N-blog)~~
-
-~~《node.js 开发指南》~~
-
-~~《了不起的Node.js》~~
-
-
-##### Vue
-
-~~[《Javascript 之 Vue.JS》（第一部分）](http://study.163.com/course/introduction.htm?courseId=1003291032#/courseDetail)~~
-
-~~[《Javascript 之 Vue.JS》（第二部分）](http://study.163.com/course/introduction/1003380002.htm#/courseDetail)~~
-
-~~[vuejs-learn](https://github.com/bhnddowinf/vuejs-learn)~~
-
-~~[Vue2.0文档](https://vuefe.cn/guide/)~~ 刷完基础部分，进阶部分以后再来填坑
-
-~~[vuejs入门基础](http://www.imooc.com/learn/694)~~
-
-~~[Vue 1.0文档](http://vuejs.org.cn/guide/)~~ 2.0 都出来了，这个直接弃了

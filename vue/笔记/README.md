@@ -274,9 +274,17 @@ var vm = new Vue({
 
 即定义一个 script 标签，在内部来添加模版，注意：需要添加一个自定义的 type 类型，不然会被解析
 
+特别需要注意的一个就是，模版里面只能有一个根元素，即只能 ```<div><span></span></div>``` 而不能 ```<div></div><span></span>```
+
 ```js
-<script type="x-templae" id="tem">
-    <h1>hello world</h1>
+<script type="text/x-templae" id="tem">
+    <h1>
+        <span>hello world</span>
+        <ul>
+            <li>111</li>
+            <li>222</li>
+        </ul>
+    </h1>
 </script>
 
 var vm = new Vue({
@@ -297,6 +305,186 @@ var vm = new Vue({
 
 第二种方式是比较推荐的一种
 
-```js
+就是将 sceipt 标签替换成 template
 
+```js
+<template id="tem">
+    <h1>
+        <span>hello world</span>
+        <ul>
+            <li>111</li>
+            <li>222</li>
+        </ul>
+    </h1>
+    
+</template>
 ```
+
+
+#### 动态组件
+
+组件也可以动态的去渲染，比如上例上的 ```<hello></hello>```，需要注意的是：写法是固定的，即 ```<component :is="组件的名称"></component>```
+
+```js
+var vm = new Vue({
+    el: "#box",
+    data: {
+        // 默认显示 a组件
+        a: "aaa"
+    },
+    components: {
+        "aaa": {
+            template: "<h1>a组件</h1>"
+        },
+        "bbb": {
+            template: "<h1>b组件</h1>"
+        }
+    }
+})
+
+// =====================
+<div id="box">
+    <input type="button" @click="a='aaa'" value="aaa">
+    <input type="button" @click="a='bbb'" value="bbb">
+    <component :is="a"></component>
+</div>
+```
+
+
+
+#### 父子组件
+
+```js
+var vm = new Vue({
+    el: "#box",
+    data: {},
+    components: {
+        "aaa": {
+            template: "<h1><span>这是aaa组件</span><bbb></bbb></h1>",
+            components: {
+                "bbb": {
+                    template: "<h6>这是bbb组件</h6>"
+                }
+            }
+        }
+    }
+})
+
+// ==========================
+<div id="box">
+    <aaa></aaa>
+</div>
+```
+
+需要注意两点，一个是子组件需要写在父组件的 components 当作，而不是写在渲染的地方，二就是之前提到过的，模版中只能存在一个根元素
+
+
+#### 父子组件间数据交互
+
+首先需要明确的是，vue 在默认情况下，子组件无法直接访问父组件的数据（这个时候就需要使用传递），就如下面的例子，定义在父组件中的数据只能父组件自己使用，而子组件是无法继承得到的，即 ```<bbb></bbb>``` 中的 ```{{msg}}``` 是无法获取到数据的
+
+```js
+var vm = new Vue({
+    el: "#box",
+    data: {},
+    components: {
+        "aaa": {
+            data () {
+                return {
+                    msg: "父组件的数据"
+                }
+            },
+            template: "<h1><span>{{msg}}</span><bbb>{{msg}}</bbb></h1>",
+            components: {
+                "bbb": {
+                    template: "<h6>这是bbb组件</h6>"
+                }
+            }
+        }
+    }
+})
+```
+
+如果需要进行数据传递，可以使用 props，为了便于理解先将模版写在外部
+
+```js
+<template id="tem">
+    <h1>
+        父组件的数据：<span>111</span><br>
+        子组件的数据：<bbb></bbb>
+    </h1>
+</template>
+```
+
+如上所示，大致原理就是，在 id 为 tem 的模版当作，在子组件当作自定义一个属性（比如下面的 bmsg），然后利用子组件身上绑定的这个属性将父元素中的数据传递到子组件当中，然后子组件来接收即可，同理，需要注意接收到的数据在渲染的时候需要写在子组件的 components 中，而不是 template 中
+
+```js
+<template id="tem">
+    <h1>
+        父组件的数据：<span>111</span><br>
+        子组件的数据：<bbb :b-msg="msg"></bbb>
+    </h1>
+</template>
+
+// ==========================
+
+var vm = new Vue({
+    el: "#box",
+    data: {},
+    components: {
+        "aaa": {
+            data () {
+                return {
+                    msg: "父组件的数据"
+                }
+            },
+            template: "#tem",
+            components: {
+                "bbb": {
+                    template: "<span>{{bMsg}}</span>",
+                    props: ["bMsg"]
+                } 
+            }
+        }
+    }
+})
+```
+
+几个注意事项，一个是在自定义组件的时候，名称如果使用的是 b-msg 这样的方式，那么在接收的时候，就需要写成 bMsg，否则会报错，另外一个是 props 的两种定义方式，一种是常规的使用数组的形式，比如上面的 ```["bMsg"]```，另外一种就是写成一个对象的形式，这样同时也可以来进行数据验证，比如：
+
+```js
+<template id="tem">
+    <h1>
+        父组件的数据：<span>111</span><br>
+        子组件的数据：<bbb :b-msg="msg" :b-msg2="msg2"></bbb>
+    </h1>
+</template>
+
+// ===================
+var vm = new Vue({
+    el: "#box",
+    data: {},
+    components: {
+        "aaa": {
+            data () {
+                return {
+                    msg: "父组件的数据",
+                    msg2: 222
+                }
+            },
+            template: "#tem",
+            components: {
+                "bbb": {
+                    template: "<span>{{bMsg}} ---- {{bMsg2}}</span>",
+                    props: {
+                        bMsg: String,
+                        bMsg2: Number
+                    }
+                } 
+            }
+        }
+    }
+})
+```
+
+如果传递过来的数据不是 props 指定的类型，则会报错

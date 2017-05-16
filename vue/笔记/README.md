@@ -146,3 +146,157 @@ new Vue({
 ```
 
 还有两个用的不多的 vm.$destory（销毁对象） 和 vm.$log（查看现在数据的状态）
+
+
+## 组件
+
+#### 第一种方式
+
+```js
+// 全局组件
+var Com = Vue.extend({
+    template: "<h1>hello world</h1>"
+})
+
+Vue.component("hello", Com);
+
+var vm = new Vue({
+    el: "#box",
+    data: {}
+})
+
+// ==================
+<div id="box">
+    <hello></hello>
+</div>
+```
+
+需要注意的是，如果组件里面要放数据，比如下面这样是不行的
+
+```js
+var Com = Vue.extend({
+    data: {
+        msg: "hello world"
+    },
+    template: "<h1>{{ msg }}</h1>"
+})
+```
+
+因为 data 必须是函数的形式，函数必须返回一个对象（json）
+
+```js
+var Com = Vue.extend({
+    data () {
+        return {
+            msg: "hello world"
+        }
+    },
+    template: "<h1>{{ msg }}</h1>"
+})
+```
+
+这样就可以正常运行了，其他的一些操作就跟正常情况下一样了，比如添加事件
+
+```js
+var Com = Vue.extend({
+    data() {
+        return {
+            msg: "hello world"
+        }
+    },
+    methods: {
+        change: () {
+            this.msg = "word hello"
+        }
+    },
+    template: "<h1 @click='change'>{{ msg }}</h1>"
+})
+```
+
+如果想变为局部组件，只需要将 Com 对象添加到根组件（vm）内部即可，但是 component 会变成 components（注意有个 s）
+
+```js
+var Com = Vue.extend({
+    data() {
+        return {
+            msg: "hello world"
+        }
+    },
+    methods: {
+        change: function () {
+            this.msg = "word hello"
+        }
+    },
+    template: "<h1 @click='change'>{{ msg }}</h1>"
+})
+
+var vm = new Vue({
+    el: "#box",
+    data: {},
+    components: {
+        "hello": Com
+    }
+})
+```
+
+#### 第二种方式
+
+也就是第一种的简写模式，添加事件等同上面一样
+
+```js
+// 全局组件
+Vue.component("hello", {
+    template: "<h1>hello world</h1>"
+})
+
+var vm = new Vue({
+    el: "#box",
+    data: {}
+})
+
+// 局部组件
+var vm = new Vue({
+    el: "#box",
+    data: {},
+    components: {
+        "hello": {
+            template: "<h1>hello world</h1>"
+        }
+    }
+})
+```
+
+#### 配合模版来使用
+
+上面那种方式只适合单个标签来使用，当模版内标签多的时候就不起作用了，这个时候可以采取下面的方式
+
+第一种方式（使用较少）
+
+即定义一个 script 标签，在内部来添加模版，注意：需要添加一个自定义的 type 类型，不然会被解析
+
+```js
+<script type="x-templae" id="tem">
+    <h1>hello world</h1>
+</script>
+
+var vm = new Vue({
+    el: "#box",
+    data: {},
+    components: {
+        "hello": {
+            template: "#tem"
+        }
+    }
+})
+
+// ===================
+<div id="box">
+    <hello></hello>
+</div>
+```
+
+第二种方式是比较推荐的一种
+
+```js
+
+```

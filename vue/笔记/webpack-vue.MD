@@ -2,6 +2,8 @@
 
 注：webpack 和 vue 的版本均在 2.0 以上
 
+源码见：[webpack-vue](https://github.com/hanekaoru/WebLearningNotes/tree/master/vue/webpack-vue)
+
 ## 创建目录
 
 大致目录结构如下：

@@ -1,17 +1,22 @@
-vue 版本基于 1.0.28，仅做下笔记记录，环境就不去配置了
+仅做下笔记记录，环境就不去配置了，如果要配置，在配置的时候，vue 版本最好选用 1.x
+
+因为在 2.0 中，很多方法都变了
 
 ## vue-router
 
-目录结构如下：
+完成后目录结构如下：
 
 ```js
 ├── App.vue             首页组件
 ├── index.html          首页，提供组件容器
 ├── main.js             主程序
 ├── router.config.js    路由模块    
-├── components          组件视图（views）
-│   ├── Home.vue
-│   └── News.vue
+└── components          组件视图（views）
+    ├── Home.vue
+    ├── News.vue
+    ├── Login.vue
+    ├── Reg.vue
+    └── Detail.vue
 ```
 
 首先新建一个 index.html，来放置我们的组件
@@ -114,26 +119,10 @@ export default {
     <h1>用户登录页</h1>
 </template>
 
-<script>
-    
-</script>
-
-<style>
-
-</style>
-
 // Reg.vue
 <template>
     <h1>用户注册页</h1>
 </template>
-
-<script>
-    
-</script>
-
-<style>
-
-</style>
 ```
 
 然后去路由配置文件导入两个相应的子模版，然后设置子路由
@@ -170,3 +159,65 @@ export default {
 这样就成功的设置了两个子路由
 
 
+## 新闻分页
+
+访问网站的时候经常会遇到新闻详情页，详情页通过看 url 可以发现，其实新闻对应的就是 news001.html，news002.html 这样的路径，使用路由同样可以实现这样的功能
+
+我们可以新建一个用于新闻展示的模版，然后在新闻页下新增两个新闻详情的路由：
+
+```js
+// News.vue
+<template>
+    <div id="box">
+        <a v-link={path: "/news/detail/001"}>第一条新闻</a>
+        <a v-link={path: "/news/detail/001"}>第二条新闻</a>
+
+        <router-view></router-view>
+    </div>
+</template>
+
+
+// Detail.vue
+<template>
+    <div>
+        {{ $router.params | json }}
+    </div>
+</template>
+```
+
+然后去路由配置文件中设置子路由
+
+```js
+// router.config.js
+// 配置路由
+
+// 第一步：定义（路由）组件
+import Home from "./components/Home.vue"
+import News from "./components/News.vue"
+import Login from "./components/Login.vue"
+import Reg from "./components/Reg.vue"
+import Detail from "./components/Detail.vue"
+
+// 第三步：定义路由
+export default {
+    "/home": {
+        component: Home,
+        subRouter: {
+            "/login": {
+                component: Login
+            },
+            "/reg": {
+                component: Reg
+            }
+        }
+    },
+    "/news": {
+        component: News,
+        subRouter: {
+            "/detail/:id": {
+                component: Detail
+            }
+        }
+    }
+}
+```

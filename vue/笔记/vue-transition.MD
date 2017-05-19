@@ -87,3 +87,74 @@ p {
 ```
 
 核心步骤是二，四两步，.fade-leave 理论上不写也是可以实现动画效果的，但是官方推荐加上
+
+
+----
+
+----
+
+## 动画事件
+
+简单来说，就是在动画执行的各个阶段会有相关的事件触发，这里结合 animate.css 来使用
+
+基本模版如下，注意，这个时候不再需要 name 属性了
+
+```js
+<div id="box">
+    <input type="button" value="按钮" @click="show=!show">
+
+    <transition enter-active-class="bounceInLeft" leave-active-class="bounceOutRight">
+        <p v-show="show" class="animated"></p>
+    </transition>        
+</div>
+```
+
+下面是一些相关事件：
+
+```js
+new Vue({
+    el: "#box",
+    data: {
+        show: fasle
+    },
+    methods: {
+        beforeEnter: (el) => {
+            console.log(`动画 enter 之前`)
+        },
+        enter: (el) => {
+            console.log(`动画 enter 进入`)
+        },
+        afterEnter: (el) => {
+            console.log(`动画 进入 之后`)
+            el.style.background = "blue";
+        },
+        beforeLeave: (el) => {
+            console.log(`动画 leave 之前`)
+        },
+        leave: (el) => {
+            console.log(`动画 leave`)
+        },
+        afterLeave: (el) => {
+            console.log(`动画 leave 之后`)
+            el.style.background = "red";
+        }
+
+    }
+})
+```
+
+
+## 多个元素的动画
+
+多个元素的动画就不能再使用 transition 组件了，这个时候要使用 transition-group（记得需要配合 :key 来使用）
+
+关于 :key 一般都是循环出来的，用于标识 index 
+
+```js
+// 记得加上 :key
+<transition-group enter-active-class="zoomInLeft" leave-active-class="zoomOutRight">
+    <p v-show="show" class="animated" v-for="(val, index) in lists" :key="index">
+        {{ val }}
+    </p>
+</transition-group>  
+```

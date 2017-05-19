@@ -158,3 +158,5 @@ new Vue({
     </p>
 </transition-group>  
 ```
+
+基于以上全部，利用 vue + animate.css 实现的一个简易动画效果，地址见：[vue-transition](https://github.com/hanekaoru/WebLearningNotes/blob/master/vue/demos/vue-transition.html)

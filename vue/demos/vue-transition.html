@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>vue-transition</title>
+
+    <script src="https://cdn.bootcss.com/vue/2.3.3/vue.js"></script>
+    <link href="https://cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">
+    <style>
+    p {
+        width: 100px;
+        height: 100px;
+        background: red;
+        margin: 20px auto;
+    }
+    </style>
+
+    <script>
+        
+        window.onload = function () {
+            new Vue({
+                el: "#box",
+                data: {
+                    show: "",
+                    list: ["apple", "banana", "orange", "pear"]
+                },
+                computed: {
+                    lists () {
+                        var arr = [];
+                        this.list.forEach( function (val) {
+                            if (val.indexOf(this.show) != -1) {
+                                arr.push(val)
+                            }
+                        }.bind(this));
+                        return arr;
+                    }
+                }
+            })
+        }
+
+    </script>
+</head>
+
+<body>
+
+<div id="box">
+    <input type="text" v-model="show">
+
+    <transition-group enter-active-class="zoomInLeft" leave-active-class="zoomOutRight">
+        <p v-show="show" class="animated" v-for="(val, index) in lists" :key="index">
+            {{ val }}
+        </p>
+    </transition-group>      
+</div>
+    
+
+</body>
+
+</html>

@@ -44,3 +44,89 @@ new Vue({
     // ...
 })
 ```
+
+
+## 路由嵌套
+
+例如访问 user/username
+
+首先新增一个用户的组件
+
+```js
+var UserDetail = {
+    template: `<div>张三</div>`
+}
+```
+
+然后来配置子路由，需要注意的是，这里不在使用 subRouter，而是换成了 children
+
+```js
+const routers = {
+    { 
+        path: "/User",
+        component: "User",
+        children: [
+            { path: "username", component: UserDatile }
+        ] 
+    }
+}
+```
+
+## 设置参数
+
+例如访问：
+
+```js
+/user/zhangsan/age/10
+
+/user/lisi/age/20
+
+/user/wangwu/age/30
+```
+
+设置组件：
+
+```js
+var User={ template:`
+<div>
+    <h3>我是用户信息</h3>
+    <ul>
+        <li>
+            <router-link to="/user/zhangsan/age/10">zhangsan</router-link>
+        </li>
+        <li>
+            <router-link to="/user/lisi/age/20">lisi</router-link>
+        </li>
+        <li>
+            <router-link to="/user/wangwu/age/30">wangwu</router-link>
+        </li>
+    </ul>
+    <div>
+        <router-view></router-view>
+    </div>
+</div>
+` };
+```
+
+再配置路由，这个时候就不再是 username 了
+
+```js
+//配置路由
+const routes=[
+    {
+        path:"/user",
+        component:User,
+        children:[
+            { path: ":username/age/:age", component: UserDetail }
+        ]
+    }
+];
+```
+
+## 路由实例的方法
+
+```js
+router.push({ path: "home" });  // 直接添加一个路由（切换路由），本质是向浏览器的历史记录中增加了一条记录
+
+router.replace({ path: "home" });  // 替换路由，跟上面其实是一样的，但是不会增加了一条记录
+```

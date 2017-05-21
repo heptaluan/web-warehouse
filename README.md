@@ -1,5 +1,3 @@
-## 笔记记录
-
 算是一个大的汇总仓库吧，囊括了平时瞎捣鼓所涉及过的，接触过的绝大部分东西
 
 平时的业余时间大部分都花在了这个仓库和个人博客（[hanekaoru's Blog](http://hanekaoru.com/)）上面
@@ -39,9 +37,15 @@
 
 [js和jquery懒加载之可视区域加载](http://www.haorooms.com/post/js_jquery_lazyload_viewload)
 
-~~[深入理解javascript原型和闭包](http://www.cnblogs.com/wangfupeng1988/p/3977924.html)~~
-
 [javascript异步编程](https://segmentfault.com/a/1190000002938132)
+
+[JavaScript 包管理器工作原理简介](https://zhuanlan.zhihu.com/p/24045251)
+
+[230行实现一个简单的MVVM](https://zhuanlan.zhihu.com/p/24451202)
+
+[不造个轮子，你还真以为你会写代码了？](https://zhuanlan.zhihu.com/p/24435564)
+
+~~[深入理解javascript原型和闭包](http://www.cnblogs.com/wangfupeng1988/p/3977924.html)~~
 
 ~~[理解Javascript的闭包](http://coolshell.cn/articles/6731.html)~~
 
@@ -61,11 +65,7 @@
 
 ~~[Node.js教程第五步：用VUE.JS学ES6](http://study.163.com/course/introduction/1003506010.htm)~~ 标题党
 
-[JavaScript 包管理器工作原理简介](https://zhuanlan.zhihu.com/p/24045251)
 
-[230行实现一个简单的MVVM](https://zhuanlan.zhihu.com/p/24451202)
-
-[不造个轮子，你还真以为你会写代码了？](https://zhuanlan.zhihu.com/p/24435564)
 
 
 #### 源码
@@ -89,20 +89,22 @@
 
 [touchweb手机网站图片加载方法(canvas加载和延迟加载)](http://www.haorooms.com/post/touchweb_canvas_lazyload)
 
-~~[移动端H5图片上传的那些坑](https://segmentfault.com/a/1190000006140042)~~
-
 [移动端HTML5音频与视频问题及解决方案](http://www.cnblogs.com/aaronjs/p/4812119.html)
+
+~~[移动端H5图片上传的那些坑](https://segmentfault.com/a/1190000006140042)~~
 
 
 #### css
+
+
+[深入理解BFC和Margin Collapse_BFC, margin collapse, clear, float ](http://www.w3cplus.com/css/understanding-bfc-and-margin-collapse.html)
+
+[精选文摘：BFC 神奇背后的原理](http://www.cnblogs.com/lhb25/p/inside-block-formatting-ontext.html)
 
 ~~['display'、'position' 和 'float' 的相互关系](http://www.cnblogs.com/jackyWHJ/p/3756087.html)~~
 
 ~~[CSS的margin塌陷（collapse）](http://blog.chinaunix.net/uid-22414998-id-3138656.html)~~
 
-[深入理解BFC和Margin Collapse_BFC, margin collapse, clear, float ](http://www.w3cplus.com/css/understanding-bfc-and-margin-collapse.html)
-
-[精选文摘：BFC 神奇背后的原理](http://www.cnblogs.com/lhb25/p/inside-block-formatting-ontext.html)
 
 
 #### 构建、依赖工具
@@ -133,13 +135,18 @@
 
 * [全栈增长工程师实战](https://github.com/phodal/growth-in-action)
 
-~~[JavaScript全栈教程](http://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000)~~
-
 [全栈工程师之路-Node.js](https://github.com/i5ting/nodejs-fullstack#2%E4%BB%8E%E5%89%8D%E7%AB%AF%E8%BD%AC)
 
+~~[JavaScript全栈教程](http://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000)~~
+
+
+
 ----
 
 ----
+
+----
+
 
 
 ## 库 / 框架
@@ -160,8 +167,6 @@
 
 [Vue2.0文档](https://vuefe.cn/guide/) 
 
-~~[《Javascript 之 Vue.JS》（第一，二部分）](http://study.163.com/course/introduction/1003380002.htm#/courseDetail)~~ 关于 elementUI 部分等以后遇到再来补
-
 [vue2.0-tutorial](https://github.com/hanekaoru/vue-tutorial)
 
 [vue2.0之50分钟入门](http://study.163.com/course/introduction/1003606075.htm#/courseDetail)
@@ -169,6 +174,8 @@
 [Vue.js 源码剖析](http://www.open-open.com/lib/view/open1439344021458.html)
 
 [vue.js的一些稍微复杂的案例](https://www.zhihu.com/question/38269617)
+
+~~[《Javascript 之 Vue.JS》（第一，二部分）](http://study.163.com/course/introduction/1003380002.htm#/courseDetail)~~ 关于 elementUI 部分等以后遇到再来补
 
 ~~[vuejs-learn](https://github.com/bhnddowinf/vuejs-learn)~~
 
@@ -191,6 +198,12 @@
 
 [使用 React.js 的渐进式 Web 应用程序](https://zhuanlan.zhihu.com/p/24369034)
 
+
+----
+
+----
+
+----
 
 
 ## 后端
@@ -277,6 +290,13 @@
 [测试驱动来学习mongoose](https://cnodejs.org/topic/54578d9b6537f4d52c414e09)
 
 
+----
+
+----
+
+----
+
+
 
 
 
@@ -291,7 +311,15 @@
 [可视化排序算法](http://jsdo.it/norahiko/oxIy/fullscreen)
 
 
-#### 书籍
+----
+
+----
+
+----
+
+
+
+## 书籍
 
 
 [你不知道的JavaScript（中卷）](https://book.douban.com/subject/26854244/)
@@ -315,14 +343,14 @@
 ~~[Node.js开发指南](https://book.douban.com/subject/25767596/)~~ 入门作
 
 
-
-
 ----
 
 ----
 
+----
 
-#### 课外阅读
+
+## 课外阅读
 
 
 [淘宝前端团队（FED）](http://taobaofed.org/)

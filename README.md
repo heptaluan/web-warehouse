@@ -257,15 +257,13 @@
 
 #### co
 
-[co & koa](https://nswbmw.github.io/N-club/1/1.3.html)
+~~[co & koa](https://nswbmw.github.io/N-club/1/1.3.html)~~
 
-[co 4.6源码解析](https://cnodejs.org/topic/576bdffa889605241796f7d9)
+~~[co 4.6源码解析](https://cnodejs.org/topic/576bdffa889605241796f7d9)~~
 
-[co 函数库的含义和用法](http://www.ruanyifeng.com/blog/2015/05/co.html)
+~~[co 函数库的含义和用法](http://www.ruanyifeng.com/blog/2015/05/co.html)~~
 
-[一起来实现co（Promise化的4.X版）](https://segmentfault.com/a/1190000002715797)  
-
-[异步流程控制：co 模块](https://segmentfault.com/a/1190000002732081)
+~~[异步流程控制：co 模块](https://segmentfault.com/a/1190000002732081)~~
 
 
 
@@ -354,6 +352,8 @@
 
 
 [淘宝前端团队（FED）](http://taobaofed.org/)
+
+[美团前端团队](http://fe.meituan.com/)
 
 [前端技能汇总](https://github.com/JacksonTian/fks)
 

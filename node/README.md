@@ -40,6 +40,12 @@
 
 ----
 
+#### express-blog
+
+一个 express + mongodb 搭建的一个博客系统
+
+地址见：[express-blog](https://github.com/hanekaoru/express-blog)
+
 
 #### movie-demo
 

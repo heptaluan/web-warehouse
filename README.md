@@ -10,7 +10,10 @@
 
 个人向前端资源汇总：[前端资源汇集](https://github.com/hanekaoru/WebLearningNotes/blob/master/前端资源汇集.md)
 
-个人工具函数库：[myBase](https://github.com/hanekaoru/myBase)
+个人常用 Node.js 第三方包整理：[工具函数库](https://github.com/hanekaoru/WebLearningNotes/blob/master/第三方包整理.md)
+
+个人工具函数库：[工具函数库](https://github.com/hanekaoru/WebLearningNotes/blob/master/工具函数库.md)
+
 
 相关资源帖（文章）可参加上面的前端资源汇，下面的都是一些篇幅相对比较多的长篇（文章）和教程（视频）一类的
 

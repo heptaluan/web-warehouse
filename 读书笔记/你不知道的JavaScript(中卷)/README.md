@@ -60,7 +60,7 @@ a.toPrecision(4);  // 42.59
 a.toPrecision(5);  // 42.590
 ```
 
-- 不仅可以用于数字变量，也可以用于数字常量（会被优先识别为数字常量的一部分，然后才是对象属性访问运算符）
+- 上面的方法不仅可以用于数字变量，也可以用于数字常量（会被优先识别为数字常量的一部分，然后才是对象属性访问运算符）
 
 ```js
 // 无效语法，因为 . 会被视为常量 42. 的一部分
@@ -77,7 +77,9 @@ a.toPrecision(5);  // 42.590
 
 #### 较小的数值
 
-- ES6 中提供了 Number.EPSILON 来比较两个数字是否相等（比如比较 0.1 + 0.2 和 0.3 是否相等，通常设置一个误差范围值）
+- ES6 中提供了 Number.EPSILON 来比较两个数字是否相等
+
+- 比如比较 0.1 + 0.2 和 0.3 是否相等，通常设置一个误差范围值（2^-52）
 
 ```js
 // ES6 之前
@@ -93,7 +95,6 @@ function numbersCloseEnoughToEqual (n1, n2) {
 var a = 0.1 + 0.2;
 var b = 0.3;
 
-numbersCloseEnoughToEqual(a, b);  // true
 numbersCloseEnoughToEqual(a, b);  // true
 ```
 
@@ -134,3 +135,41 @@ Number.isSafeInteger( Number.MAX_SAFE_INTEGER );  // true
 Number.isSafeInteger( Math.pow(2, 53) )  // true
 Number.isSafeInteger( Math.pow(2, 53) - 1 )  // false
 ```
+
+#### 值和引用
+
+- 简单值（即标量基本类型值，scalar primitive）总是通过值复制的方式来赋值 / 传递，包括 undefined，boolean，number，string，null 和 ES6 中的 Symbol
+
+- 复合值（compound value）-- 对象（包括数组和封装对象）和函数，则总是通过引用复制的方式来赋值 / 传递
+
+
+
+## 第三章 原生函数
+
+#### 内部属性 [[class]]
+
+- 通过构造函数（比如 new String("abc") ）创建出来的是封装了基本类型值（比如 "abc"）的封装对象（注意区分）
+
+- 所有 typeof 返回值为 "object" 的对象（如数组）都包含一个内部属性 [[class]]（可以使用 Object.prototype.toString() 查看）
+
+- 多数情况下，对象的内部 [[class]] 属性和创建该对象的内建原生构造函数相对应（null 和 undefined 原生构造函数并不存在，但是值仍为 null 和 undefined）
+
+#### 封装对象
+
+- 基本类型值没有 .length，.toString() 这样的属性和方法，需要通过封装对象才能访问，JavaScript 会自动为基本类型值包装一个封装对象
+
+- 需要注意，boolean 类型的封装对象（比如 new Bollean(false)）为真值，即总是返回 true
+
+#### 拆封
+
+使用 valueOf() 方法来进行拆封（隐式拆封）
+
+#### 原生函数作为构造函数
+
+- 构造函数 Array() 不要求必须带 new 关键字（Array(1, 2, 3) 和 new Array(1, 2, 3) 效果是一样的）
+
+- Array 构造函数只带一个参数的时候，该参数会被作为数组的预设长度，而不是充当数组中的一个元素
+
+- 永远不要创建和使用空单元数组（[ , , , ]）
+
+- 创建包含 undefined 单元的数组（非"空单元"），使用 Array.apply(null, { length: 3 });

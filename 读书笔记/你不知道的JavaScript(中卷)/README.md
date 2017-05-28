@@ -74,3 +74,63 @@ a.toPrecision(5);  // 42.590
 // 需要注意，下面语法也是有效的
 42 .toFixed(3);  // 42.000 （注意有个空格）
 ```
+
+#### 较小的数值
+
+- ES6 中提供了 Number.EPSILON 来比较两个数字是否相等（比如比较 0.1 + 0.2 和 0.3 是否相等，通常设置一个误差范围值）
+
+```js
+// ES6 之前
+if (!Number.EPSILON) {
+    Number.EPSILON = Math.pow(2, -52);
+}
+
+// ES6
+function numbersCloseEnoughToEqual (n1, n2) {
+    return Math.abs( n1 - n2 ) < Number.EPSILON
+}
+
+var a = 0.1 + 0.2;
+var b = 0.3;
+
+numbersCloseEnoughToEqual(a, b);  // true
+numbersCloseEnoughToEqual(a, b);  // true
+```
+
+#### 整数检测
+
+- （安全整数）能够 one-by-one 表示的整数，也就是说在 (-2^53, 2^53) 范围内，双精度数表示和整数是一对一的，反过来说，在这个范围以内，所有的整数都有唯一的浮点数表示，这叫做安全整数
+
+- （不安全整数）超过这个范围，会有两个或更多整数的双精度表示是相同的，反过来说，超过这个范围，有的整数是无法精确表示的，只能 round 到与它相近的浮点数（说到底就是科学计数法）表示，这种情况下叫做不安全整数
+
+- 是否是整数
+
+```js
+// ES6 之前
+if (Number.isInteger) {
+    Number.isInteger = function (num) {
+        return typeof num == "number" && num % 1 == 0;
+    }
+}
+
+// ES6
+Number.isInteger(42);  // true
+Number.isInteger(42.000);  // true
+Number.isInteger(42.3);  // false
+```
+
+- 是否是安全的整数
+
+```js
+// ES6 之前
+if (Number.isSafeInteger) {
+    Number.isSafeInteger = function (num) {
+        return num.isInteger(num) && Math.abs(num) <= Number.MAX_SAFE_INTEGER
+    }
+}
+
+// ES6
+Number.isSafeInteger( Number.MAX_SAFE_INTEGER );  // true
+Number.isSafeInteger( Math.pow(2, 53) )  // true
+Number.isSafeInteger( Math.pow(2, 53) - 1 )  // false
+```

@@ -10,7 +10,7 @@
 
 个人向前端资源汇总：[前端资源汇集](https://github.com/hanekaoru/WebLearningNotes/blob/master/前端资源汇集.md)
 
-个人常用 Node.js 第三方包整理：[工具函数库](https://github.com/hanekaoru/WebLearningNotes/blob/master/第三方包整理.md)
+个人常用 Node.js 第三方包整理：[第三方包整理](https://github.com/hanekaoru/WebLearningNotes/blob/master/第三方包整理.md)
 
 个人工具函数库：[工具函数库](https://github.com/hanekaoru/WebLearningNotes/blob/master/工具函数库.md)
 

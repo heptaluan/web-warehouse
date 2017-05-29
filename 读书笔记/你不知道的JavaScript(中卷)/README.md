@@ -300,9 +300,9 @@ JSON.stringify(a);  // { "b": 42 }
 ```js
 var a = new Boolean( false )
 
-var b = new Boolean( 0 )
+var b = new Number( 0 )
 
-var c = new Boolean( "" )
+var c = new String( "" )
 
 var d = new Boolean( a && b && c );  // true
 ```

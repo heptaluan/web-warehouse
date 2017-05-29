@@ -248,10 +248,75 @@ a.toJSON = function () {
 JSON.stringify(a);  // { "b": 42 }
 ```
 
-- JSON.stringify() 并不强制类型转换
+* JSON.stringify() 并不强制类型转换
 
- - 字符串，数字，布尔值和 null 的 JSON.stringify() 规则与 toString() 基本相同
+  * 字符串，数字，布尔值和 null 的 JSON.stringify() 规则与 toString() 基本相同
 
- - 如果传递给 JSON.stringify() 的对象中定义了 toJSON 方法，那么该方法会在字符串化之前调用，以便将对象转换为安全的 JSON 值
+  * 如果传递给 JSON.stringify() 的对象中定义了 toJSON 方法，那么该方法会在字符串化之前调用，以便将对象转换为安全的 JSON 值
 
 
+#### ToNumber
+
+- 抽象操作 ToNumber ==> true 转换为 1，false 转换为 0，undefined 转换为 NaN，null 转化为 0
+
+- 对象（包括数组）会首先被转换为相应的基本类型，如果返回的是非数字的基本类型，则再遵守以上规则将其强制转化为数字
+
+* 为了将值转换为相应的基本类型，定义了抽象操作 ToPrimitive
+
+  * 首先检查该值是否有 valueOf() 的方法，如果有并且返回基本类型值，就使用该值进行强制类型转换为这个原始值
+
+  * 如果没有，则调用 toString 方法，如果 toString 方法返回的是原始值（如果存在），则对象转换为这个原始值
+
+  * 如果 valueOf 和 toString 方法均没有返回原始值，则抛出 TypeError 异常
+
+- 使用 Object.create(null) 创建的对象 [[prototype]] 属性为空，并且没有 valueOf() 和 toString() 方法，因此无法进行强制类型转换
+
+
+#### ToBoolean
+
+* JavaScript 中的值可以分为两类
+
+  * 可以被强制类型转换为 false 的值
+
+  * 其他（被强制类型转换为 true 的值）
+
+
+* 定义了抽象操作 ToBoolean，以下都为假值
+
+  * undefined
+
+  * null
+
+  * false
+
+  * +0, -0, NaN
+
+  * ""
+
+* 假值的布尔强制类型转换结果为 false，可以理解为，除以上列表外都是真值（truthy）
+
+* 包装类型，封装了假值的对象为真值
+
+```js
+var a = new Boolean( false )
+
+var b = new Boolean( 0 )
+
+var c = new Boolean( "" )
+
+var d = new Boolean( a && b && c );  // true
+```
+
+* 字符串也都是真值
+
+```js
+var a = "false";
+var b = "0";
+var c = "''";
+
+var d = [];
+var e = {};
+var f = function () {}
+
+var d = new Boolean( a && b && c && d && e && f );  // true
+```

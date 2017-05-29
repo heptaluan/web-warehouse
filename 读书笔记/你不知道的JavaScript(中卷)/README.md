@@ -373,3 +373,114 @@ String(a);  // 2
   * 对于 ||：如果条件判断结果为 true 就返回第一个操作数的值，如果为 false 就返回第二个操作数的值
 
   * && 则相反，如果条件判断结果为 true，就返回第二个操作数的值，如果为 false 就返回第一个操作数的值
+
+
+
+#### == 和 ===
+
+- == 允许在相等比较中进行强制类型转换，而 === 不允许（== 检查值是否相等，=== 检查值和类型是否相等的说法不准确）
+
+* 字符串 和 数字 之间的比较（字符串 ==> 数字）
+
+  * 如果 type(x) 是数字，type(y) 是字符串，则返回 x == ToNumber(y) 的结果
+
+  * 如果 type(x) 是字符串，type(y) 是数字，则返回 ToNumber(x) == y 的结果
+
+* 其他类型 和 布尔类型 之间的比较（布尔 ==> 数字）
+
+  * 如果 type(x) 是布尔类型，则返回 ToNumber(x) == y 的结果
+
+  * 如果 type(y) 是布尔类型，则返回 x == ToNumber(y) 的结果
+
+* null 和 undefined 之间的比较
+
+  * 如果 x 是 null，y 是 undefined，则结果为 true
+
+  * 如果 x 是 undefined，y 是 null，则结果为 true
+
+* 对象 和 非对象 之间的比较（对象 ==> ToPrimitive(对象)）
+
+  * 如果 type(x) 是字符串或数字，type(y) 是对象，则返回 x == ToPrimitive(y) 的结果
+
+  * 如果 type(x) 是对象，type(y) 是字符串或数字，则返回 ToPrimitive(x) == y 的结果
+
+
+#### 极端情况
+
+```js
+[] == ![]         // true
+
+"" == "0"         // false
+
+2 == [2]          // true
+"" == [null]      // true
+
+0 == "\n"         // true
+0 == ""           // true
+0 == "0"          // true
+"0" == false      // true
+
+fasle == "false"  // false
+
+"true" == true    // false
+42 == "42"        // true
+"foo" == ["foo"]  // true
+
+// 七种比较少见的情况
+"0" == false;    // true
+
+false == 0       // true
+
+false == ""      // true
+
+false == []      // true
+
+"" == 0          // true
+
+"" == []         // true
+
+0 == []          // true
+```
+
+- 如果两边的值中有 true 或者 false，千万不要使用 ==
+
+- 如果两边的值中有 [], "" 或者 0，尽量不要使用 ==
+
+
+#### 抽象关系比较
+
+- 如果比较双方都是字符串，则按照字母顺序来进行比较
+
+```js
+// a 和 b 并没有转换为数字，因为 ToPrimitive 返回的是字符串
+// 所以这里比较的是 "42" 和 "043" 两个字符串
+var a = ["42"];  
+var b = ["043"];  
+
+a < b;  // false
+
+
+var a = [4, 2];     // ==> 转换后为 4, 2
+var b = [0, 4, 3];  // ==> 转换后为 0, 4, 3
+
+a < b;  // false
+
+
+var a = { b: 42 }  // ==> 转换后 a 为 [object, Object]
+var b = { b: 43 }  // ==> 转换后 b 为 [object, Object]
+
+a < b;  // false
+
+// 但是
+
+a == b;  // false
+
+a > b;  // false
+
+a <= b;  // true
+a >= b;  // true
+```
+
+- JavaScript 中 <= 是 不大于 的意思（即 !(a > b) 处理为 !(b < a)），同理，a >= b 处理为 b <= a
+
+- 相等比较有严格相等（===），关系比较却没有所谓的 "严格关系比较"，避免发生隐式类型转换，只能确保 a 和 b 为相同的类型

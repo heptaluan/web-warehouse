@@ -162,7 +162,7 @@ Number.isSafeInteger( Math.pow(2, 53) - 1 )  // false
 
 #### 拆封
 
-使用 valueOf() 方法来进行拆封（隐式拆封）
+- 使用 valueOf() 方法来进行拆封（隐式拆封）
 
 #### 原生函数作为构造函数
 
@@ -173,3 +173,85 @@ Number.isSafeInteger( Math.pow(2, 53) - 1 )  // false
 - 永远不要创建和使用空单元数组（[ , , , ]）
 
 - 创建包含 undefined 单元的数组（非"空单元"），使用 Array.apply(null, { length: 3 });
+
+#### 原生原型
+
+- 原生构造函数有自己的 .prototype 对象，例如将字符串值封装为字符串对象后，就能访问 String.prototype 中定义的方法
+
+
+
+## 第四章 强制类型转换
+
+- 将值从一种类型转换为另一种类型称为类型转换（type casting，显式），隐式的情况称为强制类型转换（coercion）
+
+- 强制类型转换总是返回标量基本类型值（字符串，数字，布尔），不会返回对象和函数
+
+- 类型转换（显式）发生在静态类型语言的编译阶段，而强制类型转换则发生在动态类语言的运行时（runtime）
+
+#### ToString
+
+- 对普通对象来说，除非自行定义，否则 toString() 返回内部属性 [[class]] 的值，如 "[object, Object]"
+
+- 将对象强制类型转换为 string 是通过 ToPrimitive 抽象操作来完成的
+
+- 数组默认的 toString() 方法经过了重新定义，将所有单元字符串化以后再使用 "," 连接起来
+
+```js
+var a = [1, 2, 3];
+
+a.toString();  // "1,2,3"
+```
+
+#### JSON 字符串化
+
+- JSON 字符串格式化（JSON.stringify()）和 toString() 的效果基本相同，只不过序列化的结果总是字符串
+
+- JSON.stringify() 在对象中遇到 undefined，function，symbol 时会自动将其忽略，在数组中则会返回 null（保证单元位置不变）
+
+```js
+JSON.stringify( undefined );  // undefined
+
+JSON.stringify( function(){} );  // undefined
+
+JSON.stringify( [1, undefined, function(){}, 4] ); // [1, null, null, 4]
+
+JSON.stringify( {a: 2, b: function(){} } );  // { a: 2 }
+```
+
+- 包含循环引用的对象执行 JSON.stringify() 会出错
+
+- 如果需要对含有非法 JSON 值的对象做字符串化，需要定义 toJSON() 方法来返回一个安全的 JSON 值
+
+```js
+var o = {}
+
+var a = {
+    b: 42,
+    c: o,
+    d: function () {}
+}
+
+// 在 a 中创建一个循环引用
+o.e = a;
+
+// 循环引用在这里会产生错误
+JSON.stringify(a);
+
+// 自定义 JSON 序列化
+// 此方法应该 返回一个能够被字符串化的安全的 JSON 值
+// 而不是 返回一个 JSON 字符串
+a.toJSON = function () {
+    // 序列化的时候仅包含 b
+    return { b: this.b }
+}
+
+JSON.stringify(a);  // { "b": 42 }
+```
+
+- JSON.stringify() 并不强制类型转换
+
+ - 字符串，数字，布尔值和 null 的 JSON.stringify() 规则与 toString() 基本相同
+
+ - 如果传递给 JSON.stringify() 的对象中定义了 toJSON 方法，那么该方法会在字符串化之前调用，以便将对象转换为安全的 JSON 值
+
+

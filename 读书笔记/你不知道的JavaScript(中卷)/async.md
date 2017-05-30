@@ -39,3 +39,128 @@ add(fromX(), fromY()).then(function (sum) {
 - 另外，一旦 Promise 决议，它就永远保持在这个状态，此时它就称为了不变值（immutable value），可以根据需求多次查看
 
 - 再次强调，Promise 决议后就是**外部不可变**的值，我们可以安全地把这个值传递给第三方，并确信它不会被有意无意的修改（特别是对于多方查看同一个 Promise 决议的情况）
+
+
+#### 链式流
+
+- 每次你对 Promise 调用 then()，它都会创建并返回一个新的 Promise，我们可以将其链接起来
+
+- 在完成或拒绝处理函数内部，如果返回一个值或抛出一个异常，新返回的（可链接的） Promise 就相应地决议
+
+- 如果完成或拒绝处理函数就返回一个 Promise，它将会被展开，这样一来，不管它的决议值是什么，都会成为当前 then() 返回的链接 Promise 的决议值
+
+
+## Promise 模式
+
+#### Promise.all([...])
+
+- Promise.all([...]) 接收一个参数，是一个数组，通常由 Promise 实例组成，从 Promise.all([...]) 调用返回的 promise 会收到一个完成消息，这是一个由所有传入 Promise 的完成消息组成的数组，与指定的顺序一致（与完成顺序无关）
+
+- 从 Promise.all([...]) 返回的主 promise 在且仅在所有的成员 promise 都完成后才会完成，如果这些 promise 中有任何一个被拒绝的话，主 Promise.all([...]) 的 promise 都会立即被拒绝，并丢弃来自其他所有 promise 的全部结果
+
+- 永远要记住为每个 promise 关联一个 拒绝/错误处理 处理函数，特别是从 Promise.all([...]) 返回的哪一个
+
+#### Promise.race([...])
+
+- Promise.race([...]) 也接受单个数组参数，这个数组由一个或多个 Promise 组成
+
+- 与 Promise.all([...]) 类似，一旦有任何一个 Promise 决议完成，Promise.race([...]) 都会完成，一旦有任何一个 Promise 决议为拒绝，它就会拒绝
+
+- 要注意，永远不要传递空数组，如果你传入了一个空数组，主 Promise.race([...]) Promise 永远不会决议，而不是立即决议
+
+## Promise API 概览
+
+#### new Promise(..)
+
+- 揭示构造器（revealing constructor） Promise(..) 必须与 new 一起使用，而且必须提供一个被同步/立即调用的回调函数
+
+- 这个函数被传入两个回调函数，它们作为 promise 的解析能力。我们通常将它们标识为 resolve(..) 和 reject(..)
+
+```js
+var p = new Promise(function (resolve, reject) {
+    // `resolve(..)` 给 解析/完成 的 promise
+    // `reject(..)` 给拒绝的 promise
+});
+```
+
+#### Promise.resolve(..) 和 Promise.reject(..)
+
+- 一个用于创建已被拒绝的 Promise 的简便方法是 Promise.reject(..)，所以这两个 promise 是等价的
+
+- 与 Promise.reject(..) 相似，Promise.resolve(..) 通常用来创建一个已完成的 Promise
+
+```js
+var p1 = new Promise( function(resolve,reject){
+    reject( "Oops" );
+} );
+
+var p2 = Promise.reject( "Oops" );
+```
+
+#### then(..) 和 catch(..)
+
+- 每个 Promise 实例（不是 Promise API 名称空间）都有 then(..) 和 catch(..) 方法，它们允许你为 Promise 注册成功或拒绝处理器
+
+- 一旦 Promise 被解析，它们中的一个就会被调用，但不是都会被调用，而且它们总是会被异步地调用
+
+- then(..) 接收两个参数，第一个用于完成回调，第二个用户拒绝回调。如果它们其中之一被省略，或者被传入一个非函数的值，那么一个默认的回调就会分别顶替上来。默认的完成回调简单地将值向下传递，而默认的拒绝回调简单地重新抛出（传播）收到的拒绝理由
+
+- catch(..) 仅仅接收一个拒绝回调作为参数，而且会自动的顶替一个默认的成功回调，换句话说，它等价于 then(null, ..)
+
+#### Promise.all([ .. ]) 和 Promise.race([ .. ])
+
+- 再次强调，如果一个空的 array 被传入 Promise.all([ .. ])，它会立即完成，但 Promise.race([ .. ]) 却会永远挂起，永远不会解析
+
+
+## Promise 限制
+
+#### 顺序的错误处理
+
+- 如果你构建一个不包含错误处理器的 Promise 链，这个链条的任意位置发生的任何错误都将沿着链条向下无限传播，直到被监听为止（通过在某一步上注册拒绝处理器）
+
+#### 单独的值
+
+- Promise 只能有一个单独的完成值或一个单独的拒绝理由
+
+- 通常的建议是构建一个包装值（比如object或array）来包含这些多个消息
+
+```js
+function foo(bar, baz) {
+    var x = bar * baz;
+
+    // 将两个promise返回
+    return [
+        Promise.resolve(x),
+        getY(x)
+    ];
+}
+
+Promise.all(
+    foo(10, 20)
+)
+.then(function (msgs) {
+    var x = msgs[0];
+    var y = msgs[1];
+
+    console.log(x, y);
+});
+```
+
+- 利用 ES6 的解构会更方便一些
+
+```js
+Promise.all(
+    foo(10, 20)
+)
+.then(function (msgs) {
+    var [x, y] = msgs;
+
+    console.log(x, y);    // 200 599
+});
+```
+
+#### 单次解析
+
+- Promise 的一个最固有的行为之一就是，一个 Promise 只能被解析一次（成功或拒绝）
+
+- 对于多数异步用例来说，你仅仅取用这个值一次，所以这工作的很好

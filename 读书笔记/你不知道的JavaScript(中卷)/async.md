@@ -231,3 +231,119 @@ console.log(res.value)  // 20
 * 然后调用 it.next() 指示生成器 *foo() 从当前位置开始继续运行，停在下一个 yield 处或者直到生成器结束
 
 * next() 的调用结果是一个对象，它有一个 value 属性，持有从 *foo() 返回的值（如果有的话），yield 会导致生成器在执行过程中发送一个值，有点类似于中间的 return
+
+
+#### 多个迭代器
+
+- 每次构建一个迭代器，实际上就隐式构建了生成器的一个实例，通过这个迭代器来控制的是这个生成器的实例
+
+```js
+function *foo () {
+    var x = yield 2;
+    z++;
+    var y = yield (x * z);
+    console.log(x, y, z);
+}
+
+var z = 1;
+
+var it1 = foo();
+var it2 = foo();
+
+var val1 = it1.next().value;  // 2  <== yield 2
+var val2 = it2.next().value;  // 2  <== yield 2
+
+// 调用 next() ==> x * z ==> x 为 (val2 * 10) / z 为 2（z++）  ==> 结果为 2 * 10 * 2 
+val1 = it1.next( val2 * 10 ).value;  // 40
+
+// 再次调用 next() ==> x * z ==> x 为 (val1 * 5) / z 为 3（z++）  ==> 结果为 40 * 5 * 3
+val2 = it2.next( val1 * 5 ).value;  // 600
+
+it1.next( val2 / 2 );  // 300 ==> x: 20, y: 300（600 / 2 然后发送出去）, z: 3
+it2.next( val1 / 4 );  // 10  ==> x: 200, y: 10 （40 / 4），z: 3
+```
+
+- *foo() 两个实例同时启动，两个 next() 分别从 yield 2 语句得到值为 2
+
+- val2 * 10 也就是 2 * 10，发送到第一个生成器实例 it1，因此 x 的值 为 20，z 从 1 递增到 2，然后 20 * 2 通过 yield 发出，将 val1 的值设为 40
+
+- val1 * 5 也就是 40 * 5，发送到第二个生成器实例 it2，因此 x 的值为 200，z 从 2 递增到 3，然后 200 * 3 通过 yield 发出，将 val2 的值设为 600
+
+- val2 / 2 也就是 600 / 2，发送到第一个生成器实例 it1，因此 y 的值为 300，然后打印 x y z（20， 300， 3）
+
+- val1 / 4 也就是 40 / 4，发送到第二个生成器实例 it2，因此 y 的值为 10，然后打印 x y z（200， 10， 3）
+
+
+
+## 迭代器
+
+- 迭代器是一个定义良好的接口，用于从一个生产者一步步得到一系列值，JavaScript 迭代器接口，与多语言类似，就是每次想要从生产者得到下一个值的时候调用 next()
+
+- 可以为我们的数字序列生成器实现标准的迭代器接口：
+
+```js
+var something = (function () {
+
+    var nextVal;
+
+    return {
+        // for .. of 需要
+        // [ .. ] 语法被称为 计算属性名，在对象术语定义中指指定一个表达式并用这个表达式的结果作为属性的名称
+        // 将 something 的值（迭代器 something 的接口）也构建成一个 iterable
+        // 现在它既是 iterable 也是 迭代器，然后我们把 something 传给 for..of 循环
+        // for..of 循环期望 something 是 iterable，于是它寻找并调用它的 Symbol.iterable 函数
+        // 我们将这个函数定义为就是简单的 return this，也就是把自身返回 
+        [Symbol.iterator]: function () { return this },
+        next: function () {
+            if (nextVal === undefined) {
+                nextVal = 1;
+            } else {
+                nextVal = (3 * nextVal) + 6;
+            }
+
+            return { done: false, value: nextVal }
+
+        }
+    }
+
+})()
+
+something.next();  // 1
+something.next();  // 9
+something.next();  // 33
+something.next();  // 105
+```
+
+- next() 调用返回一个对象，这个对象有两个属性，done 是一个 boolean 值，标识迭代器的完成状态，value 中放置迭代值
+
+- 需要注意的是，如果使用 for..of 来循环这个迭代器，记得要在里面放上 break，因为这个迭代器总是返回 done: false
+
+- 许多 JavaScript 的内建数据结构（ES6 开始），比如 array，也有默认的迭代器
+
+```js
+var a = [1, 3, 5, 7, 9]
+
+for (var v of a) {
+    console.log(v)
+}
+
+// 1, 3, 5, 7, 9
+```
+
+- 从 ES6 开始，从一个 iterable（可迭代） 中提取迭代器的方法是：iterable 并需支持一个函数，其名称是专门的 ES6 符号 Symbol.iterator
+
+- 调用这个函数的时候，它会返回一个迭代器（通常每次调用会返回一个全新的迭代器，虽然这一点不是必须的）
+
+- 比如上面的那个例子，我们也可以手工调用这个函数，然后使用它返回的迭代器
+
+```js
+var a = [1, 3, 5, 7, 9]
+
+var it = a[Symbol.iterator]();
+
+it.next().value  // 1
+it.next().value  // 3
+it.next().value  // 5
+...
+
+```

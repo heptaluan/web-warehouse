@@ -330,9 +330,9 @@ for (var v of a) {
 // 1, 3, 5, 7, 9
 ```
 
-- 从 ES6 开始，从一个 iterable（可迭代） 中提取迭代器的方法是：iterable 并需支持一个函数，其名称是专门的 ES6 符号 Symbol.iterator
+之前例子上的 something 对象叫做 迭代器，因为它的结构中有一个 next() 方法，而与其紧密相关的一个术语是 iterable（可迭代），即指一个包含可以在其值上迭代的迭代器的对象
 
-- 调用这个函数的时候，它会返回一个迭代器（通常每次调用会返回一个全新的迭代器，虽然这一点不是必须的）
+从 ES6 开始，从一个 iterable 中提取迭代器的方法是：iterable 必须支持一个函数，其名称是专门的 ES6 符号值 Symbol.iterator，调用这个函数的时候，它会返回一个迭代器，通常每次调用会返回一个全新的迭代器（）
 
 - 比如上面的那个例子，我们也可以手工调用这个函数，然后使用它返回的迭代器
 
@@ -346,4 +346,117 @@ it.next().value  // 3
 it.next().value  // 5
 ...
 
+```
+
+
+#### 迭代器 与 生成器
+
+* 迭代器（Iterator）
+
+  * 迭代器是一个每次访问集合序列中一个元素的对象，并跟踪该序列中迭代的当前位置。在 JavaScript 中迭代器是一个对象，这个对象提供了一个 next() 方法，next() 方法返回序列中的下一个元素
+
+  * 当序列中所有元素都遍历完成时，该方法抛出 StopIteration 异常
+
+  * 迭代器对象一旦被建立，就可以通过显式的重复调用 next()，或者使用 JavaScript 的 for..in 和 forEach 循环隐式调用
+  
+  * 迭代器可以自定义
+
+    * 1. 迭代一个表示范围(Range)的对象应该一个接一个的返回这个范围包含的数字
+
+    * 2. 一个树的叶子节点可以使用深度优先或者广度优先访问到
+
+    * 3. 迭代一个代表数据库查询结果的对象应该一行一行的返回，即使整个结果集尚未全部加载到一个单一数组
+
+    * 4. 作用在一个无限数学序列(像斐波那契序列)上的迭代器应该在不创建无限长度数据结构的前提下一个接一个的返回结果
+
+    * 5. JavaScript 允许你写自定义迭代逻辑的代码，并把它作用在一个对象上
+
+* 生成器（Generator）
+
+  * 生成器提供了很强大的功能：它允许你定义一个包含自有迭代算法的函数， 同时它可以自动维护自己的状态
+
+  * 生成器是可以作为迭代器工厂的特殊函数，如果一个函数包含了一个或多个 yield 表达式，那么就称它为生成器
+
+  * 当一个生成器函数被调用时，函数体不会即刻执行，它会返回一个 generator-iterator 对象，每次调用 generator-iterator 的 next() 方法，函数体就会执行到下一个 yield 表达式，然后返回它的结果
+
+  * 当函数结束或者碰到 return 语句，一个 StopIteration 异常会被抛出
+
+
+可以通过生成器实现之前的 something 无限数字序列生产者：
+
+```js
+function *something () {
+
+    var nextVal;
+
+    // 一般的程序中不推荐在没有 break/return 等这样的语句的情况下使用（会无限循环）
+    // 如果在生成器中有 yield 的话，因为生成器会在每次迭代中暂停，通过 yield 返回到主程序或事件循环队列中
+    while (true) {
+        if (nextVal === undefined) {
+            nextVal = 1;
+        } else {
+            nextVal = (3 * nextVal) + 6;
+        }
+
+        // 生成器会在每个 yield 处暂停，函数 *something () 的状态（作用域）会被保持，即意味着不再需要闭包在调用之间保持变量状态
+        yield nextVal;
+        
+    }
+} 
+```
+
+现在就可以通过 for..of 来循环
+
+```js
+// 不要把 something 当成一个值来使用，我们需要调用 something() 来构造一个生产者供 for..of 循环
+for (var v of something()) {
+    console.log(v)
+
+    // 不要死循环
+    if (v > 500) {
+        break;
+    }
+}
+```
+
+
+#### 停止生成器
+
+- 如果生成器有 try..finally 的话，在 for..of 循环内的 break 会触发 finally 语句
+
+```js
+function *something () {
+
+    try {
+        // ...
+    }
+
+    finally {
+        console.log(`cleaning up`)
+    }
+} 
+```
+
+- 也可以在外部通过 return(..) 来手动终止生成器的迭代器实例
+
+```js
+var it = something();
+
+for (var v of something()) {
+
+    console.log(v)
+
+    // 不要死循环
+    if (v > 500) {
+
+        // 完成生成器的迭代器
+        // 调用 it.return() 之后，它会立即终止生成器
+        // 它还会把返回的 value 设置为传入的 return(..) 的内容
+        // 现在也不需要包含 break 语句了，因为生成器的迭代器已经被设置为 done: true
+        // 所以 for..of 循环会在下一个迭代终止
+        console.log(it.return("cleaning up").value)
+
+        // 这里不需要 break
+    }
+}
 ```

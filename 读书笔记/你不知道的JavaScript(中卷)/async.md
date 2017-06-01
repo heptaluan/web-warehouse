@@ -460,3 +460,158 @@ for (var v of something()) {
     }
 }
 ```
+
+
+#### 生成器 + Promise
+
+- 获得 Promise 和生成器最大效用的最自然的方法就是 yield 出来一个 Promise，然后通过这个 Promise 来控制生成器的迭代器
+
+一个基于 Promise 的 Ajax 例子：
+
+```js
+function foo (x, y) {
+    return request("http://url.com/?x=" + x + "&y=" + y)
+}
+
+foo(11, 31).then(function (text) {
+    console.log(text)
+}, function (err) {
+    console.log(err)
+})
+```
+
+然后改造成 生成器 + Promise 方式
+
+```js
+function foo (x, y) {
+    return request("http://url.com/?x=" + x + "&y=" + y)
+}
+
+function *main () {
+    try {
+        var text = yield foo(11, 31)
+        console.log(text)
+    } catch (err) {
+        console.log(err)
+    }
+}
+```
+
+最后来实现接收和链接 yield 出来的 promise，使它能够在决议之后恢复生成器
+
+```js
+var it = main();
+
+var p = it.next().value
+
+// 等待 promise 决议
+p.then(function (text) {
+    it.next(text)
+}, function (err) {
+    it.throw(err)
+})
+```
+
+如果想要能够实现 Promise 驱动的生成器，不管其内部有多少步骤呢？我们当然不希望每个生成器手工编写不同的 Promise 链
+
+
+#### 支持 Promise 的 Generator Runner
+
+一个工具函数 run（类似 co）
+
+```js
+function run(gen) {
+    var args = [].slice(arguments, 1), it;
+
+    // 在当前上下文中初始化生成器
+    it = gen.apply(this, args)
+
+    // 返回一个 promise 用于生成器完成
+    return Promise.resolve().then(function handleNext(value) {
+        // 对下一个 yield 出的值运行
+        var next = it.next(value)
+
+        return (function handleResult(next) {
+            // 生成器运行完毕了吗
+            if (next.done) {
+                return next.value
+
+                // 否则继续运行
+            } else {
+
+                // 成功就恢复异步循环，把决议的值发回生成器
+                // 如果 value 是被拒绝的 promise
+                // 就把错误传回生成器进行错误处理
+                return Promise.resolve(next.value).then(handleNext, function handleErr(err) {
+                    return Promise.resolve(it.throw(err)).then(handleResult)
+                })
+            }
+        })(next)
+    })
+}
+```
+
+使用
+
+```js
+function *main () {
+    // ...
+}
+
+run(main);
+```
+
+我们定义的 run(..) 返回一个 promise，一旦生成器完成，这个 promise 就会决议，或收到一个生成器没有处理的未捕获异常
+
+
+#### async 和 await
+
+前面的模式（生成器 yield 出 promise，然后控制生成器的迭代器来执行它，直到结束），如果我们无需库或工具函数来实现就更好了，在 ES7 中提供了 async 函数，形式大致如下
+
+```js
+function foo (x, y) {
+    return request("http://url.com/?x=" + x + "&y=" + y)
+}
+
+async function main () {
+    try {
+        var text = await foo(11, 31);
+        console.log(text)
+    } catch (err) {
+        console.log(err)
+    }
+}
+
+main()
+```
+
+main() 不再声明为生成器函数了，它现在是一类新的函数：async，最后也不再 yield 出 promise，而是用 await 等待它决议
+
+如果你 await 了一个 promise，async 函数会自动获知要做什么，它会暂停这个函数（就如生成器一样），直到 promise 决议
+
+
+#### 生成器中的 promise 并发
+
+```js
+function *foo () {
+    var results = yield Promise.all([
+        request("url1"),
+        request("url2")
+    ])
+
+    var [r1, r2] = results;
+
+    var r3 = yield request("http://url.com/?v=" + r1 + "," + r2)
+
+    console.log(r3)
+}
+
+// 使用之前定义的工具函数 run
+run(foo)
+```
+
+----
+
+----
+
+暂时完结，后面的生成器委托，消息委托等内容看起来有点绕，等前面这些内容消化完了再来继续深入

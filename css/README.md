@@ -20,6 +20,8 @@
 
   * [IFC](https://github.com/hanekaoru/WebLearningNotes/blob/master/css/IFC.md)
 
+  * [IE 中的 haslayout](https://github.com/hanekaoru/WebLearningNotes/blob/master/css/haslayout.md)
+
 
 * [line-height](https://github.com/hanekaoru/WebLearningNotes/blob/master/css/line-height.md)
 

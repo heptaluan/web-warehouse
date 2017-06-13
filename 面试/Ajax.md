@@ -1,10 +1,10 @@
 相关问题
 
-* 原生 ```Ajax``` 写法
+* 原生 ```ajax``` 写法
 
-* ```Ajax``` 改为 ```Promise```
+* ```ajax``` 改为 ```Promise```
 
-* ```Ajax``` 中 ```readyState``` 的取值有哪些，分别有什么含义
+* ```ajax``` 中 ```readyState``` 的取值有哪些，分别有什么含义
 
 * ```xhr2```
 
@@ -31,7 +31,7 @@
 ----
 
 
-## 原生 Ajax 写法
+## 原生 ajax 写法
 
 ```js
 var xhr = new xhrRequest();
@@ -88,7 +88,7 @@ xhr.send(data);
 ----
 
 
-## Ajax 改为 Promise
+## ajax 改为 Promise
 
 ```js
 function ajax (method, url, data) {
@@ -206,7 +206,7 @@ xhr.send(body)
 
 ```xhr``` 不能跨越，但 ```xhr2``` 新增了跨源资源共享的能力
 
-在服务器设置一些标头实现真正的跨域 ```Ajax``` 请求 可以跨某个域的 ```http``` 标头
+在服务器设置一些标头实现真正的跨域 ```ajax``` 请求 可以跨某个域的 ```http``` 标头
 
 ```js
 Access-Control-Allow-Origin: *
@@ -218,7 +218,7 @@ Access-Control-Allow-Origin: *
 
 这种跨域请求，称之为"简单请求"。简单请求包括 ```GET```、 ```HEAD``` 和 ```POST```（```POST``` 的 ```Content-Type``` 类型，仅限 ```application/x-www-form-urlencoded```、 ```multipart/form-data``` 和 ```text/plain```），并且不能出现任何自定义头（例如， ```X-Custom: 12345``` ），通常能满足 ```90%``` 的需求
 
-对于 ```PUT```、```DELETE``` 以及其他类型如 ```application/json``` 的 ```POST``` 请求，在发送 ```Ajax``` 请求之前，浏览器会先发送一个 ```OPTIONS``` 请求（称为 ```preflighted``` 请求）到这个 ```URL``` 上，询问目标服务器是否接受：
+对于 ```PUT```、```DELETE``` 以及其他类型如 ```application/json``` 的 ```POST``` 请求，在发送 ```ajax``` 请求之前，浏览器会先发送一个 ```OPTIONS``` 请求（称为 ```preflighted``` 请求）到这个 ```URL``` 上，询问目标服务器是否接受：
 
 ```js
 OPTIONS /path/to/resource HTTP/1.1
@@ -236,7 +236,7 @@ Access-Control-Allow-Methods: POST, GET, PUT, OPTIONS
 Access-Control-Max-Age: 86400
 ```
 
-浏览器确认服务器响应的 ```Access-Control-Allow-Methods``` 头确实包含将要发送的 ```Ajax``` 请求的 ```Method```，才会继续发送 ```Ajax```，否则，抛出一个错误
+浏览器确认服务器响应的 ```Access-Control-Allow-Methods``` 头确实包含将要发送的 ```ajax``` 请求的 ```Method```，才会继续发送 ```ajax```，否则，抛出一个错误
 
 
 #### document.domain

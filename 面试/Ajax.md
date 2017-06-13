@@ -80,6 +80,10 @@ xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 xhr.send(data);
 ```
 
+如果 ```ajax``` 指定为 ```post``` 但是未设置 ```content-type``` 或未指定键时，由于 ```content-type``` 为 ```text/plain```，动态页并未帮你处理成键值对的形式，所以你得自己使用 ```2``` 进制流数据生成对应的 ```string``` 类型的数据
+
+所以如果要生成键值对形式，你得指定 ```content-type``` 为 ```"application/x-www-form-urlencoded"```
+
 
 ----
 

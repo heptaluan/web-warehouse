@@ -34,7 +34,7 @@
 
 * [http](https://github.com/hanekaoru/WebLearningNotes/blob/master/面试/http.md)
 
-  * http 状态码常见有哪些
+  * ```http``` 状态码常见有哪些
 
   * 浏览器缓存机制
 

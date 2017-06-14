@@ -19,7 +19,7 @@
   * ```jQuery``` 中的 ```this``` 和 ```$(this)```
 
 
-* [Ajax](https://github.com/hanekaoru/WebLearningNotes/blob/master/面试/js/Ajax.md)
+* [Ajax](https://github.com/hanekaoru/WebLearningNotes/blob/master/面试/js/ajax.md)
 
   * 原生 ```Ajax``` 写法
 

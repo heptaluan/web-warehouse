@@ -39,26 +39,29 @@
 
   * 什么是 ```promise```
 
+* [怎么遍历对象（5 种方法）](https://github.com/hanekaoru/WebLearningNotes/blob/master/面试/js/遍历对象的方法.md)
+
+
 
 
 
 
 ## MVC
 
-* [MVC](https://github.com/hanekaoru/WebLearningNotes/blob/master/面试/MVC/mvc.md)
+* [MVC](https://github.com/hanekaoru/WebLearningNotes/blob/master/面试/mvc/mvc.md)
 
   * 什么是 ```MVC```，使用 ```MVC``` 的优缺点
 
   * ```Vue```/```Angular```/```React``` 区别
 
 
-* [angular](https://github.com/hanekaoru/WebLearningNotes/blob/master/面试/MVC/angular.md)
+* [angular](https://github.com/hanekaoru/WebLearningNotes/blob/master/面试/mvc/angular.md)
 
   * ```angular``` 原理
 
   * ```AngularJS``` 数据双向绑定原理
 
-* [vue](https://github.com/hanekaoru/WebLearningNotes/blob/master/面试/MVC/vue.md)
+* [vue](https://github.com/hanekaoru/WebLearningNotes/blob/master/面试/mvc/vue.md)
 
   * ```vue``` 响应式原理
 

@@ -45,14 +45,14 @@
 
 ## MVC
 
-* [MVC](https://github.com/hanekaoru/WebLearningNotes/blob/master/面试/mvc/mvc.md)
+* [MVC](https://github.com/hanekaoru/WebLearningNotes/blob/master/面试/MVC/mvc.md)
 
   * 什么是 ```MVC```，使用 ```MVC``` 的优缺点
 
   * ```Vue```/```Angular```/```React``` 区别
 
 
-* [angular](https://github.com/hanekaoru/WebLearningNotes/blob/master/面试/mvc/angular.md)
+* [angular](https://github.com/hanekaoru/WebLearningNotes/blob/master/面试/MVC/angular.md)
 
   * ```angular``` 原理
 

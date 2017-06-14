@@ -10,6 +10,10 @@
 
 * ```http``` 协议（三层握手/四次挥手）
 
+* 域名发散与收敛
+
+* 输入一个网址到页面展示所经历的过程
+
 
 ----
 
@@ -240,3 +244,15 @@ Cache-Control: must-revalidate         // 如果页面是过期的 则去服务�
 ## HTTP 协议（三层握手/四次挥手）
 
 见 [HTTP 与 TCP](http://hanekaoru.com/?p=803)
+
+----
+
+## 域名发散与收敛
+
+见 [HTTP 与 TCP](http://hanekaoru.com/?p=2297)
+
+----
+
+## 输入一个网址到页面展示所经历的过程
+
+见 [HTTP 与 TCP](http://hanekaoru.com/?p=1225)

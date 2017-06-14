@@ -19,13 +19,14 @@
   * ```jQuery``` 中的 ```this``` 和 ```$(this)```
 
 
-* [Ajax](https://github.com/hanekaoru/WebLearningNotes/blob/master/面试/js/ajax.md)
 
-  * 原生 ```Ajax``` 写法
+* [ajax](https://github.com/hanekaoru/WebLearningNotes/blob/master/面试/js/ajax.md)
 
-  * ```Ajax``` 改为 ```Promise```
+  * 原生 ```ajax``` 写法
 
-  * ```Ajax``` 中 ```readyState``` 的取值有哪些，分别有什么含义
+  * ```ajax``` 改为 ```Promise```
+
+  * ```ajax``` 中 ```readyState``` 的取值有哪些，分别有什么含义
 
   * ```xhr2```
 
@@ -36,10 +37,12 @@
 
 * [promise](https://github.com/hanekaoru/WebLearningNotes/blob/master/面试/js/promise.md)
 
+  * 什么是 ```promise```
+
 
 ## CSS
 
-* ```sass``` 特性 / 变量 / 继承
+* [sass特性](https://github.com/hanekaoru/WebLearningNotes/blob/master/面试/css/sass.md)
 
 
 

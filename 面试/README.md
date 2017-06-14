@@ -31,6 +31,8 @@
 
   * 同源策略与跨域
 
+  * ```GET``` 与 ```POST``` 区别
+
 
 * [promise](https://github.com/hanekaoru/WebLearningNotes/blob/master/面试/promise.md)
 

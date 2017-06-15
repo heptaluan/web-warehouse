@@ -43,6 +43,9 @@
 
 * [Canvas 和 SVG 的区别](https://github.com/hanekaoru/WebLearningNotes/blob/master/面试/js/canvas.md)
 
+* [mouseover 与 mouseenter 的区别](https://github.com/hanekaoru/WebLearningNotes/blob/master/面试/js/mouseover.md)
+
+* [手写类和原型继承](https://github.com/hanekaoru/WebLearningNotes/blob/master/面试/js/继承.md) 
 
 
 

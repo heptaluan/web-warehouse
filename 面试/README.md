@@ -67,6 +67,7 @@
 
   * ```vue``` 响应式原理
 
+* [为什么要用 React](https://github.com/hanekaoru/WebLearningNotes/blob/master/面试/mvc/react.md)
 
 
 

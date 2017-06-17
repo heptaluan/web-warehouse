@@ -59,6 +59,13 @@
   * 引申出的 ```Zepto``` 点透问题
 
 
+* [字符编码](https://github.com/hanekaoru/WebLearningNotes/blob/master/面试/js/字符编码.md) 
+
+* [手写 once/bind/debouce/throttle 函数](https://github.com/hanekaoru/WebLearningNotes/blob/master/面试/js/once-bind-debouce-throttle.md) 
+
+
+
+
 
 
 

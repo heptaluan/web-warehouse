@@ -39,6 +39,7 @@
 
   * 什么是 ```promise```
 
+
 * [怎么遍历对象（5 种方法）](https://github.com/hanekaoru/WebLearningNotes/blob/master/面试/js/遍历对象的方法.md)
 
 * [Canvas 和 SVG 的区别](https://github.com/hanekaoru/WebLearningNotes/blob/master/面试/js/canvas.md)
@@ -51,8 +52,11 @@
 
 * [判断变量类型，如何判断变量是函数](https://github.com/hanekaoru/WebLearningNotes/blob/master/面试/js/typeof.md) 
 
+* [移动端 click 事件 300ms 的延迟响应](https://github.com/hanekaoru/WebLearningNotes/blob/master/面试/js/300ms.md) 
 
+  * ```click``` 事件 ```300ms``` 的延迟响应
 
+  * 引申出的 ```Zepto``` 点透问题
 
 
 
@@ -95,6 +99,10 @@
 * [栅格系统](https://github.com/hanekaoru/WebLearningNotes/blob/master/面试/css/栅格系统.md)
 
 * [响应式布局](https://github.com/hanekaoru/WebLearningNotes/blob/master/面试/css/响应式布局.md)
+
+* [box-sizing](https://github.com/hanekaoru/WebLearningNotes/blob/master/面试/css/box-sizing.md)
+
+* [html 中的 DOCTYPE](https://github.com/hanekaoru/WebLearningNotes/blob/master/面试/css/DOCTYPE.md)
 
 
 

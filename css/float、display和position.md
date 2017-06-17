@@ -42,6 +42,18 @@
 
 * 另一种就是对 ```inline``` 元素设置 ```position: absolute/fixed```
 
+#### 关于 IE7 下 不支持给块级元素设置 inline-block 样式
+
+解决方法如下：首先将其变成行内元素，使用具有行内元素的特性，然后触发 haslayout，使其具有块级元素的特性，如此就可以模拟出 inline-block 的效果
+
+```css
+div{
+    display:inline-block;
+    *display: inline;
+    zoom: 1;
+}
+```
+
 ## position
 
 ```position``` 常用的属性一般有四个 ```static/relative/absolute/fixed```

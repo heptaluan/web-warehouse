@@ -63,7 +63,7 @@
 
 * [手写 once/bind/debouce/throttle 函数](https://github.com/hanekaoru/WebLearningNotes/blob/master/面试/js/once-bind-debouce-throttle.md) 
 
-
+* [实现拖拽的功能（PC 端和移动端）](https://github.com/hanekaoru/WebLearningNotes/blob/master/面试/js/drag.md) 
 
 
 

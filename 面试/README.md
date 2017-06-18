@@ -65,7 +65,9 @@
 
 * [实现拖拽的功能（PC 端和移动端）](https://github.com/hanekaoru/WebLearningNotes/blob/master/面试/js/drag.md) 
 
+* [生成 20 个 40 - 80 之间的随机数，并 排序/乱序](https://github.com/hanekaoru/WebLearningNotes/blob/master/面试/js/randomNum.md) 
 
+* [常见的数组排序方式](https://github.com/hanekaoru/WebLearningNotes/blob/master/面试/js/sort.md) 
 
 
 

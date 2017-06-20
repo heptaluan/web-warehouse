@@ -69,6 +69,7 @@
 
 * [常见的数组排序方式](https://github.com/hanekaoru/WebLearningNotes/blob/master/面试/js/sort.md) 
 
+* [监听 对象/数组 属性改变](https://github.com/hanekaoru/WebLearningNotes/blob/master/面试/js/proxy.md) 
 
 
 

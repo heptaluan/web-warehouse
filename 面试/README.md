@@ -72,6 +72,7 @@
 * [监听 对象/数组 属性改变](https://github.com/hanekaoru/WebLearningNotes/blob/master/面试/js/proxy.md) 
 
 
+* [parseInt 用法](https://github.com/hanekaoru/WebLearningNotes/blob/master/面试/js/parseInt.md) 
 
 
 

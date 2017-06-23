@@ -18,8 +18,6 @@
 
   * ```jQuery``` 中的 ```this``` 和 ```$(this)```
 
-
-
 * [ajax](https://github.com/hanekaoru/WebLearningNotes/blob/master/面试/js/ajax.md)
 
   * 原生 ```ajax``` 写法
@@ -34,11 +32,9 @@
 
   * ```GET``` 与 ```POST``` 区别
 
-
 * [promise](https://github.com/hanekaoru/WebLearningNotes/blob/master/面试/js/promise.md)
 
   * 什么是 ```promise```
-
 
 * [怎么遍历对象（5 种方法）](https://github.com/hanekaoru/WebLearningNotes/blob/master/面试/js/遍历对象的方法.md)
 
@@ -58,7 +54,6 @@
 
   * 引申出的 ```Zepto``` 点透问题
 
-
 * [字符编码](https://github.com/hanekaoru/WebLearningNotes/blob/master/面试/js/字符编码.md) 
 
 * [手写 once/bind/debouce/throttle 函数](https://github.com/hanekaoru/WebLearningNotes/blob/master/面试/js/once-bind-debouce-throttle.md) 
@@ -71,8 +66,15 @@
 
 * [监听 对象/数组 属性改变](https://github.com/hanekaoru/WebLearningNotes/blob/master/面试/js/proxy.md) 
 
-
 * [parseInt 用法](https://github.com/hanekaoru/WebLearningNotes/blob/master/面试/js/parseInt.md) 
+
+* [深拷贝和浅拷贝](https://github.com/hanekaoru/WebLearningNotes/blob/master/面试/js/深拷贝和浅拷贝.md) 
+
+
+
+
+
+
 
 
 
@@ -97,6 +99,10 @@
   * ```vue``` 响应式原理
 
 * [为什么要用 React](https://github.com/hanekaoru/WebLearningNotes/blob/master/面试/mvc/react.md)
+
+
+
+
 
 
 

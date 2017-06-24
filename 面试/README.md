@@ -121,6 +121,9 @@
 
 * [html 中的 DOCTYPE](https://github.com/hanekaoru/WebLearningNotes/blob/master/面试/css/DOCTYPE.md)
 
+* [css 原生变量](https://github.com/hanekaoru/WebLearningNotes/blob/master/面试/css/css原生变量.md)
+
+* [em 与 rem 的区别](https://github.com/hanekaoru/WebLearningNotes/blob/master/面试/css/em-rem.md)
 
 
 

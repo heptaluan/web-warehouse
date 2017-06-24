@@ -38,7 +38,7 @@ function bubbleSort(arr) {
 
 ## 第三种 快速排序
 
-找基准（一般是以中间项为基准）然后遍历数组，小于基准的放在 left，大于基准的放在 right，最后递归调用
+找基准（一般是以中间项为基准）然后遍历数组，小于基准的放在 ```left```，大于基准的放在 ```right```，最后递归调用
 
 ```js
 function quickSort (arr) {

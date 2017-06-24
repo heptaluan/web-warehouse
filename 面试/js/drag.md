@@ -60,6 +60,7 @@ Drag.prototype.fnDown = function (ev) {
         _this.fnUp();
     };
 }
+
 Drag.prototype.fnMove = function (ev) {
     var oEvent = ev || event;
     this.oDiv.style.left = oEvent.clientX - this.disX + 'px';
@@ -74,7 +75,7 @@ Drag.prototype.fnUp = function () {
 
 ## 移动端拖拽功能
 
-与 PC 端实现类似，只是事件不太一样，一般用到的事件如下：
+与 ```PC``` 端实现类似，只是事件不太一样，一般用到的事件如下：
 
 ```js
 touchstart:       // 手指放到屏幕上时触发

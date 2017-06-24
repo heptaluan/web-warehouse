@@ -1,12 +1,20 @@
+
+## 第一种 sort
+
+也是比较常见的一种方式
+
 ```js
-// 最常见的 - sort
 arr.sort(function (a, b) {
     // b - a 则相反
     return a - b;
 })
+```
 
+## 第二种 冒泡排序
 
-// 冒泡排序（比较相邻的元素，如果第一个比第二个大，就交换他们两个）
+比较相邻的元素，如果第一个比第二个大，就交换他们两个
+
+```js
 function bubbleSort(arr) {
 
     var i = arr.length, j;
@@ -25,10 +33,14 @@ function bubbleSort(arr) {
     return arr;
     
 }
+```
 
 
-// 快速排序
-// 找基准（一般是以中间项为基准）然后遍历数组，小于基准的放在 left，大于基准的放在 right，最后递归调用
+## 第三种 快速排序
+
+找基准（一般是以中间项为基准）然后遍历数组，小于基准的放在 left，大于基准的放在 right，最后递归调用
+
+```js
 function quickSort (arr) {
 
     // 如果数组 <=1，则直接返回
@@ -56,11 +68,13 @@ function quickSort (arr) {
     return quickSort(left).concat([pivot], quickSort(right));
 
 }
+```
 
+## 第四种 插入排序
 
+每步将一个待排序的对象，按其排序码大小，插入到前面已经排好序的一组对象的适当位置上，直到对象全部插入为止
 
-// 插入排序
-// 每步将一个待排序的对象，按其排序码大小，插入到前面已经排好序的一组对象的适当位置上，直到对象全部插入为止
+```js
 function insertSort(array) {
 
     var i = 1,

@@ -2,6 +2,8 @@
 
 * 什么是 ```promise```
 
+* ```promise``` 和 ```setTimeout``` 执行顺序
+
 ----
 
 ## promise
@@ -43,3 +45,37 @@ readFile().then(function (data) {
     console.log(err)
 })
 ```
+
+
+----
+
+
+## promise 和 setTimeout 执行顺序
+
+详细可见 《你不知道的js（中卷）》 -- 1.5节
+
+一个简单的示例：
+
+```js
+setTimeout(function () {
+    console.log(1)
+}, 0);
+
+new Promise(function (resolve) {
+        resolve();
+}).then(function () {
+    console.log(2);
+});  
+
+// 2, 1
+```
+
+简单来说，```promise``` 的任务会在当前事件循环末尾中执行，而 ```setTimeout``` 中的任务是在下一次事件循环执行
+
+在 ```ES6``` 中，有一个新的概念建立在事件循环队列之上，叫做 **任务队列**
+
+简单的理解就是，它是挂在事件循环队列的每个 ```tick``` 之后的一个队列，在事件循环的每个 ```tick``` 中，可能出现的异步动作不会导致一个完整的新事件添加到事件循环队列中，而会在当前 ```tick``` 的任务队列末尾添加一个项目（任务）
+
+一个任务可能引起更多任务被添加到同一个队列末尾，所以，理论上说，任务循环可能无限循环（一个任务总是添加另一个任务，以此类推），进而导致程序的无限循环，无法转移到下一个事件循环 ```tick```，从概念上看，这和代码中的无限循环（类似 ```while(true)```）的体验几乎是一样的
+
+扩展：[promise 的队列与 setTimeout 的队列有何关联？](https://www.zhihu.com/question/36972010)

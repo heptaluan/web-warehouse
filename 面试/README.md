@@ -36,6 +36,8 @@
 
   * 什么是 ```promise```
 
+  * ```promise``` 和 ```setTimeout``` 执行顺序
+
 * [怎么遍历对象（5 种方法）](https://github.com/hanekaoru/WebLearningNotes/blob/master/面试/js/遍历对象的方法.md)
 
 * [Canvas 和 SVG 的区别](https://github.com/hanekaoru/WebLearningNotes/blob/master/面试/js/canvas.md)
@@ -69,6 +71,7 @@
 * [parseInt 用法](https://github.com/hanekaoru/WebLearningNotes/blob/master/面试/js/parseInt.md) 
 
 * [深拷贝和浅拷贝](https://github.com/hanekaoru/WebLearningNotes/blob/master/面试/js/深拷贝和浅拷贝.md) 
+
 
 
 

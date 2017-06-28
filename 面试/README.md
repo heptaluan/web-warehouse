@@ -76,6 +76,7 @@
 
 * [垃圾回收机制](https://github.com/hanekaoru/WebLearningNotes/blob/master/面试/js/垃圾回收机制.md) 
 
+* [sessionStorage，localStorage 和 cookie 的区别](https://github.com/hanekaoru/WebLearningNotes/blob/master/面试/js/sessionStorage-localStorage-cookie.md) 
 
 
 

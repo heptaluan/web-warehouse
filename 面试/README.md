@@ -72,6 +72,7 @@
 
 * [深拷贝和浅拷贝](https://github.com/hanekaoru/WebLearningNotes/blob/master/面试/js/深拷贝和浅拷贝.md) 
 
+* [DOM操作 - 插入元素](https://github.com/hanekaoru/WebLearningNotes/blob/master/面试/js/dom.md) 
 
 
 

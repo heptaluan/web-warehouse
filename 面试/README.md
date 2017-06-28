@@ -74,6 +74,7 @@
 
 * [DOM操作 - 插入元素](https://github.com/hanekaoru/WebLearningNotes/blob/master/面试/js/dom.md) 
 
+* [垃圾回收机制](https://github.com/hanekaoru/WebLearningNotes/blob/master/面试/js/垃圾回收机制.md) 
 
 
 

@@ -12,6 +12,8 @@
 
 * ```GET``` 与 ```POST``` 区别
 
+* ```xhr``` 的 ```withCredentials``` 属性
+
 ----
 
 一些相关知识点：
@@ -45,6 +47,7 @@ if (xhr) {
     // 每当 readyState 值改变时，就会触发 onreadystatechange 事件
     // 注意：onreadystatechange 事件会被触发 5 次（0 - 4），对应着 readyState 的每个变化
     xhr.onreadystatechange = function () {
+
         // readyState 值说明  
         // 0 -- 初始化，xhr 对象已经创建，还未执行 open  
         // 1 -- 载入，已经调用 open 方法，但是还没发送请求  
@@ -63,7 +66,9 @@ if (xhr) {
             console.log(xhr.responseText);
         }
     };
+
     xhr.send();
+
 }
 
 // ---------------------------------------------------
@@ -260,3 +265,29 @@ Access-Control-Max-Age: 86400
 * ```GET``` 方式提交的数据大小有限制（因为浏览器对 ```URL``` 的长度有限制），而 ```POST``` 则没有此限制
 
 * 安全性问题，使用 ```GET``` 的时候，参数会显示在地址栏上，而 ```POST``` 不会，所以如果这些数据是中文数据而且是非敏感数据，那么使用 ```GET```，如果用户输入的数据不是中文字符而且包含敏感数据，那么还是使用 ```POST``` 为好
+
+
+
+----
+
+
+## ```xhr``` 的 ```withCredentials``` 属性
+
+默认情况下，```ajax``` 跨源请求不提供凭据（```cookie```、```HTTP``` 认证及客户端 ```SSL``` 证明等），通过将设置 ```ajax``` 的 ```withCredentials``` 属性设置为 ```true```，可以指定某个请求应该发送凭据，如果服务器接收带凭据的请求，会用下面的 ```HTTP``` 头部来响应
+
+```js
+Access-Control-Allow-Credentials: true
+```
+
+需要注意：永远不会影响到同源请求
+
+简单来说，在平常开发的时候，身份验证是经常遇到的问题，在**跨域请求**中，默认情况下是不发送验证信息的，要想发送验证信息，需要设置 ```withCredentials``` 属性
+
+```js
+var xhr = new XMLHttpRequest();
+
+xhr.open('GET', url, true);
+xhr.withCredentials = true;
+
+xhr.send(null);
+```

@@ -22,6 +22,8 @@
 
   * ```GET``` 与 ```POST``` 区别
 
+  * ```xhr``` 的 ```withCredentials``` 属性
+
 * [promise](https://github.com/hanekaoru/WebLearningNotes/blob/master/面试/js/promise.md)
 
   * 什么是 ```promise```

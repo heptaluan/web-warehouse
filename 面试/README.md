@@ -6,17 +6,7 @@
 
 * [this](https://github.com/hanekaoru/WebLearningNotes/blob/master/面试/js/this.md)
 
-
 * [使用 new 的时候发生了什么](https://github.com/hanekaoru/WebLearningNotes/blob/master/面试/js/new.md)
-
-
-* [jQuery 中的 each/$(this)/this](https://github.com/hanekaoru/WebLearningNotes/blob/master/面试/js/each.md)
-
-  * ```$.each``` 和 ```$(selector).each()``` 的区别
-
-  * ```jQuery``` 插件中的 ```return this.each()```
-
-  * ```jQuery``` 中的 ```this``` 和 ```$(this)```
 
 * [ajax](https://github.com/hanekaoru/WebLearningNotes/blob/master/面试/js/ajax.md)
 
@@ -81,6 +71,28 @@
 * [Git 和 SVN](https://github.com/hanekaoru/WebLearningNotes/blob/master/面试/js/git&svn.md) 
 
 * [iframe 优缺点](https://github.com/hanekaoru/WebLearningNotes/blob/master/面试/js/iframe.md) 
+
+
+
+
+
+
+
+
+
+## jQuery
+
+* [jQuery](https://github.com/hanekaoru/WebLearningNotes/blob/master/面试/js/jQuery.md)
+
+  * ```$.each``` 和 ```$(selector).each()``` 的区别
+
+  * ```jQuery``` 插件中的 ```return this.each()```
+
+  * ```jQuery``` 中的 ```this``` 和 ```$(this)```
+
+  * ```jQuery``` 的链式操作是如何实现的
+
+
 
 
 

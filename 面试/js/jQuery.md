@@ -6,6 +6,8 @@
 
 * ```jQuery``` 中的 ```this``` 和 ```$(this)```
 
+* ```jQuery``` 的链式操作是如何实现的
+
 
 ----
 
@@ -235,4 +237,41 @@ $("#box").hover(function () {
 }, function () {
     $(this).attr("title", "B")
 })
+```
+
+
+----
+
+
+## jQuery 的链式操作是如何实现的
+
+简单来说，仅仅是通过对象上的方法最后 return this 把对象再返回回来，这样一来就可以链式操作了
+
+一个简单的模拟
+
+```js
+// 定义初始类
+function Foo() {}
+
+// 扩展它的 prototype 
+Foo.prototype = {
+
+    setName: function (name) {
+        this.name = name;
+        return this;
+    },
+
+    getName: function () {
+        return this.name;
+    },
+
+    setAge: function (age) {
+        this.age = age;
+        return this;
+    }
+
+};
+
+// 链式调用 
+new Foo().setName("abc").setAge(20);  // Foo {name: "abc", age: 20}
 ```

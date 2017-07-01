@@ -36,7 +36,9 @@
 
 * [手写类和原型继承](https://github.com/hanekaoru/WebLearningNotes/blob/master/面试/js/继承.md) 
 
-* [数组去重有哪些方法](https://github.com/hanekaoru/WebLearningNotes/blob/master/面试/js/数组去重.md) 
+* [数组去重](https://github.com/hanekaoru/WebLearningNotes/blob/master/面试/js/数组去重.md) 
+
+* [字符串去重](https://github.com/hanekaoru/WebLearningNotes/blob/master/面试/js/字符串去重.md) 
 
 * [判断变量类型，如何判断变量是函数](https://github.com/hanekaoru/WebLearningNotes/blob/master/面试/js/typeof.md) 
 

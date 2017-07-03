@@ -1,0 +1,57 @@
+关于深拷贝可见 [深拷贝和浅拷贝](https://github.com/hanekaoru/WebLearningNotes/blob/master/面试/js/深拷贝和浅拷贝.md) 
+
+----
+
+## 第一种 slice
+
+```js
+var arr = [1, 2, 3];
+
+var copyArr = arr.slice();
+```
+
+
+## 第二种 concat
+
+```js
+var arr = [1, 2, 3];
+
+var copyArr = arr.concat();
+```
+
+## 第三种 for 循环
+
+```js
+var arr = [1, 2, 3];
+
+var newArr = [];
+
+for (var i = 0; i < arr.length; i++) {
+    newArr.push(arr[i])
+}
+```
+
+## 第四种 扩展运算符
+
+```js
+var arr = [1, 2, 3];
+
+var newArr = [...arr];
+```
+
+## 第五种 Array.form()
+
+```js
+var arr = [1, 2, 3];
+
+var newArr = Array.from(arr)
+```
+
+## 第六种
+
+```js
+var arr = [1, 2, 3];
+
+var newArr = Array.of(...arr)
+```
+

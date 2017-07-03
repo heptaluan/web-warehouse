@@ -78,7 +78,9 @@
 
 * [date 对象](https://github.com/hanekaoru/WebLearningNotes/blob/master/面试/js/date.md) 
 
+* [数组的几种复制方法](https://github.com/hanekaoru/WebLearningNotes/blob/master/面试/js/array-copy.md) 
 
+* [数组的方法和其返回值](https://github.com/hanekaoru/WebLearningNotes/blob/master/面试/js/array-methods.md) 
 
 
 

@@ -47,7 +47,7 @@ var arr = [1, 2, 3];
 var newArr = Array.from(arr)
 ```
 
-## 第六种
+## 第六种 Array.of()
 
 ```js
 var arr = [1, 2, 3];

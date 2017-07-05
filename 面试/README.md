@@ -82,6 +82,13 @@
 
 * [数组的方法和其返回值](https://github.com/hanekaoru/WebLearningNotes/blob/master/面试/js/array-methods.md) 
 
+* [ES6 中的 class](https://github.com/hanekaoru/WebLearningNotes/blob/master/面试/js/class.md) 
+
+
+
+
+
+
 
 
 

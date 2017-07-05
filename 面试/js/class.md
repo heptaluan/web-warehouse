@@ -122,7 +122,7 @@ p2.sayName();
 
 ```js
 class People {
-    constructor(name) { //构造函数
+    constructor(name) { 
         this.name = name;
     }
     sayName() {
@@ -148,4 +148,123 @@ class Foo {}
 
 Foo.prop = 1;
 Foo.prop // 1
+```
+
+
+----
+
+## getters & setters
+
+现在可以通过 ```get``` 和 ```set``` 关键字来定义 ```getters``` 和 ```setters``` 了
+
+```js
+class People {
+    constructor(name) { 
+        this.name = name;
+    }
+
+    get name() {
+        return this._name.toUpperCase();
+    }
+
+    set name(name) {
+        this._name = name;
+    }
+    
+    sayName() {
+        console.log(this.name);
+    }
+}
+
+var p = new People("zhangsan");
+
+console.log(p.name);    // ZHANGSAN
+console.log(p._name);    // zhangsan
+p.sayName();    // ZHANGSAN
+```
+
+因为定义了 ```name``` 的读写器，而没有定义 ```_name``` 的读写器，所以访问这两个属性的结果是不同的
+
+
+## 继承
+
+通过关键字 ```extends``` 来继承一个类，并且可以通过 ```super``` 关键字来引用父类
+
+```js
+class People {
+    constructor(name) { 
+        this.name = name;
+    }
+
+    sayName() {
+        console.log(this.name);
+    }
+}
+
+class Student extends People {
+    constructor(name, grade) { 
+        super(name);   
+        this.grade = grade;
+    }
+    
+    sayGrade() {
+        console.log(this.grade);
+    }
+}
+```
+
+几个注意事项：
+
+* 子类必须在 ```constructor``` 方法中调用 ```super``` 方法，否则新建实例时会报错，这是因为子类没有自己的 ```this``` 对象，而是继承父类的 ```this``` 对象，然后对其进行加工，如果不调用 ```super``` 方法，子类就得不到 ```this``` 对象
+
+* 如果子类没有定义 ```constructor``` 方法，这个方法会被默认添加，也就是说不管有没有显式定义，任何一个子类都有 ```constructor``` 方法
+
+* 在子类的构造函数中，只有调用 ```super``` 之后，才可以使用 ```this``` 关键字，否则会报错（因为只有 ```super``` 方法才能返回父类实例）
+
+* ```Object.getPrototypeOf``` 方法可以用来从子类上获取父类（判断一个类是否继承了另一个类）
+
+#### super 关键字
+
+* 使用 ```super``` 的时候，必须显式指定是作为函数、还是作为对象使用，否则会报错
+
+* ```super``` 作为函数调用时
+
+  * ```super``` 作为函数调用时，代表父类的构造函数（子类的构造函数必须执行一次 ```super``` 函数）
+
+  * 虽然代表了父类的构造函数，但是 ```super``` 内部的 ```this``` 指的是子类的实例（相当于 ```Father.prototype.constructor.call(this)```）
+
+  * 作为函数时，```super()``` 只能用在**子类**的构造函数之中，用在其他地方就会报错
+
+* ```super``` 作为对象调用时
+
+  * 在普通方法中，指向父类的原型对象，在静态方法中，指向父类（与父类静态方法相呼应）
+
+  * 当 ```super``` 指向父类的原型对象时，定义在父类实例上的方法或属性，是无法通过 ```super``` 调用的（定义在 ```prototype``` 上的则可以取到）
+
+  * 通过 ```super``` 调用父类的方法时，```super``` 会绑定子类的 ```this```
+
+  * 通过 ```super``` 对某个属性赋值，这时 ```super``` 就是 ```this```，赋值的属性会变成子类实例的属性，如下代码
+
+```js
+class A {
+    constructor() {
+        this.x = 1;
+    }
+}
+
+class B extends A {
+    constructor() {
+        super();
+        this.x = 2;
+
+        // 等同于对 this.x 赋值为 3
+        super.x = 3;
+
+        // 而当读取 super.x 的时候，读的是 A.prototype.x，所以返回 undefined
+        console.log(super.x);  // undefined
+        console.log(this.x); // 3
+    }
+}
+
+let b = new B();
 ```

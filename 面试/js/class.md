@@ -8,7 +8,11 @@
 
 * 不存在变量提升（```hoist```）
 
+* 类的方法内部如果含有 ```this```，它默认指向类的实例
+
 * ```class``` 中的方法有三种类型：构造函数、静态方法、原型方法
+
+* ```Class``` 内部只有静态方法，没有静态属性
 
 ----
 
@@ -77,3 +81,71 @@ export default class myClass {
 
 
 
+## 私有属性
+
+与私有方法一样，```ES6``` 不支持私有属性，但是可以通过闭包来实现私有属性
+
+```js
+var People = (function () {
+    var p = new WeakMap();
+    class People {
+        constructor(name) {
+            var privateProperties = {
+                name: name
+            };
+            p.set(this, privateProperties);
+        }
+        sayName() {
+            console.log(this.name);
+        }
+
+        get name() {
+            return p.get(this).name;
+        }
+    }
+    return People;
+})();
+
+var p = new People("zhangsan");
+console.log(p.name);
+p.sayName();
+
+var p2 = new People("lisi");
+console.log(p2.name);
+p2.sayName();
+```
+
+
+## 静态方法
+
+静态方法一般用来提供一些工具方法，可以通过 ```static``` 关键字定义静态方法
+
+```js
+class People {
+    constructor(name) { //构造函数
+        this.name = name;
+    }
+    sayName() {
+        console.log(this.name);
+    }
+    static formatName(name) {
+        return name.toUpperCase();
+    }
+}
+
+console.log(People.formatName("zhangsan"));
+```
+
+
+## 静态属性
+
+```Class``` 内部只有静态方法，没有静态属性
+
+静态属性指的是 ```Class``` 本身的属性，即 ```Class.propName```，而不是定义在实例对象（```this```）上的属性
+
+```js
+class Foo {}
+
+Foo.prop = 1;
+Foo.prop // 1
+```

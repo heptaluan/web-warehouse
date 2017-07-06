@@ -8,6 +8,8 @@
 
 * ```jQuery``` 的链式操作是如何实现的
 
+* ```$.fn.each()``` 和 ```Array.prototype.forEach()```
+
 
 ----
 
@@ -275,3 +277,27 @@ Foo.prototype = {
 // 链式调用 
 new Foo().setName("abc").setAge(20);  // Foo {name: "abc", age: 20}
 ```
+
+
+
+----
+
+## $.fn.each() 和 Array.prototype.forEach()
+
+```jQuery``` 定义在 ```$.fn``` 上的 ```each()``` 和 ```map()``` 方法与定义在 ```Array.prototype``` 上的原生方法 ```forEach()``` 和 ```map()``` 对应，它们的参数都是回调函数，但它们的回调函数定义有一些细节上的差别
+
+```$.fn.each()``` 的回调定义如下：
+
+```js
+Function(Integer index, Element element )
+```
+
+回调的第一个参数是数组元素所在的位置（序号，从 ```0``` 开始），第二个参数是元素本身
+
+而 ```Array.prototype.forEach()``` 的回调定义是：
+
+```js
+Function(currentValue, index, array)
+```
+
+回调的第一个参数是数组元素本身，第二个参数才是元素所有的位置（序号），而且这个回调有**第三个**参数，即整个数组的引用

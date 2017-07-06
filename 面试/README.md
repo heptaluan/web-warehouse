@@ -106,6 +106,8 @@
 
   * ```jQuery``` 的链式操作是如何实现的
 
+  * ```$.fn.each()``` 和 ```Array.prototype.forEach()```
+
 
 
 

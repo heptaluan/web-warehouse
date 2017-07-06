@@ -16,6 +16,8 @@
 
 * ```SEO```
 
+* ```http``` 协议头包含哪些信息
+
 
 ----
 
@@ -82,36 +84,6 @@
 
 ![浏览器缓存](http://img.my.csdn.net/uploads/201303/19/1363670410_3844.jpg)
 
-
-#### 缓存相关的 HTTP 扩展消息头
-
-```js
-Expires             // 设置页面过期时间，格林威治时间 GMT
-
-Cache-Control       // 更细致的控制缓存的内容
-
-Last-Modified       // 请求对象最后一次的修改时间 用来判断缓存是否过期 通常由文件的时间信息产生 
-
-ETag                // 响应中资源的校验值，在服务器上某个时段是唯一标识的，ETag 是一个可以 与 Web 资源关联的记号（token），和 Last-Modified 功能才不多，也是一个标识符，一般和 Last-Modified 一起使用，加强服务器判断的准确度
-
-Date                // 服务器的时间
-
-If-Modified-Since   // 客户端存取的该资源最后一次修改的时间，用来和服务器端的 Last-Modified 做比较
-
-If-None-Match       // 客户端存取的该资源的检验值，同 ETag
-```
-
-Cache-Control 的主要参数 
-
-```js
-Cache-Control: private/public Public   // 响应会被缓存，并且在多用户间共享，Private 响应只能够作为私有的缓存，不能再用户间共享
-
-Cache-Control: no-cache                // 不进行缓存 
-
-Cache-Control: max-age=x               // 缓存时间 以秒为单位 
-
-Cache-Control: must-revalidate         // 如果页面是过期的 则去服务器进行获取
-```
 
 ----
 
@@ -305,3 +277,48 @@ Cache-Control: must-revalidate         // 如果页面是过期的 则去服务�
 除了安全功能，反向代理服务器也可以通过配置缓存功能加速 ```web``` 请求，当用户第一次访问静态内容的时候，静态内容就被缓存在反向代理服务器上，下一次用户请求静态资源时，直接从反向代理服务器返回静态内容，加速 ```web``` 请求访问速度，减轻原始服务器的压力
 
 此外，反向代理服务器也可实现负载均衡的功能，而通过负载均衡构建应用集群可以提高系统的总处理能力，进而改善网站在高并发情况下的性能
+
+
+----
+
+## http 协议头
+
+通常 ```HTTP``` 消息包括客户机向服务器的请求消息和服务器向客户机的响应消息，这两种类型的消息由一个起始行，一个或者多个头域，一个只是头域结束的空行和可选的消息体组成
+
+```HTTP``` 的头域包括通用头，请求头，响应头和实体头四个部分，每个头域由一个域名，冒号（:）和域值三部分组成，域名是大小写无关的，域值前可以添加任何数量的空格符，头域可以被扩展为多行，在每行开始处，使用至少一个空格或制表符
+
+#### 通用头域 
+
+通用头域包含请求和响应消息都支持的头域，通用头域包含 ```Cache-Control```、 ```Connection```、```Date```、```Pragma```、```Transfer-Encoding```、```Upgrade```、```Via```
+
+对通用头域的扩展要求通讯双方都支持此扩展，如果存在不支持的通用头域，一般将会作为实体头域处理
+
+#### 一些 HTTP 扩展消息头
+
+```js
+Expires             // 设置页面过期时间，格林威治时间 GMT
+
+Cache-Control       // 更细致的控制缓存的内容
+
+Last-Modified       // 请求对象最后一次的修改时间 用来判断缓存是否过期 通常由文件的时间信息产生 
+
+ETag                // 响应中资源的校验值，在服务器上某个时段是唯一标识的，ETag 是一个可以 与 Web 资源关联的记号（token），和 Last-Modified 功能才不多，也是一个标识符，一般和 Last-Modified 一起使用，加强服务器判断的准确度
+
+Date                // 服务器的时间
+
+If-Modified-Since   // 客户端存取的该资源最后一次修改的时间，用来和服务器端的 Last-Modified 做比较
+
+If-None-Match       // 客户端存取的该资源的检验值，同 ETag
+```
+
+```Cache-Control``` 的主要参数 
+
+```js
+Cache-Control: private/public Public   // 响应会被缓存，并且在多用户间共享，Private 响应只能够作为私有的缓存，不能再用户间共享
+
+Cache-Control: no-cache                // 不进行缓存 
+
+Cache-Control: max-age=x               // 缓存时间 以秒为单位 
+
+Cache-Control: must-revalidate         // 如果页面是过期的 则去服务器进行获取
+```

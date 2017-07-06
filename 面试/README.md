@@ -188,6 +188,8 @@
 
   * ```SEO```
 
+  * ```http``` 协议头包含哪些信息
+
 * [网络协议的分层结构](https://github.com/hanekaoru/WebLearningNotes/blob/master/面试/http/网络协议的分层结构.md)
 
 * [输入网址到页面显示经历的过程](https://github.com/hanekaoru/WebLearningNotes/blob/master/面试/http/输入网址到页面显示经历的过程.md)

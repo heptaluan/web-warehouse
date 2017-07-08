@@ -1,3 +1,6 @@
+几个常见函数 once/bind/debouce/throttle 的实现原理
+
+----
 
 
 ## once

@@ -266,12 +266,13 @@ Access-Control-Max-Age: 86400
 
 * 安全性问题，使用 ```GET``` 的时候，参数会显示在地址栏上，而 ```POST``` 不会，所以如果这些数据是中文数据而且是非敏感数据，那么使用 ```GET```，如果用户输入的数据不是中文字符而且包含敏感数据，那么还是使用 ```POST``` 为好
 
+![get&post](http://hanekaoru.com/wp-content/uploads/2016/04/POSTGET.jpg)
 
 
 ----
 
 
-## ```xhr``` 的 ```withCredentials``` 属性
+## xhr 的 withCredentials 属性
 
 默认情况下，```ajax``` 跨源请求不提供凭据（```cookie```、```HTTP``` 认证及客户端 ```SSL``` 证明等），通过将设置 ```ajax``` 的 ```withCredentials``` 属性设置为 ```true```，可以指定某个请求应该发送凭据，如果服务器接收带凭据的请求，会用下面的 ```HTTP``` 头部来响应
 

@@ -43,3 +43,67 @@ var bar = obj1.foo()
 ```js
 var bar = foo()
 ```
+
+
+
+## 箭头函数中的 this
+
+先看一个简单的示例
+
+```js
+var obj = {
+    say: function () {
+        setTimeout(() => {
+            console.log(this)
+        });
+    }
+}
+
+obj.say(); // obj
+```
+
+此时的 ```this``` 指向定义它的对象 ```obj```，而不是 ```window```
+
+#### 多层嵌套中的 this
+
+```js
+var obj = {
+    say: function () {
+        var f1 = () => {
+            console.log(this); // obj
+            setTimeout(() => {
+                console.log(this); // obj
+            })
+        }
+        f1();
+    }
+}
+
+obj.say()
+```
+
+因为 ```f1``` 定义时所处的函数 中的 ```this``` 是指的 ```obj``` 所以不管有多层嵌套，都是 ```obj```
+
+## 普通函数和箭头函数混杂嵌套
+
+```js
+var obj = {
+    say: function () {
+        var f1 = function () {
+            console.log(this);    // window，f1 调用时没有宿主对象，默认是 window
+            setTimeout(() => {
+                console.log(this); // window
+            })
+        };
+        f1();
+    }
+}
+
+obj.say()
+```
+
+简单总结就是：
+
+* 箭头函数中的 ```this``` 的取值取决于其定义时所在的环境（并不一定是父元素环境）
+
+* 严格模式中为 ```undefined```

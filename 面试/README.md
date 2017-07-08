@@ -84,6 +84,7 @@
 
 * [ES6 中的 class](https://github.com/hanekaoru/WebLearningNotes/blob/master/面试/js/class.md) 
 
+* [mixin](https://github.com/hanekaoru/WebLearningNotes/blob/master/面试/js/mixin.md) 
 
 
 

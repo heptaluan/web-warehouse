@@ -4,6 +4,8 @@
 
 * ```promise``` 和 ```setTimeout``` 执行顺序
 
+* 进阶 ```rxjs```
+
 ----
 
 ## promise
@@ -79,3 +81,30 @@ new Promise(function (resolve) {
 一个任务可能引起更多任务被添加到同一个队列末尾，所以，理论上说，任务循环可能无限循环（一个任务总是添加另一个任务，以此类推），进而导致程序的无限循环，无法转移到下一个事件循环 ```tick```，从概念上看，这和代码中的无限循环（类似 ```while(true)```）的体验几乎是一样的
 
 扩展：[promise 的队列与 setTimeout 的队列有何关联？](https://www.zhihu.com/question/36972010)
+
+
+----
+
+## 进阶 rxjs
+
+```rxjs``` 全名 ```Reactive Extensions for JavaScript```，```Javascript``` 的响应式扩展, 响应式的思路是把随时间不断变化的数据、状态、事件等等转成可被观察的序列（```Observable Sequence```），然后订阅序列中那些 ```Observable``` 对象的变化，一旦变化，就会执行事先安排好的各种转换和操作
+
+```rxjs``` 适用于异步场景，即前端交互中接口请求、浏览器事件以及自定义事件
+
+* 统一异步编程的规范，不管是 ```Promise```、```ajax``` 还是事件，通通封装成序列（```Observable Sequence```），一旦有异步环节发生变更，观察序列即可截获发生变更的信息
+
+* 前端业务层和展现层解耦，比如展现层不需要关系指定事件触发时和DOM无关的处理逻辑，同时业务层也能组装异步操作中多个异步逻辑之间的关系，无需暴露给展现层，展现层关心的是：异步操作其中环节的数据变化
+
+* ```rxjs``` 开发业务层具有高弹性，高稳定性，高实时性等特点
+
+先挖个坑，以后遇到再来填...
+
+参考：
+
+[rxjs简单入门](https://yq.aliyun.com/articles/65027)
+
+[RxJS-Chinese](https://www.gitbook.com/book/buctwbzs/rxjs/details)
+
+[Hello RxJS（第一篇）](https://zhuanlan.zhihu.com/p/23331432)
+
+[用 RxJS 连接世界（第二篇）](https://zhuanlan.zhihu.com/p/23464709)

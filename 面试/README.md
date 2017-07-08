@@ -86,6 +86,9 @@
 
 * [mixin](https://github.com/hanekaoru/WebLearningNotes/blob/master/面试/js/mixin.md) 
 
+* [map/reduce](https://github.com/hanekaoru/WebLearningNotes/blob/master/面试/js/map&reduce.md) 
+
+
 
 
 

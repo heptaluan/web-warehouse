@@ -1,0 +1,94 @@
+## jQuery 的 DOM 操作原理
+
+`jQuery` 使用 `jQuery` 对象的形式将 `Element` 对象进行封装，把复杂的 `DOM` 定义简化为对 `jQuery` 对象
+
+`jQuery` 对于 `DOM` 封装的另一个核心就是其缓存功能，`jQuery` 将 `jQuery` 对象的变量（如事件、动画、第三方扩展的属性）都保存缓存中，而缓存又保存在实际 `Element` 对象中
+
+所以当这个 `Element` 对象被再一次封装为 `jQuery` 对象的时候，是可以继承之前的缓存进而可以继续之前的操作
+
+这个特性使得我们不用特意去缓存 `jQuery` 对象的引用，需要用的时候随时可以再一次将 `Element` 对象封装为 `jQuery` 对象，而不用担心两个的 `jQuery` 对象操作上会产生数据上的差异，即 `jQuery` 对象不保存任何 `Element` 元素相关信息，所有的相关信息都保存在 `DOM` 本身中
+
+## jQuery 的 DOM 操作 API
+
+`DOM` 操作的 `API` 也很多，大致可以分为 `5` 大类
+
+* `DOM` 元素的创建
+
+```js
+jQuery(html,[ownerDoc])
+jQuery.fn.html([val|fn])
+// ...
+```
+
+* `DOM` 元素的插入
+
+```js
+jQuery.fn.append(content|fn)
+jQuery.fn.before(content|fn)
+jQuery.fn.wrap(html|ele|fn)
+// ...
+```
+
+* `DOM` 元素的修改
+
+```js
+jQuery.fn.attr(name|pro|key,val|fn)
+jQuery.fn.removeAttr(name)
+// ...
+```
+
+* `DOM` 元素的删除
+
+```js
+jQuery.fn.empty()
+jQuery.fn.remove([expr])
+jQuery.fn.html([val|fn])
+// ...
+```
+
+* `DOM` 的 `ready`
+
+```js
+jQuery(callback)
+jQuery.ready(hold)
+// ...
+```
+
+其中很多 `API` 都是对底层 `API` 的封装，可以归纳为以下（包括私有 `API`）
+
+* `DOM` 元素的创建
+
+```js
+jQuery.fn.clone([Even[,deepEven]])
+buildFragment
+```
+
+* `DOM` 元素的插入
+
+```js
+domManip
+buildFragment
+```
+
+* `DOM` 元素的修改
+
+```js
+access
+```
+
+* `DOM` 元素的删除
+
+```js
+jQuery.fn.cleanData( elems )
+remove( elem, selector, keepData )
+```
+
+* `DOM` 的 `ready`
+
+```js
+jQuery.ready
+```
+
+----
+
+暂时总结这么多，更多的待看完 `jQuery` 源码再来总结

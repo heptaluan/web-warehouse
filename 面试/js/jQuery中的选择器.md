@@ -1,0 +1,56 @@
+`jQuery` 选择器原理
+
+主要分为两块，`$(..)` 和 `Sizzle` 选择器引擎，后者只有在处理选择器表达式时才会调用
+
+----
+
+
+## $(..)
+
+当我们使用 `jQuery` 选择器的时候，`$(..)` 会默认去执行 `jQuery` 内部封装好的一个 `init` 的构造函数，每次申明一个 `jQuery` 对象的时候，返回的是 `jQuery.prototype.init` 对象
+
+即当我们使用选择器的时候 `$(selector,content)`，就会执行 `init(selectot,content)`
+
+```js
+if (typeof selector == "string") {
+
+    // 正则匹配，看是不是 HTML 代码或者是 #id
+    var match = quickExpr.exec(selector);
+
+    // 没有作为待查找的 DOM 元素集、文档或 jQuery 对象
+    // selector 是 #id 的形式
+    if (match && (match[1] || !context)) {
+
+        // HANDLE ==> $(html) -> $(array)
+        // HTML 代码，调用 clean 补全 HTML 代码
+        if (match[1]) {
+            selector = jQuery.clean([match[1]], context);
+
+        // 是 ==>  $("#id")
+        } else {
+
+            // 判断 id 的 Dom 是不是加载完成
+            var elem = document.getElementById(match[3]);
+
+            if (elem) {
+
+                if (elem.id != match[3]) return jQuery().find(selector);
+
+                // 执行完毕 return
+                return jQuery(elem);
+            }
+
+            selector = [];
+
+        }
+    // 非 id 的形式，在 context 中或者是全文查找
+    } else {
+        return jQuery(context).find(selector);
+    }
+}
+```
+
+
+## Sizzle 选择器引擎
+
+关于 Sizzle 选择器引擎可以参考 [JQuery - Sizzle 选择器引擎原理分析](https://segmentfault.com/a/1190000003933990)

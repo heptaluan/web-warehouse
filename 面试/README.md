@@ -116,6 +116,7 @@
 
 * [jQuery 的 DOM 操作原理](https://github.com/hanekaoru/WebLearningNotes/blob/master/面试/js/jQuery的DOM操作原理.md)
 
+* [jQuery 中的选择器](https://github.com/hanekaoru/WebLearningNotes/blob/master/面试/js/jQuery中的选择器.md)
 
 
 

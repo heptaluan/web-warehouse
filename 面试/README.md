@@ -68,7 +68,7 @@
 
 * [深拷贝和浅拷贝](https://github.com/hanekaoru/WebLearningNotes/blob/master/面试/js/深拷贝和浅拷贝.md) 
 
-* [DOM操作 - 插入元素](https://github.com/hanekaoru/WebLearningNotes/blob/master/面试/js/dom.md) 
+* [DOM操作 - 在有序（无序）列表中插入 3 个，300 个，3000 个 li，并绑定事件](https://github.com/hanekaoru/WebLearningNotes/blob/master/面试/js/dom.md) 
 
 * [垃圾回收机制](https://github.com/hanekaoru/WebLearningNotes/blob/master/面试/js/垃圾回收机制.md) 
 

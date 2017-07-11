@@ -68,8 +68,8 @@ function appendItems () {
 
     for (let i = 0; i < listSize; i++) {
         var item = document.createElement("li");
-        item.innerText = i + 1;
-        fragment.appendChild((listSize * listDone + i) + 1) 
+        item.innerText = (listSize * listDone + i) + 1;
+        fragment.appendChild(item) 
     }
 
     // 每批次只修改一次 DOM

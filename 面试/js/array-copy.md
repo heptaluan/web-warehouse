@@ -1,6 +1,10 @@
-关于深拷贝可见 [深拷贝和浅拷贝](https://github.com/hanekaoru/WebLearningNotes/blob/master/面试/js/深拷贝和浅拷贝.md) 
+常见的数组的几种复制方法
+
 
 ----
+
+
+关于深拷贝可见 [深拷贝和浅拷贝](https://github.com/hanekaoru/WebLearningNotes/blob/master/面试/js/深拷贝和浅拷贝.md) 
 
 ## 第一种 slice
 

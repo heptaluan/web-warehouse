@@ -47,9 +47,9 @@ ul.addEventListener("click", function (e) {
 
 ## 插入 3000 个 li
 
-当数据量很大的时候，这个时候可以使用 fragment + requestAnimationFrame 来分批插入数据
+当数据量很大的时候，这个时候可以使用 ```fragment + requestAnimationFrame``` 来分批插入数据
 
-目的是减少 DOM 操作次数、缩短循环时间，每次插入的时机是在页面重新渲染之前
+目的是减少 ```DOM``` 操作次数、缩短循环时间，每次插入的时机是在页面重新渲染之前
 
 ```js
 var total = 3000;

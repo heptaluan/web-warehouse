@@ -90,6 +90,11 @@
 
 * [map/reduce](https://github.com/hanekaoru/WebLearningNotes/blob/master/面试/js/map&reduce.md) 
 
+* [数组操作 - 生成一个 m 长度,内容都为 n 的数组](https://github.com/hanekaoru/WebLearningNotes/blob/master/面试/js/fill.md) 
+
+
+
+
 
 
 

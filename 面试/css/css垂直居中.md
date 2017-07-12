@@ -1,3 +1,10 @@
+`css` 垂直居中的几种方式
+
+
+----
+
+
+
 ## position
 
 通过改变元素的 ```top``` 位置来实现居中
@@ -63,7 +70,6 @@ div {
 /* 外层 div */
 .wrap {
     display: table-cell;
-    
     vertical-align: middle;
 }
 

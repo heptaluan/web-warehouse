@@ -43,7 +43,7 @@ each: function( callback, args ) {
 
 ```js
 // 参数 i 为遍历索引值，n 为当前的遍历对象
-$.each([{ name: "limeng", email: "xfjylimeng" }, { name: "hehe", email: "xfjylimeng" }], function (i, n) {
+$.each([{ name: "limeng", email: "zhangsan" }, { name: "hehe", email: "zhangsan" }], function (i, n) {
     console.log("索引:" + i + "对应值为：" + n.name);
 });
 
@@ -247,7 +247,7 @@ $("#box").hover(function () {
 
 ## jQuery 的链式操作是如何实现的
 
-简单来说，仅仅是通过对象上的方法最后 return this 把对象再返回回来，这样一来就可以链式操作了
+简单来说，仅仅是通过对象上的方法最后 `return this` 把对象再返回回来，这样一来就可以链式操作了
 
 一个简单的模拟
 
@@ -292,7 +292,7 @@ new Foo().setName("abc").setAge(20);  // Foo {name: "abc", age: 20}
 Function(Integer index, Element element )
 ```
 
-回调的第一个参数是数组元素所在的位置（序号，从 ```0``` 开始），第二个参数是元素本身
+回调的**第一个**参数是数组元素所在的位置（序号，从 ```0``` 开始），**第二个**参数是元素本身
 
 而 ```Array.prototype.forEach()``` 的回调定义是：
 
@@ -300,4 +300,4 @@ Function(Integer index, Element element )
 Function(currentValue, index, array)
 ```
 
-回调的第一个参数是数组元素本身，第二个参数才是元素所有的位置（序号），而且这个回调有**第三个**参数，即整个数组的引用
+回调的**第一个**参数是数组元素本身，**第二个**参数才是元素所有的位置（序号），而且这个回调有**第三个**参数，即整个数组的引用

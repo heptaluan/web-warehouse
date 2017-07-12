@@ -1,3 +1,8 @@
+`box-sizing` 有哪些取值，分别有什么含义
+
+----
+
+
 ```box-sizing``` 属性用于更改用于计算元素宽度和高度的默认的 ```CSS``` 盒子模型，可以使用此属性来模拟不正确支持 ```CSS``` 盒子模型规范的浏览器的行为
 
 ```js
@@ -25,3 +30,5 @@ width = border + padding + 内容的  width
 height = border + padding + 内容的 height
 
 ```
+
+> 还有一个仅在 `firefox` 中实现的取值 `padding-box`，但是已经被废弃

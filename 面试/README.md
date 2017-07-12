@@ -222,4 +222,10 @@
 
 * [进程与线程](https://github.com/hanekaoru/WebLearningNotes/blob/master/面试/other/进程与线程.md)
 
+  * `JavaScript` 中的单线程执行机制
+
+  * `JavaScript` 中的阻塞
+
+  * 线程同步
+
 * [数据库中的事务和锁](https://github.com/hanekaoru/WebLearningNotes/blob/master/面试/other/数据库中的事务和锁.md)

@@ -92,6 +92,8 @@
 
 * [数组操作 - 生成一个 m 长度,内容都为 n 的数组](https://github.com/hanekaoru/WebLearningNotes/blob/master/面试/js/fill.md) 
 
+* [call 和 apply 哪个速度更快一些](https://github.com/hanekaoru/WebLearningNotes/blob/master/面试/js/call-apply.md) 
+
 
 
 

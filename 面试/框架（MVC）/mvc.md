@@ -42,4 +42,4 @@
 
 ## Vue/Angular/React 对比
 
-见：[区别](https://vuefe.cn/v2/guide/comparison.html)
+可以见官网文档：[区别](https://vuefe.cn/v2/guide/comparison.html)

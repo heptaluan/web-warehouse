@@ -250,11 +250,41 @@ Access-Control-Max-Age: 86400
 
 对于主域相同而子域不同的例子，可以通过设置 ```document.domain``` 的办法来解决。具体的做法是可以在 ```http://www.a.com/a.htm``` l和 ```http://script.a.com/b.html``` 两个文件中分别加上 ```document.domain = "a.com"```
 
+#### window.name
+
+`window` 对象有个 `name` 属性，该属性有个特征：即在一个窗口（`window`）的生命周期内,窗口载入的所有的页面都是共享一个 `window.name` 的，每个页面对 `window.name` 都有读写的权限，`window.name` 是持久存在一个窗口载入过的所有页面中的
+
 #### jsonp
 
 实质上和 ```xhr``` 对象没有太大关系，其是借助了 ```script``` 标签节点可以跨域去访问，去获取的一个特性
 
-```jsonp``` 的这种原理，只能对 ```GET``` 请求起到效果，即 ```jsonp``` 的方式是不支持 ```POST``` 请求的，这也是 ```jsonp``` 这种方式的局限性
+```jsonp``` 只能对 ```GET``` 请求起到效果，即 ```jsonp``` 的方式是不支持 ```POST``` 请求的，这也是 ```jsonp``` 这种方式的局限性
+
+原理是：动态插入 `script` 标签，通过 `script` 标签引入一个 `js` 文件，这个 `js` 文件载入成功后会执行我们在 `url` 参数中指定的函数，并且会把我们需要的 `json` 数据作为参数传入
+
+```js
+// JSONP 即 json+padding（内填充，就是把 JSON 填充到一个盒子里）
+function createJs(sUrl) {
+
+    var oScript = document.createElement('script');
+
+    oScript.type = 'text/javascript';
+    oScript.src = sUrl;
+    
+    document.getElementsByTagName('head')[0].appendChild(oScript);
+
+}
+
+createJs('jsonp.js');
+
+box({
+    'name': 'test'
+});
+
+function box(json) {
+    alert(json.name);
+}
+```
 
 ----
 

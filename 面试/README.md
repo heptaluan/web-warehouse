@@ -98,6 +98,7 @@
 
 * [JavaScript 中常用的设计模式](https://github.com/hanekaoru/WebLearningNotes/blob/master/面试/js/设计模式.md) 
 
+* [实现一个解析 url 和千位分隔符的方法](https://github.com/hanekaoru/WebLearningNotes/blob/master/面试/js/getQueryObject.md) 
 
 
 

@@ -95,6 +95,7 @@
 * [call 和 apply 哪个速度更快一些](https://github.com/hanekaoru/WebLearningNotes/blob/master/面试/js/call-apply.md) 
 
 * [JavaScript 中的事件模型](https://github.com/hanekaoru/WebLearningNotes/blob/master/面试/js/emitter.md) 
+
 * [JavaScript 中常用的设计模式](https://github.com/hanekaoru/WebLearningNotes/blob/master/面试/js/设计模式.md) 
 
 

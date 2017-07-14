@@ -95,6 +95,7 @@
 * [call 和 apply 哪个速度更快一些](https://github.com/hanekaoru/WebLearningNotes/blob/master/面试/js/call-apply.md) 
 
 * [JavaScript 中的事件模型](https://github.com/hanekaoru/WebLearningNotes/blob/master/面试/js/emitter.md) 
+* [JavaScript 中常用的设计模式](https://github.com/hanekaoru/WebLearningNotes/blob/master/面试/js/设计模式.md) 
 
 
 
@@ -182,7 +183,9 @@
 
 * [css3 中的 calc()](https://github.com/hanekaoru/WebLearningNotes/blob/master/面试/css/calc.md)
 
+* [absolute 的 containing block（容器块） 计算方式跟正常流有什么不同？](https://github.com/hanekaoru/WebLearningNotes/blob/master/面试/css/absolute.md)
 
+* [IE 中的 css hack](https://github.com/hanekaoru/WebLearningNotes/blob/master/面试/css/css-hack.md)
 
 
 
@@ -237,3 +240,6 @@
   * 线程同步
 
 * [数据库中的事务和锁](https://github.com/hanekaoru/WebLearningNotes/blob/master/面试/other/数据库中的事务和锁.md)
+
+* [JavaScript 中的栈和堆](https://github.com/hanekaoru/WebLearningNotes/blob/master/面试/other/JavaScript中的栈和堆.md)
+

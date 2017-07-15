@@ -1,6 +1,6 @@
-算是一个大的汇总仓库吧，囊括了平时瞎捣鼓所涉及过的，接触过的绝大部分东西
+算是一个大的汇总仓库吧，囊括了平时瞎捣鼓的绝大部分东西
 
-平时的业余时间大部分都花在了这个仓库和个人博客（[hanekaoru's Blog](http://hanekaoru.com/)）上面
+业余时间大部分都花在了这个仓库和个人博客（[hanekaoru's Blog](http://hanekaoru.com/)）上面
 
 总之，就算是记录自己的一个学习历程吧，不定时更新，仅作学习记录
 
@@ -8,18 +8,11 @@
 
 路还很遥远，一步一步来，每天进步一点点
 
-个人向前端资源汇总：[前端资源汇集](https://github.com/hanekaoru/WebLearningNotes/blob/master/前端资源汇集.md)
-
-个人常用 Node.js 第三方包整理：[第三方包整理](https://github.com/hanekaoru/WebLearningNotes/blob/master/第三方包整理.md)
-
-个人工具函数库：[工具函数库](https://github.com/hanekaoru/WebLearningNotes/blob/master/工具函数库.md)
-
-
-相关资源帖（文章）可参加上面的前端资源汇，下面的都是一些篇幅相对比较多的长篇（文章）和教程（视频）一类的
-
 ----
 
 ----
+
+一些篇幅较长的资源列表
 
 ## js / css / html
 

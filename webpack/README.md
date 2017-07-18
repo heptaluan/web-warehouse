@@ -82,7 +82,7 @@ hello.bundle.js  2.66 kB       0  [emitted]  main
 ```js
 // hello.js
 require("./world.js")
-require("./style.css)
+require("./style.css")
 
 function hello (str) {
     console.log(str)

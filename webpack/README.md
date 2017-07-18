@@ -17,7 +17,7 @@ function hello (str) {
 
 然后运行 `webpack hello.js hello.bundle.js` 来进行打包，可以看到控制台输出类似的信息
 
-```js
+```
 Hash: 6b369e952e4e764b98b8
 Version: webpack 2.3.0
 Time: 56ms
@@ -61,9 +61,63 @@ function world () {
 
 和上面一样的操作，最后可以看到生成结果
 
-```js
-// ...
+```
 hello.bundle.js  2.66 kB       0  [emitted]  main
    [0] ./hello.js 72 bytes {0} [built]
    [1] ./world.js 37 bytes {0} [built]
+```
+
+
+## 引入 css 文件
+
+我们新建一个 `style.css` 文件然后尝试在 `hello.js` 当中来引用
+
+```css
+// style.css
+* {margin: 0; padding: 0;}
+```
+
+然后尝试引入
+
+```js
+// hello.js
+require("./world.js")
+require("./style.css)
+
+function hello (str) {
+    console.log(str)
+}
+```
+
+这时会看到控制台报错
+
+```
+You may need an appropriate loader to handle this file type.
+```
+
+这说明我们需要使用特定的 `loader` 来处理 `.css` 这种后缀文件，这时我们可以安装 `css-loader` 和 `style-loader` 来对 `css` 文件进行处理
+
+```js
+npm install css-loader style-loader --save-dev
+```
+
+安装完成以后，我们在引入 `css` 文件的时候，先调用对应的 `loader` 来处理
+
+```js
+require("./world.js")
+require("css-loader!./style.css")
+
+function hello (str) {
+    console.log(str)
+}
+```
+
+这个时候再去打包，就发现已经不会报错了
+
+```
+hello.bundle.js  5.23 kB       0  [emitted]  main
+   [0] ./hello.js 107 bytes {0} [built]
+   [1] ./world.js 37 bytes {0} [built]
+   [2] ./node_modules/css-loader!./style.css 188 bytes {0} [built]
+    + 1 hidden module
 ```

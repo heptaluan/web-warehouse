@@ -121,3 +121,46 @@ hello.bundle.js  5.23 kB       0  [emitted]  main
    [2] ./node_modules/css-loader!./style.css 188 bytes {0} [built]
     + 1 hidden module
 ```
+
+
+## 使用 webpack 参数
+
+#### --module-bind
+
+像上面那样在每次引用的时候都指定对应的 `loader` 比较麻烦，这个时候我们就可以利用 `webpack` 提供的一些参数来简化我们的操作
+
+先去除引用时添加的 `loader`
+
+```js
+require("./world.js")
+require("./style.css")
+
+function hello (str) {
+    console.log(str)
+}
+```
+
+然后使用 `webpack` 提供的 `--module-bind` 参数来进行打包
+
+```js
+webpack hello.js hello.bundle.js --module-bind "css=style-loader!css-loader"
+```
+
+结果发现是一样可行的
+
+
+#### --watch
+
+使用 `--watch` 参数可以使我们每次修改后不必手动的去重新打包，`webpack` 会自动帮我们完成打包
+
+```js
+webpack hello.js hello.bundle.js --module-bind "css=style-loader!css-loader" --watch
+```
+
+一些其他比较常用的参数
+
+* `--progress`  显示打包进度条
+
+* `--display-modules`  显示打包的模块，会把我们所有引用的模块全部列出来（包括 `loader` 的处理方式）
+
+* `--display-reasons`  显示打包的模块之间的依赖（即为什么会打包这个模块）

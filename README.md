@@ -1,8 +1,6 @@
 算是一个大的汇总仓库吧，囊括了平时瞎捣鼓的绝大部分东西
 
-业余时间大部分都花在了这个仓库和个人博客（[hanekaoru's Blog](http://hanekaoru.com/)）上面
-
-总之，就算是记录自己的一个学习历程吧，不定时更新，仅作学习记录
+算是记录自己的一个学习历程吧，不定时更新，仅作学习记录
 
 提醒自己没事刷一刷（~~而不是闲的时候刷知乎，QQ群斗图~~）
 
@@ -12,7 +10,7 @@
 
 ----
 
-一些篇幅较长的资源列表
+一些前端相关资源列表
 
 ## js / css / html
 
@@ -61,15 +59,29 @@
 
 
 
+
+
+
+
+
 #### 构建、依赖工具
 
 
+
+[webpack深入与实战](http://www.imooc.com/learn/802)
 
 [Webpack傻瓜式指南](https://zhuanlan.zhihu.com/p/20367175?columnSlug=FrontendMagazine)
 
 [React 和 Webpack 小书](https://hainuo.gitbooks.io/react-webpack-cookbook/content/index.html)
 
 ~~[webpack入门(译)](http://www.open-open.com/lib/view/open1445758674320.html)~~
+
+
+
+
+
+
+
 
 
 

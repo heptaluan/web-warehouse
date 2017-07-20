@@ -1,0 +1,19 @@
+{
+	"name": "webpack-demo",
+	"version": "1.0.0",
+	"description": "",
+	"main": "webpack.config.js",
+	"dependencies": {
+		"css-loader": "^0.28.4",
+		"style-loader": "^0.18.2",
+		"webpack": "^3.3.0"
+	},
+	"devDependencies": {},
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"webpack": "webpack --config webpack.config.js --progress --display-modules --colors --display-reasons"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC"
+}

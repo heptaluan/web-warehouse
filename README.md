@@ -66,11 +66,13 @@
 
 #### 构建、依赖工具
 
+[Webpack 2.0 视频教程](https://devopen.club/course/webpack2.html)
 
+[webpack 入门整理](http://www.cnblogs.com/skylor/p/7008756.html)
 
-[webpack深入与实战](http://www.imooc.com/learn/802)
+[webpack 深入与实战](http://www.imooc.com/learn/802)
 
-[Webpack傻瓜式指南](https://zhuanlan.zhihu.com/p/20367175?columnSlug=FrontendMagazine)
+[Webpack 傻瓜式指南](https://zhuanlan.zhihu.com/p/20367175?columnSlug=FrontendMagazine)
 
 [React 和 Webpack 小书](https://hainuo.gitbooks.io/react-webpack-cookbook/content/index.html)
 

@@ -157,3 +157,16 @@ ReactDOM.render(
     document.getElementById("box")
 )
 ```
+
+`jsx` 不仅可以渲染 `html` 标签，同时还可以渲染 `react` 组件，在 `jsx` 当中使用大小写来区分（注意标签最后需要闭合，即 `/`）
+
+```js
+// 渲染 html 标签
+var divElement = <div className="foo" />;
+ReactDOM.render(divElement, document.getElementById("box"));
+
+// 渲染 react 组件
+var Component = React.createClass({ /**/ })
+var divElement = <Component flag={true} />;
+ReactDOM.render(divElement, document.getElementById("box"));
+```

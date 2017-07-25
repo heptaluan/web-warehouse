@@ -68,35 +68,55 @@ ReactDOM.render(
         <h2>hello</h2>
         <h2>world</h2>
     </div>,
-    document.getElementById("#box")
+    document.getElementById("box")
 )
 ```
 
-几个注意点：
+但是需要注意的是，`jsx` 当中可以嵌套多个 `html` 标签，但是最外层只能是一个标签，即需要包裹的元素（同 `vue` 类似）
 
-可以在 jsx 中使用 JavaScript 表达式，需要写在 `{}` 当中，比如
+```js
+// 错误的例子
+ReactDOM.render(
+    <h2>hello</h2>,
+    <h2>world</h2>,
+    document.getElementById("box")
+);
+
+// 正确的例子
+ReactDOM.render(
+    <div>
+        <h2>hello</h2>
+        <h2>world</h2>
+    </div>,
+    document.getElementById("box")
+);
+```
+
+其他一些需要注意的地方：
+
+可以在 `jsx` 中使用 `JavaScript` 表达式，需要写在 `{}` 当中，比如
 
 ```js
 ReactDOM.render(
     <div>
         <h2>{ 1 + 2 }</h2>
     </div>,
-    document.getElementById("#box")
+    document.getElementById("box")
 )
 ```
 
-jsx 中不能使用 if...else 语句，但是可以使用三元运算符来替代，比如 
+`jsx` 中不能使用 `if...else` 语句，但是可以使用**三元运算符**来替代，比如 
 
 ```js
 ReactDOM.render(
     <div>
         <h2>{ x == 1 ? "true" : "false" }</h2>
     </div>,
-    document.getElementById("#box")
+    document.getElementById("box")
 )
 ```
 
-react 推荐使用内联样式，react 会在指定的元素数字后面自动加上 px
+`react` 推荐使用内联样式，`react` 会在指定的元素数字后面自动加上 `px`，命名时使用驼峰命名法
 
 ```js
 var style = {
@@ -106,11 +126,11 @@ var style = {
 
 ReactDOM.render(
     <div style = {style}></div>,
-    document.getElementById("#box")
+    document.getElementById("box")
 )
 ```
 
-jsx 也允许在模版中插入数组，数组会自动展开所有成员
+`jsx` 也允许在模版中插入数组，数组会自动展开所有成员
 
 ```js
 var arr = [
@@ -120,6 +140,20 @@ var arr = [
 
 ReactDOM.render(
     <div>{ arr }</div>,
-    document.getElementById("#box")
+    document.getElementById("box")
+)
+```
+
+`jsx` 当作也允许添加注释，但是需要注意区别两点
+
+* 在标签**内部**的注释需要放在 `{}` 当中
+
+* 在标签**外部**的注释不能使用 `{}`
+
+```js
+ReactDOM.render(
+    /* 这里也是注释 */
+    <div>{ /* 这里是注释 */ }</div>,
+    document.getElementById("box")
 )
 ```

@@ -50,3 +50,76 @@
   * `babel.min.js` - 将 `ES6` 代码转为 `ES5` 代码（`babel` 内嵌了对 `jsx` 的支持）
 
 * 内嵌的 `script` 标签注意 `type` 格式为 `text/babel`
+
+
+## jsx
+
+`react` 使用 `jsx` 来替代常规的 `JavaScript`
+
+* `jsx` 执行更快，因为它在编译为 `JavaScript` 代码后进行了优化
+
+* 它是类型安全的，在编译过程中就能发现错误
+
+* 使用 `jsx` 编写模板更加简单快速
+
+```js
+ReactDOM.render(
+    <div>
+        <h2>hello</h2>
+        <h2>world</h2>
+    </div>,
+    document.getElementById("#box")
+)
+```
+
+几个注意点：
+
+可以在 jsx 中使用 JavaScript 表达式，需要写在 `{}` 当中，比如
+
+```js
+ReactDOM.render(
+    <div>
+        <h2>{ 1 + 2 }</h2>
+    </div>,
+    document.getElementById("#box")
+)
+```
+
+jsx 中不能使用 if...else 语句，但是可以使用三元运算符来替代，比如 
+
+```js
+ReactDOM.render(
+    <div>
+        <h2>{ x == 1 ? "true" : "false" }</h2>
+    </div>,
+    document.getElementById("#box")
+)
+```
+
+react 推荐使用内联样式，react 会在指定的元素数字后面自动加上 px
+
+```js
+var style = {
+    fontSize: 12,
+    color: red
+}
+
+ReactDOM.render(
+    <div style = {style}></div>,
+    document.getElementById("#box")
+)
+```
+
+jsx 也允许在模版中插入数组，数组会自动展开所有成员
+
+```js
+var arr = [
+    <h2>hello</h2>,
+    <h2>world</h2>
+]
+
+ReactDOM.render(
+    <div>{ arr }</div>,
+    document.getElementById("#box")
+)
+```

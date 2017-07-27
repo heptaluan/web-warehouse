@@ -14,11 +14,28 @@
     <div id="box"></div>
 
     <script type="text/babel">
+          
+        var LikeButton = React.createClass({
+            getInitialState () {
+                return { liked: false };
+            },
+            handleClick (event) {
+                this.setState({ liked: !this.state.liked });
+            },
+            render () {
+                var text = this.state.liked ? "是" : "否";
+                return (
+                    <p onClick={this.handleClick}>
+                        点击切换状态 ==> <strong>{text}</strong>
+                    </p>
+                );
+            }
+        });
 
         ReactDOM.render(
-            <h1>hello world!</h1>,
+            <LikeButton />,
             document.getElementById("box")
-        )
+        );
 
     </script>
 

@@ -149,6 +149,8 @@
 
 [React 基础实例教程](http://www.cnblogs.com/imwtr/p/6278968.html)
 
+[React 入门](http://wiki.jikexueyuan.com/project/react/getting-started.html)
+
 
 ----
 

@@ -7,3 +7,5 @@
 [04、 组件 API](https://github.com/hanekaoru/WebLearningNotes/blob/master/react/04.md)
 
 [05、 组件的生命周期](https://github.com/hanekaoru/WebLearningNotes/blob/master/react/05.md)
+
+[06、 ajax 与事件](https://github.com/hanekaoru/WebLearningNotes/blob/master/react/06.md)

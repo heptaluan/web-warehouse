@@ -26,9 +26,7 @@
 
 ## React 从入门到精通系列
 
-[by 黄焖jimmy饭](https://github.com/YataoZhang)
+仅记录一些阅读过程中不太熟悉的知识点，翻译 by [黄焖jimmy饭](https://github.com/YataoZhang)
 
-仅记录一些阅读过程中不太熟悉的知识点
-
-[state 和 生命周期钩子，一个完成的时钟案例](https://github.com/hanekaoru/WebLearningNotes/blob/master/react/note/入门到精通/01.md)
+[state 和 生命周期钩子，一个完整的时钟案例](https://github.com/hanekaoru/WebLearningNotes/blob/master/react/note/入门到精通/01.md)
 

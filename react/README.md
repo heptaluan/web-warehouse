@@ -1,4 +1,10 @@
-## react note/basic/基础部分
+一些 `react` 记录笔记和相关 `demo`
+
+----
+
+## 基础部分
+
+一些 `react` 较整体涉及到的一些相关知识
 
 [01、 基本语法，jsx](https://github.com/hanekaoru/WebLearningNotes/blob/master/react/note/basic/01.md)
 
@@ -16,3 +22,13 @@
 
 
 ----
+
+
+## React 从入门到精通系列
+
+[by 黄焖jimmy饭](https://github.com/YataoZhang)
+
+仅记录一些阅读过程中不太熟悉的知识点
+
+[state 和 生命周期钩子，一个完成的时钟案例](https://github.com/hanekaoru/WebLearningNotes/blob/master/react/note/入门到精通/01.md)
+

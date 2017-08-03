@@ -1,4 +1,4 @@
-一些 `react` 记录笔记和相关 `demo`
+一些 `react` 笔记和相关 `demo`
 
 ----
 
@@ -28,5 +28,5 @@
 
 仅记录一些阅读过程中不太熟悉的知识点，翻译 by [黄焖jimmy饭](https://github.com/YataoZhang)
 
-[state 和 生命周期钩子，一个完整的时钟案例](https://github.com/hanekaoru/WebLearningNotes/blob/master/react/note/入门到精通/01.md)
+[01、 state 和 生命周期钩子，一个完整的时钟案例](https://github.com/hanekaoru/WebLearningNotes/blob/master/react/note/入门到精通/01.md)
 

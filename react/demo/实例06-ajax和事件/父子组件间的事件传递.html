@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>父子组件间的事件传递</title>
+    <script src="https://cdn.bootcss.com/react/15.4.2/react.min.js"></script>
+    <script src="https://cdn.bootcss.com/react/15.4.2/react-dom.min.js"></script>
+    <script src="https://cdn.bootcss.com/babel-standalone/6.22.1/babel.min.js"></script>
+</head>
+
+<body>
+    <div id="box"></div>
+    <script type="text/babel">
+        var HelloMessage = React.createClass({
+            getInitialState () {
+                return { value: "hello world" }
+            },
+            handleChange () {
+                this.setState({ value: "world hello"})
+            },
+            render () {
+                var value = this.state.value;
+                return (
+                    <div>
+                        <button onClick={this.handleChange}>点我</button>
+                        <h2>{value}</h2>
+                    </div>
+                )
+            }
+        })
+
+        ReactDOM.render(
+            <HelloMessage />,
+            document.getElementById("box")
+        )
+    </script>
+</body>
+
+</html>

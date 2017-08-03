@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>事件</title>
+    <script src="https://cdn.bootcss.com/react/15.4.2/react.min.js"></script>
+    <script src="https://cdn.bootcss.com/react/15.4.2/react-dom.min.js"></script>
+    <script src="https://cdn.bootcss.com/babel-standalone/6.22.1/babel.min.js"></script>
+</head>
+
+<body>
+    <div id="box"></div>
+    <script type="text/babel">
+        var Content = React.createClass({
+            render() {
+                return (
+                    <div>
+                        <button onClick={this.props.updateStateProp}>点我</button>
+                        <h2>{this.props.myDataProp}</h2>
+                    </div>
+                )
+            }
+        })
+
+        var HelloMessage = React.createClass({
+            getInitialState () {
+                return { value: "hello world"}
+            },
+            handleChange () {
+                this.setState({ value: "world hello"})
+            },
+            render () {
+                var value = this.state.value;
+                return (
+                    <div>
+                        <Content myDataProp={value} updateStateProp={this.handleChange}/>
+                    </div>
+                )
+            }
+        })
+
+        ReactDOM.render(
+            <HelloMessage />,
+            document.getElementById("example")
+        )
+    </script>
+</body>
+
+</html>

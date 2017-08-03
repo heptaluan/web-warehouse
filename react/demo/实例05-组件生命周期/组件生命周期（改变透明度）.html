@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>组件生命周期（改变透明度）</title>
+    <script src="https://cdn.bootcss.com/react/15.4.2/react.min.js"></script>
+    <script src="https://cdn.bootcss.com/react/15.4.2/react-dom.min.js"></script>
+    <script src="https://cdn.bootcss.com/babel-standalone/6.22.1/babel.min.js"></script>
+</head>
+
+<body>
+    <div id="box"></div>
+    <script type="text/babel">
+        var Hello = React.createClass({
+            getInitialState() {
+                return {
+                    opacity: 1.0
+                };
+            },
+
+            componentDidMount() {
+                this.timer = setInterval( () => {
+                    var opacity = this.state.opacity;
+                    opacity -= .05;
+                    if (opacity < 0.1) {
+                        opacity = 1.0;
+                    }
+                    this.setState({
+                        opacity: opacity
+                    });
+                }, 100);
+            },
+
+            render() {
+                return (
+                    <div style={{ opacity: this.state.opacity }}>Hello</div>
+                );
+            }
+        });
+
+        ReactDOM.render(
+            <Hello name="world" />,
+            document.getElementById("box")
+        );
+    </script>
+</body>
+
+</html>

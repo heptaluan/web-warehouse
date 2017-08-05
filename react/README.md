@@ -28,5 +28,6 @@
 
 仅记录一些阅读过程中不太熟悉的知识点，翻译 by [黄焖jimmy饭](https://github.com/YataoZhang)
 
-[01、 state 和 生命周期钩子，一个完整的时钟案例](https://github.com/hanekaoru/WebLearningNotes/blob/master/react/note/入门到精通/01.md)
+[01、 Clock 组件和生命周期钩子](https://github.com/hanekaoru/WebLearningNotes/blob/master/react/note/入门到精通/01.md)
 
+[02、 state 的三个需要注意的地方](https://github.com/hanekaoru/WebLearningNotes/blob/master/react/note/入门到精通/02.md)

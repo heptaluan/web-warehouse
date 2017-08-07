@@ -33,3 +33,6 @@
 [02、 state 的三个需要注意的地方](https://github.com/hanekaoru/WebLearningNotes/blob/master/react/note/入门到精通/02.md)
 
 [03、 事件处理](https://github.com/hanekaoru/WebLearningNotes/blob/master/react/note/入门到精通/03.md)
+
+[04、 根据条件选择性渲染元素](https://github.com/hanekaoru/WebLearningNotes/blob/master/react/note/入门到精通/04.md)
+

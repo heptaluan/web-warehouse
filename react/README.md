@@ -38,6 +38,9 @@
 
 [05、 循环渲染数据（keys）](https://github.com/hanekaoru/WebLearningNotes/blob/master/react/note/入门到精通/05.md)
 
+[06、 表单处理（input，textarea，select）](https://github.com/hanekaoru/WebLearningNotes/blob/master/react/note/入门到精通/06.md)
+
+
 
 
 

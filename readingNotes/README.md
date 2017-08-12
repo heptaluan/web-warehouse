@@ -2,7 +2,7 @@
 
 ----
 
-#### 《精通 JavaScript》
+### 《精通 JavaScript》
 
 [01、JavaScript 与 CSS]()
 
@@ -18,7 +18,7 @@
 
 
 
-#### 《了不起的 Node.js》
+### 《了不起的 Node.js》
 
 [01、阻塞 与 非阻塞 IO]()
 
@@ -32,7 +32,7 @@
 
 
 
-#### 《你不知道的 JavaScript（中卷）》
+### 《你不知道的 JavaScript（中卷）》
 
 [01、值和原生函数]()
 
@@ -48,7 +48,7 @@
 
 
 
-#### 《ECMAScript6 入门》
+### 《ECMAScript6 入门》
 
 [01、let 和 const]()
 
@@ -76,7 +76,7 @@
 
 
 
-#### 《ES6-CheatSheet》
+### 《ES6-CheatSheet》
 
 参考 [es6-cheatsheet](https://github.com/DrkSephy/es6-cheatsheet)
 
@@ -90,7 +90,7 @@
 
 
 
-#### 《JavaScrip 忍者禁术》
+### 《JavaScrip 忍者禁术》
 
 [01、函数]()
 
@@ -100,7 +100,7 @@
 
 
 
-#### 《JavaScript 模式》
+### 《JavaScript 模式》
 
 汇总：
 
@@ -143,7 +143,7 @@
 
 
 
-#### 《Node.js 开发指南》
+### 《Node.js 开发指南》
 
 [01、读取文件，模块，包管理器]()
 

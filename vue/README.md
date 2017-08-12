@@ -4,9 +4,9 @@
 ----
  
 
-#### basic 目录 
+### basic 目录 
 
-一些 vue 的基础知识点
+一些 `vue` 的基础知识点
 
 [01、实例对象]()
 
@@ -27,7 +27,7 @@
 
 
 
-#### vue-learn 目录 
+### vue-learn 目录 
 
 参考 [vuejs-learn](https://github.com/bhnddowinf/vuejs-learn) 
 

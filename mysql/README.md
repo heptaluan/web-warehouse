@@ -3,7 +3,7 @@
 ----
 
 
-#### MYSQL 数据库
+### MYSQL 数据库
 
 参考：[MYSQL 数据库](http://study.163.com/course/courseMain.htm?courseId=1352006)
 
@@ -20,7 +20,7 @@
 [05、利用临时表过滤重复内容]()
 
 
-#### MYSQL 从入门到精通
+### MYSQL 从入门到精通
 
 参考：[MYSQL从入门到精通](https://ke.qq.com/course/70146#term_id=100185382)
 

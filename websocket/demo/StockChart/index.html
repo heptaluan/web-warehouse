@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>WebSocket</title>
+    <link rel="stylesheet" href="./static/bootstrap/dist/css/bootstrap.css">
+    <script src="./static/jquery/dist/jquery.min.js"></script>
+</head>
+<body>
+    <div class="vertical-center">
+    <div class="container">
+        <h1>Stock Chart</h1>
+        <button class="btn btn-primary">开始</button>
+        <button class="btn btn-danger">停止</button>
+        <table class="table" id="stockTable">
+            <thead>
+            <tr>
+                <th>symbol</th>
+                <th>Price</th>
+            </tr>
+            </thead>
+            <tbody id="stockRows">
+            <tr>
+                <td>
+                    <h3>AAPL</h3></td>
+                <td id="AAPL">
+                    <h3><span class="label label-default">95.00</span></h3>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h3>MSFT</h3></td>
+                <td id="MSFT">
+                    <h3><span class="label label-default">50.00</span></h3>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h3>AMZN</h3></td>
+                <td id="AMZN">
+                    <h3><span class="label label-default">300.00</span></h3>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h3>GOOG</h3></td>
+                <td id="GOOG">
+                    <h3><span class="label label-default">550.00</span></h3>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h3>YHOO</h3></td>
+                <td id="YHOO">
+                    <h3><span class="label label-default">35.00</span></h3>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script>
+
+    $(function () {
+
+        var ws = new WebSocket("ws://localhost:8000");
+        var stock_request = { "stocks": ["AAPL", "MSFT", "AMZN", "GOOG", "YHOO"] };
+        var isClose = false;
+        var stocks = {
+            "AAPL": 0, "MSFT": 0, "AMZN": 0, "GOOG": 0, "YHOO": 0
+        };
+
+        function updateUI () {
+
+            ws.onopen  = function (e) {
+                isClose = false;
+                ws.send(JSON.stringify(stock_request));
+                console.log("send msg")
+            }
+
+            // 更新 UI
+            var changeStockEntry = function (symbol, originalValue, newValue) {
+                var valElem = $("#" + symbol + " span");
+                valElem.html(newValue.toFixed(2))
+
+                if (newValue < originalValue) {
+                    valElem.addClass("label-danger");
+                    valElem.removeClass("label-success");
+                } else if (newValue > originalValue) {
+                    valElem.addClass("label-success");
+                    valElem.removeClass("label-danger");
+                }
+
+            }
+
+            // message 函数
+            ws.onmessage = function (e) {
+                var stocksData = JSON.parse(e.data);
+                console.log(stocksData);
+                for (var symbol in stocksData) {
+                    if (stocksData.hasOwnProperty(symbol)) {
+                        changeStockEntry(symbol, stocks[symbol], stocksData[symbol])
+                        stocks[symbol] = stocksData[symbol];
+                    }
+                }
+            }
+        }
+
+        updateUI();
+
+        $(".btn-primary").click(function () {
+            if (isClose) {
+                ws = new WebSocket("ws://localhost:8000")
+            }
+            updateUI();
+        })
+
+        $(".btn-danger").click(function () {
+            ws.close();
+        })
+
+        ws.onclose = function (e) {
+            console.log("Connection closed", e)
+            isClose = true;
+        }
+
+    })
+
+</script>
+</body>
+</html>

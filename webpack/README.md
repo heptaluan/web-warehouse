@@ -1,9 +1,15 @@
-记录一些 `webpack` 相关知识
+目录列表
 
 ----
 
-[01、 基本 js，css 文件打包，参数](https://github.com/hanekaoru/WebLearningNotes/blob/master/webpack/section01.md)
+## webpack 深入与实战
 
-[02、 webpack 配置文件](https://github.com/hanekaoru/WebLearningNotes/blob/master/webpack/section02.md)
+参考 [webpack 深入与实战](http://www.imooc.com/learn/802)
 
-[03、 entry 和 output](https://github.com/hanekaoru/WebLearningNotes/blob/master/webpack/section03.md)
+相关示例见 `demo` 列表
+
+[01、 基本 js，css 文件打包，参数](https://github.com/hanekaoru/WebLearningNotes/blob/master/webpack/note/webpack深入与实战/01.md)
+
+[02、 webpack 配置文件](https://github.com/hanekaoru/WebLearningNotes/blob/master/webpack/note/webpack深入与实战/02.md)
+
+[03、 entry 和 output](https://github.com/hanekaoru/WebLearningNotes/blob/master/webpack/note/webpack深入与实战/03.md)

@@ -1,0 +1,160 @@
+{% extends "base.html" %} {% block main %}
+
+<script>
+
+	$(function () {
+		var vm = new Vue({
+			el: "#product-list",
+			data: {
+				products: []
+			},
+			methods: {
+				deleteProduct: function (id) {
+					var _this = this;
+					$.ajax({
+						type: "delete",
+						dataType: "json",
+						url: "/api/products/" + id
+					}).done(function (r) {
+						console.log(r);
+						var i = 0,
+							l = _this.products.length;
+						for (; i < l; i++) {
+							if (_this.products[i].id === id) {
+								_this.products.splice(i, 1);
+								return;
+							}
+						}
+					}).fail(function (err, textStatus) {
+						alert(`Error: ${err.status}`)
+					})
+				}
+			}
+		})
+
+		$.getJSON("/api/products").done(function (data) {
+			vm.products = data.products;
+		}).fail(function (err, textStatus) {
+            alert(`Error: ${err.status}`)
+        })
+
+        $("#product-form").submit(function (e) {
+            e.preventDefault();
+			var product = {
+				name: $(this).find("input[name=name]").val(),
+                manufacturer: $(this).find("input[name=manufacturer]").val(),
+                price: parseFloat($(this).find("input[name=price]").val())
+			}
+
+			$.ajax({
+				type: "post",
+				dataType: "json",
+				contentType: "application/json",
+				url: "/api/products",
+				data: JSON.stringify(product)
+			}).done(function (r) {
+				vm.products.push(r)
+			}).fail(function (err, textStatus) {
+				alert(`Error: ${err.status}`)
+			})
+
+            $(this).get(0).reset()
+        })
+	})
+
+</script>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><span class="glyphicon glyphicon-th-list"></span> Products</h3>
+                </div>
+                <div class="panel-body">
+                    <table id="product-list" class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th style="width:50px"></th>
+                                <th>Product</th>
+                                <th style="width:150px">Price</th>
+                                <th style="width:50px"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr v-for="p in products">
+                                <td>
+                                    <img class="media-object" style="width:40px; height:40px;" src="/static/images/icon.png">
+                                </td>
+                                <td>
+                                    <h4 class="media-heading" v-text="p.name"></h4>
+                                    <p><span v-text="p.manufacturer"></span> <span><a v-on:click="deleteProduct(p.id)" href="javascript:;">delete</a></span></p>
+                                </td>
+                                <td>
+                                    <p style="font-size:2em">¥ <span v-text="p.price"></span></p>
+                                </td>
+                                <td><a target="_blank" href="javascript:;">Buy</a>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><span class="glyphicon glyphicon-align-center"></span> Create New Product</h3>
+                </div>
+                <div class="panel-body">
+                    <form id="product-form">
+                        <div class="form-group">
+                            <label>Name</label>
+                            <input type="text" name="name" class="form-control" placeholder="Product name" value="">
+                            <p class="help-block">Product name</p>
+                        </div>
+                        <div class="form-group">
+                            <label>Manufacturer</label>
+                            <input type="text" name="manufacturer" class="form-control" placeholder="Manufacturer name" value="">
+                            <p class="help-block">Manufacturer name</p>
+                        </div>
+                        <div class="form-group">
+                            <label>Price</label>
+                            <input type="number" name="price" class="form-control" placeholder="Product price" value="">
+                            <p class="help-block">Product price</p>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary">Create</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><span class="glyphicon glyphicon-align-center"></h3>
+                </div>
+                <div class="panel-body" style="background: url(https://static.hdslb.com/history/img/Unknown.png) no-repeat center center;min-height: 220px"></div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><span class="glyphicon glyphicon-align-center"></h3>
+                </div>
+                <div class="panel-body" style="background: url(https://static.hdslb.com/history/img/Unknown.png) no-repeat center center;min-height: 220px"></div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><span class="glyphicon glyphicon-align-center"></h3>
+                </div>
+                <div class="panel-body" style="background: url(https://static.hdslb.com/history/img/Unknown.png) no-repeat center center;min-height: 220px"></div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

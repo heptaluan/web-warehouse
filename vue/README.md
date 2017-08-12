@@ -1,29 +1,42 @@
-记录学习 vue 相关的一些知识
+目录列表
+
+
+----
+ 
+
+#### basic 目录 
+
+一些 vue 的基础知识点
+
+[01、实例对象]()
+
+[02、交互（http）]()
+
+[03、组件，动态组件，父子组件，父子组件间数据交互]()
+
+[04、组件之间的通信]()
+
+[05、路由（1.x 版本）]()
+
+[06、路由（2.0 版本）]()
+
+[07、过渡效果]()
+
+[08、使用 webpack 来构建 vue 项目]()
+
+
+
 
 #### vue-learn 目录 
 
 参考 [vuejs-learn](https://github.com/bhnddowinf/vuejs-learn) 
 
-Vue 学习笔记（各个章节） + demo（学习中涉及到的案例） 记录
+相关 `demo` 见 `demo` 列表
 
+[01、基本概述，属性与方法，生命周期]()
 
-#### webpack-vue 目录
+[02、数据绑定，过滤器，计算属性]()
 
-利用 webpack 来构建 vue 项目
-
-
-#### app 目录
-
-一个较完整项目 基于 vue-cli + webpack
-
-
-#### ToDoList
-
-一个简易的 ToDoList 基于 bootstrap + vue 实现
-
-#### demos 目录
-
-各种 vue 相关 demo 的汇总
-
+[03、class 与 style，数组语法，条件与列表渲染]()
 
 

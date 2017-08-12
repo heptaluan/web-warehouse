@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/2.0.0/jquery.min.js"></script>
+    <script>
+
+    $(function () {
+
+        var ws = new WebSocket("ws://localhost:8800");
+
+        ws.onopen = function (e) {
+            console.log(`Connection to server opened`)
+        }
+
+        function sendMessage () {
+            ws.send($("#message").val())
+        }
+
+    })
+
+    </script>
+</head>
+<body>
+    
+    <div class="vertical-center">
+        <div class="container">
+            <p>&nbsp;</p>
+            <form role="form" id="chat_form" onsubmit="sendMessage(); return false;">
+                <div class="form-group">
+                    <input class="form-control" type="text" name="message" id="message"
+                           placeholder="Type text to echo in here" value="" />
+                </div>
+                <button type="button" id="send" class="btn btn-primary"
+                        onclick="sendMessage();">
+                    Send!
+                </button>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>

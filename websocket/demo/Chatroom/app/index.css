@@ -1,0 +1,53 @@
+body{background-color:#efeff4;margin:0;padding:0}
+#doc{height:100%;line-height:1.4}
+#chat-robot{padding:4px;padding-bottom:0;border:1px solid #7bb0e2;background-color:#e6f5fc}
+#mask{display:table;position:absolute;top:0;height:100%;width:100%;background-color:#fff;z-index:100}
+#mask div{display:table-cell;height:100%;vertical-align:middle;text-align:center}
+.action button{border:none;border-radius:30px;color:#8c8c8c;height:28px;width:68px;text-align:center;background:#fbfbfb;box-shadow:0 0 1px #000,0 2px 2px #eee}
+.action button:active,.action button[disabled]{color:#fff;background-color:#04c}
+.action button:focus{outline:thin dotted #333;outline:5px auto -webkit-focus-ring-color;outline-offset:-2px}
+.action button[disabled]{cursor:default;background-color:#ccc;background-image:none;border-color:#ccc;box-shadow:none}
+.fn-hide{display:none}
+.message{border-bottom:0;background-color:#efeff4;padding-bottom:75pt}
+.message:after{display:block;clear:both;height:0;content:"\0020"}
+div.robot,section{padding:5px 10px;clear:both}
+div.robot,section.robot,section.service,section.top-message{float:left}
+div.robot>div,section.robot>div,section.service>div,section.top-message>div{max-width:225px;display:inline-block;position:relative;padding:9pt;margin:0 20px 0 10px;border-radius:10px;background-color:#fff;box-shadow:inset 0 0 1px #fff;vertical-align:top}
+section.robot>div{word-break:break-word}
+.system .windowContent:before,div.robot>div:before,section.robot>div:before,section.service>div:before,section.top-message>div:before{content:"";position:absolute;left:-5px;top:4px;width:0;height:0;border-top:solid transparent;border-right:7px solid #fff;border-bottom:4px solid transparent}
+section.user{float:right;text-align:right}
+section.user>div{max-width:225px;position:relative;display:inline-block;padding:8px;margin:0 10px 0 9pt;text-align:left;border-radius:10px;color:#fff;box-shadow:inset 0 0 1px #007aff;background-color:#007aff;vertical-align:top;word-break:break-all}
+section.user>div:before{content:"";position:absolute;right:-5px;top:4px;width:0;height:0;border-top:solid transparent;border-left:7px solid #007aff;border-bottom:4px solid transparent}
+header{font-weight:700;color:#4d4d4d}
+.welcome em{color:#2982e5}
+.welcome{color:#000;font-size:1pc;margin-bottom:0}
+.user>span,.welcome span{font-weight:700;color:#f60}
+.user>span{font-weight:400;font-size:14px;color:#f60;max-width:60px;height:36px;overflow:hidden;float:right}
+.robot>span,.service>span{color:#006e9c;font-weight:700}
+.service>span{height:36px;font-weight:400;font-size:14px;color:#999;overflow:hidden;float:left}
+.top-message article{color:#f60}
+.top-message article .init-temp{color:#000}
+.top-message article .topHeader{color:#f60}
+.top-message ul{padding:0}
+.top-message li,.top-message ul{list-style:none}
+.service>time{display:none}
+.robot>span,.top-message>span{float:left}
+.system{text-align:center;color:#999;font-size:.8em}
+.system .windowimg{float:left}
+.system .windowContent{position:relative;border:1px solid #7bb2d9;border-radius:5px;background-color:#c5e4fa;padding:8px;margin:0 9pt 0 45px;text-align:left;color:#000;font-size:14px}
+.input-box{display:-webkit-box;display:-ms-flexbox;display:-moz-box;position:fixed;bottom:0;padding:8px 10px;width:100%;box-shadow:0 0 1px #000;background-color:#fff}
+.input-box .input{background-color:#fff;line-height:25px;width:92%}
+.input input{margin:0;float:left;padding:0 6px;height:28px;width:93%;font-size:14px;background-color:#fbfbfb;border:none;border-radius:15px;color:#000;box-shadow:0 0 1px #000}
+.input input[disabled]{background-color:#eee}
+.input-box button{font-size:15px;float:right}
+section{margin:5px 0}
+section.robot>.robot-comment{padding:0}
+.robot-comment .robot-comment-title{padding:8px}
+.robot-comment button,.service-comment button{padding:2px 9pt;margin:0 8px}
+.robot-comment button{margin:0}
+section.service-comment>div{padding:0;padding-top:10px}
+.message .robot .btn-robot{padding:0}
+.btn-robot .btn-title{padding:8px}
+.suggest{border:1px solid #afafaf;border-bottom:0 none;background-color:hsla(0,0%,100%,.95);width:100%}
+.suggest ul{margin:0;padding:0;list-style:none}
+.suggest li{height:44px;line-height:44px;padding-left:10px;border-bottom:1px solid #afafaf;font-size:17px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}

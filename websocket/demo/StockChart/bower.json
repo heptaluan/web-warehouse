@@ -1,0 +1,17 @@
+{
+  "name": "app",
+  "description": "",
+  "main": "server.js",
+  "authors": [
+    "hanekaoru <vd2o@foxmai.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

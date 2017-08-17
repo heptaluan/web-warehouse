@@ -41,6 +41,7 @@
 
 [07、 组件组合和继承](https://github.com/hanekaoru/WebLearningNotes/blob/master/react/note/入门到精通/07.md)
 
+[08、 深入理解 jsx](https://github.com/hanekaoru/WebLearningNotes/blob/master/react/note/入门到精通/08.md)
 
 
 

@@ -43,6 +43,24 @@
 
 [08、 深入理解 jsx](https://github.com/hanekaoru/WebLearningNotes/blob/master/react/note/入门到精通/08.md)
 
-[09、 深入理解 jsx](https://github.com/hanekaoru/WebLearningNotes/blob/master/react/note/入门到精通/09.md)
+[09、 使用 PropTypes 来进行类型检测](https://github.com/hanekaoru/WebLearningNotes/blob/master/react/note/入门到精通/09.md)
+
+[10、 refs 和 DOM 元素](https://github.com/hanekaoru/WebLearningNotes/blob/master/react/note/入门到精通/10.md)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

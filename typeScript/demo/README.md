@@ -7,3 +7,7 @@
 
 `note` 中的一步一步学习 TypeScript对应相关示例
 
+
+### App 目录
+
+一个 `typeScript` + `react` + `webpack` 的基本示例

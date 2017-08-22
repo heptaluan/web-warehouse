@@ -10,3 +10,4 @@
 
 [02、基本类型](https://github.com/hanekaoru/WebLearningNotes/blob/master/typeScript/note/一步一步学习TypeScript/02.md)
 
+[03、严格的对象赋值检查，Duck Typing，隐式/显示 类型转换](https://github.com/hanekaoru/WebLearningNotes/blob/master/typeScript/note/一步一步学习TypeScript/03.md)

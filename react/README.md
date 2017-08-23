@@ -47,6 +47,9 @@
 
 [10、 refs 和 DOM 元素](https://github.com/hanekaoru/WebLearningNotes/blob/master/react/note/入门到精通/10.md)
 
+[11、 不可控组件和默认值](https://github.com/hanekaoru/WebLearningNotes/blob/master/react/note/入门到精通/11.md)
+
+
 
 
 

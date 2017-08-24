@@ -49,6 +49,7 @@
 
 [11、 不可控组件和默认值](https://github.com/hanekaoru/WebLearningNotes/blob/master/react/note/入门到精通/11.md)
 
+[12、 提升 state](https://github.com/hanekaoru/WebLearningNotes/blob/master/react/note/入门到精通/12.md)
 
 
 

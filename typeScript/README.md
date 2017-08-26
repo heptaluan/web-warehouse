@@ -13,3 +13,5 @@
 [03、严格的对象赋值检查，Duck Typing，隐式/显示 类型转换](https://github.com/hanekaoru/WebLearningNotes/blob/master/typeScript/note/一步一步学习TypeScript/03.md)
 
 [04、Enums 类型](https://github.com/hanekaoru/WebLearningNotes/blob/master/typeScript/note/一步一步学习TypeScript/04.md)
+
+[05、函数 Function（函数的参数，this，重载）](https://github.com/hanekaoru/WebLearningNotes/blob/master/typeScript/note/一步一步学习TypeScript/05.md)

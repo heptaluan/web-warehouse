@@ -51,6 +51,7 @@
 
 [12、 提升 state](https://github.com/hanekaoru/WebLearningNotes/blob/master/react/note/入门到精通/12.md)
 
+[13、 ES6 与 react](https://github.com/hanekaoru/WebLearningNotes/blob/master/react/note/入门到精通/13.md)
 
 
 

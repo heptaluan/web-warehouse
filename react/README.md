@@ -53,6 +53,7 @@
 
 [13、 ES6 与 react](https://github.com/hanekaoru/WebLearningNotes/blob/master/react/note/入门到精通/13.md)
 
+[14、 jsx 与 react](https://github.com/hanekaoru/WebLearningNotes/blob/master/react/note/入门到精通/14.md)
 
 
 

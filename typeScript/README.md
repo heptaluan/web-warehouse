@@ -15,3 +15,5 @@
 [04、Enums 类型](https://github.com/hanekaoru/WebLearningNotes/blob/master/typeScript/note/一步一步学习TypeScript/04.md)
 
 [05、函数 Function（函数的参数，this，重载）](https://github.com/hanekaoru/WebLearningNotes/blob/master/typeScript/note/一步一步学习TypeScript/05.md)
+
+[06、箭头函数](https://github.com/hanekaoru/WebLearningNotes/blob/master/typeScript/note/一步一步学习TypeScript/06.md)

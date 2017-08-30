@@ -17,3 +17,5 @@
 [05、函数 Function（函数的参数，this，重载）](https://github.com/hanekaoru/WebLearningNotes/blob/master/typeScript/note/一步一步学习TypeScript/05.md)
 
 [06、箭头函数](https://github.com/hanekaoru/WebLearningNotes/blob/master/typeScript/note/一步一步学习TypeScript/06.md)
+
+[07、联合类型与元祖（tuple）](https://github.com/hanekaoru/WebLearningNotes/blob/master/typeScript/note/一步一步学习TypeScript/07.md)

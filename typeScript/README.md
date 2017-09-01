@@ -20,4 +20,4 @@
 
 [07、联合类型与元祖（tuple）](https://github.com/hanekaoru/WebLearningNotes/blob/master/typeScript/note/一步一步学习TypeScript/07.md)
 
-[08、class](https://github.com/hanekaoru/WebLearningNotes/blob/master/typeScript/note/一步一步学习TypeScript/08.md)
+[08、class，abstract](https://github.com/hanekaoru/WebLearningNotes/blob/master/typeScript/note/一步一步学习TypeScript/08.md)

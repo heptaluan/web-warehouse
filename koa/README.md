@@ -4,7 +4,7 @@
 
 ### basic
 
-相关示例见 demo 列表
+相关示例见 `demo` 列表
 
 [01、express 与 koa，koa 1.x 与 2.x 区别](https://github.com/hanekaoru/WebLearningNotes/tree/master/koa/note/01.md)
 

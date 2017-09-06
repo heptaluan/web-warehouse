@@ -2,10 +2,11 @@
 
 ----
 
-## package.json 配置（基于 vue）
+## vue
+
+#### package.json 配置（基于 vue）
 
 ```js
-
 {
     // ...
 
@@ -36,14 +37,13 @@
 
     // ...
 }
-
 ```
 
 
-## webpack.config.js 配置（基于 vue）
+
+#### webpack.config.js 配置（基于 vue）
 
 ```js
-
 var path = require('path')
 var webpack = require('webpack')
 
@@ -122,5 +122,59 @@ if (process.env.NODE_ENV === 'production') {
         })
     ])
 }
+```
 
+
+## react
+
+#### package.json 配置（react 基本配置）
+
+```js
+
+{
+    // ...
+
+    "devDependencies": {
+        "babel-core": "^6.24.1",
+        "babel-loader": "^6.4.1",
+        "babel-preset-es2015": "^6.24.1",
+        "babel-preset-react": "^6.24.1",
+        "react": "^15.5.4",
+        "react-dom": "^15.5.4",
+        "webpack": "^2.4.1"
+    }
+
+    // ...
+}
+
+```
+
+
+#### webpack.config.js 配置（react 基本配置）
+
+```js
+const path = require('path');
+
+module.exports = {
+    entry: "./main.js",
+    output: {
+        path: path.resolve(__dirname, "dist"),
+        filename: "bundle.js"
+    },
+    module: {
+        rules: [
+            {
+                test: /\.js$/,
+                exclude: /(node_modules|bower_components)/,
+                use: {
+                    loader: 'babel-loader',
+                    options: {
+                        presets: ['es2015', 'react']
+                    }
+                }
+            }
+        ]
+    },
+    watch: true
+}
 ```

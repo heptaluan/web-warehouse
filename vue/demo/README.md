@@ -2,10 +2,6 @@
 
 ----
 
-### basic 目录
-
-一些 `vue` 基础性的相关 `demo`，比如一些简单的双向绑定，`jsonp` 跨域请求数据，购物车等
-
 
 ### app 目录
 
@@ -23,6 +19,3 @@
 
 具体地址见：[使用 webpack 来构建 vue 项目](http://hanekaoru.com/?p=2328)
 
-### vue-learn 目录
-
-对应笔记当中的 `vue-learn` 的相关示例

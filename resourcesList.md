@@ -17,15 +17,15 @@
 
 
 
-[JavaScript 中的函数式编程实践](http://www.ibm.com/developerworks/cn/web/1006_qiujt_jsfunctional/)
+~~[JavaScript 中的函数式编程实践](http://www.ibm.com/developerworks/cn/web/1006_qiujt_jsfunctional/)~~
 
 
 
-[js和jquery懒加载之可视区域加载](http://www.haorooms.com/post/js_jquery_lazyload_viewload)
+~~[js和jquery懒加载之可视区域加载](http://www.haorooms.com/post/js_jquery_lazyload_viewload)~~
 
 [javascript异步编程](https://segmentfault.com/a/1190000002938132)
 
-[JavaScript 包管理器工作原理简介](https://zhuanlan.zhihu.com/p/24045251)
+~~[JavaScript 包管理器工作原理简介](https://zhuanlan.zhihu.com/p/24045251)~~
 
 ~~[理解Javascript的闭包](http://coolshell.cn/articles/6731.html)~~
 

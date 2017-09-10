@@ -26,3 +26,4 @@
 
 [10、Getters 和 Setters](https://github.com/hanekaoru/WebLearningNotes/blob/master/typeScript/note/一步一步学习TypeScript/10.md)
 
+[11、Interfaces](https://github.com/hanekaoru/WebLearningNotes/blob/master/typeScript/note/一步一步学习TypeScript/11.md)

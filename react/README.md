@@ -11,7 +11,9 @@
 
 ### React Router
 
-[01、 基本配置，组件](https://github.com/hanekaoru/WebLearningNotes/blob/master/react/react-router/note/1.md)
+[01、 基本配置，组件](https://github.com/hanekaoru/WebLearningNotes/blob/master/react/react-router/note/01.md)
+
+[02、 <Route> 组件](https://github.com/hanekaoru/WebLearningNotes/blob/master/react/react-router/note/02.md)
 
 ----
 

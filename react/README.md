@@ -19,6 +19,9 @@
 
 [04、 `<Switch>`](https://github.com/hanekaoru/WebLearningNotes/blob/master/react/react-router/note/04.md)
 
+[05、 `<Redirect>` 和 `<Prompt>`](https://github.com/hanekaoru/WebLearningNotes/blob/master/react/react-router/note/05.md)
+
+
 
 ----
 

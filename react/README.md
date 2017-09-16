@@ -21,6 +21,7 @@
 
 [05、 `<Redirect>` 和 `<Prompt>`](https://github.com/hanekaoru/WebLearningNotes/blob/master/react/react-router/note/05.md)
 
+[06、 history，location 和 match](https://github.com/hanekaoru/WebLearningNotes/blob/master/react/react-router/note/06.md)
 
 
 ----

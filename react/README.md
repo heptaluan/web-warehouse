@@ -23,6 +23,8 @@
 
 [06、 history，location 和 match](https://github.com/hanekaoru/WebLearningNotes/blob/master/react/react-router/note/06.md)
 
+[07、 汇总总结](https://github.com/hanekaoru/WebLearningNotes/blob/master/react/react-router/note/07.md)
+
 
 ----
 

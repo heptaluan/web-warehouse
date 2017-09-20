@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Redux basic example</title>
+	<script src="https://unpkg.com/redux@latest/dist/redux.min.js"></script>
+</head>
+
+<body>
+	<div>
+		<p>
+			Clicked: <span id="value">0</span> times
+			<button id="increment">增加</button>
+			<button id="decrement">减少</button>
+			<button id="addTwo">加2</button>
+			<button id="incrementIfOdd">奇数时增加</button>
+		</p>
+	</div>
+	<script>
+		// reducer
+		function counter(state = 0, action) {
+			switch (action.type) {
+				case 'INCREMENT':
+					return state + 1
+				case 'ADDTWO':
+					return state + 2
+				case 'DECREMENT':
+					return state - 1
+				default:
+					return state
+			}
+		}
+
+		// 创建一个 store，有三个方法，subscribe，dispatch 和 getState
+		var store = Redux.createStore(counter)
+
+		// 得到 span 元素
+		var valueEl = document.getElementById('value')
+
+		// 渲染函数并且调用
+		function render() {
+			valueEl.innerHTML = store.getState().toString()
+		}
+
+		render()
+		store.subscribe(render)
+
+
+		// 增加
+		document.getElementById('increment').onclick = function () {
+			store.dispatch({ type: 'INCREMENT' })
+		}
+
+		// 减少
+		document.getElementById('decrement').onclick = function () {
+			store.dispatch({ type: 'DECREMENT' })
+		}
+
+		// 加 2
+		document.getElementById('addTwo').onclick = function () {
+			store.dispatch({ type: 'ADDTWO' })
+		}
+
+		// 奇数时增加
+		document.getElementById('incrementIfOdd').onclick = function () {
+			if (store.getState() % 2 !== 0) {
+				store.dispatch({ type: 'INCREMENT' })
+			}
+		}
+	</script>
+</body>
+
+</html>

@@ -42,6 +42,14 @@
 ----
 
 
+### Redux
+
+[01、 redux 及其相关示例](https://github.com/hanekaoru/WebLearningNotes/blob/master/react/redux/note/01.md)
+
+
+----
+
+
 
 ### 基础部分
 

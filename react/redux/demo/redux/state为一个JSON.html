@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Redux basic example</title>
+	<script src="https://unpkg.com/redux@latest/dist/redux.min.js"></script>
+</head>
+
+<body>
+	<div>
+		<p>
+			Clicked: <span id="value">0</span> times
+			<button id="increment">增加</button>
+			<button id="decrement">减少</button>
+			<input type="text" id="textNumber">
+			<button id="addNumber">增加输入框内的值</button>
+		</p>
+	</div>
+	<script>
+		// reducer
+		function counter(state, action) {
+
+			if (state == undefined) {
+				state = {"m": 5, "n": 10}
+			}
+
+			switch (action.type) {
+				case 'INCREMENT':
+					return {"m": state.m + 1}
+				case 'DECREMENT':
+					return {"m": state.m - 1}
+				case 'ADDNUMBER':
+					return {"m": state.m + action.number}
+				default:
+					return state
+			}
+		}
+
+		// 创建一个 store，有三个方法，subscribe，dispatch 和 getState
+		var store = Redux.createStore(counter)
+
+		// 得到 span 元素
+		var valueEl = document.getElementById('value')
+
+		// 渲染函数并且调用
+		function render() {
+			valueEl.innerHTML = store.getState().m;
+		}
+
+		render()
+		store.subscribe(render)
+
+
+		// 增加
+		document.getElementById('increment').onclick = function () {
+			store.dispatch({ type: 'INCREMENT' })
+		}
+
+		// 减少
+		document.getElementById('decrement').onclick = function () {
+			store.dispatch({ type: 'DECREMENT' })
+		}
+
+		// 增加输入框内的值
+		document.getElementById('addNumber').onclick = function () {
+			var number = Number(document.getElementById("textNumber").value);
+			store.dispatch({ type: 'ADDNUMBER' , number: number })
+		}
+	</script>
+</body>
+
+</html>

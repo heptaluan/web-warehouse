@@ -35,6 +35,7 @@
 
 [01、 Dispatcher，Action，Store 和 Views](https://github.com/hanekaoru/WebLearningNotes/blob/master/react/flux/note/01.md)
 
+[02、 todomvc 示例剖析](https://github.com/hanekaoru/WebLearningNotes/blob/master/react/flux/note/02.md)
 
 
 

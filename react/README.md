@@ -31,20 +31,28 @@
 ----
 
 
-### Flux
+### react-redux
 
-[01、 Dispatcher，Action，Store 和 Views](https://github.com/hanekaoru/WebLearningNotes/blob/master/react/flux/note/01.md)
+主要分为三部分，`flux`，`redux` 和 `react-redux`
 
-[02、 todomvc 示例剖析](https://github.com/hanekaoru/WebLearningNotes/blob/master/react/flux/note/02.md)
+* `flux`
+
+  * [01、 Dispatcher，Action，Store 和 Views](https://github.com/hanekaoru/WebLearningNotes/blob/master/react/react-redux/flux/note/01.md)
+
+  * [02、 todomvc 示例剖析](https://github.com/hanekaoru/WebLearningNotes/blob/master/react/react-redux/flux/note/02.md)
 
 
+* `Redux`
 
-----
+  * [01、 redux 及其相关示例](https://github.com/hanekaoru/WebLearningNotes/blob/master/react/react-redux/redux/note/01.md)
 
 
-### Redux
+* `react-redux`（综合案例）
 
-[01、 redux 及其相关示例](https://github.com/hanekaoru/WebLearningNotes/blob/master/react/redux/note/01.md)
+  * 参考 [Redux + React + Express + Socket.io 构建实时聊天应用](http://zexeo.com/home)
+
+  * [01、 Flux 与函数式编程](https://github.com/hanekaoru/WebLearningNotes/blob/master/react/react-redux/react-redux/实时聊天应用/note/01.md)
+
 
 
 ----

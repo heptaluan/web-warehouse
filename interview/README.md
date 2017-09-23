@@ -104,8 +104,18 @@
 
 
 
+## React
+
+* [调用 `setState` 之后发生了什么](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/react/setState.md) 
+
+* [React 中 refs 的作用](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/react/refs.md) 
+
+* [React 中 keys 的作用](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/react/keys.md) 
+
+* [根据生成的组件完成其相关类的定义](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/react/twitter.md) 
 
 
+* [其他一些相关问题](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/react/other.md) 
 
 
 

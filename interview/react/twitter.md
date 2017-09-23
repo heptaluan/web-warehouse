@@ -5,7 +5,7 @@
 组件如下
 
 ```js
-<Twitter username='tylermcginnis33'>
+<Twitter username='zhangsan'>
     {(user) => user === null
         ? <Loading />
         : <Badge info={user} />}
@@ -57,7 +57,7 @@ class Twitter extends Component {
 譬如将原本展示的 `Badge` 组件替换为 `Profile` 组件，我们只需要修改下回调函数即可：
 
 ```js
-<Twitter username='tylermcginnis33'>
+<Twitter username='zhangsan'>
     {(user) => user === null
         ? <Loading />
         : <Profile info={user} />}

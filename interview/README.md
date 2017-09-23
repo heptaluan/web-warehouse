@@ -106,7 +106,7 @@
 
 ## React
 
-* [调用 `setState` 之后发生了什么](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/react/setState.md) 
+* [调用 setState 之后发生了什么](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/react/setState.md) 
 
 * [React 中 refs 的作用](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/react/refs.md) 
 
@@ -114,8 +114,27 @@
 
 * [根据生成的组件完成其相关类的定义](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/react/twitter.md) 
 
+* [受控组件与非受控组件](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/react/controlled-and-uncontrolled.md) 
+
+
 
 * [其他一些相关问题](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/react/other.md) 
+
+  * 什么情况下会优先选择使用 `Class Component` 而不是 `Functional Component`
+
+  * `Element` 与 `Component` 的区别
+
+  * `ajax` 请求应当放置于哪一个生命周期当中
+
+  * `shouldComponentUpdate` 的作用
+
+  * `props.children` 和 `props.children.map`
+
+  * `React` 中的事件处理逻辑
+
+  * `createElement` 与 `cloneElement` 的区别
+
+  * `setState` 函数的第二个参数的作用
 
 
 

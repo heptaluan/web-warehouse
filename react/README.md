@@ -47,11 +47,11 @@
   * [01、 redux 及其相关示例](https://github.com/hanekaoru/WebLearningNotes/blob/master/react/react-redux/redux/note/01.md)
 
 
-* `react-redux`（综合案例）
+* `react-redux`
 
-  * 参考 [Redux + React + Express + Socket.io 构建实时聊天应用](http://zexeo.com/home)
+  * 一个利用 `Redux` + `React` + `Express` + `Socket.io` 搭建的实时聊天应用，记录一些不太熟悉的地方
 
-  * [01、 Flux 与函数式编程](https://github.com/hanekaoru/WebLearningNotes/blob/master/react/react-redux/react-redux/实时聊天应用/note/01.md)
+    * [01、 Flux、Redux 简介，纯函数与函数式编程](https://github.com/hanekaoru/WebLearningNotes/blob/master/react/react-redux/react-redux/实时聊天应用/note/01.md)
 
 
 

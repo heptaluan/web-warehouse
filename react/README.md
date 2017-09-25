@@ -31,7 +31,7 @@
 ----
 
 
-### react-redux
+### React-Redux
 
 主要分为三部分，`flux`，`redux` 和 `react-redux`
 
@@ -53,6 +53,7 @@
 
     * [01、 Flux、Redux 简介，纯函数与函数式编程](https://github.com/hanekaoru/WebLearningNotes/blob/master/react/react-redux/react-redux/实时聊天应用/note/01.md)
 
+    * [02、 reducer 与数组中的 reduce](https://github.com/hanekaoru/WebLearningNotes/blob/master/react/react-redux/react-redux/实时聊天应用/note/02.md)
     
 
 

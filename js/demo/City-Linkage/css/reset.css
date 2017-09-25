@@ -1,0 +1,16 @@
+@charset "utf-8";
+/* CSS Document */
+*{ margin:0; padding:0}
+html{ font-size:12px;}
+body { font-family:"微软雅黑";margin: 0px;padding: 0px; background:#f6f6f6;color:#333; font-size:12px; overflow-x:hidden;}
+li {list-style-type: none;}
+a {color:#333;text-decoration: none}
+img{ border:none;}
+em, i{font-weight: normal;font-style: normal;}
+.l {float: left;}
+.r {float: right;}
+
+::-webkit-input-placeholder { color:#ccc;}
+:-moz-placeholder { color:#ccc;}
+::-moz-placeholder { color:#ccc;}
+:-ms-input-placeholder { color:#ccc;}

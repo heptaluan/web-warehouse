@@ -1,0 +1,251 @@
+body {
+    background: #f5f5f5;
+    color: #4D4D4D;
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+a {
+    color: #666;
+    text-decoration: none;
+}
+
+a img:hover {
+    opacity: 0.9;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    border: none;
+}
+
+input {
+    outline: none;
+}
+
+/* Top Navigation */
+#nav-container {
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    width: 100%;
+    height: 30px;
+}
+
+#nav {
+    background: #FFF;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid #CCC;
+    padding: 2px 0;
+    width: 100%;
+    height: 20px;
+}
+
+#nav > a {
+    font-size: 14px;
+    text-shadow: 1px 1px 2px #FFF;
+    line-height: 20px;
+    margin-left: 3%;
+}
+
+#nav > a:hover {
+    color: #000;
+}
+
+/* head */
+#logo {
+    font-size: 38px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    line-height: 120px;
+    letter-spacing: 2px;
+    margin-top: 30px;
+    height: 120px;
+}
+
+/* container */
+#container {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid #CCC;
+    margin: 0 auto 30px;
+    width: 800px;
+}
+
+#top {
+    background: #EEE;
+    background: -moz-linear-gradient(#FFF, #EEE);
+    background: -webkit-linear-gradient(#FFF, #EEE);
+    border-bottom: 1px solid #CCC;
+    height: 18px;
+}
+
+#main {
+    background: #FAFAFA;
+    position: relative;
+}
+
+#scroll-box {
+    background: #888;
+    color: #FFF;
+    font-size: 18px;
+    line-height: 16px;
+    text-align: center;
+    float: left;
+    position: absolute;
+    left: -20px;
+    padding: 5px 0;
+    width: 10px;
+    height: 15px;
+}
+
+#player {
+    text-align: center;
+    float: right;
+    margin-right: 20px;
+    margin-top: 80px;
+    width: 360px;
+}
+
+#player .cover {
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+    border: 3px solid #FFF;
+    cursor: pointer;
+    margin: 90px 0;
+    width: 140px;
+    height: 140px;
+}
+
+#player .progress {
+    border-radius: 3px;
+    overflow: hidden;
+    opacity: 0.7;
+    margin: 0 auto;
+    width: 180px;
+    height: 3px
+}
+
+#player .seek-bar {
+    background: #CCC;
+    cursor: pointer;
+    width: 0;
+    height: 100%;
+}
+
+#player .play-bar {
+    background: #4AF;
+    width: 0;
+    height: 100%;
+}
+
+#player .seeking-bg {
+    background: #CCC;
+}
+
+#list {
+    background: #FFF;
+    border-right: 1px solid #CCC;
+    float: left;
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+    width: 380px;
+}
+
+#list ul {
+}
+
+#list li {
+    background: #FFF;
+    color: #4D4D4D;
+    font-size: 11px;
+    line-height: 15px;
+    border-bottom: 1px solid #EEE;
+    padding: 5px 12px;
+    height: 15px;
+}
+
+#list li:nth-child(2n) {
+    background: #F8F8F8;
+}
+
+#list li.hover, #list li.hover a {
+    color: #4AF;
+}
+
+#list li.select, #list li.select a {
+    color: #4AF;
+    font-weight: bold;
+}
+
+#list li.move {
+    background: #4AF;
+    box-shadow: 0 0 2px #888;
+    color: #FFF;
+    border-color: #4AF;
+    position: relative;
+    z-index: 10;
+}
+
+#list li.move a {
+    color: #FFF;
+}
+
+#list li img {
+    display: none;
+}
+
+#list .id {
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
+    letter-spacing: 1px;
+    cursor: default;
+    float: left;
+    padding-right: 3%;
+}
+
+#list .info {
+    letter-spacing: 1px;
+    float: left;
+}
+
+#list .action {
+    text-align: right;
+    display: none;
+    position: absolute;
+    right: 8px;
+}
+
+#list .action a {
+    color: #888;
+    font-size: 12px;
+    margin: 0 3px;
+}
+
+#list .action a.liked {
+    color: #4AF;
+}
+
+/* foot */
+#foot {
+    margin-top: 50px;
+    width: 800px;
+    margin: 0 auto;
+    color: #d80d55;
+    text-align: right;
+    
+}
+
+#foot ul li{
+    line-height: 30px;
+}
+

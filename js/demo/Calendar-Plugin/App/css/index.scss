@@ -1,0 +1,80 @@
+*{margin:0;padding:0;}
+body, html { font-size:12px; font-family:"microsoft yahei",Arial; color:#000;}
+a{text-decoration:none;color:#000;cursor:pointer;}
+a:hover{color:#07f;}
+i,b,em{font-style:normal;}
+
+$themeColor: #2595e3;
+$borderColor: rgb(221, 220, 221);
+@mixin css3 ($property, $value) { @each $prefix in -webkit-, -moz-, -ms-, -o-, '' { #{$property}: #{$prefix}$value; } }
+@mixin span {float: left;box-sizing: border-box;@include css3(width, calc(100% / 7));@include lineHeight;}
+@mixin lineHeight($size: 30px) {text-align: center;height: $size;line-height: $size;box-sizing: border-box;}
+
+// title
+.title {
+    overflow: hidden;
+    border-bottom: 1px solid $borderColor;
+    .calYear, .calMonth {
+        float: left;
+        width: 50%;
+        box-sizing: border-box;
+        @include lineHeight(40px);
+        overflow: hidden;
+        span:nth-child(2) {
+            width: 60%;
+            float: left;
+        }
+        span:nth-child(1), span:nth-child(3) {
+            float: left;
+            width: 20%;
+        }
+    }
+}
+
+// 日历主体
+.Mytime {
+    clear: both;
+    .dateList {
+        .week {
+            width: 100%;
+            overflow: hidden;
+            padding-top: 10px;
+            span {
+                @include span;
+            }
+        }
+        .day {
+            overflow: hidden;
+            padding: 10px 0;
+            span {
+                @include span;
+            }
+        }
+    }
+}
+
+// 确定按钮
+.btns {
+    clear: both;
+    height: 40px;
+    border-top: 1px solid $borderColor;
+    border-bottom: 1px solid $borderColor;
+    div {
+        width: 50%;
+        float: left;
+        @include lineHeight(40px);
+    }
+    div.sure {
+        color: $themeColor;
+        border-left: 1px solid $borderColor;
+    }
+}
+
+// 选中日期的样式
+.chooseDay i {
+    display: inline-block;
+    background: $themeColor;
+    width: 30px;
+    border-radius: 50%;
+    color: #fff;
+}

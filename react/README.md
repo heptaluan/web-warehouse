@@ -55,6 +55,7 @@
 
     * [02、 reducer 与数组中的 reduce](https://github.com/hanekaoru/WebLearningNotes/blob/master/react/react-redux/react-redux/实时聊天应用/note/02.md)
     
+    * [03、 Actions 和 Store 及其相关测试用例](https://github.com/hanekaoru/WebLearningNotes/blob/master/react/react-redux/react-redux/实时聊天应用/note/02.md)
 
 
 

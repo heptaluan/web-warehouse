@@ -4,7 +4,10 @@
 
 ### sass
 
-* [基础部分](https://github.com/hanekaoru/WebLearningNotes/blob/master/css/sass/note/01.md)
+* [基础部分（变量，注释，@import，嵌套，变量与继承）](https://github.com/hanekaoru/WebLearningNotes/blob/master/css/sass/note/01.md)
+
+* [进阶部分（@at-root，mixin，条件判断及循环）](https://github.com/hanekaoru/WebLearningNotes/blob/master/css/sass/note/02.md)
+
 
 
 

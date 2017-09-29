@@ -55,7 +55,7 @@
 
     * [02、 reducer 与数组中的 reduce](https://github.com/hanekaoru/WebLearningNotes/blob/master/react/react-redux/react-redux/实时聊天应用/note/02.md)
     
-    * [03、 redux、flux 和 react-redux 的区别](https://github.com/hanekaoru/WebLearningNotes/blob/master/react/react-redux/react-redux/实时聊天应用/note/03.md)
+    * [03、 redux、flux 和 react-redux 的区别](https://github.com/hanekaoru/WebLearningNotes/blob/master/react/react-redux/react-redux/实时聊天应用/note/03.md)
 
 
 

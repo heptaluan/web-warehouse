@@ -33,22 +33,24 @@
 
 ### React-Redux
 
-`basic` 部分（主要是 `flux`、`redux` 和 `react-redux` 的一些相关知识点）
+* `basic` 部分（主要是 `flux`、`redux` 和 `react-redux` 的一些相关知识点）
 
-[01、 flux 中的 Dispatcher，Action，Store 和 Views](https://github.com/hanekaoru/WebLearningNotes/blob/master/react/react-redux/basic/note/01.md)
+  * [01、 flux 中的 Dispatcher，Action，Store 和 Views](https://github.com/hanekaoru/WebLearningNotes/blob/master/react/react-redux/basic/note/01.md)
 
-[02、 todomvc 示例剖析](https://github.com/hanekaoru/WebLearningNotes/blob/master/react/react-redux/basic/note/02.md)
+  * [02、 todomvc 示例剖析](https://github.com/hanekaoru/WebLearningNotes/blob/master/react/react-redux/basic/note/02.md)
 
-[03、 redux 及其相关示例](https://github.com/hanekaoru/WebLearningNotes/blob/master/react/react-redux/basic/note/03.md)
+  * [03、 redux 及其相关示例](https://github.com/hanekaoru/WebLearningNotes/blob/master/react/react-redux/basic/note/03.md)
+
+  * [04、 react-redux 及其相关示例](https://github.com/hanekaoru/WebLearningNotes/blob/master/react/react-redux/basic/note/04.md)
 
 
-`react-redux` 部分（一个利用 `Redux` + `React` + `Express` + `Socket.io` 搭建的实时聊天应用）
+* `react-redux` 部分（一个利用 `Redux` + `React` + `Express` + `Socket.io` 搭建的实时聊天应用）
 
-[01、 Flux、Redux 简介，纯函数与函数式编程](https://github.com/hanekaoru/WebLearningNotes/blob/master/react/react-redux/react-redux/实时聊天应用/note/01.md)
+  * [01、 Flux、Redux 简介，纯函数与函数式编程](https://github.com/hanekaoru/WebLearningNotes/blob/master/react/react-redux/react-redux/实时聊天应用/note/01.md)
 
-[02、 reducer 与数组中的 reduce](https://github.com/hanekaoru/WebLearningNotes/blob/master/react/react-redux/react-redux/实时聊天应用/note/02.md)
+  * [02、 reducer 与数组中的 reduce](https://github.com/hanekaoru/WebLearningNotes/blob/master/react/react-redux/react-redux/实时聊天应用/note/02.md)
     
-[03、 redux、flux 和 react-redux 的区别](https://github.com/hanekaoru/WebLearningNotes/blob/master/react/react-redux/react-redux/实时聊天应用/note/03.md)
+  * [03、 redux、flux 和 react-redux 的区别](https://github.com/hanekaoru/WebLearningNotes/blob/master/react/react-redux/react-redux/实时聊天应用/note/03.md)
 
 
 

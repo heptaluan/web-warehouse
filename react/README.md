@@ -53,6 +53,9 @@
   * [03、 redux、flux 和 react-redux 的区别](https://github.com/hanekaoru/WebLearningNotes/blob/master/react/react-redux/react-redux/实时聊天应用/note/03.md)
 
 
+* 相关源码部分
+
+  * [createStore](https://github.com/hanekaoru/WebLearningNotes/blob/master/react/react-redux/source/01.md)
 
 ----
 

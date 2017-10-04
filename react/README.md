@@ -41,7 +41,7 @@
 
   * [03、 redux 及其相关示例](https://github.com/hanekaoru/WebLearningNotes/blob/master/react/react-redux/basic/note/03.md)
 
-  * [04、 react-redux 及其相关示例](https://github.com/hanekaoru/WebLearningNotes/blob/master/react/react-redux/basic/note/04.md)
+  * [04、 示例剖析，connect，mapStateToProps，mapDispatchToProps 和 bindActionCreators](https://github.com/hanekaoru/WebLearningNotes/blob/master/react/react-redux/basic/note/04.md)
 
 
 * `react-redux` 部分（一个利用 `Redux` + `React` + `Express` + `Socket.io` 搭建的实时聊天应用）

@@ -41,7 +41,7 @@
 
   * [03、 redux 及其相关示例](https://github.com/hanekaoru/WebLearningNotes/blob/master/react/react-redux/basic/note/03.md)
 
-  * [04、 todomvc 示例剖析（基于 redux），connect 和 bindActionCreators 函数的作用](https://github.com/hanekaoru/WebLearningNotes/blob/master/react/react-redux/basic/note/04.md)
+  * [04、 todomvc 示例剖析（基于 redux），connect 和 bindActionCreators 函数的作用](https://github.com/hanekaoru/WebLearningNotes/blob/master/react/react-redux/basic/note/04.md)
 
 
 * `react-redux` 部分（一个利用 `Redux` + `React` + `Express` + `Socket.io` 搭建的实时聊天应用）

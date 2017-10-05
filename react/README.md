@@ -37,11 +37,11 @@
 
   * [01、 flux 中的 Dispatcher，Action，Store 和 Views](https://github.com/hanekaoru/WebLearningNotes/blob/master/react/react-redux/basic/note/01.md)
 
-  * [02、 todomvc 示例剖析](https://github.com/hanekaoru/WebLearningNotes/blob/master/react/react-redux/basic/note/02.md)
+  * [02、 todomvc 示例剖析（基于 flux）](https://github.com/hanekaoru/WebLearningNotes/blob/master/react/react-redux/basic/note/02.md)
 
   * [03、 redux 及其相关示例](https://github.com/hanekaoru/WebLearningNotes/blob/master/react/react-redux/basic/note/03.md)
 
-  * [04、 示例剖析，connect，mapStateToProps，mapDispatchToProps 和 bindActionCreators](https://github.com/hanekaoru/WebLearningNotes/blob/master/react/react-redux/basic/note/04.md)
+  * [04、 todomvc 示例剖析（基于 redux），connect，mapStateToProps，mapDispatchToProps 和 bindActionCreators 函数](https://github.com/hanekaoru/WebLearningNotes/blob/master/react/react-redux/basic/note/04.md)
 
 
 * `react-redux` 部分（一个利用 `Redux` + `React` + `Express` + `Socket.io` 搭建的实时聊天应用）
@@ -53,7 +53,7 @@
   * [03、 redux、flux 和 react-redux 的区别](https://github.com/hanekaoru/WebLearningNotes/blob/master/react/react-redux/react-redux/实时聊天应用/note/03.md)
 
 
-* 相关源码部分
+* 源码相关部分
 
   * [createStore](https://github.com/hanekaoru/WebLearningNotes/blob/master/react/react-redux/source/01.md)
 

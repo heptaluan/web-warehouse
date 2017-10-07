@@ -21,6 +21,8 @@ arr.sort(function (a, b) {
 ```js
 function bubbleSort(arr) {
 
+    // i 表示所需循环的趟数
+    // j 表示这一趟需要比较的次数
     var i = arr.length, j;
 
     while (i > 0) {

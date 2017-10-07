@@ -105,3 +105,26 @@ function insertSort(array) {
     return array;
 }
 ```
+
+
+----
+
+
+### 扩展：对象排序
+
+```js
+var arr = [
+    {"x": 30, "y": 15, "z": 22},
+    {"x": 15, "y": 35, "z": 21},
+    {"x": 12, "y": 55, "z": 82}
+]
+
+arr.sort(function(a, b) {
+    return a.x > b.x
+})
+
+console.log(arr)
+```
+
+
+

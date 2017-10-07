@@ -44,6 +44,12 @@
 
 * [字符串去重](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/字符串去重.md) 
 
+* [常见的字符串算法](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/string.md) 
+
+  * 短横变驼峰
+
+  * 千位分隔符
+
 * [判断变量类型，如何判断变量是函数](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/typeof.md) 
 
 * [移动端 click 事件 300ms 的延迟响应](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/300ms.md) 
@@ -98,9 +104,10 @@
 
 * [JavaScript 中常用的设计模式](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/设计模式.md) 
 
-* [实现一个解析 url 和千位分隔符的方法](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/getQueryObject.md) 
+* [实现一个解析 url 的方法](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/getQueryObject.md) 
 
 * [浏览器中的各种长度](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/浏览器中的各种长度.md) 
+
 
 
 

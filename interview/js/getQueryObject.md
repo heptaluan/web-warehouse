@@ -1,8 +1,8 @@
-实现一个解析 `url` 和千位分隔符的方法
+实现一个解析 `url` 的方法
 
 ----
 
-## 将 url 的查询参数解析成字典对象
+### 将 url 的查询参数解析成字典对象
 
 ```js
 // 使用 getQueryObject(url).userId
@@ -24,19 +24,5 @@ function getQueryObject(url) {
 
     return obj;
 
-}
-```
-
-
-## 千位分隔符
-
-```js
-// 使用 commafy(1234567.90)
-function commafy(num) {
-    return num && num
-        .toString()
-        .replace(/(\d)(?=(\d{3})+\.)/g, function ($0, $1) {
-            return $1 + ",";
-        });
 }
 ```

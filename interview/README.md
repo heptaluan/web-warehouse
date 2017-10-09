@@ -34,7 +34,7 @@
 
 
 
-### 类和继承
+#### 类和继承
 
 * [手写类和原型继承](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/继承.md) 
 
@@ -44,7 +44,7 @@
 
 
 
-### 常见方法和函数
+#### 常见方法和函数
 
 * [手写 once/bind/debouce/throttle 函数](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/once-bind-debouce-throttle.md) 
 
@@ -56,7 +56,7 @@
 
 
 
-### 字符串，数组，对象
+#### 字符串，数组，对象
 
 * [如何监听 对象/数组 属性改变](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/proxy.md) 
 
@@ -90,7 +90,7 @@
 
 
 
-### ajax 和 promise
+#### ajax 和 promise
 
 * [ajax](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/ajax.md)
 
@@ -119,7 +119,7 @@
 
 
 
-### 移动端
+#### 移动端
 
 * [移动端 click 事件 300ms 的延迟响应](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/300ms.md) 
 
@@ -130,7 +130,7 @@
 
 
 
-### 其他相关知识点
+#### 其他相关知识点
 
 * [字符编码](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/字符编码.md) 
 

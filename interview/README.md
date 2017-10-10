@@ -32,6 +32,8 @@
 
 * [JavaScript 中常用的设计模式](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/设计模式.md) 
 
+* [JavaScript 中节点相关属性](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/nodeType.md) 
+
 
 
 #### 类和继承

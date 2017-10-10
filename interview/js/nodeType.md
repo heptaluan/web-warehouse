@@ -19,7 +19,7 @@
 
 ### childNodes
 
-用来获取子节点
+用来获取子节点，注意，返回的是一个类数组对象
 
 ```js
 var childs = oDiv.childNodes;
@@ -59,4 +59,78 @@ function getRealChild(elem) {
 
 ```js
 oDiv.childNodes[0].nodeValue = "张三"
+```
+
+
+### parentNode
+
+parentNode 属性表示父节点，任何节点的 parentNode 的 nodeType 一定为 1，也就是说父节点一定是标签节点
+
+
+### previousSibling 和 nextSibling
+
+表示 上/下 一个兄弟节点，需要注意的是，其可能是 文本/注释 节点，而原生 JS 当中并没有提供 prevAll()，nextAll()，siblings() 等方法
+
+如果不存在 上/下 兄弟节点，返回 null，所以可以利用这个特性来写一个方法
+
+```js
+// prev
+function getRealPrev(elem) {
+    // 原理就是遍历 elem 节点的前面，直到返回第一个 nodeType 为 1 的节点
+    var o = elem;
+
+    // 循环遍历，将循环的结果再次赋予 o，依次向上查询
+    while(o = o.previousSibling) {
+        if (o.nodeType == 1) {
+            return o;
+        }
+        return null;
+    }
+}
+
+// next
+function getRealNext(elem) {
+    // 原理就是遍历 elem 节点的后面，直到返回第一个 nodeType 为 1 的节点
+    var o = elem;
+
+    // 循环遍历，将循环的结果再次赋予 o，依次向下查询
+    while(o = o.nextSibling) {
+        if (o.nodeType == 1) {
+            return o;
+        }
+        return null;
+    }
+}
+
+// prevAll
+function getRealprevAll(elem) {
+    // 原理就是遍历 elem 节点的前面，直到返回第一个 nodeType 为 1 的节点
+    var o = elem;
+    var result = [];
+
+    // 循环遍历，将循环的结果再次赋予 o，依次向上查询
+    // 如果不存在上一个节点，则会返回 null，便自动停止循环
+    while(o = o.previousSibling) {
+        if (o.nodeType == 1) {
+            result.unshift(o)
+        }
+        return result;
+    }
+}
+
+// nextAll
+function getRealnextAll(elem) {
+    // 原理就是遍历 elem 节点的后面，直到返回第一个 nodeType 为 1 的节点
+    var o = elem;
+    var result = [];    
+
+    // 循环遍历，将循环的结果再次赋予 o，依次向下查询
+    // 如果不存在下一个节点，则会返回 null，便自动停止循环
+    while(o = o.nextSibling) {
+        if (o.nodeType == 1) {
+            result.push(o)
+        }
+        return result;
+    }
+}
 ```

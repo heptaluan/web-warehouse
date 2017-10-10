@@ -64,14 +64,14 @@ oDiv.childNodes[0].nodeValue = "张三"
 
 ### parentNode
 
-parentNode 属性表示父节点，任何节点的 parentNode 的 nodeType 一定为 1，也就是说父节点一定是标签节点
+`parentNode` 属性表示父节点，任何节点的 `parentNode` 的 `nodeType` 一定为 `1`，也就是说父节点一定是标签节点
 
 
 ### previousSibling 和 nextSibling
 
-表示 上/下 一个兄弟节点，需要注意的是，其可能是 文本/注释 节点，而原生 JS 当中并没有提供 prevAll()，nextAll()，siblings() 等方法
+表示 **上/下** 一个兄弟节点，需要注意的是，其可能是 **文本/注释** 节点，而原生 `JS` 当中并没有提供 `prevAll()`，`nextAll()`，`siblings()` 等方法
 
-如果不存在 上/下 兄弟节点，返回 null，所以可以利用这个特性来写一个方法
+如果不存在 **上/下** 兄弟节点，返回 `null`，所以可以利用这个特性来写一个方法
 
 ```js
 // prev
@@ -134,3 +134,89 @@ function getRealnextAll(elem) {
     }
 }
 ```
+
+
+### 创建节点
+
+使用 `document.createElement("标签名")` 来创建一个节点，需要注意的是，创建出来的节点是不存在与 `DOM` 树上的，即孤儿节点，需要手动添加至 `DOM` 树中
+
+```js
+var oBox = document.getElementById("div");
+var oDiv = document.createElement("div");
+
+oBox.appendChild(oDiv);
+```
+
+一个需要注意的地方，`JavaScript` 中存储 `DOM` 节点的变量是动态的，比如如下例子
+
+```js
+var oBox = document.getElementById("box")
+var oDiv = oBox.getElementsByTagName("div")
+
+// 会造成死循环
+// 因为 oDiv.length 会动态增加
+for (var i = 0; i < oDiv.length; i++) {
+    var oP = document.createElement("p");
+    oP.innerHTML = "123";
+    oBox.appendChild(oP);
+}
+```
+
+解决方法很简单，用一个变量将 `length` 存储起来即可
+
+```js
+for (var i = 0; l = oDiv.length, i < l; i++) {
+    // ...
+}
+```
+
+
+### appendChild()
+
+常用的方法是使用 `appendChild()` 来追加至元素的末尾，需要注意的地方就是
+
+**如果节点已经存在（比如 `DOM` 树中已经存在），而不是新创建的，这个时候则会移动该节点（不会克隆）**
+
+
+### insetBefore()
+
+接收两个参数，一个是新创建的元素，另一个为参照点
+
+```js
+oBox.insetBefore(新创建的元素，参照元素)
+```
+
+这样插入的元素会以参照的元素依次往上添加（即添加的为 3，2，1，参照），如果想让顺序变为正序，使用 `oBox.childNodes[0]` 即可（需要注意，如果使用 `childNodes[0]` 来做参照删除元素的话，会存在空白节点）
+
+
+### 删除节点
+
+节点不能自己删除，如果想要删除节点，必须使用父元素参照
+
+```js
+父元素.removeChild(删除的元素)
+```
+
+如果不知道父元素是谁，则可以使用
+
+```js
+需要删除的元素.parentNode.removeChild(需要删除的元素)
+```
+
+
+### replaceChild()
+
+替换节点，用的不是很多
+
+```js
+父元素.replaceChild(新节点, 旧节点)
+```
+
+比如 `oBox.replaceChild(div1, div2)` 结果是将 `div1` 节点处的内容替换至 `div2` 处（`div1` 处的节点内容就不存在了）
+
+
+### 克隆节点
+
+比较常用的方式是使用 `innerHTML` 的方式来进行克隆（亦或是修改），但是执行效率没有 `DOM` 原生方法速度快
+
+原生的方法是 `cloneNode([true])`，可以追加一个布尔值参数 `true`，表示深度克隆，克隆其所有的子节点

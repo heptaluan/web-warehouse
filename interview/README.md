@@ -56,6 +56,8 @@
 
 * [DOM操作 - 在有序（无序）列表中插入 3 个，300 个，3000 个 li，并绑定事件](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/dom.md) 
 
+* [生成一个 20 X 12 的表格，并且设定指定格子的背景颜色](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/table.md) 
+
 
 
 #### 字符串，数组，对象

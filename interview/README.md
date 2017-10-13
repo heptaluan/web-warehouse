@@ -34,6 +34,8 @@
 
 * [JavaScript 中节点相关属性](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/nodeType.md) 
 
+* [事件流，冒泡与捕获](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/bubble.md) 
+
 
 
 #### 类和继承

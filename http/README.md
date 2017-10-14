@@ -3,7 +3,7 @@
 ----
 
 
-[01、http 协议基本概念，基本流程，实例](https://github.com/hanekaoru/WebLearningNotes/tree/master/http/note/01.md)
+[01、http 协议基本概念，工作流程，消息结构以及实例](https://github.com/hanekaoru/WebLearningNotes/tree/master/http/note/01.md)
 
 [02、响应码和状态码](https://github.com/hanekaoru/WebLearningNotes/tree/master/http/note/02.md)
 

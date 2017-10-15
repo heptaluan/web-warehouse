@@ -36,6 +36,8 @@
 
 * [事件流，冒泡与捕获](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/bubble.md) 
 
+* [面向对象](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/oop.md) 
+
 
 
 #### 类和继承

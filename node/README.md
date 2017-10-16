@@ -26,13 +26,9 @@
 
 ### Node.js 包教不包会
 
-跟着视频学习过程中的一些笔记记录，参考 [《Node.js 包教不包会》](https://github.com/hanekaoru/node-lessons)
+参考 [《Node.js 包教不包会》](https://github.com/hanekaoru/node-lessons)
 
-中间部分大都讲的 `Web` 测试相关的内容，暂时用不上，等以后遇到了在回来补习
-
-后面一些的 `Mongodb`，`promise`，`connect` 等也都是介绍，实战较少，故又找了下面这个视频继续学习
-
-相关示例见 `demo` 列表
+一些 `node` 相关知识点，杂七杂八，涵盖较广
 
 [01、简单的 express 示例和引用外部模块](https://github.com/hanekaoru/WebLearningNotes/blob/master/node/note/包教不包会/note/01.md)
 
@@ -49,9 +45,7 @@
 
 参考 [N-blog](https://github.com/nswbmw/N-blog)
 
-一个使用 `Express + MongoDB` 搭建多人博客的实战，整体比较详细完整，工作之余慢慢跟着做
-
-相关示例见 `demo` 列表
+一个使用 `Express + MongoDB` 搭建多人博客的实战
 
 [01、nrm，require，exports 和 module.exports](https://github.com/hanekaoru/WebLearningNotes/blob/master/node/note/N-blog/note/01.md)
 

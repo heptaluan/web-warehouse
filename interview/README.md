@@ -38,6 +38,9 @@
 
 * [函数的 length 属性与 callee](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/length.md) 
 
+* [什么是原型链](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/prototype.md) 
+
+
 
 
 #### 类和继承

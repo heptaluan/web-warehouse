@@ -36,7 +36,7 @@
 
 * [事件流，冒泡与捕获](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/bubble.md) 
 
-* [面向对象](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/oop.md) 
+* [函数的 length 属性与 callee](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/length.md) 
 
 
 

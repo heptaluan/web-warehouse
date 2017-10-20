@@ -2,6 +2,11 @@
 
 ----
 
+### webpack 中的 loader 和 plugin
+
+[01、 webpack 中的 loader 和 plugin](https://github.com/hanekaoru/WebLearningNotes/blob/master/webpack/note/webpack中的loader和plugin/01.md)
+
+
 ### webpack 深入与实战
 
 参考 [webpack 深入与实战](http://www.imooc.com/learn/802)

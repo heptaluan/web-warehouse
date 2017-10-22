@@ -83,6 +83,16 @@
 ----
 
 
+
+
+### redux-simple-tutorial
+
+无意中看到，收获挺多，截取部分记录一下，来自[kenberkeley](https://github.com/kenberkeley)
+
+[01、 为什么要用 Redux，store 和 state](https://github.com/hanekaoru/WebLearningNotes/blob/master/react/note/redux-simple-tutorial/note/01.md)
+
+
+
 ### React 从入门到精通系列
 
 参考 [react - docs](https://facebook.github.io/react/docs/hello-world.html)

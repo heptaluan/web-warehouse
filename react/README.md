@@ -57,6 +57,13 @@
 
   * [createStore](https://github.com/hanekaoru/WebLearningNotes/blob/master/react/react-redux/source/01.md)
 
+
+* `redux-simple-tutorial` 无意中看到，收获挺多，截取部分记录一下，来自[kenberkeley](https://github.com/kenberkeley)
+
+  * [01、 为什么要用 Redux，store 和 state](https://github.com/hanekaoru/WebLearningNotes/blob/master/react/react-redux/redux-simple-tutorial/note/01.md)
+
+  * [02、 Action，Action Creator](https://github.com/hanekaoru/WebLearningNotes/blob/master/react/react-redux/redux-simple-tutorial/note/02.md)
+
 ----
 
 
@@ -82,14 +89,6 @@
 
 ----
 
-
-
-
-### redux-simple-tutorial
-
-无意中看到，收获挺多，截取部分记录一下，来自[kenberkeley](https://github.com/kenberkeley)
-
-[01、 为什么要用 Redux，store 和 state](https://github.com/hanekaoru/WebLearningNotes/blob/master/react/note/redux-simple-tutorial/note/01.md)
 
 
 

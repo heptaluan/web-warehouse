@@ -64,6 +64,11 @@
 
   * [02、 Action，Action Creator](https://github.com/hanekaoru/WebLearningNotes/blob/master/react/react-redux/redux-simple-tutorial/note/02.md)
 
+  * `Redux` 进阶部分，源码剖析
+
+    * [03、 compose(...functions)](https://github.com/hanekaoru/WebLearningNotes/blob/master/react/react-redux/redux-simple-tutorial/note/03.md)
+  
+
 ----
 
 

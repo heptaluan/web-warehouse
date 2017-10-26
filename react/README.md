@@ -67,6 +67,8 @@
   * `Redux` 进阶部分，源码剖析
 
     * [03、 compose(...functions)](https://github.com/hanekaoru/WebLearningNotes/blob/master/react/react-redux/redux-simple-tutorial/note/03.md)
+
+    * [04、 createStore(reducer, initialState, enhancer)](https://github.com/hanekaoru/WebLearningNotes/blob/master/react/react-redux/redux-simple-tutorial/note/04.md)
   
 
 ----

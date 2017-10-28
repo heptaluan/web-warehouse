@@ -73,6 +73,8 @@
     * [05、 combineReducers(reducers)，bindActionCreators(actionCreators, dispatch)](https://github.com/hanekaoru/WebLearningNotes/blob/master/react/react-redux/redux-simple-tutorial/note/05.md)
 
     * [06、 applyMiddleware(...middlewares)](https://github.com/hanekaoru/WebLearningNotes/blob/master/react/react-redux/redux-simple-tutorial/note/06.md)
+
+    * [07、 扩展：以及中间件的洋葱模型](https://github.com/hanekaoru/WebLearningNotes/blob/master/react/react-redux/redux-simple-tutorial/note/07.md)
   
 
 ----

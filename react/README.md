@@ -70,7 +70,9 @@
 
     * [04、 createStore(reducer, initialState, enhancer)](https://github.com/hanekaoru/WebLearningNotes/blob/master/react/react-redux/redux-simple-tutorial/note/04.md)
   
-    * [05、 combineReducers(reducers)，bindActionCreators(actionCreators, dispatch)](https://github.com/hanekaoru/WebLearningNotes/blob/master/react/react-redux/redux-simple-tutorial/note/04.md)
+    * [05、 combineReducers(reducers)，bindActionCreators(actionCreators, dispatch)](https://github.com/hanekaoru/WebLearningNotes/blob/master/react/react-redux/redux-simple-tutorial/note/05.md)
+
+    * [06、 applyMiddleware(...middlewares)](https://github.com/hanekaoru/WebLearningNotes/blob/master/react/react-redux/redux-simple-tutorial/note/06.md)
   
 
 ----

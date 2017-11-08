@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">约数计算器</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <h3>结果页面（本次耗时：<%= during %> 毫秒）</h3>
+            <p>
+                数字 <%= number %> 的约数如下
+                <ul>
+                    <% for (var i = 0; i < resultArr.length; i++) { %>
+                        <li><%= resultArr[i] %></li>
+                    <% } %>
+                </ul>
+            </p>
+        </div>
+    </div>
+</body>
+</html>

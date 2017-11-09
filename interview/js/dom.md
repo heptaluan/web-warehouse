@@ -23,7 +23,7 @@ for (var i = 0; i < 3; i++) {
 // ...
 ```
 
-## 插入 300 个 li
+## 插入 300 个 li，并且绑定点击事件
 
 这个时候可以使用事件委托
 
@@ -45,7 +45,7 @@ ul.addEventListener("click", function (e) {
 // ...
 ```
 
-## 插入 3000 个 li
+## 插入 3000 个 li，并且绑定点击事件
 
 当数据量很大的时候，这个时候可以使用 ```fragment + requestAnimationFrame``` 来分批插入数据
 

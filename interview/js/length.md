@@ -105,7 +105,7 @@ var obj = {
         // 此时 this 为 window，即把全局变量中的 number 修改为了 4
         this.number *= 2;
 
-        // 此时 number 为 undefined，所以 undefined * 2 为 NaN
+        // 因为下面的变量提升，所以此时的 number 为 undefined，所以 undefined * 2 为 NaN
         number = number * 2;
 
         // 变量提升，var number;

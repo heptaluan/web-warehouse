@@ -114,6 +114,16 @@
   * ```xhr2```
 
   * 同源策略与跨域
+  
+    * 同源策略
+    
+    * `CORS`
+    
+    * `document.domain`
+    
+    * `window.name`
+    
+    * `jsonp`
 
   * ```GET``` 与 ```POST``` 区别
 

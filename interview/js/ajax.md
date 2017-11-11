@@ -76,11 +76,12 @@ if (xhr) {
 // 如果需要使用 POST 请求发送表单数据，使用 setRequestHeader() 来添加 HTTP 头
 // 然后在 send() 方法中添加需要发送的数据
 
-// 在 Form 元素的语法中，EncType 表明提交数据的格式,用 Enctype 属性指定将数据回发到服务器时浏览器使用的编码类型
+// 在 Form 元素的语法中，EncType 表明提交数据的格式，用 Enctype 属性指定将数据回发到服务器时浏览器使用的编码类型
 
-// application/x-www-form-urlencoded -- 窗体数据被编码为 名称/值 对，这是标准的编码格式
-// multipart/form-data -- 窗体数据被编码为一条消息，页上的每个控件对应消息中的一个部分
-// text/plain -- 窗体数据以纯文本形式进行编码，其中不含任何控件或格式字符 
+// 下面是三种常用的设置方式
+// application/x-www-form-urlencoded   -- 窗体数据被编码为 名称/值 对，这是标准的编码格式
+// multipart/form-data                 -- 窗体数据被编码为一条消息，页上的每个控件对应消息中的一个部分
+// text/plain                          -- 窗体数据以纯文本形式进行编码，其中不含任何控件或格式字符 
 
 xhr.open("POST", url, true);
 xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");

@@ -52,9 +52,11 @@ function quickSort (arr) {
     // 如果数组 <=1，则直接返回
     if (arr.length <= 1) { return arr; }
 
-    var pivotIndex = Math.floor(arr.length / 2);
-    // 找基准，并把基准从原数组删除
-    var pivot = arr.splice(pivotIndex, 1)[0];
+    // 以中间点为基准
+    var pivotIndex = Math.floor(arr.length / 2);
+    
+    // 利用 splice() 方法得到基准值，用于最后的拼接还原
+    var pivot = arr.splice(pivotIndex, 1)[0];
 
     // 定义左右数组
     var left = [];

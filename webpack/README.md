@@ -6,7 +6,7 @@
 
 * [webpack 中的 loader 和 plugin](https://github.com/hanekaoru/WebLearningNotes/blob/master/webpack/note/汇总/01.md)
 
-* [](https://github.com/hanekaoru/WebLearningNotes/blob/master/webpack/note/汇总/02.md)
+* [webpack 打包文件体积过大的几种解决方式](https://github.com/hanekaoru/WebLearningNotes/blob/master/webpack/note/汇总/02.md)
 
 
 

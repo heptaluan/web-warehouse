@@ -8,7 +8,7 @@
 
 * [webpack 打包文件体积过大的几种解决方式](https://github.com/hanekaoru/WebLearningNotes/blob/master/webpack/note/汇总/02.md)
 
-* [webpack 多入口文件打包策略]()
+* [webpack 多入口文件打包策略](https://github.com/hanekaoru/WebLearningNotes/blob/master/webpack/note/汇总/03.md)
 
 
 

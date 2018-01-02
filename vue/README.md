@@ -7,13 +7,13 @@
 
 记录一些 `vue` 相关知识
 
-* Element 源码
+* `Element` 源码
 
   * [01、Element 源码解读 -- Checkbox](https://github.com/hanekaoru/WebLearningNotes/blob/master/vue/note/element/01.md)
 
-* Vuex
+* `Vuex`
 
-  * [01、State，Getter，Mutation，Action](https://github.com/hanekaoru/WebLearningNotes/blob/master/vue/note/vuex/01.md)
+  * [01、State，Getter，Mutation，Action](https://github.com/hanekaoru/WebLearningNotes/blob/master/vue/note/vuex/01.md)
 
 
 

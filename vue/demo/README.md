@@ -3,6 +3,10 @@
 ----
 
 
+### Vuex 目录
+
+一些 `vuex` 相关示例
+
 ### app 目录
 
 利用 `vue-cli` 脚手架工具搭建的一个简易 `todolist`，数据简单的使用了 `localstrong` 进行存储

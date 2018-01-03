@@ -5,8 +5,6 @@
 
 ### 2017.12.05 更新
 
-记录一些 `vue` 相关知识
-
 * `Element` 源码
 
   * [01、Element 源码解读 -- Checkbox](https://github.com/hanekaoru/WebLearningNotes/blob/master/vue/note/element/01.md)
@@ -23,7 +21,8 @@
 ----
 
 ----
- 
+
+已废弃，很久之前的入门笔记，大都还是基于 `vue 1.x`
 
 ### basic 目录 
 
@@ -51,8 +50,6 @@
 ### vue-learn 目录 
 
 参考 [vuejs-learn](https://github.com/bhnddowinf/vuejs-learn) 
-
-相关 `demo` 见 `demo` 列表
 
 [01、基本概述，属性与方法，生命周期](https://github.com/hanekaoru/WebLearningNotes/blob/master/vue/note/vue-learn/01.md)
 

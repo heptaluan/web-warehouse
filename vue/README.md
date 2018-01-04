@@ -13,7 +13,9 @@
 
   * [01、State，Getter，Mutation，Action](https://github.com/hanekaoru/WebLearningNotes/blob/master/vue/note/vuex/01.md)
 
+* 其他
 
+  * [01、利用 fetch 请求数据](https://github.com/hanekaoru/WebLearningNotes/blob/master/vue/note/other/01.md)
 
 
 

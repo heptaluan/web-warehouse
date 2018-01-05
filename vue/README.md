@@ -18,6 +18,8 @@
   * [01、利用 fetch 请求数据](https://github.com/hanekaoru/WebLearningNotes/blob/master/vue/note/other/01.md)
   
   * [02、vue 中一些不太常用的知识点](https://github.com/hanekaoru/WebLearningNotes/blob/master/vue/note/other/02.md)
+  
+  * [03、vue 中的 mixin](https://github.com/hanekaoru/WebLearningNotes/blob/master/vue/note/other/03.md)
 
 
 

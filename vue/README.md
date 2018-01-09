@@ -24,6 +24,8 @@
   * [04、在 vue 中使用 jsx](https://github.com/hanekaoru/WebLearningNotes/blob/master/vue/note/other/04.md)
   
   * [05、axios](https://github.com/hanekaoru/WebLearningNotes/blob/master/vue/note/other/05.md)
+  
+    * [axios 中的跨域访问问题](https://github.com/hanekaoru/WebLearningNotes/blob/master/vue/note/other/06.md)
 
 
 

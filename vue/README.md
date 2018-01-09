@@ -22,6 +22,8 @@
   * [03、vue 中的 mixin](https://github.com/hanekaoru/WebLearningNotes/blob/master/vue/note/other/03.md)
   
   * [04、在 vue 中使用 jsx](https://github.com/hanekaoru/WebLearningNotes/blob/master/vue/note/other/04.md)
+  
+  * [05、axios](https://github.com/hanekaoru/WebLearningNotes/blob/master/vue/note/other/05.md)
 
 
 

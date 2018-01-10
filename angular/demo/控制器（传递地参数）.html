@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="sayApp">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>控制器 - 带参数</title>
+</head>
+<script src="http://code.angularjs.org/1.2.25/angular.min.js"></script>
+<body >
+  
+  <div ng-controller="SayCtrl">
+    <input type="text" ng-model="sayText">
+    <button ng-click="sayHi('hi')">Hi</button>
+    <button ng-click="sayHi(sayText)">What</button>
+    <p>say {{ msg }}!</p>
+  </div>
+  
+
+<script>
+
+  angular.module('sayApp', [])
+    .controller('SayCtrl', ['$scope', function($scope) {
+      $scope.msg = 'why';
+      $scope.sayText = 'hhhhh'
+
+      $scope.sayHi = function(mmmm) {
+        $scope.msg = mmmm;
+      }
+    }])
+
+</script>
+</body>
+</html>

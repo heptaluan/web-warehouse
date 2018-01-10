@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html ng-app="drag">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Drag</title>
+</head>
+<script src="http://code.angularjs.org/1.2.25/angular.min.js"></script>
+
+<body>
+  <span draggable>Drag Me</span>
+
+  <script>
+
+    angular.module('drag', [])
+      .directive('draggable', function ($document) {
+        return function (scope, element, attr) {
+          var startX = 0,
+            startY = 0,
+            x = 0,
+            y = 0;
+
+          element.css({
+            position: 'relative',
+            border: '1px solid red',
+            background: '#333',
+            cursor: 'pointer',
+            padding: '10px'
+          })
+
+          element.on('mousedown', function (e) {
+            event.preventDefault();
+            startX = e.clientX - x;
+            startY = e.clientY - y;
+            $document.on('mousemove', mousemove)
+            $document.on('mouseup', mouseup)
+          })
+
+          function mousemove(e) {
+            x = e.clientX - startX;
+            y = e.clientY - startY;
+            element.css({
+              top: y + 'px',
+              left: x + 'px'
+            })
+          }
+
+          function mouseup() {
+            $document.unbind('mousemove', mousemove)
+            $document.unbind('mouseup', mouseup)
+          }
+        }
+      })
+
+  </script>
+</body>
+
+</html>

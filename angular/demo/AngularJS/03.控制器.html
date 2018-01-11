@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app="MyApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>控制器（双向绑定）</title>
+</head>
+<script src="https://cdn.bootcss.com/angular.js/1.5.7/angular.js"></script>
+<body>
+    
+    <div ng-controller="MyCtrl">
+        姓：<input type="text" ng-model="firstName">
+        <br>
+        名：<input type="text" ng-model="lastName">
+        <p>姓名：{{ firstName + lastName }}</p>
+    </div>
+
+<script>
+
+    angular.module('MyApp', [])
+        .controller('MyCtrl', function($scope) {
+            $scope.firstName = "张";
+            $scope.lastName = "三";
+        })
+
+</script>
+</body>
+</html>
+

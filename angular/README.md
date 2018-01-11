@@ -14,10 +14,5 @@
 
 [01、双向绑定，内部指令，表达式](https://github.com/hanekaoru/WebLearningNotes/blob/master/angular/note/AngularJS/01.md)
 
-
-
-
-
-
-
+[02、控制器，服务](https://github.com/hanekaoru/WebLearningNotes/blob/master/angular/note/AngularJS/02.md)
 

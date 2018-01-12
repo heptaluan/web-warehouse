@@ -1,0 +1,21 @@
+<html ng-app="myApp">
+<head>
+   <title>自定义指令</title>
+</head>
+<body>
+
+    <hello></hello>
+
+   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
+   <script>
+ 
+      angular.module('myApp', [])
+        .directive('hello', function() {
+            return {
+                restrict: 'E',
+                template: '<div>123</div>'
+            }
+        })
+   </script>
+</body>
+</html>

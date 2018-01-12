@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>表单验证</title>
+</head>
+<style>
+    table,
+    th,
+    td {
+        border: 1px solid grey;
+        border-collapse: collapse;
+        padding: 5px;
+    }
+
+    table tr:nth-child(odd) {
+        background-color: #f2f2f2;
+    }
+
+    table tr:nth-child(even) {
+        background-color: #ffffff;
+    }
+</style>
+<body>
+    <div ng-app="" ng-controller="studentController">
+        <table>
+            <tr>
+                <th>姓名</th>
+                <th>年龄</th>
+                <th>分数</th>
+            </tr>
+            <tr ng-repeat="student in students">
+                <td>{{ student.name }}</td>
+                <td>{{ student.age }}</td>
+                <td>{{ student.num }}</td>
+            </tr>
+        </table>
+    </div>
+    <script>
+        function studentController($scope, $http) {
+            $http.get('./data.txt').success(function(data) {
+                $scope.students = data;
+                console.log(data)
+            })
+        }
+    </script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
+    
+    <!-- 
+
+        // data.txt
+
+        [
+            {
+                "name" : "张三",
+                "age" : 16,
+                "num" : "45"
+            },
+            {
+                "name" : "李四",
+                "age" : 18,
+                "num" : "55"
+            },
+            {
+                "name" : "王五",
+                "age" : 20,
+                "num" : "65"
+            },
+            {
+                "name" : "赵六",
+                "age" : 22,
+                "num" : "75"
+            }
+        ]
+
+     -->
+</body>
+</html>

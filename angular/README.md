@@ -17,3 +17,7 @@
 [02、控制器，构建服务的几种方式和区别](https://github.com/hanekaoru/WebLearningNotes/blob/master/angular/note/AngularJS/02.md)
 
 [03、表单验证，ajax，作用域（Scope），服务实例，依赖注入](https://github.com/hanekaoru/WebLearningNotes/blob/master/angular/note/AngularJS/03.md)
+
+* 自定义指令
+
+  * [01、自定义指令的定义，使用和参数配置](https://github.com/hanekaoru/WebLearningNotes/blob/master/angular/note/AngularJS/04.md)

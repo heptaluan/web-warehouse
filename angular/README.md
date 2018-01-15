@@ -21,3 +21,5 @@
 * 自定义指令
 
   * [01、自定义指令的定义，使用和参数配置](https://github.com/hanekaoru/WebLearningNotes/blob/master/angular/note/AngularJS/04.md)
+
+  * [02、compile 和 link](https://github.com/hanekaoru/WebLearningNotes/blob/master/angular/note/AngularJS/05.md)

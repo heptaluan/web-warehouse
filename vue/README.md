@@ -15,7 +15,11 @@
 
   * 源码相关
 
-    * [初始化装载与注入](https://github.com/hanekaoru/WebLearningNotes/blob/master/vue/note/vuex/02.md)
+    * [框架核心流程](https://github.com/hanekaoru/WebLearningNotes/blob/master/vue/note/vuex/02.md)
+
+    * [初始化装载与注入](https://github.com/hanekaoru/WebLearningNotes/blob/master/vue/note/vuex/03.md)
+
+    <!-- * [Store](https://github.com/hanekaoru/WebLearningNotes/blob/master/vue/note/vuex/04.md) -->
 
 * 其他
 

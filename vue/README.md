@@ -13,7 +13,9 @@
 
   * [01、State，Getter，Mutation，Action](https://github.com/hanekaoru/WebLearningNotes/blob/master/vue/note/vuex/01.md)
 
-  * [02、vuex 源码相关](https://github.com/hanekaoru/WebLearningNotes/blob/master/vue/note/vuex/02.md)
+  * 源码相关
+
+    * [初始化装载与注入](https://github.com/hanekaoru/WebLearningNotes/blob/master/vue/note/vuex/02.md)
 
 * 其他
 

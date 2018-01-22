@@ -23,7 +23,7 @@
     
       * [installModule, resetStoreVM, plugins](https://github.com/hanekaoru/WebLearningNotes/blob/master/vue/note/vuex/05.md)
 
-    <!-- * [源码整体汇总](https://github.com/hanekaoru/WebLearningNotes/blob/master/vue/note/vuex/06.md) -->
+    * [源码整体汇总](https://github.com/hanekaoru/WebLearningNotes/blob/master/vue/note/vuex/06.md)
 
 * 其他
 

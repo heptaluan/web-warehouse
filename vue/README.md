@@ -20,6 +20,8 @@
     * [初始化装载与注入](https://github.com/hanekaoru/WebLearningNotes/blob/master/vue/note/vuex/03.md)
 
     * [Store](https://github.com/hanekaoru/WebLearningNotes/blob/master/vue/note/vuex/04.md)
+    
+      * [installModule](https://github.com/hanekaoru/WebLearningNotes/blob/master/vue/note/vuex/05.md)
 
 * 其他
 

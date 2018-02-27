@@ -6,7 +6,7 @@
 
 参考 [Angular 4.x 修仙之路](https://segmentfault.com/a/1190000008754631)
 
-[01、基本组件](https://github.com/hanekaoru/WebLearningNotes/blob/master/angular/note/AngularJS/4.x/01.md)
+[01、整体架构，@NgModule，模块库](https://github.com/hanekaoru/WebLearningNotes/blob/master/angular/note/AngularJS/4.x/01.md)
 
 ----
 

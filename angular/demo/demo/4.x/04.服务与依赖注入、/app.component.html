@@ -1,0 +1,9 @@
+<ul>
+  <li *ngFor="let item of items">
+    <div class="list-item" (click)="onSelect(item)" [class.active]="item === selectItem">
+      <span>{{item.id}}</span> {{ item.name }}
+    </div>
+  </li>
+</ul>
+
+<item-detail [selectItem]="selectItem" ></item-detail>

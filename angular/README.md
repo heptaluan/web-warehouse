@@ -10,6 +10,7 @@
 
 [01、整体架构，@NgModule，模块库，组件](https://github.com/hanekaoru/WebLearningNotes/blob/master/angular/note/AngularJS/4.x/01.md)
 
+[02、属性绑定，数组循环，事件，双向数据绑定](https://github.com/hanekaoru/WebLearningNotes/blob/master/angular/note/AngularJS/4.x/02.md)
 
 ----
 

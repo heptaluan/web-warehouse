@@ -2,7 +2,7 @@
 
 ----
 
-### 一步一步学习 TypeScript
+### TypeScript
 
 参考 [一步一步学习 TypeScript](http://blog.csdn.net/wq_static/article/category/6010971)
 
@@ -27,3 +27,5 @@
 [10、Getters 和 Setters](https://github.com/hanekaoru/WebLearningNotes/blob/master/typeScript/note/一步一步学习TypeScript/10.md)
 
 [11、Interfaces](https://github.com/hanekaoru/WebLearningNotes/blob/master/typeScript/note/一步一步学习TypeScript/11.md)
+
+[12、补充](https://github.com/hanekaoru/WebLearningNotes/blob/master/typeScript/note/一步一步学习TypeScript/12.md)

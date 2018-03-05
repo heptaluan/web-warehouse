@@ -1,0 +1,14 @@
+<h2>新闻组件</h2>
+
+<button (click)="getData()">get 请求数据</button>
+
+<button (click)="jsonpData()">jsonp 请求数据</button>
+
+<button (click)="postData()">post 提交数据</button>
+
+
+<ul>
+  <li *ngFor="let item of list">
+    {{item.title}}
+  </li>
+</ul>

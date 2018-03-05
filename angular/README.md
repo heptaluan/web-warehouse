@@ -12,6 +12,8 @@
 
 [02、属性绑定，数组循环，事件，双向数据绑定](https://github.com/hanekaoru/WebLearningNotes/blob/master/angular/note/AngularJS/4.x/02.md)
 
+[03、数据请求](https://github.com/hanekaoru/WebLearningNotes/blob/master/angular/note/AngularJS/4.x/03.md)
+
 ----
 
 ### AngularJS 1.5.x

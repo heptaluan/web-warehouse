@@ -4,8 +4,6 @@
 
 ### Angular 4.x
 
-参考 [Angular 4.x 修仙之路](https://segmentfault.com/a/1190000008754631)
-
 [00、Angular-CLI 脚手架安装目录结构剖析](https://github.com/hanekaoru/WebLearningNotes/blob/master/angular/note/AngularJS/4.x/00.md)
 
 [01、整体架构，@NgModule，模块库，组件](https://github.com/hanekaoru/WebLearningNotes/blob/master/angular/note/AngularJS/4.x/01.md)

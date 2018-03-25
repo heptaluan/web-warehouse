@@ -2,6 +2,12 @@
 
 ----
 
+### Angular-Task
+
+参考 [Angular 打造企业级协作平台](https://coding.imooc.com/class/123.html)
+
+项目地址及笔记见：[Angular-Task](https://github.com/hanekaoru/Angular-Task)
+
 ### Angular 4.x
 
 [00、Angular-CLI 脚手架安装目录结构剖析](https://github.com/hanekaoru/WebLearningNotes/blob/master/angular/note/AngularJS/4.x/00.md)

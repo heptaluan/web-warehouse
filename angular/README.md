@@ -2,11 +2,14 @@
 
 ----
 
-### Angular-Task
+### Angular 修仙之路
 
-参考 [Angular 打造企业级协作平台](https://coding.imooc.com/class/123.html)
+主要参考 [Angular 4.x 修仙之路](https://segmentfault.com/blog/angular4)
 
-项目地址及笔记见：[Angular-Task](https://github.com/hanekaoru/Angular-Task)
+包含了 `Angular` 绝大部分内容，干货很多，可以钻研很长一段时间了，感谢作者的无私分享
+
+[00、一些小知识点汇总](https://github.com/hanekaoru/WebLearningNotes/blob/master/angular/note/AngularJS/Angular修仙之路/note/00.md)
+
 
 ### Angular 4.x
 

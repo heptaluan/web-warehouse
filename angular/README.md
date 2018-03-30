@@ -11,6 +11,41 @@
 [00、一些小知识点汇总](https://github.com/hanekaoru/WebLearningNotes/blob/master/angular/note/AngularJS/Angular修仙之路/note/00.md)
 
 
+### Angular-Task
+
+`Angular 4.x` 搭建的一个企业级协作平台
+
+参考的是 [Angular 打造企业级协作平台](https://coding.imooc.com/class/123.html)
+
+跟着学习一些 `Angular` 高阶知识，记录的一些相关笔记
+
+项目地址见：[Angular-Task](https://github.com/hanekaoru/Angular-Task)
+
+这里仅为问题汇总和笔记记录（地址待补充）
+
+[00、开发过程中遇到的报错集合]()
+
+[00、开发中一些比较实用的方法集合]()
+
+[01、项目结构, flex 布局]()
+
+[02、material]()
+
+[03、Amimation]()
+
+[04、依赖注入]()
+
+[05、Angular 检查机制，ChangeDetection]()
+
+[06、指令，模块]()
+
+[07、响应式表单，自定义表单]()
+
+[08、rxjs 常见的操作符]()
+
+[09、rxjs 高阶操作符]()
+
+
 ### Angular 4.x
 
 [00、Angular-CLI 脚手架安装目录结构剖析](https://github.com/hanekaoru/WebLearningNotes/blob/master/angular/note/AngularJS/4.x/00.md)

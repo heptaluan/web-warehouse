@@ -21,29 +21,37 @@
 
 项目地址见：[Angular-Task](https://github.com/hanekaoru/Angular-Task)
 
-这里仅为问题汇总和笔记记录（地址待补充）
+这里仅为问题汇总和笔记记录
 
-[00、开发过程中遇到的报错集合]()
+[00、开发过程中遇到的报错集合](https://github.com/hanekaoru/WebLearningNotes/blob/master/angular/note/AngularJS/Angular-Task/00.md)
 
-[00、开发中一些比较实用的方法集合]()
+[00、开发中一些比较实用的方法集合](https://github.com/hanekaoru/WebLearningNotes/blob/master/angular/note/AngularJS/Angular-Task/000.md)
 
-[01、项目结构, flex 布局]()
+[01、项目结构, flex 布局](https://github.com/hanekaoru/WebLearningNotes/blob/master/angular/note/AngularJS/Angular-Task/01.md)
 
-[02、material]()
+[02、material](https://github.com/hanekaoru/WebLearningNotes/blob/master/angular/note/AngularJS/Angular-Task/02.md)
 
-[03、Amimation]()
+[03、Amimation](https://github.com/hanekaoru/WebLearningNotes/blob/master/angular/note/AngularJS/Angular-Task/03.md)
 
-[04、依赖注入]()
+[04、依赖注入](https://github.com/hanekaoru/WebLearningNotes/blob/master/angular/note/AngularJS/Angular-Task/04.md)
 
-[05、Angular 检查机制，ChangeDetection]()
+[05、Angular 检查机制，ChangeDetection](https://github.com/hanekaoru/WebLearningNotes/blob/master/angular/note/AngularJS/Angular-Task/05.md)
 
-[06、指令，模块]()
+[06、指令，模块](https://github.com/hanekaoru/WebLearningNotes/blob/master/angular/note/AngularJS/Angular-Task/06md)
 
-[07、响应式表单，自定义表单]()
+[07、响应式表单，自定义表单](https://github.com/hanekaoru/WebLearningNotes/blob/master/angular/note/AngularJS/Angular-Task/07.md)
 
-[08、rxjs 常见的操作符]()
+[08、rxjs 常见的操作符](https://github.com/hanekaoru/WebLearningNotes/blob/master/angular/note/AngularJS/Angular-Task/08.md)
 
-[09、rxjs 高阶操作符]()
+[09、rxjs 高阶操作符](https://github.com/hanekaoru/WebLearningNotes/blob/master/angular/note/AngularJS/Angular-Task/09.md)
+
+[10、Observable 的冷和热，Subject](https://github.com/hanekaoru/WebLearningNotes/blob/master/angular/note/AngularJS/Angular-Task/10.md)
+
+[11、Redux](https://github.com/hanekaoru/WebLearningNotes/blob/master/angular/note/AngularJS/Angular-Task/11.md)
+
+[12、Angular 中的测试](https://github.com/hanekaoru/WebLearningNotes/blob/master/angular/note/AngularJS/Angular-Task/12.md)
+
+
 
 
 ### Angular 4.x

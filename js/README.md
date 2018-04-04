@@ -2,6 +2,12 @@
 
 ----
 
+### 一些常用方法的收录
+
+[常用方法的收录](https://github.com/hanekaoru/WebLearningNotes/blob/master/js/note/常用方法的收录.md)
+
+----
+
 一些比较完整的插件、项目等，以及附带一些相关知识点
 
 部分基础性的练手 `demo` 见 [JavaScript-Basic-Demo](https://github.com/hanekaoru/JavaScript-Basic-Demo)

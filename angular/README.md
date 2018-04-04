@@ -29,8 +29,6 @@
 
 [00、开发过程中遇到的报错集合](https://github.com/hanekaoru/WebLearningNotes/blob/master/angular/note/AngularJS/Angular-Task/00.md)
 
-[00、开发中一些比较实用的方法集合](https://github.com/hanekaoru/WebLearningNotes/blob/master/angular/note/AngularJS/Angular-Task/000.md)
-
 [01、项目结构, flex 布局](https://github.com/hanekaoru/WebLearningNotes/blob/master/angular/note/AngularJS/Angular-Task/01.md)
 
 [02、material](https://github.com/hanekaoru/WebLearningNotes/blob/master/angular/note/AngularJS/Angular-Task/02.md)

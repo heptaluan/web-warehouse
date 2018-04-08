@@ -10,7 +10,7 @@
 
 [00、小知识点与相关问题汇总](https://github.com/hanekaoru/WebLearningNotes/blob/master/angular/note/AngularJS/Angular修仙之路/note/00.md)
 
-[01、快速入门](https://github.com/hanekaoru/WebLearningNotes/blob/master/angular/note/AngularJS/Angular修仙之路/note/01.md)
+[01、Http，路由，依赖注入](https://github.com/hanekaoru/WebLearningNotes/blob/master/angular/note/AngularJS/Angular修仙之路/note/01.md)
 
 
 

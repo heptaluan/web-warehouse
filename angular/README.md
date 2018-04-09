@@ -12,6 +12,8 @@
 
 [01、Http，路由，依赖注入](https://github.com/hanekaoru/WebLearningNotes/blob/master/angular/note/AngularJS/Angular修仙之路/note/01.md)
 
+[02、数据绑定，响应式编程，管道，组件间的参数传递，生命周期钩子](https://github.com/hanekaoru/WebLearningNotes/blob/master/angular/note/AngularJS/Angular修仙之路/note/02.md)
+
 
 
 

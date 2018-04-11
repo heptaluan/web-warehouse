@@ -16,6 +16,8 @@
 
 [03、模版式表单，响应式表单，表单校验](https://github.com/hanekaoru/WebLearningNotes/blob/master/angular/note/AngularJS/Angular修仙之路/note/03.md)
 
+[04、WebSocket](https://github.com/hanekaoru/WebLearningNotes/blob/master/angular/note/AngularJS/Angular修仙之路/note/04.md)
+
 
 
 ### Angular-Task

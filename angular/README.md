@@ -2,13 +2,13 @@
 
 ----
 
+[Angular 的一些小知识点与相关问题汇总](https://github.com/hanekaoru/WebLearningNotes/blob/master/angular/note/AngularJS/00.md)
+
 ### Angular 修仙之路
 
 主要参考 [Angular 4.x 修仙之路](https://segmentfault.com/u/angular4)
 
 包含了 `Angular` 绝大部分内容，干货很多，可以钻研很长一段时间了，感谢作者的无私分享
-
-[00、小知识点与相关问题汇总](https://github.com/hanekaoru/WebLearningNotes/blob/master/angular/note/AngularJS/Angular修仙之路/note/00.md)
 
 [01、Http，路由，依赖注入](https://github.com/hanekaoru/WebLearningNotes/blob/master/angular/note/AngularJS/Angular修仙之路/note/01.md)
 

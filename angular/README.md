@@ -12,11 +12,14 @@
 
 [01、Http，路由，依赖注入](https://github.com/hanekaoru/WebLearningNotes/blob/master/angular/note/AngularJS/Angular修仙之路/note/01.md)
 
-[02、数据绑定，@ViewChild()，ng-content，rxjs，管道，组件间的参数传递，生命周期钩子](https://github.com/hanekaoru/WebLearningNotes/blob/master/angular/note/AngularJS/Angular修仙之路/note/02.md)
+[02、数据绑定，@ViewChild()，ng-content，管道，组件间的参数传递，生命周期钩子](https://github.com/hanekaoru/WebLearningNotes/blob/master/angular/note/AngularJS/Angular修仙之路/note/02.md)
 
 [03、模版式表单，响应式表单，表单校验](https://github.com/hanekaoru/WebLearningNotes/blob/master/angular/note/AngularJS/Angular修仙之路/note/03.md)
 
-[04、@Input，@Output，WebSocket](https://github.com/hanekaoru/WebLearningNotes/blob/master/angular/note/AngularJS/Angular修仙之路/note/04.md)
+[04、@Input，@Output，Constructor，ngOnInit，WebSocket](https://github.com/hanekaoru/WebLearningNotes/blob/master/angular/note/AngularJS/Angular修仙之路/note/04.md)
+
+[05、HostListener，HostBinding](https://github.com/hanekaoru/WebLearningNotes/blob/master/angular/note/AngularJS/Angular修仙之路/note/05.md)
+
 
 
 

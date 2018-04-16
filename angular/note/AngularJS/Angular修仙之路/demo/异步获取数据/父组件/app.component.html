@@ -1,0 +1,11 @@
+<h2>Title</h2>
+<app-components [data]="posts"></app-components>
+
+<hr>
+
+<h2>传递过去的数据</h2>
+<ul>
+  <li *ngFor="let item of posts | async">
+    <span>{{ item.title }}</span> -- <span>{{ item.category }}</span>
+  </li>
+</ul>

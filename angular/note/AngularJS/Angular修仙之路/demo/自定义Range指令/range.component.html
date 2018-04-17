@@ -1,0 +1,6 @@
+<h1>Your age:</h1>
+<select>
+  <ng-container *range="[18, 80]; let num">
+    <option [value]="num">{{num}}</option>
+  </ng-container>
+</select>

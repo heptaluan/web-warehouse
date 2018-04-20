@@ -20,6 +20,24 @@ function once(dom, event, callback) {
 }
 ```
 
+第二种方式
+
+```js
+const once = (fn) => {
+  let done = false;
+  return function() {
+    done ? undefined : ((done = true), fn.apply(this, arguments));
+  }
+}
+
+const test = once(() => {
+  console.log(`test`);
+})
+
+test();  // test
+test();  // undefined
+```
+
 ## bind
 
 实现原理见：[Function.prototype.bind()](http://hanekaoru.com/?p=1522)

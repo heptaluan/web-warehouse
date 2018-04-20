@@ -18,8 +18,9 @@
 
 [04、@Input，@Output，Constructor，ngOnInit，WebSocket](https://github.com/hanekaoru/WebLearningNotes/blob/master/angular/note/AngularJS/Angular修仙之路/note/04.md)
 
-[05、HostListener，HostBinding，装饰器，rxjs](https://github.com/hanekaoru/WebLearningNotes/blob/master/angular/note/AngularJS/Angular修仙之路/note/05.md)
+[05、HostListener，HostBinding，装饰器](https://github.com/hanekaoru/WebLearningNotes/blob/master/angular/note/AngularJS/Angular修仙之路/note/05.md)
 
+[06、rxjs](https://github.com/hanekaoru/WebLearningNotes/blob/master/angular/note/AngularJS/Angular修仙之路/note/06.md)
 
 
 

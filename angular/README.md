@@ -36,7 +36,7 @@
 
 这里仅为问题汇总和笔记记录
 
-[00、开发过程中遇到的报错集合](https://github.com/hanekaoru/WebLearningNotes/blob/master/angular/note/AngularJS/Angular-Task/00.md)
+[00、错误集锦](https://github.com/hanekaoru/WebLearningNotes/blob/master/angular/note/AngularJS/Angular-Task/00.md)
 
 [01、项目结构, flex 布局](https://github.com/hanekaoru/WebLearningNotes/blob/master/angular/note/AngularJS/Angular-Task/01.md)
 

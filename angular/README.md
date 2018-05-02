@@ -62,6 +62,8 @@
 
 [12、Angular 中的测试](https://github.com/hanekaoru/WebLearningNotes/blob/master/angular/note/AngularJS/Angular-Task/12.md)
 
+[12、effect](https://github.com/hanekaoru/WebLearningNotes/blob/master/angular/note/AngularJS/Angular-Task/13.md)
+
 
 
 

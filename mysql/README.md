@@ -28,9 +28,4 @@
 
 [01、数据类型](https://github.com/hanekaoru/WebLearningNotes/blob/master/mysql/note/MYSQL从入门到精通/01.md)
 
-[02、数据库的增删改查](https://github.com/hanekaoru/WebLearningNotes/blob/master/mysql/note/MYSQL从入门到精通/01.md)
-
-[03、表的增删改查](https://github.com/hanekaoru/WebLearningNotes/blob/master/mysql/note/MYSQL从入门到精通/01.md)
-
-[04、表结构的增删改查](https://github.com/hanekaoru/WebLearningNotes/blob/master/mysql/note/MYSQL从入门到精通/01.md)
-
+[02、数据库，表，表结构的增删改查](https://github.com/hanekaoru/WebLearningNotes/blob/master/mysql/note/MYSQL从入门到精通/02.md)

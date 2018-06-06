@@ -9,3 +9,6 @@
 [03、python 实例](https://github.com/hanekaoru/WebLearningNotes/blob/master/python/note/basic/03.md)
 
 [04、数据库操作](https://github.com/hanekaoru/WebLearningNotes/blob/master/python/note/basic/04.md)
+
+[05、列表生成式，生成器，map & reduce & filter & sorted](https://github.com/hanekaoru/WebLearningNotes/blob/master/python/note/basic/05.md)
+

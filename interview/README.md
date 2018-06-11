@@ -173,6 +173,49 @@
 
 
 
+
+
+
+
+## Vue
+
+* [vue](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/vue/vue.md) 
+
+  * `Vue` 的双向数据绑定（响应式）原理是什么？
+
+  * `Vue` 中数组替换需要注意的地方
+
+  * 对象更改检测注意事项
+
+  * 介绍一下 `is` 属性
+
+  * `methods` 和 `computed` 的区别
+
+  * `$nextTick` 的作用
+
+  * 组件之间传参
+
+    * 父组件向子组件传递数据
+
+    * 子组件向父组件传递数据
+
+    * `EventBus`
+
+    * 如果子组件需要修改 `props` 该怎么操作
+
+  * 循环中的 `key` 的作用
+
+  
+
+
+
+
+
+
+
+
+
+
 ## React
 
 * [调用 setState 之后发生了什么](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/react/setState.md) 
@@ -253,10 +296,6 @@
   * ```angular``` 原理
 
   * ```AngularJS``` 数据双向绑定原理
-
-* [vue](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/mvc/vue.md)
-
-  * ```vue``` 响应式原理
 
 * [为什么要用 React](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/mvc/react.md)
 

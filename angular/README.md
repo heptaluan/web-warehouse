@@ -12,6 +12,7 @@
 
 [01、Angular 中的 :host 和 ::ng-deep](https://github.com/hanekaoru/WebLearningNotes/blob/master/angular/note/Angular/note/01.md)
 
+[01、ExpressionChangedAfterItHasBeenCheckedError](https://github.com/hanekaoru/WebLearningNotes/blob/master/angular/note/Angular/note/02.md)
 
 
 

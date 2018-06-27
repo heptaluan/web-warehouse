@@ -12,8 +12,9 @@
 
 [01、Angular 中的 :host 和 ::ng-deep](https://github.com/hanekaoru/WebLearningNotes/blob/master/angular/note/Angular/note/01.md)
 
-[01、ExpressionChangedAfterItHasBeenCheckedError](https://github.com/hanekaoru/WebLearningNotes/blob/master/angular/note/Angular/note/02.md)
+[02、ExpressionChangedAfterItHasBeenCheckedError](https://github.com/hanekaoru/WebLearningNotes/blob/master/angular/note/Angular/note/02.md)
 
+[03、flex 取值（0，1，auto）相关问题](https://github.com/hanekaoru/WebLearningNotes/blob/master/angular/note/Angular/note/03.md)
 
 
 

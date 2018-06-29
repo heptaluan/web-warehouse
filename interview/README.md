@@ -4,70 +4,66 @@
 
 ## JS
 
-* [this](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/this.md)
 
-* [使用 new 的时候发生了什么](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/new.md)
+* [this](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/01.md)
 
-* [Canvas 和 SVG 的区别](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/canvas.md)
+* [使用 new 的时候发生了什么](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/02.md)
 
-* [mouseover 与 mouseenter 的区别](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/mouseover.md)
+* [Canvas 和 SVG 的区别](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/03.md)
 
-* [浏览器中的各种长度](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/浏览器中的各种长度.md) 
+* [mouseover 与 mouseenter 的区别](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/04.md)
 
-* [parseInt 用法](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/parseInt.md) 
+* [浏览器中的各种长度](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/05.md) 
 
-* [sessionStorage，localStorage 和 cookie 的区别](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/sessionStorage-localStorage-cookie.md) 
+* [parseInt 用法](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/06.md) 
 
-* [iframe 优缺点](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/iframe.md) 
+* [sessionStorage，localStorage 和 cookie 的区别](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/07.md) 
 
-* [Date 对象](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/date.md) 
+* [iframe 优缺点](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/08.md) 
 
-* [ES6 中的 class](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/class.md) 
+* [Date 对象](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/09.md) 
 
-* [map/reduce](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/map&reduce.md) 
+* [ES6 中的 class](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/10.md) 
 
-* [call 和 apply 哪个速度更快一些](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/call-apply.md) 
+* [map/reduce](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/11.md) 
 
-* [JavaScript 中的事件模型](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/emitter.md) 
+* [call 和 apply 哪个速度更快一些](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/12.md) 
 
-* [JavaScript 中常用的设计模式](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/设计模式.md) 
+* [JavaScript 中的事件模型](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/13.md) 
 
-* [JavaScript 中节点相关属性](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/nodeType.md) 
+* [JavaScript 中常用的设计模式](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/14.md) 
 
-* [事件流，冒泡与捕获](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/bubble.md) 
+* [JavaScript 中节点相关属性](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/15.md) 
 
-* [函数的 length 属性与 callee](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/length.md) 
+* [事件流，冒泡与捕获](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/16.md) 
 
-* [什么是原型链](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/prototype.md) 
-
+* [函数的 length 属性与 callee](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/17.md) 
 
 
 
 #### 类和继承
 
-* [手写类和原型继承](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/继承.md) 
+* [什么是原型链](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/18.md) 
 
-* [深拷贝和浅拷贝](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/深拷贝和浅拷贝.md) 
+* [什么是类式和原型继承，两者有什么区别](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/19.md) 
 
-* [mixin](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/mixin.md) 
+* [深拷贝和浅拷贝](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/20.md) 
+
+* [mixin](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/21.md) 
 
 
 
-#### 常见方法和函数
+#### 字符串，数组，对象和常用函数
 
-* [手写 once/bind/debouce/throttle 函数](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/once-bind-debouce-throttle.md) 
+* [手写 once/bind/debouce/throttle 函数](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/22.md) 
 
-* [实现拖拽的功能（PC 端和移动端）](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/drag.md) 
+* [实现拖拽的功能（PC 端和移动端）](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/23.md) 
 
-* [实现一个解析 url 的方法](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/getQueryObject.md) 
+* [实现一个解析 url 的方法](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/24.md) 
 
-* [DOM操作 - 在有序（无序）列表中插入 3 个，300 个，3000 个 li，并绑定事件](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/dom.md) 
+* [DOM操作 - 在有序（无序）列表中插入 3 个，300 个，3000 个 li，并绑定事件](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/25.md) 
 
 * [生成一个 20 X 12 的表格，并且设定指定格子的背景颜色](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/table.md) 
-
-
-
-#### 字符串，数组，对象
 
 * [如何监听 对象/数组 属性改变](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/proxy.md) 
 

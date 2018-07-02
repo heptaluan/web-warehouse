@@ -331,7 +331,9 @@
 
 * [缓存穿透与缓存雪崩](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/other/01.md)
 
-* [进程与线程](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/other/02.md)
+* [进程和线程](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/other/02.md)
+
+  * 什么是进程和线程
 
   * `JavaScript` 中的单线程执行机制
 

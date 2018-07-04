@@ -44,14 +44,6 @@
 
 ### Angular-Task
 
-`Angular 4.x` 搭建的一个企业级协作平台
-
-参考的是 [Angular 打造企业级协作平台](https://coding.imooc.com/class/123.html)
-
-跟着学习一些 `Angular` 高阶知识，记录的一些相关笔记
-
-项目地址见：[Angular-Task](https://github.com/hanekaoru/Angular-Task)
-
 这里仅为问题汇总和笔记记录
 
 [00、错误集锦](https://github.com/hanekaoru/WebLearningNotes/blob/master/angular/note/Angular/Angular-Task/00.md)

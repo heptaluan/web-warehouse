@@ -2,15 +2,9 @@
 
 ----
 
-[Angular 的一些小知识点与相关问题汇总](https://github.com/hanekaoru/WebLearningNotes/blob/master/angular/note/Angular/00.md)
-
-
-
 ### Angular 笔记
 
-记录一些工作当中接触到的一些相关知识点
-
-[00、Angular 中的一些小 tips](https://github.com/hanekaoru/WebLearningNotes/blob/master/angular/note/Angular/note/00.md)
+记录一些工作当中接触到的一些 Angular 相关知识点
 
 [01、Angular 中的 :host 和 ::ng-deep](https://github.com/hanekaoru/WebLearningNotes/blob/master/angular/note/Angular/note/01.md)
 

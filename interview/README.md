@@ -2,8 +2,7 @@
 
 ----
 
-## JS
-
+## JavaScript
 
 * [this](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/01.md)
 

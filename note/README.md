@@ -5,11 +5,12 @@
 ----
 
 
-## [JavaScript]()
+## [JavaScript](https://github.com/hanekaoru/WebLearningNotes/blob/master/note/JavaScript/00.md)
 
 * 01） 如何快速判断 `DOM` 元素位于 `viewport` 以外
 
-## [Angular]()
+## [Angular](https://github.com/hanekaoru/WebLearningNotes/blob/master/note/Angular/00.md)
+
 
 * 01） 自定义属性指令中的 `ElementRef` 与 `Renderer` 的作用
 

@@ -12,6 +12,13 @@
 
 [03、flex 取值（0，1，auto）相关问题](https://github.com/hanekaoru/WebLearningNotes/blob/master/angular/note/Angular/note/03.md)
 
+[04、Angular 动态加载](https://github.com/hanekaoru/WebLearningNotes/blob/master/angular/note/Angular/note/04.md)
+
+  * 动态加载已经声明的组件
+
+  * 动态创建模块的方式来加载动态创建的组件
+
+  * 相关问题，创建动态组件后调用 `componentRef.instance` 不能更新界面数据
 
 
 

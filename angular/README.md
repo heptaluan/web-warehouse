@@ -20,7 +20,15 @@
 
   * 相关问题，创建动态组件后调用 `componentRef.instance` 不能更新界面数据
 
+[05、动态加载的一些内容补充](https://github.com/hanekaoru/WebLearningNotes/blob/master/angular/note/Angular/note/05.md)
 
+  * `Angular` 中利用指令来指定宿主对象
+
+  * `Angular` 中如何动态添加宿主
+
+  * 如何与动态添加后的组件进行通信
+
+<!-- [06、Injector](https://github.com/hanekaoru/WebLearningNotes/blob/master/angular/note/Angular/note/06.md) -->
 
 
 ### Angular 修仙之路
@@ -29,7 +37,7 @@
 
 包含了 `Angular` 绝大部分内容，干货很多，可以钻研很长一段时间了，感谢作者的无私分享
 
-[01、Http，路由，依赖注入](https://github.com/hanekaoru/WebLearningNotes/blob/master/angular/note/Angular/Angular修仙之路/note/01.md)
+[01、Http 和路由](https://github.com/hanekaoru/WebLearningNotes/blob/master/angular/note/Angular/Angular修仙之路/note/01.md)
 
 [02、数据绑定，@ViewChild()，ng-content，管道，组件间的参数传递，生命周期钩子（变化检测机制）](https://github.com/hanekaoru/WebLearningNotes/blob/master/angular/note/Angular/Angular修仙之路/note/02.md)
 
@@ -40,6 +48,11 @@
 [05、HostListener，HostBinding，装饰器](https://github.com/hanekaoru/WebLearningNotes/blob/master/angular/note/Angular/Angular修仙之路/note/05.md)
 
 [06、rxjs](https://github.com/hanekaoru/WebLearningNotes/blob/master/angular/note/Angular/Angular修仙之路/note/06.md)
+
+[07、依赖注入](https://github.com/hanekaoru/WebLearningNotes/blob/master/angular/note/Angular/Angular修仙之路/note/07.md)
+
+
+
 
 
 

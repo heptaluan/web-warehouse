@@ -28,7 +28,13 @@
 
   * 如何与动态添加后的组件进行通信
 
-<!-- [06、Injector](https://github.com/hanekaoru/WebLearningNotes/blob/master/angular/note/Angular/note/06.md) -->
+[06、Injector](https://github.com/hanekaoru/WebLearningNotes/blob/master/angular/note/Angular/note/06.md)
+
+  * 关于 [依赖注入](https://github.com/hanekaoru/WebLearningNotes/blob/master/angular/note/Angular/Angular修仙之路/note/07.md) 内容的一些补充
+
+  * `_NullInjector`（用于表示空的注入器）
+
+  * `ReflectiveInjector`（用于实例化对象和解析依赖）
 
 
 ### Angular 修仙之路

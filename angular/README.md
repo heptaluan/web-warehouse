@@ -20,21 +20,58 @@
 
   * 相关问题，创建动态组件后调用 `componentRef.instance` 不能更新界面数据
 
-[05、动态加载的一些内容补充](https://github.com/hanekaoru/WebLearningNotes/blob/master/angular/note/Angular/note/05.md)
-
   * `Angular` 中利用指令来指定宿主对象
 
   * `Angular` 中如何动态添加宿主
 
   * 如何与动态添加后的组件进行通信
 
-[06、Injector](https://github.com/hanekaoru/WebLearningNotes/blob/master/angular/note/Angular/note/06.md)
+  * 扩展内容可见下方的第八点，`Injector`，可以算是源码剖析了，包含以下内容
 
-  * 关于 [依赖注入](https://github.com/hanekaoru/WebLearningNotes/blob/master/angular/note/Angular/Angular修仙之路/note/07.md) 内容的一些补充
+    * `Angular Metadata`
 
-  * `_NullInjector`（用于表示空的注入器）
+    * `Injector` 和 `Injector` 的子类
 
-  * `ReflectiveInjector`（用于实例化对象和解析依赖）
+    * `_NullInjector`（用于表示空的注入器）
+
+    * `ReflectiveInjector`（用于实例化对象和解析依赖，利用其身上的静态方法）
+
+      * `resolveAndCreate()`
+
+      * `resolve()`
+
+        * `Provider[]` 类型
+
+        * `ResolvedReflectiveProvider[]` 接口
+
+          * `ResolvedReflectiveFactory` 类
+
+            * `ReflectiveDependency` 类
+
+              * `ReflectiveKey` 类
+
+        * `resolveReflectiveProviders()` 方法，分为四步
+
+          * 规范化 `Provider`
+
+          * 转化 `NormalizedProvider` 为 `ResolvedReflectiveProvider`
+
+          * 合并已解析的 `Provider`
+
+          * 生成 `ResolvedReflectiveProvider[]`
+
+      * `fromResolvedProviders()`
+
+        * `ReflectiveInjector_`（构造函数，属性，方法）方法主要涉及下面四个
+
+          * 用于创建 `ReflectiveInjector` 注入器
+
+          * 用于获取对象
+
+          * 用于创建对象
+
+          * 用于获取工厂函数依赖对象
+
 
 
 ### Angular 修仙之路
@@ -57,6 +94,7 @@
 
 [07、依赖注入](https://github.com/hanekaoru/WebLearningNotes/blob/master/angular/note/Angular/Angular修仙之路/note/07.md)
 
+[08、Injector](https://github.com/hanekaoru/WebLearningNotes/blob/master/angular/note/Angular/Angular修仙之路/note/08.md)
 
 
 

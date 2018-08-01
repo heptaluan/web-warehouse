@@ -13,6 +13,8 @@
 
 * 数量过多，迁移一部分至 [interview](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/mvc/angular/00.md)
 
+* 01） `effect` 和 `reducer` 的区别
+
 
 
 

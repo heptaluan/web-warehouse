@@ -26,51 +26,9 @@
 
   * 如何与动态添加后的组件进行通信
 
-  * 扩展内容可见下方的第八点，`Injector`，可以算是源码剖析了，包含以下内容
+  * 扩展内容可见下方的第八点，`Injector`，可以算是源码剖析了
 
-    * `Angular Metadata`
-
-    * `Injector` 和 `Injector` 的子类
-
-    * `_NullInjector`（用于表示空的注入器）
-
-    * `ReflectiveInjector`（用于实例化对象和解析依赖，利用其身上的静态方法）
-
-      * `resolveAndCreate()`
-
-      * `resolve()`
-
-        * `Provider[]` 类型
-
-        * `ResolvedReflectiveProvider[]` 接口
-
-          * `ResolvedReflectiveFactory` 类
-
-            * `ReflectiveDependency` 类
-
-              * `ReflectiveKey` 类
-
-        * `resolveReflectiveProviders()` 方法，分为四步
-
-          * 规范化 `Provider`
-
-          * 转化 `NormalizedProvider` 为 `ResolvedReflectiveProvider`
-
-          * 合并已解析的 `Provider`
-
-          * 生成 `ResolvedReflectiveProvider[]`
-
-      * `fromResolvedProviders()`
-
-        * `ReflectiveInjector_`（构造函数，属性，方法）方法主要涉及下面四个
-
-          * 用于创建 `ReflectiveInjector` 注入器
-
-          * 用于获取对象
-
-          * 用于创建对象
-
-          * 用于获取工厂函数依赖对象
+    
 
 
 

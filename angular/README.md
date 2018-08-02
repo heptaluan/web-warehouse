@@ -28,7 +28,7 @@
 
   * 扩展内容可见下方的第八点，`Injector`，可以算是源码剖析了
 
-    
+[05、Angular 属性绑定 [] 和 {{}} 的差异](https://github.com/hanekaoru/WebLearningNotes/blob/master/angular/note/Angular/note/05.md)
 
 
 

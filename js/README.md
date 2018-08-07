@@ -2,6 +2,8 @@
 
 ----
 
+[常用工具函数汇总](https://github.com/hanekaoru/WebLearningNotes/blob/master/js/util.md)
+
 [一些常用方法](https://github.com/hanekaoru/WebLearningNotes/blob/master/js/note/00.md)
 
   * 移动端定位

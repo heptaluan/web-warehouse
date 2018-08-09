@@ -2,13 +2,17 @@
 
 ----
 
-[常用工具函数汇总](https://github.com/hanekaoru/WebLearningNotes/blob/master/js/util.md)
+## 常用工具函数（方法）汇总
 
-[一些常用方法](https://github.com/hanekaoru/WebLearningNotes/blob/master/js/note/00.md)
+* [第一部分](https://github.com/hanekaoru/WebLearningNotes/blob/master/js/util/01.md)
 
-  * 移动端定位
+* [第二部分](https://github.com/hanekaoru/WebLearningNotes/blob/master/js/util/02.md)
 
-  * 移动端适配
+* [近期用的的一些方法](https://github.com/hanekaoru/WebLearningNotes/blob/master/js/util/03.md)
+
+  * 移动端元素定位
+
+  * 移动端适配（`rem`）
 
   * 使用 `filter` 确保 `Observable` 当中流中的值不为空
 
@@ -18,12 +22,8 @@
 
   * 查找列表当中指定的项
 
-  * 点击空白区域关闭弹窗
-
 
 ### 一些相关知识点
-
-一些比较完整的插件、项目等，以及附带一些相关知识点
 
 部分基础性的练手 `demo` 见 [JavaScript-Basic-Demo](https://github.com/hanekaoru/JavaScript-Basic-Demo)
 

@@ -8,19 +8,7 @@
 
 * [第二部分](https://github.com/hanekaoru/WebLearningNotes/blob/master/js/util/02.md)
 
-* [近期用的的一些方法](https://github.com/hanekaoru/WebLearningNotes/blob/master/js/util/03.md)
-
-  * 移动端元素定位
-
-  * 移动端适配（`rem`）
-
-  * 使用 `filter` 确保 `Observable` 当中流中的值不为空
-
-  * 将数组转为字典对象
-
-  * 从列表当中删除掉指定项
-
-  * 查找列表当中指定的项
+* [一些小方法和知识点](https://github.com/hanekaoru/WebLearningNotes/blob/master/js/util/03.md)
 
 
 ### 一些相关知识点

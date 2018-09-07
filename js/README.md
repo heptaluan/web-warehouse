@@ -27,3 +27,4 @@
 
 [变量的赋值与深浅拷贝](https://github.com/hanekaoru/WebLearningNotes/blob/master/js/note/06.md)
 
+[一些常用的函数和方法](https://github.com/hanekaoru/WebLearningNotes/blob/master/js/note/07.md)

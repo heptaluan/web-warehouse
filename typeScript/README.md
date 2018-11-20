@@ -6,26 +6,24 @@
 
 参考 [一步一步学习 TypeScript](http://blog.csdn.net/wq_static/article/category/6010971)
 
-[01、hello world](https://github.com/hanekaoru/WebLearningNotes/blob/master/typeScript/note/一步一步学习TypeScript/01.md)
+* `hello world`
 
-[02、基本类型](https://github.com/hanekaoru/WebLearningNotes/blob/master/typeScript/note/一步一步学习TypeScript/02.md)
+* 基本类型
 
-[03、严格的对象赋值检查，Duck Typing，隐式/显示 类型转换](https://github.com/hanekaoru/WebLearningNotes/blob/master/typeScript/note/一步一步学习TypeScript/03.md)
+* 严格的对象赋值检查，`Duck Typing`，隐式/显示 类型转换
 
-[04、Enums 类型](https://github.com/hanekaoru/WebLearningNotes/blob/master/typeScript/note/一步一步学习TypeScript/04.md)
+* `Enums` 类型
 
-[05、函数 Function（函数的参数，this，重载）](https://github.com/hanekaoru/WebLearningNotes/blob/master/typeScript/note/一步一步学习TypeScript/05.md)
+* 函数 `Function`（函数的参数，`this`，重载）
 
-[06、箭头函数](https://github.com/hanekaoru/WebLearningNotes/blob/master/typeScript/note/一步一步学习TypeScript/06.md)
+* 箭头函数
 
-[07、联合类型与元祖（tuple）](https://github.com/hanekaoru/WebLearningNotes/blob/master/typeScript/note/一步一步学习TypeScript/07.md)
+* 联合类型与元祖（`tuple`）
 
-[08、抽象类，类与继承](https://github.com/hanekaoru/WebLearningNotes/blob/master/typeScript/note/一步一步学习TypeScript/08.md)
+* 抽象类，类与继承
 
-[09、class 中的 private，protected 和 static](https://github.com/hanekaoru/WebLearningNotes/blob/master/typeScript/note/一步一步学习TypeScript/09.md)
+* `class` 中的 `private`，`protected` 和 `static`
 
-[10、Getters 和 Setters](https://github.com/hanekaoru/WebLearningNotes/blob/master/typeScript/note/一步一步学习TypeScript/10.md)
+* `Getters` 和 `Setters`
 
-[11、Interfaces](https://github.com/hanekaoru/WebLearningNotes/blob/master/typeScript/note/一步一步学习TypeScript/11.md)
-
-[12、补充](https://github.com/hanekaoru/WebLearningNotes/blob/master/typeScript/note/一步一步学习TypeScript/12.md)
+* `Interfaces`

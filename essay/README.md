@@ -15,6 +15,9 @@
 
 * [运算符优先级](https://github.com/hanekaoru/WebLearningNotes/blob/master/essay/11-26/02.md)
 
+* [JavaScript 中的数据绑定](https://github.com/hanekaoru/WebLearningNotes/blob/master/essay/11-26/03.md)
+
+
 
 
 
@@ -86,9 +89,6 @@
 
 ## CSS
 
-
-
-#### 知识点汇总
 
 * [样式来源与层叠规则](https://github.com/hanekaoru/WebLearningNotes/blob/master/essay/css/note/样式来源与层叠规则.md)
 

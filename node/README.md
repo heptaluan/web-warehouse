@@ -2,6 +2,19 @@
 
 ----
 
+
+### 笔记
+
+[url 和 querystring](https://github.com/hanekaoru/WebLearningNotes/blob/master/node/note/笔记/01.md)
+
+[http 事件回调，EventEmitter](https://github.com/hanekaoru/WebLearningNotes/blob/master/node/note/笔记/02.md)
+
+[get / request，promise](https://github.com/hanekaoru/WebLearningNotes/blob/master/node/note/笔记/03.md)
+
+[buffer，Stream](https://github.com/hanekaoru/WebLearningNotes/blob/master/node/note/笔记/04.md)
+
+
+
 ### Node.js 相关知识点汇总
 
 [01、服务器（server）](https://github.com/hanekaoru/WebLearningNotes/blob/master/node/note/汇总/note/01.md)

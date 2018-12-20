@@ -40,6 +40,30 @@
 
 
 
+
+
+## 《你不知道的 JavaScript（上卷）》
+
+[作用域](https://github.com/hanekaoru/WebLearningNotes/blob/master/readingNotes/你不知道的JavaScript(上卷)/01.md)
+
+[提升和闭包](https://github.com/hanekaoru/WebLearningNotes/blob/master/readingNotes/你不知道的JavaScript(上卷)/02.md)
+
+[this](https://github.com/hanekaoru/WebLearningNotes/blob/master/readingNotes/你不知道的JavaScript(上卷)/03.md)
+
+[对象](https://github.com/hanekaoru/WebLearningNotes/blob/master/readingNotes/你不知道的JavaScript(上卷)/04.md)
+
+[原型](https://github.com/hanekaoru/WebLearningNotes/blob/master/readingNotes/你不知道的JavaScript(上卷)/05.md)
+
+[行为委托](https://github.com/hanekaoru/WebLearningNotes/blob/master/readingNotes/你不知道的JavaScript(上卷)/06.md)
+
+
+
+
+
+
+
+
+
 ## 《你不知道的 JavaScript（中卷）》
 
 [01、值和原生函数](https://github.com/hanekaoru/WebLearningNotes/blob/master/readingNotes/你不知道的JavaScript(中卷)/01.md)
@@ -53,6 +77,7 @@
 [05、迭代器 与 生成器](https://github.com/hanekaoru/WebLearningNotes/blob/master/readingNotes/你不知道的JavaScript(中卷)/05.md)
 
 [06、生成器 与 Promise，async 和 await](https://github.com/hanekaoru/WebLearningNotes/blob/master/readingNotes/你不知道的JavaScript(中卷)/06.md)
+
 
 
 

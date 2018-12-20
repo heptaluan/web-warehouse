@@ -79,8 +79,18 @@
 
 [一些常用的函数和方法](https://github.com/hanekaoru/WebLearningNotes/blob/master/essay/js/note/07.md)
 
+[html5 中的 FileReader](https://github.com/hanekaoru/WebLearningNotes/blob/master/essay/js/note/11.md)
+
+[正则中的 test() 与 全局选项 /g](https://github.com/hanekaoru/WebLearningNotes/blob/master/essay/js/note/12.md)
 
 
+### jQuery
+
+[jQuery 源码总体架构](https://github.com/hanekaoru/WebLearningNotes/blob/master/essay/js/note/08.md)
+
+[jQuery 中的静态属性和方法](https://github.com/hanekaoru/WebLearningNotes/blob/master/essay/js/note/09.md)
+
+[jQuery 方法集合](https://github.com/hanekaoru/WebLearningNotes/blob/master/essay/js/note/10.md)
 
 
 ----

@@ -2,68 +2,68 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title></title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title></title>
 </head>
 <script src="https://cdn.bootcss.com/d3/3.5.17/d3.js"></script>
 
 <body>
-    <style>
-    </style>
+  <style>
+  </style>
 
-    <script>
+  <script>
 
-        // 画布
-        var width = 400;
-        var height = 400;
-        var dataset = [30, 10, 43, 55, 13];
+    // 画布
+    var width = 400;
+    var height = 400;
+    var dataset = [30, 10, 43, 55, 13];
 
-        var svg = d3.select("body")
-            .append("svg")
-            .attr("width", width)
-            .attr("height", height);
+    var svg = d3.select("body")
+      .append("svg")
+      .attr("width", width)
+      .attr("height", height);
 
-        // 数据转换
-        var pie = d3.layout.pie();
-        var piedata = pie(dataset);
+    // 数据转换
+    var pie = d3.layout.pie();
+    var piedata = pie(dataset);
 
 
-        // 弧生成器，设置内外半径，颜色比例尺
-        var outerRadius = 150;
-        var innerRadius = 0;
-        var arc = d3.svg.arc().innerRadius(innerRadius).outerRadius(outerRadius);
-        var color = d3.scale.category10();
+    // 弧生成器，设置内外半径，颜色比例尺
+    var outerRadius = 150;
+    var innerRadius = 0;
+    var arc = d3.svg.arc().innerRadius(innerRadius).outerRadius(outerRadius);
+    var color = d3.scale.category10();
 
-        // 分组
-        var arcs = svg.selectAll("g")
-            .data(piedata)
-            .enter()
-            .append("g")
-            .attr("transform", "translate(" + (width / 2) + "," + (width / 2) + ")");
+    // 分组
+    var arcs = svg.selectAll("g")
+      .data(piedata)
+      .enter()
+      .append("g")
+      .attr("transform", "translate(" + (width / 2) + "," + (width / 2) + ")");
 
-        // 内部填充
-        arcs.append("path")
-            .attr("fill", (d, i) => {
-                return color(i);
-            })
-            .attr("d", (d) => {
-                // 调用弧生成器，得到路径值
-                return arc(d);
-            });
+    // 内部填充
+    arcs.append("path")
+      .attr("fill", (d, i) => {
+        return color(i);
+      })
+      .attr("d", (d) => {
+        // 调用弧生成器，得到路径值
+        return arc(d);
+      });
 
-        // 设置文字
-        arcs.append("text")
-            .attr("transform", (d) => {
-                return `translate(${arc.centroid(d)})`;
-            })
-            .attr("text-anchor", "middle")
-            .text((d) => {
-                return d.data;
-            });
+    // 设置文字
+    arcs.append("text")
+      .attr("transform", (d) => {
+        return `translate(${arc.centroid(d)})`;
+      })
+      .attr("text-anchor", "middle")
+      .text((d) => {
+        return d.data;
+      });
 
-    </script>
+  </script>
 
 </body>
 

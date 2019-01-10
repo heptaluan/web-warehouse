@@ -5,7 +5,7 @@
 
 ### 一步一步学习 TypeScript 目录
 
-`note` 中的一步一步学习 TypeScript对应相关示例
+`note` 中的一步一步学习 `TypeScript` 对应相关示例
 
 
 ### App 目录

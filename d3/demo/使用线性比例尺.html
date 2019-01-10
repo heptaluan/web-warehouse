@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
 </head>
 <script src="https://cdn.bootcss.com/d3/3.5.17/d3.js"></script>
+
 <body>
 
-<script>
+  <script>
 
 
     var arr = [2.5, 2.1, 1.7, 1.3, 0.9]
@@ -18,25 +20,26 @@
     var rectHeight = 25;
 
     d3.select("body")
-        .append("svg")
-        .attr("width", 300)
-        .attr("height", 300)
-        .selectAll("rect")
-        .data(arr)
-        .enter()
-        .append("rect")
-        .attr("x", 20)
-        .attr("y", (d, i) => {
-            return i * rectHeight;
-        })
-        .attr("width", (d) => {
-            return linear(d)
-        })
-        .attr("height", rectHeight - 5)
-        .attr("fill", "pink")
+      .append("svg")
+      .attr("width", 300)
+      .attr("height", 300)
+      .selectAll("rect")
+      .data(arr)
+      .enter()
+      .append("rect")
+      .attr("x", 20)
+      .attr("y", (d, i) => {
+        return i * rectHeight;
+      })
+      .attr("width", (d) => {
+        return linear(d)
+      })
+      .attr("height", rectHeight - 5)
+      .attr("fill", "pink")
 
 
-</script>
+  </script>
 
 </body>
+
 </html>

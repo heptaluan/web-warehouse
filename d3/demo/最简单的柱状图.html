@@ -1,38 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title></title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title></title>
 </head>
 <script src="https://cdn.bootcss.com/d3/4.12.0/d3.min.js"></script>
+
 <body>
 
-<script>
+  <script>
 
 
-    var arr = [250 ,210 ,170 ,130 ,90]
+    var arr = [250, 210, 170, 130, 90]
     var rectHeight = 25;
     d3.select("body")
-        .append("svg")
-        .attr("width", 300)
-        .attr("height", 300)
-        .selectAll("rect")
-        .data(arr)
-        .enter()
-        .append("rect")
-        .attr("x", 20)
-        .attr("y", (d, i) => {
-            return i * rectHeight;
-        })
-        .attr("width", (d) => {
-            return d;
-        })
-        .attr("height", rectHeight - 5)
-        .attr("fill", "pink")
+      .append("svg")
+      .attr("width", 300)
+      .attr("height", 300)
+      .selectAll("rect")
+      .data(arr)
+      .enter()
+      .append("rect")
+      .attr("x", 20)
+      .attr("y", (d, i) => {
+        return i * rectHeight;
+      })
+      .attr("width", (d) => {
+        return d;
+      })
+      .attr("height", rectHeight - 5)
+      .attr("fill", "pink")
 
-</script>
+  </script>
 
 </body>
+
 </html>

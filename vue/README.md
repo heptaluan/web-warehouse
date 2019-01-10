@@ -7,11 +7,11 @@
 
 * `Element` 源码
 
-  * [01、Element 源码解读 -- Checkbox](https://github.com/hanekaoru/WebLearningNotes/blob/master/vue/note/element/01.md)
+  * [Element 源码解读 -- Checkbox](https://github.com/hanekaoru/WebLearningNotes/blob/master/vue/note/element/01.md)
 
 * `Vuex`
 
-  * [01、State，Getter，Mutation，Action](https://github.com/hanekaoru/WebLearningNotes/blob/master/vue/note/vuex/01.md)
+  * [State，Getter，Mutation，Action](https://github.com/hanekaoru/WebLearningNotes/blob/master/vue/note/vuex/01.md)
 
   * 源码相关
 
@@ -29,17 +29,17 @@
 
 * 其他
 
-  * [01、利用 fetch 请求数据](https://github.com/hanekaoru/WebLearningNotes/blob/master/vue/note/other/01.md)
+  * [利用 fetch 请求数据](https://github.com/hanekaoru/WebLearningNotes/blob/master/vue/note/other/01.md)
   
-  * [02、vue 中一些不太常用的知识点](https://github.com/hanekaoru/WebLearningNotes/blob/master/vue/note/other/02.md)
+  * [vue 中一些不太常用的知识点](https://github.com/hanekaoru/WebLearningNotes/blob/master/vue/note/other/02.md)
   
-  * [03、vue 中的 mixin](https://github.com/hanekaoru/WebLearningNotes/blob/master/vue/note/other/03.md)
+  * [vue 中的 mixin](https://github.com/hanekaoru/WebLearningNotes/blob/master/vue/note/other/03.md)
   
-  * [04、在 vue 中使用 jsx](https://github.com/hanekaoru/WebLearningNotes/blob/master/vue/note/other/04.md)
+  * [在 vue 中使用 jsx](https://github.com/hanekaoru/WebLearningNotes/blob/master/vue/note/other/04.md)
   
-  * [05、axios](https://github.com/hanekaoru/WebLearningNotes/blob/master/vue/note/other/05.md)
+  * [axios](https://github.com/hanekaoru/WebLearningNotes/blob/master/vue/note/other/05.md)
   
-    * [axios 中的跨域访问问题](https://github.com/hanekaoru/WebLearningNotes/blob/master/vue/note/other/06.md)
+    * [axios 中的跨域问题](https://github.com/hanekaoru/WebLearningNotes/blob/master/vue/note/other/06.md)
 
 
 

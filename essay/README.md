@@ -93,6 +93,18 @@
 [jQuery 方法集合](https://github.com/hanekaoru/WebLearningNotes/blob/master/essay/js/note/10.md)
 
 
+
+### 笔记
+
+
+[函数的定义](https://github.com/hanekaoru/WebLearningNotes/blob/master/essay/js/blog/01.md)
+
+[this](https://github.com/hanekaoru/WebLearningNotes/blob/master/essay/js/blog/02.md)
+
+[对象](https://github.com/hanekaoru/WebLearningNotes/blob/master/essay/js/blog/03.md)
+
+[继承](https://github.com/hanekaoru/WebLearningNotes/blob/master/essay/js/blog/04.md)
+
 ----
 
 ----

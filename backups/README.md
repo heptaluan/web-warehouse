@@ -44,6 +44,7 @@
 
 [IFC](https://github.com/hanekaoru/WebLearningNotes/blob/master/backups/note/21.md)
 
+[IE 中的 haslayout](https://github.com/hanekaoru/WebLearningNotes/blob/master/backups/note/22.md)
 
 
 

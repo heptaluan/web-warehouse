@@ -46,7 +46,7 @@
 
 [IE 中的 haslayout](https://github.com/hanekaoru/WebLearningNotes/blob/master/backups/note/22.md)
 
-
+[webpack 中的 loader 和 plugin](https://github.com/hanekaoru/WebLearningNotes/blob/master/backups/note/23.md)
 
 
 

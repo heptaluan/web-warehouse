@@ -48,6 +48,8 @@
 
 [webpack 中的 loader 和 plugin](https://github.com/hanekaoru/WebLearningNotes/blob/master/backups/note/23.md)
 
+[HTTP 2.0](https://github.com/hanekaoru/WebLearningNotes/blob/master/backups/note/24.md)
 
+[HTTP 与 TCP](https://github.com/hanekaoru/WebLearningNotes/blob/master/backups/note/25.md)
 
 

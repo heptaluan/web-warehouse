@@ -8,8 +8,9 @@
 
 [react 笔记（上）](https://github.com/hanekaoru/WebLearningNotes/blob/master/backups/react/01.md)
 
-[react 笔记（下）](https://github.com/hanekaoru/WebLearningNotes/blob/master/backups/react/02.md)
+[react 笔记（中）](https://github.com/hanekaoru/WebLearningNotes/blob/master/backups/react/02.md)
 
+[react 笔记（下）](https://github.com/hanekaoru/WebLearningNotes/blob/master/backups/react/03.md)
 
 
 

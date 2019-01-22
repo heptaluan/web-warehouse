@@ -54,6 +54,7 @@
 
 [遍历对象的几种方法](https://github.com/hanekaoru/WebLearningNotes/blob/master/backups/note/26.md)
 
+[事件流中的冒泡与捕获](https://github.com/hanekaoru/WebLearningNotes/blob/master/backups/note/27.md)
 
 
 

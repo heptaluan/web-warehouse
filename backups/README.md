@@ -49,6 +49,8 @@
 
 [Vuex 初始化装载与注入（二）](https://github.com/hanekaoru/WebLearningNotes/blob/master/backups/vue/09.md)
 
+[Vuex 中的 Store（三）](https://github.com/hanekaoru/WebLearningNotes/blob/master/backups/vue/10.md)
+
 
 
 

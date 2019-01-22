@@ -39,8 +39,11 @@
 
 [在 Vue 中使用 jsx](https://github.com/hanekaoru/WebLearningNotes/blob/master/backups/vue/04.md)
 
+[axios](https://github.com/hanekaoru/WebLearningNotes/blob/master/backups/vue/05.md)
 
+[axios 中跨域访问的问题](https://github.com/hanekaoru/WebLearningNotes/blob/master/backups/vue/06.md)
 
+[Vuex 中的 State，Getter，Mutation，Action](https://github.com/hanekaoru/WebLearningNotes/blob/master/backups/vue/07.md)
 
 
 

@@ -14,6 +14,18 @@
 
 [react-router](https://github.com/hanekaoru/WebLearningNotes/blob/master/backups/react/04.md)
 
+[flux、redux 和 react-redux（一）](https://github.com/hanekaoru/WebLearningNotes/blob/master/backups/react/05.md)
+
+[flux、redux 和 react-redux（二）](https://github.com/hanekaoru/WebLearningNotes/blob/master/backups/react/06.md)
+
+[flux、redux 和 react-redux（三）](https://github.com/hanekaoru/WebLearningNotes/blob/master/backups/react/07.md)
+
+[flux、redux 和 react-redux（四）](https://github.com/hanekaoru/WebLearningNotes/blob/master/backups/react/08.md)
+
+[flux、redux 和 react-redux（五）](https://github.com/hanekaoru/WebLearningNotes/blob/master/backups/react/09.md)
+
+[flux、redux 和 react-redux（六）](https://github.com/hanekaoru/WebLearningNotes/blob/master/backups/react/10.md)
+
 
 
 

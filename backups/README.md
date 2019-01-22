@@ -45,7 +45,9 @@
 
 [Vuex 中的 State，Getter，Mutation，Action](https://github.com/hanekaoru/WebLearningNotes/blob/master/backups/vue/07.md)
 
+[Vuex 框架核心流程（一）](https://github.com/hanekaoru/WebLearningNotes/blob/master/backups/vue/08.md)
 
+[Vuex 初始化装载与注入（二）](https://github.com/hanekaoru/WebLearningNotes/blob/master/backups/vue/09.md)
 
 
 

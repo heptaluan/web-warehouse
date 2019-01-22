@@ -51,9 +51,9 @@
 
 [Vuex 中的 Store（三）](https://github.com/hanekaoru/WebLearningNotes/blob/master/backups/vue/10.md)
 
+[installModule, resetStoreVM, plugins（四）](https://github.com/hanekaoru/WebLearningNotes/blob/master/backups/vue/11.md)
 
-
-
+[源码整体汇总（五）](https://github.com/hanekaoru/WebLearningNotes/blob/master/backups/vue/12.md)
 
 
 

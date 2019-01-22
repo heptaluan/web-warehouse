@@ -117,6 +117,7 @@
 
 [事件流中的冒泡与捕获](https://github.com/hanekaoru/WebLearningNotes/blob/master/backups/note/27.md)
 
+[ES6 中的 Class](https://github.com/hanekaoru/WebLearningNotes/blob/master/backups/note/28.md)
 
 
 

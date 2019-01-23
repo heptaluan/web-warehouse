@@ -4,6 +4,13 @@
 
 
 
+## Angular
+
+[数据请求，指令与模块](https://github.com/hanekaoru/WebLearningNotes/blob/master/backups/angular/01.md)
+
+
+
+
 ## React
 
 [react 笔记（上）](https://github.com/hanekaoru/WebLearningNotes/blob/master/backups/react/01.md)

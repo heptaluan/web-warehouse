@@ -8,6 +8,9 @@
 
 [数据请求，指令与模块](https://github.com/hanekaoru/WebLearningNotes/blob/master/backups/angular/01.md)
 
+[Angular 中的表单](https://github.com/hanekaoru/WebLearningNotes/blob/master/backups/angular/02.md)
+
+[Angular 中的一些知识点](https://github.com/hanekaoru/WebLearningNotes/blob/master/backups/angular/03.md)
 
 
 

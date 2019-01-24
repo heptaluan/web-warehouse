@@ -137,7 +137,9 @@
 
 [ES6 中的 Class](https://github.com/hanekaoru/WebLearningNotes/blob/master/backups/note/28.md)
 
+[Windows 下的 MySQL 安装汇总](https://github.com/hanekaoru/WebLearningNotes/blob/master/backups/note/29.md)
 
+[MySQL 基本的增删改查](https://github.com/hanekaoru/WebLearningNotes/blob/master/backups/note/30.md)
 
 
 

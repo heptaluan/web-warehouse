@@ -16,6 +16,7 @@
 
 [rxjs 高阶操作符](https://github.com/hanekaoru/WebLearningNotes/blob/master/backups/angular/05.md)
 
+[Injector](https://github.com/hanekaoru/WebLearningNotes/blob/master/backups/angular/06.md)
 
 
 
@@ -141,7 +142,9 @@
 
 [MySQL 基本的增删改查](https://github.com/hanekaoru/WebLearningNotes/blob/master/backups/note/30.md)
 
+[使用 python 操作数据库](https://github.com/hanekaoru/WebLearningNotes/blob/master/backups/note/31.md)
 
+[关于 flex 取值问题](https://github.com/hanekaoru/WebLearningNotes/blob/master/backups/note/32.md)
 
 
 

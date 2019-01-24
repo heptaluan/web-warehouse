@@ -12,6 +12,14 @@
 
 [Angular 中的一些知识点](https://github.com/hanekaoru/WebLearningNotes/blob/master/backups/angular/03.md)
 
+[rxjs](https://github.com/hanekaoru/WebLearningNotes/blob/master/backups/angular/04.md)
+
+[rxjs 高阶操作符](https://github.com/hanekaoru/WebLearningNotes/blob/master/backups/angular/05.md)
+
+
+
+
+
 
 
 ## React

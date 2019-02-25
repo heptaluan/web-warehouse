@@ -1,17 +1,116 @@
-目录列表
+一些比较常见的面试题，知识点之类的，类似于复习知识大纲
 
 ----
 
 
 ## JavaScript
 
-* [this](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/01.md)
+### [this/new](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/01.md)
 
-* [使用 new 的时候发生了什么](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/02.md)
+`this`
 
-* [Canvas 和 SVG 的区别](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/03.md)
+* 四条绑定规则
 
-* [mouseover 与 mouseenter 的区别](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/04.md)
+  * 默认：在严格模式下绑定到 `undefined`，否则绑定到全局对象
+
+  * 由上下文对象调用？绑定到那个上下文对象
+
+  * 由 `call` 或者 `apply`（或者 `bind`）调用？绑定到指定的对象
+
+  * 由 `new` 调用绑定到新创建的对象
+
+* 优先级
+
+  * 函数是否在 `new` 中调用（`new` 绑定）？如果是的话 `this` 绑定的是新创建的对象
+
+  * 函数是否通过 `call`、`apply`（显式绑定）或者硬绑定调用？如果是的话，`this` 绑定的是指定的对象
+
+  * 函数是否在某个上下文对象中调用（隐式绑定）？如果是的话，`this` 绑定的是那个上下文对象
+
+  * 如果都不是的话，使用默认绑定。如果在严格模式下，就绑定到 `undefined`，否则绑定到全局对象
+
+
+`new`
+
+* 创建（或者说构造）一个全新的对象，可以简单的理解为一个空对象 `{}`
+
+* 这个新对象会被执行 [[原型]] 连接
+
+* 这个新对象会绑定到函数调用的 `this`（简单来说就是将自己的上下文设置为这个 `{}`，即 this 表示为这个对象）
+
+* 如果函数没有返回其他对象，那么 `new` 表达式中的函数调用会自动返回这个新对象
+
+
+
+### [Canvas 和 SVG 的区别](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/03.md)
+
+`SVG`
+  
+* `SVG` 是一种使用 `XML` 描述 `2D` 图形的语言
+
+* `SVG` 基于 `XML`，这意味着 `SVG DOM` 中的每个元素都是可用的，您可以为某个元素附加 `JavaScript` 事件处理器
+
+* 在 `SVG` 中，每个被绘制的图形均被视为对象，如果 `SVG` 对象的属性发生变化，那么浏览器能够自动重现图形
+
+特点：
+
+* 不依赖分辨率
+
+* 支持事件处理器
+
+* 最适合带有大型渲染区域的应用程序（比如谷歌地图）
+
+* 复杂度高会减慢渲染速度（任何过度使用 `DOM` 的应用都不快）
+
+* 不适合游戏应用
+
+`Canvas`
+  
+* `Canvas` 通过 `JavaScript` 来绘制 `2D` 图形
+
+* `Canvas` 是逐像素进行渲染的
+
+* 在 `canvas` 中，一旦图形被绘制完成，它就不会继续得到浏览器的关注，如果其位置发生变化，那么整个场景也需要重新绘制，包括任何或许已被图形覆盖的对象
+
+特点：
+
+* 依赖分辨率
+
+* 不支持事件处理器
+
+* 弱的文本渲染能力
+
+* 能够以 `.png` 或 `.jpg` 格式保存结果图像
+
+* 最适合图像密集型的游戏，其中的许多对象会被频繁重绘
+
+
+### [mouseover 与 mouseenter 的区别](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/04.md)
+
+* `mouseover` 事件会发现冒泡行为
+
+* `mouseenter` 事件则不会冒泡
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+----
+
 
 * [浏览器中的各种长度](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/05.md) 
 

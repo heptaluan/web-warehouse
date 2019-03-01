@@ -1,302 +1,181 @@
-一些比较常见的面试题，知识点之类的，类似于复习知识大纲
+一些比较常见的面试题，知识点之类的，类似于知识复习大纲
 
 ----
 
 
 ## JavaScript
 
-### [this/new](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/01.md)
 
-`this`
+#### 工具函数（方法）
 
-* 四条绑定规则
+* [随笔（一些小知识点）](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/essay/00.md)
 
-  * 默认：在严格模式下绑定到 `undefined`，否则绑定到全局对象
+* [第一部分](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/essay/01.md)
 
-  * 由上下文对象调用？绑定到那个上下文对象
+* [第二部分](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/essay/02.md)
 
-  * 由 `call` 或者 `apply`（或者 `bind`）调用？绑定到指定的对象
+* [一份进阶的面试题](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/essay/03.md)
 
-  * 由 `new` 调用绑定到新创建的对象
 
-* 优先级
+#### 2019
 
-  * 函数是否在 `new` 中调用（`new` 绑定）？如果是的话 `this` 绑定的是新创建的对象
 
-  * 函数是否通过 `call`、`apply`（显式绑定）或者硬绑定调用？如果是的话，`this` 绑定的是指定的对象
+* [JavaScript 中的命名空间，变量声明提升，作用域和预编译](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/2019/01.md)
 
-  * 函数是否在某个上下文对象中调用（隐式绑定）？如果是的话，`this` 绑定的是那个上下文对象
+* [JSON.parse() && JSON.stringify()](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/2019/02.md)
 
-  * 如果都不是的话，使用默认绑定。如果在严格模式下，就绑定到 `undefined`，否则绑定到全局对象
+* [setTimeout 与 Promise](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/2019/03.md)
 
+* [clientWidth, offsetWidth, scrollWidth](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/2019/04.md)
 
-`new`
+* [bind 的定义与实现](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/2019/05.md)
 
-* 创建（或者说构造）一个全新的对象，可以简单的理解为一个空对象 `{}`
+* [Angular 中路由传递参数的几种方式](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/2019/06.md)
 
-* 这个新对象会被执行 [[原型]] 连接
+* [数组的几个常用方法分析及内部实现原理](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/2019/07.md)
 
-* 这个新对象会绑定到函数调用的 `this`（简单来说就是将自己的上下文设置为这个 `{}`，即 this 表示为这个对象）
+* [typeOf/hasOwnProperty/isPrototypeOf/instanceof](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/2019/08.md)
 
-* 如果函数没有返回其他对象，那么 `new` 表达式中的函数调用会自动返回这个新对象
+* [运算符优先级](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/2019/09.md)
 
+* [JavaScript 中的数据绑定](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/2019/10.md)
 
 
-### [Canvas 和 SVG 的区别](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/03.md)
+#### 2018
 
-`SVG`
-  
-* `SVG` 是一种使用 `XML` 描述 `2D` 图形的语言
+* [this/new](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/2018/01.md)
 
-* `SVG` 基于 `XML`，这意味着 `SVG DOM` 中的每个元素都是可用的，您可以为某个元素附加 `JavaScript` 事件处理器
+* [什么是原型链](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/2018/18.md) 
 
-* 在 `SVG` 中，每个被绘制的图形均被视为对象，如果 `SVG` 对象的属性发生变化，那么浏览器能够自动重现图形
+* [什么是类式和原型继承，两者有什么区别](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/2018/19.md) 
 
-特点：
+* [深拷贝和浅拷贝](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/2018/20.md) 
 
-* 不依赖分辨率
+* [mixin](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/2018/21.md) 
 
-* 支持事件处理器
+* [Canvas 和 SVG 的区别](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/2018/03.md)
 
-* 最适合带有大型渲染区域的应用程序（比如谷歌地图）
+* [mouseover 与 mouseenter 的区别](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/2018/04.md)
 
-* 复杂度高会减慢渲染速度（任何过度使用 `DOM` 的应用都不快）
+* [浏览器中的各种长度](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/2018/05.md) 
 
-* 不适合游戏应用
+* [parseInt 用法](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/2018/06.md) 
 
-`Canvas`
-  
-* `Canvas` 通过 `JavaScript` 来绘制 `2D` 图形
+* [sessionStorage，localStorage 和 cookie 的区别](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/2018/07.md) 
 
-* `Canvas` 是逐像素进行渲染的
+* [iframe 优缺点](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/2018/08.md) 
 
-* 在 `canvas` 中，一旦图形被绘制完成，它就不会继续得到浏览器的关注，如果其位置发生变化，那么整个场景也需要重新绘制，包括任何或许已被图形覆盖的对象
+* [Date 对象](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/2018/09.md) 
 
-特点：
+* [ES6 中的 class](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/2018/10.md) 
 
-* 依赖分辨率
+* [map/reduce](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/2018/11.md) 
 
-* 不支持事件处理器
+* [call 和 apply 哪个速度更快一些](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/2018/12.md) 
 
-* 弱的文本渲染能力
+* [JavaScript 中的事件模型](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/2018/13.md) 
 
-* 能够以 `.png` 或 `.jpg` 格式保存结果图像
+* [JavaScript 中常用的设计模式](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/2018/14.md) 
 
-* 最适合图像密集型的游戏，其中的许多对象会被频繁重绘
+* [JavaScript 中节点相关属性](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/2018/15.md) 
 
+* [事件流，冒泡与捕获](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/2018/16.md) 
 
-### [mouseover 与 mouseenter 的区别](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/04.md)
+* [函数的 length 属性与 callee](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/2018/17.md) 
 
-* `mouseover` 事件会发现冒泡行为
+* [ajax，Promise，xhr2，同源策略与跨域，GET，POST](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/2018/39.md)
 
-* `mouseenter` 事件则不会冒泡
+* [promise，rxjs](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/2018/40.md)
 
+* [移动端 click 事件 300ms 的延迟响应，Zepto 点透](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/2018/41.md) 
 
+* [字符编码](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/2018/42.md) 
 
+* [垃圾回收机制](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/2018/43.md) 
 
+* [Git 和 SVN](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/2018/44.md) 
 
+* [原型和闭包](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/2018/note/01.md)
 
+* [ES6 的一些新方法](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/2018/note/02.md)
 
+* [Promise](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/2018/note/05.md)
 
+* [变量的赋值与深浅拷贝](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/2018/note/06.md)
 
+* [html5 中的 FileReader](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/2018/note/07.md)
 
+* [正则中的 test() 与 全局选项 /g](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/2018/02.md)
 
+* [函数的定义](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/2018/45.md)
 
+* [对象](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/2018/46.md)
 
+* [继承](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/2018/47.md)
 
+#### jQuery
 
+* [$.each 和 $(selector).each() 的区别](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/jquery/00.md)
 
+* [jQuery 的 DOM 操作原理](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/jquery/01.md)
 
+* [jQuery 中的选择器](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/jquery/02.md)
 
+* [return this.each()，this 和 $(this)，$.fn.each() 和 Array.prototype.forEach()](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/jquery/03.md)
 
-----
+* [jQuery 中的 deferred 对象](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/jquery/04.md)
 
+* [使用原生 JavaScript 来替代 jQuery](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/jquery/05.md)
 
-* [浏览器中的各种长度](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/05.md) 
+* [jQuery 源码总体架构](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/jquery/06.md)
 
-* [parseInt 用法](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/06.md) 
+* [jQuery 中的静态属性和方法](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/jquery/07.md)
 
-* [sessionStorage，localStorage 和 cookie 的区别](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/07.md) 
-
-* [iframe 优缺点](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/08.md) 
-
-* [Date 对象](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/09.md) 
-
-* [ES6 中的 class](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/10.md) 
-
-* [map/reduce](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/11.md) 
-
-* [call 和 apply 哪个速度更快一些](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/12.md) 
-
-* [JavaScript 中的事件模型](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/13.md) 
-
-* [JavaScript 中常用的设计模式](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/14.md) 
-
-* [JavaScript 中节点相关属性](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/15.md) 
-
-* [事件流，冒泡与捕获](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/16.md) 
-
-* [函数的 length 属性与 callee](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/17.md) 
-
-
-
-#### 类和继承
-
-* [什么是原型链](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/18.md) 
-
-* [什么是类式和原型继承，两者有什么区别](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/19.md) 
-
-* [深拷贝和浅拷贝](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/20.md) 
-
-* [mixin](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/21.md) 
-
+* [jQuery 方法集合](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/jquery/08.md)
 
 
 #### 字符串，数组，对象和常用函数
 
-* [手写 once/bind/debouce/throttle 函数](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/22.md) 
+* [手写 once/bind/debouce/throttle 函数](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/2018/22.md) 
 
-* [实现拖拽的功能（PC 端和移动端）](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/23.md) 
+* [实现拖拽的功能（PC 端和移动端）](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/2018/23.md) 
 
-* [实现一个解析 url 的方法](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/24.md) 
+* [实现一个解析 url 的方法](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/2018/24.md) 
 
-* [DOM操作 - 在有序（无序）列表中插入 3 个，300 个，3000 个 li，并绑定事件](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/25.md) 
+* [DOM操作 - 在有序（无序）列表中插入 3 个，300 个，3000 个 li，并绑定事件](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/2018/25.md) 
 
-* [生成一个 20 X 12 的表格，并且设定指定格子的背景颜色](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/26.md) 
+* [生成一个 20 X 12 的表格，并且设定指定格子的背景颜色](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/2018/26.md) 
 
-* [如何监听 对象/数组 属性改变](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/27.md) 
+* [如何监听 对象/数组 属性改变](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/2018/27.md) 
 
-* [常见的数组排序方式](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/28.md) 
+* [常见的数组排序方式](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/2018/28.md) 
 
-* [数组去重](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/29.md) 
+* [数组去重](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/2018/29.md) 
 
-* [字符串去重](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/30.md) 
+* [字符串去重](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/2018/30.md) 
 
-* [数组的几种复制方法](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/31.md) 
+* [数组的几种复制方法](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/2018/31.md) 
 
-* [数组操作 - 生成一个 m 长度,内容都为 n 的数组](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/32.md) 
+* [数组操作 - 生成一个 m 长度,内容都为 n 的数组](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/2018/32.md) 
 
-* [生成 20 个 40 - 80 之间的随机数，并 排序/乱序](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/33.md) 
+* [生成 20 个 40 - 80 之间的随机数，并 排序/乱序](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/2018/33.md) 
 
-* [常见的字符串算法](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/34.md) 
+* [常见的字符串算法（短横变驼峰，千位分隔符）](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/2018/34.md) 
 
-  * 短横变驼峰
+* [判断变量类型，如何判断变量是函数](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/2018/35.md) 
 
-  * 千位分隔符
+* [怎么遍历对象（5 种方法）](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/2018/36.md)
 
-* [判断变量类型，如何判断变量是函数](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/35.md) 
+* [数组的方法和其返回值](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/2018/37.md) 
 
-* [怎么遍历对象（5 种方法）](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/36.md)
-
-* [数组的方法和其返回值](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/37.md) 
-
-* [取两个数组的差集](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/38.md) 
-
-
-
-
-
-#### ajax 和 promise
-
-* [ajax](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/39.md)
-
-  * 原生 `ajax` 写法
-
-  * `ajax` 改为 `Promise`
-
-  * `ajax` 中 `readyState` 的取值有哪些，分别有什么含义
-
-  * `xhr2`
-
-  * 同源策略与跨域
-  
-    * 同源策略
-    
-    * `CORS`
-    
-    * `document.domain`
-    
-    * `window.name`
-    
-    * `jsonp`
-
-  * `GET` 与 `POST` 区别
-
-  * `xhr` 的 `withCredentials` 属性
-
-* [promise](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/40.md)
-
-  * 什么是 `promise`
-
-  * `promise` 和 `setTimeout` 执行顺序
-
-  * 进阶 `rxjs`
-
-
-
-
-#### 移动端
-
-* [移动端 click 事件 300ms 的延迟响应](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/41.md) 
-
-  * `click` 事件 `300ms` 的延迟响应
-
-  * 引申出的 `Zepto` 点透问题
-
-
-
-
-#### 其他相关知识点
-
-* [字符编码](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/42.md) 
-
-* [垃圾回收机制](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/43.md) 
-
-* [Git 和 SVN](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/44.md) 
-
-
-
-
-
-
-
-
-
-
-## jQuery
-
-* [jQuery](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/jquery/00.md)
-
-  * `$.each` 和 `$(selector).each()` 的区别
-
-  * `jQuery` 插件中的 `return this.each()`
-
-  * `jQuery` 中的 `this` 和 `$(this)`
-
-  * `jQuery` 的链式操作是如何实现的
-
-  * `$.fn.each()` 和 `Array.prototype.forEach()`
-
-* [jQuery 的 DOM 操作原理](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/01.md)
-
-* [jQuery 中的选择器](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/02.md)
-
-
-
-
-
+* [取两个数组的差集](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/js/2018/38.md) 
 
 
 
 
 ## MVC
 
-* [MVC](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/mvc/00.md)
-
-  * 什么是 `MVC`，使用 `MVC` 的优缺点
-
-  * `Vue`/`Angular`/`React` 区别
-
+* [MVC，Vue/Angular/React 区别](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/mvc/00.md)
 
 * [React](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/mvc/react/00.md)
 
@@ -434,29 +313,64 @@
 
 ## CSS
 
-* [sass特性](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/css/01.md)
+#### 2019
 
-* [Bootstrap 中的栅格系统](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/css/02.md)
+* [样式来源与层叠规则](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/css/2019/样式来源与层叠规则.md)
 
-* [响应式布局](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/css/03.md)
+* [浏览器默认样式](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/css/2019/浏览器默认样式.md)
 
-* [box-sizing 有哪些取值，分别有什么含义](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/css/04.md)
+* [选择器优先级和盒子模型](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/css/2019/选择器优先级和盒子模型.md)
 
-* [html 中的 DOCTYPE](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/css/05.md)
+* [float & display & position](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/css/2019/float、display和position.md)
 
-* [css 中的原生变量](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/css/06.md)
+* [FC相关知识汇总](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/css/2019/FC相关知识汇总.md)
 
-* [em 与 rem 的区别](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/css/07.md)
+  * [BFC](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/css/2019/BFC.md)
 
-* [css 垂直居中](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/css/08.md)
+  * [IFC](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/css/2019/IFC.md)
 
-* [css3 中的 calc()](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/css/09.md)
+  * [IE 中的 haslayout](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/css/2019/haslayout.md)
 
-* [absolute 的 containing block（容器块） 计算方式跟正常流有什么不同？](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/css/10.md)
+* [line-height](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/css/2019/line-height.md)
 
-* [IE 中的 css hack](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/css/11.md)
+* [vertical-align](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/css/2019/vertical-align.md)
 
-* [html 和 body 的区别](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/css/12.md)
+* [margin:0 auto 与 text-align: center](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/css/2019/水平居中.md)
+
+* [Flex](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/css/2019/Flex.md)
+
+* [多行溢出隐藏](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/css/2019/多行溢出隐藏.md)
+
+* [基础部分（变量，注释，@import，嵌套，变量与继承）](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/css/2019/01.md)
+
+* [进阶部分（@at-root，mixin，条件判断及循环）](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/css/2019/02.md)
+
+
+#### 2018
+
+* [盒模型，box-sizing 有哪些取值，分别有什么含义](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/css/2018/04.md)
+
+* [sass特性](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/css/2018/01.md)
+
+* [Bootstrap 中的栅格系统](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/css/2018/02.md)
+
+* [响应式布局](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/css/2018/03.md)
+
+* [html 中的 DOCTYPE](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/css/2018/05.md)
+
+* [css 中的原生变量](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/css/2018/06.md)
+
+* [em 与 rem 的区别](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/css/2018/07.md)
+
+* [css 垂直居中](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/css/2018/08.md)
+
+* [css3 中的 calc()](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/css/2018/09.md)
+
+* [absolute 的 containing block（容器块） 计算方式跟正常流有什么不同？](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/css/2018/10.md)
+
+* [IE 中的 css hack](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/css/2018/11.md)
+
+* [html 和 body 的区别](https://github.com/hanekaoru/WebLearningNotes/blob/master/interview/css/2018/12.md)
 
 
 

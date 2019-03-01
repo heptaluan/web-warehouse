@@ -92,8 +92,6 @@
 
 [slice() 和 splice()](https://github.com/hanekaoru/WebLearningNotes/blob/master/backups/note/05.md)
 
-[jQuery 中的 deferred 对象](https://github.com/hanekaoru/WebLearningNotes/blob/master/backups/note/06.md)
-
 [一些 ES6 的知识点](https://github.com/hanekaoru/WebLearningNotes/blob/master/backups/note/07.md)
 
 [Underscore](https://github.com/hanekaoru/WebLearningNotes/blob/master/backups/note/08.md)

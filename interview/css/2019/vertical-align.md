@@ -36,7 +36,7 @@ inherit         // 从父元素继承属性的值
 
 * 默认对齐方式为 ```baseline```，数量值均是相对于 ```baseline``` 而言
 
-* 仅对 ```inline-level``` 和 ```table-cell``` 元素有效（详细见 [IFC](https://github.com/hanekaoru/WebLearningNotes/blob/master/css/IFC.md)）
+* 仅对 ```inline-level``` 和 ```table-cell``` 元素有效（详细见 [IFC](https://github.com/heptaluan/blog/blob/master/css/IFC.md)）
 
 有的时候会遇到 ```inline-block``` 底部会有空隙的问题
 

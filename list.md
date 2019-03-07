@@ -392,9 +392,9 @@
 
 #### mysql
 
-~~[MYSQL 数据库](https://github.com/hanekaoru/WebLearningNotes/blob/master/mysql/README.md)~~ 看了前五章，数据类型部分参考了下面这个
+~~[MYSQL 数据库](https://github.com/heptaluan/blog/blob/master/mysql/README.md)~~ 看了前五章，数据类型部分参考了下面这个
 
-~~[MYSQL从入门到精通](https://github.com/hanekaoru/WebLearningNotes/blob/master/mysql/README.md)~~ 看了前七节，后续内容比如表约束，高级查询，函数，触发器，权限管理等，等以后需要的时候在来继续深入学习
+~~[MYSQL从入门到精通](https://github.com/heptaluan/blog/blob/master/mysql/README.md)~~ 看了前七节，后续内容比如表约束，高级查询，函数，触发器，权限管理等，等以后需要的时候在来继续深入学习
 
 
 #### mongodb

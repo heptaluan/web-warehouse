@@ -9,7 +9,7 @@
 
 预览
 
-![city](https://github.com/hanekaoru/WebLearningNotes/blob/master/js/demo/H5-Music-Player/mp3.png)
+![city](https://github.com/heptaluan/blog/blob/master/js/demo/H5-Music-Player/mp3.png)
 
 
 ### City-Linkage
@@ -18,7 +18,7 @@
 
 预览
 
-![city](https://github.com/hanekaoru/WebLearningNotes/blob/master/js/demo/City-Linkage/city.png)
+![city](https://github.com/heptaluan/blog/blob/master/js/demo/City-Linkage/city.png)
 
 
 ### Calendar-Plugin
@@ -29,10 +29,10 @@
 
 网页版预览
 
-![Web](https://github.com/hanekaoru/WebLearningNotes/blob/master/js/demo/Calendar-Plugin/Web.png)
+![Web](https://github.com/heptaluan/blog/blob/master/js/demo/Calendar-Plugin/Web.png)
 
 
 移动端预览
 
-![App](https://github.com/hanekaoru/WebLearningNotes/blob/master/js/demo/Calendar-Plugin/App.png)
+![App](https://github.com/heptaluan/blog/blob/master/js/demo/Calendar-Plugin/App.png)
 

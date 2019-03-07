@@ -6,4 +6,4 @@
 
 发送后刷新 ```http://localhost:3000/api/products``` 即可 
 
-![img](https://raw.githubusercontent.com/hanekaoru/koa-demo/master/koa-rest/rest.png)
+![img](https://raw.githubusercontent.com/heptaluan/koa-demo/master/koa-rest/rest.png)

@@ -2,4 +2,4 @@
 
 ----
 
-[WebSocket，Socket.IO，Angular 中使用 WebSocket](https://github.com/hanekaoru/WebLearningNotes/blob/master/websocket/note/01.md)
+[WebSocket，Socket.IO，Angular 中使用 WebSocket](https://github.com/heptaluan/blog/blob/master/websocket/note/01.md)

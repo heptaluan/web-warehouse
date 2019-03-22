@@ -8,13 +8,11 @@
 
 #### 工具函数（方法）
 
-* [随笔（一些小知识点）](https://github.com/heptaluan/blog/blob/master/interview/js/essay/00.md)
+* [第一部分](https://github.com/heptaluan/blog/blob/master/interview/js/note/09.md)
 
-* [第一部分](https://github.com/heptaluan/blog/blob/master/interview/js/essay/01.md)
+* [第二部分](https://github.com/heptaluan/blog/blob/master/interview/js/note/10.md)
 
-* [第二部分](https://github.com/heptaluan/blog/blob/master/interview/js/essay/02.md)
-
-* [一份进阶的面试题](https://github.com/heptaluan/blog/blob/master/interview/js/essay/03.md)
+* [一份进阶的面试题](https://github.com/heptaluan/blog/blob/master/interview/js/note/11.md)
 
 
 #### 2019
@@ -423,3 +421,110 @@
 
 * [JavaScript 中的栈和堆](https://github.com/heptaluan/blog/blob/master/interview/other/04.md)
 
+
+
+
+
+
+----
+
+----
+
+
+## [一些小知识点](https://github.com/heptaluan/blog/blob/master/interview/js/note/00.md)
+
+#### JavaScript
+
+* [JavaScript 获得随机 unicode 字符](https://github.com/heptaluan/blog/blob/master/interview/js/note/00.md#javascript-%E8%8E%B7%E5%BE%97%E9%9A%8F%E6%9C%BA-unicode-%E5%AD%97%E7%AC%A6)
+
+* [call 和 apply 的第一个参数](https://github.com/heptaluan/blog/blob/master/interview/js/note/00.md#%E8%AF%B4%E4%B8%8B-call-%E5%92%8C-apply-%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%8F%82%E6%95%B0)
+
+* [bind 方法的简单实现](https://github.com/heptaluan/blog/blob/master/interview/js/note/00.md#bind-%E6%96%B9%E6%B3%95%E7%9A%84%E7%AE%80%E5%8D%95%E5%AE%9E%E7%8E%B0)
+
+* [getElementsByClassName 方法实现](https://github.com/heptaluan/blog/blob/master/interview/js/note/00.md#getelementsbyclassname-%E6%96%B9%E6%B3%95%E5%AE%9E%E7%8E%B0)
+
+* [判断是否是数组 isArray](https://github.com/heptaluan/blog/blob/master/interview/js/note/00.md#%E5%88%A4%E6%96%AD%E6%98%AF%E5%90%A6%E6%98%AF%E6%95%B0%E7%BB%84-isarray)
+
+* [提取数字中的整数部分](https://github.com/heptaluan/blog/blob/master/interview/js/note/00.md#%E6%8F%90%E5%8F%96%E6%95%B0%E5%AD%97%E4%B8%AD%E7%9A%84%E6%95%B4%E6%95%B0%E9%83%A8%E5%88%86)
+
+* [从请求的异步回调函数中取值的解决办法](https://github.com/heptaluan/blog/blob/master/interview/js/note/00.md#%E4%BB%8E%E8%AF%B7%E6%B1%82%E7%9A%84%E5%BC%82%E6%AD%A5%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0%E4%B8%AD%E5%8F%96%E5%80%BC%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95)
+
+* [实现一个函数 clone，可以对 JavaScript 中的 5 种主要的数据类型（包括 Number、String、Object、Array、Boolean）进行值复制](https://github.com/heptaluan/blog/blob/master/interview/js/note/00.md#%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E5%87%BD%E6%95%B0-clone%E5%8F%AF%E4%BB%A5%E5%AF%B9-javascript-%E4%B8%AD%E7%9A%84-5-%E7%A7%8D%E4%B8%BB%E8%A6%81%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%8C%85%E6%8B%AC-numberstringobjectarrayboolean%E8%BF%9B%E8%A1%8C%E5%80%BC%E5%A4%8D%E5%88%B6)
+
+* [深度克隆](https://github.com/heptaluan/blog/blob/master/interview/js/note/00.md#%E6%B7%B1%E5%BA%A6%E5%85%8B%E9%9A%86)
+
+* [面向对象的五大基本原则](https://github.com/heptaluan/blog/blob/master/interview/js/note/00.md#%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%E4%BA%94%E5%A4%A7%E5%9F%BA%E6%9C%AC%E5%8E%9F%E5%88%99)
+
+* [常用设计模式的实现思路](https://github.com/heptaluan/blog/blob/master/interview/js/note/00.md#%E5%B8%B8%E7%94%A8%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E7%9A%84%E5%AE%9E%E7%8E%B0%E6%80%9D%E8%B7%AF)
+
+* [JavaScript 异步加载方案](https://github.com/heptaluan/blog/blob/master/interview/js/note/00.md#javascript-%E5%BC%82%E6%AD%A5%E5%8A%A0%E8%BD%BD%E6%96%B9%E6%A1%88)
+
+* [简易事件模型](https://github.com/heptaluan/blog/blob/master/interview/js/note/00.md#%E7%AE%80%E6%98%93%E4%BA%8B%E4%BB%B6%E6%A8%A1%E5%9E%8B)
+
+* [关于 'use strict'](https://github.com/heptaluan/blog/blob/master/interview/js/note/00.md#%E5%85%B3%E4%BA%8E-use-strict)
+
+* [检测是否有元素被隐藏](https://github.com/heptaluan/blog/blob/master/interview/js/note/00.md#%E6%A3%80%E6%B5%8B%E6%98%AF%E5%90%A6%E6%9C%89%E5%85%83%E7%B4%A0%E8%A2%AB%E9%9A%90%E8%97%8F)
+
+* [鼠标长按事件](https://github.com/heptaluan/blog/blob/master/interview/js/note/00.md#%E9%BC%A0%E6%A0%87%E9%95%BF%E6%8C%89%E4%BA%8B%E4%BB%B6)
+
+* [如何判断一个对象是否为空](https://github.com/heptaluan/blog/blob/master/interview/js/note/00.md#%E5%A6%82%E4%BD%95%E5%88%A4%E6%96%AD%E4%B8%80%E4%B8%AA%E5%AF%B9%E8%B1%A1%E6%98%AF%E5%90%A6%E4%B8%BA%E7%A9%BA)
+
+* [生成 [0, 1, 2, 3 ... N - 1] 的数组](https://github.com/heptaluan/blog/blob/master/interview/js/note/00.md#%E7%94%9F%E6%88%90-0-1-2-3--n---1-%E7%9A%84%E6%95%B0%E7%BB%84)
+
+* [找出数字数组中最大的元素](https://github.com/heptaluan/blog/blob/master/interview/js/note/00.md#%E6%89%BE%E5%87%BA%E6%95%B0%E5%AD%97%E6%95%B0%E7%BB%84%E4%B8%AD%E6%9C%80%E5%A4%A7%E7%9A%84%E5%85%83%E7%B4%A0)
+
+* [转化一个数字数组为 function 数组（每个 function 都弹出相应的数字）](https://github.com/heptaluan/blog/blob/master/interview/js/note/00.md#%E8%BD%AC%E5%8C%96%E4%B8%80%E4%B8%AA%E6%95%B0%E5%AD%97%E6%95%B0%E7%BB%84%E4%B8%BA-function-%E6%95%B0%E7%BB%84%E6%AF%8F%E4%B8%AA-function-%E9%83%BD%E5%BC%B9%E5%87%BA%E7%9B%B8%E5%BA%94%E7%9A%84%E6%95%B0%E5%AD%97)
+
+* [给 object 数组进行排序（排序条件是每个元素对象的属性个数）](https://github.com/heptaluan/blog/blob/master/interview/js/note/00.md#%E7%BB%99-object-%E6%95%B0%E7%BB%84%E8%BF%9B%E8%A1%8C%E6%8E%92%E5%BA%8F%E6%8E%92%E5%BA%8F%E6%9D%A1%E4%BB%B6%E6%98%AF%E6%AF%8F%E4%B8%AA%E5%85%83%E7%B4%A0%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%B1%9E%E6%80%A7%E4%B8%AA%E6%95%B0)
+
+* [打印 Fibonacci 数（不使用全局变量）](https://github.com/heptaluan/blog/blob/master/interview/js/note/00.md#%E6%89%93%E5%8D%B0-fibonacci-%E6%95%B0%E4%B8%8D%E4%BD%BF%E7%94%A8%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F)
+
+* [实现如下语法的功能 var a = (5).plus(3).minus(6);](https://github.com/heptaluan/blog/blob/master/interview/js/note/00.md#%E5%AE%9E%E7%8E%B0%E5%A6%82%E4%B8%8B%E8%AF%AD%E6%B3%95%E7%9A%84%E5%8A%9F%E8%83%BD-var-a--5plus3minus6)
+
+* [实现如下语法的功能 var a = add(2)(3)(4);](https://github.com/heptaluan/blog/blob/master/interview/js/note/00.md#%E5%AE%9E%E7%8E%B0%E5%A6%82%E4%B8%8B%E8%AF%AD%E6%B3%95%E7%9A%84%E5%8A%9F%E8%83%BD-var-a--add234)
+
+* [如何快速判断 DOM 元素位于 viewport 以外](https://github.com/heptaluan/blog/blob/master/interview/js/note/00.md#%E5%A6%82%E4%BD%95%E5%BF%AB%E9%80%9F%E5%88%A4%E6%96%AD-dom-%E5%85%83%E7%B4%A0%E4%BD%8D%E4%BA%8E-viewport-%E4%BB%A5%E5%A4%96)
+
+
+
+
+#### 正则
+
+* [去除所有的 html](https://github.com/heptaluan/blog/blob/master/interview/js/note/00.md#%E5%8E%BB%E9%99%A4%E6%89%80%E6%9C%89%E7%9A%84-html)
+
+* [去除空格](https://github.com/heptaluan/blog/blob/master/interview/js/note/00.md#%E5%8E%BB%E9%99%A4%E7%A9%BA%E6%A0%BC)
+
+* [判断输入的是否为数字](https://github.com/heptaluan/blog/blob/master/interview/js/note/00.md#%E5%88%A4%E6%96%AD%E8%BE%93%E5%85%A5%E7%9A%84%E6%98%AF%E5%90%A6%E4%B8%BA%E6%95%B0%E5%AD%97)
+
+* [取括号中的数值](https://github.com/heptaluan/blog/blob/master/interview/js/note/00.md#%E5%8F%96%E6%8B%AC%E5%8F%B7%E4%B8%AD%E7%9A%84%E6%95%B0%E5%80%BC)
+
+* [千位分隔符（整数）](https://github.com/heptaluan/blog/blob/master/interview/js/note/00.md#%E5%8D%83%E4%BD%8D%E5%88%86%E9%9A%94%E7%AC%A6%E6%95%B4%E6%95%B0)
+
+
+#### CSS
+
+* [如何检测改浏览器是否支持某个 CSS3 的特性](https://github.com/heptaluan/blog/blob/master/interview/js/note/00.md#%E5%A6%82%E4%BD%95%E6%A3%80%E6%B5%8B%E6%94%B9%E6%B5%8F%E8%A7%88%E5%99%A8%E6%98%AF%E5%90%A6%E6%94%AF%E6%8C%81%E6%9F%90%E4%B8%AA-css3-%E7%9A%84%E7%89%B9%E6%80%A7)
+
+* [边框外发光](https://github.com/heptaluan/blog/blob/master/interview/js/note/00.md#%E8%BE%B9%E6%A1%86%E5%A4%96%E5%8F%91%E5%85%89)
+
+* [移动端全屏背景](https://github.com/heptaluan/blog/blob/master/interview/js/note/00.md#%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%85%A8%E5%B1%8F%E8%83%8C%E6%99%AF)
+
+* [移动端滑动卡顿](https://github.com/heptaluan/blog/blob/master/interview/js/note/00.md#%E7%A7%BB%E5%8A%A8%E7%AB%AF%E6%BB%91%E5%8A%A8%E5%8D%A1%E9%A1%BF)
+
+* [line-height:150% 和 line-height:1.5 的区别](https://github.com/heptaluan/blog/blob/master/interview/js/note/00.md#line-height150-%E5%92%8C-line-height15-%E7%9A%84%E5%8C%BA%E5%88%AB)
+
+* [移动端原生控件样式 -webkit-appearance](https://github.com/heptaluan/blog/blob/master/interview/js/note/00.md#%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%8E%9F%E7%94%9F%E6%8E%A7%E4%BB%B6%E6%A0%B7%E5%BC%8F--webkit-appearance)
+
+* [清除选中样式](https://github.com/heptaluan/blog/blob/master/interview/js/note/00.md#%E6%B8%85%E9%99%A4%E9%80%89%E4%B8%AD%E6%A0%B7%E5%BC%8F)
+
+* [火狐专有 hack](https://github.com/heptaluan/blog/blob/master/interview/js/note/00.md#%E7%81%AB%E7%8B%90%E4%B8%93%E6%9C%89hack)
+
+* [link 和 @import 的区别](https://github.com/heptaluan/blog/blob/master/interview/js/note/00.md#link-%E5%92%8C-import-%E7%9A%84%E5%8C%BA%E5%88%AB)
+
+* [IE 和 FireFox 之间常用兼容方法](https://github.com/heptaluan/blog/blob/master/interview/js/note/00.md#ie-%E5%92%8C-firefox-%E4%B9%8B%E9%97%B4%E5%B8%B8%E7%94%A8%E5%85%BC%E5%AE%B9%E6%96%B9%E6%B3%95)
+
+* [JavaScript 判断滚动条方向](https://github.com/heptaluan/blog/blob/master/interview/js/note/00.md#javascript-%E5%88%A4%E6%96%AD%E6%BB%9A%E5%8A%A8%E6%9D%A1%E6%96%B9%E5%90%91)
+
+* [setTimeout(function(){}, 0)](https://github.com/heptaluan/blog/blob/master/interview/js/note/00.md#settimeoutfunction-0)
+
+* [如何判断鼠标滚动方向和绑定鼠标滚轮事件](https://github.com/heptaluan/blog/blob/master/interview/js/note/00.md#%E5%A6%82%E4%BD%95%E5%88%A4%E6%96%AD%E9%BC%A0%E6%A0%87%E6%BB%9A%E5%8A%A8%E6%96%B9%E5%90%91%E5%92%8C%E7%BB%91%E5%AE%9A%E9%BC%A0%E6%A0%87%E6%BB%9A%E8%BD%AE%E4%BA%8B%E4%BB%B6)

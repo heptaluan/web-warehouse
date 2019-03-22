@@ -346,9 +346,7 @@
 
 #### 2018
 
-* [盒模型，box-sizing 有哪些取值，分别有什么含义](https://github.com/heptaluan/blog/blob/master/interview/css/2018/04.md)
-
-* [sass特性](https://github.com/heptaluan/blog/blob/master/interview/css/2018/01.md)
+* [盒模型](https://github.com/heptaluan/blog/blob/master/interview/css/2018/04.md)
 
 * [Bootstrap 中的栅格系统](https://github.com/heptaluan/blog/blob/master/interview/css/2018/02.md)
 
@@ -485,6 +483,27 @@
 
 * [如何快速判断 DOM 元素位于 viewport 以外](https://github.com/heptaluan/blog/blob/master/interview/js/note/00.md#%E5%A6%82%E4%BD%95%E5%BF%AB%E9%80%9F%E5%88%A4%E6%96%AD-dom-%E5%85%83%E7%B4%A0%E4%BD%8D%E4%BA%8E-viewport-%E4%BB%A5%E5%A4%96)
 
+* [检测对象改变的几种方式](https://github.com/heptaluan/blog/blob/master/interview/js/note/00.md#%E6%A3%80%E6%B5%8B%E5%AF%B9%E8%B1%A1%E6%94%B9%E5%8F%98%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E5%BC%8F)
+
+* [使用 filter 确保 Observable 当中流中的值不为空](https://github.com/heptaluan/blog/blob/master/interview/js/note/00.md#%E4%BD%BF%E7%94%A8-filter-%E7%A1%AE%E4%BF%9D-observable-%E5%BD%93%E4%B8%AD%E6%B5%81%E4%B8%AD%E7%9A%84%E5%80%BC%E4%B8%8D%E4%B8%BA%E7%A9%BA)
+
+* [将数组转为字典对象](https://github.com/heptaluan/blog/blob/master/interview/js/note/00.md#%E5%B0%86%E6%95%B0%E7%BB%84%E8%BD%AC%E4%B8%BA%E5%AD%97%E5%85%B8%E5%AF%B9%E8%B1%A1)
+
+* [从列表当中删除掉指定项](https://github.com/heptaluan/blog/blob/master/interview/js/note/00.md#%E4%BB%8E%E5%88%97%E8%A1%A8%E5%BD%93%E4%B8%AD%E5%88%A0%E9%99%A4%E6%8E%89%E6%8C%87%E5%AE%9A%E9%A1%B9)
+
+* [查找列表当中指定的项](https://github.com/heptaluan/blog/blob/master/interview/js/note/00.md#%E6%9F%A5%E6%89%BE%E5%88%97%E8%A1%A8%E5%BD%93%E4%B8%AD%E6%8C%87%E5%AE%9A%E7%9A%84%E9%A1%B9)
+
+* [Property 'style' does not exist on type 'Element'](https://github.com/heptaluan/blog/blob/master/interview/js/note/00.md#property-style-does-not-exist-on-type-element)
+
+* [table 表单中的 .rows 属性](https://github.com/heptaluan/blog/blob/master/interview/js/note/00.md#table-%E8%A1%A8%E5%8D%95%E4%B8%AD%E7%9A%84-rows-%E5%B1%9E%E6%80%A7)
+
+* [offsetLeft 与 style.left 的区别](https://github.com/heptaluan/blog/blob/master/interview/js/note/00.md#offsetleft-%E4%B8%8E-styleleft-%E7%9A%84%E5%8C%BA%E5%88%AB)
+
+
+
+
+
+
 
 
 
@@ -499,6 +518,38 @@
 * [取括号中的数值](https://github.com/heptaluan/blog/blob/master/interview/js/note/00.md#%E5%8F%96%E6%8B%AC%E5%8F%B7%E4%B8%AD%E7%9A%84%E6%95%B0%E5%80%BC)
 
 * [千位分隔符（整数）](https://github.com/heptaluan/blog/blob/master/interview/js/note/00.md#%E5%8D%83%E4%BD%8D%E5%88%86%E9%9A%94%E7%AC%A6%E6%95%B4%E6%95%B0)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 #### CSS
@@ -528,3 +579,9 @@
 * [setTimeout(function(){}, 0)](https://github.com/heptaluan/blog/blob/master/interview/js/note/00.md#settimeoutfunction-0)
 
 * [如何判断鼠标滚动方向和绑定鼠标滚轮事件](https://github.com/heptaluan/blog/blob/master/interview/js/note/00.md#%E5%A6%82%E4%BD%95%E5%88%A4%E6%96%AD%E9%BC%A0%E6%A0%87%E6%BB%9A%E5%8A%A8%E6%96%B9%E5%90%91%E5%92%8C%E7%BB%91%E5%AE%9A%E9%BC%A0%E6%A0%87%E6%BB%9A%E8%BD%AE%E4%BA%8B%E4%BB%B6)
+
+* [媒体查询](https://github.com/heptaluan/blog/blob/master/interview/js/note/00.md#%E5%AA%92%E4%BD%93%E6%9F%A5%E8%AF%A2)
+
+* [input、placeholder 和 textarea 默认显示颜色修改](https://github.com/heptaluan/blog/blob/master/interview/js/note/00.md#inputplaceholder-%E5%92%8C-textarea-%E9%BB%98%E8%AE%A4%E6%98%BE%E7%A4%BA%E9%A2%9C%E8%89%B2%E4%BF%AE%E6%94%B9)
+
+* [高斯模糊效果](https://github.com/heptaluan/blog/blob/master/interview/js/note/00.md#%E9%AB%98%E6%96%AF%E6%A8%A1%E7%B3%8A%E6%95%88%E6%9E%9C)

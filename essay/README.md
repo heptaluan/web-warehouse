@@ -138,11 +138,95 @@
 [Reflect 对象](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#reflect-%E5%AF%B9%E8%B1%A1)
 
 
-#### 常用的一些方法，字符串和数组的一些算法等
+## 常用的一些方法，字符串和数组的一些算法，正则等
+
+[在有序（无序）列表中插入 3 个，300 个，3000 个 li，并绑定事件](https://github.com/heptaluan/blog/blob/master/essay/arithmetic/00.md#%E5%9C%A8%E6%9C%89%E5%BA%8F%E6%97%A0%E5%BA%8F%E5%88%97%E8%A1%A8%E4%B8%AD%E6%8F%92%E5%85%A5-3-%E4%B8%AA300-%E4%B8%AA3000-%E4%B8%AA-li%E5%B9%B6%E7%BB%91%E5%AE%9A%E4%BA%8B%E4%BB%B6)
+
+[生成一个 20 X 12 的表格，并且设定指定格子的背景颜色](https://github.com/heptaluan/blog/blob/master/essay/arithmetic/00.md#%E7%94%9F%E6%88%90%E4%B8%80%E4%B8%AA-20-x-12-%E7%9A%84%E8%A1%A8%E6%A0%BC%E5%B9%B6%E4%B8%94%E8%AE%BE%E5%AE%9A%E6%8C%87%E5%AE%9A%E6%A0%BC%E5%AD%90%E7%9A%84%E8%83%8C%E6%99%AF%E9%A2%9C%E8%89%B2)
+
+[常见的数组排序方式（冒泡，快速，插入，对象）](https://github.com/heptaluan/blog/blob/master/essay/arithmetic/00.md#%E5%B8%B8%E8%A7%81%E7%9A%84%E6%95%B0%E7%BB%84%E6%8E%92%E5%BA%8F%E6%96%B9%E5%BC%8F)
+
+[数组去重的几种方式](https://github.com/heptaluan/blog/blob/master/essay/arithmetic/00.md#%E6%95%B0%E7%BB%84%E5%8E%BB%E9%87%8D%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E5%BC%8F)
+
+[字符串去重的几种方式](https://github.com/heptaluan/blog/blob/master/essay/arithmetic/00.md#%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%8E%BB%E9%87%8D%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E5%BC%8F)
+
+[常见的数组的几种复制方法](https://github.com/heptaluan/blog/blob/master/essay/arithmetic/00.md#%E5%B8%B8%E8%A7%81%E7%9A%84%E6%95%B0%E7%BB%84%E7%9A%84%E5%87%A0%E7%A7%8D%E5%A4%8D%E5%88%B6%E6%96%B9%E6%B3%95)
+
+[数组操作 - 生成一个 m 长度，内容都为 n 的数组](https://github.com/heptaluan/blog/blob/master/essay/arithmetic/00.md#%E6%95%B0%E7%BB%84%E6%93%8D%E4%BD%9C---%E7%94%9F%E6%88%90%E4%B8%80%E4%B8%AA-m-%E9%95%BF%E5%BA%A6%E5%86%85%E5%AE%B9%E9%83%BD%E4%B8%BA-n-%E7%9A%84%E6%95%B0%E7%BB%84)
+
+[生成 20 个 40 - 80 之间的随机数，并排序和乱序](https://github.com/heptaluan/blog/blob/master/essay/arithmetic/00.md#%E7%94%9F%E6%88%90-20-%E4%B8%AA-40---80-%E4%B9%8B%E9%97%B4%E7%9A%84%E9%9A%8F%E6%9C%BA%E6%95%B0%E5%B9%B6%E6%8E%92%E5%BA%8F%E5%92%8C%E4%B9%B1%E5%BA%8F)
+
+[常见的字符串算法](https://github.com/heptaluan/blog/blob/master/essay/arithmetic/00.md#%E5%B8%B8%E8%A7%81%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%AE%97%E6%B3%95)
+
+[取两个数组的差集](https://github.com/heptaluan/blog/blob/master/essay/arithmetic/00.md#%E5%8F%96%E4%B8%A4%E4%B8%AA%E6%95%B0%E7%BB%84%E7%9A%84%E5%B7%AE%E9%9B%86)
+
+[数组的常用方法分析及内部实现原理](https://github.com/heptaluan/blog/blob/master/essay/arithmetic/00.md#%E6%95%B0%E7%BB%84%E7%9A%84%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95%E5%88%86%E6%9E%90%E5%8F%8A%E5%86%85%E9%83%A8%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86)
+
+* [Array.prototype.splice()](https://github.com/heptaluan/blog/blob/master/essay/arithmetic/00.md#arrayprototypesplice)
+
+* [Array.prototype.push()](https://github.com/heptaluan/blog/blob/master/essay/arithmetic/00.md#arrayprototypepush)
+
+* [Array.prototype.pop()](https://github.com/heptaluan/blog/blob/master/essay/arithmetic/00.md#arrayprototypepop)
+
+* [Array.prototype.shift()](https://github.com/heptaluan/blog/blob/master/essay/arithmetic/00.md#arrayprototypeshift)
+
+* [Array.prototype.unshift()](https://github.com/heptaluan/blog/blob/master/essay/arithmetic/00.md#arrayprototypeunshift)
 
 
 
-#### jQuery
+[JavaScript 获得随机 unicode 字符](https://github.com/heptaluan/blog/blob/master/essay/arithmetic/00.md#javascript-%E8%8E%B7%E5%BE%97%E9%9A%8F%E6%9C%BA-unicode-%E5%AD%97%E7%AC%A6)
+
+[getElementsByClassName 方法实现](https://github.com/heptaluan/blog/blob/master/essay/arithmetic/00.md#getelementsbyclassname-%E6%96%B9%E6%B3%95%E5%AE%9E%E7%8E%B0)
+
+[提取数字中的整数部分](https://github.com/heptaluan/blog/blob/master/essay/arithmetic/00.md#%E6%8F%90%E5%8F%96%E6%95%B0%E5%AD%97%E4%B8%AD%E7%9A%84%E6%95%B4%E6%95%B0%E9%83%A8%E5%88%86)
+
+[实现一个函数 clone，可以对 JavaScript 中的 5 种主要的数据类型（包括 Number、String、Object、Array、Boolean）进行值复制](https://github.com/heptaluan/blog/blob/master/essay/arithmetic/00.md#%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E5%87%BD%E6%95%B0-clone%E5%8F%AF%E4%BB%A5%E5%AF%B9-javascript-%E4%B8%AD%E7%9A%84-5-%E7%A7%8D%E4%B8%BB%E8%A6%81%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%8C%85%E6%8B%AC-numberstringobjectarrayboolean%E8%BF%9B%E8%A1%8C%E5%80%BC%E5%A4%8D%E5%88%B6)
+
+[深度克隆](https://github.com/heptaluan/blog/blob/master/essay/arithmetic/00.md#%E6%B7%B1%E5%BA%A6%E5%85%8B%E9%9A%86)
+
+[生成 [0, 1, 2, 3 ... N - 1] 的数组](https://github.com/heptaluan/blog/blob/master/essay/arithmetic/00.md#%E7%94%9F%E6%88%90-0-1-2-3--n---1-%E7%9A%84%E6%95%B0%E7%BB%84)
+
+[找出数字数组中最大的元素](https://github.com/heptaluan/blog/blob/master/essay/arithmetic/00.md#%E6%89%BE%E5%87%BA%E6%95%B0%E5%AD%97%E6%95%B0%E7%BB%84%E4%B8%AD%E6%9C%80%E5%A4%A7%E7%9A%84%E5%85%83%E7%B4%A0)
+
+[转化一个数字数组为 function 数组（每个 function 都弹出相应的数字）](https://github.com/heptaluan/blog/blob/master/essay/arithmetic/00.md#%E8%BD%AC%E5%8C%96%E4%B8%80%E4%B8%AA%E6%95%B0%E5%AD%97%E6%95%B0%E7%BB%84%E4%B8%BA-function-%E6%95%B0%E7%BB%84%E6%AF%8F%E4%B8%AA-function-%E9%83%BD%E5%BC%B9%E5%87%BA%E7%9B%B8%E5%BA%94%E7%9A%84%E6%95%B0%E5%AD%97)
+
+[给 object 数组进行排序（排序条件是每个元素对象的属性个数）](https://github.com/heptaluan/blog/blob/master/essay/arithmetic/00.md#%E7%BB%99-object-%E6%95%B0%E7%BB%84%E8%BF%9B%E8%A1%8C%E6%8E%92%E5%BA%8F%E6%8E%92%E5%BA%8F%E6%9D%A1%E4%BB%B6%E6%98%AF%E6%AF%8F%E4%B8%AA%E5%85%83%E7%B4%A0%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%B1%9E%E6%80%A7%E4%B8%AA%E6%95%B0)
+
+[打印 Fibonacci 数（不使用全局变量）](https://github.com/heptaluan/blog/blob/master/essay/arithmetic/00.md#%E6%89%93%E5%8D%B0-fibonacci-%E6%95%B0%E4%B8%8D%E4%BD%BF%E7%94%A8%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F)
+
+[实现如下语法的功能 var a = (5).plus(3).minus(6);](https://github.com/heptaluan/blog/blob/master/essay/arithmetic/00.md#%E5%AE%9E%E7%8E%B0%E5%A6%82%E4%B8%8B%E8%AF%AD%E6%B3%95%E7%9A%84%E5%8A%9F%E8%83%BD-var-a--5plus3minus6)
+
+[实现如下语法的功能 var a = add(2)(3)(4);](https://github.com/heptaluan/blog/blob/master/essay/arithmetic/00.md#%E5%AE%9E%E7%8E%B0%E5%A6%82%E4%B8%8B%E8%AF%AD%E6%B3%95%E7%9A%84%E5%8A%9F%E8%83%BD-var-a--add234)
+
+[使用 filter 确保 Observable 当中流中的值不为空](https://github.com/heptaluan/blog/blob/master/essay/arithmetic/00.md#%E4%BD%BF%E7%94%A8-filter-%E7%A1%AE%E4%BF%9D-observable-%E5%BD%93%E4%B8%AD%E6%B5%81%E4%B8%AD%E7%9A%84%E5%80%BC%E4%B8%8D%E4%B8%BA%E7%A9%BA)
+
+[将数组转为字典对象](https://github.com/heptaluan/blog/blob/master/essay/arithmetic/00.md#%E5%B0%86%E6%95%B0%E7%BB%84%E8%BD%AC%E4%B8%BA%E5%AD%97%E5%85%B8%E5%AF%B9%E8%B1%A1)
+
+[从列表当中删除掉指定项](https://github.com/heptaluan/blog/blob/master/essay/arithmetic/00.md#%E4%BB%8E%E5%88%97%E8%A1%A8%E5%BD%93%E4%B8%AD%E5%88%A0%E9%99%A4%E6%8E%89%E6%8C%87%E5%AE%9A%E9%A1%B9)
+
+[查找列表当中指定的项](https://github.com/heptaluan/blog/blob/master/essay/arithmetic/00.md#%E6%9F%A5%E6%89%BE%E5%88%97%E8%A1%A8%E5%BD%93%E4%B8%AD%E6%8C%87%E5%AE%9A%E7%9A%84%E9%A1%B9)
+
+[正则中的 test() 与 全局选项 /g](https://github.com/heptaluan/blog/blob/master/essay/arithmetic/00.md#%E6%AD%A3%E5%88%99%E4%B8%AD%E7%9A%84-test-%E4%B8%8E-%E5%85%A8%E5%B1%80%E9%80%89%E9%A1%B9-g)
+
+[去除所有的 html](https://github.com/heptaluan/blog/blob/master/essay/arithmetic/00.md#%E5%8E%BB%E9%99%A4%E6%89%80%E6%9C%89%E7%9A%84-html)
+
+[去除空格](https://github.com/heptaluan/blog/blob/master/essay/arithmetic/00.md#%E5%8E%BB%E9%99%A4%E7%A9%BA%E6%A0%BC)
+
+[判断输入的是否为数字](https://github.com/heptaluan/blog/blob/master/essay/arithmetic/00.md#%E5%88%A4%E6%96%AD%E8%BE%93%E5%85%A5%E7%9A%84%E6%98%AF%E5%90%A6%E4%B8%BA%E6%95%B0%E5%AD%97)
+
+[取括号中的数值](https://github.com/heptaluan/blog/blob/master/essay/arithmetic/00.md#%E5%8F%96%E6%8B%AC%E5%8F%B7%E4%B8%AD%E7%9A%84%E6%95%B0%E5%80%BC)
+
+[千位分隔符（整数）](https://github.com/heptaluan/blog/blob/master/essay/arithmetic/00.md#%E5%8D%83%E4%BD%8D%E5%88%86%E9%9A%94%E7%AC%A6%E6%95%B4%E6%95%B0)
+
+[]()
+
+[]()
+
+[]()
+
+
+
+## jQuery
 
 [$.each 和 $(selector).each() 的区别](https://github.com/heptaluan/blog/blob/master/essay/jquery/00.md#each-%E5%92%8C-selectoreach-%E7%9A%84%E5%8C%BA%E5%88%AB)
 
@@ -210,60 +294,132 @@
 
 
 
-#### 框架
+## 框架
 
-**Angular**
+#### Angular
 
-[]()
+[自定义属性指令中的 ElementRef 与 Renderer 的作用](https://github.com/heptaluan/blog/blob/master/essay/angular/00.md#%E8%87%AA%E5%AE%9A%E4%B9%89%E5%B1%9E%E6%80%A7%E6%8C%87%E4%BB%A4%E4%B8%AD%E7%9A%84-elementref-%E4%B8%8E-renderer-%E7%9A%84%E4%BD%9C%E7%94%A8)
 
-[]()
+[自定义结构指令中的 TemplateRef 与 ViewContainerRef 的作用](https://github.com/heptaluan/blog/blob/master/essay/angular/00.md#%E8%87%AA%E5%AE%9A%E4%B9%89%E7%BB%93%E6%9E%84%E6%8C%87%E4%BB%A4%E4%B8%AD%E7%9A%84-templateref-%E4%B8%8E-viewcontainerref-%E7%9A%84%E4%BD%9C%E7%94%A8)
 
-[]()
+[注入服务的两种方式的区别](https://github.com/heptaluan/blog/blob/master/essay/angular/00.md#%E6%B3%A8%E5%85%A5%E6%9C%8D%E5%8A%A1%E7%9A%84%E4%B8%A4%E7%A7%8D%E6%96%B9%E5%BC%8F%E7%9A%84%E5%8C%BA%E5%88%AB)
 
-[]()
+[Angular 中路由传递参数的几种方式](https://github.com/heptaluan/blog/blob/master/essay/angular/00.md#angular-%E4%B8%AD%E8%B7%AF%E7%94%B1%E4%BC%A0%E9%80%92%E5%8F%82%E6%95%B0%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E5%BC%8F)
 
-[]()
+[*ngFor](https://github.com/heptaluan/blog/blob/master/essay/angular/00.md#ngfor)
 
-[]()
+[:host](https://github.com/heptaluan/blog/blob/master/essay/angular/00.md#host)
 
-[]()
+[[routerLink] 的参数是一个数组而不是一个字符串](https://github.com/heptaluan/blog/blob/master/essay/angular/00.md#routerlink-%E7%9A%84%E5%8F%82%E6%95%B0%E6%98%AF%E4%B8%80%E4%B8%AA%E6%95%B0%E7%BB%84%E8%80%8C%E4%B8%8D%E6%98%AF%E4%B8%80%E4%B8%AA%E5%AD%97%E7%AC%A6%E4%B8%B2)
 
-[]()
+[在指令当中监听用户的输入](https://github.com/heptaluan/blog/blob/master/essay/angular/00.md#%E5%9C%A8%E6%8C%87%E4%BB%A4%E5%BD%93%E4%B8%AD%E7%9B%91%E5%90%AC%E7%94%A8%E6%88%B7%E7%9A%84%E8%BE%93%E5%85%A5)
 
-[]()
+[利用 Attribute 装饰器，获取指令宿主元素上的自定义属性的值](https://github.com/heptaluan/blog/blob/master/essay/angular/00.md#%E5%88%A9%E7%94%A8-attribute-%E8%A3%85%E9%A5%B0%E5%99%A8%E8%8E%B7%E5%8F%96%E6%8C%87%E4%BB%A4%E5%AE%BF%E4%B8%BB%E5%85%83%E7%B4%A0%E4%B8%8A%E7%9A%84%E8%87%AA%E5%AE%9A%E4%B9%89%E5%B1%9E%E6%80%A7%E7%9A%84%E5%80%BC)
 
-[]()
+[Directive (指令) 与 Component (组件) 的关系](https://github.com/heptaluan/blog/blob/master/essay/angular/00.md#directive-%E6%8C%87%E4%BB%A4-%E4%B8%8E-component-%E7%BB%84%E4%BB%B6-%E7%9A%84%E5%85%B3%E7%B3%BB)
 
-[]()
+[双向绑定](https://github.com/heptaluan/blog/blob/master/essay/angular/00.md#%E5%8F%8C%E5%90%91%E7%BB%91%E5%AE%9A)
 
-[]()
+[Reactive Form 使用步骤](https://github.com/heptaluan/blog/blob/master/essay/angular/00.md#reactive-form-%E4%BD%BF%E7%94%A8%E6%AD%A5%E9%AA%A4)
 
-[]()
+[在构造函数中是获取不到输入属性的值](https://github.com/heptaluan/blog/blob/master/essay/angular/00.md#%E5%9C%A8%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E4%B8%AD%E6%98%AF%E8%8E%B7%E5%8F%96%E4%B8%8D%E5%88%B0%E8%BE%93%E5%85%A5%E5%B1%9E%E6%80%A7%E7%9A%84%E5%80%BC)
 
-[]()
+[在 ES6 或 TypeScript 中的 Class 是不会自动提升的](https://github.com/heptaluan/blog/blob/master/essay/angular/00.md#%E5%9C%A8-es6-%E6%88%96-typescript-%E4%B8%AD%E7%9A%84-class-%E6%98%AF%E4%B8%8D%E4%BC%9A%E8%87%AA%E5%8A%A8%E6%8F%90%E5%8D%87%E7%9A%84)
 
-[]()
+[在 Root Component 中无法使用 ng-content](https://github.com/heptaluan/blog/blob/master/essay/angular/00.md#%E5%9C%A8-root-component-%E4%B8%AD%E6%97%A0%E6%B3%95%E4%BD%BF%E7%94%A8-ng-content)
 
-[]()
+[组件之间参数传递的几种方式](https://github.com/heptaluan/blog/blob/master/essay/angular/00.md#%E7%BB%84%E4%BB%B6%E4%B9%8B%E9%97%B4%E5%8F%82%E6%95%B0%E4%BC%A0%E9%80%92%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E5%BC%8F)
 
-[]()
+[创建结构指令当中的 { $implicit: 'value' }](https://github.com/heptaluan/blog/blob/master/essay/angular/00.md#%E5%88%9B%E5%BB%BA%E7%BB%93%E6%9E%84%E6%8C%87%E4%BB%A4%E5%BD%93%E4%B8%AD%E7%9A%84--implicit-value-)
 
-[]()
+[依赖注入中，配置完服务后，为什么还需要在组件的构造函数当中进行类型声明](https://github.com/heptaluan/blog/blob/master/essay/angular/00.md#%E4%BE%9D%E8%B5%96%E6%B3%A8%E5%85%A5%E4%B8%AD%E9%85%8D%E7%BD%AE%E5%AE%8C%E6%9C%8D%E5%8A%A1%E5%90%8E%E4%B8%BA%E4%BB%80%E4%B9%88%E8%BF%98%E9%9C%80%E8%A6%81%E5%9C%A8%E7%BB%84%E4%BB%B6%E7%9A%84%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E5%BD%93%E4%B8%AD%E8%BF%9B%E8%A1%8C%E7%B1%BB%E5%9E%8B%E5%A3%B0%E6%98%8E)
 
-[]()
+[为什么在构造函数中，非 Type 类型的参数只能用 @Inject(Something) 的方式注入](https://github.com/heptaluan/blog/blob/master/essay/angular/00.md#%E4%B8%BA%E4%BB%80%E4%B9%88%E5%9C%A8%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E4%B8%AD%E9%9D%9E-type-%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%8F%82%E6%95%B0%E5%8F%AA%E8%83%BD%E7%94%A8-injectsomething-%E7%9A%84%E6%96%B9%E5%BC%8F%E6%B3%A8%E5%85%A5)
 
-[]()
+[AppService（服务） 中的 @Injectable() 是必须的么](https://github.com/heptaluan/blog/blob/master/essay/angular/00.md#appservice%E6%9C%8D%E5%8A%A1-%E4%B8%AD%E7%9A%84-injectable-%E6%98%AF%E5%BF%85%E9%A1%BB%E7%9A%84%E4%B9%88)
 
-[]()
+[在构造函数中，Type 类型的参数是否可以使用 @Inject(Type) 的方式注入](https://github.com/heptaluan/blog/blob/master/essay/angular/00.md#%E5%9C%A8%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E4%B8%ADtype-%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%8F%82%E6%95%B0%E6%98%AF%E5%90%A6%E5%8F%AF%E4%BB%A5%E4%BD%BF%E7%94%A8-injecttype-%E7%9A%84%E6%96%B9%E5%BC%8F%E6%B3%A8%E5%85%A5)
 
-[]()
+[如何引入第三方 JS 类库](https://github.com/heptaluan/blog/blob/master/essay/angular/00.md#%E5%A6%82%E4%BD%95%E5%BC%95%E5%85%A5%E7%AC%AC%E4%B8%89%E6%96%B9-js-%E7%B1%BB%E5%BA%93)
 
-[]()
+[Angular 中的 ViewEncapsulation](https://github.com/heptaluan/blog/blob/master/essay/angular/00.md#angular-%E4%B8%AD%E7%9A%84-viewencapsulation)
 
-[]()
+[constructor 与 ngOnInit 的应用场景](https://github.com/heptaluan/blog/blob/master/essay/angular/00.md#constructor-%E4%B8%8E-ngoninit-%E7%9A%84%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF)
+
+[Angular 中使用 [innerHtml] 时内容被转义](https://github.com/heptaluan/blog/blob/master/essay/angular/00.md#angular-%E4%B8%AD%E4%BD%BF%E7%94%A8-innerhtml-%E6%97%B6%E5%86%85%E5%AE%B9%E8%A2%AB%E8%BD%AC%E4%B9%89)
+
+[Angular 中 forwardRef 的作用](https://github.com/heptaluan/blog/blob/master/essay/angular/00.md#angular-%E4%B8%AD-forwardref-%E7%9A%84%E4%BD%9C%E7%94%A8)
+
+[@Component 中 @ 的作用](https://github.com/heptaluan/blog/blob/master/essay/angular/00.md#component-%E4%B8%AD--%E7%9A%84%E4%BD%9C%E7%94%A8)
+
+[导入 BrowserModule 还是 CommonModule ？](https://github.com/heptaluan/blog/blob/master/essay/angular/00.md#%E5%AF%BC%E5%85%A5-browsermodule-%E8%BF%98%E6%98%AF-commonmodule-)
+
+[如果两次导入同一个模块会怎么样](https://github.com/heptaluan/blog/blob/master/essay/angular/00.md#%E5%A6%82%E6%9E%9C%E4%B8%A4%E6%AC%A1%E5%AF%BC%E5%85%A5%E5%90%8C%E4%B8%80%E4%B8%AA%E6%A8%A1%E5%9D%97%E4%BC%9A%E6%80%8E%E4%B9%88%E6%A0%B7)
+
+[Angular 中的 ngOnChanges](https://github.com/heptaluan/blog/blob/master/essay/angular/00.md#angular-%E4%B8%AD%E7%9A%84-ngonchanges)
+
+[ng-if 处理判断条件](https://github.com/heptaluan/blog/blob/master/essay/angular/00.md#ng-if-%E5%A4%84%E7%90%86%E5%88%A4%E6%96%AD%E6%9D%A1%E4%BB%B6)
+
+
+[使用 @ViewChild() 获取子组件取不到值的情况](https://github.com/heptaluan/blog/blob/master/essay/angular/00.md#%E4%BD%BF%E7%94%A8-viewchild-%E8%8E%B7%E5%8F%96%E5%AD%90%E7%BB%84%E4%BB%B6%E5%8F%96%E4%B8%8D%E5%88%B0%E5%80%BC%E7%9A%84%E6%83%85%E5%86%B5)
+
+[effect 和 reducer 的区别](https://github.com/heptaluan/blog/blob/master/essay/angular/00.md#effect-%E5%92%8C-reducer-%E7%9A%84%E5%8C%BA%E5%88%AB)
 
 
 
+
+
+#### Vue
+
+[Vue 的双向数据绑定原理是什么？](https://github.com/heptaluan/blog/blob/master/essay/vue/00.md#vue-%E7%9A%84%E5%8F%8C%E5%90%91%E6%95%B0%E6%8D%AE%E7%BB%91%E5%AE%9A%E5%8E%9F%E7%90%86%E6%98%AF%E4%BB%80%E4%B9%88)
+
+[数组替换](https://github.com/heptaluan/blog/blob/master/essay/vue/00.md#%E6%95%B0%E7%BB%84%E6%9B%BF%E6%8D%A2)
+
+[对象更改检测注意事项](https://github.com/heptaluan/blog/blob/master/essay/vue/00.md#%E5%AF%B9%E8%B1%A1%E6%9B%B4%E6%94%B9%E6%A3%80%E6%B5%8B%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9)
+
+[Vue 当中的 is 属性](https://github.com/heptaluan/blog/blob/master/essay/vue/00.md#%E4%BB%8B%E7%BB%8D%E4%B8%80%E4%B8%8B-vue-%E5%BD%93%E4%B8%AD%E7%9A%84-is-%E5%B1%9E%E6%80%A7)
+
+[methods 和 computed 的区别](https://github.com/heptaluan/blog/blob/master/essay/vue/00.md#methods-%E5%92%8C-computed-%E7%9A%84%E5%8C%BA%E5%88%AB)
+
+[$nextTick 的作用](https://github.com/heptaluan/blog/blob/master/essay/vue/00.md#nexttick-%E7%9A%84%E4%BD%9C%E7%94%A8)
+
+[组件之间传参](https://github.com/heptaluan/blog/blob/master/essay/vue/00.md#%E7%BB%84%E4%BB%B6%E4%B9%8B%E9%97%B4%E4%BC%A0%E5%8F%82)
+
+[Vue 循环中的 key 的作用](https://github.com/heptaluan/blog/blob/master/essay/vue/00.md#vue-%E5%BE%AA%E7%8E%AF%E4%B8%AD%E7%9A%84-key-%E7%9A%84%E4%BD%9C%E7%94%A8)
+
+
+
+
+
+#### React
+
+[React 的特点](https://github.com/heptaluan/blog/blob/master/essay/react/00.md#react-%E7%9A%84%E7%89%B9%E7%82%B9)
+
+[在什么情况下你会优先选择使用 Class Component 而不是 Functional Component](https://github.com/heptaluan/blog/blob/master/essay/react/00.md#%E5%9C%A8%E4%BB%80%E4%B9%88%E6%83%85%E5%86%B5%E4%B8%8B%E4%BD%A0%E4%BC%9A%E4%BC%98%E5%85%88%E9%80%89%E6%8B%A9%E4%BD%BF%E7%94%A8-class-component-%E8%80%8C%E4%B8%8D%E6%98%AF-functional-component)
+
+[Element 与 Component 的区别](https://github.com/heptaluan/blog/blob/master/essay/react/00.md#element-%E4%B8%8E-component-%E7%9A%84%E5%8C%BA%E5%88%AB)
+
+[ajax 请求应当放置于哪一个生命周期当中](https://github.com/heptaluan/blog/blob/master/essay/react/00.md#ajax-%E8%AF%B7%E6%B1%82%E5%BA%94%E5%BD%93%E6%94%BE%E7%BD%AE%E4%BA%8E%E5%93%AA%E4%B8%80%E4%B8%AA%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E5%BD%93%E4%B8%AD)
+
+[shouldComponentUpdate 的作用](https://github.com/heptaluan/blog/blob/master/essay/react/00.md#shouldcomponentupdate-%E7%9A%84%E4%BD%9C%E7%94%A8)
+
+[props.children 和 props.children.map](https://github.com/heptaluan/blog/blob/master/essay/react/00.md#propschildren-%E5%92%8C-propschildrenmap)
+
+[React 中的事件处理逻辑](https://github.com/heptaluan/blog/blob/master/essay/react/00.md#react-%E4%B8%AD%E7%9A%84%E4%BA%8B%E4%BB%B6%E5%A4%84%E7%90%86%E9%80%BB%E8%BE%91)
+
+[createElement 与 cloneElement 的区别](https://github.com/heptaluan/blog/blob/master/essay/react/00.md#createelement-%E4%B8%8E-cloneelement-%E7%9A%84%E5%8C%BA%E5%88%AB)
+
+[setState 函数的第二个参数的作用](https://github.com/heptaluan/blog/blob/master/essay/react/00.md#setstate-%E5%87%BD%E6%95%B0%E7%9A%84%E7%AC%AC%E4%BA%8C%E4%B8%AA%E5%8F%82%E6%95%B0%E7%9A%84%E4%BD%9C%E7%94%A8)
+
+[受控组件与非受控组件](https://github.com/heptaluan/blog/blob/master/essay/react/00.md#%E5%8F%97%E6%8E%A7%E7%BB%84%E4%BB%B6%E4%B8%8E%E9%9D%9E%E5%8F%97%E6%8E%A7%E7%BB%84%E4%BB%B6)
+
+[React 中 keys 的作用](https://github.com/heptaluan/blog/blob/master/essay/react/00.md#react-%E4%B8%AD-keys-%E7%9A%84%E4%BD%9C%E7%94%A8)
+
+[React 中 refs 的作用](https://github.com/heptaluan/blog/blob/master/essay/react/00.md#react-%E4%B8%AD-refs-%E7%9A%84%E4%BD%9C%E7%94%A8)
+
+[调用 setState 之后发生了什么？](https://github.com/heptaluan/blog/blob/master/essay/react/00.md#%E8%B0%83%E7%94%A8-setstate-%E4%B9%8B%E5%90%8E%E5%8F%91%E7%94%9F%E4%BA%86%E4%BB%80%E4%B9%88)
+
+[根据生成的组件完成其相关类的定义](https://github.com/heptaluan/blog/blob/master/essay/react/00.md#%E6%A0%B9%E6%8D%AE%E7%94%9F%E6%88%90%E7%9A%84%E7%BB%84%E4%BB%B6%E5%AE%8C%E6%88%90%E5%85%B6%E7%9B%B8%E5%85%B3%E7%B1%BB%E7%9A%84%E5%AE%9A%E4%B9%89)
 
 
 

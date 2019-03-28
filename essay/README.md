@@ -9,21 +9,11 @@
 
 [使用 new 的时候发生了什么](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#%E4%BD%BF%E7%94%A8-new-%E7%9A%84%E6%97%B6%E5%80%99%E5%8F%91%E7%94%9F%E4%BA%86%E4%BB%80%E4%B9%88)
 
-[Canvas 和 SVG 的区别](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#canvas-%E5%92%8C-svg-%E7%9A%84%E5%8C%BA%E5%88%AB)
-
-[mouseover 与 mouseenter 的区别](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#mouseover-%E4%B8%8E-mouseenter-%E7%9A%84%E5%8C%BA%E5%88%AB)
-
 [浏览器中的各种长度](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#%E6%B5%8F%E8%A7%88%E5%99%A8%E4%B8%AD%E7%9A%84%E5%90%84%E7%A7%8D%E9%95%BF%E5%BA%A6)
 
 [parseInt](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#parseint)
 
 [sessionStorage，localStorage 和 cookie 的区别](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#sessionstoragelocalstorage-%E5%92%8C-cookie-%E7%9A%84%E5%8C%BA%E5%88%AB)
-
-[ifram 的优缺点](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#ifram-%E7%9A%84%E4%BC%98%E7%BC%BA%E7%82%B9)
-
-[Date 对象](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#date-%E5%AF%B9%E8%B1%A1%E5%B8%B8%E7%94%A8%E7%9A%84%E4%B8%80%E4%BA%9B%E6%96%B9%E6%B3%95)
-
-[ES6 中的 class](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#es6-%E4%B8%AD%E7%9A%84-class)
 
 [map 和 reduce](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#map-%E5%92%8C-reduce)
 
@@ -95,8 +85,6 @@
 
 [fileReader 接口](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#filereader-%E6%8E%A5%E5%8F%A3)
 
-[promise](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#promise)
-
 [call 和 apply 的第一个参数](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#call-%E5%92%8C-apply-%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%8F%82%E6%95%B0)
 
 [判断是否是数组 isArray](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#%E5%88%A4%E6%96%AD%E6%98%AF%E5%90%A6%E6%98%AF%E6%95%B0%E7%BB%84-isarray)
@@ -126,6 +114,12 @@
 [offsetLeft 与 style.left 的区别](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#offsetleft-%E4%B8%8E-styleleft-%E7%9A%84%E5%8C%BA%E5%88%AB)
 
 [Reflect 对象](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#reflect-%E5%AF%B9%E8%B1%A1)
+
+[如何判断鼠标滚动方向和绑定鼠标滚轮事件](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#%E5%A6%82%E4%BD%95%E5%88%A4%E6%96%AD%E9%BC%A0%E6%A0%87%E6%BB%9A%E5%8A%A8%E6%96%B9%E5%90%91%E5%92%8C%E7%BB%91%E5%AE%9A%E9%BC%A0%E6%A0%87%E6%BB%9A%E8%BD%AE%E4%BA%8B%E4%BB%B6)
+
+[JavaScript 判断滚动条方向](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#javascript-%E5%88%A4%E6%96%AD%E6%BB%9A%E5%8A%A8%E6%9D%A1%E6%96%B9%E5%90%91)
+
+[setTimeout(function(){}, 0)](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#settimeoutfunction-0)
 
 
 ## 常用的一些方法，字符串和数组的一些算法，正则等

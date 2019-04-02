@@ -5,8 +5,6 @@
 
 ## JavaScript
 
-[this](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#this)
-
 [使用 new 的时候发生了什么](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#%E4%BD%BF%E7%94%A8-new-%E7%9A%84%E6%97%B6%E5%80%99%E5%8F%91%E7%94%9F%E4%BA%86%E4%BB%80%E4%B9%88)
 
 [浏览器中的各种长度](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#%E6%B5%8F%E8%A7%88%E5%99%A8%E4%B8%AD%E7%9A%84%E5%90%84%E7%A7%8D%E9%95%BF%E5%BA%A6)
@@ -23,17 +21,7 @@
 
 [JavaScript 中常用的设计模式](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#javascript-%E4%B8%AD%E5%B8%B8%E7%94%A8%E7%9A%84%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F)
 
-[JavaScript 中节点相关属性（nodeType）](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#javascript-%E4%B8%AD%E8%8A%82%E7%82%B9%E7%9B%B8%E5%85%B3%E5%B1%9E%E6%80%A7nodetype)
-
-[事件流，冒泡与捕获](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#%E4%BA%8B%E4%BB%B6%E6%B5%81%E5%86%92%E6%B3%A1%E4%B8%8E%E6%8D%95%E8%8E%B7)
-
 [函数的 length 属性与 callee](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#%E5%87%BD%E6%95%B0%E7%9A%84-length-%E5%B1%9E%E6%80%A7%E4%B8%8E-callee)
-
-[原型链](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#%E5%8E%9F%E5%9E%8B%E9%93%BE)
-
-[深复制 和 浅复制](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#%E6%B7%B1%E5%A4%8D%E5%88%B6-%E5%92%8C-%E6%B5%85%E5%A4%8D%E5%88%B6)
-
-[JavaScript 中的 mixin](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#javascript-%E4%B8%AD%E7%9A%84-mixin)
 
 [常见函数 once/bind/debouce/throttle 的实现原理](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#%E5%B8%B8%E8%A7%81%E5%87%BD%E6%95%B0-oncebinddeboucethrottle-%E7%9A%84%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86)
 
@@ -52,10 +40,6 @@
 [promise 和 setTimeout](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#promise-%E5%92%8C-settimeout)
 
 [IOS 移动端 click 事件 300ms 的延迟响应](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#ios-%E7%A7%BB%E5%8A%A8%E7%AB%AF-click-%E4%BA%8B%E4%BB%B6-300ms-%E7%9A%84%E5%BB%B6%E8%BF%9F%E5%93%8D%E5%BA%94)
-
-[JavaScript 函数](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#%E5%87%BD%E6%95%B0)
-
-[JavaScript 对象](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#javascript-%E5%AF%B9%E8%B1%A1)
 
 [继承](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#%E7%BB%A7%E6%89%BF-1)
 
@@ -80,8 +64,6 @@
 [闭包](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#%E9%97%AD%E5%8C%85)
 
 [ES6 的一些新方法](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#es6-%E7%9A%84%E4%B8%80%E4%BA%9B%E6%96%B0%E6%96%B9%E6%B3%95)
-
-[变量的赋值与深浅拷贝](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#%E5%8F%98%E9%87%8F%E7%9A%84%E8%B5%8B%E5%80%BC%E4%B8%8E%E6%B7%B1%E6%B5%85%E6%8B%B7%E8%B4%9D)
 
 [fileReader 接口](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#filereader-%E6%8E%A5%E5%8F%A3)
 
@@ -121,8 +103,18 @@
 
 [setTimeout(function(){}, 0)](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#settimeoutfunction-0)
 
+[为什么 0.2 + 0.1 === 0.3 返回 false](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#%E4%B8%BA%E4%BB%80%E4%B9%88-02--01--03-%E8%BF%94%E5%9B%9E-false)
+
+
+
+
+
+
+
 
 ## 常用的一些方法，字符串和数组的一些算法，正则等
+
+[[1, 2, 3, 4, 5] => [1, 2, 3, 4, 5, 1, 4, 9, 16, 25]](https://github.com/heptaluan/blog/blob/master/essay/arithmetic/00.md#1-2-3-4-5--1-2-3-4-5-1-4-9-16-25)
 
 [在有序（无序）列表中插入 3 个，300 个，3000 个 li，并绑定事件](https://github.com/heptaluan/blog/blob/master/essay/arithmetic/00.md#%E5%9C%A8%E6%9C%89%E5%BA%8F%E6%97%A0%E5%BA%8F%E5%88%97%E8%A1%A8%E4%B8%AD%E6%8F%92%E5%85%A5-3-%E4%B8%AA300-%E4%B8%AA3000-%E4%B8%AA-li%E5%B9%B6%E7%BB%91%E5%AE%9A%E4%BA%8B%E4%BB%B6)
 

@@ -29,15 +29,11 @@
 
 [如何监听 对象/数组 属性改变](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#%E5%A6%82%E4%BD%95%E7%9B%91%E5%90%AC-%E5%AF%B9%E8%B1%A1%E6%95%B0%E7%BB%84-%E5%B1%9E%E6%80%A7%E6%94%B9%E5%8F%98)
 
-[判断变量类型，如何判断变量是函数](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#%E5%88%A4%E6%96%AD%E5%8F%98%E9%87%8F%E7%B1%BB%E5%9E%8B%E5%A6%82%E4%BD%95%E5%88%A4%E6%96%AD%E5%8F%98%E9%87%8F%E6%98%AF%E5%87%BD%E6%95%B0)
-
 [JavaScript 中的几种遍历对象的方式](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#javascript-%E4%B8%AD%E7%9A%84%E5%87%A0%E7%A7%8D%E9%81%8D%E5%8E%86%E5%AF%B9%E8%B1%A1%E7%9A%84%E6%96%B9%E5%BC%8F)
 
 [一些数组常用的方法和其返回值](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#%E4%B8%80%E4%BA%9B%E6%95%B0%E7%BB%84%E5%B8%B8%E7%94%A8%E7%9A%84%E6%96%B9%E6%B3%95%E5%92%8C%E5%85%B6%E8%BF%94%E5%9B%9E%E5%80%BC)
 
 [ajax，formData，同源策略，跨域](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#ajaxformdata%E5%90%8C%E6%BA%90%E7%AD%96%E7%95%A5%E8%B7%A8%E5%9F%9F)
-
-[promise 和 setTimeout](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#promise-%E5%92%8C-settimeout)
 
 [IOS 移动端 click 事件 300ms 的延迟响应](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#ios-%E7%A7%BB%E5%8A%A8%E7%AB%AF-click-%E4%BA%8B%E4%BB%B6-300ms-%E7%9A%84%E5%BB%B6%E8%BF%9F%E5%93%8D%E5%BA%94)
 
@@ -45,11 +41,7 @@
 
 [JavaScript 中的命名空间，变量声明提升，作用域和预编译](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#javascript-%E4%B8%AD%E7%9A%84%E5%91%BD%E5%90%8D%E7%A9%BA%E9%97%B4%E5%8F%98%E9%87%8F%E5%A3%B0%E6%98%8E%E6%8F%90%E5%8D%87%E4%BD%9C%E7%94%A8%E5%9F%9F%E5%92%8C%E9%A2%84%E7%BC%96%E8%AF%91)
 
-[JSON.parse() && JSON.stringify()](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#jsonparse--jsonstringify)
-
 [clientWidth, offsetWidth, scrollWidth](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#clientwidth-offsetwidth-scrollwidth)
-
-[call，apply，bind 的定义与实现](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#callapplybind-%E7%9A%84%E5%AE%9A%E4%B9%89%E4%B8%8E%E5%AE%9E%E7%8E%B0)
 
 [typeOf，hasOwnProperty，isPrototypeOf，instanceof](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#typeofhasownpropertyisprototypeofinstanceof)
 
@@ -69,8 +61,6 @@
 
 [call 和 apply 的第一个参数](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#call-%E5%92%8C-apply-%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%8F%82%E6%95%B0)
 
-[判断是否是数组 isArray](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#%E5%88%A4%E6%96%AD%E6%98%AF%E5%90%A6%E6%98%AF%E6%95%B0%E7%BB%84-isarray)
-
 [从请求的异步回调函数中取值的解决办法](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#%E4%BB%8E%E8%AF%B7%E6%B1%82%E7%9A%84%E5%BC%82%E6%AD%A5%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0%E4%B8%AD%E5%8F%96%E5%80%BC%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95)
 
 [JavaScript 异步加载方案](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#javascript-%E5%BC%82%E6%AD%A5%E5%8A%A0%E8%BD%BD%E6%96%B9%E6%A1%88)
@@ -82,8 +72,6 @@
 [检测是否有元素被隐藏](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#%E6%A3%80%E6%B5%8B%E6%98%AF%E5%90%A6%E6%9C%89%E5%85%83%E7%B4%A0%E8%A2%AB%E9%9A%90%E8%97%8F)
 
 [鼠标长按事件](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#%E9%BC%A0%E6%A0%87%E9%95%BF%E6%8C%89%E4%BA%8B%E4%BB%B6)
-
-[如何判断一个对象是否为空](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#%E5%A6%82%E4%BD%95%E5%88%A4%E6%96%AD%E4%B8%80%E4%B8%AA%E5%AF%B9%E8%B1%A1%E6%98%AF%E5%90%A6%E4%B8%BA%E7%A9%BA)
 
 [如何快速判断 DOM 元素位于 viewport 以外](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#%E5%A6%82%E4%BD%95%E5%BF%AB%E9%80%9F%E5%88%A4%E6%96%AD-dom-%E5%85%83%E7%B4%A0%E4%BD%8D%E4%BA%8E-viewport-%E4%BB%A5%E5%A4%96)
 

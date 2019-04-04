@@ -43,21 +43,11 @@
 
 [clientWidth, offsetWidth, scrollWidth](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#clientwidth-offsetwidth-scrollwidth)
 
-[typeOf，hasOwnProperty，isPrototypeOf，instanceof](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#typeofhasownpropertyisprototypeofinstanceof)
-
-[运算符优先级](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#%E8%BF%90%E7%AE%97%E7%AC%A6%E4%BC%98%E5%85%88%E7%BA%A7)
-
-[JavaScript 中的数据绑定](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#javascript-%E4%B8%AD%E7%9A%84%E6%95%B0%E6%8D%AE%E7%BB%91%E5%AE%9A)
-
-[原型和闭包](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#%E5%8E%9F%E5%9E%8B%E5%92%8C%E9%97%AD%E5%8C%85)
-
 [自由变量 到 作用域链](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#%E8%87%AA%E7%94%B1%E5%8F%98%E9%87%8F-%E5%88%B0-%E4%BD%9C%E7%94%A8%E5%9F%9F%E9%93%BE)
 
 [闭包](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#%E9%97%AD%E5%8C%85)
 
 [ES6 的一些新方法](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#es6-%E7%9A%84%E4%B8%80%E4%BA%9B%E6%96%B0%E6%96%B9%E6%B3%95)
-
-[fileReader 接口](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#filereader-%E6%8E%A5%E5%8F%A3)
 
 [call 和 apply 的第一个参数](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#call-%E5%92%8C-apply-%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%8F%82%E6%95%B0)
 
@@ -146,7 +136,7 @@
 
 [深度克隆](https://github.com/heptaluan/blog/blob/master/essay/arithmetic/00.md#%E6%B7%B1%E5%BA%A6%E5%85%8B%E9%9A%86)
 
-[生成 [0, 1, 2, 3 ... N - 1] 的数组](https://github.com/heptaluan/blog/blob/master/essay/arithmetic/00.md#%E7%94%9F%E6%88%90-0-1-2-3--n---1-%E7%9A%84%E6%95%B0%E7%BB%84)
+[不使用 loop 循环，生成指定长度数组（[0, 1, 2, 3 ... N - 1]）](https://github.com/heptaluan/blog/blob/master/essay/arithmetic/00.md#%E4%B8%8D%E4%BD%BF%E7%94%A8-loop-%E5%BE%AA%E7%8E%AF%E7%94%9F%E6%88%90%E6%8C%87%E5%AE%9A%E9%95%BF%E5%BA%A6%E6%95%B0%E7%BB%840-1-2-3--n---1)
 
 [找出数字数组中最大的元素](https://github.com/heptaluan/blog/blob/master/essay/arithmetic/00.md#%E6%89%BE%E5%87%BA%E6%95%B0%E5%AD%97%E6%95%B0%E7%BB%84%E4%B8%AD%E6%9C%80%E5%A4%A7%E7%9A%84%E5%85%83%E7%B4%A0)
 

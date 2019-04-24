@@ -1,6 +1,6 @@
 算是一个大的汇总仓库吧，囊括了平时瞎捣鼓的绝大部分东西，还有一些笔记啊，杂七杂八的知识点，面试题之类的
 
-权当是记录自己成长的过程吧，一些感觉比较好的优质内容都整理成的博文放在了 [Issues](https://github.com/heptaluan/web-blog/issues) 当中
+权当是记录自己成长的过程吧，一些感觉比较好的优质内容都整理成的博文放在了 [Issues](https://github.com/heptaluan/blog/issues) 当中
 
 欢迎拍砖，如果觉得内容还不错，可以点颗 `Star` 支持一下：）
 

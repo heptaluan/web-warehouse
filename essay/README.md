@@ -90,6 +90,8 @@
 
 
 
+
+
 ## 常用的一些方法，字符串和数组的一些算法，正则等
 
 [[1, 2, 3, 4, 5] => [1, 2, 3, 4, 5, 1, 4, 9, 16, 25]](https://github.com/heptaluan/blog/blob/master/essay/arithmetic/00.md#1-2-3-4-5--1-2-3-4-5-1-4-9-16-25)
@@ -540,12 +542,12 @@
 
 [JavaScript 中的栈和堆](https://github.com/heptaluan/blog/blob/master/essay/other/00.md#javascript-%E4%B8%AD%E7%9A%84%E6%A0%88%E5%92%8C%E5%A0%86)
 
-[字符编码](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81)
+[字符编码](https://github.com/heptaluan/blog/blob/master/essay/other/00.md#%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81)
 
-[JavaScript 中的垃圾回收机制](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#javascript-%E4%B8%AD%E7%9A%84%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E6%9C%BA%E5%88%B6)
+[JavaScript 中的垃圾回收机制](https://github.com/heptaluan/blog/blob/master/essay/other/00.md#javascript-%E4%B8%AD%E7%9A%84%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E6%9C%BA%E5%88%B6)
 
-[GIT 和 SVN 的区别](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#git-%E5%92%8C-svn-%E7%9A%84%E5%8C%BA%E5%88%AB)
+[GIT 和 SVN 的区别](https://github.com/heptaluan/blog/blob/master/essay/other/00.md#git-%E5%92%8C-svn-%E7%9A%84%E5%8C%BA%E5%88%AB)
 
-[面向对象的五大基本原则](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%E4%BA%94%E5%A4%A7%E5%9F%BA%E6%9C%AC%E5%8E%9F%E5%88%99)
+[面向对象的五大基本原则](https://github.com/heptaluan/blog/blob/master/essay/other/00.md#%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%E4%BA%94%E5%A4%A7%E5%9F%BA%E6%9C%AC%E5%8E%9F%E5%88%99)
 
-[常用设计模式的实现思路](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#%E5%B8%B8%E7%94%A8%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E7%9A%84%E5%AE%9E%E7%8E%B0%E6%80%9D%E8%B7%AF)
+[常用设计模式的实现思路](https://github.com/heptaluan/blog/blob/master/essay/other/00.md#%E5%B8%B8%E7%94%A8%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E7%9A%84%E5%AE%9E%E7%8E%B0%E6%80%9D%E8%B7%AF)

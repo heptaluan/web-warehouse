@@ -170,6 +170,8 @@ func numbers() (int, int, string) {
 
 常量中的数据类型只可以是布尔型、数字型（整数型、浮点型和复数）和字符串型
 
+常量不能用 `:=` 语法声明
+
 常量可以用 `len()`，`cap()`，`unsafe.Sizeof()` 函数计算表达式的值
 
 常量表达式中，函数必须是内置函数，否则编译不过
@@ -524,6 +526,8 @@ switch{
 
 ## 循环语句
 
+`Go` 只有一种循环结构，`for` 循环
+
 #### for 循环
 
 有三种方式
@@ -631,6 +635,24 @@ func main() {
       fmt.Printf("%d 是素数\n", a)
     }
   }
+}
+```
+
+需要注意的是，初始化语句和后置语句是可选的
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+  sum := 1
+  
+  for ; sum < 1000; {
+    sum += sum
+  }
+
+  fmt.Println(sum)  // 1024
 }
 ```
 
@@ -2077,3 +2099,34 @@ func main() {
 在 `goroutine` 中执行完成后给通道一个值 `0`，则主函数会一直等待通道中的值
 
 一旦通道有值，主函数才会结束
+
+
+
+----
+
+----
+
+
+## 内容补充
+
+#### 返回值
+
+Go 的返回值可以被命名，没有参数的 return 语句返回已命名的返回值，也就是直接返回
+
+```go
+package main
+
+import "fmt"
+
+func spliy(sum int) (x, y int) {
+  x = sum * 4 / 5
+  y = sum - x
+  // 如果这里不指明返回值，默认直接返回 x, y
+  // 相当于 return x, y
+  return
+}
+
+func main() {
+  fmt.Println(spliy(10))
+}
+```

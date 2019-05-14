@@ -483,6 +483,50 @@ func main() {
 如果 `case` 带有 `fallthrough`，程序会继续执行下一条 `case`，且它不会去判断下一个 `case` 的表达式是否为 `true`
 
 
+
+#### defer
+
+`defer` 语句会将函数推迟到外层函数返回之后执行
+
+推迟调用的函数其参数会立即求值，但直到外层函数返回前该函数都不会被调用
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+	defer fmt.Println("world")
+
+	fmt.Println("hello")
+}
+
+// hello world
+```
+
+#### defer 栈
+
+推迟的函数调用会被压入一个栈中，当外层函数返回时，被推迟的函数会按照**后进先出**的顺序调用
+
+> 可以参考 [defer-panic-and-recover](https://blog.go-zh.org/defer-panic-and-recover)
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+	fmt.Println("counting")
+
+	for i := 0; i < 10; i++ {
+		defer fmt.Println(i)
+	}
+
+	fmt.Println("done")
+}
+```
+
+
 #### 补充
 
 * 没有三目运算符，所以不支持 `? :` 形式的条件判断
@@ -520,6 +564,7 @@ switch{
   case 3:
 }
 ```
+
 
 
 
@@ -653,6 +698,24 @@ func main() {
   }
 
   fmt.Println(sum)  // 1024
+}
+```
+
+如果剔除掉 `;` 也是可以执行的，就类似于 `C` 当中的 `while` 循环
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+  sum := 1
+  
+  for sum < 1000 {
+    sum += sum
+  }
+
+  fmt.Println(sum)
 }
 ```
 
@@ -942,6 +1005,20 @@ func (c Circle) getArea() float64 {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## 数组
 
 声明方式如下
@@ -1011,108 +1088,52 @@ func setArray2(params [5]int) {
 
 ## 指针
 
-我们知道，变量是一种使用方便的占位符，用于引用计算机内存地址
+`Go` 拥有指针，指针保存了值的内存地址
 
-`Go` 语言的取地址符是 `&`，放到一个变量前使用就会返回相应变量的内存地址
-
-```go
-package main
-
-import "fmt"
-
-func main() {
-  var a int = 10
-
-  fmt.Printf("变量 a 的地址为：%x", &a) // c000010098
-}
-```
-
-#### 什么是指针
-
-一个指针变量指向了一个值的内存地址
-
-类似于变量和常量，在使用指针前你需要声明指针
-
-```go
-var var_name *var-type
-```
-
-* `*var-type` 为指针类型
-
-* `var_name` 为指针变量名
-
-* `*` 用于指定变量是作为一个指针
-
-比如下例就是一个指向 `int` 和 `float32` 的指针
-
-```go
-var ip *int     // 指向整型
-
-var fp *float32 // 指向浮点型
-```
-
-
-#### 如何使用
-
-1. 定义指针变量
-
-2. 为指针变量赋值
-
-3. 访问指针变量中指向地址的值
-
-在指针类型前面加上 `*` 来获取指针所指向的内容
-
-```go
-package main
-
-import "fmt"
-
-func main() {
-  var a int = 20 /* 声明实际变量 */
-  var ip *int    /* 声明指针变量 */
-
-  ip = &a /* 指针变量的存储地址 */
-
-  fmt.Printf("a 变量的地址是: %x\n", &a)
-
-  /* 指针变量的存储地址 */
-  fmt.Printf("ip 变量储存的指针地址: %x\n", ip)
-
-  /* 使用指针访问值 */
-  fmt.Printf("*ip 变量的值: %d\n", *ip)
-}
-
-// a 变量的地址为： c000054080
-// ip 变量储存的指针地址为： c000054080
-// ip 变量的值为： 20
-```
-
-
-#### 空指针
-
-当一个指针被定义后没有分配到任何变量的时候，它的值为 `nil`，也称为空指针
+类型 `*T` 是指向 `T` 类型值的指针，当一个指针被定义后没有分配到任何变量的时候，它的值为 `nil`，也称为空指针
 
 > 一个指针变量通常缩写为 `ptr`
 
 ```go
+var p *int
+```
+
+`&` 操作符会生成一个指向其操作数的指针
+
+```go
+i := 42
+p = &i
+```
+
+`*` 操作符表示指针指向的底层值
+
+```go
+fmt.Println(*p) // 通过指针 p 读取 i
+*p = 21         // 通过指针 p 设置 i
+```
+
+这也就是通常所说的 "间接引用" 或 "重定向"
+
+```go
 package main
 
 import "fmt"
 
 func main() {
-  var ptr *int
+	i, j := 42, 25
 
-  fmt.Printf("ptr 的值为： %x", ptr)  // 0
+	p := &i         // 指向 i
+	fmt.Println(*p) // 通过指针读取 i 的值
+
+	*p = 21        // 通过指针设置 i 的值
+	fmt.Println(i) // 查看 i 的值
+
+	p = &j         // 指向 j
+	*p = *p / 5    // 通过指针对 j 进行除法运算
+	fmt.Println(j) // 查看 j 的值
 }
 ```
 
-空值的判断可以直接与 `nil` 进行比较
-
-```go
-if (ptr != nil)
-
-if (ptr == nil)
-```
 
 
 
@@ -1209,6 +1230,56 @@ func main() {
 }
 ```
 
+关于结构体指针，如下例
+
+如果有一个指向结构体的指针 p，那么可以通过 (*p).X 来访问字段 X，但是也可以省略不写（隐式间接引用）
+
+```go
+package main
+
+import "fmt"
+
+type Vertex struct {
+	X int
+	Y int
+}
+
+func main() {
+	v := Vertex{1, 2}
+	p := &v
+	p.X = 200
+	fmt.Println(v)
+}
+```
+
+
+#### 结构体文法
+
+结构体文法通过直接列出字段的值来新分配一个结构体
+
+特殊的前缀 `&` 返回一个指向结构体的指针
+
+```go
+package main
+
+import "fmt"
+
+type Vertex struct {
+	X, Y int
+}
+
+var (
+	v1 = Vertex{1, 2}  // 创建一个 Vertex 类型的结构体
+	v2 = Vertex{X: 1}  // Y:0 被隐式地赋予
+	v3 = Vertex{}      // X:0 Y:0
+	p  = &Vertex{1, 2} // 创建一个 *Vertex 类型的结构体（指针）
+)
+
+func main() {
+	fmt.Println(v1, v2, v3, p)
+}
+```
+
 
 #### 结构体作为参数传递
 
@@ -1285,9 +1356,51 @@ func main() {
 
 与数组相比切片的长度是不固定的，可以追加元素，在追加时可能使切片的容量增大
 
-简单来说，实际的是获取数组的某一部分
+切片通过两个下标来界定，即一个上界和一个下界，二者以冒号分隔
 
-切片由三部分组成，指向底层数组的指针、`len`、`cap`
+```go
+a[low : high]
+```
+
+它会选择一个半开区间，包括第一个元素，但排除最后一个元素，例如
+
+```go
+// 包含 a 中下标从 1 到 3 的元素
+a[1:4]
+```
+
+简单来说，实际的是获取数组的某一部分，就像数组的引用
+
+切片并不存储任何数据，它只是描述了底层数组中的一段
+
+更改切片的元素会修改其底层数组中对应的元素
+
+与它共享底层数组的切片都会观测到这些修改
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+	names := [4]string{
+		"AAA",
+		"BBB",
+		"CCC",
+		"DDD",
+	}
+
+	fmt.Println(names)
+
+	a := names[0:2]
+	b := names[1:3]
+	fmt.Println(a, b)
+
+	b[0] = "EEE"
+	fmt.Println(a, b)
+	fmt.Println(names)
+}
+```
 
 
 #### 定义
@@ -1335,11 +1448,24 @@ s1 := s[startIndex: endIndex]
 s := make([]int, len, cap)
 ```
 
+对于数组 `var a [10]int` 来说，以下切片是等价的
+
+```go
+a[0: 10]
+a[:10]
+a[0:]
+a[:]
+```
+
 #### len() 和 cap()
 
-切片是可索引的，并且可以由 `len()` 方法获取长度
+切片拥有 **长度** 和 **容量**
 
-切片提供了计算容量的方法 `cap()`，可以测量切片最长可以达到多少
+切片的长度就是它所包含的元素个数
+
+切片的**容量**是从它的第一个元素开始数，到其底层数组元素末尾的个数
+
+切片 `s` 的长度和容量可通过表达式 `len(s)` 和 `cap(s)` 来获取
 
 ```go
 package main
@@ -1347,9 +1473,24 @@ package main
 import "fmt"
 
 func main() {
-  var numbers = make([]int, 3, 5)
-  // len = 3, cap = 5, slice = [0 0 0]
-  fmt.Printf("len = %d, cap = %d, slice = %v", len(numbers), cap(numbers), numbers)
+	s := []int{2, 3, 5, 7, 11, 13}
+	printSlice(s)
+
+	// 截取切片使其长度为 0
+	s = s[:0]
+	printSlice(s)
+
+	// 拓展其长度
+	s = s[:4]
+	printSlice(s)
+
+	// 舍弃前两个值
+	s = s[2:]
+	printSlice(s)
+}
+
+func printSlice(s []int) {
+	fmt.Printf("len=%d cap=%d %v\n", len(s), cap(s), s)
 }
 ```
 

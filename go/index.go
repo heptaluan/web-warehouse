@@ -2,23 +2,28 @@ package main
 
 import "fmt"
 
-func main() {
-	s := []int{2, 3, 5, 7, 11, 13}
-	printSlice(s)
-
-	// 截取切片使其长度为 0
-	s = s[:0]
-	printSlice(s)
-
-	// 拓展其长度
-	s = s[:4]
-	printSlice(s)
-
-	// 舍弃前两个值
-	s = s[2:]
-	printSlice(s)
+type Vertex struct {
+	X, Y float64
 }
 
-func printSlice(s []int) {
-	fmt.Printf("len=%d cap=%d %v\n", len(s), cap(s), s)
+func (v *Vertex) Scale(f float64) {
+	v.X = v.X * f
+	v.Y = v.Y * f
+}
+
+func ScaleFunc(v *Vertex, f float64) {
+	v.X = v.X * f
+	v.Y = v.Y * f
+}
+
+func main() {
+	v := Vertex{3, 4}
+	v.Scale(2)
+	ScaleFunc(&v, 10)
+
+	p := &Vertex{4, 3}
+	p.Scale(3)
+	ScaleFunc(p, 8)
+
+	fmt.Println(v, p)
 }

@@ -496,9 +496,9 @@ package main
 import "fmt"
 
 func main() {
-	defer fmt.Println("world")
+  defer fmt.Println("world")
 
-	fmt.Println("hello")
+  fmt.Println("hello")
 }
 
 // hello world
@@ -516,13 +516,13 @@ package main
 import "fmt"
 
 func main() {
-	fmt.Println("counting")
+  fmt.Println("counting")
 
-	for i := 0; i < 10; i++ {
-		defer fmt.Println(i)
-	}
+  for i := 0; i < 10; i++ {
+    defer fmt.Println(i)
+  }
 
-	fmt.Println("done")
+  fmt.Println("done")
 }
 ```
 
@@ -987,6 +987,121 @@ func (c Circle) getArea() float64 {
 
 
 
+## 实例，斐波纳契
+
+#### 递归
+
+```go
+package main
+
+import "fmt"
+
+func fibonacci(num int) int {
+	if num < 2 {
+		return 1
+	}
+
+	return fibonacci(num - 1) + fibonacci(num - 2)
+}
+
+func main() {
+	for i := 0; i < 10; i++ {
+		nums := fibonacci(i)
+		fmt.Println(nums)
+	}
+}
+```
+
+#### 闭包
+
+```go
+package main
+
+import "fmt"
+
+func fibonacci() func() int {
+	a, b := 0, 1
+	return func() int {
+		a, b = b, a+b
+		return a
+	}
+}
+
+func main() {
+	f := fibonacci()
+	for i := 0; i < 10; i++ {
+		fmt.Println(f())
+	}
+}
+```
+
+#### 通道
+
+```go
+package main
+
+import (
+	"fmt"
+)
+
+func fib(n int, c chan int) {
+	a, b := 0, 1
+	for i := 0; i < n; i++ {
+		a, b = b, a+b
+		c <- a
+	}
+
+	close(c)
+}
+
+func main() {
+	c := make(chan int, 10)
+
+	fib(cap(c), c)
+
+	for i := range c {
+		fmt.Println(i)
+	}
+
+}
+```
+
+
+#### 利用保存的计算结果
+
+```go
+package main
+
+import "fmt"
+
+var fibs [40]uint64
+
+func fib_function(n int) (res uint64) {
+	if fibs[n] != 0 {
+		res = fibs[n]
+		return
+	}
+
+	if n <= 1 {
+		res = 1
+	} else {
+		res = fib_function(n-1) + fib_function(n-2)
+	}
+
+	fibs[n] = res
+	return
+}
+
+func main() {
+	fib_function(10)
+
+	for i := 0; i < 10; i++ {
+		fmt.Println(fibs[i])
+	}
+}
+```
+
+
 ## 变量作用域
 
 同其他语言类似，也分为局部变量，全局变量和形式参数
@@ -1120,17 +1235,17 @@ package main
 import "fmt"
 
 func main() {
-	i, j := 42, 25
+  i, j := 42, 25
 
-	p := &i         // 指向 i
-	fmt.Println(*p) // 通过指针读取 i 的值
+  p := &i         // 指向 i
+  fmt.Println(*p) // 通过指针读取 i 的值
 
-	*p = 21        // 通过指针设置 i 的值
-	fmt.Println(i) // 查看 i 的值
+  *p = 21        // 通过指针设置 i 的值
+  fmt.Println(i) // 查看 i 的值
 
-	p = &j         // 指向 j
-	*p = *p / 5    // 通过指针对 j 进行除法运算
-	fmt.Println(j) // 查看 j 的值
+  p = &j         // 指向 j
+  *p = *p / 5    // 通过指针对 j 进行除法运算
+  fmt.Println(j) // 查看 j 的值
 }
 ```
 
@@ -1232,7 +1347,7 @@ func main() {
 
 关于结构体指针，如下例
 
-如果有一个指向结构体的指针 p，那么可以通过 (*p).X 来访问字段 X，但是也可以省略不写（隐式间接引用）
+如果有一个指向结构体的指针 `p`，那么可以通过 `(*p).X` 来访问字段 `X`，但是也可以省略不写（隐式间接引用）
 
 ```go
 package main
@@ -1240,15 +1355,15 @@ package main
 import "fmt"
 
 type Vertex struct {
-	X int
-	Y int
+  X int
+  Y int
 }
 
 func main() {
-	v := Vertex{1, 2}
-	p := &v
-	p.X = 200
-	fmt.Println(v)
+  v := Vertex{1, 2}
+  p := &v
+  p.X = 200
+  fmt.Println(v)
 }
 ```
 
@@ -1265,18 +1380,18 @@ package main
 import "fmt"
 
 type Vertex struct {
-	X, Y int
+  X, Y int
 }
 
 var (
-	v1 = Vertex{1, 2}  // 创建一个 Vertex 类型的结构体
-	v2 = Vertex{X: 1}  // Y:0 被隐式地赋予
-	v3 = Vertex{}      // X:0 Y:0
-	p  = &Vertex{1, 2} // 创建一个 *Vertex 类型的结构体（指针）
+  v1 = Vertex{1, 2}  // 创建一个 Vertex 类型的结构体
+  v2 = Vertex{X: 1}  // Y:0 被隐式地赋予
+  v3 = Vertex{}      // X:0 Y:0
+  p  = &Vertex{1, 2} // 创建一个 *Vertex 类型的结构体（指针）
 )
 
 func main() {
-	fmt.Println(v1, v2, v3, p)
+  fmt.Println(v1, v2, v3, p)
 }
 ```
 
@@ -1383,22 +1498,22 @@ package main
 import "fmt"
 
 func main() {
-	names := [4]string{
-		"AAA",
-		"BBB",
-		"CCC",
-		"DDD",
-	}
+  names := [4]string{
+    "AAA",
+    "BBB",
+    "CCC",
+    "DDD",
+  }
 
-	fmt.Println(names)
+  fmt.Println(names)
 
-	a := names[0:2]
-	b := names[1:3]
-	fmt.Println(a, b)
+  a := names[0:2]
+  b := names[1:3]
+  fmt.Println(a, b)
 
-	b[0] = "EEE"
-	fmt.Println(a, b)
-	fmt.Println(names)
+  b[0] = "EEE"
+  fmt.Println(a, b)
+  fmt.Println(names)
 }
 ```
 
@@ -1443,9 +1558,6 @@ s := s[ :endIndex]
 
 // 也可以通过某个切片来初始化另外一个切片
 s1 := s[startIndex: endIndex]
-
-// 通过内置函数 make() 初始化
-s := make([]int, len, cap)
 ```
 
 对于数组 `var a [10]int` 来说，以下切片是等价的
@@ -1455,6 +1567,22 @@ a[0: 10]
 a[:10]
 a[0:]
 a[:]
+```
+
+也可以通过内建函数 `make` 来进行创建，这也是动态创建切片的方式
+
+`make` 函数会分配一个元素为零值的数组并返回一个引用了它的切片
+
+```go
+a := make([]int, 5)  // len(a) = 5
+```
+
+要指定它的容量，需要向 `make` 传入第三个参数
+
+```go
+b := make([]int, 0, 5)  // len(b) = 0, cap(b) = 5
+b = b[:cap(b)]          // len(b) = 5, cap(b) = 5
+b = b[1:]               // len(b) = 4, cap(b) = 4
 ```
 
 #### len() 和 cap()
@@ -1473,24 +1601,24 @@ package main
 import "fmt"
 
 func main() {
-	s := []int{2, 3, 5, 7, 11, 13}
-	printSlice(s)
+  s := []int{2, 3, 5, 7, 11, 13}
+  printSlice(s)
 
-	// 截取切片使其长度为 0
-	s = s[:0]
-	printSlice(s)
+  // 截取切片使其长度为 0
+  s = s[:0]
+  printSlice(s)
 
-	// 拓展其长度
-	s = s[:4]
-	printSlice(s)
+  // 拓展其长度
+  s = s[:4]
+  printSlice(s)
 
-	// 舍弃前两个值
-	s = s[2:]
-	printSlice(s)
+  // 舍弃前两个值
+  s = s[2:]
+  printSlice(s)
 }
 
 func printSlice(s []int) {
-	fmt.Printf("len=%d cap=%d %v\n", len(s), cap(s), s)
+  fmt.Printf("len=%d cap=%d %v\n", len(s), cap(s), s)
 }
 ```
 
@@ -1505,9 +1633,14 @@ package main
 import "fmt"
 
 func main() {
-  var numbers []int
-  // len = 0, cap = 0, slice = []
-  fmt.Printf("len = %d, cap = %d, slice = %v", len(numbers), cap(numbers), numbers)
+
+  var s []int
+  fmt.Println(s, len(s), cap(s))
+
+  if s == nil {
+    fmt.Println("nil!")
+  }
+
 }
 ```
 
@@ -1681,6 +1814,10 @@ len = 4, cap = 4, slice = [5 6 7 8]
 
 在数组和切片中它返回元素的索引和索引对应的值，在集合中返回 `key-value` 对的 `key` 值
 
+当使用 `for` 循环遍历切片时，每次迭代都会返回两个值
+
+第一个值为当前元素的下标，第二个值为该下标所对应元素的一份副本
+
 ```go
 package main
 
@@ -1727,7 +1864,7 @@ func main() {
 
 
 
-## Map
+## Map（映射）
 
 `Map` 是一种无序的键值对的集合，`Map` 最重要的一点是通过 `key` 来快速检索数据，`key` 类似于索引，指向数据的值
 
@@ -1809,124 +1946,293 @@ func main() {
 
 
 
+#### 其他操作
 
-
-## 接口
-
-`Go` 语言提供了另外一种数据类型接口，它把所有的具有共性的方法定义在一起，任何其他类型只要实现了这些方法就是实现了这个接口
+修改映射，比如在映射 `m` 中插入或修改元素
 
 ```go
-/* 定义接口 */
-type interface_name interface {
-  method_name1 [return_type]
-  method_name2 [return_type]
-  method_name3 [return_type]
-  ...
-  method_namen [return_type]
-}
-
-/* 定义结构体 */
-type struct_name struct {
-  /* variables */
-}
-
-/* 实现接口方法 */
-func (struct_name_variable struct_name) method_name1() [return_type] {
-  /* 方法实现 */
-}
-...
-func (struct_name_variable struct_name) method_namen() [return_type] {
-  /* 方法实现*/
-}
+m[key] = elem
 ```
+
+获取元素
 
 ```go
-package main
-
-import (
-  "fmt"
-)
-
-// 定义一个接口Phone
-type Phone interface {
-  // 有一个方法 call()
-  call()
-}
-
-type NokiaPhone struct {
-}
-
-func (nokiaPhone NokiaPhone) call() {
-  fmt.Println("I am Nokia, I can call you!")
-}
-
-type IPhone struct {
-}
-
-func (iPhone IPhone) call() {
-  fmt.Println("I am iPhone, I can call you!")
-}
-
-func main() {
-  // 定义了一个 Phone 类型变量，并分别为之赋值为 NokiaPhone 和 IPhone
-  // 然后调用 call() 方法
-  var phone Phone
-
-  phone = new(NokiaPhone)
-  phone.call()
-
-  phone = new(IPhone)
-  phone.call()
-
-}
+elem = m[key]
 ```
 
-简单来说就是
+删除元素，使用之前提到过的 `delete()` 方法
 
 ```go
-func (name string) fn() string {
-  print("这是实现方法的写法")
-}
-
-func sum(x int, y int) int {
-  print("这是正常定义函数的写法")
-}
+delete(m, key)
 ```
 
-在来看看接口方法传参
+可以通过双赋值来检测某个键是否存在
+
+```go
+// 若 key 在 m 中，ok 为 true ；否则，ok 为 false
+// 若 key 不在映射中，那么 elem 是该映射元素类型的零值
+// 同样的，当从映射中读取某个不存在的键时，结果是映射的元素类型的零值
+elem, ok = m[key]
+```
+
+需要注意的是，若 `elem` 或 `ok` 还未声明，可以使用短变量声明
+
+```go
+elem, ok := m[key]
+```
+
+一个完整的示例如下
 
 ```go
 package main
 
 import "fmt"
 
-type Phone interface {
-  call(param int) string
-  takephoto()
+func main() {
+	m := make(map[string]int)
+
+	m["Answer"] = 42
+	fmt.Println(m["Answer"])
+
+	m["Answer"] = 48
+	fmt.Println(m["Answer"])
+
+	delete(m, "Answer")
+	fmt.Println(m["Answer"])
+
+	v, ok := m["Answer"]
+	fmt.Println(v, ok)
+}
+```
+
+
+
+
+
+
+
+
+## 方法
+
+`Go` 没有类，不过可以为结构体类型定义方法，方法就是一类带特殊的接收者参数的函数
+
+方法接收者在它自己的参数列表内，位于 `func` 关键字和方法名之间，如下
+
+```go
+package main
+
+import (
+	"fmt"
+	"math"
+)
+
+type Vertex struct {
+	X, Y float64
 }
 
-type Huawei struct {
-}
-
-func (huawei Huawei) call(param int) string {
-  fmt.Println("i am Huawei, i can call you!", param)
-  // 注意，这里需要 return
-  return "damon"
-}
-
-func (huawei Huawei) takephoto() {
-  fmt.Println("i can take a photo for you")
+func (v Vertex) Abs() float64 {
+	return math.Sqrt(v.X*v.X + v.Y*v.Y)
 }
 
 func main() {
-  var phone Phone
-  phone = new(Huawei)
-  phone.takephoto()
-
-  r := phone.call(50)
-  fmt.Println(r)
+	v := Vertex{3, 4}
+	fmt.Println(v.Abs())
 }
 ```
+
+简单来说，只需要记住：**方法只是个带接收者参数的函数**
+
+比如换一种写法，调整为一个正常的函数
+
+```go
+package main
+
+import (
+	"fmt"
+	"math"
+)
+
+type Vertex struct {
+	X, Y float64
+}
+
+func Abs(v Vertex) float64 {
+	return math.Sqrt(v.X*v.X + v.Y*v.Y)
+}
+
+func main() {
+	v := Vertex{3, 4}
+	fmt.Println(Abs(v))
+}
+```
+
+也可以为非结构体类型声明方法
+
+但是需要注意，只能为在同一包内定义的类型的接收者声明方法，而不能为其它包内定义的类型（包括 `int` 之类的内建类型）的接收者声明方法
+
+简单来说就是，就是接收者的类型定义和方法声明必须在同一包内，并且不能为内建类型声明方法
+
+```go
+package main
+
+import (
+	"fmt"
+	"math"
+)
+
+type MyFloat float64
+
+func (f MyFloat) Abs() float64 {
+	if f < 0 {
+		return float64(-f)
+	} else {
+		return float64(f)
+	}
+}
+
+func main() {
+	f := MyFloat(-math.Sqrt2)
+	fmt.Println(f.Abs())
+}
+```
+
+
+
+#### 指针接收者
+
+还可以为指针接收者声明方法
+
+这意味着对于某类型 `T`，接收者的类型可以用 `*T` 的文法（但是 `T` 不能是 `*int` 这样的指针）
+
+```go
+package main
+
+import (
+	"fmt"
+	"math"
+)
+
+type Vertex struct {
+	X, Y float64
+}
+
+func (v Vertex) Abs() float64 {
+	return math.Sqrt(v.X*v.X + v.Y*v.Y)
+}
+
+// 为 *Vertex 定义了 Scale 方法
+func (v *Vertex) Scale(f float64) {
+	v.X = v.X * f
+	v.Y = v.Y * f
+}
+
+func main() {
+	v := Vertex{3, 4}
+	v.Scale(10)
+	fmt.Println(v.Abs()) // 50
+}
+```
+
+如果使用值接收者，那么 `Scale` 方法会对原始 `Vertex` 值的**副本**进行操作（对于函数其他参数也是如此）
+
+例如上例，去掉 `Scale` 函数声明当中的 `*`
+
+```go
+package main
+
+import (
+	"fmt"
+	"math"
+)
+
+type Vertex struct {
+	X, Y float64
+}
+
+func (v Vertex) Abs() float64 {
+	return math.Sqrt(v.X*v.X + v.Y*v.Y)
+}
+
+func (v Vertex) Scale(f float64) {
+	v.X = v.X * f
+	v.Y = v.Y * f
+}
+
+func main() {
+  v := Vertex{3, 4}
+  // 这里操作的只是值的副本
+  // 所以只有使用指针接收者来更改 main 函数中声明的 Vertex 的值
+	v.Scale(10) 
+	fmt.Println(v.Abs()) // 5
+}
+```
+
+
+
+#### 方法与指针重定向
+
+比较之前的示例可以发现，带指针参数的函数必须接收一个指针
+
+```go
+var v Vertex
+ScaleFunc(v, 5)  // 编译错误！
+ScaleFunc(&v, 5) // OK
+```
+
+而以指针为接收者的方法被调用的时候，接收者既能为值又能为指针
+
+```go
+var v Vertex
+v.Scale(5)  // OK
+p := &v
+p.Scale(10) // OK
+```
+
+对于语句 `v.Scale(5)`，即便 `v` 是个值而非指针，带指针接收者的方法也能被直接调用
+
+也就是说，由于 `Scale` 方法有一个指针接收者
+
+为方便起见，`Go` 会将语句 `v.Scale(5)` 解释为 `(&v).Scale(5)`
+
+```go
+package main
+
+import "fmt"
+
+type Vertex struct {
+	X, Y float64
+}
+
+func (v *Vertex) Scale(f float64) {
+	v.X = v.X * f
+	v.Y = v.Y * f
+}
+
+func ScaleFunc(v *Vertex, f float64) {
+	v.X = v.X * f
+	v.Y = v.Y * f
+}
+
+func main() {
+	v := Vertex{3, 4}
+	v.Scale(2)
+	ScaleFunc(&v, 10)
+
+	p := &Vertex{4, 3}
+	p.Scale(3)
+	ScaleFunc(p, 8)
+
+	fmt.Println(v, p)
+}
+```
+
+
+
+
+
+
+
+
 
 
 

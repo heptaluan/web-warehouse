@@ -6,7 +6,7 @@
 
 ## 2019
 
-[Node 重新回顾](https://github.com/heptaluan/blog/blob/master/node/note/2019/01.md)
+[Node](https://github.com/heptaluan/blog/blob/master/node/note/2019/01.md)
 
 
 

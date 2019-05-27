@@ -8,6 +8,7 @@
 
 [什么是 Node.js](https://github.com/heptaluan/blog/blob/master/node/note/2019/01.md)
 
+[EventEmitter，Buffer，Stream，模块，全局对象与全局变量，常用工具](https://github.com/heptaluan/blog/blob/master/node/note/2019/02.md)
 
 
 

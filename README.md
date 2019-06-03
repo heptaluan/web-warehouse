@@ -16,6 +16,36 @@
 
 #### JavaScript
 
+[JavaScript 并发模型](https://github.com/heptaluan/blog/blob/master/blog/js/36.md)
+
+[FileReader 接口](https://github.com/heptaluan/blog/blob/master/blog/js/35.md)
+
+[JavaScript 中的数据绑定](https://github.com/heptaluan/blog/blob/master/blog/js/34.md)
+
+[运算符优先级](https://github.com/heptaluan/blog/blob/master/blog/js/33.md)
+
+[call，apply，bind 的定义与实现](https://github.com/heptaluan/blog/blob/master/blog/js/32.md)
+
+[promise 和 setTimeout](https://github.com/heptaluan/blog/blob/master/blog/js/31.md)
+
+[JavaScript 中的类型判断](https://github.com/heptaluan/blog/blob/master/blog/js/30.md)
+
+[变量的赋值与深浅拷贝](https://github.com/heptaluan/blog/blob/master/blog/js/29.md)
+
+[原型链和继承](https://github.com/heptaluan/blog/blob/master/blog/js/28.md)
+
+[JavaScript 中的 this](https://github.com/heptaluan/blog/blob/master/blog/js/27.md)
+
+[JavaScript 中的函数](https://github.com/heptaluan/blog/blob/master/blog/js/26.md)
+
+[JavaScript 中的对象](https://github.com/heptaluan/blog/blob/master/blog/js/25.md)
+
+[ES6 中的 class](https://github.com/heptaluan/blog/blob/master/blog/js/24.md)
+
+[JSON.parse() && JSON.stringify()](https://github.com/heptaluan/blog/blob/master/blog/js/23.md)
+
+[函数的 length 和 callee 属性](https://github.com/heptaluan/blog/blob/master/blog/js/22.md)
+
 [JavaScript 中节点（Node）相关属性](https://github.com/heptaluan/blog/blob/master/blog/js/21.md)
 
 [map/reduce](https://github.com/heptaluan/blog/blob/master/blog/js/20.md)
@@ -62,12 +92,34 @@
 
 #### CSS
 
+
+[伪类与伪元素](https://github.com/heptaluan/blog/blob/master/blog/css/03.md)
+
 [CSS 单行，多行溢出隐藏](https://github.com/heptaluan/blog/blob/master/blog/css/02.md)
 
 [清除浮动之 clearfix 的原理和方法](https://github.com/heptaluan/blog/blob/master/blog/css/01.md)
 
 
 
+#### Angular
+
+[动态加载（补充）](https://github.com/heptaluan/blog/blob/master/blog/angular/09.md)
+
+[动态加载](https://github.com/heptaluan/blog/blob/master/blog/angular/08.md)
+
+[关于 Angular 中的 ExpressionChangedAfterItHasBeenCheckedError](https://github.com/heptaluan/blog/blob/master/blog/angular/07.md)
+
+[:host 和 ::ng-deep](https://github.com/heptaluan/blog/blob/master/blog/angular/06.md)
+
+[Angular 中的装饰器](https://github.com/heptaluan/blog/blob/master/blog/angular/05.md)
+
+[Angular 中的管道](https://github.com/heptaluan/blog/blob/master/blog/angular/04.md)
+
+[依赖注入（补充）](https://github.com/heptaluan/blog/blob/master/blog/angular/03.md)
+
+[依赖注入](https://github.com/heptaluan/blog/blob/master/blog/angular/02.md)
+
+[Angular-CLI 与其整体架构](https://github.com/heptaluan/blog/blob/master/blog/angular/01.md)
 
 #### Node
 

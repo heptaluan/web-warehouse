@@ -16,6 +16,12 @@
 
 #### JavaScript
 
+[parseInt() 与 parseFloat()](https://github.com/heptaluan/blog/blob/master/blog/js/12.md)
+
+[原型和原型对象](https://github.com/heptaluan/blog/blob/master/blog/js/11.md)
+
+[constructor、__proto__ 和 prototype 区别和关系](https://github.com/heptaluan/blog/blob/master/blog/js/10.md)
+
 [JavaScript 中的 == 和 ===](https://github.com/heptaluan/blog/blob/master/blog/js/09.md)
 
 [JavaScript 中的类型检测](https://github.com/heptaluan/blog/blob/master/blog/js/08.md)

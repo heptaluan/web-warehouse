@@ -1,8 +1,6 @@
 算是一个大的汇总仓库吧，囊括了平时瞎捣鼓的绝大部分东西，还有一些笔记啊，杂七杂八的知识点，面试题之类的
 
-权当是记录自己成长的过程吧，一些感觉比较好的优质内容都整理成的博文放在了 [Issues](https://github.com/heptaluan/blog/issues) 当中
-
-欢迎拍砖，如果觉得内容还不错，可以点颗 `Star` 支持一下：）
+权当是记录自己成长的过程吧，欢迎拍砖，如果觉得内容还不错，可以点颗 `Star` 支持一下：）
 
 反正就是提醒自己有事没事刷一刷（~~而不是闲的时候刷知乎，QQ群斗图~~）
 
@@ -130,6 +128,8 @@
 
 
 #### HTTP
+
+[HTTP 缓存机制](https://github.com/heptaluan/blog/blob/master/blog/http/04.md)
 
 [域名发散与收敛](https://github.com/heptaluan/blog/blob/master/blog/http/03.md)
 

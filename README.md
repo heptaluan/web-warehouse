@@ -14,6 +14,8 @@
 
 #### JavaScript
 
+[map / forEach](https://github.com/heptaluan/blog/blob/master/blog/js/37.md)
+
 [JavaScript 并发模型](https://github.com/heptaluan/blog/blob/master/blog/js/36.md)
 
 [FileReader 接口](https://github.com/heptaluan/blog/blob/master/blog/js/35.md)

@@ -21,8 +21,6 @@
 
 [JavaScript 中常用的设计模式](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#javascript-%E4%B8%AD%E5%B8%B8%E7%94%A8%E7%9A%84%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F)
 
-[函数的 length 属性与 callee](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#%E5%87%BD%E6%95%B0%E7%9A%84-length-%E5%B1%9E%E6%80%A7%E4%B8%8E-callee)
-
 [常见函数 once/bind/debouce/throttle 的实现原理](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#%E5%B8%B8%E8%A7%81%E5%87%BD%E6%95%B0-oncebinddeboucethrottle-%E7%9A%84%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86)
 
 [拖拽功能](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#%E6%8B%96%E6%8B%BD%E5%8A%9F%E8%83%BD)
@@ -45,7 +43,7 @@
 
 [自由变量 到 作用域链](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#%E8%87%AA%E7%94%B1%E5%8F%98%E9%87%8F-%E5%88%B0-%E4%BD%9C%E7%94%A8%E5%9F%9F%E9%93%BE)
 
-[闭包](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#%E9%97%AD%E5%8C%85)
+[闭包及使用场景](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#%E9%97%AD%E5%8C%85)
 
 [ES6 的一些新方法](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#es6-%E7%9A%84%E4%B8%80%E4%BA%9B%E6%96%B0%E6%96%B9%E6%B3%95)
 

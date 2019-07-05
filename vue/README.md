@@ -9,38 +9,9 @@
 
   * [Element 源码解读 -- Checkbox](https://github.com/heptaluan/blog/blob/master/vue/note/element/01.md)
 
-* `Vuex`
 
-  * [State，Getter，Mutation，Action](https://github.com/heptaluan/blog/blob/master/vue/note/vuex/01.md)
-
-  * 源码相关
-
-    * [框架核心流程](https://github.com/heptaluan/blog/blob/master/vue/note/vuex/02.md)
-
-    * [初始化装载与注入](https://github.com/heptaluan/blog/blob/master/vue/note/vuex/03.md)
-
-    * [Store](https://github.com/heptaluan/blog/blob/master/vue/note/vuex/04.md)
-    
-      * [installModule, resetStoreVM, plugins](https://github.com/heptaluan/blog/blob/master/vue/note/vuex/05.md)
-
-    * [源码整体汇总](https://github.com/heptaluan/blog/blob/master/vue/note/vuex/06.md)
-    
-    * [辅助函数](https://github.com/heptaluan/blog/blob/master/vue/note/vuex/07.md)
-
-* 其他
-
-  * [利用 fetch 请求数据](https://github.com/heptaluan/blog/blob/master/vue/note/other/01.md)
+* [vue 中一些不太常用的知识点](https://github.com/heptaluan/blog/blob/master/vue/note/other/02.md)
   
-  * [vue 中一些不太常用的知识点](https://github.com/heptaluan/blog/blob/master/vue/note/other/02.md)
-  
-  * [vue 中的 mixin](https://github.com/heptaluan/blog/blob/master/vue/note/other/03.md)
-  
-  * [在 vue 中使用 jsx](https://github.com/heptaluan/blog/blob/master/vue/note/other/04.md)
-  
-  * [axios](https://github.com/heptaluan/blog/blob/master/vue/note/other/05.md)
-  
-    * [axios 中的跨域问题](https://github.com/heptaluan/blog/blob/master/vue/note/other/06.md)
-
 
 
 ----

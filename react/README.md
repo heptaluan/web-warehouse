@@ -64,19 +64,6 @@
 
   * [02、Action，Action Creator](https://github.com/heptaluan/blog/blob/master/react/react-redux/redux-simple-tutorial/note/02.md)
 
-  * `Redux` 进阶部分，源码剖析
-
-    * [03、compose(...functions)](https://github.com/heptaluan/blog/blob/master/react/react-redux/redux-simple-tutorial/note/03.md)
-
-    * [04、createStore(reducer, initialState, enhancer)](https://github.com/heptaluan/blog/blob/master/react/react-redux/redux-simple-tutorial/note/04.md)
-  
-    * [05、combineReducers(reducers)，bindActionCreators(actionCreators, dispatch)](https://github.com/heptaluan/blog/blob/master/react/react-redux/redux-simple-tutorial/note/05.md)
-
-    * [06、applyMiddleware(...middlewares)](https://github.com/heptaluan/blog/blob/master/react/react-redux/redux-simple-tutorial/note/06.md)
-
-    * [07、扩展：以及中间件的洋葱模型](https://github.com/heptaluan/blog/blob/master/react/react-redux/redux-simple-tutorial/note/07.md)
-  
-
 ----
 
 

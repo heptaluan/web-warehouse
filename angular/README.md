@@ -2,36 +2,6 @@
 
 ----
 
-### Angular 笔记
-
-记录一些工作当中接触到的一些 Angular 相关知识点
-
-[01、Angular 中的 :host 和 ::ng-deep](https://github.com/heptaluan/blog/blob/master/angular/note/Angular/note/01.md)
-
-[02、ExpressionChangedAfterItHasBeenCheckedError](https://github.com/heptaluan/blog/blob/master/angular/note/Angular/note/02.md)
-
-[03、flex 取值（0，1，auto）相关问题](https://github.com/heptaluan/blog/blob/master/angular/note/Angular/note/03.md)
-
-[04、Angular 动态加载](https://github.com/heptaluan/blog/blob/master/angular/note/Angular/note/04.md)
-
-  * 动态加载已经声明的组件
-
-  * 动态创建模块的方式来加载动态创建的组件
-
-  * 相关问题，创建动态组件后调用 `componentRef.instance` 不能更新界面数据
-
-  * `Angular` 中利用指令来指定宿主对象
-
-  * `Angular` 中如何动态添加宿主
-
-  * 如何与动态添加后的组件进行通信
-
-  * 扩展内容可见下方的第八点，`Injector`，可以算是源码剖析了
-
-[05、Angular 属性绑定 [] 和 {{}} 的差异](https://github.com/heptaluan/blog/blob/master/angular/note/Angular/note/05.md)
-
-
-
 ### Angular 修仙之路
 
 主要参考 [Angular 4.x 修仙之路](https://segmentfault.com/u/angular4)

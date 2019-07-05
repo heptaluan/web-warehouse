@@ -439,10 +439,11 @@
 
 ## CSS
 
+[link 和 @import 的区别](https://github.com/heptaluan/blog/blob/master/essay/css/00.md#%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B)
+
 [盒子模型](https://github.com/heptaluan/blog/blob/master/essay/css/00.md#%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B)
 
 [样式来源与层叠规则](https://github.com/heptaluan/blog/blob/master/essay/css/00.md#%E6%A0%B7%E5%BC%8F%E6%9D%A5%E6%BA%90%E4%B8%8E%E5%B1%82%E5%8F%A0%E8%A7%84%E5%88%99)
-
 
 [浏览器默认样式](https://github.com/heptaluan/blog/blob/master/essay/css/00.md#%E6%B5%8F%E8%A7%88%E5%99%A8%E9%BB%98%E8%AE%A4%E6%A0%B7%E5%BC%8F-2)
 

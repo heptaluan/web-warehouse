@@ -94,8 +94,6 @@
 
 [[1, 2, 3, 4, 5] => [1, 2, 3, 4, 5, 1, 4, 9, 16, 25]](https://github.com/heptaluan/blog/blob/master/essay/arithmetic/00.md#1-2-3-4-5--1-2-3-4-5-1-4-9-16-25)
 
-[在有序（无序）列表中插入 3 个，300 个，3000 个 li，并绑定事件](https://github.com/heptaluan/blog/blob/master/essay/arithmetic/00.md#%E5%9C%A8%E6%9C%89%E5%BA%8F%E6%97%A0%E5%BA%8F%E5%88%97%E8%A1%A8%E4%B8%AD%E6%8F%92%E5%85%A5-3-%E4%B8%AA300-%E4%B8%AA3000-%E4%B8%AA-li%E5%B9%B6%E7%BB%91%E5%AE%9A%E4%BA%8B%E4%BB%B6)
-
 [生成一个 20 X 12 的表格，并且设定指定格子的背景颜色](https://github.com/heptaluan/blog/blob/master/essay/arithmetic/00.md#%E7%94%9F%E6%88%90%E4%B8%80%E4%B8%AA-20-x-12-%E7%9A%84%E8%A1%A8%E6%A0%BC%E5%B9%B6%E4%B8%94%E8%AE%BE%E5%AE%9A%E6%8C%87%E5%AE%9A%E6%A0%BC%E5%AD%90%E7%9A%84%E8%83%8C%E6%99%AF%E9%A2%9C%E8%89%B2)
 
 [常见的数组排序方式（冒泡，快速，插入，对象）](https://github.com/heptaluan/blog/blob/master/essay/arithmetic/00.md#%E5%B8%B8%E8%A7%81%E7%9A%84%E6%95%B0%E7%BB%84%E6%8E%92%E5%BA%8F%E6%96%B9%E5%BC%8F)
@@ -222,18 +220,6 @@
 
 [正则中的 test() 与 全局选项 /g](https://github.com/heptaluan/blog/blob/master/essay/arithmetic/00.md#%E6%AD%A3%E5%88%99%E4%B8%AD%E7%9A%84-test-%E4%B8%8E-%E5%85%A8%E5%B1%80%E9%80%89%E9%A1%B9-g)
 
-[去除所有的 html](https://github.com/heptaluan/blog/blob/master/essay/arithmetic/00.md#%E5%8E%BB%E9%99%A4%E6%89%80%E6%9C%89%E7%9A%84-html)
-
-[去除空格](https://github.com/heptaluan/blog/blob/master/essay/arithmetic/00.md#%E5%8E%BB%E9%99%A4%E7%A9%BA%E6%A0%BC)
-
-[判断输入的是否为数字](https://github.com/heptaluan/blog/blob/master/essay/arithmetic/00.md#%E5%88%A4%E6%96%AD%E8%BE%93%E5%85%A5%E7%9A%84%E6%98%AF%E5%90%A6%E4%B8%BA%E6%95%B0%E5%AD%97)
-
-[取括号中的数值](https://github.com/heptaluan/blog/blob/master/essay/arithmetic/00.md#%E5%8F%96%E6%8B%AC%E5%8F%B7%E4%B8%AD%E7%9A%84%E6%95%B0%E5%80%BC)
-
-[千位分隔符（整数）](https://github.com/heptaluan/blog/blob/master/essay/arithmetic/00.md#%E5%8D%83%E4%BD%8D%E5%88%86%E9%9A%94%E7%AC%A6%E6%95%B4%E6%95%B0)
-
-[去除字符串两边空格](https://github.com/heptaluan/blog/blob/master/essay/arithmetic/00.md#%E5%8E%BB%E9%99%A4%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%A4%E8%BE%B9%E7%A9%BA%E6%A0%BC)
-
 [输入框过滤](https://github.com/heptaluan/blog/blob/master/essay/arithmetic/00.md#%E8%BE%93%E5%85%A5%E6%A1%86%E8%BF%87%E6%BB%A4)
 
 
@@ -315,8 +301,6 @@
 
 [注入服务的两种方式的区别](https://github.com/heptaluan/blog/blob/master/essay/angular/00.md#%E6%B3%A8%E5%85%A5%E6%9C%8D%E5%8A%A1%E7%9A%84%E4%B8%A4%E7%A7%8D%E6%96%B9%E5%BC%8F%E7%9A%84%E5%8C%BA%E5%88%AB)
 
-[Angular 中路由传递参数的几种方式](https://github.com/heptaluan/blog/blob/master/essay/angular/00.md#angular-%E4%B8%AD%E8%B7%AF%E7%94%B1%E4%BC%A0%E9%80%92%E5%8F%82%E6%95%B0%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E5%BC%8F)
-
 [*ngFor](https://github.com/heptaluan/blog/blob/master/essay/angular/00.md#ngfor)
 
 [:host](https://github.com/heptaluan/blog/blob/master/essay/angular/00.md#host)
@@ -352,8 +336,6 @@
 [在构造函数中，Type 类型的参数是否可以使用 @Inject(Type) 的方式注入](https://github.com/heptaluan/blog/blob/master/essay/angular/00.md#%E5%9C%A8%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E4%B8%ADtype-%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%8F%82%E6%95%B0%E6%98%AF%E5%90%A6%E5%8F%AF%E4%BB%A5%E4%BD%BF%E7%94%A8-injecttype-%E7%9A%84%E6%96%B9%E5%BC%8F%E6%B3%A8%E5%85%A5)
 
 [如何引入第三方 JS 类库](https://github.com/heptaluan/blog/blob/master/essay/angular/00.md#%E5%A6%82%E4%BD%95%E5%BC%95%E5%85%A5%E7%AC%AC%E4%B8%89%E6%96%B9-js-%E7%B1%BB%E5%BA%93)
-
-[Angular 中的 ViewEncapsulation](https://github.com/heptaluan/blog/blob/master/essay/angular/00.md#angular-%E4%B8%AD%E7%9A%84-viewencapsulation)
 
 [constructor 与 ngOnInit 的应用场景](https://github.com/heptaluan/blog/blob/master/essay/angular/00.md#constructor-%E4%B8%8E-ngoninit-%E7%9A%84%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF)
 

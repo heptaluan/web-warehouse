@@ -225,8 +225,6 @@
 
 ## jQuery
 
-[$.each 和 $(selector).each() 的区别](https://github.com/heptaluan/blog/blob/master/essay/jquery/00.md#each-%E5%92%8C-selectoreach-%E7%9A%84%E5%8C%BA%E5%88%AB)
-
 [jQuery 的 DOM 操作原理](https://github.com/heptaluan/blog/blob/master/essay/jquery/00.md#jquery-%E7%9A%84-dom-%E6%93%8D%E4%BD%9C%E5%8E%9F%E7%90%86)
 
 [jQuery 选择器原理](https://github.com/heptaluan/blog/blob/master/essay/jquery/00.md#jquery-%E9%80%89%E6%8B%A9%E5%99%A8%E5%8E%9F%E7%90%86)
@@ -238,8 +236,6 @@
 [jQuery 的链式操作是如何实现的](https://github.com/heptaluan/blog/blob/master/essay/jquery/00.md#jquery-%E7%9A%84%E9%93%BE%E5%BC%8F%E6%93%8D%E4%BD%9C%E6%98%AF%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E7%9A%84)
 
 [$.fn.each() 和 Array.prototype.forEach()](https://github.com/heptaluan/blog/blob/master/essay/jquery/00.md#fneach-%E5%92%8C-arrayprototypeforeach)
-
-[jQuery 中的 deferred 对象](https://github.com/heptaluan/blog/blob/master/essay/jquery/00.md#jquery-%E4%B8%AD%E7%9A%84-deferred-%E5%AF%B9%E8%B1%A1)
 
 [使用原生 JavaScript 来替代 jQuery](https://github.com/heptaluan/blog/blob/master/essay/jquery/00.md#%E4%BD%BF%E7%94%A8%E5%8E%9F%E7%94%9F-javascript-%E6%9D%A5%E6%9B%BF%E4%BB%A3-jquery)
 
@@ -421,13 +417,7 @@
 
 ## CSS
 
-[link 和 @import 的区别](https://github.com/heptaluan/blog/blob/master/essay/css/00.md#%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B)
-
 [盒子模型](https://github.com/heptaluan/blog/blob/master/essay/css/00.md#%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B)
-
-[样式来源与层叠规则](https://github.com/heptaluan/blog/blob/master/essay/css/00.md#%E6%A0%B7%E5%BC%8F%E6%9D%A5%E6%BA%90%E4%B8%8E%E5%B1%82%E5%8F%A0%E8%A7%84%E5%88%99)
-
-[浏览器默认样式](https://github.com/heptaluan/blog/blob/master/essay/css/00.md#%E6%B5%8F%E8%A7%88%E5%99%A8%E9%BB%98%E8%AE%A4%E6%A0%B7%E5%BC%8F-2)
 
 [选择器的优先级](https://github.com/heptaluan/blog/blob/master/essay/css/00.md#%E9%80%89%E6%8B%A9%E5%99%A8%E7%9A%84%E4%BC%98%E5%85%88%E7%BA%A7)
 
@@ -435,27 +425,13 @@
 
 [FC](https://github.com/heptaluan/blog/blob/master/essay/css/00.md#fc)
 
-[BFC](https://github.com/heptaluan/blog/blob/master/essay/css/00.md#bfc)
-
-[IFC](https://github.com/heptaluan/blog/blob/master/essay/css/00.md#ifc)
-
 [GFC](https://github.com/heptaluan/blog/blob/master/essay/css/00.md#gfc)
 
 [FFC](https://github.com/heptaluan/blog/blob/master/essay/css/00.md#ffc)
 
-[haslayout](https://github.com/heptaluan/blog/blob/master/essay/css/00.md#haslayout)
-
-[vertical-align](https://github.com/heptaluan/blog/blob/master/essay/css/00.md#vertical-align-1)
-
-[float，display，position](https://github.com/heptaluan/blog/blob/master/essay/css/00.md#floatdisplayposition)
-
-[line-height](https://github.com/heptaluan/blog/blob/master/essay/css/00.md#line-height)
-
 [水平居中](https://github.com/heptaluan/blog/blob/master/essay/css/00.md#%E6%B0%B4%E5%B9%B3%E5%B1%85%E4%B8%AD)
 
 [垂直居中](https://github.com/heptaluan/blog/blob/master/essay/css/00.md#%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD)
-
-[多行溢出隐藏](https://github.com/heptaluan/blog/blob/master/essay/css/00.md#%E5%A4%9A%E8%A1%8C%E6%BA%A2%E5%87%BA%E9%9A%90%E8%97%8F)
 
 [响应式布局](https://github.com/heptaluan/blog/blob/master/essay/css/00.md#%E5%93%8D%E5%BA%94%E5%BC%8F%E5%B8%83%E5%B1%80)
 
@@ -490,8 +466,6 @@
 [清除选中样式](https://github.com/heptaluan/blog/blob/master/essay/css/00.md#%E6%B8%85%E9%99%A4%E9%80%89%E4%B8%AD%E6%A0%B7%E5%BC%8F)
 
 [火狐专有 hack](https://github.com/heptaluan/blog/blob/master/essay/css/00.md#%E7%81%AB%E7%8B%90%E4%B8%93%E6%9C%89hack)
-
-[link 和 @import 的区别](https://github.com/heptaluan/blog/blob/master/essay/css/00.md#link-%E5%92%8C-import-%E7%9A%84%E5%8C%BA%E5%88%AB)
 
 [媒体查询](https://github.com/heptaluan/blog/blob/master/essay/css/00.md#%E5%AA%92%E4%BD%93%E6%9F%A5%E8%AF%A2)
 

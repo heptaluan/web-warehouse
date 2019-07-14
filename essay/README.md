@@ -15,29 +15,19 @@
 
 [map 和 reduce](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#map-%E5%92%8C-reduce)
 
-[call 和 apply 哪个速度更快一些](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#call-%E5%92%8C-apply-%E5%93%AA%E4%B8%AA%E9%80%9F%E5%BA%A6%E6%9B%B4%E5%BF%AB%E4%B8%80%E4%BA%9B)
-
 [JavaScript 中的事件模型](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#javascript-%E4%B8%AD%E7%9A%84%E4%BA%8B%E4%BB%B6%E6%A8%A1%E5%9E%8B)
-
-[JavaScript 中常用的设计模式](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#javascript-%E4%B8%AD%E5%B8%B8%E7%94%A8%E7%9A%84%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F)
-
-[常见函数 once/bind/debouce/throttle 的实现原理](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#%E5%B8%B8%E8%A7%81%E5%87%BD%E6%95%B0-oncebinddeboucethrottle-%E7%9A%84%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86)
 
 [拖拽功能](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#%E6%8B%96%E6%8B%BD%E5%8A%9F%E8%83%BD)
 
-[如何监听 对象/数组 属性改变](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#%E5%A6%82%E4%BD%95%E7%9B%91%E5%90%AC-%E5%AF%B9%E8%B1%A1%E6%95%B0%E7%BB%84-%E5%B1%9E%E6%80%A7%E6%94%B9%E5%8F%98)
 
-[JavaScript 中的几种遍历对象的方式](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#javascript-%E4%B8%AD%E7%9A%84%E5%87%A0%E7%A7%8D%E9%81%8D%E5%8E%86%E5%AF%B9%E8%B1%A1%E7%9A%84%E6%96%B9%E5%BC%8F)
 
 [一些数组常用的方法和其返回值](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#%E4%B8%80%E4%BA%9B%E6%95%B0%E7%BB%84%E5%B8%B8%E7%94%A8%E7%9A%84%E6%96%B9%E6%B3%95%E5%92%8C%E5%85%B6%E8%BF%94%E5%9B%9E%E5%80%BC)
 
 [ajax，formData，同源策略，跨域](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#ajaxformdata%E5%90%8C%E6%BA%90%E7%AD%96%E7%95%A5%E8%B7%A8%E5%9F%9F)
 
-[IOS 移动端 click 事件 300ms 的延迟响应](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#ios-%E7%A7%BB%E5%8A%A8%E7%AB%AF-click-%E4%BA%8B%E4%BB%B6-300ms-%E7%9A%84%E5%BB%B6%E8%BF%9F%E5%93%8D%E5%BA%94)
 
 [继承](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#%E7%BB%A7%E6%89%BF-1)
 
-[JavaScript 中的命名空间，变量声明提升，作用域和预编译](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#javascript-%E4%B8%AD%E7%9A%84%E5%91%BD%E5%90%8D%E7%A9%BA%E9%97%B4%E5%8F%98%E9%87%8F%E5%A3%B0%E6%98%8E%E6%8F%90%E5%8D%87%E4%BD%9C%E7%94%A8%E5%9F%9F%E5%92%8C%E9%A2%84%E7%BC%96%E8%AF%91)
 
 [clientWidth, offsetWidth, scrollWidth](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#clientwidth-offsetwidth-scrollwidth)
 
@@ -47,11 +37,8 @@
 
 [ES6 的一些新方法](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#es6-%E7%9A%84%E4%B8%80%E4%BA%9B%E6%96%B0%E6%96%B9%E6%B3%95)
 
-[call 和 apply 的第一个参数](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#call-%E5%92%8C-apply-%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%8F%82%E6%95%B0)
 
-[从请求的异步回调函数中取值的解决办法](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#%E4%BB%8E%E8%AF%B7%E6%B1%82%E7%9A%84%E5%BC%82%E6%AD%A5%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0%E4%B8%AD%E5%8F%96%E5%80%BC%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95)
 
-[JavaScript 异步加载方案](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#javascript-%E5%BC%82%E6%AD%A5%E5%8A%A0%E8%BD%BD%E6%96%B9%E6%A1%88)
 
 [简易事件模型](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#%E7%AE%80%E6%98%93%E4%BA%8B%E4%BB%B6%E6%A8%A1%E5%9E%8B)
 
@@ -63,23 +50,19 @@
 
 [如何快速判断 DOM 元素位于 viewport 以外](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#%E5%A6%82%E4%BD%95%E5%BF%AB%E9%80%9F%E5%88%A4%E6%96%AD-dom-%E5%85%83%E7%B4%A0%E4%BD%8D%E4%BA%8E-viewport-%E4%BB%A5%E5%A4%96)
 
-[检测对象改变的几种方式](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#%E6%A3%80%E6%B5%8B%E5%AF%B9%E8%B1%A1%E6%94%B9%E5%8F%98%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E5%BC%8F)
-
 [Property 'style' does not exist on type 'Element'](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#property-style-does-not-exist-on-type-element)
 
 [table 表单中的 .rows 属性](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#table-%E8%A1%A8%E5%8D%95%E4%B8%AD%E7%9A%84-rows-%E5%B1%9E%E6%80%A7)
 
 [offsetLeft 与 style.left 的区别](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#offsetleft-%E4%B8%8E-styleleft-%E7%9A%84%E5%8C%BA%E5%88%AB)
 
-[Reflect 对象](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#reflect-%E5%AF%B9%E8%B1%A1)
+
 
 [如何判断鼠标滚动方向和绑定鼠标滚轮事件](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#%E5%A6%82%E4%BD%95%E5%88%A4%E6%96%AD%E9%BC%A0%E6%A0%87%E6%BB%9A%E5%8A%A8%E6%96%B9%E5%90%91%E5%92%8C%E7%BB%91%E5%AE%9A%E9%BC%A0%E6%A0%87%E6%BB%9A%E8%BD%AE%E4%BA%8B%E4%BB%B6)
 
 [JavaScript 判断滚动条方向](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#javascript-%E5%88%A4%E6%96%AD%E6%BB%9A%E5%8A%A8%E6%9D%A1%E6%96%B9%E5%90%91)
 
 [setTimeout(function(){}, 0)](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#settimeoutfunction-0)
-
-[为什么 0.2 + 0.1 === 0.3 返回 false](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#%E4%B8%BA%E4%BB%80%E4%B9%88-02--01--03-%E8%BF%94%E5%9B%9E-false)
 
 
 
@@ -238,51 +221,6 @@
 [$.fn.each() 和 Array.prototype.forEach()](https://github.com/heptaluan/blog/blob/master/essay/jquery/00.md#fneach-%E5%92%8C-arrayprototypeforeach)
 
 [使用原生 JavaScript 来替代 jQuery](https://github.com/heptaluan/blog/blob/master/essay/jquery/00.md#%E4%BD%BF%E7%94%A8%E5%8E%9F%E7%94%9F-javascript-%E6%9D%A5%E6%9B%BF%E4%BB%A3-jquery)
-
-[jQuery 源码的总体架构](https://github.com/heptaluan/blog/blob/master/essay/jquery/00.md#%E6%BA%90%E7%A0%81%E7%9A%84%E6%80%BB%E4%BD%93%E6%9E%B6%E6%9E%84)
-
-* [jQuery.fn.init(selector, context, rootjQuery)](https://github.com/heptaluan/blog/blob/master/essay/jquery/00.md#jqueryfninitselector-context-rootjquery)
-
-* [jQuery.noConflict( [removeAll] )](https://github.com/heptaluan/blog/blob/master/essay/jquery/00.md#jquerynoconflict-removeall-)
-
-* [jQuery.isFunction( obj )， jQuery.isArray( obj )](https://github.com/heptaluan/blog/blob/master/essay/jquery/00.md#jqueryisfunction-obj--jqueryisarray-obj-)
-
-* [jQuery.type( obj )](https://github.com/heptaluan/blog/blob/master/essay/jquery/00.md#jquerytype-obj-)
-
-* [jQuery.isWindow( obj )](https://github.com/heptaluan/blog/blob/master/essay/jquery/00.md#jqueryiswindow-obj-)
-
-* [jQuery.isNumeric( value )](https://github.com/heptaluan/blog/blob/master/essay/jquery/00.md#jqueryisnumeric-value-)
-
-* [jQuery.isPlainObject( object )](https://github.com/heptaluan/blog/blob/master/essay/jquery/00.md#jqueryisplainobject-object-)
-
-* [jQuery.makeArray(obj)](https://github.com/heptaluan/blog/blob/master/essay/jquery/00.md#jquerymakearrayobj)
-
-* [jQuery.inArray( value, array[, fromIndex] )](https://github.com/heptaluan/blog/blob/master/essay/jquery/00.md#jqueryinarray-value-array-fromindex-)
-
-* [jQuery.merge( first, second )](https://github.com/heptaluan/blog/blob/master/essay/jquery/00.md#jquerymerge-first-second-)
-
-* [jQuery.grep( array, function ( elementOfArray, indexInArray )[, invert])](https://github.com/heptaluan/blog/blob/master/essay/jquery/00.md#jquerygrep-array-function--elementofarray-indexinarray--invert)
-
-* [jQuery.buildFragment(args, nodes, scripts)](https://github.com/heptaluan/blog/blob/master/essay/jquery/00.md#jquerybuildfragmentargs-nodes-scripts)
-
-* [jQuery.clean(elems, context, fragment, scripts)](https://github.com/heptaluan/blog/blob/master/essay/jquery/00.md#jquerycleanelems-context-fragment-scripts)
-
-* [安全文档碎片 safeFragment = createSafeFragment(document)](https://github.com/heptaluan/blog/blob/master/essay/jquery/00.md#%E5%AE%89%E5%85%A8%E6%96%87%E6%A1%A3%E7%A2%8E%E7%89%87-safefragment--createsafefragmentdocument)
-
-* [修正复选框和单选按钮的选中状态](https://github.com/heptaluan/blog/blob/master/essay/jquery/00.md#%E4%BF%AE%E6%AD%A3%E5%A4%8D%E9%80%89%E6%A1%86%E5%92%8C%E5%8D%95%E9%80%89%E6%8C%89%E9%92%AE%E7%9A%84%E9%80%89%E4%B8%AD%E7%8A%B6%E6%80%81)
-
-* [jQuery.extend()、jQuery.fn.extend()](https://github.com/heptaluan/blog/blob/master/essay/jquery/00.md#jqueryextendjqueryfnextend)
-
-* [jQuery.each](https://github.com/heptaluan/blog/blob/master/essay/jquery/00.md#jqueryeach)
-
-* [.pushStack( elements, name, arguments )](https://github.com/heptaluan/blog/blob/master/essay/jquery/00.md#pushstack-elements-name-arguments-)
-
-* [.end()](https://github.com/heptaluan/blog/blob/master/essay/jquery/00.md#end)
-
-* [.eq(index)， .first()， .last()， .slice(start[, end])](https://github.com/heptaluan/blog/blob/master/essay/jquery/00.md#eqindex-first-last-slicestart-end)
-
-* [.push( value, ... ), .sort( [orderfunc] ), .splice( start,deleteCount, value, ... )](https://github.com/heptaluan/blog/blob/master/essay/jquery/00.md#push-value---sort-orderfunc--splice-startdeletecount-value--)
-
 
 
 
@@ -483,21 +421,8 @@
 
 ## http / 安全 / 优化 / 其他
 
-[缓存穿透和缓存雪崩](https://github.com/heptaluan/blog/blob/master/essay/other/00.md#%E7%BC%93%E5%AD%98%E7%A9%BF%E9%80%8F%E5%92%8C%E7%BC%93%E5%AD%98%E9%9B%AA%E5%B4%A9)
 
-[进程与线程](https://github.com/heptaluan/blog/blob/master/essay/other/00.md#%E8%BF%9B%E7%A8%8B%E4%B8%8E%E7%BA%BF%E7%A8%8B)
 
-[JavaScript 中的单线程执行机制](https://github.com/heptaluan/blog/blob/master/essay/other/00.md#javascript-%E4%B8%AD%E7%9A%84%E5%8D%95%E7%BA%BF%E7%A8%8B%E6%89%A7%E8%A1%8C%E6%9C%BA%E5%88%B6)
-
-[JavaScript 中的阻塞](https://github.com/heptaluan/blog/blob/master/essay/other/00.md#javascript-%E4%B8%AD%E7%9A%84%E9%98%BB%E5%A1%9E)
-
-[关于线程同步](https://github.com/heptaluan/blog/blob/master/essay/other/00.md#%E5%85%B3%E4%BA%8E%E7%BA%BF%E7%A8%8B%E5%90%8C%E6%AD%A5)
-
-[数据库中的事务和锁](https://github.com/heptaluan/blog/blob/master/essay/other/00.md#%E6%95%B0%E6%8D%AE%E5%BA%93%E4%B8%AD%E7%9A%84%E4%BA%8B%E5%8A%A1%E5%92%8C%E9%94%81)
-
-[JavaScript 中的栈和堆](https://github.com/heptaluan/blog/blob/master/essay/other/00.md#javascript-%E4%B8%AD%E7%9A%84%E6%A0%88%E5%92%8C%E5%A0%86)
-
-[字符编码](https://github.com/heptaluan/blog/blob/master/essay/other/00.md#%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81)
 
 [JavaScript 中的垃圾回收机制](https://github.com/heptaluan/blog/blob/master/essay/other/00.md#javascript-%E4%B8%AD%E7%9A%84%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E6%9C%BA%E5%88%B6)
 
@@ -505,4 +430,3 @@
 
 [面向对象的五大基本原则](https://github.com/heptaluan/blog/blob/master/essay/other/00.md#%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%E4%BA%94%E5%A4%A7%E5%9F%BA%E6%9C%AC%E5%8E%9F%E5%88%99)
 
-[常用设计模式的实现思路](https://github.com/heptaluan/blog/blob/master/essay/other/00.md#%E5%B8%B8%E7%94%A8%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E7%9A%84%E5%AE%9E%E7%8E%B0%E6%80%9D%E8%B7%AF)

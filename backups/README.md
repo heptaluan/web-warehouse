@@ -3,8 +3,6 @@
 ----
 
 
-
-
 ## Angular
 
 [数据请求，指令与模块](https://github.com/heptaluan/blog/blob/master/backups/angular/01.md)
@@ -15,33 +13,9 @@
 
 
 
-
-
-## Vue
-
-[Vue 中一些容易忽视的知识点](https://github.com/heptaluan/blog/blob/master/backups/vue/02.md)
-
-
-
-
-
 ## Other
 
 [slice() 和 splice()](https://github.com/heptaluan/blog/blob/master/backups/note/05.md)
 
 [一些 ES6 的知识点](https://github.com/heptaluan/blog/blob/master/backups/note/07.md)
-
-[Sequelize 与 MySQL](https://github.com/heptaluan/blog/blob/master/backups/note/09.md)
-
-[利用 pipe 实现复制](https://github.com/heptaluan/blog/blob/master/backups/note/10.md)
-
-[浏览器默认样式](https://github.com/heptaluan/blog/blob/master/backups/note/16.md)
-
-[git 基本操作](https://github.com/heptaluan/blog/blob/master/backups/note/18.md)
-
-[Windows 下的 MySQL 安装汇总](https://github.com/heptaluan/blog/blob/master/backups/note/29.md)
-
-[MySQL 基本的增删改查](https://github.com/heptaluan/blog/blob/master/backups/note/30.md)
-
-[使用 python 操作数据库](https://github.com/heptaluan/blog/blob/master/backups/note/31.md)
 

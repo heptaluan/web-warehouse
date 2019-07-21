@@ -17,28 +17,28 @@
 
 [JavaScript 中的事件模型](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#javascript-%E4%B8%AD%E7%9A%84%E4%BA%8B%E4%BB%B6%E6%A8%A1%E5%9E%8B)
 
+[自由变量 到 作用域链](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#%E8%87%AA%E7%94%B1%E5%8F%98%E9%87%8F-%E5%88%B0-%E4%BD%9C%E7%94%A8%E5%9F%9F%E9%93%BE)
+
+[继承](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#%E7%BB%A7%E6%89%BF-1)
+
+
+
+
+
+
+
+
 [拖拽功能](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#%E6%8B%96%E6%8B%BD%E5%8A%9F%E8%83%BD)
-
-
 
 [一些数组常用的方法和其返回值](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#%E4%B8%80%E4%BA%9B%E6%95%B0%E7%BB%84%E5%B8%B8%E7%94%A8%E7%9A%84%E6%96%B9%E6%B3%95%E5%92%8C%E5%85%B6%E8%BF%94%E5%9B%9E%E5%80%BC)
 
 [ajax，formData，同源策略，跨域](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#ajaxformdata%E5%90%8C%E6%BA%90%E7%AD%96%E7%95%A5%E8%B7%A8%E5%9F%9F)
 
-
-[继承](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#%E7%BB%A7%E6%89%BF-1)
-
-
 [clientWidth, offsetWidth, scrollWidth](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#clientwidth-offsetwidth-scrollwidth)
-
-[自由变量 到 作用域链](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#%E8%87%AA%E7%94%B1%E5%8F%98%E9%87%8F-%E5%88%B0-%E4%BD%9C%E7%94%A8%E5%9F%9F%E9%93%BE)
 
 [闭包及使用场景](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#%E9%97%AD%E5%8C%85)
 
 [ES6 的一些新方法](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#es6-%E7%9A%84%E4%B8%80%E4%BA%9B%E6%96%B0%E6%96%B9%E6%B3%95)
-
-
-
 
 [简易事件模型](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#%E7%AE%80%E6%98%93%E4%BA%8B%E4%BB%B6%E6%A8%A1%E5%9E%8B)
 
@@ -55,8 +55,6 @@
 [table 表单中的 .rows 属性](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#table-%E8%A1%A8%E5%8D%95%E4%B8%AD%E7%9A%84-rows-%E5%B1%9E%E6%80%A7)
 
 [offsetLeft 与 style.left 的区别](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#offsetleft-%E4%B8%8E-styleleft-%E7%9A%84%E5%8C%BA%E5%88%AB)
-
-
 
 [如何判断鼠标滚动方向和绑定鼠标滚轮事件](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#%E5%A6%82%E4%BD%95%E5%88%A4%E6%96%AD%E9%BC%A0%E6%A0%87%E6%BB%9A%E5%8A%A8%E6%96%B9%E5%90%91%E5%92%8C%E7%BB%91%E5%AE%9A%E9%BC%A0%E6%A0%87%E6%BB%9A%E8%BD%AE%E4%BA%8B%E4%BB%B6)
 

@@ -16,7 +16,7 @@
 
 虽然工作已经好几年了，也是一直在从事着前端开发的工作，但是发现能真正沉淀下来的东西很少
 
-所以打算在这里从新整理了一下目前所掌握的前端知识体系，也算是对自己这几年的工作以来的一个总结
+所以打算从新整理了一下目前所掌握的前端知识体系，也算是对自己这几年的工作以来的一个总结
 
 然后针对自己比较薄弱的地方努力去攻克，争取做到先有广度，后有深度，与君共勉
 
@@ -66,17 +66,19 @@
 ## JavaScript
 
 * 基本数据类型
-  * 类型判断（typeof && instanceof）
+  * [类型判断（typeof && instanceof）](https://heptaluan.github.io/2017/03/09/JavaScript/08/)
   * 判断包装字符串（new String()）
   * 判断空对象
 * this 的理解
+* [类型转换](https://heptaluan.github.io/2017/03/17/JavaScript/09/)
 * [基本类型，引用类型](https://heptaluan.github.io/2017/02/22/JavaScript/06/)
 * [作用域与变量对象](https://heptaluan.github.io/2017/01/18/JavaScript/03/)
 * [事件与事件流](https://heptaluan.github.io/2016/11/14/JavaScript/01/)
-* 构造函数、实例、原型、原型链、继承
+* 原型链
+  * [constructor、__proto__ 和 prototype](http://localhost:4000/2017/04/06/JavaScript/10/)
   * 类式继承
   * 原型继承
-  * Object.create()
+  * [Object.create()](https://heptaluan.github.io/2017/03/03/JavaScript/07/)
 * 对象深浅拷贝
   * JSON.parse() && JSON.stringify()
 * 原生 ajax

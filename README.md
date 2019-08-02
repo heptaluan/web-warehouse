@@ -66,24 +66,31 @@
 ## JavaScript
 
 * 基本数据类型
-  * [类型判断（typeof && instanceof）](https://heptaluan.github.io/2017/03/09/JavaScript/08/)
-  * 判断包装字符串（new String()）
-  * 判断空对象
+  * [类型判断（typeof && instanceof），判断包装对象，判断空对象](https://heptaluan.github.io/2017/03/09/JavaScript/08/)
+  * [类型转换，== 与 ===](https://heptaluan.github.io/2017/03/17/JavaScript/09/)
+* ES6
 * this 的理解
-* [类型转换](https://heptaluan.github.io/2017/03/17/JavaScript/09/)
 * [基本类型，引用类型](https://heptaluan.github.io/2017/02/22/JavaScript/06/)
 * [作用域与变量对象](https://heptaluan.github.io/2017/01/18/JavaScript/03/)
 * [事件与事件流](https://heptaluan.github.io/2016/11/14/JavaScript/01/)
+* [parseInt() 与 parseFloat()](https://heptaluan.github.io/2017/04/15/JavaScript/12/)
+  * 0.1 + 0.2 === 0.3
 * 原型链
-  * [constructor、__proto__ 和 prototype](http://localhost:4000/2017/04/06/JavaScript/10/)
+  * [constructor、__proto__ 和 prototype](https://heptaluan.github.io/2017/04/06/JavaScript/10/)，[原型和原型对象](https://heptaluan.github.io/2017/04/08/JavaScript/11/)
   * 类式继承
   * 原型继承
   * [Object.create()](https://heptaluan.github.io/2017/03/03/JavaScript/07/)
+* [闭包](http://localhost:4000/2017/05/12/JavaScript/16/)
 * 对象深浅拷贝
   * JSON.parse() && JSON.stringify()
+* 迭代器与生成器
+----
 * 原生 ajax
 * 函数柯里化、高阶函数
-* bind、call、apply 用法及实现
+* [bind](https://heptaluan.github.io/2017/05/07/JavaScript/15/)，[call、apply](https://heptaluan.github.io/2018/04/16/JavaScript/32/)
+  * currying
+  * call 和 apply 的第一个参数（严格模式）
+  * call 和 apply 哪个速度快一些
 * 字符串、数组、对象、日期等的属性与方法
 * 浏览器对象
   * Window 对象

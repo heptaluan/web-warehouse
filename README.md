@@ -76,6 +76,9 @@
 * [事件与事件流](https://heptaluan.github.io/2016/11/14/JavaScript/01/)
 * [parseInt() 与 parseFloat()](https://heptaluan.github.io/2017/04/15/JavaScript/12/)
   * 0.1 + 0.2 === 0.3
+  * ['1', '2', '3'].map(parseInt)
+* [节点（Node）属性](http://localhost:4000/2017/06/26/JavaScript/21/)
+  * 创建节点/插入节点/删除节点/替换节点/克隆节点
 * 对象的遍历
   * Object.keys()
   * for...in
@@ -90,7 +93,7 @@
 * [闭包](https://heptaluan.github.io/2017/05/12/JavaScript/16/)
   * [JavaScript Closures for Dummies]()
 * 对象深浅拷贝
-  * JSON.parse() && JSON.stringify()
+  * [JSON.parse() && JSON.stringify()](http://localhost:4000/2017/07/06/JavaScript/23/)
 * 迭代器与生成器
 
 ----
@@ -153,7 +156,7 @@
 ## jQuery
 
 * window.onload 事件和 jQuery ready 函数有何不同
-* jQuery 源码
+* [jQuery 源码](http://localhost:4000/2017/06/23/jQuery/03/)
   * jQuery.fn.init()
   * [jQuery.each](https://heptaluan.github.io/2017/06/04/jQuery/01/)
   * jQuery.extend() 和 jQuery.fn.extend()

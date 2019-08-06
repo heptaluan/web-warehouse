@@ -87,7 +87,7 @@
   * 类式继承
   * 原型继承
   * [Object.create()](https://heptaluan.github.io/2017/03/03/JavaScript/07/)
-* [闭包](http://localhost:4000/2017/05/12/JavaScript/16/)
+* [闭包](https://heptaluan.github.io/2017/05/12/JavaScript/16/)
   * [JavaScript Closures for Dummies]()
 * 对象深浅拷贝
   * JSON.parse() && JSON.stringify()
@@ -95,7 +95,7 @@
 
 ----
 * 原生 ajax
-* [map/reduce](http://localhost:4000/2017/06/01/JavaScript/20/)
+* [map/reduce](https://heptaluan.github.io/2017/06/01/JavaScript/20/)
 * [bind](https://heptaluan.github.io/2017/05/07/JavaScript/15/)，[call、apply](https://heptaluan.github.io/2018/04/16/JavaScript/32/)
   * currying
   * call 和 apply 的第一个参数（严格模式）
@@ -110,8 +110,8 @@
 * Event 事件
 ----
 * 设计模式
-  * [单例模式](http://localhost:4000/2017/01/25/JavaScript/04/)
-* [CommonJS、AMD 和 CMD](http://localhost:4000/2017/02/03/JavaScript/05/)
+  * [单例模式](https://heptaluan.github.io/2017/01/25/JavaScript/04/)
+* [CommonJS、AMD 和 CMD](https://heptaluan.github.io/2017/02/03/JavaScript/05/)
 * JavaScript 并发模型
   * Event Loop
   * 运行机制
@@ -155,7 +155,7 @@
 * window.onload 事件和 jQuery ready 函数有何不同
 * jQuery 源码
   * jQuery.fn.init()
-  * [jQuery.each](http://localhost:4000/2017/06/04/jQuery/01/)
+  * [jQuery.each](https://heptaluan.github.io/2017/06/04/jQuery/01/)
   * jQuery.extend() 和 jQuery.fn.extend()
   * jQuery.buildFragment(args, nodes, scripts)
   * jQuery.clean(elems, context, fragment, scripts)
@@ -170,7 +170,7 @@
   * jQuery.merge(first, second)
   * jQuery.grep(array, function(elementOfArray, indexInArray)[, invert])
 * jQuery 动画
-* jQuery 中的 deferred 对象
+* [deferred 对象](https://heptaluan.github.io/2017/06/21/jQuery/02/)
 * ...
 
 

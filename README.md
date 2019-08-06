@@ -66,8 +66,9 @@
 ## JavaScript
 
 * 基本数据类型
-  * [类型判断（typeof && instanceof），判断包装对象，判断空对象](https://heptaluan.github.io/2017/03/09/JavaScript/08/)
+  * [类型判断（typeof && instanceof），包装对象，空对象](https://heptaluan.github.io/2017/03/09/JavaScript/08/)
   * [类型转换，== 与 ===](https://heptaluan.github.io/2017/03/17/JavaScript/09/)
+  * [运算符优先级，|| 和 &&](https://heptaluan.github.io/2017/05/19/JavaScript/19/)
 * ES6
 * this 的理解
 * [基本类型，引用类型](https://heptaluan.github.io/2017/02/22/JavaScript/06/)
@@ -75,18 +76,26 @@
 * [事件与事件流](https://heptaluan.github.io/2016/11/14/JavaScript/01/)
 * [parseInt() 与 parseFloat()](https://heptaluan.github.io/2017/04/15/JavaScript/12/)
   * 0.1 + 0.2 === 0.3
+* 对象的遍历
+  * Object.keys()
+  * for...in
+  * Object.getOwnPropertyNames()
+  * Reflect.ownKeys()
+  * for...of
 * 原型链
   * [constructor、__proto__ 和 prototype](https://heptaluan.github.io/2017/04/06/JavaScript/10/)，[原型和原型对象](https://heptaluan.github.io/2017/04/08/JavaScript/11/)
   * 类式继承
   * 原型继承
   * [Object.create()](https://heptaluan.github.io/2017/03/03/JavaScript/07/)
 * [闭包](http://localhost:4000/2017/05/12/JavaScript/16/)
+  * [JavaScript Closures for Dummies]()
 * 对象深浅拷贝
   * JSON.parse() && JSON.stringify()
 * 迭代器与生成器
+
 ----
 * 原生 ajax
-* 函数柯里化、高阶函数
+* [map/reduce](http://localhost:4000/2017/06/01/JavaScript/20/)
 * [bind](https://heptaluan.github.io/2017/05/07/JavaScript/15/)，[call、apply](https://heptaluan.github.io/2018/04/16/JavaScript/32/)
   * currying
   * call 和 apply 的第一个参数（严格模式）
@@ -99,21 +108,17 @@
   * Screen 对象
 * offset，scroll，client
 * Event 事件
+----
+* 设计模式
+  * [单例模式](http://localhost:4000/2017/01/25/JavaScript/04/)
+* [CommonJS、AMD 和 CMD](http://localhost:4000/2017/02/03/JavaScript/05/)
 * JavaScript 并发模型
- * Event Loop
- * 运行机制
- * 进程与线程
- * 宏任务与微任务
-* 原生 DOM 增删改查
+  * Event Loop
+  * 运行机制
+  * 进程与线程
+  * 宏任务与微任务
 * 常见的模块化
-* 作用域、闭包与立即执行函数等
 * 同步与异步
-* 对象的遍历
-  * Object.keys()
-  * for...in
-  * Object.getOwnPropertyNames()
-  * Reflect.ownKeys()
-  * for...of
 * ...
 
 
@@ -150,7 +155,7 @@
 * window.onload 事件和 jQuery ready 函数有何不同
 * jQuery 源码
   * jQuery.fn.init()
-  * jQuery.each
+  * [jQuery.each](http://localhost:4000/2017/06/04/jQuery/01/)
   * jQuery.extend() 和 jQuery.fn.extend()
   * jQuery.buildFragment(args, nodes, scripts)
   * jQuery.clean(elems, context, fragment, scripts)

@@ -39,10 +39,11 @@
 
 
 
-## CSS3
+## CSS
 
 * [浮动原理与解决办法](https://heptaluan.github.io/2016/11/09/CSS/01/)
 * CSS 盒模型
+* [样式来源与层叠规则](http://localhost:4000/2017/09/03/CSS/11/)
 * 获取盒子宽高的几种方式及区别
 * [单行，多行的溢出隐藏](https://heptaluan.github.io/2016/12/02/CSS/02/)
 * Flex 与 Grid 布局
@@ -91,7 +92,8 @@
   * 原型继承
   * [Object.create()](https://heptaluan.github.io/2017/03/03/JavaScript/07/)
 * [闭包](https://heptaluan.github.io/2017/05/12/JavaScript/16/)
-  * [JavaScript Closures for Dummies]()
+  * [JavaScript Closures for Dummies](http://localhost:4000/2017/05/13/JavaScript/17/)
+  * [异步回调函数当中进行取值](http://localhost:4000/2017/09/17/JavaScript/51/)
 * 对象深浅拷贝
   * [JSON.parse() && JSON.stringify()](http://localhost:4000/2017/07/06/JavaScript/23/)
 * 迭代器与生成器
@@ -103,7 +105,8 @@
   * currying
   * call 和 apply 的第一个参数（严格模式）
   * call 和 apply 哪个速度快一些
-* 字符串、数组、对象、日期等的属性与方法
+* [once/debouce/throttle](http://localhost:4000/2017/08/25/JavaScript/48/)
+* [监听对象和数组的变化](http://localhost:4000/2017/08/29/JavaScript/49/)
 * 浏览器对象
   * Window 对象
   * History 对象
@@ -112,8 +115,11 @@
 * offset，scroll，client
 * Event 事件
 ----
-* 设计模式
+* [设计模式](http://localhost:4000/2017/08/17/JavaScript/47/)
   * [单例模式](https://heptaluan.github.io/2017/01/25/JavaScript/04/)
+  * 工厂模式
+  * 代理模式
+  * 观察者模式
 * [CommonJS、AMD 和 CMD](https://heptaluan.github.io/2017/02/03/JavaScript/05/)
 * JavaScript 并发模型
   * Event Loop
@@ -137,6 +143,8 @@
   * Promise
   * Generator
   * Async/Await
+* [Class](http://localhost:4000/2017/09/20/JavaScript/24/)
+* [Reflect](http://localhost:4000/2017/09/21/JavaScript/53/)
 * 箭头函数
 * 模块化（export && import）
 * 解构赋值（主要：数组和对象）
@@ -156,22 +164,13 @@
 ## jQuery
 
 * window.onload 事件和 jQuery ready 函数有何不同
-* [jQuery 源码](http://localhost:4000/2017/06/23/jQuery/03/)
-  * jQuery.fn.init()
+* [jQuery 架构](http://localhost:4000/2017/06/23/jQuery/03/)
+  * [jQuery.fn.init()](http://localhost:4000/2017/07/11/jQuery/04/)
   * [jQuery.each](https://heptaluan.github.io/2017/06/04/jQuery/01/)
-  * jQuery.extend() 和 jQuery.fn.extend()
-  * jQuery.buildFragment(args, nodes, scripts)
-  * jQuery.clean(elems, context, fragment, scripts)
-  * jQuery.noConflict([removeAll])
-  * jQuery.isFunction(obj)， jQuery.isArray(obj)
-  * jQuery.type(obj)
-  * jQuery.isWindow(obj)
-  * jQuery.isNumeric(value)
-  * jQuery.isPlainObject(object)
-  * jQuery.makeArray(obj)
-  * jQuery.inArray(value, array[, fromIndex])
-  * jQuery.merge(first, second)
-  * jQuery.grep(array, function(elementOfArray, indexInArray)[, invert])
+  * [jQuery.extend() 和 jQuery.fn.extend()](http://localhost:4000/2017/07/18/jQuery/07/)
+  * [jQuery.buildFragment(args, nodes, scripts)](http://localhost:4000/2017/08/02/jQuery/08/)
+  * [jQuery.clean(elems, context, fragment, scripts)](http://localhost:4000/2017/08/11/jQuery/09/)
+  * [工具函数](http://localhost:4000/2017/07/15/jQuery/05/)
 * jQuery 动画
 * [deferred 对象](https://heptaluan.github.io/2017/06/21/jQuery/02/)
 * ...

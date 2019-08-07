@@ -43,7 +43,7 @@
 
 * [浮动原理与解决办法](https://heptaluan.github.io/2016/11/09/CSS/01/)
 * CSS 盒模型
-* [样式来源与层叠规则](http://localhost:4000/2017/09/03/CSS/11/)
+* [样式来源与层叠规则](http://heptaluan.github.io/2017/09/03/CSS/11/)
 * 获取盒子宽高的几种方式及区别
 * [单行，多行的溢出隐藏](https://heptaluan.github.io/2016/12/02/CSS/02/)
 * Flex 与 Grid 布局
@@ -70,15 +70,16 @@
   * [类型判断（typeof && instanceof），包装对象，空对象](https://heptaluan.github.io/2017/03/09/JavaScript/08/)
   * [类型转换，== 与 ===](https://heptaluan.github.io/2017/03/17/JavaScript/09/)
   * [运算符优先级，|| 和 &&](https://heptaluan.github.io/2017/05/19/JavaScript/19/)
-* ES6
-* this 的理解
+  * [对象](http://heptaluan.github.io/2017/10/07/JavaScript/25/)
+  * [函数](http://heptaluan.github.io/2017/10/08/JavaScript/26/)
+* [this](http://heptaluan.github.io/2017/10/09/JavaScript/27/)
 * [基本类型，引用类型](https://heptaluan.github.io/2017/02/22/JavaScript/06/)
 * [作用域与变量对象](https://heptaluan.github.io/2017/01/18/JavaScript/03/)
 * [事件与事件流](https://heptaluan.github.io/2016/11/14/JavaScript/01/)
 * [parseInt() 与 parseFloat()](https://heptaluan.github.io/2017/04/15/JavaScript/12/)
   * 0.1 + 0.2 === 0.3
   * ['1', '2', '3'].map(parseInt)
-* [节点（Node）属性](http://localhost:4000/2017/06/26/JavaScript/21/)
+* [节点（Node）属性](http://heptaluan.github.io/2017/06/26/JavaScript/21/)
   * 创建节点/插入节点/删除节点/替换节点/克隆节点
 * 对象的遍历
   * Object.keys()
@@ -92,10 +93,10 @@
   * 原型继承
   * [Object.create()](https://heptaluan.github.io/2017/03/03/JavaScript/07/)
 * [闭包](https://heptaluan.github.io/2017/05/12/JavaScript/16/)
-  * [JavaScript Closures for Dummies](http://localhost:4000/2017/05/13/JavaScript/17/)
-  * [异步回调函数当中进行取值](http://localhost:4000/2017/09/17/JavaScript/51/)
+  * [JavaScript Closures for Dummies](http://heptaluan.github.io/2017/05/13/JavaScript/17/)
+  * [异步回调函数当中进行取值](http://heptaluan.github.io/2017/09/17/JavaScript/51/)
 * 对象深浅拷贝
-  * [JSON.parse() && JSON.stringify()](http://localhost:4000/2017/07/06/JavaScript/23/)
+  * [JSON.parse() && JSON.stringify()](http://heptaluan.github.io/2017/07/06/JavaScript/23/)
 * 迭代器与生成器
 
 ----
@@ -105,8 +106,8 @@
   * currying
   * call 和 apply 的第一个参数（严格模式）
   * call 和 apply 哪个速度快一些
-* [once/debouce/throttle](http://localhost:4000/2017/08/25/JavaScript/48/)
-* [监听对象和数组的变化](http://localhost:4000/2017/08/29/JavaScript/49/)
+* [once/debouce/throttle](http://heptaluan.github.io/2017/08/25/JavaScript/48/)
+* [监听对象和数组的变化](http://heptaluan.github.io/2017/08/29/JavaScript/49/)
 * 浏览器对象
   * Window 对象
   * History 对象
@@ -115,7 +116,7 @@
 * offset，scroll，client
 * Event 事件
 ----
-* [设计模式](http://localhost:4000/2017/08/17/JavaScript/47/)
+* [设计模式](http://heptaluan.github.io/2017/08/17/JavaScript/47/)
   * [单例模式](https://heptaluan.github.io/2017/01/25/JavaScript/04/)
   * 工厂模式
   * 代理模式
@@ -143,8 +144,8 @@
   * Promise
   * Generator
   * Async/Await
-* [Class](http://localhost:4000/2017/09/20/JavaScript/24/)
-* [Reflect](http://localhost:4000/2017/09/21/JavaScript/53/)
+* [Class](http://heptaluan.github.io/2017/09/20/JavaScript/24/)
+* [Reflect](http://heptaluan.github.io/2017/09/21/JavaScript/53/)
 * 箭头函数
 * 模块化（export && import）
 * 解构赋值（主要：数组和对象）
@@ -164,13 +165,13 @@
 ## jQuery
 
 * window.onload 事件和 jQuery ready 函数有何不同
-* [jQuery 架构](http://localhost:4000/2017/06/23/jQuery/03/)
-  * [jQuery.fn.init()](http://localhost:4000/2017/07/11/jQuery/04/)
+* [jQuery 架构](http://heptaluan.github.io/2017/06/23/jQuery/03/)
+  * [jQuery.fn.init()](http://heptaluan.github.io/2017/07/11/jQuery/04/)
   * [jQuery.each](https://heptaluan.github.io/2017/06/04/jQuery/01/)
-  * [jQuery.extend() 和 jQuery.fn.extend()](http://localhost:4000/2017/07/18/jQuery/07/)
-  * [jQuery.buildFragment(args, nodes, scripts)](http://localhost:4000/2017/08/02/jQuery/08/)
-  * [jQuery.clean(elems, context, fragment, scripts)](http://localhost:4000/2017/08/11/jQuery/09/)
-  * [工具函数](http://localhost:4000/2017/07/15/jQuery/05/)
+  * [jQuery.extend() 和 jQuery.fn.extend()](http://heptaluan.github.io/2017/07/18/jQuery/07/)
+  * [jQuery.buildFragment(args, nodes, scripts)](http://heptaluan.github.io/2017/08/02/jQuery/08/)
+  * [jQuery.clean(elems, context, fragment, scripts)](http://heptaluan.github.io/2017/08/11/jQuery/09/)
+  * [工具函数](http://heptaluan.github.io/2017/07/15/jQuery/05/)
 * jQuery 动画
 * [deferred 对象](https://heptaluan.github.io/2017/06/21/jQuery/02/)
 * ...

@@ -89,13 +89,15 @@
   * for...of
 * 原型链
   * [constructor、__proto__ 和 prototype](https://heptaluan.github.io/2017/04/06/JavaScript/10/)，[原型和原型对象](https://heptaluan.github.io/2017/04/08/JavaScript/11/)
+* [继承](http://heptaluan.github.io/2018/01/10/JavaScript/28/)
   * 类式继承
   * 原型继承
+  * 组合模式
   * [Object.create()](https://heptaluan.github.io/2017/03/03/JavaScript/07/)
 * [闭包](https://heptaluan.github.io/2017/05/12/JavaScript/16/)
   * [JavaScript Closures for Dummies](http://heptaluan.github.io/2017/05/13/JavaScript/17/)
   * [异步回调函数当中进行取值](http://heptaluan.github.io/2017/09/17/JavaScript/51/)
-* 对象深浅拷贝
+* [对象深浅拷贝](http://heptaluan.github.io/2018/01/14/JavaScript/29/)
   * [JSON.parse() && JSON.stringify()](http://heptaluan.github.io/2017/07/06/JavaScript/23/)
 * 迭代器与生成器
 
@@ -116,6 +118,17 @@
 * offset，scroll，client
 * Event 事件
 ----
+* 数组
+  * 数组排序
+  * 数组去重
+  * 扁平化数组
+  * 求数组中最大值和最小值
+* 排序方式
+  * 冒泡排序
+  * 选择排序
+  * 快速排序
+  * 递归
+----
 * [设计模式](http://heptaluan.github.io/2017/08/17/JavaScript/47/)
   * [单例模式](https://heptaluan.github.io/2017/01/25/JavaScript/04/)
   * 工厂模式
@@ -129,6 +142,7 @@
   * 宏任务与微任务
 * 常见的模块化
 * 同步与异步
+* [垃圾回收机制](http://heptaluan.github.io/2017/12/25/Essay/02/)
 * ...
 
 
@@ -216,7 +230,7 @@
 * Angular-CLI
 * 依赖注入
 * 装饰器
-* 管道
+* [管道](http://heptaluan.github.io/2018/01/11/Angular/04/)
 * 动态加载
 * ExpressionChangedAfterItHasBeenCheckedError
 * Angular 中使用 WebSocket
@@ -287,6 +301,7 @@
 * [CommonJS、AMD 和 CMD](https://heptaluan.github.io/2017/02/03/JavaScript/05/)
 * 事件循环 && EventEmitter
 * 创建简单的服务器
+* [session 和 cookie](http://heptaluan.github.io/2017/11/26/HTTP/02/)
 * 模块化
   * exports
   * module.exports
@@ -352,8 +367,13 @@
 ## 浏览器 && HTTP 协议 
 
 * 从输入 URL 到页面加载的全过程
-* 浏览器缓存
+* [浏览器缓存](http://heptaluan.github.io/2017/12/12/HTTP/04/)
 * 重绘 && 回流
+* [域名发散与收敛](http://heptaluan.github.io/2017/12/01/HTTP/03/)
+* [字符编码](http://heptaluan.github.io/2017/12/24/Essay/01/)
+  * ASCII
+  * UTF-8
+  * GBK/GB2312
 * 常见浏览器及其内核
 * HTTP 请求与响应对象
 * TCP 三次握手、四次挥手
@@ -380,24 +400,6 @@
 
 
 
-
-
-
-
-
-## 算法
-
-* 数组
-  * 数组排序
-  * 数组去重
-  * 扁平化数组
-  * 求数组中最大值和最小值
-* 排序方式
-  * 冒泡排序
-  * 选择排序
-  * 快速排序
-  * 递归
-* ...
 
 
 

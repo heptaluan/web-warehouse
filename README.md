@@ -67,11 +67,11 @@
 ## JavaScript
 
 * 基本数据类型
-  * [类型判断（typeof && instanceof），包装对象，空对象](https://heptaluan.github.io/2017/03/09/JavaScript/08/)
+  * [类型判断（包装对象，空对象）](http://localhost:4000/2018/03/17/JavaScript/30/)
   * [类型转换，== 与 ===](https://heptaluan.github.io/2017/03/17/JavaScript/09/)
-  * [运算符优先级，|| 和 &&](https://heptaluan.github.io/2017/05/19/JavaScript/19/)
-  * [对象](http://heptaluan.github.io/2017/10/07/JavaScript/25/)
-  * [函数](http://heptaluan.github.io/2017/10/08/JavaScript/26/)
+  * [运算符优先级](http://localhost:4000/2018/05/27/JavaScript/33/)，[|| 和 &&](https://heptaluan.github.io/2017/05/19/JavaScript/19/)
+* [对象](http://heptaluan.github.io/2017/10/07/JavaScript/25/)
+* [函数](http://heptaluan.github.io/2017/10/08/JavaScript/26/)
 * [this](http://heptaluan.github.io/2017/10/09/JavaScript/27/)
 * [基本类型，引用类型](https://heptaluan.github.io/2017/02/22/JavaScript/06/)
 * [作用域与变量对象](https://heptaluan.github.io/2017/01/18/JavaScript/03/)
@@ -99,10 +99,12 @@
   * [异步回调函数当中进行取值](http://heptaluan.github.io/2017/09/17/JavaScript/51/)
 * [对象深浅拷贝](http://heptaluan.github.io/2018/01/14/JavaScript/29/)
   * [JSON.parse() && JSON.stringify()](http://heptaluan.github.io/2017/07/06/JavaScript/23/)
+* [ES6 中的 Class](http://heptaluan.github.io/2017/09/20/JavaScript/24/)
+* [Reflect](http://heptaluan.github.io/2017/09/21/JavaScript/53/)
+* [promise 和 setTimeout](http://localhost:4000/2018/03/19/JavaScript/31/)
 * 迭代器与生成器
 
 ----
-* 原生 ajax
 * [map/reduce](https://heptaluan.github.io/2017/06/01/JavaScript/20/)
 * [bind](https://heptaluan.github.io/2017/05/07/JavaScript/15/)，[call、apply](https://heptaluan.github.io/2018/04/16/JavaScript/32/)
   * currying
@@ -129,6 +131,8 @@
   * 快速排序
   * 递归
 ----
+* 原生 Ajax
+* [跨域](http://localhost:4000/2018/04/26/JavaScript/39/)
 * [设计模式](http://heptaluan.github.io/2017/08/17/JavaScript/47/)
   * [单例模式](https://heptaluan.github.io/2017/01/25/JavaScript/04/)
   * 工厂模式
@@ -144,31 +148,6 @@
 * 同步与异步
 * [垃圾回收机制](http://heptaluan.github.io/2017/12/25/Essay/02/)
 * ...
-
-
-
-
-
-
-## ES6
-
-* let 与 const
-* 异步解决方案
-  * 回调函数
-  * Promise
-  * Generator
-  * Async/Await
-* [Class](http://heptaluan.github.io/2017/09/20/JavaScript/24/)
-* [Reflect](http://heptaluan.github.io/2017/09/21/JavaScript/53/)
-* 箭头函数
-* 模块化（export && import）
-* 解构赋值（主要：数组和对象）
-* 数组、字符串、函数、日期等扩展方法
-* 默认值、扩展运算符
-* 数组 forEach、some、every、map、filter、reducer 等方法的使用
-* Proxy
-* ...
-
 
 
 
@@ -226,10 +205,13 @@
 
 ## Angular
 
-* :host 和 ::ng-deep
 * Angular-CLI
+* [:host 和 ::ng-deep](http://localhost:4000/2018/01/16/Angular/06/)
 * 依赖注入
-* 装饰器
+* [装饰器](http://localhost:4000/2018/01/15/Angular/05/)
+  * @Input，@Output（inputs，outputs）
+  * @ViewChild，@ViewChildren
+  * @HostListener，@HostBinding
 * [管道](http://heptaluan.github.io/2018/01/11/Angular/04/)
 * 动态加载
 * ExpressionChangedAfterItHasBeenCheckedError
@@ -246,6 +228,7 @@
 
 ## React
 
+* Virtual DOM
 * JSX 语法
 * 属性 props && 状态 state
 * React 生命周期
@@ -294,6 +277,71 @@
 
 
 
+## Vue
+
+* [Vue 当中的 Mixin](http://localhost:4000/2018/04/15/Vue/02/)
+* 数据双向绑定 & 组件化
+* Vue常见API
+* [在 Vue 中使用 jsx](http://localhost:4000/2018/04/29/Vue/03/)
+* [axios](http://localhost:4000/2018/05/10/Vue/04/)
+  * [axios 中跨域访问的问题](http://localhost:4000/2018/05/11/Vue/05/)
+* 常见选项
+  * methods watch computed filter mixins ...
+* 常用指令
+  * v-for v-pre v-html v-bind v-model...
+* 常用组件
+  * transition transition-group keep-alive slot ...
+* nexttick，ref，set，slots，scopedslots
+* 动态绑定class & style
+* Vue生命周期
+* Vue监听数组
+* 组件的封装
+* Vue-cli2.x & Vue-cli3.x
+* 组件间的通信
+  * 父子组件
+    * 父组件向子组件 props $children
+    * 子组件向父组件 parent
+  * 非父子组件兄弟组件
+    * 中央事件总线 EventBus
+    * listeners inheritAttrs
+    * provide inject
+* Vue-loader的理解
+* Vue-Router的理解
+  * router-link
+  * router-view
+* 导航方式
+  * 编程式导航
+  * 声明式导航
+* 命名路由 & 命名视图
+  * name属性 -> {name:, params:}
+  * router-view的name属性与components对应
+* 动态路由及路由组件间传参
+  * name + params方式
+  * path + query方式
+* router & route的理解
+* 导航守卫
+  * 全局守卫
+  * 组件内守卫
+  * 路由独享守卫
+* 路由懒加载
+  * vue异步组件
+  * es提案的import()
+  * webpack的require ensure()
+* Vuex的理解及使用场景
+* Vuex核心概念
+  * State
+  * Getters
+  * Mutations
+  * Actions
+  * Modules
+* 脚手架搭建Vue全家桶项目
+* 服务端渲染SSR
+  * 首屏渲染 & SEO 问题
+  * Nuxt.js
+
+
+
+
 
 ## Node.js
 
@@ -314,49 +362,33 @@
   * HTTP && HTTPS
   * tcp
   * process
-* ...
-
-
-
-
-
-## Express
-
-* request && response对象属性和方法
-* GET && POST请求
-* 静态文件 static
-* 路由中req, res对象中的属性
-* 对中间件的理解
-* 常用中间件
-  * body-parser
-  * cookie-parser
-* ...
-
-
-
-
-
-
-
-## Koa2
-
-* 对 Koa2 的理解
-* 与 Express 的区别
-* 理解核心对象
-  * Application
-  * Context
-  * Request
-  * Response
-* 常见中间件
-* 中间件的概念
-  * koa-body
-  * koa-bodyparse
-  * koa-multer
-  * koa-router
-  * koa-static
-  * koa-compose
-  * Koa2路由的使用
-* ...
+* Express
+  * request && response对象属性和方法
+  * GET && POST请求
+  * 静态文件 static
+  * 路由中req, res对象中的属性
+  * 对中间件的理解
+  * 常用中间件
+    * body-parser
+    * cookie-parser
+* Koa2
+  * 对 Koa2 的理解
+  * 与 Express 的区别
+  * 理解核心对象
+    * Application
+    * Context
+    * Request
+    * Response
+  * 常见中间件
+  * 中间件的概念
+    * koa-body
+    * koa-bodyparse
+    * koa-multer
+    * koa-router
+    * koa-static
+    * koa-compose
+    * Koa2路由的使用
+  * ...
 
 
 
@@ -375,9 +407,10 @@
   * UTF-8
   * GBK/GB2312
 * 常见浏览器及其内核
-* HTTP 请求与响应对象
-* TCP 三次握手、四次挥手
+----
+* [HTTP 与 TCP（三次握手、四次挥手）](http://localhost:4000/2018/05/05/HTTP/05/)
 * HTTP 常见方法与状态码
+* [http 2.0](http://localhost:4000/2018/05/09/HTTP/06/)
 * 方法
   * GET
   * POST
@@ -410,23 +443,11 @@
 
 ## 数据库
 
-* MySql
-  * Mysql 安装
-  * Mysql 常见增删改查
-  * python 连接 Mysql
-  * Node 连接 Mysql
+* [Windows 下的 MySQL 安装](http://localhost:4000/2018/03/22/MySQL/03/)
+* [缓存穿透和缓存雪崩](http://localhost:4000/2018/03/03/MySQL/01/)
+* [MySQL 基本增删改查](http://localhost:4000/2018/03/23/MySQL/04/)
+* [使用 Python 操作 MySQL](http://localhost:4000/2018/03/29/MySQL/05/)
+* [Sequelize 与 MySQL](http://localhost:4000/2018/03/31/MySQL/06/)
 * MonogoDB
-  * MonogoDB 安装
-  * MonogoDB 常见增删改查
-  * mongoose
-  * Node 连接 MonogoDB
 * Redis
-  * Redis 安装
-  * Redis 支持的数据类型
-    * String
-    * List
-    * Set
-    * Sorted Set
-    * Hash
-    * Node使用Redis
 * ...

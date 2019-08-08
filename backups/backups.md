@@ -56,68 +56,6 @@
 
 
 
-## Vue
-
-* MVC & MVVM的理解
-* Virtual DOM的理解
-* 数据双向绑定 & 组件化
-* Vue常见API
-* 常见选项
-  * methods watch computed filter mixins ...
-* 常用指令
-  * v-for v-pre v-html v-bind v-model...
-* 常用组件
-  * transition transition-group keep-alive slot ...
-* nexttick，ref，set，slots，scopedslots
-* 动态绑定class & style
-* Vue生命周期
-* Vue监听数组
-* 组件的封装
-* Vue-cli2.x & Vue-cli3.x
-* 组件间的通信
-  * 父子组件
-    * 父组件向子组件 props $children
-    * 子组件向父组件 parent
-  * 非父子组件兄弟组件
-    * 中央事件总线 EventBus
-    * listeners inheritAttrs
-    * provide inject
-* Vue-loader的理解
-* Vue-Router的理解
-  * router-link
-  * router-view
-* 导航方式
-  * 编程式导航
-  * 声明式导航
-* 命名路由 & 命名视图
-  * name属性 -> {name:, params:}
-  * router-view的name属性与components对应
-* 动态路由及路由组件间传参
-  * name + params方式
-  * path + query方式
-* router & route的理解
-* 导航守卫
-  * 全局守卫
-  * 组件内守卫
-  * 路由独享守卫
-* 路由懒加载
-  * vue异步组件
-  * es提案的import()
-  * webpack的require ensure()
-* Vuex的理解及使用场景
-* Vuex核心概念
-  * State
-  * Getters
-  * Mutations
-  * Actions
-  * Modules
-* 脚手架搭建Vue全家桶项目
-* 服务端渲染SSR
-  * 首屏渲染 & SEO 问题
-  * Nuxt.js
-
-
-
 ## ReactNative
 
 * 搭建RN环境 & Weex环境

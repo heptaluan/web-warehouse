@@ -23,6 +23,18 @@
 目前主要技术栈方向为 [Angular](https://angular.cn/) 和 [Node.js](http://nodejs.cn/)
 
 
+<!-- 
+
+跨域处理方式
+
+font 优化
+
+grid
+
+BOM
+
+-->
+
 
 
 ## HTML
@@ -112,6 +124,7 @@
   * call 和 apply 哪个速度快一些
 * [once/debouce/throttle](http://heptaluan.github.io/2017/08/25/JavaScript/48/)
 * [监听对象和数组的变化](http://heptaluan.github.io/2017/08/29/JavaScript/49/)
+* [window.requestAnimationFrame()](http://localhost:4000/2018/06/11/JavaScript/45/)
 * 浏览器对象
   * Window 对象
   * History 对象
@@ -280,7 +293,7 @@
 ## Vue
 
 * [Vue 当中的 Mixin](http://localhost:4000/2018/04/15/Vue/02/)
-* 数据双向绑定 & 组件化
+* [双向绑定原理](http://localhost:4000/2018/07/10/JavaScript/34/)
 * Vue常见API
 * [在 Vue 中使用 jsx](http://localhost:4000/2018/04/29/Vue/03/)
 * [axios](http://localhost:4000/2018/05/10/Vue/04/)
@@ -349,19 +362,16 @@
 * [CommonJS、AMD 和 CMD](https://heptaluan.github.io/2017/02/03/JavaScript/05/)
 * 事件循环 && EventEmitter
 * 创建简单的服务器
+* [module.exports 和 exports](http://localhost:4000/2018/06/05/Node/04/)
 * [session 和 cookie](http://heptaluan.github.io/2017/11/26/HTTP/02/)
-* 模块化
-  * exports
-  * module.exports
-* 核心模块
-  * npm
-  * path
-  * fs
-  * buffer
-  * stream
-  * HTTP && HTTPS
-  * tcp
-  * process
+* [Stream](http://localhost:4000/2018/07/12/Node/01/)
+  * Readable 和 Writable
+  * Duplex 和 transform
+  * 背压（back pressure）
+  * 流式数据处理
+  * Browserify 和 Gulp 设计机制
+* 模块
+  * [co](http://localhost:4000/2018/07/22/Node/02/)
 * Express
   * request && response对象属性和方法
   * GET && POST请求

@@ -114,6 +114,7 @@ BOM
 * [ES6 中的 Class](http://heptaluan.github.io/2017/09/20/JavaScript/24/)
 * [Reflect](http://heptaluan.github.io/2017/09/21/JavaScript/53/)
 * [promise 和 setTimeout](http://heptaluan.github.io/2018/03/19/JavaScript/31/)
+* [FileReader](http://heptaluan.github.io/2018/08/04/JavaScript/35/)
 * 迭代器与生成器
 
 ----

@@ -56,9 +56,14 @@ BOM
 * [浮动原理与解决办法](https://heptaluan.github.io/2016/11/09/CSS/01/)
 * CSS 盒模型
 * [样式来源与层叠规则](http://heptaluan.github.io/2017/09/03/CSS/11/)
-* 获取盒子宽高的几种方式及区别
+* [伪类与伪元素](http://localhost:4000/2018/11/25/CSS/04/)
+* [float、display、position、vertical-align、line-height](http://localhost:4000/2018/11/28/CSS/05/)
 * [单行，多行的溢出隐藏](https://heptaluan.github.io/2016/12/02/CSS/02/)
+* [BFC](http://localhost:4000/2018/12/03/CSS/06/)
+* [IFC](http://localhost:4000/2018/12/05/CSS/07/)
+* [IE 中的 haslayout](http://localhost:4000/2018/12/12/CSS/08/)
 * Flex 与 Grid 布局
+  * [flex 取值](http://localhost:4000/2019/01/12/CSS/09/)
 * CSS 常见选择器
 * BFC 与 IFC
 * 定位
@@ -119,6 +124,7 @@ BOM
 
 ----
 * [map/reduce](https://heptaluan.github.io/2017/06/01/JavaScript/20/)
+* [Map/forEach](http://localhost:4000/2018/09/12/JavaScript/37/)
 * [bind](https://heptaluan.github.io/2017/05/07/JavaScript/15/)，[call、apply](https://heptaluan.github.io/2018/04/16/JavaScript/32/)
   * currying
   * call 和 apply 的第一个参数（严格模式）
@@ -153,11 +159,11 @@ BOM
   * 代理模式
   * 观察者模式
 * [CommonJS、AMD 和 CMD](https://heptaluan.github.io/2017/02/03/JavaScript/05/)
-* JavaScript 并发模型
+* [JavaScript 并发模型](http://localhost:4000/2018/08/12/JavaScript/36/)
   * Event Loop
   * 运行机制
   * 进程与线程
-  * 宏任务与微任务
+  * Macrotask（宏任务）和 Microtask（微任务）
 * 常见的模块化
 * 同步与异步
 * [垃圾回收机制](http://heptaluan.github.io/2017/12/25/Essay/02/)
@@ -219,9 +225,11 @@ BOM
 
 ## Angular
 
-* Angular-CLI
+
+* [Angular-CLI](http://localhost:4000/2018/12/12/Angular/01/)
 * [:host 和 ::ng-deep](http://heptaluan.github.io/2018/01/16/Angular/06/)
-* 依赖注入
+* [为什么要使用依赖注入](http://localhost:4000/2018/12/14/Angular/02/)
+  * [Angular 中的依赖注入（useClass，useValue，useExisting 和 useFactory）](http://localhost:4000/2018/12/26/Angular/03/)
 * [装饰器](http://heptaluan.github.io/2018/01/15/Angular/05/)
   * @Input，@Output（inputs，outputs）
   * @ViewChild，@ViewChildren
@@ -295,64 +303,18 @@ BOM
 
 * [Vue 当中的 Mixin](http://heptaluan.github.io/2018/04/15/Vue/02/)
 * [双向绑定原理](http://heptaluan.github.io/2018/07/10/JavaScript/34/)
-* Vue常见API
 * [在 Vue 中使用 jsx](http://heptaluan.github.io/2018/04/29/Vue/03/)
+* [vue-resource 跨域问题](http://localhost:4000/2018/09/18/Vue/14/)
 * [axios](http://heptaluan.github.io/2018/05/10/Vue/04/)
   * [axios 中跨域访问的问题](http://heptaluan.github.io/2018/05/11/Vue/05/)
-* 常见选项
-  * methods watch computed filter mixins ...
-* 常用指令
-  * v-for v-pre v-html v-bind v-model...
-* 常用组件
-  * transition transition-group keep-alive slot ...
-* nexttick，ref，set，slots，scopedslots
-* 动态绑定class & style
-* Vue生命周期
-* Vue监听数组
-* 组件的封装
-* Vue-cli2.x & Vue-cli3.x
-* 组件间的通信
-  * 父子组件
-    * 父组件向子组件 props $children
-    * 子组件向父组件 parent
-  * 非父子组件兄弟组件
-    * 中央事件总线 EventBus
-    * listeners inheritAttrs
-    * provide inject
-* Vue-loader的理解
-* Vue-Router的理解
-  * router-link
-  * router-view
-* 导航方式
-  * 编程式导航
-  * 声明式导航
-* 命名路由 & 命名视图
-  * name属性 -> {name:, params:}
-  * router-view的name属性与components对应
-* 动态路由及路由组件间传参
-  * name + params方式
-  * path + query方式
-* router & route的理解
-* 导航守卫
-  * 全局守卫
-  * 组件内守卫
-  * 路由独享守卫
-* 路由懒加载
-  * vue异步组件
-  * es提案的import()
-  * webpack的require ensure()
-* Vuex的理解及使用场景
-* Vuex核心概念
-  * State
-  * Getters
-  * Mutations
-  * Actions
-  * Modules
-* 脚手架搭建Vue全家桶项目
-* 服务端渲染SSR
-  * 首屏渲染 & SEO 问题
-  * Nuxt.js
-
+* [使用 webpack 来构建 vue 项目（不使用 vue-cli）](http://localhost:4000/2018/09/12/Vue/12/)
+* [webpack 中的 loader 和 plugin](http://localhost:4000/2018/09/12/Vue/13/)
+* [Vuex 框架流程](http://localhost:4000/2018/08/13/Vue/07/)
+  * [State，Getter，Mutation，Action](http://localhost:4000/2018/08/15/Vue/06/)
+  * [初始化装载与注入](http://localhost:4000/2018/08/19/Vue/08/)
+  * [Store](http://localhost:4000/2018/08/25/Vue/09/)
+  * [installModule，resetStoreVM，plugins](http://localhost:4000/2018/09/04/Vue/10/)
+  * [源码汇总](http://localhost:4000/2018/09/11/Vue/11/)
 
 
 
@@ -373,6 +335,7 @@ BOM
   * Browserify 和 Gulp 设计机制
 * 模块
   * [co](http://heptaluan.github.io/2018/07/22/Node/02/)
+  * [SuperAgent](http://localhost:4000/2019/01/02/Node/03/)
 * Express
   * request && response对象属性和方法
   * GET && POST请求
@@ -457,8 +420,10 @@ BOM
 * [Windows 下的 MySQL 安装](http://heptaluan.github.io/2018/03/22/MySQL/03/)
 * [缓存穿透和缓存雪崩](http://heptaluan.github.io/2018/03/03/MySQL/01/)
 * [MySQL 基本增删改查](http://heptaluan.github.io/2018/03/23/MySQL/04/)
+* [使用 Node.js 操作 MySQL](http://localhost:4000/2018/09/05/Node/05/)
 * [使用 Python 操作 MySQL](http://heptaluan.github.io/2018/03/29/MySQL/05/)
 * [Sequelize 与 MySQL](http://heptaluan.github.io/2018/03/31/MySQL/06/)
+* [事务和锁](http://localhost:4000/2018/11/04/MySQL/02/)
 * MonogoDB
 * Redis
 * ...

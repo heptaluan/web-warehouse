@@ -225,7 +225,6 @@ BOM
 
 ## Angular
 
-
 * [Angular-CLI](http://heptaluan.github.io/2018/12/12/Angular/01/)
 * [:host 和 ::ng-deep](http://heptaluan.github.io/2018/01/16/Angular/06/)
 * [为什么要使用依赖注入](http://heptaluan.github.io/2018/12/14/Angular/02/)
@@ -238,6 +237,7 @@ BOM
 * 动态加载
 * [ExpressionChangedAfterItHasBeenCheckedError](http://heptaluan.github.io/2019/03/11/Angular/07/)
   * 变化监测机制
+  * 为什么还需要第二次监测循环
 * ExpressionChangedAfterItHasBeenCheckedError
 * Angular 中使用 WebSocket
 * 表单
@@ -257,6 +257,13 @@ BOM
 * [React 路由](http://heptaluan.github.io/2019/01/12/React/04/)
 * [为什么要使用 Flux](http://heptaluan.github.io/2019/02/22/React/05/)
   * dispatcher，action，store 和 views
+* [Redux](http://heptaluan.github.io/2019/03/13/React/06/)
+  * 为什么要用 Redux
+  * Store，Action，Reducer
+  * [Redux 官方示例剖析](http://heptaluan.github.io/2019/03/14/React/07/)
+  * [React-Redux](http://heptaluan.github.io/2019/03/25/React/08/)
+  * [Redux、Flux 和 React-Redux 三者之间的区别](http://heptaluan.github.io/2019/04/02/React/09/)
+  * [纯函数 reducer](http://heptaluan.github.io/2019/04/03/React/10/)
 * ...
 
 

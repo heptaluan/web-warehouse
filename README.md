@@ -35,6 +35,10 @@ BOM
 
 promise 怎么实现
 
+深入学习 rxjs
+
+重看一遍 angular 视频
+
 -->
 
 
@@ -254,12 +258,13 @@ promise 怎么实现
   * 模版式表单
   * 响应式表单
   * 自定义表单控件
-* ExpressionChangedAfterItHasBeenCheckedError
-* Angular 中使用 WebSocket
-* 表单
 * 路由传递参数的几种方式
 * 属性绑定 [] 和 {{}}
 * [rxjs](http://heptaluan.github.io/2019/06/04/Angular/11/)
+  * [rxjs 高阶操作符](http://heptaluan.github.io/2019/06/08/Angular/12/)
+    * flatMap，switchMap，count
+    * Observable 的冷和热
+    * Subject
 * ngrx
 * @effect
 * ...
@@ -280,6 +285,11 @@ promise 怎么实现
   * [React-Redux](http://heptaluan.github.io/2019/03/25/React/08/)
   * [Redux、Flux 和 React-Redux 三者之间的区别](http://heptaluan.github.io/2019/04/02/React/09/)
   * [纯函数 reducer](http://heptaluan.github.io/2019/04/03/React/10/)
+  * Redux 源码
+    * [compose(…functions)，combineReducers(reducers)，bindActionCreators(actionCreators, dispatch)](http://heptaluan.github.io/2019/06/05/React/11/)
+    * [createStore()](http://heptaluan.github.io/2019/06/08/React/12/)
+    * [Redux 的中间件](http://heptaluan.github.io/2019/06/12/React/13/)
+    * [applyMiddleware(...middlewares)](http://heptaluan.github.io/2019/06/16/React/14/)
 * ...
 
 

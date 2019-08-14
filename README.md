@@ -33,6 +33,8 @@ grid
 
 BOM
 
+promise 怎么实现
+
 -->
 
 
@@ -141,6 +143,7 @@ BOM
 * Event 事件
 ----
 * 数组
+  * [常用方法 splice，push，pop，shift 和 unshift 的实现](http://heptaluan.github.io/2019/04/17/JavaScript/46/)
   * 数组排序
   * 数组去重
   * 扁平化数组
@@ -164,6 +167,8 @@ BOM
   * 运行机制
   * 进程与线程
   * Macrotask（宏任务）和 Microtask（微任务）
+* [JavaScript 中的单线程执行机制](http://heptaluan.github.io/2019/05/04/JavaScript/54/)
+* [JavaScript 中的栈和堆](http://heptaluan.github.io/2019/05/05/JavaScript/55/)
 * 常见的模块化
 * 同步与异步
 * [垃圾回收机制](http://heptaluan.github.io/2017/12/25/Essay/02/)
@@ -178,6 +183,7 @@ BOM
 ## jQuery
 
 * window.onload 事件和 jQuery ready 函数有何不同
+* [Zepto 架构](http://heptaluan.github.io/2019/05/28/JavaScript/41/)
 * [jQuery 架构](http://heptaluan.github.io/2017/06/23/jQuery/03/)
   * [jQuery.fn.init()](http://heptaluan.github.io/2017/07/11/jQuery/04/)
   * [jQuery.each](https://heptaluan.github.io/2017/06/04/jQuery/01/)
@@ -234,16 +240,26 @@ BOM
   * @ViewChild，@ViewChildren
   * @HostListener，@HostBinding
 * [管道](http://heptaluan.github.io/2018/01/11/Angular/04/)
-* 动态加载
+* [Angular 中的动态加载](http://heptaluan.github.io/2019/05/12/Angular/08/)
+  * 动态加载已经声明的组件
+  * 动态创建不存在的组件
+  * 使用指令来指定宿主对象
+  * 动态添加宿主
+  * 与动态添加后的组件进行通信
 * [ExpressionChangedAfterItHasBeenCheckedError](http://heptaluan.github.io/2019/03/11/Angular/07/)
   * 变化监测机制
   * 为什么还需要第二次监测循环
+* [在 Angular 当中使用 WebSocket](http://heptaluan.github.io/2019/05/20/Angular/15/)
+* [Angular 中的表单](http://heptaluan.github.io/2019/05/27/Angular/10/)
+  * 模版式表单
+  * 响应式表单
+  * 自定义表单控件
 * ExpressionChangedAfterItHasBeenCheckedError
 * Angular 中使用 WebSocket
 * 表单
 * 路由传递参数的几种方式
 * 属性绑定 [] 和 {{}}
-* rxjs
+* [rxjs](http://heptaluan.github.io/2019/06/04/Angular/11/)
 * ngrx
 * @effect
 * ...

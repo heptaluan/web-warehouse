@@ -3,13 +3,6 @@
 ----
 
 
-## 2019
-
-[为什么 Object.keys 的返回值会自动排序](https://github.com/heptaluan/blog/blob/master/essay/js/01.md#%E4%B8%BA%E4%BB%80%E4%B9%88-objectkeys-%E7%9A%84%E8%BF%94%E5%9B%9E%E5%80%BC%E4%BC%9A%E8%87%AA%E5%8A%A8%E6%8E%92%E5%BA%8F)
-
-[如何判断一个空对象](https://github.com/heptaluan/blog/blob/master/essay/js/01.md#%E5%A6%82%E4%BD%95%E5%88%A4%E6%96%AD%E4%B8%80%E4%B8%AA%E7%A9%BA%E5%AF%B9%E8%B1%A1)
-
-
 ## JavaScript
 
 [使用 new 的时候发生了什么](https://github.com/heptaluan/blog/blob/master/essay/js/00.md#%E4%BD%BF%E7%94%A8-new-%E7%9A%84%E6%97%B6%E5%80%99%E5%8F%91%E7%94%9F%E4%BA%86%E4%BB%80%E4%B9%88)

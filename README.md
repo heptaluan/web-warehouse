@@ -39,6 +39,8 @@ promise 怎么实现
 
 重看一遍 angular 视频
 
+vh/vw
+
 -->
 
 
@@ -80,6 +82,7 @@ promise 怎么实现
 * 文字、盒子水平垂直居中
 * link 和 @import 有什么区别
 * 常见兼容性问题
+* [FOUC](http://heptaluan.github.io/2019/07/07/JavaScript/44/)
 * ...
 
 
@@ -104,7 +107,7 @@ promise 怎么实现
   * ['1', '2', '3'].map(parseInt)
 * [节点（Node）属性](http://heptaluan.github.io/2017/06/26/JavaScript/21/)
   * 创建节点/插入节点/删除节点/替换节点/克隆节点
-* 对象的遍历
+* [对象的遍历](http://heptaluan.github.io/2019/06/28/JavaScript/42/)
   * Object.keys()
   * for...in
   * Object.getOwnPropertyNames()
@@ -126,8 +129,10 @@ promise 怎么实现
 * [Reflect](http://heptaluan.github.io/2017/09/21/JavaScript/53/)
 * [promise 和 setTimeout](http://heptaluan.github.io/2018/03/19/JavaScript/31/)
 * [FileReader](http://heptaluan.github.io/2018/08/04/JavaScript/35/)
-* 迭代器与生成器
-
+* [迭代器与生成器](http://heptaluan.github.io/2019/07/13/JavaScript/56/)
+  * 可迭代协议和迭代器协议
+  * 对象上实现 Iterator 接口
+  * Generator、yield 和 yield*
 ----
 * [map/reduce](https://heptaluan.github.io/2017/06/01/JavaScript/20/)
 * [Map/forEach](http://heptaluan.github.io/2018/09/12/JavaScript/37/)
@@ -146,17 +151,12 @@ promise 怎么实现
 * offset，scroll，client
 * Event 事件
 ----
-* 数组
-  * [常用方法 splice，push，pop，shift 和 unshift 的实现](http://heptaluan.github.io/2019/04/17/JavaScript/46/)
-  * 数组排序
-  * 数组去重
-  * 扁平化数组
-  * 求数组中最大值和最小值
-* 排序方式
+* [常用方法 splice，push，pop，shift 和 unshift 的实现](http://heptaluan.github.io/2019/04/17/JavaScript/46/)
+* [数组排序](http://heptaluan.github.io/2019/08/02/JavaScript/57/#%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F)
   * 冒泡排序
-  * 选择排序
   * 快速排序
-  * 递归
+  * 插入排序
+* [数组去重](http://heptaluan.github.io/2019/08/02/JavaScript/57/#%E6%95%B0%E7%BB%84%E5%8E%BB%E9%87%8D)
 ----
 * 原生 Ajax
 * [跨域](http://heptaluan.github.io/2018/04/26/JavaScript/39/)
@@ -173,8 +173,6 @@ promise 怎么实现
   * Macrotask（宏任务）和 Microtask（微任务）
 * [JavaScript 中的单线程执行机制](http://heptaluan.github.io/2019/05/04/JavaScript/54/)
 * [JavaScript 中的栈和堆](http://heptaluan.github.io/2019/05/05/JavaScript/55/)
-* 常见的模块化
-* 同步与异步
 * [垃圾回收机制](http://heptaluan.github.io/2017/12/25/Essay/02/)
 * ...
 
@@ -251,15 +249,19 @@ promise 怎么实现
   * 动态添加宿主
   * 与动态添加后的组件进行通信
 * [ExpressionChangedAfterItHasBeenCheckedError](http://heptaluan.github.io/2019/03/11/Angular/07/)
-  * 变化监测机制
-  * 为什么还需要第二次监测循环
+* [Angular 中的变化检测机制](http://heptaluan.github.io/2019/07/22/Angular/16/)
+  * 改善的循环脏值检测
+  * 
 * [在 Angular 当中使用 WebSocket](http://heptaluan.github.io/2019/05/20/Angular/15/)
 * [Angular 中的表单](http://heptaluan.github.io/2019/05/27/Angular/10/)
   * 模版式表单
   * 响应式表单
   * 自定义表单控件
-* 路由传递参数的几种方式
-* 属性绑定 [] 和 {{}}
+* [路由传递参数的几种方式](http://heptaluan.github.io/2019/07/11/Angular/13/)
+  * 在查询参数中传递
+  * 在路由路径中传递
+  * 在路由配置中传递
+* [属性绑定 [] 和 {{}}](http://heptaluan.github.io/2019/06/22/Angular/14/)
 * [rxjs](http://heptaluan.github.io/2019/06/04/Angular/11/)
   * [rxjs 高阶操作符](http://heptaluan.github.io/2019/06/08/Angular/12/)
     * flatMap，switchMap，count

@@ -35,11 +35,9 @@ BOM
 
 promise 怎么实现
 
-深入学习 rxjs
+深入学习 rxjs 
 
-重看一遍 angular 视频
-
-vh/vw
+重看一遍 angular 视频 度盘
 
 -->
 
@@ -82,6 +80,7 @@ vh/vw
 * 文字、盒子水平垂直居中
 * link 和 @import 有什么区别
 * 常见兼容性问题
+* [px，em，rem，vw 和 vh](http://heptaluan.github.io/2019/08/04/CSS/11/)
 * [FOUC](http://heptaluan.github.io/2019/07/07/JavaScript/44/)
 * ...
 

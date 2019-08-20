@@ -25,7 +25,7 @@
 
 <!-- 
 
-跨域处理方式
+IndexDB
 
 font 优化
 
@@ -78,7 +78,7 @@ promise 怎么实现
 * 常见单位
 * 移动端
 * 文字、盒子水平垂直居中
-* link 和 @import 有什么区别
+* [link 和 @import 有什么区别](https://heptaluan.github.io/2017/11/11/CSS/10/)
 * 常见兼容性问题
 * [px，em，rem，vw 和 vh](http://heptaluan.github.io/2019/08/04/CSS/11/)
 * [FOUC](http://heptaluan.github.io/2019/07/07/JavaScript/44/)

@@ -25,9 +25,7 @@
 
 <!-- 
 
-IndexDB
-
-font 优化
+IndexDB 
 
 grid
 
@@ -316,6 +314,51 @@ promise 怎么实现
 
 
 
+## 浏览器 && HTTP 协议 
+
+* 从输入 URL 到页面加载的全过程
+* [浏览器缓存](http://heptaluan.github.io/2017/12/12/HTTP/04/)
+* 重绘 && 回流
+* [域名发散与收敛](http://heptaluan.github.io/2017/12/01/HTTP/03/)
+* [字符编码](http://heptaluan.github.io/2017/12/24/Essay/01/)
+  * ASCII
+  * UTF-8
+  * GBK/GB2312
+* [前端字体优化](http://heptaluan.github.io/2019/08/18/Essay/04/)
+* 常见浏览器及其内核
+----
+* [http 与 tcp（三次握手、四次挥手）](http://heptaluan.github.io/2018/05/05/HTTP/05/)
+* HTTP 常见方法与状态码
+* [http 2.0](http://heptaluan.github.io/2018/05/09/HTTP/06/)
+* [http 报文头](http://heptaluan.github.io/2019/08/17/HTTP/07/)
+* 方法
+  * GET
+  * POST
+  * PUT
+  * HEAD
+  * DELETE
+* 状态码
+  * 1xx 信息类
+  * 2xx 成功类
+  * 3xx 重定向
+  * 4xx 客户端错误
+  * 5xx 服务端错误
+* 长连接与管线化
+* Etag && Expires && Cache-control等理解
+* 兼容版原生 Ajax
+* Fetch
+* Axios
+* Flyio
+* ...
+
+
+
+
+
+
+
+
+
 ## Node.js
 
 * 什么是 Node.js
@@ -360,49 +403,6 @@ promise 怎么实现
     * koa-compose
     * Koa2路由的使用
   * ...
-
-
-
-
-
-
-
-## 浏览器 && HTTP 协议 
-
-* 从输入 URL 到页面加载的全过程
-* [浏览器缓存](http://heptaluan.github.io/2017/12/12/HTTP/04/)
-* 重绘 && 回流
-* [域名发散与收敛](http://heptaluan.github.io/2017/12/01/HTTP/03/)
-* [字符编码](http://heptaluan.github.io/2017/12/24/Essay/01/)
-  * ASCII
-  * UTF-8
-  * GBK/GB2312
-* 常见浏览器及其内核
-----
-* [HTTP 与 TCP（三次握手、四次挥手）](http://heptaluan.github.io/2018/05/05/HTTP/05/)
-* HTTP 常见方法与状态码
-* [http 2.0](http://heptaluan.github.io/2018/05/09/HTTP/06/)
-* 方法
-  * GET
-  * POST
-  * PUT
-  * HEAD
-  * DELETE
-* 状态码
-  * 1xx 信息类
-  * 2xx 成功类
-  * 3xx 重定向
-  * 4xx 客户端错误
-  * 5xx 服务端错误
-* 长连接与管线化
-* Etag && Expires && Cache-control等理解
-* 兼容版原生 Ajax
-* Fetch
-* Axios
-* Flyio
-* ...
-
-
 
 
 

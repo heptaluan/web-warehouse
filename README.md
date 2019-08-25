@@ -69,12 +69,9 @@ promise 怎么实现
 * Flex 与 Grid 布局
   * [flex 取值](http://heptaluan.github.io/2019/01/12/CSS/09/)
 * CSS 常见选择器
-* BFC 与 IFC
 * 定位
 * 常见的页面布局
 * CSS3 新特性
-* 常见单位
-* 移动端
 * 文字、盒子水平垂直居中
 * [link 和 @import 有什么区别](https://heptaluan.github.io/2017/11/11/CSS/10/)
 * 常见兼容性问题
@@ -316,7 +313,7 @@ promise 怎么实现
 
 ## 浏览器 && HTTP 协议 
 
-* 从输入 URL 到页面加载的全过程
+* [从输入 URL 到页面加载的全过程](https://heptaluan.github.io/2017/11/07/HTTP/01/)
 * [浏览器缓存](http://heptaluan.github.io/2017/12/12/HTTP/04/)
 * 重绘 && 回流
 * [域名发散与收敛](http://heptaluan.github.io/2017/12/01/HTTP/03/)
@@ -331,24 +328,8 @@ promise 怎么实现
 * HTTP 常见方法与状态码
 * [http 2.0](http://heptaluan.github.io/2018/05/09/HTTP/06/)
 * [http 报文头](http://heptaluan.github.io/2019/08/17/HTTP/07/)
-* 方法
-  * GET
-  * POST
-  * PUT
-  * HEAD
-  * DELETE
-* 状态码
-  * 1xx 信息类
-  * 2xx 成功类
-  * 3xx 重定向
-  * 4xx 客户端错误
-  * 5xx 服务端错误
 * 长连接与管线化
 * Etag && Expires && Cache-control等理解
-* 兼容版原生 Ajax
-* Fetch
-* Axios
-* Flyio
 * ...
 
 

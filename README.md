@@ -25,9 +25,13 @@
 
 <!-- 
 
-IndexDB 
-
 grid
+
+IndexDB
+
+Service Workers
+
+Webpack 
 
 BOM
 

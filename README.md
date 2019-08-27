@@ -41,15 +41,28 @@ promise 怎么实现
 
 重看一遍 angular 视频 度盘
 
+http/2
+
+----
+----
+
+选择器的优先级
+
+WEB 标准以及 W3C 的理解与认识
+
+文档类型（DOCTYPE）有哪些，含义是什么
+
+html 和 body 的区别
+
 -->
 
 
 
 ## HTML
 
-* 对 WEB 标准以及 W3C 的理解与认识
+* WEB 标准以及 W3C 的理解与认识
+* 文档类型（DOCTYPE）有哪些，含义是什么
 * HTML5 新特性与语义化
-* 行内元素与块级元素
 * [ALT 与 TITLE 的区别](https://heptaluan.github.io/2017/01/10/JavaScript/02/)
 * 渐进增强与优雅降级的理解及区别
 * cookie、sessionStorage、localStorage 原理与区别
@@ -61,8 +74,8 @@ promise 怎么实现
 
 ## CSS
 
+* [CSS 盒模型](https://github.com/heptaluan/blog/blob/master/essay/css/00.md#%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B)
 * [浮动原理与解决办法](https://heptaluan.github.io/2016/11/09/CSS/01/)
-* CSS 盒模型
 * [样式来源与层叠规则](http://heptaluan.github.io/2017/09/03/CSS/11/)
 * [伪类与伪元素](http://heptaluan.github.io/2018/11/25/CSS/04/)
 * [float、display、position、vertical-align、line-height](http://heptaluan.github.io/2018/11/28/CSS/05/)
@@ -155,6 +168,20 @@ promise 怎么实现
   * 快速排序
   * 插入排序
 * [数组去重](http://heptaluan.github.io/2019/08/02/JavaScript/57/#%E6%95%B0%E7%BB%84%E5%8E%BB%E9%87%8D)
+  * Set
+  * 利用对象键值对
+  * indexOf
+  * 相邻比较
+  * reduce
+  * indexOf + filter
+* [常用正则](https://heptaluan.github.io/2019/08/02/JavaScript/57/#%E7%9F%AD%E6%A8%AA%E5%8F%98%E9%A9%BC%E5%B3%B0)
+  * 短横变驼峰
+  * 千位分隔符
+  * 解析 url
+  * 字符串大小写切换
+  * 去空格
+  * 去 html
+  * 取括号中的数值
 ----
 * 原生 Ajax
 * [跨域](http://heptaluan.github.io/2018/04/26/JavaScript/39/)
@@ -182,6 +209,9 @@ promise 怎么实现
 
 ## jQuery
 
+* DOM 操作原理
+* 选择器原理
+* 链式操作是如何实现的
 * window.onload 事件和 jQuery ready 函数有何不同
 * [Zepto 架构](http://heptaluan.github.io/2019/05/28/JavaScript/41/)
 * [jQuery 架构](http://heptaluan.github.io/2017/06/23/jQuery/03/)
@@ -231,8 +261,13 @@ promise 怎么实现
 
 ## Angular
 
+
 * [Angular-CLI](http://heptaluan.github.io/2018/12/12/Angular/01/)
 * [:host 和 ::ng-deep](http://heptaluan.github.io/2018/01/16/Angular/06/)
+* [ElementRef 与 Renderer](https://github.com/heptaluan/blog/blob/master/essay/angular/00.md#%E8%87%AA%E5%AE%9A%E4%B9%89%E5%B1%9E%E6%80%A7%E6%8C%87%E4%BB%A4%E4%B8%AD%E7%9A%84-elementref-%E4%B8%8E-renderer-%E7%9A%84%E4%BD%9C%E7%94%A8)
+* [TemplateRef 与 ViewContainerRef](https://github.com/heptaluan/blog/blob/master/essay/angular/00.md#%E8%87%AA%E5%AE%9A%E4%B9%89%E7%BB%93%E6%9E%84%E6%8C%87%E4%BB%A4%E4%B8%AD%E7%9A%84-templateref-%E4%B8%8E-viewcontainerref-%E7%9A%84%E4%BD%9C%E7%94%A8)
+* [innerHtml 的内容被转义](https://github.com/heptaluan/blog/blob/master/essay/angular/00.md#angular-%E4%B8%AD%E4%BD%BF%E7%94%A8-innerhtml-%E6%97%B6%E5%86%85%E5%AE%B9%E8%A2%AB%E8%BD%AC%E4%B9%89)
+* [forwardRef 的作用](https://github.com/heptaluan/blog/blob/master/essay/angular/00.md#angular-%E4%B8%AD-forwardref-%E7%9A%84%E4%BD%9C%E7%94%A8)
 * [为什么要使用依赖注入](http://heptaluan.github.io/2018/12/14/Angular/02/)
   * [Angular 中的依赖注入（useClass，useValue，useExisting 和 useFactory）](http://heptaluan.github.io/2018/12/26/Angular/03/)
 * [装饰器](http://heptaluan.github.io/2018/01/15/Angular/05/)
@@ -253,12 +288,17 @@ promise 怎么实现
 * [在 Angular 当中使用 WebSocket](http://heptaluan.github.io/2019/05/20/Angular/15/)
 * [Angular 中的表单](http://heptaluan.github.io/2019/05/27/Angular/10/)
   * 模版式表单
-  * 响应式表单
+  * 响应式表单（[使用方式](https://github.com/heptaluan/blog/blob/master/essay/angular/00.md#reactive-form-%E4%BD%BF%E7%94%A8%E6%AD%A5%E9%AA%A4)）
   * 自定义表单控件
-* [路由传递参数的几种方式](http://heptaluan.github.io/2019/07/11/Angular/13/)
-  * 在查询参数中传递
-  * 在路由路径中传递
-  * 在路由配置中传递
+* [组件之间参数传递的几种方式](https://github.com/heptaluan/blog/blob/master/essay/angular/00.md#%E7%BB%84%E4%BB%B6%E4%B9%8B%E9%97%B4%E5%8F%82%E6%95%B0%E4%BC%A0%E9%80%92%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E5%BC%8F)
+  * 输入输出属性（装饰器）
+  * 模版变量
+  * @ViewChild 装饰器
+  * 利用 Subject（基于 rxjs）
+  * [路由传递参数](http://heptaluan.github.io/2019/07/11/Angular/13/)
+    * 在查询参数中传递
+    * 在路由路径中传递
+    * 在路由配置中传递
 * [属性绑定 [] 和 {{}}](http://heptaluan.github.io/2019/06/22/Angular/14/)
 * [rxjs](http://heptaluan.github.io/2019/06/04/Angular/11/)
   * [rxjs 高阶操作符](http://heptaluan.github.io/2019/06/08/Angular/12/)
@@ -326,12 +366,23 @@ promise 怎么实现
   * UTF-8
   * GBK/GB2312
 * [前端字体优化](http://heptaluan.github.io/2019/08/18/Essay/04/)
+  * font-spider
+  * Fontmin
+  * Unicode-range 子集内嵌
+  * `<link rel=preload>`
 * 常见浏览器及其内核
 ----
 * [http 与 tcp（三次握手、四次挥手）](http://heptaluan.github.io/2018/05/05/HTTP/05/)
 * HTTP 常见方法与状态码
 * [http 2.0](http://heptaluan.github.io/2018/05/09/HTTP/06/)
 * [http 报文头](http://heptaluan.github.io/2019/08/17/HTTP/07/)
+  * 请求报文和响应报文
+  * 请求行（start line）、请求头（header），请求体（body）
+  * POST 提交数据方式
+    * application/x-www-form-urlencoded
+    * multipart/form-data
+    * application/json
+    * text/xml
 * 长连接与管线化
 * Etag && Expires && Cache-control等理解
 * ...

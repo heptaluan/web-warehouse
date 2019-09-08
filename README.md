@@ -248,7 +248,6 @@ promise 怎么实现
 * [ExpressionChangedAfterItHasBeenCheckedError](http://heptaluan.github.io/2019/03/11/Angular/07/)
 * [Angular 中的变化检测机制](http://heptaluan.github.io/2019/07/22/Angular/16/)
   * 改善的循环脏值检测
-  * 
 * [在 Angular 当中使用 WebSocket](http://heptaluan.github.io/2019/05/20/Angular/15/)
 * [Angular 中的表单](http://heptaluan.github.io/2019/05/27/Angular/10/)
   * 模版式表单
@@ -331,18 +330,6 @@ promise 怎么实现
 * HTTP 常见方法与状态码
 * [http 2.0](http://heptaluan.github.io/2018/05/09/HTTP/06/)
 * [http 报文头](http://heptaluan.github.io/2019/08/17/HTTP/07/)
-* 方法
-  * GET
-  * POST
-  * PUT
-  * HEAD
-  * DELETE
-* 状态码
-  * 1xx 信息类
-  * 2xx 成功类
-  * 3xx 重定向
-  * 4xx 客户端错误
-  * 5xx 服务端错误
 * 长连接与管线化
 * Etag && Expires && Cache-control等理解
 * 兼容版原生 Ajax
@@ -381,20 +368,15 @@ promise 怎么实现
   * GET && POST请求
   * 静态文件 static
   * 路由中req, res对象中的属性
-  * 对中间件的理解
-  * 常用中间件
-    * body-parser
-    * cookie-parser
+  * 中间件
 * Koa2
-  * 对 Koa2 的理解
   * 与 Express 的区别
   * 理解核心对象
     * Application
     * Context
     * Request
     * Response
-  * 常见中间件
-  * 中间件的概念
+  * 中间件
     * koa-body
     * koa-bodyparse
     * koa-multer

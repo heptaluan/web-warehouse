@@ -10,13 +10,12 @@
 ## [JavaScript](https://github.com/heptaluan/blog/blob/master/essay/js/00.md)
 
 * 使用 `new` 的时候发生了什么
-* 浏览器中的各种长度
+* `clientWidth`, `offsetWidth`, `scrollWidth`
 * `parseInt`
 * 数组常用的方法和其返回值
-* `clientWidth`, `offsetWidth`, `scrollWidth`
 * 自由变量到作用域链
 * `ES6` 的一些新方法
-* 关于 `'use strict'`
+* `'use strict'`
 * 检测是否有元素被隐藏
 * 鼠标长按事件
 * 如何快速判断 `DOM` 元素位于 `viewport` 以外
@@ -26,11 +25,13 @@
 * 如何判断鼠标滚动方向和绑定鼠标滚轮事件
 * `JavaScript` 判断滚动条方向
 * `setTimeout(function(){}, 0)`
+* `Reflect.apply(myFunction, myObject, args)` 和 `myFunction.apply(myObject, args)`
 
 
 
 ## [算法/正则/其他](https://github.com/heptaluan/blog/blob/master/essay/arithmetic/00.md)
 
+* `EventEmitter` 模块当中的 `spliceOne()`
 * `[1, 2, 3, 4, 5] => [1, 2, 3, 4, 5, 1, 4, 9, 16, 25]`
 * 生成一个 `20 X 12` 的表格，并且设定指定格子的背景颜色
 * 常见的数组的几种复制方法

@@ -1,3 +1,6 @@
+
+
+
 ## Webpack 4.x
 
 * Webpack配置文件常见选项
@@ -56,6 +59,12 @@
 
 
 
+
+
+
+
+
+
 ## ReactNative
 
 * 搭建RN环境 & Weex环境
@@ -90,3 +99,69 @@
 * 视图组件库
   * antd-mobile-rn
 * RN项目安卓 & IOS打包
+
+
+
+## TypeScript
+
+* TypeScript 特点及理解
+* Typescript 常用语法
+  * 基础类型
+  * 布尔值 boolean
+  * 数字 number
+  * 字符串 string
+  * 数组 number[] Array
+  * 元祖 Tuple
+  * 枚举 enum
+  * any
+  * void
+  * null && undefined
+  * never
+  * object
+* 类型断言
+* 变量声明
+* 接口
+* 类
+* 函数
+* 泛型
+* 类型判断
+* 高级类型
+* ...
+
+
+
+
+
+
+
+
+## Node.js
+
+* Express
+  * request && response对象属性和方法
+  * GET && POST请求
+  * 静态文件 static
+  * 路由中req, res对象中的属性
+  * 对中间件的理解
+  * 常用中间件
+    * body-parser
+    * cookie-parser
+* Koa2
+  * 对 Koa2 的理解
+  * 与 Express 的区别
+  * 理解核心对象
+    * Application
+    * Context
+    * Request
+    * Response
+  * 常见中间件
+  * 中间件的概念
+    * koa-body
+    * koa-bodyparse
+    * koa-multer
+    * koa-router
+    * koa-static
+    * koa-compose
+    * Koa2路由的使用
+  * ...
+

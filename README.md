@@ -54,7 +54,7 @@ http/2
 * HTML5
   * 语义化标签
   * [ALT 与 TITLE](https://heptaluan.github.io/2017/01/10/JavaScript/02/)
-  * canvas & svg
+  * canvas && svg
   * 响应式 meta
 * 渐进增强与优雅降级
 
@@ -140,6 +140,16 @@ http/2
 * XHR API
   * 同源策略
   * [跨域](http://heptaluan.github.io/2018/04/26/JavaScript/39/)
+    * JSONP
+    * CORS
+    * form
+    * document.domain
+    * window.name
+    * location.hash
+    * postMessage
+    * Nginx
+    * webpack proxy
+    * WebSocket
 * [并发模型](http://heptaluan.github.io/2018/08/12/JavaScript/36/)
   * Event Loop
   * 进程与线程
@@ -231,7 +241,7 @@ http/2
   * CSS 选择器优化 && 表达式优化
   * CDN
   * 缓存控制
-    * ajax 缓存
+    * Ajax 缓存
     * header 字段
 
 

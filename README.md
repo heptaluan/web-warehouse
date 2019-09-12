@@ -25,8 +25,6 @@
 
 <!-- 
 
-grid
-
 IndexDB
 
 Service Workers
@@ -39,7 +37,7 @@ promise 怎么实现
 
 深入学习 rxjs 
 
-重看一遍 angular 视频 度盘
+angular 最新视频
 
 http/2
 
@@ -75,17 +73,17 @@ http/2
   * [伪类与伪元素](http://heptaluan.github.io/2018/11/25/CSS/04/)
 * 样式表继承
 * CSS3
-  * Flex & Grid
+  * Flex && Grid
     * [flex 取值](http://heptaluan.github.io/2019/01/12/CSS/09/)
   * filter
-  * 媒体查询 & rem
-  * Transform & Animation
+  * 媒体查询
+  * Transform && Animation
   * [px，em，rem，vw 和 vh](http://heptaluan.github.io/2019/08/04/CSS/11/)
 * [BFC](http://heptaluan.github.io/2018/12/03/CSS/06/)
   * [浮动原理与解决办法](https://heptaluan.github.io/2016/11/09/CSS/01/)
   * 高度塌陷
   * Margin 塌陷
-  * position 嵌套 & 覆盖
+  * position 嵌套 && 覆盖
 * [IFC](http://heptaluan.github.io/2018/12/05/CSS/07/)
 * [haslayout](http://heptaluan.github.io/2018/12/12/CSS/08/)
 * [FOUC](http://heptaluan.github.io/2019/07/07/JavaScript/44/)
@@ -102,12 +100,12 @@ http/2
       * [类型判断](http://heptaluan.github.io/2018/03/17/JavaScript/30/)
       * [类型转换](https://heptaluan.github.io/2017/03/17/JavaScript/09/)
     * 运算符
-      * [运算符优先级](http://heptaluan.github.io/2018/05/27/JavaScript/33/)
+      * [优先级](http://heptaluan.github.io/2018/05/27/JavaScript/33/)
       * [|| 和 &&](https://heptaluan.github.io/2017/05/19/JavaScript/19/)
     * [函数](http://heptaluan.github.io/2017/10/08/JavaScript/26/)
       * [作用域](https://heptaluan.github.io/2017/01/18/JavaScript/03/)
-      * [事件与事件流](https://heptaluan.github.io/2016/11/14/JavaScript/01/)
-      * [parseInt 与 parseFloat](https://heptaluan.github.io/2017/04/15/JavaScript/12/)
+      * [事件流](https://heptaluan.github.io/2016/11/14/JavaScript/01/)
+      * [parseInt](https://heptaluan.github.io/2017/04/15/JavaScript/12/)
     * [对象](http://heptaluan.github.io/2017/10/07/JavaScript/25/)
       * [遍历](http://heptaluan.github.io/2019/06/28/JavaScript/42/)
     * [this](http://heptaluan.github.io/2017/10/09/JavaScript/27/)
@@ -117,8 +115,8 @@ http/2
   * ES6+
     * 块级作用域
     * 模板字符串
-    * Promise 微任务
-    * Async 迭代器
+    * Promise
+    * Async
     * [Class](http://heptaluan.github.io/2017/09/20/JavaScript/24/)
     * [Reflect](http://heptaluan.github.io/2017/09/21/JavaScript/53/)
     * [迭代器与生成器](http://heptaluan.github.io/2019/07/13/JavaScript/56/)
@@ -131,7 +129,7 @@ http/2
     * [call、apply](https://heptaluan.github.io/2018/04/16/JavaScript/32/)
     * [深浅拷贝](http://heptaluan.github.io/2018/01/14/JavaScript/29/)
 * [DOM](http://heptaluan.github.io/2017/06/26/JavaScript/21/)
-  * 创建节点 / 插入节点 / 删除节点 / 替换节点 / 克隆节点
+  * 创建节点 && 插入节点 && 删除节点 && 替换节点 && 克隆节点
 * 浏览器对象
   * Window 对象
   * History 对象
@@ -145,7 +143,7 @@ http/2
 * [并发模型](http://heptaluan.github.io/2018/08/12/JavaScript/36/)
   * Event Loop
   * 进程与线程
-  * MacroTask / MicroTask
+  * MacroTask && MicroTask
   * [单线程执行机制](http://heptaluan.github.io/2019/05/04/JavaScript/54/)
   * [栈和堆](http://heptaluan.github.io/2019/05/05/JavaScript/55/)
 * [垃圾回收机制](http://heptaluan.github.io/2017/12/25/Essay/02/)
@@ -210,7 +208,7 @@ http/2
 
 * 模块化
   * ES5
-    * CommonJS / AMD / CMD思想
+    * CommonJS && AMD && CMD
   * ES6+
     * Class
     * Polyfill
@@ -227,10 +225,10 @@ http/2
     * 分支机制
 * 包管理
 * 性能优化
-  * base64编码 / 精灵图
-  * 懒加载 / 预加载
+  * base64编码 && 精灵图
+  * 懒加载 && 预加载
   * 静态资源的渲染阻塞
-  * CSS 选择器优化  / 表达式优化
+  * CSS 选择器优化 && 表达式优化
   * CDN
   * 缓存控制
     * ajax 缓存
@@ -248,7 +246,7 @@ http/2
 * 渲染机制
   * DOM
   * CSSOM
-  * 重绘/回流
+  * 重绘 && 回流
   * shadow DOM
 * 浏览器缓存
   * Cookie
@@ -259,7 +257,7 @@ http/2
 * [字符编码](http://heptaluan.github.io/2017/12/24/Essay/01/)
   * ASCII
   * UTF-8
-  * GBK/GB2312
+  * GBK && GB2312
 * SEO优化
   * meta 标签
 * 安全
@@ -287,11 +285,11 @@ http/2
   * [CommonJS、AMD 和 CMD](https://heptaluan.github.io/2017/02/03/JavaScript/05/)
   * [module.exports 和 exports](http://heptaluan.github.io/2018/06/05/Node/04/)
   * [Stream](http://heptaluan.github.io/2018/07/12/Node/01/)
-    * Readable 和 Writable
-    * Duplex 和 transform
+    * Readable && Writable
+    * Duplex && transform
     * 背压（back pressure）
     * 流式数据处理
-    * Browserify 和 Gulp 设计机制
+    * Browserify && Gulp 设计机制
   * 模块
     * [co](http://heptaluan.github.io/2018/07/22/Node/02/)
     * [SuperAgent](http://heptaluan.github.io/2019/01/02/Node/03/)
@@ -300,7 +298,7 @@ http/2
     * 时间函数
     * 读锁和写锁
     * 数据类型
-      * char / varchar 区别
+      * char && varchar
     * 命令调用
       * drop, delete, truncate
     * [事务和锁](http://heptaluan.github.io/2018/11/04/MySQL/02/)
@@ -323,7 +321,7 @@ http/2
 
 * 七层 OSI 模型
 * HTTP
-  * 1.0 / 1.1 / 2.0
+  * 1.0 && 1.1 && 2.0
     * 1.0
     * 1.1 持久化
     * [http 2.0](http://heptaluan.github.io/2018/05/09/HTTP/06/)
@@ -338,12 +336,12 @@ http/2
     * Pragma
     * Cache-Control
     * Expires
-    * Last-Modified / If-Modified-Since
-    * ETag / If-None-Match
+    * Last-Modified && If-Modified-Since
+    * ETag && If-None-Match
   * [http 报文头](http://heptaluan.github.io/2019/08/17/HTTP/07/)
 * TCP
-  * 三次握手 / 四次挥手
-  * 滑动窗口（慢启动 / 拥塞控制）
+  * 三次握手 && 四次挥手
+  * 滑动窗口（慢启动 && 拥塞控制）
   * 可靠通信（TCP 状态机）
 * UDP
 * WebSocket
@@ -355,8 +353,8 @@ http/2
 
 ## 数据结构
 
-* 字符串 / 数组 / 链表
-* 哈希表 / 二叉树 / 队列 / 栈
+* 字符串 && 数组 && 链表
+* 哈希表 && 二叉树 && 队列 && 栈
 
 
 
@@ -366,11 +364,11 @@ http/2
 
 ## 算法
 
-* BFS/DFS
+* BFS && DFS
 * 动态规划
 * 位运算
 * 排序
-  * 冒泡 / 选择 / 快排 / 归并
+  * 冒泡 && 选择 && 快排 && 归并
   * 分布式排序
 * 滑动窗口
 
@@ -385,14 +383,14 @@ http/2
   * 矩阵的秩
 * 高等数学
   * 链式求导
-  * 梯度 / 导数 / 偏导
+  * 梯度 && 导数 && 偏导
 
 
 
 
 ## 编译原理
 
-
+* 待补充
 
 
 

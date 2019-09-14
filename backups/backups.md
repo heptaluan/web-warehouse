@@ -61,47 +61,6 @@
 
 
 
-
-
-
-
-## ReactNative
-
-* 搭建RN环境 & Weex环境
-* Flexbox布局
-* 导航间数据传递
-* 公共组件的封装
-* 常用组件
-  * 列表组价 FlatList (上拉刷新、下拉加载)
-  * 数据存储组件 AsyncStorage
-  * 提示符组件 ActivityIndicator
-  * 滚动组件组件 ScrollView
-  * 状态栏组件 StatusBar
-  * 加载网页组件 WebView
-  * 动画组件 Animated
-  * 样式组件 StyleSheet
-  * 获取屏幕组件 Dimensions
-* RN项目常用第三依赖
-  * 图片缩略图
-    * react-native-image-picker
-    * react-naitve-progress
-    * react-native-image-resizer
-  * 导航
-    * react-navigation
-    * react-native-router-flux
-  * 启动屏
-    * react-native-splash-screen
-  * 微信 & 支付宝支付
-    * react-native-wechat
-    * react-native-yunpeng-alipay
-  * 热更新
-    * react-native-code-push
-* 视图组件库
-  * antd-mobile-rn
-* RN项目安卓 & IOS打包
-
-
-
 ## TypeScript
 
 * TypeScript 特点及理解

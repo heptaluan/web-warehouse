@@ -86,9 +86,16 @@ react
   * 优先级策略
   * [伪类与伪元素](http://heptaluan.github.io/2018/11/25/CSS/04/)
 * 样式表继承
-* CSS3
-  * Flex && Grid
+* [常见布局方式](https://heptaluan.github.io/2019/09/12/CSS/12/)
+  * 文档流布局
+  * 浮动布局
+  * 定位布局
+  * 圣杯布局
+  * 双飞翼布局
+  * flex 布局
     * [flex 取值](http://heptaluan.github.io/2019/01/12/CSS/09/)
+  * grid 布局
+* CSS3
   * filter
   * 媒体查询
   * Transform && Animation

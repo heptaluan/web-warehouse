@@ -25,10 +25,6 @@
 
 <!-- 
 
-scroll-snap
-
-IntersectionObserver
-
 IndexDB
 
 Service Workers

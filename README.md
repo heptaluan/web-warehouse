@@ -38,18 +38,15 @@ http/2
 
 ----
 
-
-angular 视频
-
 TypeScript
 
 深入 rxjs
 
 Webpack
 
-node + koa
+node + koa + egg
 
-react
+react/redux
 
 
 -->

@@ -38,6 +38,7 @@ http/2
 
 ----
 
+
 TypeScript
 
 深入 rxjs
@@ -47,6 +48,27 @@ Webpack
 node + koa + egg
 
 react/redux
+
+
+----
+
+
+
+WebAssembly 让更多语言可以运行在浏览器上
+
+PWA 进入稳定期，尤其是 PWA 桌面版，可以让我们更好的看清楚 PC 桌面版开发的全貌
+
+Flutter 发展较快，最大硬伤是Dart语言，RN原有的开发方式会退出历史舞台
+
+Microservices
+
+ServerLess\GraphSQL发展迅猛
+
+D3、webgl、SVG
+
+webpack不再是唯一的打包工具选项（Rollup、parcel零配置）
+
+WebRTC、静态生成、人工智能前端化
 
 
 -->

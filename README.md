@@ -130,14 +130,14 @@ WebRTC、静态生成、人工智能前端化
       * [类型判断](http://heptaluan.github.io/2018/03/17/JavaScript/30/)
       * [类型转换](https://heptaluan.github.io/2017/03/17/JavaScript/09/)
     * 运算符
-      * [优先级](http://heptaluan.github.io/2018/05/27/JavaScript/33/)
+      * [运算符优先级](http://heptaluan.github.io/2018/05/27/JavaScript/33/)
       * [|| 和 &&](https://heptaluan.github.io/2017/05/19/JavaScript/19/)
     * [函数](http://heptaluan.github.io/2017/10/08/JavaScript/26/)
       * [作用域](https://heptaluan.github.io/2017/01/18/JavaScript/03/)
       * [事件流](https://heptaluan.github.io/2016/11/14/JavaScript/01/)
       * [parseInt](https://heptaluan.github.io/2017/04/15/JavaScript/12/)
     * [对象](http://heptaluan.github.io/2017/10/07/JavaScript/25/)
-      * [遍历](http://heptaluan.github.io/2019/06/28/JavaScript/42/)
+      * [如何遍历对象](http://heptaluan.github.io/2019/06/28/JavaScript/42/)
     * [this](http://heptaluan.github.io/2017/10/09/JavaScript/27/)
     * [闭包](https://heptaluan.github.io/2017/05/12/JavaScript/16/)
     * 高阶函数
@@ -154,7 +154,7 @@ WebRTC、静态生成、人工智能前端化
     * proxy
     * 箭头函数
   * [原型链](https://heptaluan.github.io/2017/04/06/JavaScript/10/)
-    * [继承](http://heptaluan.github.io/2018/01/10/JavaScript/28/)
+    * [原型继承和类式继承](http://heptaluan.github.io/2018/01/10/JavaScript/28/)
     * new 操作符
     * [bind](https://heptaluan.github.io/2017/05/07/JavaScript/15/)
     * [call、apply](https://heptaluan.github.io/2018/04/16/JavaScript/32/)
@@ -331,8 +331,8 @@ WebRTC、静态生成、人工智能前端化
   * [Node.js 的模块机制](https://heptaluan.github.io/2019/09/28/Node/11/)
   * [module.exports 和 exports](http://heptaluan.github.io/2018/06/05/Node/04/)
   * [Http 模块](https://heptaluan.github.io/2019/10/02/Node/12/)
-  * [Buffer](https://heptaluan.github.io/2019/09/22/Node/10/)
-  * [EventEmitter](https://heptaluan.github.io/2019/09/12/Node/09/)
+  * [Buffer 模块](https://heptaluan.github.io/2019/09/22/Node/10/)
+  * [EventEmitter 模块](https://heptaluan.github.io/2019/09/12/Node/09/)
   * [Stream](http://heptaluan.github.io/2018/07/12/Node/01/)
     * Readable && Writable
     * Duplex && transform
@@ -350,18 +350,6 @@ WebRTC、静态生成、人工智能前端化
   * egg
     * [实现一个接口服务](https://heptaluan.github.io/2019/11/01/Node/18/)
     * [相关问题汇总](https://heptaluan.github.io/2019/11/06/Node/19/)
-      * query && queries
-      * helper
-      * 跨域请求设置
-      * 使用 koa 的中间件
-      * 表单内容的获取
-      * 路由重定向
-      * 自定义控制器基类
-      * 文件上传
-      * 服务（service）
-      * 属性扩展
-      * session 存储
-      * egg-jwt
 * 数据库
   * SQL
     * 时间函数
@@ -369,7 +357,7 @@ WebRTC、静态生成、人工智能前端化
     * 数据类型
       * char && varchar
     * 命令调用
-      * drop, delete, truncate
+      * drop，delete，truncate
     * [事务和锁](http://heptaluan.github.io/2018/11/04/MySQL/02/)
     * [缓存穿透和缓存雪崩](http://heptaluan.github.io/2018/03/03/MySQL/01/)
 * ELK

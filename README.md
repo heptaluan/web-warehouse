@@ -1,6 +1,4 @@
-算是一个大的汇总仓库吧，囊括了平时瞎捣鼓的绝大部分东西，还有一些学习笔记啊，杂七杂八的知识点之类的，内容主要分为两部分
-
-一些比较小的知识点就整理到了面试题相关分类当中，详细可见 ==》 [interview](https://github.com/heptaluan/web-interview/tree/master/interview)
+算是一个大的汇总仓库吧，囊括了平时瞎捣鼓的绝大部分东西，还有一些学习笔记啊，杂七杂八的知识点之类的
 
 内容比较多的的部分都单独摘选出来放到博文当中了，详细可见 ==》 [heptaluan's blog](https://heptaluan.github.io/)
 

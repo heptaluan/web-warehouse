@@ -1,13 +1,6 @@
-一些比较常见的面试题，知识点之类的，类似于知识复习大纲
-
-主要是一些小知识点，用于查缺补漏，篇幅较长内容都已经移至个人博客
-
-详情可见 [heptaluan's blog](https://heptaluan.github.io/)
-
-----
 
 
-## [JavaScript](https://github.com/heptaluan/blog/blob/master/essay/js/00.md)
+## [JavaScript](https://github.com/heptaluan/blog/blob/master/interview/2018/js/00.md)
 
 * 使用 `new` 的时候发生了什么
 * `clientWidth`, `offsetWidth`, `scrollWidth`
@@ -29,7 +22,7 @@
 
 
 
-## [算法/正则/其他](https://github.com/heptaluan/blog/blob/master/essay/arithmetic/00.md)
+## [算法/正则/其他](https://github.com/heptaluan/blog/blob/master/interview/2018/arithmetic/00.md)
 
 * `EventEmitter` 模块当中的 `spliceOne()`
 * `[1, 2, 3, 4, 5] => [1, 2, 3, 4, 5, 1, 4, 9, 16, 25]`
@@ -82,7 +75,7 @@
 
 
 
-## [jQuery](https://github.com/heptaluan/blog/blob/master/essay/jquery/00.md)
+## [jQuery](https://github.com/heptaluan/blog/blob/master/interview/2018/jquery/00.md)
 
 * `jQuery` 的 `DOM` 操作原理
 * `jQuery` 选择器原理
@@ -94,7 +87,7 @@
 
 
 
-## [Angular](https://github.com/heptaluan/blog/blob/master/essay/angular/00.md)
+## [Angular](https://github.com/heptaluan/blog/blob/master/interview/2018/angular/00.md)
 
 * 自定义属性指令中的 `ElementRef` 与 `Renderer` 的作用
 * 自定义结构指令中的 `TemplateRef` 与 `ViewContainerRef` 的作用
@@ -128,7 +121,7 @@
 
 
 
-## [Vue](https://github.com/heptaluan/blog/blob/master/essay/vue/00.md)
+## [Vue](https://github.com/heptaluan/blog/blob/master/interview/2018/vue/00.md)
 
 * 数组替换
 * 对象更改检测注意事项
@@ -140,7 +133,7 @@
 
 
 
-## [React](https://github.com/heptaluan/blog/blob/master/essay/react/00.md)
+## [React](https://github.com/heptaluan/blog/blob/master/interview/2018/react/00.md)
 
 * `React` 的特点
 * 在什么情况下你会优先选择使用 `Class Component` 而不是 `Functional Component`
@@ -159,7 +152,7 @@
 
 
 
-## [HTML/CSS](https://github.com/heptaluan/blog/blob/master/essay/css/00.md)
+## [HTML/CSS](https://github.com/heptaluan/blog/blob/master/interview/2018/css/00.md)
 
 * `WEB` 标准以及 `W3C` 的理解与认识
 * 文档类型（`DOCTYPE`）有哪些，含义是什么
@@ -182,7 +175,7 @@
 * `input、placeholder` 和 `textarea` 默认显示颜色修改
 
 
-## [http](https://github.com/heptaluan/blog/blob/master/essay/http/00.md)
+## [http](https://github.com/heptaluan/blog/blob/master/interview/2018/http/00.md)
 
 * `cookie / csrf / xss`
 * `SEO`

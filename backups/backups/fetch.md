@@ -1,11 +1,11 @@
----
-title: Fetch
-date: 2017-03-09
-categories: JavaScript
-tags: JavaScript
-toc: true
-thumbnail: https://gitee.com/heptaluan/backups/raw/master/cdn/cover/08.jpg
----
+
+
+
+
+
+
+
+## Fetch
 
 首先我们先来看看 `Fetch` 与 `jQuery` 的 `ajax()` 方法的一些不同点
 

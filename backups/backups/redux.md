@@ -1,11 +1,10 @@
----
-title: React && Redux
-date: 2019-11-25
-categories: React
-tags: React
-toc: true
-thumbnail: https://gitee.com/heptaluan/backups/raw/master/cdn/cover/13.jpg
----
+
+
+
+
+
+
+## React && Redux
 
 最近打算从头开始梳理一下 `React` 和 `Redux` 的一些相关进阶知识点，也算是总结和复习一下，在这里记录一下
 

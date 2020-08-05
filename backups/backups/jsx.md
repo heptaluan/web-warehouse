@@ -1,11 +1,10 @@
----
-title: jsx
-date: 2017-07-02
-categories: React
-tags: React
-toc: true
-thumbnail: https://gitee.com/heptaluan/backups/raw/master/cdn/cover/03.jpg
----
+
+
+
+
+
+
+## jsx
 
 在 `jsx` 中，`html` 属性是受限制的
 

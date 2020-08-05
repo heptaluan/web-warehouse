@@ -1,11 +1,9 @@
----
-title: 组件 API
-date: 2017-06-19
-categories: React
-tags: React
-toc: true
-thumbnail: https://gitee.com/heptaluan/backups/raw/master/cdn/cover/02.jpg
----
+
+
+
+
+## React 组件当中的 API
+
 
 下面我们来看一下在 `React` 当中，提供了哪些组件相关的 `API`
 

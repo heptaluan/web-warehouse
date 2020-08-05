@@ -1,11 +1,9 @@
----
-title: FileReader 接口
-date: 2018-08-04
-categories: JavaScript
-tags: JavaScript
-toc: true
-thumbnail: https://gitee.com/heptaluan/backups/raw/master/cdn/cover/35.jpg
----
+
+
+
+
+
+## FileReader 接口
 
 `FileReader` 接口主要是将文件读入内存，并提供相应的方法，来读取文件中的数据
 

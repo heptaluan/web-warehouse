@@ -1,11 +1,12 @@
----
-title: Egg.js 实战（实现一个接口服务）
-date: 2019-11-01
-categories: Node.js
-tags: Node.js
-toc: true
-thumbnail: https://gitee.com/heptaluan/backups/raw/master/cdn/cover/18.jpg
----
+
+
+
+
+
+
+
+
+## Egg.js 实战（实现一个接口服务）
 
 之前我们已经了解过 `koa.js` 相关知识，今天我们来看看如何使用 `egg.js` 来实现一个接口服务
 

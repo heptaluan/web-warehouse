@@ -1,11 +1,10 @@
----
-title: deferred 对象
-date: 2017-06-21
-categories: jQuery
-tags: jQuery
-toc: true
-thumbnail: https://gitee.com/heptaluan/backups/raw/master/cdn/cover/01.jpg
----
+
+
+
+
+
+
+## deferred 对象
 
 `jQuery.Deferred()` 基于 `Promises/A` 规范实现，因为 `jQuery` 本身的设计风格，`jQuery.Deferred()` 并没有完全遵循 `Promises/A` 规范
 

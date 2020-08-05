@@ -1,11 +1,9 @@
----
-title: Git 基本操作
-date: 2017-12-29
-categories: Essay
-tags: Essay
-toc: true
-thumbnail: https://gitee.com/heptaluan/backups/raw/master/cdn/cover/03.jpg
----
+
+
+
+
+
+## Git 基本操作
 
 > 小贴士：使用 `git help log / add / commit...` 可以查看相关命令的操作方式
 

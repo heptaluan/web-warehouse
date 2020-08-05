@@ -1,11 +1,14 @@
----
-title: Vue 中的 Mixin
-date: 2018-04-15
-categories: Vue
-tags: Vue
-toc: true
-thumbnail: https://gitee.com/heptaluan/backups/raw/master/cdn/cover/01.jpg
----
+
+
+
+
+
+
+
+
+
+
+## Vue 中的 Mixin
 
 有一种很常见的情况：有两个非常相似的组件，他们的基本功能是一样的，但他们之间又存在着足够的差异性
 

@@ -1,11 +1,18 @@
----
-title: SuperAgent 模块
-date: 2018-07-22
-categories: Node.js
-tags: Node.js
-toc: true
-thumbnail: https://gitee.com/heptaluan/backups/raw/master/cdn/cover/03.jpg
----
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## SuperAgent 模块
 
 `SuperAgent` 是 `Node.js` 里一个非常方便的客户端请求代理模块，当你想处理 `get`，`post`，`put`，`delete`，`head` 请求时，你就应该想起该用它了
 

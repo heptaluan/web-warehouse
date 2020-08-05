@@ -1,11 +1,8 @@
----
-title: axios
-date: 2018-05-10
-categories: Vue
-tags: Vue
-toc: true
-thumbnail: https://gitee.com/heptaluan/backups/raw/master/cdn/cover/04.jpg
----
+
+
+
+
+## axios
 
 先来看看一些 `axios` 的特点
 

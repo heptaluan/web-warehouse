@@ -1,11 +1,13 @@
----
-title: reducer、函数式编程，以及数组中的 reduce() 方法
-date: 2019-04-03
-categories: React
-tags: React
-toc: true
-thumbnail: https://gitee.com/heptaluan/backups/raw/master/cdn/cover/10.jpg
----
+
+
+
+
+
+
+
+
+
+## reducer、函数式编程，以及数组中的 reduce() 方法
 
 注意区分三者的区别
 

@@ -1,11 +1,18 @@
----
-title: React 基础
-date: 2017-06-11
-categories: React
-tags: React
-toc: true
-thumbnail: https://gitee.com/heptaluan/backups/raw/master/cdn/cover/01.jpg
----
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## React 基础
 
 `react` 是一个用于构建用户界面的 `JavaScript` 库，主要用于构建 `ui`，可以简单的认为 `react` 是 `MVC` 中的 `V`（视图）
 

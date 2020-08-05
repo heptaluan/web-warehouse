@@ -1,11 +1,9 @@
----
-title: link 和 @import 的区别
-date: 2017-11-11
-categories: CSS
-tags: CSS
-toc: true
-thumbnail: https://gitee.com/heptaluan/backups/raw/master/cdn/cover/10.jpg
----
+
+
+
+
+
+## link 和 @import 的区别
 
 几种区别如下
 

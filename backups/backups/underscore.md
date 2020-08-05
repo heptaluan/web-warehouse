@@ -1,11 +1,11 @@
----
-title: 使用 Underscore
-date: 2018-06-22
-categories: JavaScript
-tags: JavaScript
-toc: true
-thumbnail: https://gitee.com/heptaluan/backups/raw/master/cdn/cover/40.jpg
----
+
+
+
+
+
+
+
+## 使用 Underscore
 
 `underscore` 提供了一套完善的函数式编程的接口，让我们更方便地在 `JavaScript` 中实现函数式编程
 

@@ -1,11 +1,11 @@
----
-title: map/reduce
-date: 2017-06-01
-categories: JavaScript
-tags: JavaScript
-toc: true
-thumbnail: https://gitee.com/heptaluan/backups/raw/master/cdn/cover/20.jpg
----
+
+
+
+
+
+
+
+## map/reduce
 
 `map()` 方法创建一个新数组，其结果是该数组中的每个元素都调用一个提供的函数后返回的结果
 

@@ -1,11 +1,12 @@
----
-title: Sequelize 与 MySQL
-date: 2018-03-31
-categories: MySQL
-tags: MySQL
-toc: true
-thumbnail: https://gitee.com/heptaluan/backups/raw/master/cdn/cover/06.jpg
----
+
+
+
+
+
+
+
+
+## Sequelize 与 MySQL
 
 `MySQL` 安装过程就略过了，推荐安装 `5.6` 版本，安装见 [Windows 下的 MySQL 安装汇总](https://heptaluan.github.io/2018/03/22/MySQL/03/)
 

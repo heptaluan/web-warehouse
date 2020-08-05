@@ -34,34 +34,18 @@
 ### React-Redux
 
 * `basic` 部分（主要是 `flux`、`redux` 和 `react-redux` 的一些相关知识点）
-
   * [01、flux 中的 Dispatcher，Action，Store 和 Views](https://github.com/heptaluan/blog/blob/master/react/react-redux/basic/note/01.md)
-
   * [02、todomvc 示例剖析（基于 flux）](https://github.com/heptaluan/blog/blob/master/react/react-redux/basic/note/02.md)
-
   * [03、redux 及其相关示例](https://github.com/heptaluan/blog/blob/master/react/react-redux/basic/note/03.md)
-
   * [04、todomvc 示例剖析（基于 redux），connect 和 bindActionCreators 函数的作用](https://github.com/heptaluan/blog/blob/master/react/react-redux/basic/note/04.md)
-
-
 * `react-redux` 部分（一个利用 `Redux` + `React` + `Express` + `Socket.io` 搭建的实时聊天应用）
-
   * [01、Flux、Redux 简介，纯函数与函数式编程](https://github.com/heptaluan/blog/blob/master/react/react-redux/react-redux/实时聊天应用/note/01.md)
-
   * [02、reducer 与数组中的 reduce](https://github.com/heptaluan/blog/blob/master/react/react-redux/react-redux/实时聊天应用/note/02.md)
-    
   * [03、redux、flux 和 react-redux 的区别](https://github.com/heptaluan/blog/blob/master/react/react-redux/react-redux/实时聊天应用/note/03.md)
-
-
 * 源码相关部分
-
   * [createStore](https://github.com/heptaluan/blog/blob/master/react/react-redux/source/01.md)
-
-
 * `redux-simple-tutorial` 无意中看到，收获挺多，截取部分记录一下，来自[kenberkeley](https://github.com/kenberkeley)
-
   * [01、为什么要用 Redux，store 和 state](https://github.com/heptaluan/blog/blob/master/react/react-redux/redux-simple-tutorial/note/01.md)
-
   * [02、Action，Action Creator](https://github.com/heptaluan/blog/blob/master/react/react-redux/redux-simple-tutorial/note/02.md)
 
 ----

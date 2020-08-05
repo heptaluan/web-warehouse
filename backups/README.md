@@ -1,9 +1,11 @@
-博客当中的一些随笔记录的备份，删掉的话感觉有些可惜，就放在这里当个备份吧
+这里存放的是之前博客当中的一些随笔记录，大部分都是些面试题学习笔记和一些小的知识点的记录等，更多详细内容可以参考 [前端知识体系整理](https://heptaluan.github.io/target/)
 
 ----
 
 
 ## Angular
+
+[数据请求，指令与模块](./angular/数据请求.md)
 
 [数据请求，指令与模块](https://github.com/heptaluan/blog/blob/master/backups/angular/01.md)
 

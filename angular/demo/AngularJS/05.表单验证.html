@@ -2,83 +2,85 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>表单验证</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>表单验证</title>
 </head>
 <style>
-    table,
-    th,
-    td {
-        border: 1px solid grey;
-        border-collapse: collapse;
-        padding: 5px;
-    }
+  table,
+  th,
+  td {
+    border: 1px solid grey;
+    border-collapse: collapse;
+    padding: 5px;
+  }
 
-    table tr:nth-child(odd) {
-        background-color: #f2f2f2;
-    }
+  table tr:nth-child(odd) {
+    background-color: #f2f2f2;
+  }
 
-    table tr:nth-child(even) {
-        background-color: #ffffff;
-    }
+  table tr:nth-child(even) {
+    background-color: #ffffff;
+  }
 </style>
+
 <body>
-    <div ng-app="" ng-controller="studentController">
-        <form name="user" novalidate>
-            <table border="0">
-                <tr>
-                    <td>帐号：</td>
-                    <td>
-                        <input name="userName" type="text" ng-model="userName" required>
-                        <span style="color:red" ng-show="user.userName.$dirty && user.userName.$invalid">
-                            <span ng-show="user.userName.$error.required">帐号为必填</span>
-                        </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td>密码：</td>
-                    <td>
-                        <input name="lastname" type="text" ng-model="lastName" required>
-                        <span style="color:red" ng-show="user.lastname.$dirty && user.lastname.$invalid">
-                            <span ng-show="user.lastname.$error.required">密码为必填</span>
-                        </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td>邮箱：</td>
-                    <td>
-                        <input name="email" type="email" ng-model="email" length="100" required>
-                        <span style="color:red" ng-show="user.email.$dirty && user.email.$invalid">
-                            <span ng-show="user.email.$error.required">邮箱为必填</span>
-                            <span ng-show="user.email.$error.email">请输入正确的邮箱地址</span>
-                        </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <button ng-click="reset()">重置</button>
-                    </td>
-                    <td>
-                        <button ng-disabled="user.userName.$dirty && user.userName.$invalid ||
+  <div ng-app="" ng-controller="studentController">
+    <form name="user" novalidate>
+      <table border="0">
+        <tr>
+          <td>帐号：</td>
+          <td>
+            <input name="userName" type="text" ng-model="userName" required>
+            <span style="color:red" ng-show="user.userName.$dirty && user.userName.$invalid">
+              <span ng-show="user.userName.$error.required">帐号为必填</span>
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <td>密码：</td>
+          <td>
+            <input name="lastname" type="text" ng-model="lastName" required>
+            <span style="color:red" ng-show="user.lastname.$dirty && user.lastname.$invalid">
+              <span ng-show="user.lastname.$error.required">密码为必填</span>
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <td>邮箱：</td>
+          <td>
+            <input name="email" type="email" ng-model="email" length="100" required>
+            <span style="color:red" ng-show="user.email.$dirty && user.email.$invalid">
+              <span ng-show="user.email.$error.required">邮箱为必填</span>
+              <span ng-show="user.email.$error.email">请输入正确的邮箱地址</span>
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button ng-click="reset()">重置</button>
+          </td>
+          <td>
+            <button ng-disabled="user.userName.$dirty && user.userName.$invalid ||
 			  user.lastname.$dirty && user.lastname.$invalid ||
 			  user.email.$dirty && user.email.$invalid" ng-click="submit()">提交</button>
-                    </td>
-                </tr>
-            </table>
-        </form>
-    </div>
-    <script>
-        function studentController($scope) {
-            $scope.reset = function () {
-                $scope.userName = "123";
-                $scope.lastName = "456";
-                $scope.email = "789@qq.com";
-            }
-            $scope.reset();
-        }
-    </script>
-    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
+          </td>
+        </tr>
+      </table>
+    </form>
+  </div>
+  <script>
+    function studentController($scope) {
+      $scope.reset = function () {
+        $scope.userName = "123";
+        $scope.lastName = "456";
+        $scope.email = "789@qq.com";
+      }
+      $scope.reset();
+    }
+  </script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
 </body>
+
 </html>

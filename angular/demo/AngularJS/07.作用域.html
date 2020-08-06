@@ -1,39 +1,40 @@
 <html>
 
 <head>
-    <title>Scope</title>
+  <title>Scope</title>
 </head>
 
 <body>
-    <h2>Scope</h2>
-    <div ng-app="mainApp" ng-controller="shapeController">
+  <h2>Scope</h2>
+  <div ng-app="mainApp" ng-controller="shapeController">
 
-        <p> {{message}} </p>
-        <p> {{type}} </p>
+    <p> {{message}} </p>
+    <p> {{type}} </p>
 
-        <div ng-controller="circleController">
-            <p> {{message}} </p>
-            <p> {{type}} </p>
-        </div>
-
-        <div ng-controller="squareController">
-            <p> {{message}} </p>
-            <p> {{type}} </p>
-        </div>
-
+    <div ng-controller="circleController">
+      <p> {{message}} </p>
+      <p> {{type}} </p>
     </div>
-    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
-    <script>
-        angular.module("mainApp", [])
-            .controller("shapeController", function ($scope) {
-                $scope.message = "In shape controller";
-                $scope.type = "Shape";
-            }).controller("circleController", function ($scope) {
-                $scope.message = "In circle controller";
-            }).controller("squareController", function ($scope) {
-                $scope.message = "In square controller";
-                $scope.type = "Square";
-            });
-    </script>
+
+    <div ng-controller="squareController">
+      <p> {{message}} </p>
+      <p> {{type}} </p>
+    </div>
+
+  </div>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
+  <script>
+    angular.module("mainApp", [])
+      .controller("shapeController", function ($scope) {
+        $scope.message = "In shape controller";
+        $scope.type = "Shape";
+      }).controller("circleController", function ($scope) {
+        $scope.message = "In circle controller";
+      }).controller("squareController", function ($scope) {
+        $scope.message = "In square controller";
+        $scope.type = "Square";
+      });
+  </script>
 </body>
+
 </html>

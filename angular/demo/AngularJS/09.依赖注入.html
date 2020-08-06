@@ -1,54 +1,55 @@
 <html>
 
 <head>
-    <title>AngularJS 依赖注入</title>
+  <title>AngularJS 依赖注入</title>
 </head>
 
 <body>
-    <h2>AngularJS 依赖注入</h2>
-    <div ng-app="mainApp" ng-controller="CalcController">
-        <p>输入数字计算平方值：
-            <input type="number" ng-model="number" />
-            <button ng-click="square()">X
-                <sup>2</sup>
-            </button>
-            <p>结果： {{result}}</p>
-    </div>
-    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
-    <script>
-        angular.module('mainApp', [])
-            .config(function ($provide) {
-                $provide.provider('MathService', function () {
-                    this.$get = function () {
-                        var factory = {};
-                        factory.multiply = function (a, b) {
-                            return a * b;
-                        }
-                        return factory;
-                    };
-                });
-            })
-            .value('defaultInput', 5)
-            .factory('MathService', function () {
-                var factory = {};
-                factory.multiply = function (a, b) {
-                    return a * b;
-                }
-                return factory;
-            })
-            .service('CalcService', function (MathService) {
-                this.square = function (a) {
-                    return MathService.multiply(a, a);
-                }
-            })
-            .controller('CalcController', function ($scope, CalcService, defaultInput) {
-                $scope.number = defaultInput;
-                $scope.result = CalcService.square($scope.number);
+  <h2>AngularJS 依赖注入</h2>
+  <div ng-app="mainApp" ng-controller="CalcController">
+    <p>输入数字计算平方值：
+      <input type="number" ng-model="number" />
+      <button ng-click="square()">X
+        <sup>2</sup>
+      </button>
+    <p>结果： {{result}}</p>
+  </div>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
+  <script>
+    angular.module('mainApp', [])
+      .config(function ($provide) {
+        $provide.provider('MathService', function () {
+          this.$get = function () {
+            var factory = {};
+            factory.multiply = function (a, b) {
+              return a * b;
+            }
+            return factory;
+          };
+        });
+      })
+      .value('defaultInput', 5)
+      .factory('MathService', function () {
+        var factory = {};
+        factory.multiply = function (a, b) {
+          return a * b;
+        }
+        return factory;
+      })
+      .service('CalcService', function (MathService) {
+        this.square = function (a) {
+          return MathService.multiply(a, a);
+        }
+      })
+      .controller('CalcController', function ($scope, CalcService, defaultInput) {
+        $scope.number = defaultInput;
+        $scope.result = CalcService.square($scope.number);
 
-                $scope.square = function () {
-                    $scope.result = CalcService.square($scope.number);
-                }
-            })
-    </script>
+        $scope.square = function () {
+          $scope.result = CalcService.square($scope.number);
+        }
+      })
+  </script>
 </body>
+
 </html>

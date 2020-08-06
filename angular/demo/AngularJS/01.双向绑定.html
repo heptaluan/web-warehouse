@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html ng-app>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>双向绑定</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>双向绑定</title>
 </head>
 <script src="https://cdn.bootcss.com/angular.js/1.5.7/angular.js"></script>
+
 <body>
 
-    <input type="text" ng-model="name">
-    <p>
-        hello, {{ name || 'world' }}
-    </p>
+  <input type="text" ng-model="name">
+  <p>
+    hello, {{ name || 'world' }}
+  </p>
 </body>
+
 </html>

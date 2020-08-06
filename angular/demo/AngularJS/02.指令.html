@@ -1,30 +1,33 @@
 <!DOCTYPE html>
 <html ng-app>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>指令</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>指令</title>
 </head>
 <script src="https://cdn.bootcss.com/angular.js/1.5.7/angular.js"></script>
+
 <body>
 
-        <h1>Sample Application</h1>
-        <div ng-init="countries = [
+  <h1>Sample Application</h1>
+  <div ng-init="countries = [
             {locale:'en-US',name:'United States'},
             {locale:'en-GB',name:'United Kingdom'},
             {locale:'en-FR',name:'France'}
         ]">
-            <p>Enter your Name:
-                <input type="text" ng-model="name">
-            </p>
-            <p>Hello <span ng-bind="name"></span>!</p>
-            <p>List of Countries with locale:</p>
-            <ul>
-                <li ng-repeat="country in countries">
-                    {{ 'Country: ' + country.name + ', Locale: ' + country.locale }}
-                </li>
-            </ul>
-        </div>
+    <p>Enter your Name:
+      <input type="text" ng-model="name">
+    </p>
+    <p>Hello <span ng-bind="name"></span>!</p>
+    <p>List of Countries with locale:</p>
+    <ul>
+      <li ng-repeat="country in countries">
+        {{ 'Country: ' + country.name + ', Locale: ' + country.locale }}
+      </li>
+    </ul>
+  </div>
 </body>
+
 </html>

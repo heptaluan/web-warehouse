@@ -1,38 +1,41 @@
 <!DOCTYPE html>
 <html ng-app="MyReverseModule">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Filters</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Filters</title>
 </head>
 <script src="http://code.angularjs.org/1.2.25/angular.min.js"></script>
+
 <body>
 
-    <div ng-controller="FilterCtrl">
-        <input type="text" ng-model="greeting">
-        <br>
-        未添加过滤器：{{ greeting }}
-        <br>
-        倒置：{{ greeting | reverse }}
-        <br>
-        倒置并且字母大写：{{ greeting | reverse: true }}
-    </div>
-    
-<script>
+  <div ng-controller="FilterCtrl">
+    <input type="text" ng-model="greeting">
+    <br>
+    未添加过滤器：{{ greeting }}
+    <br>
+    倒置：{{ greeting | reverse }}
+    <br>
+    倒置并且字母大写：{{ greeting | reverse: true }}
+  </div>
+
+  <script>
 
     angular.module('MyReverseModule', [])
-        .filter('reverse', function() {
-            return function(input, uppercase) {
-                input = input || '';
-                let out = input.split('').reverse().join('');
-                return uppercase ? out.toUpperCase() : out;
-            }
-        })
-        .controller('FilterCtrl', ['$scope', function($scope) {
-            $scope.greeting = 'hello'
-        }])
+      .filter('reverse', function () {
+        return function (input, uppercase) {
+          input = input || '';
+          let out = input.split('').reverse().join('');
+          return uppercase ? out.toUpperCase() : out;
+        }
+      })
+      .controller('FilterCtrl', ['$scope', function ($scope) {
+        $scope.greeting = 'hello'
+      }])
 
-</script>
+  </script>
 </body>
+
 </html>

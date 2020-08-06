@@ -10,4 +10,4 @@
 npm install
 ```
 
-访问 ```http://localhost:3000/```
+访问 `http://localhost:3000/`

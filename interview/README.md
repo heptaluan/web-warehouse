@@ -1,5 +1,69 @@
 
 
+
+该部分主要是面试题和一些博客当中剔除出来的内容，说是剔除，其实是一些篇幅较短，或者是当时整理的不太深入的一些内容，感觉就这么删掉了有些可惜，所以就从博客当中清理出来放在这边，也算是集中汇总一下，方便以后遇到问题以后可以回来查询查询，更多内容可以参考 [前端知识体系整理](https://heptaluan.github.io/target/)
+
+----
+
+
+## 博客整理
+
+* [JavaScript 中的对象](./backups/backups/对象.md)
+* [如何从请求的异步回调函数中取值](./backups/backups/如何从请求的异步回调函数中取值.md)
+* [单例模式](./backups/backups/单例模式.md)
+* [垃圾回收机制](./backups/backups/垃圾回收机制.md)
+* [使用 Underscore](./backups/backups/underscore.md)
+* [数组常用方法的实现](./backups/backups/数组常用方法的实现.md)
+* [移动端图片上传的那些坑](./backups/backups/移动端图片上传的那些坑.md)
+* [IOS 端点击事件 300ms 的延迟响应的问题](./backups/backups/移动端延迟响应的问题.md)
+* [异步加载方案](./backups/backups/异步加载方案.md)
+* [原型继承和类式继承](./backups/backups/原型继承和类式继承.md)
+* [字符编码](./backups/backups/字符编码.md)
+* [axios](./backups/backups/axios.md)
+* [axios 中跨域访问的问题](./backups/backups/跨域访问相关问题.md)
+* [防抖和节流](./backups/backups/防抖和节流.md)
+* [deferred 对象](./backups/backups/deferred.md)
+* [ES6 当中新增的一些知识点](./backups/backups/es6.md)
+* [Fetch](./backups/backups/fetch.md)
+* [FileReader 接口](./backups/backups/fileReader.md)
+* [splice() 与 slice()](./backups/backups/splice.md)
+* [map/reduce](./backups/backups/map.md)
+* [Git 基本操作](./backups/backups/git.md)
+
+* [样式来源与层叠规则](./backups/backups/样式来源与层叠规则.md)
+* [CSS 当中的单位](./backups/backups/单位.md)
+* [溢出隐藏](./backups/backups/溢出隐藏.md)
+* [link 和 @import 的区别](./backups/backups/link.md)
+
+* [数据请求，指令与模块](./angular/数据请求.md)
+* [Injector](./angular/Injector.md)
+
+* [Vue 和 node 交互过程中跨域相关问题](./backups/backups/跨域相关问题.md)
+* [Vue 中的 Mixin](./backups/backups/mixin.md)
+* [Vue 中一些容易忽视的知识点](./backups/backups/容易忽视的知识点.md)
+* [React 组件当中的 API](./backups/backups/api.md)
+* [jsx](./backups/backups/jsx.md)
+* [React && Redux](./backups/backups/redux.md)
+* [React 中的路由](./backups/backups/路由.md)
+* [React 基础](./backups/backups/react.md)
+* [reducer、函数式编程，以及数组中的 reduce() 方法](./backups/backups/reducer.md)
+
+* [深入 Node.js](./backups/backups/nodejs.md)
+* [大文件的复制](./backups/backups/大文件的复制.md)
+* [Egg.js 实战（实现一个接口服务）](./backups/backups/egg.md)
+* [SuperAgent 模块](./backups/backups/superAgent.md)
+* [Sequelize 与 MySQL](./backups/backups/sequelize.md)
+* [Windows 下的 MySQL 安装汇总](./backups/backups/安装.md)
+* [使用 Node.js 操作 MySQL](./backups/backups/操作数据库.md)
+* [使用 Python 操作 MySQL](./backups/backups/操作数据库02.md)
+* [数据库的增删改查](./backups/backups/数据库的增删改查.md)
+* [缓存穿透和缓存雪崩](./backups/backups/缓存穿透和缓存雪崩.md)
+* [数据库中的事务和锁](./backups/backups/数据库中的事务和锁.md)
+
+
+
+
+
 ## [JavaScript](https://github.com/heptaluan/blog/blob/master/interview/2018/js/00.md)
 
 * 使用 `new` 的时候发生了什么

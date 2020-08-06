@@ -1,10 +1,10 @@
 // 配置文件
 var config = {
-    database: "test",
-    username: "root",
-    password: "root",
-    host: "localhost",
-    port: 3306
-};
+  database: 'test',
+  username: 'root',
+  password: 'root',
+  host: 'localhost',
+  port: 3306
+}
 
-module.exports = config;
+module.exports = config

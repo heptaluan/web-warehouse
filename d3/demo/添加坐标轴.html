@@ -33,34 +33,34 @@
     var linear = d3.scale.linear().domain([0, d3.max(arr)]).range([0, 250])
 
     // 坐标轴
-    var axis = d3.svg.axis().scale(linear).orient("bottom").ticks(5)
+    var axis = d3.svg.axis().scale(linear).orient('bottom').ticks(5)
 
     // 默认宽度
     var rectHeight = 25;
 
-    var svg = d3.select("body")
-      .append("svg")
-      .attr("width", 300)
-      .attr("height", 300)
+    var svg = d3.select('body')
+      .append('svg')
+      .attr('width', 300)
+      .attr('height', 300)
 
-    svg.append("g")
-      .attr("class", "axis")
-      .attr("transform", "translate(20, 130)")
+    svg.append('g')
+      .attr('class', 'axis')
+      .attr('transform', 'translate(20, 130)')
       .call(axis)
 
-    svg.selectAll("rect")
+    svg.selectAll('rect')
       .data(arr)
       .enter()
-      .append("rect")
-      .attr("x", 20)
-      .attr("y", (d, i) => {
+      .append('rect')
+      .attr('x', 20)
+      .attr('y', (d, i) => {
         return i * rectHeight;
       })
-      .attr("width", (d) => {
+      .attr('width', (d) => {
         return linear(d)
       })
-      .attr("height", rectHeight - 5)
-      .attr("fill", "pink")
+      .attr('height', rectHeight - 5)
+      .attr('fill', 'pink')
 
   </script>
 

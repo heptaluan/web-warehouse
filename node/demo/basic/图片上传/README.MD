@@ -1,13 +1,1 @@
-简单的图片上传
-
-只能上传 png 格式的
-
-依赖模块：```formidable```
-
-运行
-
-```js
-
-$ node index
-
-```
+简单的图片上传，只能上传 `png` 格式的，依赖模块 `formidable`

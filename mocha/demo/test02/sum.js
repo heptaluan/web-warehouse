@@ -1,7 +1,7 @@
 module.exports = function (...rest) {
-  var sum = 0;
+  var sum = 0
   for (let n of rest) {
-    sum += n;
+    sum += n
   }
-  return sum;
+  return sum
 }

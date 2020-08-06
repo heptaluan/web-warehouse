@@ -1,45 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
+
 <body>
-    <nav class="navbar navbar-default">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <a class="navbar-brand" href="#">约数计算器</a>
-            </div>
-        </div>
-    </nav>
-
-    <div class="container">
-        <div class="row">
-            <h3>查询 1 ~ 10000 之内的所有数字的约数</h3>
-            <p>
-                请输入需要查询的数字
-            </p>
-            <p>
-                <input type="number" id="number" class="form-control">
-            </p>
-            <p>
-                <button type="button" id="btn" class="btn btn-info">查询</button>
-            </p>
-        </div>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">约数计算器</a>
+      </div>
     </div>
+  </nav>
 
-    <script src="js/jquery.min.js"></script>
-    <script>
-    
-        $("#btn").click(function () {
-            var number = $("#number").val();
-            window.location = "/" + number;
-        })
+  <div class="container">
+    <div class="row">
+      <h3>查询 1 ~ 10000 之内的所有数字的约数</h3>
+      <p>
+        请输入需要查询的数字
+      </p>
+      <p>
+        <input type="number" id="number" class="form-control">
+      </p>
+      <p>
+        <button type="button" id="btn" class="btn btn-info">查询</button>
+      </p>
+    </div>
+  </div>
 
-    </script>
+  <script src="js/jquery.min.js"></script>
+  <script>
+
+    $("#btn").click(function () {
+      var number = $("#number").val()
+      window.location = "/" + number
+    })
+
+  </script>
 
 </body>
+
 </html>

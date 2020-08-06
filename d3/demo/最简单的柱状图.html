@@ -16,23 +16,23 @@
 
     var arr = [250, 210, 170, 130, 90]
     var rectHeight = 25;
-    d3.select("body")
-      .append("svg")
-      .attr("width", 300)
-      .attr("height", 300)
-      .selectAll("rect")
+    d3.select('body')
+      .append('svg')
+      .attr('width', 300)
+      .attr('height', 300)
+      .selectAll('rect')
       .data(arr)
       .enter()
-      .append("rect")
-      .attr("x", 20)
-      .attr("y", (d, i) => {
+      .append('rect')
+      .attr('x', 20)
+      .attr('y', (d, i) => {
         return i * rectHeight;
       })
-      .attr("width", (d) => {
+      .attr('width', (d) => {
         return d;
       })
-      .attr("height", rectHeight - 5)
-      .attr("fill", "pink")
+      .attr('height', rectHeight - 5)
+      .attr('fill', 'pink')
 
   </script>
 

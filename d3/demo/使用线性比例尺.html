@@ -19,23 +19,23 @@
     var linear = d3.scale.linear().domain([0, d3.max(arr)]).range([0, 250])
     var rectHeight = 25;
 
-    d3.select("body")
-      .append("svg")
-      .attr("width", 300)
-      .attr("height", 300)
-      .selectAll("rect")
+    d3.select('body')
+      .append('svg')
+      .attr('width', 300)
+      .attr('height', 300)
+      .selectAll('rect')
       .data(arr)
       .enter()
-      .append("rect")
-      .attr("x", 20)
-      .attr("y", (d, i) => {
+      .append('rect')
+      .attr('x', 20)
+      .attr('y', (d, i) => {
         return i * rectHeight;
       })
-      .attr("width", (d) => {
+      .attr('width', (d) => {
         return linear(d)
       })
-      .attr("height", rectHeight - 5)
-      .attr("fill", "pink")
+      .attr('height', rectHeight - 5)
+      .attr('fill', 'pink')
 
 
   </script>

@@ -2,56 +2,56 @@
 <html>
 
 <head>
-    <meta charset="UTF-8" />
-    <title>state 和 props 结合</title>
-    <script src="https://cdn.bootcss.com/react/15.4.2/react.min.js"></script>
-    <script src="https://cdn.bootcss.com/react/15.4.2/react-dom.min.js"></script>
-    <script src="https://cdn.bootcss.com/babel-standalone/6.22.1/babel.min.js"></script>
+  <meta charset="UTF-8" />
+  <title>state 和 props 结合</title>
+  <script src="https://cdn.bootcss.com/react/15.4.2/react.min.js"></script>
+  <script src="https://cdn.bootcss.com/react/15.4.2/react-dom.min.js"></script>
+  <script src="https://cdn.bootcss.com/babel-standalone/6.22.1/babel.min.js"></script>
 </head>
 
 <body>
-    <div id="box"></div>
-    <script type="text/babel">
-        var HelloWorld = React.createClass({
-            getInitialState() {
-                return {
-                    name: "zhangsan",
-                    link: "www.baidu.com"
-                }
-            },
-            render() {
-                return (
-                    <div>
-                        <User name={this.state.name} />
-                        <Link link={this.state.link} />
-                    </div>
-                )
-            }
-        })
-
-        var User = React.createClass({
-            render: function () {
-                return (
-                    <h1>{this.props.name}</h1>
-                );
-            }
-        });
-
-        var Link = React.createClass({
-            render: function () {
-                return (
-                    <a href={this.props.site}>
-                        {this.props.site}
-                    </a>
-                );
-            }
-        });
-
-        ReactDOM.render(
-            <HelloWorld />,
-            document.getElementById("box")
+  <div id='box'></div>
+  <script type="text/babel">
+    var HelloWorld = React.createClass({
+      getInitialState() {
+        return {
+          name: "zhangsan",
+          link: "www.baidu.com"
+        }
+      },
+      render() {
+        return (
+          <div>
+            <User name={this.state.name} />
+            <Link link={this.state.link} />
+          </div>
         )
-    </script>
+      }
+    })
+
+    var User = React.createClass({
+      render: function () {
+        return (
+          <h1>{this.props.name}</h1>
+        );
+      }
+    });
+
+    var Link = React.createClass({
+      render: function () {
+        return (
+          <a href={this.props.site}>
+            {this.props.site}
+          </a>
+        );
+      }
+    });
+
+    ReactDOM.render(
+      <HelloWorld />,
+      document.getElementById('box')
+    )
+  </script>
 </body>
 
 </html>

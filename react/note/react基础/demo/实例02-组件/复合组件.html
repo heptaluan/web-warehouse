@@ -1,53 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>react - demo</title>
-<script src="https://cdn.bootcss.com/react/15.4.2/react.min.js"></script>
-<script src="https://cdn.bootcss.com/react/15.4.2/react-dom.min.js"></script>
-<script src="https://cdn.bootcss.com/babel-standalone/6.22.1/babel.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>react - demo</title>
+  <script src="https://cdn.bootcss.com/react/15.4.2/react.min.js"></script>
+  <script src="https://cdn.bootcss.com/react/15.4.2/react-dom.min.js"></script>
+  <script src="https://cdn.bootcss.com/babel-standalone/6.22.1/babel.min.js"></script>
 </head>
+
 <body>
 
-    <div id="box"></div>
+  <div id='box'></div>
 
-    <script type="text/babel">
+  <script type="text/babel">
 
-        var User = React.createClass({
-            render () {
-                return (
-                    <div>
-                        <Name name = {this.props.name} />
-                        <Age age = {this.props.age} />
-                    </div>
-                )
-            }
-        })
-
-        var Name = React.createClass({
-            render () {
-                return (
-                    <h1>{ this.props.name }</h1>
-                )
-            }
-        })
-
-        var Age = React.createClass({
-            render () {
-                return (
-                    <h1>{ this.props.age }</h1>
-                )
-            }
-        })
-
-        ReactDOM.render(
-            <User name="zhangsan" age="20" />,
-            document.getElementById("box")
+    var User = React.createClass({
+      render() {
+        return (
+          <div>
+            <Name name={this.props.name} />
+            <Age age={this.props.age} />
+          </div>
         )
+      }
+    })
 
-    </script>
+    var Name = React.createClass({
+      render() {
+        return (
+          <h1>{this.props.name}</h1>
+        )
+      }
+    })
+
+    var Age = React.createClass({
+      render() {
+        return (
+          <h1>{this.props.age}</h1>
+        )
+      }
+    })
+
+    ReactDOM.render(
+      <User name='zhangsan' age='20' />,
+      document.getElementById('box')
+    )
+
+  </script>
 
 </body>
+
 </html>

@@ -66,69 +66,69 @@ i {
 <script>
 
 var data = {
-    ok: 0,
-    searchString: "",
-    msgs: [{
-        title: "火车票订购网站12306",
-        author: "票订购网站12306"
-    }, {
-        title: "火车票222",
-        author: "火车"
-    }, {
-        title: "火车票查询333",
-        author: "票查询"
-    }, {
-        title: "火车票查询与预订444",
-        author: "票查询与预订"
-    }, {
-        title: "火车时刻表555",
-        author: "时刻表"
-    }, {
-        title: "火车票退票手续费新规定2016",
-        author: "票退票手续费新规定2016"
-    }, {
-        title: "火车座位分布图777",
-        author: "座位分布图"
-    }, {
-        title: "火车时刻表查询888",
-        author: "时刻表查询"
-    }, {
-        title: "赤壁到武昌火车999",
-        author: "武昌火车"
-    }
-    ]
+  ok: 0,
+  searchString: '',
+  msgs: [{
+    title: '火车票订购网站12306',
+    author: '票订购网站12306'
+  }, {
+    title: '火车票222',
+    author: '火车'
+  }, {
+    title: '火车票查询333',
+    author: '票查询'
+  }, {
+    title: '火车票查询与预订444',
+    author: '票查询与预订'
+  }, {
+    title: '火车时刻表555',
+    author: '时刻表'
+  }, {
+    title: '火车票退票手续费新规定2016',
+    author: '票退票手续费新规定2016'
+  }, {
+    title: '火车座位分布图777',
+    author: '座位分布图'
+  }, {
+    title: '火车时刻表查询888',
+    author: '时刻表查询'
+  }, {
+    title: '赤壁到武昌火车999',
+    author: '武昌火车'
+  }
+  ]
 }
 
 
-Vue.filter("searchFor", function (value, searchString) {
-    if (!searchString) {
-        return value;
+Vue.filter('searchFor', function (value, searchString) {
+  if (!searchString) {
+    return value
+  }
+
+  searchString = searchString.trim().toLowerCase()
+
+  var result = []
+
+  result = value.filter(function (item) {
+    if (item.title.toLowerCase().indexOf(searchString) !== -1) {
+      return item
     }
+  })
 
-    searchString = searchString.trim().toLowerCase();
-
-    var result = [];
-
-    result = value.filter(function (item) {
-        if (item.title.toLowerCase().indexOf(searchString) !== -1) {
-            return item;
-        }
-    })
-
-    return result;
+  return result
 })
 
 var vm = new Vue({
-    el: "#app",
-    data: data,
-    methods: {
-        fs: function () {
-            this.ok = 1;
-        },
-        bl: function () {
-            this.ok = 0;
-        }
+  el: '#app',
+  data: data,
+  methods: {
+    fs: function () {
+      this.ok = 1
+    },
+    bl: function () {
+      this.ok = 0
     }
+  }
 })
 
 </script>

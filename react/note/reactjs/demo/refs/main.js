@@ -16,7 +16,7 @@ class Father extends React.Component {
                 }} />
                 <br />
                 <br />
-                <div ref="box" style={{"width": "200px", "height": "200px", "backgroundColor": "red"}}></div>
+                <div ref='box' style={{"width": "200px", "height": "200px", "backgroundColor": "red"}}></div>
             </div>
         )
     }
@@ -24,5 +24,5 @@ class Father extends React.Component {
 
 ReactDOM.render(
     <Father />,
-    document.getElementById("box")
+    document.getElementById('box')
 )

@@ -1,43 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <title>class 绑定</title>
+  <meta charset="UTF-8">
+  <title>class 绑定</title>
 </head>
+
 <body>
-<style>
+  <style>
     .one {
-        font-size: 50px;
+      font-size: 50px;
     }
+
     .two {
-        color: blue;
+      color: blue;
     }
-</style>
+  </style>
 
-
-<div id="app">
-    
+  <div id="app">
     <!-- 已经被移除 -->
     <!--<div class="{{className1}}">hello world</div>-->
     <div v-bind:class="className2">hello world</div>
+  </div>
 
-
-</div>    
-
-<script src="../vue.js"></script>
-<script>
-
+  <script src="../vue.js"></script>
+  <script>
     var vm = new Vue({
-        el: "#app",
-        data: {
-            className1: "one",
-            className2: "two"
-        }
+      el: '#app',
+      data: {
+        className1: 'one',
+        className2: 'two'
+      }
     })
-
-
-
-
-</script>
+  </script>
 </body>
+
 </html>

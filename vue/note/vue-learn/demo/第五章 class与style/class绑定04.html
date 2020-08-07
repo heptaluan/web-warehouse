@@ -1,60 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <title>class 绑定</title>
+  <meta charset="UTF-8">
+  <title>class 绑定</title>
 </head>
+
 <body>
-<style>
-.classA {
-    color: pink;
-    font-size: 30px;
-}
+  <style>
+    .classA {
+      color: pink;
+      font-size: 30px;
+    }
 
-.classB {
-    text-decoration: underline;
-}
+    .classB {
+      text-decoration: underline;
+    }
 
-.classC {
-    border: 1px solid pink;
-    display: inline;
-}
-</style>
+    .classC {
+      border: 1px solid pink;
+      display: inline;
+    }
+  </style>
 
-
-<div id="app">
-
-
+  <div id="app">
     <div v-bind:class="todo">hello world</div>
+  </div>
 
-
-
-
-</div>    
-
-<script src="../vue.js"></script>
-<script>
-
+  <script src="../vue.js"></script>
+  <script>
     var vm = new Vue({
-        el: "#app",
-        data: {
-            classObj: ["A", "C"],
-            b: true
-        },
-        computed: {
-            todo: function () {
-                return {
-                    'classA': this.classObj.indexOf("A") > -1,
-                    'classB': this.b,
-                    'classC': this.classObj.indexOf("C") > -1,
-                }
-            }
+      el: '#app',
+      data: {
+        classObj: ['A', 'C'],
+        b: true
+      },
+      computed: {
+        todo: function () {
+          return {
+            'classA': this.classObj.indexOf('A') > -1,
+            'classB': this.b,
+            'classC': this.classObj.indexOf('C') > -1,
+          }
         }
+      }
     })
-
-
-
-
-</script>
+  </script>
 </body>
+
 </html>

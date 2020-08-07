@@ -1,37 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <title>概述</title>
+  <meta charset="UTF-8">
+  <title>概述</title>
 </head>
+
 <body>
 
-
-<div id="app">
-    
+  <div id="app">
     <p> {{message}}</p>
     <button v-on:click="reverse">reverse msg</button>
+  </div>
 
-</div>    
-
-<script src="../vue.js"></script>
-<script>
-
+  <script src="../vue.js"></script>
+  <script>
     var vm = new Vue({
-        el: "#app",
-        data: {
-            message: "hello world!"
-        },
-        methods: {
-            reverse: function () {
-                this.message =  this.message.split("").reverse().join("")
-            }
+      el: '#app',
+      data: {
+        message: 'hello world!'
+      },
+      methods: {
+        reverse: function () {
+          this.message = this.message.split('').reverse().join('')
         }
+      }
     })
-
-
-
-
-</script>
+  </script>
 </body>
+
 </html>

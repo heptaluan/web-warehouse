@@ -1,3 +1,3 @@
-var a = require("./app/index")
+var a = require('./app/index')
 
 console.log(a.x)

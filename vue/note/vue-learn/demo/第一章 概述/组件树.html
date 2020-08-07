@@ -1,49 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <title>概述</title>
+  <meta charset="UTF-8">
+  <title>概述</title>
 </head>
+
 <body>
 
-
-<div id="app">
-    
+  <div id="app">
     <app-head></app-head>
     <app-body></app-body>
     <app-foot></app-foot>
+  </div>
 
-</div>    
-
-<script src="../vue.js"></script>
-<script>
-
+  <script src="../vue.js"></script>
+  <script>
     var apphead = Vue.extend({
-        template: "<div>head</div>"
+      template: '<div>head</div>'
     })
-
     var appBody = Vue.extend({
-        template: "<div>body</div>"
+      template: '<div>body</div>'
     })
-
     var appfoot = Vue.extend({
-        template: "<div>foot</div>"
+      template: '<div>foot</div>'
     })
-
-
-
     // 注册
-    Vue.component("app-head", apphead);
-    Vue.component("app-body", appBody);
-    Vue.component("app-foot", appfoot);
-
-
+    Vue.component('app-head', apphead);
+    Vue.component('app-body', appBody);
+    Vue.component('app-foot', appfoot);
     var vm = new Vue({
-        el: "#app"
+      el: '#app'
     })
-
-
-
-</script>
+  </script>
 </body>
+
 </html>

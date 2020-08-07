@@ -9790,7 +9790,7 @@ var store = (0, _redux.createStore)(_reducer2.default);
     _reactRedux.Provider,
     { store: store },
     _react2.default.createElement(_app2.default, null)
-), document.getElementById("box"));
+), document.getElementById('box'));
 
 /***/ }),
 /* 84 */

@@ -25,7 +25,7 @@ export default class Footer extends Component {
 		return (
 			<span className="todo-count">
 				<strong>{activeCount || 'No'}</strong> {itemWord} left
-      </span>
+			</span>
 		)
 	}
 
@@ -49,7 +49,7 @@ export default class Footer extends Component {
 				<button className="clear-completed"
 					onClick={onClearCompleted} >
 					Clear completed
-        </button>
+				</button>
 			)
 		}
 	}

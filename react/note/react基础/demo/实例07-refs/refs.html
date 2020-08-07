@@ -2,35 +2,35 @@
 <html>
 
 <head>
-    <meta charset="UTF-8" />
-    <title>refs</title>
-    <script src="https://cdn.bootcss.com/react/15.4.2/react.min.js"></script>
-    <script src="https://cdn.bootcss.com/react/15.4.2/react-dom.min.js"></script>
-    <script src="https://cdn.bootcss.com/babel-standalone/6.22.1/babel.min.js"></script>
+  <meta charset="UTF-8" />
+  <title>refs</title>
+  <script src="https://cdn.bootcss.com/react/15.4.2/react.min.js"></script>
+  <script src="https://cdn.bootcss.com/react/15.4.2/react-dom.min.js"></script>
+  <script src="https://cdn.bootcss.com/babel-standalone/6.22.1/babel.min.js"></script>
 </head>
 
 <body>
-    <div id="box"></div>
-    <script type="text/babel">
-        var MyComponent = React.createClass({
-            handleClick () {
-                this.refs.myInput.focus();
-            },
-            render () {
-                return (
-                    <div>
-                        <input type="text" ref="myInput"/> &nbsp;&nbsp;&nbsp;
-                        <input type="button" value="点击获取焦点" onClick={this.handleClick}/>
-                    </div>
-                )
-            }
-        })
-
-        ReactDOM.render(
-            <MyComponent />,
-            document.getElementById("box")
+  <div id='box'></div>
+  <script type="text/babel">
+    var MyComponent = React.createClass({
+      handleClick() {
+        this.refs.myInput.focus();
+      },
+      render() {
+        return (
+          <div>
+            <input type="text" ref="myInput" /> &nbsp;&nbsp;&nbsp;
+            <input type="button" value="点击获取焦点" onClick={this.handleClick} />
+          </div>
         )
-    </script>
+      }
+    })
+
+    ReactDOM.render(
+      <MyComponent />,
+      document.getElementById('box')
+    )
+  </script>
 </body>
 
 </html>

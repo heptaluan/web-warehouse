@@ -2,39 +2,39 @@
 <html>
 
 <head>
-    <meta charset="UTF-8" />
-    <title>表单事件（数据双向绑定）</title>
-    <script src="https://cdn.bootcss.com/react/15.4.2/react.min.js"></script>
-    <script src="https://cdn.bootcss.com/react/15.4.2/react-dom.min.js"></script>
-    <script src="https://cdn.bootcss.com/babel-standalone/6.22.1/babel.min.js"></script>
+  <meta charset="UTF-8" />
+  <title>表单事件（数据双向绑定）</title>
+  <script src="https://cdn.bootcss.com/react/15.4.2/react.min.js"></script>
+  <script src="https://cdn.bootcss.com/react/15.4.2/react-dom.min.js"></script>
+  <script src="https://cdn.bootcss.com/babel-standalone/6.22.1/babel.min.js"></script>
 </head>
 
 <body>
-    <div id="box"></div>
-    <script type="text/babel">
-        var HelloMessage = React.createClass({
-            getInitialState () {
-                return { value: "hello world" };
-            },
-            handleChange (event) {
-                this.setState({ value: event.target.value });
-            },
-            render () {
-                var value = this.state.value;
-                return (
-                    <div>
-                        <input type="text" value={value} onChange={this.handleChange} />
-                        <h4>{value}</h4>
-                    </div>
-                )
-            }
-        });
+  <div id='box'></div>
+  <script type="text/babel">
+    var HelloMessage = React.createClass({
+      getInitialState() {
+        return { value: "hello world" };
+      },
+      handleChange(event) {
+        this.setState({ value: event.target.value });
+      },
+      render() {
+        var value = this.state.value;
+        return (
+          <div>
+            <input type="text" value={value} onChange={this.handleChange} />
+            <h4>{value}</h4>
+          </div>
+        )
+      }
+    });
 
-        ReactDOM.render(
-            <HelloMessage />,
-            document.getElementById("box")
-        );
-    </script>
+    ReactDOM.render(
+      <HelloMessage />,
+      document.getElementById('box')
+    );
+  </script>
 </body>
 
 </html>

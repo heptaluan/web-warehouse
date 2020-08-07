@@ -1,39 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <title>简易选项卡</title>
+  <meta charset="UTF-8">
+  <title>简易选项卡</title>
 </head>
+
 <body>
 
-<div id="app">
+  <div id="app">
 
     <input type="button" name="" value="aaa" @click="a='aaa'">
     <input type="button" name="" value="bbb" @click="a='bbb'">
     <component :is="a"></component>
 
-</div>
+  </div>
 
-<script src="bower_components/vue/dist/vue.js"></script>
-<script>
+  <script src="bower_components/vue/dist/vue.js"></script>
+  <script>
 
     var vm = new Vue({
-        el: "#app",
-        data: {
-            a: "aaa"
+      el: '#app',
+      data: {
+        a: 'aaa'
+      },
+      components: {
+        'aaa': {
+          template: '<h1>我是A组件</h1>'
         },
-        components: {
-            "aaa": {
-                template: "<h1>我是A组件</h1>"
-            },
-            "bbb": {
-                template: "<h1>我是B组件</h1>"
-            }
+        'bbb': {
+          template: '<h1>我是B组件</h1>'
         }
+      }
 
     })
-    
 
-</script>   
+
+  </script>
 </body>
+
 </html>

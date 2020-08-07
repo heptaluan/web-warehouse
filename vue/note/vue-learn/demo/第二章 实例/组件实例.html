@@ -2,20 +2,18 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <title>实例</title>
+  <meta charset="UTF-8">
+  <title>实例</title>
 </head>
 
 <body>
 
+  <div id="app"></div>
 
-    <div id="app"></div>
-
-    <script src="../vue.js"></script>
-    <script>
-
+  <script src="../vue.js"></script>
+  <script>
     var MyComponent = Vue.extend({
-        template: '<div>Hello!</div>'
+      template: '<div>Hello!</div>'
     })
 
     // 创建并挂载到 #app (会替换 #app)
@@ -23,15 +21,12 @@
 
     // 同上
     new MyComponent({ el: '#app' })
-    
+
     // 或者，在文档之外渲染并且随后挂载
     var component = new MyComponent().$mount()
     document.getElementById('app').appendChild(component.$el)
 
-
-
-
-</script>
+  </script>
 </body>
 
 </html>

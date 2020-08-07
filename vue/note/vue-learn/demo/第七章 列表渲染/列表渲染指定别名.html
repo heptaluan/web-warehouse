@@ -1,45 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <title>列表渲染</title>
+  <meta charset="UTF-8">
+  <title>列表渲染</title>
 </head>
+
 <body>
 
+  <div id="app">
 
-<div id="app">
-    
     <!-- 2.0 版本 item 与 index 位置做了调整 -->
     <div v-for="(item, index) in items">
-        {{index}} {{ item.message }}
+      {{index}} {{ item.message }}
     </div>
 
     <br>
-    
+
     <!-- 使用 of 分隔符 -->
     <div v-for="(item, index) of items">
-        {{index}} {{ item.message }}
+      {{index}} {{ item.message }}
     </div>
 
-</div>    
+  </div>
 
-<script src="../vue.js"></script>
-<script>
+  <script src="../vue.js"></script>
+  <script>
 
     var vm = new Vue({
-        el: "#app",
-        data: {
-            items: [
-                { message: "A" },
-                { message: "B" },
-                { message: "C" }
-            ]
-        }
+      el: '#app',
+      data: {
+        items: [
+          { message: 'A' },
+          { message: 'B' },
+          { message: 'C' }
+        ]
+      }
     })
 
-
-
-
-</script>
+  </script>
 </body>
+
 </html>

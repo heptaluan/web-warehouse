@@ -1,110 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<title>简易购物车</title>
+  <meta charset="UTF-8">
+  <title>简易购物车</title>
 </head>
 <style>
-* {
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
-    color: #666;
-}
+  * {
+    margin: 0
+    padding: 0
+    text-decoration: none
+    color: #666
+  }
 
-.color {
-    background: pink;
-}
+  .color {
+    background: pink
+  }
 
-.bgColor,
-.title {
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    width: 400px;
-    height: 50px;
-    line-height: 50px;
-    padding: 0 50px;
-    display: block;
-}
+  .bgColor,
+  .title {
+    border: 1px solid #ccc
+    border-radius: 5px
+    width: 400px
+    height: 50px
+    line-height: 50px
+    padding: 0 50px
+    display: block
+  }
 
-.bgColor:hover,
-.title:hover {
-    background: #ddd;
-}
+  .bgColor:hover,
+  .title:hover {
+    background: #ddd
+  }
 </style>
 
 <body>
 
-	<div id="app">
+  <div id="app">
 
-		<a class="title" href="javascript:;" v-on:click="change">商品总额: {{ total }}</a>
+    <a class="title" href="javascript:" v-on:click="change">商品总额: {{ total }}</a>
 
-		<template v-if="flag">
-			<div v-for="food in foods">
-				<a class="bgColor" href="javascript:;" v-bind:class="{'color': food.isClick}" v-on:click="updateTotal(food)">
-                    {{ food.name }}
-                <span style="float:right;">￥ {{*food.price}}</span>
-                </a>
-			</div>
-		</template>
+    <template v-if="flag">
+      <div v-for="food in foods">
+        <a class="bgColor" href="javascript:" v-bind:class="{'color': food.isClick}" v-on:click="updateTotal(food)">
+          {{ food.name }}
+          <span style="float:right">￥ {{*food.price}}</span>
+        </a>
+      </div>
+    </template>
 
-	</div>
+  </div>
 
-
-
-	<script src="vue.js"></script>
-	<script>
-
-var data = {
-    flag: 1,
-    total: 0,
-    foods: [{
-        name: "苹果",
+  <script src="vue.js"></script>
+  <script>
+    var data = {
+      flag: 1,
+      total: 0,
+      foods: [{
+        name: '苹果',
         status: false,
         price: 15,
         isClick: false
-    },{
-        name: "梨子",
+      }, {
+        name: '梨子',
         status: false,
         price: 10,
         isClick: false
-    },{
-        name: "香蕉",
+      }, {
+        name: '香蕉',
         status: false,
         price: 22,
         isClick: false
-    },{
-        name: "西瓜",
+      }, {
+        name: '西瓜',
         status: false,
         price: 13,
         isClick: false
-    }]
-}
+      }]
+    }
 
-var vm = new Vue({
-    el: "#app",
-    data: data,
-    methods: {
+    var vm = new Vue({
+      el: '#app',
+      data: data,
+      methods: {
         change: function () {
-            this.flag = !this.flag;
+          this.flag = !this.flag
         },
         updateTotal: function (food) {
-            if (food.status == true) {
-                food.price = -Math.abs(food.price);
-            } else {
-                food.price = Math.abs(food.price);
-            }
-            data.total += food.price;
-            food.status = !food.status;
-            food.isClick = !food.isClick;
+          if (food.status == true) {
+            food.price = -Math.abs(food.price)
+          } else {
+            food.price = Math.abs(food.price)
+          }
+          data.total += food.price
+          food.status = !food.status
+          food.isClick = !food.isClick
         }
-    }
-})
-
-
-
-
-</script>
+      }
+    })
+  </script>
 </body>
 
 </html>

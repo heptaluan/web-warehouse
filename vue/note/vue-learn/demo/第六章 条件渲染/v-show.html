@@ -1,41 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <title>条件渲染</title>
+  <meta charset="UTF-8">
+  <title>条件渲染</title>
 </head>
+
 <body>
 
+  <div id="app">
 
-<div id="app">
-    
     <!-- 在 Vue 中的 tamplate 里面是不能使用 v-show 的 -->
     <template v-show="ok">
-        <h1>Title</h1>
-        <div>body</div>
-        <div>foot</div>
+      <h1>Title</h1>
+      <div>body</div>
+      <div>foot</div>
     </template>
 
     <!-- 在一般的标签，使用 v-show 是可以的 -->
     <!-- v-show 只是简单的css隐藏，标签还是会被渲染的 -->
     <h1 v-show="ok">hello world</h1>
 
-</div>    
+  </div>
 
-<script src="../vue.js"></script>
-<script>
-
-
+  <script src="../vue.js"></script>
+  <script>
     var vm = new Vue({
-        el: "#app",
-        data: {
-            ok: false
-        }
+      el: '#app',
+      data: {
+        ok: false
+      }
     })
-
-
-
-
-</script>
+  </script>
 </body>
+
 </html>

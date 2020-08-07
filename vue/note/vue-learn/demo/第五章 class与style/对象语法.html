@@ -1,53 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <title>class 绑定</title>
+  <meta charset="UTF-8">
+  <title>class 绑定</title>
 </head>
+
 <body>
-<style>
-.classA {
-    color: pink;
-    font-size: 30px;
-}
+  <style>
+    .classA {
+      color: pink;
+      font-size: 30px;
+    }
 
-.classB {
-    text-decoration: underline;
-}
+    .classB {
+      text-decoration: underline;
+    }
 
-.classC {
-    border: 1px solid pink;
-    display: inline;
-}
+    .classC {
+      border: 1px solid pink;
+      display: inline;
+    }
+  </style>
 
-</style>
-
-
-<div id="app">
-
-
+  <div id="app">
     <div v-bind:class="[classA, {classB: isB, classC: isC}]">hello world</div>
+  </div>
 
-
-
-
-</div>    
-
-<script src="../vue.js"></script>
-<script>
-
+  <script src="../vue.js"></script>
+  <script>
     var vm = new Vue({
-        el: "#app",
-        data: {
-            classA: 'classA',
-            isB: true,
-            isC: true
-        }
+      el: '#app',
+      data: {
+        classA: 'classA',
+        isB: true,
+        isC: true
+      }
     })
-
-
-
-
-</script>
+  </script>
 </body>
+
 </html>

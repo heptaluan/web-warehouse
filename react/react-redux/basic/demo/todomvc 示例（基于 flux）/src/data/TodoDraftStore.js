@@ -1,30 +1,30 @@
-'use strict';
+'use strict'
 
-import { ReduceStore } from 'flux/utils';
-import TodoActionTypes from './TodoActionTypes';
-import TodoDispatcher from './TodoDispatcher';
+import { ReduceStore } from 'flux/utils'
+import TodoActionTypes from './TodoActionTypes'
+import TodoDispatcher from './TodoDispatcher'
 
 class TodoDraftStore extends ReduceStore {
 	constructor() {
-		super(TodoDispatcher);
+		super(TodoDispatcher)
 	}
 
 	getInitialState() {
-		return '';
+		return ''
 	}
 
 	reduce(state, action) {
 		switch (action.type) {
 			case TodoActionTypes.ADD_TODO:
-				return '';
+				return ''
 
 			case TodoActionTypes.UPDATE_DRAFT:
-				return action.text;
+				return action.text
 
 			default:
-				return state;
+				return state
 		}
 	}
 }
 
-export default new TodoDraftStore();
+export default new TodoDraftStore()

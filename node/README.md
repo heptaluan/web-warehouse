@@ -26,7 +26,7 @@
 
 
 
-### 笔记
+## 笔记
 
 * [url 和 querystring](https://github.com/heptaluan/blog/blob/master/node/note/笔记/01.md)
 * [http 事件回调，EventEmitter](https://github.com/heptaluan/blog/blob/master/node/note/笔记/02.md)
@@ -36,7 +36,7 @@
 
 
 
-### Node.js 相关知识点汇总
+## Node.js 相关知识点汇总
 
 * [01、服务器（server）](https://github.com/heptaluan/blog/blob/master/node/note/汇总/01.md)
 * [02、http（response，request，get，post），url](https://github.com/heptaluan/blog/blob/master/node/note/汇总/02.md)
@@ -51,7 +51,7 @@
 
 
 
-### Node.js 包教不包会
+## Node.js 包教不包会
 
 参考 [《Node.js 包教不包会》](https://github.com/heptaluan/node-lessons)
 
@@ -64,7 +64,7 @@
 
 
 
-### N-blog 目录
+## N-blog 目录
 
 参考 [N-blog](https://github.com/nswbmw/N-blog)，一个使用 `Express + MongoDB` 搭建多人博客的实战
 
@@ -76,7 +76,7 @@
 
 
 
-### 七天学会 NodeJS
+## 七天学会 NodeJS
 
 参考 [七天学会NodeJS](http://nqdeng.github.io/7-days-nodejs/)
 

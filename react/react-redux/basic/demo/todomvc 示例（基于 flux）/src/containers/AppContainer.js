@@ -1,18 +1,18 @@
-'use strict';
+'use strict'
 
-import AppView from '../views/AppView';
-import { Container } from 'flux/utils';
-import TodoActions from '../data/TodoActions';
-import TodoDraftStore from '../data/TodoDraftStore';
-import TodoEditStore from '../data/TodoEditStore';
-import TodoStore from '../data/TodoStore';
+import AppView from '../views/AppView'
+import { Container } from 'flux/utils'
+import TodoActions from '../data/TodoActions'
+import TodoDraftStore from '../data/TodoDraftStore'
+import TodoEditStore from '../data/TodoEditStore'
+import TodoStore from '../data/TodoStore'
 
 function getStores() {
 	return [
 		TodoEditStore,
 		TodoDraftStore,
 		TodoStore,
-	];
+	]
 }
 
 function getState() {
@@ -30,7 +30,7 @@ function getState() {
 		onToggleAllTodos: TodoActions.toggleAllTodos,
 		onToggleTodo: TodoActions.toggleTodo,
 		onUpdateDraft: TodoActions.updateDraft,
-	};
+	}
 }
 
-export default Container.createFunctional(AppView, getStores, getState);
+export default Container.createFunctional(AppView, getStores, getState)

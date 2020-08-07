@@ -1,33 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<title>事件监听</title>
 </head>
+
 <body>
 
 
-<div id="app">
+	<div id="app">
 
-	<button @click="current += 1">click me</button>
-	<p> 点击了 {{current}} 次</p>
-	
-</div>
+		<button @click="current += 1">click me</button>
+		<p> 点击了 {{current}} 次</p>
 
-
-<script src="vue.js"></script>
-<script>
+	</div>
 
 
-	var vm = new Vue({
-		el: "#app",
-		data: {
-			current: 0
-		}
-	})
+	<script src="vue.js"></script>
+	<script>
+
+
+		var vm = new Vue({
+			el: '#app',
+			data: {
+				current: 0
+			}
+		})
 
 
 
-</script>
+	</script>
 </body>
+
 </html>

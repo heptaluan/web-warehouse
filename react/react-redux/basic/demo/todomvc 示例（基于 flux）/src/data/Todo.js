@@ -1,11 +1,11 @@
-'use strict';
+'use strict'
 
-import Immutable from 'immutable';
+import Immutable from 'immutable'
 
 const Todo = Immutable.Record({
 	id: '',
 	complete: false,
 	text: '',
-});
+})
 
-export default Todo;
+export default Todo

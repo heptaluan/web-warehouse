@@ -32,5 +32,5 @@ class Father extends React.Component {
 
 ReactDOM.render(
     <Father />,
-    document.getElementById("box")
+    document.getElementById('box')
 )

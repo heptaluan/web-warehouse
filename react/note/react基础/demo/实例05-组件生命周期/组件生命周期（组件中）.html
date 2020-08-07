@@ -2,74 +2,74 @@
 <html>
 
 <head>
-    <meta charset="UTF-8" />
-    <title>组件生命周期（组件中）</title>
-    <script src="https://cdn.bootcss.com/react/15.4.2/react.min.js"></script>
-    <script src="https://cdn.bootcss.com/react/15.4.2/react-dom.min.js"></script>
-    <script src="https://cdn.bootcss.com/babel-standalone/6.22.1/babel.min.js"></script>
+  <meta charset="UTF-8" />
+  <title>组件生命周期（组件中）</title>
+  <script src="https://cdn.bootcss.com/react/15.4.2/react.min.js"></script>
+  <script src="https://cdn.bootcss.com/react/15.4.2/react-dom.min.js"></script>
+  <script src="https://cdn.bootcss.com/babel-standalone/6.22.1/babel.min.js"></script>
 </head>
 
 <body>
-    <div id="box"></div>
-    <script type="text/babel">
-        var Button = React.createClass({
-            getInitialState() {
-                return {
-                    data: 0
-                };
-            },
-            setNewNumber() {
-                this.setState({ data: this.state.data + 1 })
-            },
-            render() {
-                return (
-                    <div>
-                        <button onClick={this.setNewNumber}>Button</button>
-                        <Content myNumber={this.state.data}></Content>
-                    </div>
-                );
-            }
-        })
-
-        var Content = React.createClass({
-            componentWillMount() {
-                console.log("Component WILL MOUNT!")
-            },
-            componentDidMount() {
-                console.log("Component DID MOUNT!")
-            },
-            componentWillReceiveProps(newProps) {
-                console.log("Component WILL RECEIVE PROPS!")
-            },
-            shouldComponentUpdate(newProps, newState) {
-                return true;
-            },
-            componentWillUpdate(nextProps, nextState) {
-                console.log("Component WILL UPDATE!");
-            },
-            componentDidUpdate(prevProps, prevState) {
-                console.log("Component DID UPDATE!")
-            },
-            componentWillUnmount() {
-                console.log("Component WILL UNMOUNT!")
-            },
-
-            render() {
-                return (
-                    <div>
-                        <h3>{this.props.myNumber}</h3>
-                    </div>
-                );
-            }
-        });
-
-        ReactDOM.render(
-            <div>
-                <Button />
-            </div>,
-            document.getElementById("box")
+  <div id='box'></div>
+  <script type="text/babel">
+    var Button = React.createClass({
+      getInitialState() {
+        return {
+          data: 0
+        };
+      },
+      setNewNumber() {
+        this.setState({ data: this.state.data + 1 })
+      },
+      render() {
+        return (
+          <div>
+            <button onClick={this.setNewNumber}>Button</button>
+            <Content myNumber={this.state.data}></Content>
+          </div>
         );
-    </script>
+      }
+    })
+
+    var Content = React.createClass({
+      componentWillMount() {
+        console.log("Component WILL MOUNT!")
+      },
+      componentDidMount() {
+        console.log("Component DID MOUNT!")
+      },
+      componentWillReceiveProps(newProps) {
+        console.log("Component WILL RECEIVE PROPS!")
+      },
+      shouldComponentUpdate(newProps, newState) {
+        return true;
+      },
+      componentWillUpdate(nextProps, nextState) {
+        console.log("Component WILL UPDATE!");
+      },
+      componentDidUpdate(prevProps, prevState) {
+        console.log("Component DID UPDATE!")
+      },
+      componentWillUnmount() {
+        console.log("Component WILL UNMOUNT!")
+      },
+
+      render() {
+        return (
+          <div>
+            <h3>{this.props.myNumber}</h3>
+          </div>
+        );
+      }
+    });
+
+    ReactDOM.render(
+      <div>
+        <Button />
+      </div>,
+      document.getElementById('box')
+    );
+  </script>
 </body>
 
 </html>

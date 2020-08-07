@@ -1,37 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <title>数据绑定</title>
+  <meta charset="UTF-8">
+  <title>数据绑定</title>
 </head>
+
 <body>
 
-
-<div id="app">
-    
+  <div id="app">
     <div>{{ number + 1 }}</div>
-
     <div>{{ ok ? "YES" : "NO" }}</div>
-
     <div>{{ message.split("").reverse().join("") }}</div>
+  </div>
 
-</div>    
-
-<script src="../vue.js"></script>
-<script>
+  <script src="../vue.js"></script>
+  <script>
 
     var vm = new Vue({
-        el: "#app",
-        data: {
-            number: 10,
-            ok: true,
-            message: "hello world"
-        }
+      el: '#app',
+      data: {
+        number: 10,
+        ok: true,
+        message: 'hello world'
+      }
     })
 
-
-
-
-</script>
+  </script>
 </body>
+
 </html>

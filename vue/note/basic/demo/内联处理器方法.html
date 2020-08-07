@@ -1,36 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<title>内联处理器方法</title>
 </head>
+
 <body>
 
 
-<div id="app">
+	<div id="app">
 
-	<!-- 注意单引号与双引号 -->
-	<button @click="say('hi')">hi</button>
-	<button @click="say('what')">what</button>
-	
-</div>
+		<!-- 注意单引号与双引号 -->
+		<button @click="say('hi')">hi</button>
+		<button @click="say('what')">what</button>
 
-
-<script src="vue.js"></script>
-<script>
+	</div>
 
 
-	var vm = new Vue({
-		el: "#app",
-		methods: {
-			say: function (msg) {
-				alert(msg)
+	<script src="vue.js"></script>
+	<script>
+
+
+		var vm = new Vue({
+			el: '#app',
+			methods: {
+				say: function (msg) {
+					alert(msg)
+				}
 			}
-		}
-	})
+		})
 
 
 
-</script>
+	</script>
 </body>
+
 </html>

@@ -1,40 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <title>概述</title>
+  <meta charset="UTF-8">
+  <title>概述</title>
 </head>
+
 <body>
 
-
-<div id="app">
-    
+  <div id="app">
     <ul>
-        <li v-for="arr in arrays">
-            <span> {{ arr.name }}</span>
-        </li>
+      <li v-for="arr in arrays">
+        <span> {{ arr.name }}</span>
+      </li>
     </ul>
+  </div>
 
-</div>    
-
-<script src="../vue.js"></script>
-<script>
-
+  <script src="../vue.js"></script>
+  <script>
     var vm = new Vue({
-        el: "#app",
-        data: {
-            arrays: [
-                { name: "a" },
-                { name: "b" },
-                { name: "c" },
-                { name: "d" }
-            ]
-        }
+      el: '#app',
+      data: {
+        arrays: [
+          { name: 'a' },
+          { name: 'b' },
+          { name: 'c' },
+          { name: 'd' }
+        ]
+      }
     })
-
-
-
-
-</script>
+  </script>
 </body>
+
 </html>

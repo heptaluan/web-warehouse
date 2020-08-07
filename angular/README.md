@@ -1,8 +1,13 @@
+
+
+
+
+
 记录一些 `Angular` 相关的学习笔记
 
 ----
 
-### Angular 修仙之路
+## Angular 修仙之路
 
 主要参考的是 [Angular 4.x 修仙之路](https://segmentfault.com/u/angular4)，包含了 `Angular` 绝大部分内容，干货很多，可以钻研很长一段时间了，感谢作者的无私分享
 
@@ -19,7 +24,7 @@
 
 
 
-### Angular-Task
+## Angular-Task
 
 这里仅为问题汇总和笔记记录
 
@@ -41,7 +46,7 @@
 
 
 
-### Angular 4.x
+## Angular 4.x
 
 * [00、Angular-CLI 脚手架安装目录结构剖析](https://github.com/heptaluan/blog/blob/master/angular/note/Angular/4.x/00.md)
 * [01、整体架构，@NgModule，模块库，组件](https://github.com/heptaluan/blog/blob/master/angular/note/Angular/4.x/01.md)
@@ -50,7 +55,7 @@
 
 ----
 
-### AngularJS 1.5.x
+## AngularJS 1.5.x
 
 来源 [图灵社区](http://www.ituring.com.cn/tag/32022)
 

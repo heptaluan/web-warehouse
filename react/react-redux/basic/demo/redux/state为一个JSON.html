@@ -22,16 +22,16 @@
 		function counter(state, action) {
 
 			if (state == undefined) {
-				state = {"m": 5, "n": 10}
+				state = { 'm': 5, 'n': 10 }
 			}
 
 			switch (action.type) {
 				case 'INCREMENT':
-					return {"m": state.m + 1}
+					return { 'm': state.m + 1 }
 				case 'DECREMENT':
-					return {"m": state.m - 1}
+					return { 'm': state.m - 1 }
 				case 'ADDNUMBER':
-					return {"m": state.m + action.number}
+					return { 'm': state.m + action.number }
 				default:
 					return state
 			}
@@ -64,8 +64,8 @@
 
 		// 增加输入框内的值
 		document.getElementById('addNumber').onclick = function () {
-			var number = Number(document.getElementById("textNumber").value);
-			store.dispatch({ type: 'ADDNUMBER' , number: number })
+			var number = Number(document.getElementById('textNumber').value);
+			store.dispatch({ type: 'ADDNUMBER', number: number })
 		}
 	</script>
 </body>

@@ -1,8 +1,14 @@
-目录列表
+
+
+
+
+
+
+`ts` 相关 `demo` 和笔记，目录如下
 
 ----
 
-### TypeScript
+## ts
 
 参考 [一步一步学习 TypeScript](http://blog.csdn.net/wq_static/article/category/6010971)
 
@@ -17,3 +23,9 @@
 * `class` 中的 `private`，`protected` 和 `static`
 * `Getters` 和 `Setters`
 * `Interfaces`
+
+
+
+## demo
+
+其中 `App` 为一个 `typeScript` + `react` + `webpack` 的基本示例

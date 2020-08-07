@@ -1,8 +1,8 @@
-'use strict';
+'use strict'
 
-import React from 'react';
+import React from 'react'
 
-import classnames from 'classnames';
+import classnames from 'classnames'
 
 function AppView(props) {
 	return (
@@ -11,7 +11,7 @@ function AppView(props) {
 			<Main {...props} />
 			<Footer {...props} />
 		</div>
-	);
+	)
 }
 
 function Header(props) {
@@ -20,16 +20,16 @@ function Header(props) {
 			<h1>todos</h1>
 			<NewTodo {...props} />
 		</header>
-	);
+	)
 }
 
 function Main(props) {
 	if (props.todos.size === 0) {
-		return null;
+		return null
 	}
 
 	// If this were expensive we could move it to the container.
-	const areAllComplete = props.todos.every(todo => todo.complete);
+	const areAllComplete = props.todos.every(todo => todo.complete)
 
 	return (
 		<section id="main">
@@ -57,19 +57,19 @@ function Main(props) {
 				))}
 			</ul>
 		</section>
-	);
+	)
 }
 
 function Footer(props) {
 	if (props.todos.size === 0) {
-		return null;
+		return null
 	}
 
-	const remaining = props.todos.filter(todo => !todo.complete).size;
-	const completed = props.todos.size - remaining;
-	const phrase = remaining === 1 ? ' item left' : ' items left';
+	const remaining = props.todos.filter(todo => !todo.complete).size
+	const completed = props.todos.size - remaining
+	const phrase = remaining === 1 ? ' item left' : ' items left'
 
-	let clearCompletedButton = null;
+	let clearCompletedButton = null
 	if (completed > 0) {
 		clearCompletedButton =
 			<button
@@ -89,19 +89,19 @@ function Footer(props) {
 			</span>
 			{clearCompletedButton}
 		</footer>
-	);
+	)
 }
 
-const ENTER_KEY_CODE = 13;
+const ENTER_KEY_CODE = 13
 function NewTodo(props) {
-	const addTodo = () => props.onAdd(props.draft);
-	const onBlur = () => addTodo();
-	const onChange = (event) => props.onUpdateDraft(event.target.value);
+	const addTodo = () => props.onAdd(props.draft)
+	const onBlur = () => addTodo()
+	const onChange = (event) => props.onUpdateDraft(event.target.value)
 	const onKeyDown = (event) => {
 		if (event.keyCode === ENTER_KEY_CODE) {
-			addTodo();
+			addTodo()
 		}
-	};
+	}
 	return (
 		<input
 			autoFocus={true}
@@ -112,26 +112,26 @@ function NewTodo(props) {
 			onChange={onChange}
 			onKeyDown={onKeyDown}
 		/>
-	);
+	)
 }
 
 function TodoItem(props) {
-	const { editing, todo } = props;
-	const isEditing = editing === todo.id;
-	const onDeleteTodo = () => props.onDeleteTodo(todo.id);
-	const onStartEditingTodo = () => props.onStartEditingTodo(todo.id);
-	const onToggleTodo = () => props.onToggleTodo(todo.id);
+	const { editing, todo } = props
+	const isEditing = editing === todo.id
+	const onDeleteTodo = () => props.onDeleteTodo(todo.id)
+	const onStartEditingTodo = () => props.onStartEditingTodo(todo.id)
+	const onToggleTodo = () => props.onToggleTodo(todo.id)
 
 	// Construct the input for editing a task if necessary.
-	let input = null;
+	let input = null
 	if (isEditing) {
-		const onChange = (event) => props.onEditTodo(todo.id, event.target.value);
-		const onStopEditingTodo = props.onStopEditingTodo;
+		const onChange = (event) => props.onEditTodo(todo.id, event.target.value)
+		const onStopEditingTodo = props.onStopEditingTodo
 		const onKeyDown = (event) => {
 			if (event.keyCode === ENTER_KEY_CODE) {
-				onStopEditingTodo();
+				onStopEditingTodo()
 			}
-		};
+		}
 		input =
 			<input
 				autoFocus={true}
@@ -140,7 +140,7 @@ function TodoItem(props) {
 				onBlur={onStopEditingTodo}
 				onChange={onChange}
 				onKeyDown={onKeyDown}
-			/>;
+			/>
 	}
 
 	return (
@@ -163,8 +163,8 @@ function TodoItem(props) {
 			</div>
 			{input}
 		</li>
-	);
+	)
 }
 
 
-export default AppView;
+export default AppView

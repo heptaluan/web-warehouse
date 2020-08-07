@@ -1,3 +1,3 @@
-function world () {
-    return {}
+function world() {
+  return {}
 }

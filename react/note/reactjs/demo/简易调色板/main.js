@@ -35,5 +35,5 @@ class App extends React.Component {
 
 ReactDOM.render(
     <App />,
-    document.getElementById("box")
+    document.getElementById('box')
 )

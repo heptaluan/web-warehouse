@@ -2,43 +2,39 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <title>实例</title>
+  <meta charset="UTF-8">
+  <title>实例</title>
 </head>
 
 <body>
 
+  <div id="app">
+    hello {{msg}}
+  </div>
 
-    <div id="app">
-        hello {{msg}}
-    </div>
-
-<script src="../vue.js"></script>
-<script>
+  <script src="../vue.js"></script>
+  <script>
 
     var data = {
-        msg: "world!"
+      msg: 'world!'
     }
 
     var vm = new Vue({
-        el: "#app",
-        data: data
+      el: '#app',
+      data: data
     })
 
     // vm.$data === data; // true
 
-    // vm.$el === document.getElementById("app"); // true
+    // vm.$el === document.getElementById('app'); // true
 
     // $watch 是一个实例方法
-    vm.$watch("msg", function (newVal, oldVal) {
-        // 这个回调将在 "vm.a" 改变后调用
-        console.log("msg 原来的值为：" + oldVal + ", 新的值为：" + newVal);
+    vm.$watch('msg', function (newVal, oldVal) {
+      // 这个回调将在 'vm.a' 改变后调用
+      console.log('msg 原来的值为：' + oldVal + ', 新的值为：' + newVal);
     })
 
-
-
-
-</script>
+  </script>
 </body>
 
 </html>

@@ -1,62 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <title>计算属性</title>
+  <meta charset="UTF-8">
+  <title>计算属性</title>
 </head>
+
 <body>
 
 
-<div id="app">
-    
+  <div id="app">
     <div v-for="(item, index) in items">
-        <div>
-            <span style="background:yellow;width:80px;display:inline-block;">
-                {{ item.name }}
-            </span>
-            <input type="text" v-model.number.lazy="item.value">
-        </div>
+      <div>
+        <span style="background:yellow;width:80px;display:inline-block;">
+          {{ item.name }}
+        </span>
+        <input type="text" v-model.number.lazy="item.value">
+      </div>
     </div>
     计算后： {{ total }}
+  </div>
 
-</div>    
-
-<script src="../vue.js"></script>
-<script>
-
+  <script src="../vue.js"></script>
+  <script>
     var vm = new Vue({
-        el: "#app",
-        data: {
-            items: [
-                { 
-                    name: "苹果",
-                    value: 100
-                },
-                {
-                    name: "梨子",
-                    value: 200
-                },
-                {
-                    name: "香蕉",
-                    value: 300
-                }
-            ]
-        },
-        computed: {
-            total: function () {
-                var tmp = 0;
-                for (var i = 0; i < this.items.length; i++) {
-                    tmp = tmp + this.items[i].value
-                }
-                return tmp;
-            }
+      el: '#app',
+      data: {
+        items: [
+          {
+            name: '苹果',
+            value: 100
+          },
+          {
+            name: '梨子',
+            value: 200
+          },
+          {
+            name: '香蕉',
+            value: 300
+          }
+        ]
+      },
+      computed: {
+        total: function () {
+          var tmp = 0;
+          for (var i = 0; i < this.items.length; i++) {
+            tmp = tmp + this.items[i].value
+          }
+          return tmp;
         }
+      }
     })
-
-    
-
-
-
-</script>
+  </script>
 </body>
+
 </html>

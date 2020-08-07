@@ -1,32 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <title>概述</title>
+  <meta charset="UTF-8">
+  <title>概述</title>
 </head>
+
 <body>
 
-
-<div id="app">
-    
+  <div id="app">
     <input type="text" v-model="msg">
     <p> {{ msg }} </p>
+  </div>
 
-</div>    
-
-<script src="../vue.js"></script>
-<script>
-
+  <script src="../vue.js"></script>
+  <script>
     var vm = new Vue({
-        el: "#app",
-        data: {
-            msg: "hello world!"
-        }
+      el: '#app',
+      data: {
+        msg: 'hello world!'
+      }
     })
-
-
-
-
-</script>
+  </script>
 </body>
+
 </html>

@@ -2,7 +2,7 @@
 
 ----
 
-### Use
+## Use
 
 ```js
 npm install

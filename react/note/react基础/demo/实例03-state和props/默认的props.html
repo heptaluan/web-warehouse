@@ -2,32 +2,32 @@
 <html>
 
 <head>
-    <meta charset="UTF-8" />
-    <title>默认的props</title>
-    <script src="https://cdn.bootcss.com/react/15.4.2/react.min.js"></script>
-    <script src="https://cdn.bootcss.com/react/15.4.2/react-dom.min.js"></script>
-    <script src="https://cdn.bootcss.com/babel-standalone/6.22.1/babel.min.js"></script>
+  <meta charset="UTF-8" />
+  <title>默认的props</title>
+  <script src="https://cdn.bootcss.com/react/15.4.2/react.min.js"></script>
+  <script src="https://cdn.bootcss.com/react/15.4.2/react-dom.min.js"></script>
+  <script src="https://cdn.bootcss.com/babel-standalone/6.22.1/babel.min.js"></script>
 </head>
 
 <body>
-    <div id="box"></div>
-    <script type="text/babel">
-        var HelloWorld = React.createClass({
-            getDefaultProps() {
-                return {
-                    name: "zhangsan"
-                }
-            },
-            render() {
-                return <h1>Hello {this.props.name}</h1>;
-            }
-        })
+  <div id='box'></div>
+  <script type="text/babel">
+    var HelloWorld = React.createClass({
+      getDefaultProps() {
+        return {
+          name: "zhangsan"
+        }
+      },
+      render() {
+        return <h1>Hello {this.props.name}</h1>;
+      }
+    })
 
-        ReactDOM.render(
-            <HelloWorld />,
-            document.getElementById("box")
-        )
-    </script>
+    ReactDOM.render(
+      <HelloWorld />,
+      document.getElementById('box')
+    )
+  </script>
 </body>
 
 </html>

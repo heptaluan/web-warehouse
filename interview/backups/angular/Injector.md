@@ -25,18 +25,18 @@
 ```ts
 // angular2\packages\core\src\di\injector.ts
 export abstract class Injector {
-  static THROW_IF_NOT_FOUND = _THROW_IF_NOT_FOUND;
-  static NULL: Injector = new _NullInjector();
+  static THROW_IF_NOT_FOUND = _THROW_IF_NOT_FOUND
+  static NULL: Injector = new _NullInjector()
 
   /**
    * 定义了一个 get() 抽象方法，该方法用于根据给定的 Token 从注入器中获取相应的对象
    * 如果没有找到相应的对象，将返回 notFoundValue 设置的值
    * 若 notFoundValue 的值与 _THROW_IF_NOT_FOUND 相等，则会抛出异常
    */
-  abstract get<T>(token: Type<T> | InjectionToken<T>, notFoundValue?: T): T;
+  abstract get<T>(token: Type<T> | InjectionToken<T>, notFoundValue?: T): T
 }
 
-const _THROW_IF_NOT_FOUND = new Object();
+const _THROW_IF_NOT_FOUND = new Object()
 ```
 
 需要注意的是，每个 `Injector` 抽象类的子类都必须实现该方法，在 `Angular` 当中常见的有 `_NullInjector` 和 `ReflectiveInjector` 两个
@@ -49,13 +49,12 @@ const _THROW_IF_NOT_FOUND = new Object();
 ```ts
 // angular2\packages\core\src\di\injector.ts
 class _NullInjector implements Injector {
-
   // 实现 get() 方法
   get(token: any, notFoundValue: any = _THROW_IF_NOT_FOUND): any {
     if (notFoundValue === _THROW_IF_NOT_FOUND) {
-      throw new Error('No provider for ${stringify(token)}!');
+      throw new Error('No provider for ${stringify(token)}!')
     }
-    return notFoundValue;
+    return notFoundValue
   }
 }
 ```
@@ -76,13 +75,13 @@ class Car {
 }
 
 // 调用 ReflectiveInjector 抽象类的 resolveAndCreate() 方法来创建注入器
-var injector = ReflectiveInjector.resolveAndCreate([Car, Engine]);
+var injector = ReflectiveInjector.resolveAndCreate([Car, Engine])
 
 // 然后调用注入器的 get() 方法，获得 Token 对应的对象
-var car = injector.get(Car);
+var car = injector.get(Car)
 
-expect(car instanceof Car).toBe(true);
-expect(car.engine instanceof Engine).toBe(true);
+expect(car instanceof Car).toBe(true)
+expect(car.engine instanceof Engine).toBe(true)
 ```
 
 其中的 `resolveAndCreate()` 方法定义如下
@@ -90,16 +89,15 @@ expect(car.engine instanceof Engine).toBe(true);
 ```ts
 // 通过调用 resolve() 和 fromResolvedProviders() 方法来创建 ReflectiveInjector 对象（返回的是该对象）
 static resolveAndCreate(providers: Provider[], parent ?: Injector): ReflectiveInjector {
-  const ResolvedReflectiveProviders = ReflectiveInjector.resolve(providers);
-  return ReflectiveInjector.fromResolvedProviders(ResolvedReflectiveProviders, parent);
+  const ResolvedReflectiveProviders = ReflectiveInjector.resolve(providers)
+  return ReflectiveInjector.fromResolvedProviders(ResolvedReflectiveProviders, parent)
 }
 ```
 
 `ReflectiveInjector` 除了 `resolveAndCreate()` 静态方法外，还有两个常见的
 
-* `resolve()` - 解析 `Provider` 列表为 `ResolvedReflectiveProvider` 列表
-
-* `fromResolvedProviders()` - 基于 `ResolvedReflectiveProvider` 列表创建 `ReflectiveInjector` 对象
+* `resolve()`，解析 `Provider` 列表为 `ResolvedReflectiveProvider` 列表
+* `fromResolvedProviders()`，基于 `ResolvedReflectiveProvider` 列表创建 `ReflectiveInjector` 对象
 
 
 
@@ -110,7 +108,7 @@ static resolveAndCreate(providers: Provider[], parent ?: Injector): ReflectiveIn
 
 ```ts
 static resolve(providers: Provider[]): ResolvedReflectiveProvider[] {
-  return resolveReflectiveProviders(providers);
+  return resolveReflectiveProviders(providers)
 }
 ```
 
@@ -125,12 +123,12 @@ class Car {
   constructor(public engine: Engine) { }
 }
 
-var providers = ReflectiveInjector.resolve([Car, [[Engine]]]);
-expect(providers.length).toEqual(2);
+var providers = ReflectiveInjector.resolve([Car, [[Engine]]])
+expect(providers.length).toEqual(2)
 
-expect(providers[0] instanceof ResolvedReflectiveProvider).toBe(true);
-expect(providers[0].key.displayName).toBe("Car");
-expect(providers[1].key.displayName).toBe("Engine");
+expect(providers[0] instanceof ResolvedReflectiveProvider).toBe(true)
+expect(providers[0].key.displayName).toBe('Car')
+expect(providers[1].key.displayName).toBe('Engine')
 ```
 
 `resolve()` 的流程解析如下图所示
@@ -153,32 +151,32 @@ export interface TypeProvider extends Type<any> { }
 // { provide: ApiService, useClass: ApiService } => 可以简写为 ApiService,
 export interface ClassProvider {
   // 用于设置与依赖对象关联的 Token 值，Token 值可能是 Type、InjectionToken、OpaqueToken 的实例或字符串
-  provide: any;
-  useClass: Type<any>;
+  provide: any
+  useClass: Type<any>
   // 用于标识是否 multiple providers，若是 multiple 类型，则返回与 Token 关联的依赖对象列表
-  multi?: boolean;
+  multi?: boolean
 }
 
 // { provide: 'API_URL', useValue: 'http://my.api.com/v1' }
 export interface ValueProvider {
-  provide: any;
-  useValue: any;
-  multi?: boolean;
+  provide: any
+  useValue: any
+  multi?: boolean
 }
 
 // { provide: 'ApiServiceAlias', useExisting: ApiService }  
 export interface ExistingProvider {
-  provide: any;
-  useExisting: any;
-  multi?: boolean;
+  provide: any
+  useExisting: any
+  multi?: boolean
 }
 
 // { provide: APP_INITIALIZER, useFactory: configFactory, deps: [AppConfig], multi: true }
 export interface FactoryProvider {
-  provide: any;
-  useFactory: Function;
-  deps?: any[]; // 用于设置工厂函数的依赖对象
-  multi?: boolean;
+  provide: any
+  useFactory: Function
+  deps?: any[]  // 用于设置工厂函数的依赖对象
+  multi?: boolean
 }
 ```
 
@@ -188,11 +186,11 @@ export interface FactoryProvider {
 ```ts
 export interface ResolvedReflectiveProvider {
   // 唯一的对象，用来从 ReflectiveInjector 中获取对象
-  key: ReflectiveKey;
+  key: ReflectiveKey
   // 工厂函数用于创建 key 相关的依赖对象 
-  resolvedFactories: ResolvedReflectiveFactory[];
+  resolvedFactories: ResolvedReflectiveFactory[]
   // 标识当前的 provider 是否为 multi-provider
-  multiProvider: boolean;
+  multiProvider: boolean
 }
 ```
 
@@ -220,7 +218,7 @@ export class ReflectiveDependency {
   ) { }
 
   static fromKey(key: ReflectiveKey): ReflectiveDependency {
-    return new ReflectiveDependency(key, false, null);
+    return new ReflectiveDependency(key, false, null)
   }
 }
 ```
@@ -233,49 +231,49 @@ export class ReflectiveDependency {
 ```ts
 export class ReflectiveKey {
   constructor(
-    public token: Object, 
+    public token: Object,
     public id: number
   ) {
     if (!token) {
-      throw new Error('Token must be defined!');
+      throw new Error('Token must be defined!')
     }
   }
 
   // 返回序列化的 token
-  get displayName(): string { return stringify(this.token); }
+  get displayName(): string { return stringify(this.token) }
 
   // 获取 token 对应的 ReflectiveKey
   static get(token: Object): ReflectiveKey {
-    return _globalKeyRegistry.get(resolveForwardRef(token));
+    return _globalKeyRegistry.get(resolveForwardRef(token))
   }
 
   // 获取系统中已注册 ReflectiveKey 的个数
-  static get numberOfKeys(): number { return _globalKeyRegistry.numberOfKeys; }
+  static get numberOfKeys(): number { return _globalKeyRegistry.numberOfKeys }
 }
 
-const _globalKeyRegistry = new KeyRegistry(); // 创建 Key 仓库
+const _globalKeyRegistry = new KeyRegistry() // 创建 Key 仓库
 
 export class KeyRegistry {
-  private _allKeys = new Map<Object, ReflectiveKey>();
+  private _allKeys = new Map<Object, ReflectiveKey>()
 
   get(token: Object): ReflectiveKey {
 
     // 若 token 是 ReflectiveKey 类的实例，则直接返回
-    if (token instanceof ReflectiveKey) return token;
+    if (token instanceof ReflectiveKey) return token
 
     // 若 _allKeys 对象中包含 token 属性，则返回 token 对应的 ReflectiveKey 对象
     if (this._allKeys.has(token)) {
-      return this._allKeys.get(token)!;
+      return this._allKeys.get(token)!
     }
 
     // 否则创建一个新的 ReflectiveKey 对象，并保存到 _allKeys 对象中
-    const newKey = new ReflectiveKey(token, ReflectiveKey.numberOfKeys);
-    this._allKeys.set(token, newKey);
-    return newKey;
+    const newKey = new ReflectiveKey(token, ReflectiveKey.numberOfKeys)
+    this._allKeys.set(token, newKey)
+    return newKey
   }
 
   // 获取已保存 ReflectiveKey 的个数
-  get numberOfKeys(): number { return this._allKeys.size; }
+  get numberOfKeys(): number { return this._allKeys.size }
 }
 ```
 
@@ -283,16 +281,16 @@ export class KeyRegistry {
 
 ```ts
 static resolve(providers: Provider[]): ResolvedReflectiveProvider[] {
-  return resolveReflectiveProviders(providers);
+  return resolveReflectiveProviders(providers)
 }
 
 // -----------------------
 
 export function resolveReflectiveProviders(providers: Provider[]): ResolvedReflectiveProvider[] {
-  const normalized = _normalizeProviders(providers, []);                                 // 步骤一
-  const resolved = normalized.map(resolveReflectiveProvider);                            // 步骤二
-  const resolvedProviderMap = mergeResolvedReflectiveProviders(resolved, new Map());     // 步骤三
-  return Array.from(resolvedProviderMap.values());                                       // 步骤四
+  const normalized = _normalizeProviders(providers, [])                                 // 步骤一
+  const resolved = normalized.map(resolveReflectiveProvider)                            // 步骤二
+  const resolvedProviderMap = mergeResolvedReflectiveProviders(resolved, new Map())     // 步骤三
+  return Array.from(resolvedProviderMap.values())                                       // 步骤四
 }
 ```
 
@@ -300,25 +298,25 @@ export function resolveReflectiveProviders(providers: Provider[]): ResolvedRefle
 #### 步骤一，规范化 Provider
 
 ```ts
-const normalized = _normalizeProviders(providers, []);
+const normalized = _normalizeProviders(providers, [])
 
 // 规范化 Providers
 function _normalizeProviders(providers: Provider[], res: Provider[]): Provider[] {
   providers.forEach(b => {
     // providers: [Type] => providers: [{provide: Type, useClass: Type }]
     if (b instanceof Type) {
-      res.push({ provide: b, useClass: b });
+      res.push({ provide: b, useClass: b })
     } else if (b && typeof b == 'object' && (b as any).provide !== undefined) {
-      res.push(b as NormalizedProvider);
+      res.push(b as NormalizedProvider)
 
     // 若 b 是数组，则递归调用 _normalizeProviders() 方法
     } else if (b instanceof Array) {
-      _normalizeProviders(b, res);
+      _normalizeProviders(b, res)
     } else {
-      throw invalidProviderError(b);
+      throw invalidProviderError(b)
     }
-  });
-  return res;
+  })
+  return res
 }
 
 interface NormalizedProvider extends TypeProvider, ValueProvider, ClassProvider,
@@ -330,7 +328,7 @@ interface NormalizedProvider extends TypeProvider, ValueProvider, ClassProvider,
 
 ```ts
 // normalized 为规范化后的 provider
-const resolved = normalized.map(resolveReflectiveProvider);
+const resolved = normalized.map(resolveReflectiveProvider)
 
 // 解析 NormalizedProvider 为 ResolvedReflectiveProvider
 function resolveReflectiveProvider(provider: NormalizedProvider): ResolvedReflectiveProvider {
@@ -338,7 +336,7 @@ function resolveReflectiveProvider(provider: NormalizedProvider): ResolvedReflec
     ReflectiveKey.get(provider.provide),
     [resolveReflectiveFactory(provider)],
     provider.multi || false
-  );
+  )
 }
 
 // 用于创建已解析的 Provider 实例
@@ -349,33 +347,33 @@ export class ResolvedReflectiveProvider_ implements ResolvedReflectiveProvider {
     public multiProvider: boolean
   ) { }
 
-  get resolvedFactory(): ResolvedReflectiveFactory { return this.resolvedFactories[0]; }
+  get resolvedFactory(): ResolvedReflectiveFactory { return this.resolvedFactories[0] }
 }
 
 // 解析 NormalizedProvider 对象，创建 ResolvedReflectiveFactory 对象
 function resolveReflectiveFactory(provider: NormalizedProvider): ResolvedReflectiveFactory {
-  let factoryFn: Function;
-  let resolvedDeps: ReflectiveDependency[];
+  let factoryFn: Function
+  let resolvedDeps: ReflectiveDependency[]
   if (provider.useClass) {
     // { provide: ApiService, useClass: ApiService } 
-    const useClass = resolveForwardRef(provider.useClass);
-    factoryFn = reflector.factory(useClass);
-    resolvedDeps = _dependenciesFor(useClass);
+    const useClass = resolveForwardRef(provider.useClass)
+    factoryFn = reflector.factory(useClass)
+    resolvedDeps = _dependenciesFor(useClass)
   } else if (provider.useExisting) {
     // { provide: 'ApiServiceAlias', useExisting: ApiService } 
-    factoryFn = (aliasInstance: any) => aliasInstance;
-    resolvedDeps = [ReflectiveDependency.fromKey(ReflectiveKey.get(provider.useExisting))];
+    factoryFn = (aliasInstance: any) => aliasInstance
+    resolvedDeps = [ReflectiveDependency.fromKey(ReflectiveKey.get(provider.useExisting))]
   } else if (provider.useFactory) {
     // { provide: APP_INITIALIZER, useFactory: configFactory, deps: [AppConfig], multi: true }
-    factoryFn = provider.useFactory;
-    resolvedDeps = constructDependencies(provider.useFactory, provider.deps);
+    factoryFn = provider.useFactory
+    resolvedDeps = constructDependencies(provider.useFactory, provider.deps)
   } else {
     // { provide: 'API_URL', useValue: 'http://my.api.com/v1' }
-    factoryFn = () => provider.useValue;
-    // const _EMPTY_LIST: any[] = [];
-    resolvedDeps = _EMPTY_LIST;
+    factoryFn = () => provider.useValue
+    // const _EMPTY_LIST: any[] = []
+    resolvedDeps = _EMPTY_LIST
   }
-  return new ResolvedReflectiveFactory(factoryFn, resolvedDeps);
+  return new ResolvedReflectiveFactory(factoryFn, resolvedDeps)
 }
 ```
 
@@ -391,39 +389,39 @@ export function mergeResolvedReflectiveProviders(
   normalizedProvidersMap: Map<number, ResolvedReflectiveProvider>
 ): Map<number, ResolvedReflectiveProvider> {
   for (let i = 0; i < providers.length; i++) {
-    const provider = providers[i];
+    const provider = providers[i]
     // 从 normalizedProvidersMap 对象中获取 key.id 对应的 ResolvedReflectiveProvider 对象
-    const existing = normalizedProvidersMap.get(provider.key.id);
+    const existing = normalizedProvidersMap.get(provider.key.id)
     if (existing) {
       // 如果当前的 provider 不是 multi provider，则抛出异常
       if (provider.multiProvider !== existing.multiProvider) {
-        throw mixingMultiProvidersWithRegularProvidersError(existing, provider);
+        throw mixingMultiProvidersWithRegularProvidersError(existing, provider)
       }
       // 如果当前的 provider 是 multi provider
       // 则把当前 provider 的 resolvedFactories 列表中的每一项添加到已存在的 provider 对象的 resolvedFactories 列表中
       if (provider.multiProvider) {
         for (let j = 0; j < provider.resolvedFactories.length; j++) {
-          existing.resolvedFactories.push(provider.resolvedFactories[j]);
+          existing.resolvedFactories.push(provider.resolvedFactories[j])
         }
       } else {
         // 如果当前的 provider 不是 multi provider，则覆盖已存在的 provider
-        normalizedProvidersMap.set(provider.key.id, provider);
+        normalizedProvidersMap.set(provider.key.id, provider)
       }
     } else {
-      let resolvedProvider: ResolvedReflectiveProvider;
+      let resolvedProvider: ResolvedReflectiveProvider
       // 如果当前的 provider 是 multi provider，则创建一个新的 ResolvedReflectiveProvider 对象
       if (provider.multiProvider) {
         resolvedProvider = new ResolvedReflectiveProvider_(
           provider.key, provider.resolvedFactories.slice(), provider.multiProvider
-        );
+        )
       } else {
-        resolvedProvider = provider;
+        resolvedProvider = provider
       }
       // 在 normalizedProvidersMap 中保存已解析的 ResolvedReflectiveProvider 对象
-      normalizedProvidersMap.set(provider.key.id, resolvedProvider);
+      normalizedProvidersMap.set(provider.key.id, resolvedProvider)
     }
   }
-  return normalizedProvidersMap;
+  return normalizedProvidersMap
 }
 ```
 
@@ -433,7 +431,7 @@ export function mergeResolvedReflectiveProviders(
 
 ```ts
 // 基于 resolvedProviderMap 的 values，创建 ResolvedReflectiveProvider[]
-Array.from(resolvedProviderMap.values());
+Array.from(resolvedProviderMap.values())
 
 /**
  * 基于一个类似数组或可迭代对象创建一个新的数组实例
@@ -463,9 +461,9 @@ class Car {
   constructor(public engine: Engine) { }
 }
 
-var providers = ReflectiveInjector.resolve([Car, Engine]);
-var injector = ReflectiveInjector.fromResolvedProviders(providers);
-expect(injector.get(Car) instanceof Car).toBe(true);
+var providers = ReflectiveInjector.resolve([Car, Engine])
+var injector = ReflectiveInjector.fromResolvedProviders(providers)
+expect(injector.get(Car) instanceof Car).toBe(true)
 ```
 
 其实该方法用于基于已经解析的 `providers` 来创建注入器
@@ -475,7 +473,7 @@ static fromResolvedProviders(
   providers: ResolvedReflectiveProvider[],
   parent ?: Injector
 ): ReflectiveInjector {
-  return new ReflectiveInjector_(providers, parent);
+  return new ReflectiveInjector_(providers, parent)
 }
 ```
 
@@ -486,19 +484,19 @@ static fromResolvedProviders(
 
 ```ts
 // 构造次数
-_constructionCounter: number = 0;
+_constructionCounter: number = 0
 
 // ResolvedReflectiveProvider 列表
-public _providers: ResolvedReflectiveProvider[];
+public _providers: ResolvedReflectiveProvider[]
 
 // 父级注入器
-public _parent: Injector | null;
+public _parent: Injector | null
 
 // ReflectiveKey id 列表
-keyIds: number[];
+keyIds: number[]
 
 // 依赖对象列表
-objs: any[];
+objs: any[]
 ```
 
 
@@ -508,27 +506,27 @@ objs: any[];
 ```ts
 export class ReflectiveInjector_ implements ReflectiveInjector {
   constructor(
-    _providers: ResolvedReflectiveProvider[], 
+    _providers: ResolvedReflectiveProvider[],
     _parent?: Injector
   ) {
-    this._providers = _providers;
+    this._providers = _providers
     // 设置父级注入器
-    this._parent = _parent || null;
+    this._parent = _parent || null
 
-    const len = _providers.length;
+    const len = _providers.length
 
-    this.keyIds = new Array(len);
-    this.objs = new Array(len);
+    this.keyIds = new Array(len)
+    this.objs = new Array(len)
 
     // 初始化 keyIds 列表和 objs 对象列表
     for (let i = 0; i < len; i++) {
-      this.keyIds[i] = _providers[i].key.id;
-      this.objs[i] = UNDEFINED;
+      this.keyIds[i] = _providers[i].key.id
+      this.objs[i] = UNDEFINED
     }
   }
 }
 
-const UNDEFINED = new Object();
+const UNDEFINED = new Object()
 ```
 
 
@@ -549,15 +547,15 @@ const UNDEFINED = new Object();
 ```ts
 // 基于 Provider 列表并创建子注入器
 resolveAndCreateChild(providers: Provider[]): ReflectiveInjector {
-  const ResolvedReflectiveProviders = ReflectiveInjector.resolve(providers);
-  return this.createChildFromResolved(ResolvedReflectiveProviders);
+  const ResolvedReflectiveProviders = ReflectiveInjector.resolve(providers)
+  return this.createChildFromResolved(ResolvedReflectiveProviders)
 }
 
 // 基于已解析的 ResolvedReflectiveProvider 列表，创建子注入器
 createChildFromResolved(providers: ResolvedReflectiveProvider[]): ReflectiveInjector {
-  const inj = new ReflectiveInjector_(providers);
-  inj._parent = this;
-  return inj;
+  const inj = new ReflectiveInjector_(providers)
+  inj._parent = this
+  return inj
 }
 ```
 
@@ -567,34 +565,34 @@ createChildFromResolved(providers: ResolvedReflectiveProvider[]): ReflectiveInje
 
 ```ts
 // 获取当前注入器的父级注入器
-get parent(): Injector | null { return this._parent; }
+get parent(): Injector | null { return this._parent }
 
 // 获取 token 对应的依赖对象
 get(token: any, notFoundValue: any = THROW_IF_NOT_FOUND): any {
-  return this._getByKey(ReflectiveKey.get(token), null, notFoundValue);
+  return this._getByKey(ReflectiveKey.get(token), null, notFoundValue)
 }
 
 // 根据 ReflectiveKey 及 visibility 可见性，获取对应的依赖对象
 private _getByKey(key: ReflectiveKey, visibility: Self | SkipSelf | null, notFoundValue: any): any {
-  // const INJECTOR_KEY = ReflectiveKey.get(Injector); 
+  // const INJECTOR_KEY = ReflectiveKey.get(Injector)
   if (key === INJECTOR_KEY) {
-    return this;
+    return this
   }
 
   // 判断该依赖对象是否使用 @Self 装饰器定义，表示从本级注入器获取依赖对象
   if (visibility instanceof Self) {
-    return this._getByKeySelf(key, notFoundValue);
+    return this._getByKeySelf(key, notFoundValue)
 
   } else {
     // 使用默认的方式获取依赖对象
-    return this._getByKeyDefault(key, notFoundValue, visibility);
+    return this._getByKeyDefault(key, notFoundValue, visibility)
   }
 }
 
 // 从本级注入器获取依赖对象
 _getByKeySelf(key: ReflectiveKey, notFoundValue: any): any {
-  const obj = this._getObjByKeyId(key.id);
-  return (obj !== UNDEFINED) ? obj : this._throwOrNull(key, notFoundValue);
+  const obj = this._getObjByKeyId(key.id)
+  return (obj !== UNDEFINED) ? obj : this._throwOrNull(key, notFoundValue)
 }
 
 // 使用默认的方式获取依赖对象
@@ -603,42 +601,42 @@ _getByKeyDefault(
   notFoundValue: any,
   visibility: Self | SkipSelf | null
 ): any {
-  let inj: Injector | null;
+  let inj: Injector | null
 
   // 判断该依赖对象是否使用 @SkipSelf 装饰器定义，表示不从本级注入器获取依赖对象
   if (visibility instanceof SkipSelf) {
-    inj = this._parent;
+    inj = this._parent
   } else {
-    inj = this;
+    inj = this
   }
 
   // 从本级注入器获取依赖对象，若本级获取不到，则从父级注入器中查找
   while (inj instanceof ReflectiveInjector_) {
-    const inj_ = <ReflectiveInjector_>inj;
-    const obj = inj_._getObjByKeyId(key.id);
-    if (obj !== UNDEFINED) return obj;
-    inj = inj_._parent;
+    const inj_ = <ReflectiveInjector_>inj
+    const obj = inj_._getObjByKeyId(key.id)
+    if (obj !== UNDEFINED) return obj
+    inj = inj_._parent
   }
   if (inj !== null) {
-    return inj.get(key.token, notFoundValue);
+    return inj.get(key.token, notFoundValue)
   } else {
-    return this._throwOrNull(key, notFoundValue);
+    return this._throwOrNull(key, notFoundValue)
   }
 }
 
 // 获取 keyId 对应的对象，如依赖对象未创建，则调用 _new() 方法创建一个，然后保存到
 // this.objs 对象列表中
 private _getObjByKeyId(keyId: number): any {
-  for (let i = 0; i < this.keyIds.length; i++) {
+  for (let i = 0 i < this.keyIds.length i++) {
     if (this.keyIds[i] === keyId) {
-      // const UNDEFINED = new Object();
+      // const UNDEFINED = new Object()
       if (this.objs[i] === UNDEFINED) {
-        this.objs[i] = this._new(this._providers[i]);
+        this.objs[i] = this._new(this._providers[i])
       }
-      return this.objs[i];
+      return this.objs[i]
     }
   }
-  return UNDEFINED;
+  return UNDEFINED
 }
 ```
 
@@ -650,25 +648,25 @@ private _getObjByKeyId(keyId: number): any {
 _new(provider: ResolvedReflectiveProvider): any {
   //  判断是否存在循环依赖
   if (this._constructionCounter++ > this._getMaxNumberOfObjects()) {
-    throw cyclicDependencyError(this, provider.key);
+    throw cyclicDependencyError(this, provider.key)
   }
-  return this._instantiateProvider(provider);
+  return this._instantiateProvider(provider)
 }
 
 // 获取最大的对象个数
-private _getMaxNumberOfObjects(): number { return this.objs.length; }
+private _getMaxNumberOfObjects(): number { return this.objs.length }
 
 // 根据已解析的 provider 创建依赖对象
 // 若是 multi provider 则，循环创建 multi provider 对象
 private _instantiateProvider(provider: ResolvedReflectiveProvider): any {
   if (provider.multiProvider) {
-    const res = new Array(provider.resolvedFactories.length);
+    const res = new Array(provider.resolvedFactories.length)
     for (let i = 0; i < provider.resolvedFactories.length; ++i) {
-      res[i] = this._instantiate(provider, provider.resolvedFactories[i]);
+      res[i] = this._instantiate(provider, provider.resolvedFactories[i])
     }
-    return res;
+    return res
   } else {
-    return this._instantiate(provider, provider.resolvedFactories[0]);
+    return this._instantiate(provider, provider.resolvedFactories[0])
   }
 }
 
@@ -677,28 +675,28 @@ private _instantiate(
   provider: ResolvedReflectiveProvider,
   ResolvedReflectiveFactory: ResolvedReflectiveFactory): any {
   // 获取对象工厂函数
-  const factory = ResolvedReflectiveFactory.factory;
+  const factory = ResolvedReflectiveFactory.factory
 
   // 获取工厂函数所依赖的对象列表
-  let deps: any[];
+  let deps: any[]
   try {
     deps = ResolvedReflectiveFactory.dependencies
-      .map(dep => this._getByReflectiveDependency(dep));
+      .map(dep => this._getByReflectiveDependency(dep))
   } catch (e) {
     if (e.addKey) {
-      e.addKey(this, provider.key);
+      e.addKey(this, provider.key)
     }
-    throw e;
+    throw e
   }
 
   // 调用对象工厂函数创建依赖对象
-  let obj: any;
+  let obj: any
   try {
-    obj = factory(...deps);
+    obj = factory(...deps)
   } catch (e) {
-    throw instantiationError(this, e, e.stack, provider.key);
+    throw instantiationError(this, e, e.stack, provider.key)
   }
-  return obj;
+  return obj
 }
 ```
 
@@ -708,7 +706,7 @@ private _instantiate(
 ```ts
 // 若通过 @Optional 装饰器定义该依赖对象，表示该依赖对象是可选的，当获取不到时返回 null
 private _getByReflectiveDependency(dep: ReflectiveDependency): any {
-  return this._getByKey(dep.key, dep.visibility, dep.optional ? null : THROW_IF_NOT_FOUND);
+  return this._getByKey(dep.key, dep.visibility, dep.optional ? null : THROW_IF_NOT_FOUND)
 }
 ```
 
@@ -752,12 +750,12 @@ export function makeDecorator(
   chainFn?: (fn: Function) => void): (...args: any[]) => (cls: any) => any {
   //...
   const TypeDecorator: TypeDecorator = <TypeDecorator>function TypeDecorator(cls: Type<any>) {
-    const annotations = Reflect.getOwnMetadata('annotations', cls) || [];
-    annotations.push(annotationInstance);
+    const annotations = Reflect.getOwnMetadata('annotations', cls) || []
+    annotations.push(annotationInstance)
     // 保存 annotations metadata 信息
-    Reflect.defineMetadata('annotations', annotations, cls);
-    return cls;
-  };
+    Reflect.defineMetadata('annotations', annotations, cls)
+    return cls
+  }
 }  
 ```
 
@@ -772,13 +770,13 @@ export function makeDecorator(
 
 ```ts
 export abstract class ReflectorReader {
-  abstract parameters(typeOrFunc: /*Type*/ any): any[][];
-  abstract annotations(typeOrFunc: /*Type*/ any): any[];
-  abstract propMetadata(typeOrFunc: /*Type*/ any): { [key: string]: any[] };
-  abstract importUri(typeOrFunc: /*Type*/ any): string | null;
-  abstract resourceUri(typeOrFunc: /*Type*/ any): string;
-  abstract resolveIdentifier(name: string, moduleUrl: string, members: string[], runtime: any): any;
-  abstract resolveEnum(identifier: any, name: string): any;
+  abstract parameters(typeOrFunc: /*Type*/ any): any[][]
+  abstract annotations(typeOrFunc: /*Type*/ any): any[]
+  abstract propMetadata(typeOrFunc: /*Type*/ any): { [key: string]: any[] }
+  abstract importUri(typeOrFunc: /*Type*/ any): string | null
+  abstract resourceUri(typeOrFunc: /*Type*/ any): string
+  abstract resolveIdentifier(name: string, moduleUrl: string, members: string[], runtime: any): any
+  abstract resolveEnum(identifier: any, name: string): any
 }
 ```
 
@@ -788,21 +786,21 @@ export abstract class ReflectorReader {
 // angular2/packages/core/src/reflection/reflector.ts
 export class Reflector extends ReflectorReader {
   constructor(public reflectionCapabilities: PlatformReflectionCapabilities) {
-    super();
+    super()
   }
   //...
-  factory(type: Type<any>): Function { return this.reflectionCapabilities.factory(type); }
+  factory(type: Type<any>): Function { return this.reflectionCapabilities.factory(type) }
 
   parameters(typeOrFunc: Type<any>): any[][] {
-    return this.reflectionCapabilities.parameters(typeOrFunc);
+    return this.reflectionCapabilities.parameters(typeOrFunc)
   }
 
   annotations(typeOrFunc: Type<any>): any[] {
-    return this.reflectionCapabilities.annotations(typeOrFunc);
+    return this.reflectionCapabilities.annotations(typeOrFunc)
   }
 
   propMetadata(typeOrFunc: Type<any>): { [key: string]: any[] } {
-    return this.reflectionCapabilities.propMetadata(typeOrFunc);
+    return this.reflectionCapabilities.propMetadata(typeOrFunc)
   }
 }
 ```
@@ -818,30 +816,30 @@ export class Reflector extends ReflectorReader {
 ```ts
 // 解析 NormalizedProvider 对象，创建 ResolvedReflectiveFactory 对象
 function resolveReflectiveFactory(provider: NormalizedProvider): ResolvedReflectiveFactory {
-  let factoryFn: Function;
-  let resolvedDeps: ReflectiveDependency[];
+  let factoryFn: Function
+  let resolvedDeps: ReflectiveDependency[]
   if (provider.useClass) {
     // useClass
     // { provide: ApiService, useClass: ApiService }
-    const useClass = resolveForwardRef(provider.useClass);
-    factoryFn = reflector.factory(useClass);
-    resolvedDeps = _dependenciesFor(useClass);
+    const useClass = resolveForwardRef(provider.useClass)
+    factoryFn = reflector.factory(useClass)
+    resolvedDeps = _dependenciesFor(useClass)
   } else if (provider.useExisting) {
     // { provide: 'ApiServiceAlias', useExisting: ApiService } 
-    factoryFn = (aliasInstance: any) => aliasInstance;
+    factoryFn = (aliasInstance: any) => aliasInstance
     resolvedDeps = [ReflectiveDependency
-      .fromKey(ReflectiveKey.get(provider.useExisting))];
+      .fromKey(ReflectiveKey.get(provider.useExisting))]
   } else if (provider.useFactory) {
     // { provide: APP_INITIALIZER, useFactory: configFactory, deps: [AppConfig], multi: true }
-    factoryFn = provider.useFactory;
-    resolvedDeps = constructDependencies(provider.useFactory, provider.deps);
+    factoryFn = provider.useFactory
+    resolvedDeps = constructDependencies(provider.useFactory, provider.deps)
   } else {
     // { provide: 'API_URL', useValue: 'http://my.api.com/v1' }
-    factoryFn = () => provider.useValue;
-    // const _EMPTY_LIST: any[] = [];
-    resolvedDeps = _EMPTY_LIST;
+    factoryFn = () => provider.useValue
+    // const _EMPTY_LIST: any[] = []
+    resolvedDeps = _EMPTY_LIST
   }
-  return new ResolvedReflectiveFactory(factoryFn, resolvedDeps);
+  return new ResolvedReflectiveFactory(factoryFn, resolvedDeps)
 }
 ```
 
@@ -851,21 +849,21 @@ function resolveReflectiveFactory(provider: NormalizedProvider): ResolvedReflect
 
 ```ts
 // { provide: ApiService, useClass: ApiService } 
-const useClass = resolveForwardRef(provider.useClass);
-factoryFn = reflector.factory(useClass);
-resolvedDeps = _dependenciesFor(useClass);
+const useClass = resolveForwardRef(provider.useClass)
+factoryFn = reflector.factory(useClass)
+resolvedDeps = _dependenciesFor(useClass)
 ```
 
 设置工厂函数
 
 ```ts
 // 获取通过 forwardRef() 方法定义的类
-const useClass = resolveForwardRef(provider.useClass);
-factoryFn = reflector.factory(useClass);
+const useClass = resolveForwardRef(provider.useClass)
+factoryFn = reflector.factory(useClass)
 
 // reflector.factory() 方法
 factory<T>(t: Type<T>): (args: any[]) => T {
-  return(...args: any[]) => new t(...args);
+  return(...args: any[]) => new t(...args)
 }
 ```
 
@@ -875,58 +873,58 @@ factory<T>(t: Type<T>): (args: any[]) => T {
 // 解析类中的依赖对象
 function _dependenciesFor(typeOrFunc: any): ReflectiveDependency[] {
   // 获取 design:paramtypes 和 paramters 保存的 metadata 信息
-  const params = reflector.parameters(typeOrFunc);
-  if (!params) return [];
+  const params = reflector.parameters(typeOrFunc)
+  if (!params) return []
   if (params.some(p => p == null)) {
-    throw noAnnotationError(typeOrFunc, params);
+    throw noAnnotationError(typeOrFunc, params)
   }
-  return params.map(p => _extractToken(typeOrFunc, p, params));
+  return params.map(p => _extractToken(typeOrFunc, p, params))
 }
 
 // 创建 ReflectiveDependency 对象
 function _extractToken(typeOrFunc: any, metadata: any[] | any, params: any[][]): ReflectiveDependency {
-  let token: any = null;
-  let optional = false;
+  let token: any = null
+  let optional = false
 
   if (!Array.isArray(metadata)) {
-    // Inject: InjectDecorator = makeParamDecorator('Inject', [['token', undefined]]);
+    // Inject: InjectDecorator = makeParamDecorator('Inject', [['token', undefined]])
     if (metadata instanceof Inject) {
-      return _createDependency(metadata['token'], optional, null);
+      return _createDependency(metadata['token'], optional, null)
     } else {
-      return _createDependency(metadata, optional, null);
+      return _createDependency(metadata, optional, null)
     }
   }
 
-  let visibility: Self | SkipSelf | null = null;
+  let visibility: Self | SkipSelf | null = null
 
   // 遍历 metadata 数组，设置 token、optional（可选的）、visibility（可见性）的值
   for (let i = 0; i < metadata.length; ++i) {
-    const paramMetadata = metadata[i];
+    const paramMetadata = metadata[i]
 
     if (paramMetadata instanceof Type) {
-      token = paramMetadata;
+      token = paramMetadata
 
     } else if (paramMetadata instanceof Inject) {
-      token = paramMetadata['token'];
+      token = paramMetadata['token']
 
     } else if (paramMetadata instanceof Optional) {
-      optional = true;
+      optional = true
 
     } else if (paramMetadata instanceof Self ||
       paramMetadata instanceof SkipSelf) {
-      visibility = paramMetadata;
+      visibility = paramMetadata
     } else if (paramMetadata instanceof InjectionToken) {
-      token = paramMetadata;
+      token = paramMetadata
     }
   }
 
   // 获取通过 forwardRef() 方法定义的类
-  token = resolveForwardRef(token);
+  token = resolveForwardRef(token)
 
   if (token != null) {
-    return _createDependency(token, optional, visibility);
+    return _createDependency(token, optional, visibility)
   } else {
-    throw noAnnotationError(typeOrFunc, params);
+    throw noAnnotationError(typeOrFunc, params)
   }
 }
 
@@ -939,7 +937,7 @@ function _createDependency(
     ReflectiveKey.get(token),
     optional,
     visibility
-  );
+  )
 }
 ```
 
@@ -949,14 +947,14 @@ function _createDependency(
 
 ```ts
 // { provide: 'ApiServiceAlias', useExisting: ApiService } 
-factoryFn = (aliasInstance: any) => aliasInstance;
-resolvedDeps = [ReflectiveDependency.fromKey(ReflectiveKey.get(provider.useExisting))];
+factoryFn = (aliasInstance: any) => aliasInstance
+resolvedDeps = [ReflectiveDependency.fromKey(ReflectiveKey.get(provider.useExisting))]
 ```
 
 设置工厂函数
 
 ```ts
-factoryFn = (aliasInstance: any) => aliasInstance;
+factoryFn = (aliasInstance: any) => aliasInstance
 ```
 
 设置依赖对象列表
@@ -972,7 +970,7 @@ export class ReflectiveDependency {
     public visibility: Self | SkipSelf | null) { }
 
   static fromKey(key: ReflectiveKey): ReflectiveDependency {
-    return new ReflectiveDependency(key, false, null);
+    return new ReflectiveDependency(key, false, null)
   }
 }
 ```
@@ -982,28 +980,28 @@ export class ReflectiveDependency {
 
 ```ts
 // { provide: APP_INITIALIZER, useFactory: configFactory, deps: [AppConfig], multi: true }
-factoryFn = provider.useFactory;
-resolvedDeps = constructDependencies(provider.useFactory, provider.deps);
+factoryFn = provider.useFactory
+resolvedDeps = constructDependencies(provider.useFactory, provider.deps)
 ```
 
 设置工厂函数
 
 ```ts
-factoryFn = provider.useFactory;
+factoryFn = provider.useFactory
 ```
 
 设置依赖对象列表
 
 ```ts
-resolvedDeps = constructDependencies(provider.useFactory, provider.deps);
+resolvedDeps = constructDependencies(provider.useFactory, provider.deps)
 
 // 构造ReflectiveDependency[]列表
 export function constructDependencies(typeOrFunc: any, dependencies?: any[]): ReflectiveDependency[] {
   if (!dependencies) {
-    return _dependenciesFor(typeOrFunc);
+    return _dependenciesFor(typeOrFunc)
   } else {
-    const params: any[][] = dependencies.map(t => [t]);
-    return dependencies.map(t => _extractToken(typeOrFunc, t, params));
+    const params: any[][] = dependencies.map(t => [t])
+    return dependencies.map(t => _extractToken(typeOrFunc, t, params))
   }
 }
 ```
@@ -1013,19 +1011,19 @@ export function constructDependencies(typeOrFunc: any, dependencies?: any[]): Re
 
 ```ts
 // { provide: 'API_URL', useValue: 'http://my.api.com/v1' }
-factoryFn = () => provider.useValue;
-resolvedDeps = _EMPTY_LIST; // const _EMPTY_LIST: any[] = [];
+factoryFn = () => provider.useValue
+resolvedDeps = _EMPTY_LIST // const _EMPTY_LIST: any[] = []
 ```
 
 设置工厂函数
 
 ```ts
-factoryFn = () => provider.useValue;
+factoryFn = () => provider.useValue
 ```
 
 设置依赖对象列表
 
 ```ts
-resolvedDeps = _EMPTY_LIST; // const _EMPTY_LIST: any[] = [];
+resolvedDeps = _EMPTY_LIST // const _EMPTY_LIST: any[] = []
 ```
 

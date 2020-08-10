@@ -143,7 +143,7 @@ expect(providers[1].key.displayName).toBe('Engine')
 
 ```ts
 export type Provider =
-  TypeProvider | ValueProvider | ClassProvider | ExistingProvider | FactoryProvider | any[];
+  TypeProvider | ValueProvider | ClassProvider | ExistingProvider | FactoryProvider | any[]
 
 // ApiService
 export interface TypeProvider extends Type<any> { }
@@ -382,7 +382,7 @@ function resolveReflectiveFactory(provider: NormalizedProvider): ResolvedReflect
 #### 步骤三，合并已解析的 Provider
 
 ```ts
-const resolvedProviderMap = mergeResolvedReflectiveProviders(resolved, new Map());
+const resolvedProviderMap = mergeResolvedReflectiveProviders(resolved, new Map())
 
 export function mergeResolvedReflectiveProviders(
   providers: ResolvedReflectiveProvider[],
@@ -961,7 +961,7 @@ factoryFn = (aliasInstance: any) => aliasInstance
 
 ```ts
 // { provide: 'ApiServiceAlias', useExisting: ApiService } 
-resolvedDeps = [ReflectiveDependency.fromKey(ReflectiveKey.get(provider.useExisting))];
+resolvedDeps = [ReflectiveDependency.fromKey(ReflectiveKey.get(provider.useExisting))]
 
 export class ReflectiveDependency {
   constructor(

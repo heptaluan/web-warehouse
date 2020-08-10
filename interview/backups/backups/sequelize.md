@@ -8,9 +8,7 @@
 
 ## Sequelize 与 MySQL
 
-`MySQL` 安装过程就略过了，推荐安装 `5.6` 版本，安装见 [Windows 下的 MySQL 安装汇总](https://heptaluan.github.io/2018/03/22/MySQL/03/)
-
-基于 `koa.js`，相关源码可以见 [koa-Sequelize](https://github.com/heptaluan/koa-demo/tree/master/koa-Sequelize)
+`MySQL` 安装过程就略过了，推荐安装 `5.6` 版本，基于 `koa.js`，相关源码可以见 [koa-Sequelize](https://github.com/heptaluan/koa-demo/tree/master/koa-Sequelize)
 
 <!--more-->
 

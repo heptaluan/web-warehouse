@@ -20,19 +20,14 @@
 
 
 
-`react` 的一些特点如下：
+`react` 的一些特点如下
 
-* 声明式设计 − `react` 采用声明范式，可以轻松描述应用
-
-* 高效 − `react` 通过对 `DOM` 的模拟，最大限度地减少与 `DOM` 的交互
-
-* 灵活 − `react` 可以与已知的库或框架很好地配合
-
-* `JSX` − `JSX` 是 `JavaScript` 语法的扩展，建议使用它
-
-* 组件 − 通过 `react` 构建组件，使得代码更加容易得到复用，能够很好的应用在大项目的开发中
-
-* 单向响应的数据流 − `react` 实现了单向响应的数据流，从而减少了重复代码，这也是它为什么比传统数据绑定更简单
+* 声明式设计，`react` 采用声明范式，可以轻松描述应用
+* 高效，`react` 通过对 `DOM` 的模拟，最大限度地减少与 `DOM` 的交互
+* 灵活，`react` 可以与已知的库或框架很好地配合
+* `JSX`，`JSX` 是 `JavaScript` 语法的扩展，建议使用它
+* 组件，通过 `react` 构建组件，使得代码更加容易得到复用，能够很好的应用在大项目的开发中
+* 单向响应的数据流，`react` 实现了单向响应的数据流，从而减少了重复代码，这也是它为什么比传统数据绑定更简单
 
 
 一个简单的示例
@@ -60,16 +55,12 @@
 // ...
 ```
 
-几个需要注意的地方：
+几个需要注意的地方
 
 * 需要引入三个 `JavaScript` 文件
-
-* `react.min.js` - `react` 的核心库
-
-* `react-dom.min.js` - 提供与 `DOM` 相关的功能
-
-* `babel.min.js` - 将 `ES6` 代码转为 `ES5` 代码（`babel` 内嵌了对 `jsx` 的支持）
-
+* `react.min.js`，`react` 的核心库
+* `react-dom.min.js`，提供与 `DOM` 相关的功能
+* `babel.min.js`，将 `ES6` 代码转为 `ES5` 代码（`babel` 内嵌了对 `jsx` 的支持）
 * 内嵌的 `script` 标签注意 `type` 格式为 `text/babel`
 
 
@@ -77,15 +68,11 @@
 
 ## jsx
 
-`jsx` 的一些特点：
-
+`jsx` 的一些特点
 
 * `react` 使用 `jsx` 来替代常规的 `JavaScript`
-
 * `jsx` 执行更快，因为它在编译为 `JavaScript` 代码后进行了优化
-
 * 它是类型安全的，在编译过程中就能发现错误
-
 * 使用 `jsx` 编写模板更加简单快速
 
 
@@ -107,7 +94,7 @@ ReactDOM.render(
   <h2>hello</h2>,
   <h2>world</h2>,
   document.getElementById('box')
-);
+)
 
 // 正确的例子
 ReactDOM.render(
@@ -116,12 +103,10 @@ ReactDOM.render(
     <h2>world</h2>
   </div>,
   document.getElementById('box')
-);
+)
 ```
 
-其他一些需要注意的地方：
-
-可以在 `jsx` 中使用 `JavaScript` 表达式，需要写在 `{}` 当中，比如
+其他一些需要注意的地方，比如可以在 `jsx` 中使用 `JavaScript` 表达式，需要写在 `{}` 当中，比如
 
 ```js
 ReactDOM.render(
@@ -132,7 +117,7 @@ ReactDOM.render(
 )
 ```
 
-`jsx` 中不能使用 `if...else` 语句，但是可以使用三元运算符来替代，比如
+`jsx` 中不能使用 `if-else` 语句，但是可以使用三元运算符来替代，比如
 
 ```js
 ReactDOM.render(
@@ -174,7 +159,6 @@ ReactDOM.render(
 `jsx` 当作也允许添加注释，但是需要注意区别两点
 
 * 在标签内部的注释需要放在 `{}` 当中
-
 * 在标签外部的注释不能使用 `{}`
 
 ```js
@@ -189,13 +173,13 @@ ReactDOM.render(
 
 ```js
 // 渲染 html 标签
-var divElement = <div className='foo' />;
-ReactDOM.render(divElement, document.getElementById('box'));
+var divElement = <div className='foo' />
+ReactDOM.render(divElement, document.getElementById('box'))
 
 // 渲染 react 组件
 var Component = React.createClass({ /**/ })
-var divElement = <Component flag={true} />;
-ReactDOM.render(divElement, document.getElementById('box'));
+var divElement = <Component flag={true} />
+ReactDOM.render(divElement, document.getElementById('box'))
 ```
 
 
@@ -218,13 +202,7 @@ ReactDOM.render(
 )
 ```
 
-上例中的 `React.createClass` 方法用于生成一个组件类 `HelloWorld`，有几个需要注意的地方
-
-原生 `html` 元素以小写字母开头，而自定义的 `React` 类名以大写字母
-
-组件类只能包含一个顶层标签，否则也会报错
-
-在渲染组件的时候，组件名称需要关闭，即 `< ... />` 中的 `/`
+上例中的 `React.createClass` 方法用于生成一个组件类 `HelloWorld`，有几个需要注意的地方，原生 `html` 元素以小写字母开头，而自定义的 `React` 类名以大写字母，组件类只能包含一个顶层标签，否则也会报错，在渲染组件的时候，组件名称需要关闭，即 `< ... />` 中的 `/`
 
 
 #### 参数传递
@@ -288,27 +266,25 @@ ReactDOM.render(
 
 #### 状态
 
-`react` 把组件看成是一个状态机（`State Machines`），通过与用户的交互，实现不同状态，然后渲染 `UI`，让用户界面和数据保持一致
-
-在 `react` 中，只需要更新组件的 `state`，然后就可以在不刷新 `DOM` 的前提下根据新的 `state` 重新渲染用户界面
+`react` 把组件看成是一个状态机（`State Machines`），通过与用户的交互，实现不同状态，然后渲染 `UI`，让用户界面和数据保持一致，在 `react` 中，只需要更新组件的 `state`，然后就可以在不刷新 `DOM` 的前提下根据新的 `state` 重新渲染用户界面
 
 ```js
 var LikeButton = React.createClass({
   getInitialState() {
-    return { liked: false };
+    return { liked: false }
   },
   handleClick(event) {
-    this.setState({ liked: !this.state.liked });
+    this.setState({ liked: !this.state.liked })
   },
   render() {
-    var text = this.state.liked ? '是' : '否';
+    var text = this.state.liked ? '是' : '否'
     return (
       <p onClick={this.handleClick}>
         点击切换状态 ==> ## {text}
       </p>
-    );
+    )
   }
-});
+})
 ```
 
 
@@ -316,36 +292,24 @@ var LikeButton = React.createClass({
 
 ## State 和 Props 的区别
 
-两者其实都是用于描述 `component` 状态的，并且这个状态应该是与显示相关的
-
-两者的主要区别在于 `props` 是不可变的，而 `state` 可以根据与用户交互来改变，这就是为什么有些容器组件需要定义 `state` 来更新和修改数据，而子组件只能通过 `props` 来传递数据
-
-`props` 是一个父组件传递给子组件的数据流，这个数据流可以一直传递到子孙组件，而 `state` 代表的是一个组件内部自身的状态（可以是父组件、子孙组件）
+两者其实都是用于描述 `component` 状态的，并且这个状态应该是与显示相关的，两者的主要区别在于 `props` 是不可变的，而 `state` 可以根据与用户交互来改变，这就是为什么有些容器组件需要定义 `state` 来更新和修改数据，而子组件只能通过 `props` 来传递数据，`props` 是一个父组件传递给子组件的数据流，这个数据流可以一直传递到子孙组件，而 `state` 代表的是一个组件内部自身的状态（可以是父组件、子孙组件）
 
 
 #### State
 
-改变一个组件自身状态，从语义上来说，就是这个组件内部已经发生变化，有可能需要对此组件以及组件所包含的子孙组件进行重渲染
-
-如果 `component` 的某些状态需要被改变，并且会影响到 `component` 的 `render`，那么这些状态就应该用 `state` 表示
-
-例如：一个购物车的 `component`，会根据用户在购物车中添加的产品和产品数量，显示不同的价格，那么'总价'这个状态，就应该用 `state` 表示
+改变一个组件自身状态，从语义上来说，就是这个组件内部已经发生变化，有可能需要对此组件以及组件所包含的子孙组件进行重渲染，如果 `component` 的某些状态需要被改变，并且会影响到 `component` 的 `render`，那么这些状态就应该用 `state` 表示，例如一个购物车的 `component`，会根据用户在购物车中添加的产品和产品数量，显示不同的价格，那么'总价'这个状态，就应该用 `state` 表示
 
 
 #### Props
 
-`props` 是父组件传递的参数，可以被用于显示内容，或者用于此组件自身状态的设置（部分 `props` 可以用来设置组件的 `state`），不仅仅是组件内部 `state` 改变才会导致重渲染，父组件传递的 `props` 发生变化，也会执行
-
-如果 `component` 的某些状态由外部所决定，并且会影响到 `component` 的 `render`，那么这些状态就应该用 `props` 表示
-
-例如：一个下拉菜单的 `component`，有哪些菜单项，是由这个 `component` 的使用者和使用场景决定的，那么'菜单项'这个状态，就应该用 `props` 表示，并且由外部传入
+`props` 是父组件传递的参数，可以被用于显示内容，或者用于此组件自身状态的设置（部分 `props` 可以用来设置组件的 `state`），不仅仅是组件内部 `state` 改变才会导致重渲染，父组件传递的 `props` 发生变化，也会执行，如果 `component` 的某些状态由外部所决定，并且会影响到 `component` 的 `render`，那么这些状态就应该用 `props` 表示，例如一个下拉菜单的 `component`，有哪些菜单项，是由这个 `component` 的使用者和使用场景决定的，那么'菜单项'这个状态，就应该用 `props` 表示，并且由外部传入
 
 
 ```js
 // name 属性通过 this.props.name 来获取
 var HelloWorld = React.createClass({
   render() {
-    return <h1>Hello {this.props.name}</h1>;
+    return <h1>Hello {this.props.name}</h1>
   }
 })
 
@@ -369,7 +333,7 @@ var HelloWorld = React.createClass({
     }
   },
   render() {
-    return <h1>Hello {this.props.name}</h1>;
+    return <h1>Hello {this.props.name}</h1>
   }
 })
 
@@ -407,9 +371,9 @@ var Name = React.createClass({
   render: function () {
     return (
       <h1>{this.props.name}</h1>
-    );
+    )
   }
-});
+})
 
 var Link = React.createClass({
   render: function () {
@@ -417,9 +381,9 @@ var Link = React.createClass({
       <a href={this.props.site}>
         {this.props.site}
       </a>
-    );
+    )
   }
-});
+})
 
 ReactDOM.render(
   <HelloWorld />,
@@ -485,13 +449,13 @@ React.createClass({
     // 自定义验证器，如果验证失败需要返回一个 Error 对象，不要直接使用 `console.warn` 或抛异常，因为这样 `oneOfType` 会失效
     customProp: function (props, propName, componentName) {
       if (!/matchme/.test(props[propName])) {
-        return new Error('Validation failed!');
+        return new Error('Validation failed!')
       }
     }
   },
 
   // ...
-});
+})
 ```
 
 

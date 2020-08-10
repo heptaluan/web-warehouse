@@ -7,9 +7,8 @@
 
 ## map/reduce
 
-`map()` 方法创建一个新数组，其结果是该数组中的每个元素都调用一个提供的函数后返回的结果
-
-`reduce()` 方法对累加器和数组中的每个元素（从左到右）应用一个函数，将其减少为单个值，这个函数必须接收两个参数
+* `map()` 方法创建一个新数组，其结果是该数组中的每个元素都调用一个提供的函数后返回的结果
+* `reduce()` 方法对累加器和数组中的每个元素（从左到右）应用一个函数，将其减少为单个值，这个函数必须接收两个参数
 
 <!--more-->
 
@@ -18,28 +17,24 @@
 
 ## map
 
-由于 `map()` 方法定义在 `JavaScript` 的 `Array` 中
-
-比如我们有一个函数 `f(x) = x * x`，要把这个函数作用在一个数组 `[1, 2, 3, 4, 5, 6, 7, 8, 9]` 上
-
-我们调用 `Array` 的 `map()` 方法，传入我们自己的函数，就得到了一个新的 `Array` 作为结果
+由于 `map()` 方法定义在 `JavaScript` 的 `Array` 中，比如我们有一个函数 `f(x) = x * x`，要把这个函数作用在一个数组 `[1, 2, 3, 4, 5, 6, 7, 8, 9]` 上，我们调用 `Array` 的 `map()` 方法，传入我们自己的函数，就得到了一个新的 `Array` 作为结果
 
 ```js
 function pow(x) {
-  return x * x;
+  return x * x
 }
 
-var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
-arr.map(pow); // [1, 4, 9, 16, 25, 36, 49, 64, 81]
+arr.map(pow) // [1, 4, 9, 16, 25, 36, 49, 64, 81]
 ```
 
 再比如，把 `Array` 的所有数字转为字符串
 
 ```js
-var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
-arr.map(String); // ['1', '2', '3', '4', '5', '6', '7', '8', '9']
+arr.map(String)  // ['1', '2', '3', '4', '5', '6', '7', '8', '9']
 ```
 
 
@@ -56,21 +51,21 @@ arr.map(String); // ['1', '2', '3', '4', '5', '6', '7', '8', '9']
 比方说对一个 `Array` 求和，就可以用 `reduce` 实现
 
 ```js
-var arr = [1, 3, 5, 7, 9];
+var arr = [1, 3, 5, 7, 9]
 
 arr.reduce(function (x, y) {
-  return x + y;
-}); // 25
+  return x + y
+})  // 25
 ```
 
 要把 `[1, 3, 5, 7, 9]` 变换成整数 `13579`，`reduce()` 也能派上用场
 
 ```js
-var arr = [1, 3, 5, 7, 9];
+var arr = [1, 3, 5, 7, 9]
 
 arr.reduce(function (x, y) {
-  return x * 10 + y;
-}); // 13579
+  return x * 10 + y
+}) // 13579
 ```
 
 利用 `reduce()` 求积
@@ -93,13 +88,13 @@ function product(arr) {
 
 ```js
 var o = [].reduce.call('cbaacfdeaebb', function (p, n) {
-  return p[n] = (p[n] || 0) + 1, p;
+  return p[n] = (p[n] || 0) + 1, p
 }, {}),
   s = Object.keys(o).reduce(function (p, n) {
-    return o[p] <= o[n] ? p : n;
-  });
+    return o[p] <= o[n] ? p : n
+  })
 
-console.log(s, o[s]);
+console.log(s, o[s])
 ```
 
 #### 方法二
@@ -109,18 +104,18 @@ console.log(s, o[s]);
 ```js
 const all = 'cbaacfdeaebb'.split('')
   .reduce((all, ch, i) => {
-    const m = all[ch] || (all[ch] = { ch: ch, index: i, count: 0 });
-    m.count++;
-    return all;
-  }, {});
+    const m = all[ch] || (all[ch] = { ch: ch, index: i, count: 0 })
+    m.count++
+    return all
+  }, {})
 
 const theOne = Object.keys(all)
   .map(ch => all[ch])
   .reduce((min, t) => min.count === t.count
     ? (min.index > t.index ? t : min)
-    : (min.count > t.count ? t : min));
+    : (min.count > t.count ? t : min))
 
-console.log(`${theOne.ch}: ${theOne.count}`);
+console.log(`${theOne.ch}: ${theOne.count}`)
 ```
 
 #### 方法三
@@ -129,7 +124,7 @@ console.log(`${theOne.ch}: ${theOne.count}`);
 
 ```js
 function findFirstChar(string) {
-  const desc = [];
+  const desc = []
 
   [...string].forEach((char, index) => {
     const item = desc.find(item => item.char === char)
@@ -145,7 +140,7 @@ function findFirstChar(string) {
 使用 `Object.values`，但是目前还是草案
 
 ```js
-const less = (x, y) => (x.count <= y.count && x.first < y.first) ? x : y;
+const less = (x, y) => (x.count <= y.count && x.first < y.first) ? x : y
 
 function firstSingle(string) {
   let map = {}
@@ -153,7 +148,7 @@ function firstSingle(string) {
   string.split('')
     .forEach((char, index) => {
       map[char] ? map[char].count++ : map[char] = { count: 1, first: index, char }
-    });
+    })
 
   return Object.values(map).reduce(less).char
 }
@@ -165,12 +160,12 @@ function firstSingle(string) {
 代码简短，但是执行效率不是很高
 
 ```js
-var str = 'cbaacfdeaebb';
+var str = 'cbaacfdeaebb'
 
 var result = [...new Set(str)]
   .map(el => ({ el, len: str.split(el).length }))
   .reduce((a, e) => (a.len > e.len ? e : a))
-  .el;
+  .el
 ```
 
 

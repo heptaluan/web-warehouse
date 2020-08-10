@@ -19,9 +19,7 @@
 
 ## 示例
 
-有两个不同的提示组件，它们的作用都是通过切换状态（`Boolean` 类型）来展示或者隐藏模态框或提示框
-
-除了功能相似，没有其他共同点，看起来不一样，用法不一样，但是逻辑是一样的
+有两个不同的提示组件，它们的作用都是通过切换状态（`Boolean` 类型）来展示或者隐藏模态框或提示框，除了功能相似，没有其他共同点，看起来不一样，用法不一样，但是逻辑是一样的
 
 ```js
 // 模态框
@@ -34,7 +32,7 @@ const Modal = {
   },
   methods: {
     toggleShow() {
-      this.isShow = !this.isShow;
+      this.isShow = !this.isShow
     }
   },
   components: {
@@ -52,7 +50,7 @@ const Tooltip = {
   },
   methods: {
     toggleShow() {
-      this.isShow = !this.isShow;
+      this.isShow = !this.isShow
     }
   },
   components: {
@@ -72,7 +70,7 @@ const toggle = {
   },
   methods: {
     toggleShow() {
-      this.isShow = !this.isShow;
+      this.isShow = !this.isShow
     }
   }
 }
@@ -94,9 +92,7 @@ const Tooltip = {
 }
 ```
 
-完整示例可以见 `Sarah Drasner` 提供的 [Mixin](https://codepen.io/sdras/pen/101a5d737b31591e5801c60b666013db/) 的例子
-
-如果在项目当中使用的话，也是同样的操作
+完整示例可以见 `Sarah Drasner` 提供的 [Mixin](https://codepen.io/sdras/pen/101a5d737b31591e5801c60b666013db/) 的例子，如果在项目当中使用的话，也是同样的操作
 
 ```js
 // 引入 Child 和 Mixin
@@ -116,13 +112,11 @@ export default {
 
 ## 埋点应用
 
-一个比较通用的需求，在用户进入页面和离开页面的时候记录记录在当前页面的停留时间
-
-使用 `Mixin`， 简化代码如下
+一个比较通用的需求，在用户进入页面和离开页面的时候记录记录在当前页面的停留时间，使用 `Mixin`， 简化代码如下
 
 ```js
 // mixin.js
-let cache = null;
+let cache = null
 
 export default {
   methods: {
@@ -162,9 +156,7 @@ export default {
 }
 ```
 
-使用局部的 `mixin` 可以发现，`mounted`，`destroyed` 等组件中的生命周期方法与 `mixin` 是合并的
-
-而 `methods` 当中的方法则是覆盖的，具体是通过 [mergeOptions](https://github.com/vuejs/vue/blob/master/src/core/util/options.js) 方法实现的
+使用局部的 `mixin` 可以发现，`mounted`，`destroyed` 等组件中的生命周期方法与 `mixin` 是合并的，而 `methods` 当中的方法则是覆盖的，具体是通过 [mergeOptions](https://github.com/vuejs/vue/blob/master/src/core/util/options.js) 方法实现的
 
 
 

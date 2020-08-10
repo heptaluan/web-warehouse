@@ -6,54 +6,29 @@
 
 ## React && Redux
 
-最近打算从头开始梳理一下 `React` 和 `Redux` 的一些相关进阶知识点，也算是总结和复习一下，在这里记录一下
-
-主要参考的是[官方文档](https://zh-hans.reactjs.org/)和一些网络资料，针对自己不太熟悉的地方，在这里做一下整理汇总
-
-<!--more-->
-
-## Redux、Flux 和 React-Redux
-
-之前已经整理过 `Redux`、`Flux` 和 `React-Redux` 相关知识点，如下
-
-[Flux](https://heptaluan.github.io/2019/02/22/React/05/)
-
-[Redux](https://heptaluan.github.io/2019/03/13/React/06/)
-
-[Redux 官方示例剖析](https://heptaluan.github.io/2019/03/14/React/07/)
-
-[React-Redux](https://heptaluan.github.io/2019/03/25/React/08/)
-
-[Redux、Flux 和 React-Redux 三者之间的区别](https://heptaluan.github.io/2019/04/02/React/09/)
-
-[Redux 源码初探](https://heptaluan.github.io/2019/06/05/React/11/)
-
+最近打算从头开始梳理一下 `React` 和 `Redux` 的一些相关进阶知识点，也算是总结和复习一下，在这里记录一下，主要参考的是[官方文档](https://zh-hans.reactjs.org/)和一些网络资料，针对自己不太熟悉的地方，在这里做一下整理汇总
 
 ## Code Spliting
 
-在 `16.6` 版本之前，`code-spliting` 通常是由第三方库来完成的，比如 [react-loadble](https://github.com/jamiebuilds/react-loadable)
-
-在 `16.6` 版本中提供了 `Suspense` 和 `lazy` 这两个钩子, 因此在之后的版本中便可以使用其来实现 `Code Spliting`
-
-`Code Spliting` 在 `React` 中的使用方法是在 `Suspense` 组件中使用 `<LazyComponent>` 组件
+在 `16.6` 版本之前，`code-spliting` 通常是由第三方库来完成的，比如 [react-loadble](https://github.com/jamiebuilds/react-loadable)，在 `16.6` 版本中提供了 `Suspense` 和 `lazy` 这两个钩子, 因此在之后的版本中便可以使用其来实现 `Code Spliting`，`Code Spliting` 在 `React` 中的使用方法是在 `Suspense` 组件中使用 `<LazyComponent>` 组件
 
 ```jsx
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import React, { Suspense, lazy } from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import React, { Suspense, lazy } from 'react'
 
-const Home = lazy(() => import('./routes/Home'));
-const About = lazy(() => import('./routes/About'));
+const Home = lazy(() => import('./routes/Home'))
+const About = lazy(() => import('./routes/About'))
 
 const App = () => (
   <Router>
     <Suspense fallback={<div>Loading...</div>}>
       <Switch>
-        <Route exact path="/" component={Home}/>
-        <Route path="/about" component={About}/>
+        <Route exact path="/" component={Home} />
+        <Route path="/about" component={About} />
       </Switch>
     </Suspense>
   </Router>
-);
+)
 ```
 
 
@@ -68,11 +43,9 @@ const App = () => (
 
 #### 如何确保处理函数在组件实例作用域内？
 
-第一种是在 `constructor` 中，通过 `this.handleClick = this.handleClick.bind(this)` 来绑定作用域
-
-第二种可以使用箭头函数来声明处理函数 `handleClick = () => { ... }`
-
-第三种就是在 `render` 中使用 `bind` 绑定，但是需要注意此方法会在每次组件渲染时创建一个新函数，而影响性能
+* 第一种是在 `constructor` 中，通过 `this.handleClick = this.handleClick.bind(this)` 来绑定作用域
+* 第二种可以使用箭头函数来声明处理函数 `handleClick = () => { ... }`
+* 第三种就是在 `render` 中使用 `bind` 绑定，但是需要注意此方法会在每次组件渲染时创建一个新函数，而影响性能
 
 ```jsx
 <button onClick={ this.handleClick.bind(this) }>Click Me</button>
@@ -142,21 +115,19 @@ React.createElement(
 
 #### 在 jsx 类型中使用点语法
 
-在 `jsx` 中，你也可以使用点语法来引用一个 `React` 组件，当你在一个模块中导出许多 `React` 组件时，这会非常方便
-
-例如，如果 `MyComponents.DatePicker` 是一个组件，你可以在 `jsx` 中直接使用
+在 `jsx` 中，你也可以使用点语法来引用一个 `React` 组件，当你在一个模块中导出许多 `React` 组件时，这会非常方便，例如，如果 `MyComponents.DatePicker` 是一个组件，你可以在 `jsx` 中直接使用
 
 ```js
-import React from 'react';
+import React from 'react'
 
 const MyComponents = {
   DatePicker: function DatePicker(props) {
-    return <div>Imagine a {props.color} datepicker here.</div>;
+    return <div>Imagine a {props.color} datepicker here.</div>
   }
 }
 
 function BlueDatePicker() {
-  return <MyComponents.DatePicker color="blue" />;
+  return <MyComponents.DatePicker color="blue" />
 }
 ```
 
@@ -199,9 +170,8 @@ render(props) {
 ReactDOM.createPortal(child, container)
 ```
 
-第一个参数（`child`）是任何可渲染的 `React` 子元素，例如一个元素，字符串或 `fragment`
-
-第二个参数（`container`）是一个 `DOM` 元素
+* 第一个参数（`child`）是任何可渲染的 `React` 子元素，例如一个元素，字符串或 `fragment`
+* 第二个参数（`container`）是一个 `DOM` 元素
 
 通常来讲，当你从组件的 `render` 方法返回一个元素时，该元素将被挂载到 `DOM` 节点中离其最近的父节点
 
@@ -212,7 +182,7 @@ render() {
     <div>
       {this.props.children}
     </div>
-  );
+  )
 }
 ```
 
@@ -225,31 +195,26 @@ render() {
   return ReactDOM.createPortal(
     this.props.children,
     domNode
-  );
+  )
 }
 ```
 
-一个 `portal` 的典型用例是当父组件有 `overflow: hidden` 或 `z-index` 样式时，但你需要子组件能够在视觉上**跳出**其容器（例如对话框、悬浮卡以及提示框）
-
-
-
+一个 `portal` 的典型用例是当父组件有 `overflow: hidden` 或 `z-index` 样式时，但你需要子组件能够在视觉上 **跳出** 其容器（例如对话框、悬浮卡以及提示框）
 
 
 
 ## Refs
 
-`Refs` 是使用 `React.createRef()` 创建的，并通过 `ref` 属性附加到 `React` 元素
-
-在构造组件时，通常将 `Refs` 分配给实例属性，以便可以在整个组件中引用它们
+`Refs` 是使用 `React.createRef()` 创建的，并通过 `ref` 属性附加到 `React` 元素，在构造组件时，通常将 `Refs` 分配给实例属性，以便可以在整个组件中引用它们
 
 ```js
 class MyComponent extends React.Component {
   constructor(props) {
-    super(props);
-    this.myRef = React.createRef();
+    super(props)
+    this.myRef = React.createRef()
   }
   render() {
-    return <div ref={this.myRef} />;
+    return <div ref={this.myRef} />
   }
 }
 ```
@@ -257,39 +222,34 @@ class MyComponent extends React.Component {
 当 `ref` 被传递给 `render` 中的元素时，对该节点的引用可以在 `ref` 的 `current` 属性中被访问
 
 ```js
-const node = this.myRef.current;
+const node = this.myRef.current
 ```
 
 `ref` 的值根据节点的类型而有所不同，下面是一些需要注意的地方
 
 * 在 `v16` 版本后，通过 `createRef()` 来生成 `ref` 并赋值给对应组件或 `DOM` 元素，之前是通过在元素上 `el => this.refName = el` 完成赋值
-
 * 在 `v16` 版本后，通过 `this.refName.current` 来获取 `refName` 对应对应组件或 `DOM` 元素，之前是直接通过 `this.refName` 获取
-
 * 当 `ref` 属性赋在 `DOM` 元素上时，`this.refName.current` 返回的就是 `DOM` 元素，当赋给 `React` 组件时，`this.refName.current` 返回的就是 `React` 组件
-
 * 不能在函数式组件上使用 `ref` 属性，但可以在函数式组件内部的子组件中使用 `ref` 属性
 
 
 #### 为 DOM 元素添加 ref
 
-`React` 支持给任意组件添加特殊属性，而 `ref` 属性则接收一个回调函数
-
-这个回调函数在组件加载或卸载时会立即执行，并且将底层的 `DOM` 元素作为参数传给回调函数
+`React` 支持给任意组件添加特殊属性，而 `ref` 属性则接收一个回调函数，这个回调函数在组件加载或卸载时会立即执行，并且将底层的 `DOM` 元素作为参数传给回调函数
 
 ```js
 class CustomTextInput extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
     // 创建一个 ref 来存储 textInput 的 DOM 元素
-    this.textInput = React.createRef();
-    this.focusTextInput = this.focusTextInput.bind(this);
+    this.textInput = React.createRef()
+    this.focusTextInput = this.focusTextInput.bind(this)
   }
 
   focusTextInput() {
     // 直接使用原生 API 使 text 输入框获得焦点
     // 我们通过 current 来访问 DOM 节点
-    this.textInput.current.focus();
+    this.textInput.current.focus()
   }
 
   render() {
@@ -307,37 +267,33 @@ class CustomTextInput extends React.Component {
           onClick={this.focusTextInput}
         />
       </div>
-    );
+    )
   }
 }
 ```
 
-`React` 会在组件挂载时给 `current` 属性传入 `DOM` 元素，并在组件卸载时传入 `null` 值
-
-`ref` 会在 `componentDidMount` 或 `componentDidUpdate` 生命周期钩子触发前更新
+`React` 会在组件挂载时给 `current` 属性传入 `DOM` 元素，并在组件卸载时传入 `null` 值，`ref` 会在 `componentDidMount` 或 `componentDidUpdate` 生命周期钩子触发前更新
 
 
 #### 为 Class 组件添加 ref
 
-如果我们想包装上面的 `CustomTextInput`，来模拟它挂载之后立即被点击的操作
-
-我们可以使用 `ref` 来获取这个自定义的 `input` 组件并手动调用它的 `focusTextInput` 方法
+如果我们想包装上面的 `CustomTextInput`，来模拟它挂载之后立即被点击的操作，我们可以使用 `ref` 来获取这个自定义的 `input` 组件并手动调用它的 `focusTextInput` 方法
 
 ```js
 class AutoFocusTextInput extends React.Component {
   constructor(props) {
-    super(props);
-    this.textInput = React.createRef();
+    super(props)
+    this.textInput = React.createRef()
   }
 
   componentDidMount() {
-    this.textInput.current.focusTextInput();
+    this.textInput.current.focusTextInput()
   }
 
   render() {
     return (
       <CustomTextInput ref={this.textInput} />
-    );
+    )
   }
 }
 ```
@@ -360,9 +316,7 @@ class CustomTextInput extends React.Component {
 
 #### 传递 refs
 
-当父组件需要拿到子组件的 `ref` 时，在 `v16` 版本后可以通过 `React.forwardRef()` 实现，之前则是父组件给子组件传递一个回调作为属性，子组件则获取这个回调，绑定到 `ref` 上
-
-即通过父组件向子组件传递 `ref` 属性，在子组件中获取到父组件赋值的 `ref` 值后，对应的赋给相应元素实现 `ref` 的传递
+当父组件需要拿到子组件的 `ref` 时，在 `v16` 版本后可以通过 `React.forwardRef()` 实现，之前则是父组件给子组件传递一个回调作为属性，子组件则获取这个回调，绑定到 `ref` 上，即通过父组件向子组件传递 `ref` 属性，在子组件中获取到父组件赋值的 `ref` 值后，对应的赋给相应元素实现 `ref` 的传递
 
 ```js
 // 通过 this.ref.current 可以直接获取到 button
@@ -371,9 +325,9 @@ const FancyButton = React.forwardRef((props, ref) => (
     <h3>子组件</h3>
     <button ref={ref}>{props.children}</button>
   </div>
-));
+))
 
-const ref = React.createRef();
+const ref = React.createRef()
 
 <FancyButton ref={ref}>按钮</FancyButton>
 ```
@@ -382,13 +336,13 @@ const ref = React.createRef();
 
 ```js
 // 父组件
-this.childRef = React.createRef();
+this.childRef = React.createRef()
 <Child ref={this.childRef} />
 
 // 子组件
 class Child extends React.Component {
   render() {
-    const { forwardedRef, ...rest } = this.props;
+    const { forwardedRef, ...rest } = this.props
     return (
       <div>
         <h3>这是子组件的另一个按钮</h3>
@@ -398,12 +352,10 @@ class Child extends React.Component {
   }
 }
 
-export default React.forwardRef((props, ref) => (<Child forwardedRef={ref} />));
+export default React.forwardRef((props, ref) => (<Child forwardedRef={ref} />))
 ```
 
-通过 `React.forwardRef()` 包裹组件用于传递父组件赋值的 `ref`
-
-在类组件中，通过属性 `forwardedRef` 来获取父组件赋值的 `ref`，并赋给对应的元素或组件实例
+通过 `React.forwardRef()` 包裹组件用于传递父组件赋值的 `ref`，在类组件中，通过属性 `forwardedRef` 来获取父组件赋值的 `ref`，并赋给对应的元素或组件实例
 
 
 
@@ -419,11 +371,8 @@ export default React.forwardRef((props, ref) => (<Child forwardedRef={ref} />));
 当组件实例被创建并插入 `DOM` 中时，其生命周期调用顺序如下
 
 * [constructor()](https://zh-hans.reactjs.org/docs/react-component.html#constructor)
-
 * [static getDerivedStateFromProps()](https://zh-hans.reactjs.org/docs/react-component.html#static-getderivedstatefromprops)
-
 * [render()](https://zh-hans.reactjs.org/docs/react-component.html#render)
-
 * [componentDidMount()](https://zh-hans.reactjs.org/docs/react-component.html#componentdidmount)
 
 > 需要注意的是：`UNSAFE_componentWillMount()` 这个方法即将被移除
@@ -434,13 +383,9 @@ export default React.forwardRef((props, ref) => (<Child forwardedRef={ref} />));
 当组件的 `props` 或 `state` 发生变化时会触发更新，组件更新的生命周期调用顺序如下
 
 * [static getDerivedStateFromProps()](https://zh-hans.reactjs.org/docs/react-component.html#static-getderivedstatefromprops)
-
 * [shouldComponentUpdate()](https://zh-hans.reactjs.org/docs/react-component.html#shouldcomponentupdate)
-
 * [render()](https://zh-hans.reactjs.org/docs/react-component.html#render)
-
 * [getSnapshotBeforeUpdate()](https://zh-hans.reactjs.org/docs/react-component.html#getsnapshotbeforeupdate)
-
 * [componentDidUpdate()](https://zh-hans.reactjs.org/docs/react-component.html#componentdidupdate)
 
 > 需要注意的是：`UNSAFE_componentWillUpdate()` 和 `UNSAFE_componentWillReceiveProps()` 这两个方法即将被移除
@@ -474,24 +419,16 @@ Greeting.propTypes = {
 }
 ```
 
-`PropTypes` 包含一整套验证器，可用于确保你接收的数据是有效的
-
-在上面示例当中，我们使用了 `PropTypes.string`，当你给属性传递了无效值时，`JavsScript` 控制台将会打印警告
-
-出于性能原因，`propTypes` 只在开发模式下进行检查
+`PropTypes` 包含一整套验证器，可用于确保你接收的数据是有效的，在上面示例当中，我们使用了 `PropTypes.string`，当你给属性传递了无效值时，`JavsScript` 控制台将会打印警告，出于性能原因，`propTypes` 只在开发模式下进行检查
 
 
 
 ## Fragments
 
-`React` 中经常会有一个组件返回多个元素的场景，但是又有**只能有一个根组件**的限定
-
-通常的做法则是使用 `<div>` 进行包裹，但是这样子会在 `DOM` 中增加额外的节点
-
-那么 `Fragment` 就是为了解决这一问题的方案
+`React` 中经常会有一个组件返回多个元素的场景，但是又有 **只能有一个根组件** 的限定，通常的做法则是使用 `<div>` 进行包裹，但是这样子会在 `DOM` 中增加额外的节点，那么 `Fragment` 就是为了解决这一问题的方案
 
 ```jsx
-import { Component, Fragment } from 'react';
+import { Component, Fragment } from 'react'
 
 class Columns extends Component {
   render() {
@@ -500,7 +437,7 @@ class Columns extends Component {
         <p>Hello</p>
         <p>World</p>
       </Fragment>
-    );
+    )
   }
 }
 ```
@@ -543,9 +480,7 @@ class Columns extends React.Component {
 </table>
 ```
 
-最终的 `HTML` 元素则是无效的，`Fragment` 还可以使用一种更简短的语法来声明
-
-也可以理解为简写方式
+最终的 `HTML` 元素则是无效的，`Fragment` 还可以使用一种更简短的语法来声明，也可以理解为简写方式
 
 ```jsx
 class Columns extends React.Component {
@@ -555,7 +490,7 @@ class Columns extends React.Component {
         <td>Hello</td>
         <td>World</td>
       </>
-    );
+    )
   }
 }
 ```
@@ -575,30 +510,22 @@ class Columns extends React.Component {
 }
 ```
 
-应该注意的是，`<></>` 不能接受任何 `key` 或者属性
-
-比如在循环当中需要使用 `key`，请用 `<React.Fragment>`，它可以接受且目前也只能接收 `key` 这一属性
+应该注意的是，`<></>` 不能接受任何 `key` 或者属性，比如在循环当中需要使用 `key`，请用 `<React.Fragment>`，它可以接受且目前也只能接收 `key` 这一属性
 
 
 
 ## 高阶组件
 
-关于高阶组件的用法有许多，这里只做简单介绍，详细内容可能会另起篇章来进行介绍
+关于高阶组件的用法有许多，这里只做简单介绍，详细内容可能会另起篇章来进行介绍，高阶组件（`HOC-Higher-Order-Components`）是 `React` 中用于重用组件逻辑的高级技术，高阶组件是一个函数，能够接受一个组件并返回一个新的组件，简单来说就是高阶组件将一个组价转化（包装）成另外一个组件
 
-高阶组件（`HOC-Higher-Order-Components`）是 `React` 中用于重用组件逻辑的高级技术
-
-高阶组件是一个函数，能够接受一个组件并返回一个新的组件，简单来说就是高阶组件将一个组价转化（包装）成另外一个组件
-
-在第三方组件库中，`HOC` 非常常见，如例如 `Redux` 的 [connect](https://github.com/reduxjs/react-redux/blob/master/src/connect/connect.js) 和 [createFragmentContainer](https://relay.dev/docs/en/fragment-container.html)
-
-需要注意，高级组件是纯函数，没有副作用
+在第三方组件库中，`HOC` 非常常见，如例如 `Redux` 的 [connect](https://github.com/reduxjs/react-redux/blob/master/src/connect/connect.js) 和 [createFragmentContainer](https://relay.dev/docs/en/fragment-container.html)，需要注意，高级组件是纯函数，没有副作用
 
 ```js
 // 创建一个高阶组件，使每个组件在更新时，打印其新旧 props 的值
 export default function logProps(WrappedComponent) {
   return class extends React.Component {
     componentDidUpdate(prevProps) {
-      console.log('old props', preProps);
+      console.log('old props', preProps)
       console.log('new props', this.props)
     }
     render() {
@@ -608,7 +535,7 @@ export default function logProps(WrappedComponent) {
 }
 
 // 使用
-import logProps from './hocWrapper';
+import logProps from './hocWrapper'
 
 class More extends React.Component {
   // ...
@@ -617,32 +544,23 @@ class More extends React.Component {
 export default logProps(More)
 ```
 
-如上，每当传入 `More` 组件的 `props` 发生变化时，都会打印其 `prop` 修改状况
-
-下面是一些在使用过程中需要注意的地方
+如上，每当传入 `More` 组件的 `props` 发生变化时，都会打印其 `prop` 修改状况，下面是一些在使用过程中需要注意的地方
 
 * 不要改变原始组件原型，推荐用容器组件组合包裹组件且不修改包裹组件
-
 * 不要在 `render()` 函数中使用高阶组件，因为每次调用 `render()` 函数都会创建一个新的高阶组件，这将导致子树每次渲染都会进行卸载，和重新挂载的操作
-
 * `Refs` 不会被传递，若向一个高阶组件赋值 `ref`，那么通过这个 `ref` 拿到的是最外层的窗口组件（可以使用 `React.forwardRef` 来解决这个问题）
-
 * 高阶组件的静态方法需要手动从原组件进行复制，即 `HOCComponet.staticMethod = WrappedComponent.staticMethod`
 
 
 ## 阻止组件渲染
 
-有时候我们希望是整个组件都不渲染，而不仅仅是局部不渲染
-
-那么这种情况下，我们就可以在 `render()` 函数里返回一个 `null`，来实现我们想要的效果
-
-如下示例
+有时候我们希望是整个组件都不渲染，而不仅仅是局部不渲染，那么这种情况下，我们就可以在 `render()` 函数里返回一个 `null`，来实现我们想要的效果，如下示例
 
 ```js
 // 定义如下
 function LogBtn(props) {
-  const isLogined = props.isLogined;
-  const isShow = props.isShow;
+  const isLogined = props.isLogined
+  const isShow = props.isShow
   if (isShow) {
     return (
       <div>You can
@@ -650,7 +568,7 @@ function LogBtn(props) {
       </div>
     )
   }
-  return null;
+  return null
 }
 
 // 使用如下
@@ -662,6 +580,3 @@ function LogBtn(props) {
 > 即 `componentWillUpdate` 和 `componentDidUpdate` 仍然会被调用
 
 
-
-
-## React 中的表单

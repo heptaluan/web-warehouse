@@ -8,21 +8,13 @@
 
 <!--more-->
 
-
 * 浏览器端发起 `XMLHttpRequest` 请求
-
 * `Node.js` 发起 `http` 请求
-
 * 支持 `Promise API`
-
 * 拦截请求和返回
-
 * 转化请求和返回（`data`）
-
 * 取消请求
-
 * 自动转化 `json` 数据
-
 * 客户端支持抵御 `XSRF`
 
 
@@ -33,10 +25,10 @@
 ```js
 axios.get('/user?id=1234')
   .then(function (response) {
-    console.log(response);
+    console.log(response)
   })
   .catch(function (err) {
-    console.log(err);
+    console.log(err)
   })
 
 // 等同于
@@ -87,7 +79,7 @@ axios({
     firstName: 'firstName',
     lastName: 'lastName'
   }
-});
+})
 
 // 获取远程图片
 axios({
@@ -119,12 +111,12 @@ axios({
   // 这个只适用于 PUT，GET，PATCH 方法
   // 数组中的最后一个函数必须返回一个字符串或者一个 ArrayBuffer/Stream/Buffer/ArrayBuffer/FormData
   transformRequest: [function (data) {
-    return data;
+    return data
   }],
 
   // transformResponse 允许返回的数据传入 then/catch 之前进行处理
   transformResponse: [function (data) {
-    return data;
+    return data
   }],
 
   // headers 是自定义的要被发送的头信息
@@ -194,7 +186,7 @@ axios({
   // validateStatus 定义 promise 的 resolve 和 reject
   // http 返回状态码，如果 validateStatus 返回 true（或者设置成 null/undefined），promise 将会接受，其他的 promise 将会拒绝
   validateStatus: function(status) {
-    return status >= 200 && stauts < 300;
+    return status >= 200 && stauts < 300
   },
 
   // 在 Node.js 中 httpAgent 和 httpsAgent 当产生一个 http 或者 https 请求时分别定义一个自定义的代理
@@ -247,12 +239,12 @@ axios({
 
 axios.get('/user/12345')
   .then(function (response) {
-    console.log(response.data);
-    console.log(response.status);
-    console.log(response.statusText);
-    console.log(response.headers);
-    console.log(response.config);
-  });
+    console.log(response.data)
+    console.log(response.status)
+    console.log(response.statusText)
+    console.log(response.headers)
+    console.log(response.config)
+  })
 ```
 
 
@@ -269,19 +261,19 @@ axios.get('/user/12345')
 // 添加一个请求拦截器
 axios.interceptors.request.use(function (config) {
   // code here
-  return config;
+  return config
 }, function (err) {
   // code here
-  return Promise.reject(err);
+  return Promise.reject(err)
 })
 
 // 添加一个返回拦截器
 axios.interceptors.response.use(function (response) {
   // code here
-  return response;
+  return response
 }, function (err) {
   // code here
-  return Promise.reject(err);
+  return Promise.reject(err)
 })
 ```
 
@@ -295,8 +287,8 @@ axios.interceptors.request.eject(myInterceptor)
 可以在一个 `axios` 实例中使用拦截器
 
 ```js
-var instance = axios.create();
-instance.interceptors.request.use(function() { /*...*/ });
+var instance = axios.create()
+instance.interceptors.request.use(function() { /*...*/ })
 ```
 
 
@@ -320,17 +312,17 @@ const service = axios.cerate({
 service.interceptors.request.use(config => {
   if (store.getters.token) {
     // 让每个请求携带自定义的 token
-    config.headers['X-Token'] = store.getters.token;
+    config.headers['X-Token'] = store.getters.token
   }
-  return config;
+  return config
 }, error => {
-  console.log(error);
-  Promise.reject(error);
+  console.log(error)
+  Promise.reject(error)
 })
 
 // response 拦截器
 service.interceptors.response.use(response => {
-  const res = response.data;
+  const res = response.data
   // 根据 res.code 进行判断
   if (res.code !== 10000) {
     Message({
@@ -340,7 +332,7 @@ service.interceptors.response.use(response => {
     })
     return Promise.reject(error)
   } else {
-    return response.data;
+    return response.data
   }
 }, error => {
   console.log(`err${error}`)
@@ -352,7 +344,7 @@ service.interceptors.response.use(response => {
   return Promise.reject(error)
 })
 
-export default service;
+export default service
 ```
 
 由于 `axios` 每一个都是一个实例里，每一请求都是基于这个实例而来的，所以配置的参数属性都会被继承下来

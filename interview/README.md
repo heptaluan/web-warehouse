@@ -17,7 +17,6 @@
 * [移动端图片上传的那些坑](./backups/backups/移动端图片上传的那些坑.md)
 * [IOS 端点击事件 300ms 的延迟响应的问题](./backups/backups/移动端延迟响应的问题.md)
 * [异步加载方案](./backups/backups/异步加载方案.md)
-* [原型继承和类式继承](./backups/backups/原型继承和类式继承.md)
 * [字符编码](./backups/backups/字符编码.md)
 * [axios](./backups/backups/axios.md)
 * [axios 中跨域访问的问题](./backups/backups/跨域访问相关问题.md)

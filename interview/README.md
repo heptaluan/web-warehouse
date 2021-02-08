@@ -8,6 +8,31 @@
 
 ## 博客整理
 
+**2020**
+
+* [HTML 知识梳理](./backups/2021/HTML.md)
+* [CSS 知识梳理](./backups/2021/CSS.md)
+* [JavaScript 知识梳理](./backups/2021/JavaScript.md)
+* [框架相关知识梳理](./backups/2021/框架相关知识梳理.md)
+* [浏览器相关知识梳理](./backups/2021/浏览器相关知识梳理.md)
+* [计算机网络知识梳理](./backups/2021/计算机网络知识梳理.md)
+* [服务端知识梳理](./backups/2021/服务端知识梳理.md)
+* [函数的 length 和 callee 属性](./backups/2021/callee.md)
+* [清除浮动之 clearfix 的原理和方法](./backups/2021/clearfix.md)
+* [JavaScript 中的 || 和 &&](./backups/2021/运算符.md)
+* [在列表中插入 3 个，30 个，300 个 li，并绑定事件](./backups/2021/事件委托.md)
+* [ALT 与 TITLE 的区别](./backups/2021/ALT.md)
+* [Angular 中传递参数的几种方式](./backups/2021/参数传递的几种方式.md)
+* [CommonJS、AMD 和 CMD](./backups/2021/CommonJS.md)
+* [JavaScript 中的遍历和枚举](./backups/2021/遍历和枚举.md)
+* [JavaScript 中的 Map 与 forEach 的对比](./backups/2021/Map与forEach.md)
+* [Webpack 和 Rollup 有什么不同](./backups/2021/webpack.md)
+
+
+----
+----
+----
+
 **JavaScript**
 
 * [JavaScript 中的对象](./backups/backups/对象.md)
